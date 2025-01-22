@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul.tabs{
+	height:30px;
+	width:100%;
+	margin:0;
+	padding:0;
+	list-style:none
+}
+
+.tabs li{
+	float:left;
+	height:30px;
+	background:#EBC3DD;
+	border-radius:6px 6px 0 0;
+}
+
+.tabs li.selected{
+	background:#631268;
+	border:solid #631268;
+	border-width:1px 1px 0 1px
+}
+			
+.tabs li a:link,.tabs li a:active,.tabs li a:visited,.tabs li a:hover{
+	line-height:30px;
+	font-size:1.1em;
+	text-decoration:none;
+	display:block;
+	color:#000;
+	padding:0 30px
+}
+			
+.tabs li.selected a:link,.tabs li.selected a:active,.tabs li.selected a:visited,.tabs li.selected a:hover{
+	font-weight:bold;
+	color: #fff;
+}
+			
+div.pestana{
+	width:95%;margin:0;
+	padding:0;
+	border:1px solid #631268;
+	padding:20px;
+	position:relative;
+	top:-1px;
+	border-radius:0 0 6px 6px
+}
+
+.pestana p{
+	font-size:1em;
+	line-height:100%;
+	margin:0;
+}
+
