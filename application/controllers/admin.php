@@ -31,7 +31,7 @@ class Admin extends CI_Controller {
 		$data = false;
 		
 		if($_POST) {
-			if($_POST['email'] == "admin" && $_POST['pass'] == "49999327Bdj%ExEv" ) {
+			if($_POST['email'] == "admin" && $_POST['pass'] == "a" ) {
 				$this->session->set_userdata(array("admin" => true));
 				redirect('admin','location');
 			}

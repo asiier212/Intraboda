@@ -41,9 +41,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'db536033527.db.1and1.com';
-$db['default']['username'] = 'dbo536033527';
-$db['default']['password'] = 'Deejay2012';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'db536033527';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
