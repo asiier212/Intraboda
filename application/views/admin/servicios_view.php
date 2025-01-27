@@ -53,21 +53,18 @@
 <script>
     $(function() {
         $(".tabledata").sortable({
-            items: ".sortable-row", // Solo las filas con esta clase se podrán mover
-            handle: ".drag-handle", // Solo se podrá arrastrar desde el icono
+            items: ".sortable-row",
+            handle: ".drag-handle",
             update: function(event, ui) {
-                // Obtener el nuevo orden
                 var order = [];
                 $(".sortable-row").each(function(index, element) {
                     order.push({
-                        id: $(element).data("id"), // ID del servicio
-                        orden: index + 1 // Nuevo orden (empezando desde 1)
+                        id: $(element).data("id"),
+                        orden: index + 1 
                     });
                 });
-
-                // Enviar el nuevo orden al servidor
                 $.ajax({
-                    url: "http://localhost/intraboda/admin/actualizar_orden",
+                    url: "http://localhost/intraboda/admin/actualizar_orden_servicios",
                     method: "POST",
                     data: {
                         order: order
@@ -78,3 +75,8 @@
         }).disableSelection(); // Desactivar la selección de texto mientras se arrastra
     });
 </script>
+
+<style>
+    .drag-handle {
+        cursor: move;
+    }

@@ -45,7 +45,7 @@ class Admin extends CI_Controller
 		$this->load->view('admin/login', $data);
 	}
 
-	public function actualizar_orden()
+	public function actualizar_orden_servicios()
 	{
 		$order = $this->input->post('order');
 		if (!empty($order)) {
@@ -148,6 +148,93 @@ class Admin extends CI_Controller
 		$view = "parametrizacion";
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
+
+	public function actualizar_orden_cuentas()
+	{
+		$order = $this->input->post('order');
+		if (!empty($order)) {
+			$this->load->database();
+
+			foreach ($order as $item) {
+				$this->db->where('id_cuenta', $item['id']);
+				$this->db->update('cuentas_bancarias', ['orden' => $item['orden']]);
+			}
+
+			echo json_encode(['status' => 'success']);
+		} else {
+			echo json_encode(['status' => 'error', 'message' => 'No se recibieron datos.']);
+		}
+	}
+
+	public function actualizar_orden_canales()
+	{
+		$order = $this->input->post('order');
+		if (!empty($order)) {
+			$this->load->database();
+
+			foreach ($order as $item) {
+				$this->db->where('id', $item['id']);
+				$this->db->update('canales_captacion', ['orden' => $item['orden']]);
+			}
+
+			echo json_encode(['status' => 'success']);
+		} else {
+			echo json_encode(['status' => 'error', 'message' => 'No se recibieron datos.']);
+		}
+	}
+
+	public function actualizar_orden_momentos()
+	{
+		$order = $this->input->post('order');
+		if (!empty($order)) {
+			$this->load->database();
+
+			foreach ($order as $item) {
+				$this->db->where('id_momento', $item['id']);
+				$this->db->update('bd_momentos_espec', ['orden' => $item['orden']]);
+			}
+
+			echo json_encode(['status' => 'success']);
+		} else {
+			echo json_encode(['status' => 'error', 'message' => 'No se recibieron datos.']);
+		}
+	}
+
+	public function actualizar_orden_estados()
+	{
+		$order = $this->input->post('order');
+		if (!empty($order)) {
+			$this->load->database();
+
+			foreach ($order as $item) {
+				$this->db->where('id_estado', $item['id']);
+				$this->db->update('estados_solicitudes', ['orden' => $item['orden']]);
+			}
+
+			echo json_encode(['status' => 'success']);
+		} else {
+			echo json_encode(['status' => 'error', 'message' => 'No se recibieron datos.']);
+		}
+	}
+
+	public function actualizar_orden_tipos_clientes()
+	{
+		$order = $this->input->post('order');
+		if (!empty($order)) {
+			$this->load->database();
+
+			foreach ($order as $item) {
+				$this->db->where('id_tipo_cliente', $item['id']);
+				$this->db->update('tipos_clientes', ['orden' => $item['orden']]);
+			}
+
+			echo json_encode(['status' => 'success']);
+		} else {
+			echo json_encode(['status' => 'error', 'message' => 'No se recibieron datos.']);
+		}
+	}
+
+
 
 	public function mantenimiento_bd_canciones()
 	{

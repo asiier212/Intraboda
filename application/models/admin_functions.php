@@ -325,7 +325,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_tipo_cliente, tipo_cliente, color FROM tipos_clientes");
+		$query = $this->db->query("SELECT id_tipo_cliente, tipo_cliente, color FROM tipos_clientes order by orden");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -483,7 +483,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_cuenta, entidad, iban, codigo_entidad, codigo_oficina, codigo_control, numero_cuenta FROM cuentas_bancarias");
+		$query = $this->db->query("SELECT id_cuenta, entidad, iban, codigo_entidad, codigo_oficina, codigo_control, numero_cuenta FROM cuentas_bancarias order by orden");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -504,7 +504,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre FROM canales_captacion");
+		$query = $this->db->query("SELECT id, nombre FROM canales_captacion ORder by orden");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -520,7 +520,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_momento, momento FROM bd_momentos_espec");
+		$query = $this->db->query("SELECT id_momento, momento FROM bd_momentos_espec order by orden");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -536,7 +536,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_estado, nombre_estado FROM estados_solicitudes");
+		$query = $this->db->query("SELECT id_estado, nombre_estado FROM estados_solicitudes order by orden");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -1852,7 +1852,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_cuenta, entidad, IBAN, codigo_entidad, codigo_oficina, codigo_control, numero_cuenta FROM cuentas_bancarias");
+		$query = $this->db->query("SELECT id_cuenta, entidad, IBAN, codigo_entidad, codigo_oficina, codigo_control, numero_cuenta FROM cuentas_bancarias ORDER BY orden ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
