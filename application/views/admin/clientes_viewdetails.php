@@ -224,7 +224,7 @@ $(document).ready(function(){
          <p style="text-align:right"><a style="text-decoration:underline" target="_blank" href="<?php echo base_url() ?>informes/ficha.php?id_cliente=<?php echo $cliente['id']?>">Descargar ficha del usuario</a></p>
         <br clear="left" />        
         <fieldset style="width:350px">
-        	<legend>Datos del Novio</legend>
+        	<legend>Datos Cliente 1</legend>
             <ul class="editable">
             	<li><label>Nombre:</label><span class="edit_box" id="nombre_novio"><?php echo $cliente['nombre_novio']?></span> </li>
                 <li><label>Apellidos:</label><span class="edit_box" id="apellidos_novio"><?php echo $cliente['apellidos_novio']?></span></li>
@@ -236,7 +236,7 @@ $(document).ready(function(){
             </ul>
         </fieldset>
          <fieldset style="width:350px">
-        	<legend>Datos de la Novia</legend>
+        	<legend>Datos Cliente 2</legend>
             <ul>
             	<li><label>Nombre:</label><span class="edit_box" id="nombre_novia"><?php echo $cliente['nombre_novia']?></span></li>
                 <li><label>Apellidos:</label><span class="edit_box" id="apellidos_novia"><?php echo $cliente['apellidos_novia']?></span></li>

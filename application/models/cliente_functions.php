@@ -534,22 +534,34 @@
 		return $data;
 	}
 	function GetServicios($servicios)
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre, precio FROM servicios WHERE id IN ({$servicios})");	
-		if($query->num_rows() > 0){
-			$i = 0;
-			foreach($query->result() as $fila){
-				$data[$i]['id'] = $fila->id;
-				$data[$i]['nombre'] = $fila->nombre;
-				$data[$i]['precio'] = $fila->precio;
-				$i++;
-			}
-		}
-		
-		return $data;
-	}
+{
+    $data = false;
+    $this->load->database();
+
+    // Verificar que $servicios sea un array y contenga datos
+    if (!is_array($servicios) || empty($servicios)) {
+        return $data; // Retornar false si no hay servicios válidos
+    }
+
+    // Asegurar que todos los valores sean enteros para evitar inyección SQL
+    $ids = implode(',', array_map('intval', $servicios));
+
+    // Ejecutar la consulta solo si hay IDs válidos
+    $query = $this->db->query("SELECT id, nombre, precio FROM servicios WHERE id IN ($ids)");
+
+    if ($query->num_rows() > 0) {
+        $i = 0;
+        foreach ($query->result() as $fila) {
+            $data[$i]['id'] = $fila->id;
+            $data[$i]['nombre'] = $fila->nombre;
+            $data[$i]['precio'] = $fila->precio;
+            $i++;
+        }
+    }
+
+    return $data;
+}
+
 	function SendMailPersona($persona_id, $mail_desde, $asunto, $mensaje)
 	{
 		$data = false;

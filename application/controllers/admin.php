@@ -1034,14 +1034,24 @@ class Admin extends CI_Controller
 				else
 					$data['page'] = 1;
 
-				if (isset($_GET['q'])) {
-					if ($_GET['f'] == 'fecha_boda') {
-						$date = strtotime($_GET['q']);
-						$str_where = "WHERE DATE(" . $_GET['f'] . ") = '" . date('Y-m-d', $date) . "'";
-					} else {
-						$str_where = "WHERE " . $_GET['f'] . " LIKE '%" . $_GET['q'] . "%'";
+					if (isset($_GET['q'])) {
+						if ($_GET['f'] == 'fecha_boda') {
+							$date = strtotime($_GET['q']);
+							$str_where = "WHERE DATE(" . $_GET['f'] . ") = '" . date('Y-m-d', $date) . "'";
+						} elseif ($_GET['f'] == 'clientes.nombre') {
+							$str_where = "WHERE clientes.nombre_novia LIKE '%" . $_GET['q'] . "%' OR clientes.nombre_novio LIKE '%" . $_GET['q'] . "%'";
+						} elseif ($_GET['f'] == 'clientes.apellidos') {
+							$str_where = "WHERE clientes.apellidos_novia LIKE '%" . $_GET['q'] . "%' OR clientes.apellidos_novio LIKE '%" . $_GET['q'] . "%'";
+						} elseif ($_GET['f'] == 'clientes.poblacion') {
+							$str_where = "WHERE clientes.poblacion_novia LIKE '%" . $_GET['q'] . "%' OR clientes.poblacion_novio LIKE '%" . $_GET['q'] . "%'";
+						} elseif ($_GET['f'] == 'clientes.telefono') {
+							$str_where = "WHERE clientes.telefono_novia LIKE '%" . $_GET['q'] . "%' OR clientes.telefono_novio LIKE '%" . $_GET['q'] . "%'";
+						} else {
+							$str_where = "WHERE " . $_GET['f'] . " LIKE '%" . $_GET['q'] . "%'";
+						}
 					}
-				}
+					
+
 				$query = $this->db->query("SELECT clientes.id FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante {$str_where}");
 				$data['num_rows'] = $query->num_rows();
 
