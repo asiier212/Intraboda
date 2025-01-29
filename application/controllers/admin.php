@@ -66,6 +66,38 @@ class Admin extends CI_Controller
 		}
 	}
 
+	public function actualizar_orden_partidas_presupuestarias()
+{
+    $order = $this->input->post('order');
+    if (!empty($order)) {
+        $this->load->database();
+        $total_actualizados = 0;
+
+        foreach ($order as $item) {
+            $this->db->where('id_partida', $item['id']);
+            $this->db->update('partidas_presupuestarias', ['orden' => $item['orden']]);
+
+            $afectadas = $this->db->affected_rows(); // 🔍 Ver cuántas filas se actualizaron
+
+            if ($afectadas > 0) {
+                $total_actualizados++;
+            }
+        }
+
+        log_message('debug', "🔄 Total de registros actualizados: {$total_actualizados}");
+
+        if ($total_actualizados > 0) {
+            echo json_encode(['status' => 'success']);
+        } else {
+            echo json_encode(['status' => 'no_changes', 'message' => 'Ningún registro fue modificado.']);
+        }
+    } else {
+        log_message('error', '⚠️ No se recibieron datos para actualizar el orden.');
+        echo json_encode(['status' => 'error', 'message' => 'No se recibieron datos.']);
+    }
+}
+
+
 
 	public function restore_servicios()
 	{

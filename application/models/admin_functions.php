@@ -1964,7 +1964,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_partida, concepto, importe, ano FROM partidas_presupuestarias WHERE id_partida = {$id_partida}");
+		$query = $this->db->query("SELECT id_partida, concepto, importe, ano FROM partidas_presupuestarias WHERE id_partida = {$id_partida} order by orden ASC");
 		if ($query->num_rows() > 0) {
 			$fila = $query->row();
 			$data['id_partida'] = $fila->id_partida;
@@ -1980,7 +1980,7 @@ class Admin_functions extends CI_Model
 		$data = false;
 		$this->load->database();
 
-		$query = $this->db->query("SELECT id_partida, concepto, importe, ano FROM partidas_presupuestarias WHERE ano>='" . $fecha_desde . "' AND ano<='" . $fecha_hasta . "'");
+		$query = $this->db->query("SELECT id_partida, concepto, importe, ano FROM partidas_presupuestarias WHERE ano>='" . $fecha_desde . "' AND ano<='" . $fecha_hasta . "' order by orden ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {

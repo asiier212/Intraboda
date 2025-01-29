@@ -1,3 +1,8 @@
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- jQuery UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 <h2>
         Partidas Presupuestarias
@@ -38,6 +43,7 @@
 			}?>
             
             <table class="tabledata">
+			<th></th>
             <th>Concepto</th>
             <th>Importe</th>
             <th>Año</th>
@@ -50,7 +56,8 @@
 				foreach($partidas as $p)
 				{
 					?>
-					<tr>
+                    <tr class="sortable-row" data-id="<?php echo $p['id_partida']; ?>">
+					<td class="drag-handle">☰</td>
 					<td><?php echo $p['concepto']?></td>
                     <td><?php echo number_format($p['importe'],2,",",".")?> &#8364;</td>
                     <td><?php echo $p['año']?></td>
@@ -98,3 +105,34 @@
 </div>
 <div class="clear">
 </div>
+
+<script>
+    $(function() {
+        $(".tabledata").sortable({
+            items: ".sortable-row",
+            handle: ".drag-handle",
+            update: function(event, ui) {
+                var order = [];
+                $(".sortable-row").each(function(index, element) {
+                    order.push({
+                        id: $(element).data("id"),
+                        orden: index + 1
+                    });
+                });
+                $.ajax({
+                    url: "http://localhost/intraboda/admin/actualizar_orden_partidas_presupuestarias",
+                    method: "POST",
+                    data: {
+                        order: order
+                    }
+                });
+            }
+        }).disableSelection();
+	});
+</script>
+
+<style>
+    .drag-handle {
+        cursor: move;
+    }
+</style>
