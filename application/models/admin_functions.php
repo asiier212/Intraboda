@@ -578,7 +578,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre, descripcion, precio, precio_oferta, servicio_adicional FROM servicios ORDER BY orden ASC");
+		$query = $this->db->query("SELECT id, nombre, descripcion, precio, precio_oferta, servicio_adicional, mostrar FROM servicios ORDER BY orden ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -588,6 +588,7 @@ class Admin_functions extends CI_Model
 				$data[$i]['precio'] = $fila->precio;
 				$data[$i]['precio_oferta'] = $fila->precio_oferta;
 				$data[$i]['servicio_adicional'] = $fila->servicio_adicional;
+				$data[$i]['mostrar'] = $fila->mostrar;
 				$i++;
 			}
 		}

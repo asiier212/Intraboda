@@ -547,7 +547,7 @@
     $ids = implode(',', array_map('intval', $servicios));
 
     // Ejecutar la consulta solo si hay IDs válidos
-    $query = $this->db->query("SELECT id, nombre, precio FROM servicios WHERE id IN ($ids)");
+    $query = $this->db->query("SELECT id, nombre, precio FROM servicios WHERE id IN ($ids) ORDER BY orden");
 
     if ($query->num_rows() > 0) {
         $i = 0;
@@ -614,9 +614,9 @@
 			$arr_servicios = unserialize( $fila->servicios );
 			$arr_serv_keys = array_keys($arr_servicios);
 			
-			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta FROM servicios WHERE id NOT IN (".$arr_serv_keys[0].")");
+			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios  WHERE id NOT IN (".$arr_serv_keys[0].") ORDER BY orden ASC");
 		} else {
-			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta FROM servicios");
+			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios ORDER BY orden ASC");
 		}
 		
 		if($query->num_rows() > 0){
@@ -626,6 +626,7 @@
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['precio'] = $fila->precio;
 				$data[$i]['precio_oferta'] = $fila->precio_oferta;
+				$data[$i]['mostrar'] = $fila->mostrar;
 				$i++;
 			}
 		}
