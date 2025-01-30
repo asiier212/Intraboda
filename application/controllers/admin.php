@@ -67,35 +67,35 @@ class Admin extends CI_Controller
 	}
 
 	public function actualizar_orden_partidas_presupuestarias()
-{
-    $order = $this->input->post('order');
-    if (!empty($order)) {
-        $this->load->database();
-        $total_actualizados = 0;
+	{
+		$order = $this->input->post('order');
+		if (!empty($order)) {
+			$this->load->database();
+			$total_actualizados = 0;
 
-        foreach ($order as $item) {
-            $this->db->where('id_partida', $item['id']);
-            $this->db->update('partidas_presupuestarias', ['orden' => $item['orden']]);
+			foreach ($order as $item) {
+				$this->db->where('id_partida', $item['id']);
+				$this->db->update('partidas_presupuestarias', ['orden' => $item['orden']]);
 
-            $afectadas = $this->db->affected_rows(); // 🔍 Ver cuántas filas se actualizaron
+				$afectadas = $this->db->affected_rows(); // 🔍 Ver cuántas filas se actualizaron
 
-            if ($afectadas > 0) {
-                $total_actualizados++;
-            }
-        }
+				if ($afectadas > 0) {
+					$total_actualizados++;
+				}
+			}
 
-        log_message('debug', "🔄 Total de registros actualizados: {$total_actualizados}");
+			log_message('debug', "🔄 Total de registros actualizados: {$total_actualizados}");
 
-        if ($total_actualizados > 0) {
-            echo json_encode(['status' => 'success']);
-        } else {
-            echo json_encode(['status' => 'no_changes', 'message' => 'Ningún registro fue modificado.']);
-        }
-    } else {
-        log_message('error', '⚠️ No se recibieron datos para actualizar el orden.');
-        echo json_encode(['status' => 'error', 'message' => 'No se recibieron datos.']);
-    }
-}
+			if ($total_actualizados > 0) {
+				echo json_encode(['status' => 'success']);
+			} else {
+				echo json_encode(['status' => 'no_changes', 'message' => 'Ningún registro fue modificado.']);
+			}
+		} else {
+			log_message('error', '⚠️ No se recibieron datos para actualizar el orden.');
+			echo json_encode(['status' => 'error', 'message' => 'No se recibieron datos.']);
+		}
+	}
 
 
 
@@ -283,6 +283,37 @@ class Admin extends CI_Controller
 			echo json_encode(['status' => 'error', 'message' => 'Datos inválidos']);
 		}
 	}
+
+	public function reenviar_clave()
+{
+    $this->load->model('admin_functions');
+
+    // CodeIgniter 2.2 no maneja JSON directamente, así que usamos $_POST
+    $id_cliente = isset($_POST['id_cliente']) ? $_POST['id_cliente'] : null;
+    $destinatario = isset($_POST['destinatario']) ? $_POST['destinatario'] : null;
+
+    log_message('debug', "Valores recibidos en POST -> id_cliente: " . json_encode($id_cliente) . ", destinatario: " . json_encode($destinatario));
+
+    if (!$id_cliente || !$destinatario) {
+        log_message('error', 'Faltan parámetros en la solicitud de reenvío de clave');
+        header('Content-Type: application/json');
+        echo json_encode(['success' => false, 'message' => 'Parámetros inválidos']);
+        return;
+    }
+
+    // Llamar al modelo para reenviar la clave
+    $resultado = $this->admin_functions->reenviar_clave($id_cliente, $destinatario);
+
+    log_message('debug', "Resultado de reenviar_clave(): " . ($resultado ? 'Éxito' : 'Fallo'));
+
+    header('Content-Type: application/json');
+    echo json_encode([
+        'success' => $resultado,
+        'message' => $resultado ? 'Clave reenviada correctamente' : 'No se pudo reenviar la clave'
+    ]);
+}
+
+
 
 
 
@@ -1637,7 +1668,7 @@ class Admin extends CI_Controller
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-	
+
 		if ($acc == 'add') {
 			if ($_POST) {
 				if (isset($_POST['anadir_partida'])) {
@@ -1645,27 +1676,27 @@ class Admin extends CI_Controller
 				}
 			}
 		}
-		
+
 		if ($acc == 'view') {
 			$this->load->database();
-	
+
 			$anio_actual = date("Y"); // Año predeterminado (actual)
 			$ano = isset($_POST["ano"]) ? $_POST["ano"] : $anio_actual; // Si hay un año seleccionado, úsalo
-	
+
 			if ($id) {
 				$data['partida'] = $this->admin_functions->GetPartidaPresupuestaria($id);
 				$acc = "viewdetails";
 			}
-	
+
 			$data['ano'] = $ano; // Guardar el año en la variable de datos
 			$data['partidas_ano'] = $this->admin_functions->BuscaPartidasPresupuestariasMovimientos($ano);
 			$data['partidas'] = $this->admin_functions->GetPartidasPresupuestarias($ano);
 		}
-	
+
 		$view = "contabilidad/partidas_presupuestarias_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
-	
+
 
 	public function movimientos($acc = false, $id = false)
 	{
@@ -1863,7 +1894,7 @@ class Admin extends CI_Controller
 				}
 			}
 
-			$mail->addCC('rajlopa@gmail.com');
+			/*$mail->addCC('rajlopa@gmail.com');*/
 			/* $mail->addBCC('bcc@example.com'); */
 
 			// Email subject

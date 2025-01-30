@@ -212,15 +212,69 @@
 			<p style="float:left">Para editar los datos haz click sobre el texto</p>
 			<p style="text-align:right"><a style="text-decoration:underline; cursor:pointer;" target="_blank" href="<?php echo base_url() ?>admin/clientes/initsession/<?php echo $cliente['id'] ?>">Iniciar Sesi&oacute;n en la cuenta del usuario</a></p>
 			<p style="text-align:right"><a style="text-decoration:underline; cursor:pointer;" target="_blank" href="<?php echo base_url() ?>informes/ficha.php?id_cliente=<?php echo $cliente['id'] ?>">Descargar ficha del usuario</a></p>
-			<p style="text-align:right"><a style="text-decoration:underline; cursor:pointer;" onclick="reenviarClave()">Reenviar Clave</a></p>
+			<p style="text-align:right"><a style="text-decoration:underline; cursor:pointer;" onclick="mostrarPopup()">Reenviar Clave</a></p>
+
+			<!--Popup reenviar clave-->
+			<div id="popupReenviarClave" class="popup" style="display: none;">
+				<div class="popup-content">
+					<p>¿A quién quieres reenviar la clave?</p>
+					<input type="submit" onclick="reenviarClave('novio')" value="<?php echo $cliente['nombre_novio'] ?>" /><br><br>
+					<input type="submit" onclick="reenviarClave('novia')" value="<?php echo $cliente['nombre_novia'] ?>" /><br><br>
+					<input type="submit" onclick="reenviarClave('ambos')" value="Ambos" /><br><br>
+					<input type="submit" onclick="cerrarPopup()" value="Cancelar" />
+				</div>
+			</div>
+
+
 
 			<script>
-				function reenviarClave() {
-					if (confirm("¿Seguro que quieres reenviar tu clave?")) {
-						window.location.href = "reenviar_clave.php?email=<?php echo urlencode($data['email_novio']); ?>";
+				function mostrarPopup() {
+					document.getElementById("popupReenviarClave").style.display = "flex";
+				}
+
+				function cerrarPopup() {
+					document.getElementById("popupReenviarClave").style.display = "none";
+				}
+
+				window.onclick = function(event) {
+					let popup = document.getElementById("popupReenviarClave");
+					if (event.target === popup) {
+						cerrarPopup();
 					}
+				};
+
+				function obtenerIdCliente() {
+					const pathParts = window.location.pathname.split("/");
+					return pathParts[pathParts.length - 1];
+				}
+
+
+				console.log("ID del cliente:", obtenerIdCliente());
+
+				function reenviarClave(destinatario) {
+					var idCliente = obtenerIdCliente(); // Asegúrate de que devuelve un valor correcto
+
+					console.log("Enviando datos:", {
+						id_cliente: idCliente,
+						destinatario
+					});
+
+					fetch("http://localhost/intraboda/admin/reenviar_clave", {
+							method: "POST",
+							headers: {
+								"Content-Type": "application/x-www-form-urlencoded"
+							},
+							body: `id_cliente=${encodeURIComponent(idCliente)}&destinatario=${encodeURIComponent(destinatario)}`
+						})
+						.then(response => response.json())
+						.then(data => {
+							console.log("Respuesta del servidor:", data);
+							alert(data.message);
+							cerrarPopup();
+						})
 				}
 			</script>
+
 
 			<br clear="left" />
 			<fieldset style="width:350px">
@@ -476,8 +530,8 @@
 																																													}
 																																												} else {
 																																														?><b>No asignado</b><br><?php
-																																												}
-										?>
+																																																			}
+																																																				?>
 				<select name="equipo_componentes">
 					<?php
 					foreach ($equipos_disponibles as $e1) { ?>
@@ -522,7 +576,7 @@
 																																													}
 																																												} else {
 																																														?><b>No asignado</b><br><?php
-																																												} ?>
+																																																			} ?>
 				<select name="equipo_luces">
 					<?php
 					foreach ($equipos_disponibles as $e2) { ?>
@@ -564,10 +618,10 @@
 						}
 				?>
 						<a href="#" onclick="muestra_componentes_equipo('<?php echo addslashes(htmlentities($se_compone_de)) ?>')"><b><?php echo $equipoe1['nombre_grupo'] ?></b></a><br><?php
-																																													}
-																																												} else {
-																																														?><b>No asignado</b><br><?php
-																																												} ?>
+																																														}
+																																													} else {
+																																															?><b>No asignado</b><br><?php
+																																																				} ?>
 				<select name="equipo_extra1">
 					<?php
 					foreach ($equipos_disponibles as $e2) { ?>
@@ -609,10 +663,10 @@
 						}
 				?>
 						<a href="#" onclick="muestra_componentes_equipo('<?php echo addslashes(htmlentities($se_compone_de)) ?>')"><b><?php echo $equipoe2['nombre_grupo'] ?></b></a><br><?php
-																																													}
-																																												} else {
-																																														?><b>No asignado</b><br><?php
-																																												} ?>
+																																														}
+																																													} else {
+																																															?><b>No asignado</b><br><?php
+																																																				} ?>
 				<select name="equipo_extra2">
 					<?php
 					foreach ($equipos_disponibles as $e2) { ?>
@@ -630,16 +684,16 @@
 				<?php
 				foreach ($preguntas_encuesta_datos_boda as $preguntas) {
 				?><li>- <strong><?php echo $preguntas['pregunta'] ?></strong></li><br><?php
-																								if ($respuestas_encuesta_datos_boda[0] <> "") {
-																									foreach ($respuestas_encuesta_datos_boda as $respuestas) {
-																										if ($respuestas['id_pregunta'] == $preguntas['id_pregunta']) {
-																								?><li><?php echo $respuestas['respuesta'] ?></li><br><?php
-																										}
-																									}
-																								} else {
-																						?><li>No hay respuesta</li><br><?php
-																								}
-																							} ?>
+																						if ($respuestas_encuesta_datos_boda[0] <> "") {
+																							foreach ($respuestas_encuesta_datos_boda as $respuestas) {
+																								if ($respuestas['id_pregunta'] == $preguntas['id_pregunta']) {
+																						?><li><?php echo $respuestas['respuesta'] ?></li><br><?php
+																																			}
+																																		}
+																																	} else {
+																																				?><li>No hay respuesta</li><br><?php
+																																											}
+																																										} ?>
 			</fieldset>
 		</fieldset>
 		<fieldset class="datos">
@@ -696,17 +750,17 @@
 					foreach ($pagos as $p) {
 						$suma_pagos = $suma_pagos + $p['valor']; ?>
 						<li style="padding:8px 0;"><strong><?php echo date("d-m-Y", strtotime($p['fecha'])) . " - " . number_format($p['valor'], 2, ",", ".") ?></strong>&euro; <a href="#" onclick="return deletepago('<?php echo $cliente['id'] ?>','<?php echo $p['valor'] ?>','<?php echo $p['fecha'] ?>')"><img src="<?php echo base_url() ?>img/delete.gif" width="15" height="15" /></a></li><?php
-																																																																																														}
-																																																																																														if (count($pagos) == 1) {
-																																																																																															echo '<li style="padding:8px 0;">Segundo pago: <input type="numer" step="0.01" name="valor" value="' . number_format(($total / 2) - $suma_pagos, 2, ",", ".") . '"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
-																																																																																														} else {
-																																																																																															echo '<li style="padding:8px 0;">Siguiente pago: <input type="number" step="0.01" name="valor" value="' .
-																																																																																																($cliente['descuento'] != '' && $cliente['descuento'] != '0'  ?
-																																																																																																	number_format($total - $suma_pagos - $cliente['descuento'], 2, ",", ".") : number_format($total - $suma_pagos, 2)) . '"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
-																																																																																														}
-																																																																																													}
+																																																																																																}
+																																																																																																if (count($pagos) == 1) {
+																																																																																																	echo '<li style="padding:8px 0;">Segundo pago: <input type="numer" step="0.01" name="valor" value="' . number_format(($total / 2) - $suma_pagos, 2, ",", ".") . '"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
+																																																																																																} else {
+																																																																																																	echo '<li style="padding:8px 0;">Siguiente pago: <input type="number" step="0.01" name="valor" value="' .
+																																																																																																		($cliente['descuento'] != '' && $cliente['descuento'] != '0'  ?
+																																																																																																			number_format($total - $suma_pagos - $cliente['descuento'], 2, ",", ".") : number_format($total - $suma_pagos, 2)) . '"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
+																																																																																																}
+																																																																																															}
 
-																																																																																															?>
+																																																																																																	?>
 				<li style="padding:8px 0;">Pendiente por pagar: <strong><?php
 																		echo number_format(count($pagos) == 0 ? $total :  $total - $suma_pagos, 2, ",", ".");
 																		?></strong>&euro;</li>
@@ -887,3 +941,33 @@
 </div>
 <div class="clear">
 </div>
+
+
+<style>
+	.popup {
+		display: none;
+		position: fixed;
+		z-index: 9999;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.popup-content {
+		background: white;
+		padding: 20px;
+		border-radius: 10px;
+		text-align: center;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	.popup button {
+		margin: 3px;
+		padding:0px 4px
+	}
+</style>

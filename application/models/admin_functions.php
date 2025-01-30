@@ -169,39 +169,89 @@ class Admin_functions extends CI_Model
 		return $this->db->insert_id();
 	}
 
-	function InsertRestaurante($data)
+	function reenviar_clave($id_cliente, $destinatario)
 	{
-
 		$this->load->database();
+		$this->load->library('encrypt');
+		log_message('debug', "Intentando reenviar clave para cliente ID: {$id_cliente}, destinatario: {$destinatario}");
 
-		$this->db->insert('restaurantes', $data);
+		// Obtener datos del cliente
+		$query = $this->db->query("SELECT email_novio, email_novia, clave FROM clientes WHERE id = ?", [$id_cliente]);
+		$cliente = $query->row();
 
-		$id_cliente = $this->db->insert_id();
+		if (!$cliente) {
+			log_message('error', "Cliente no encontrado con ID: {$id_cliente}");
+			return false;
+		}
 
-		return $this->db->insert_id();
-	}
+		// Desencriptar clave
+		$clave = $this->encrypt->decode($cliente->clave);
+		log_message('debug', "Clave desencriptada: {$clave}");
 
-	function GetRestaurantes($str_where, $ord, $limit)
-	{
-		$data = false;
-		$this->load->database();
-
-		$query = $this->db->query("SELECT id_restaurante, nombre, direccion, telefono, maitre, telefono_maitre, hora_limite_fiesta FROM restaurantes {$str_where} ORDER BY {$ord}   {$limit}");
-		if ($query->num_rows() > 0) {
-			$i = 0;
-			foreach ($query->result() as $fila) {
-				$data[$i]['id_restaurante'] = $fila->id_restaurante;
-				$data[$i]['nombre'] = $fila->nombre;
-				$data[$i]['direccion'] = $fila->direccion;
-				$data[$i]['telefono'] = $fila->telefono;
-				$data[$i]['maitre'] = $fila->maitre;
-				$data[$i]['telefono_maitre'] = $fila->telefono_maitre;
-				$data[$i]['hora_limite_fiesta'] = $fila->hora_limite_fiesta;
-				$i++;
+		// Determinar destinatarios
+		$destinatarios = [];
+		if ($destinatario === 'novio' && !empty($cliente->email_novio)) {
+			$destinatarios[] = $cliente->email_novio;
+		}
+		if ($destinatario === 'novia' && !empty($cliente->email_novia)) {
+			$destinatarios[] = $cliente->email_novia;
+		}
+		if ($destinatario === 'ambos') {
+			if (!empty($cliente->email_novio)) {
+				$destinatarios[] = $cliente->email_novio;
+			}
+			if (!empty($cliente->email_novia)) {
+				$destinatarios[] = $cliente->email_novia;
 			}
 		}
-		return $data;
+
+		if (empty($destinatarios)) {
+			log_message('error', "No hay destinatarios válidos para reenviar la clave del cliente ID: {$id_cliente}");
+			return false;
+		}
+
+		// Enviar email
+		$asunto = "Reenvío de Clave - IntraBoda";
+		$mensaje = "
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Reenvío de Clave - IntraBoda</title>
+</head>
+<body style='font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;'>
+    <div style='max-width: 600px; margin: 20px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);'>
+        <h2 style='color: #444; text-align: center;'>Reenvío de Clave - IntraBoda</h2>
+        <p style='font-size: 16px; color: #333;'>Estimado/a usuario,</p>
+        <p style='font-size: 16px; color: #333;'>Su clave de acceso a IntraBoda es: <strong style='color: #007BFF; font-size: 18px;'>{$clave}</strong></p>
+        <p style='font-size: 16px; color: #333;'>Puede acceder a nuestra plataforma desde el siguiente enlace:</p>
+        <p style='text-align: center;'>
+            <a href='https://intranet.exeleventos.com/index.php/cliente/login' style='display: inline-block; padding: 12px 20px; background-color: #007BFF; color: white; text-decoration: none; font-size: 16px; border-radius: 5px;'>Acceder a IntraBoda</a>
+        </p>
+        <p style='font-size: 16px; color: #333;'>Saludos,</p>
+        <p style='font-size: 16px; color: #007BFF; font-weight: bold;'>El equipo de IntraBoda</p>
+    </div>
+</body>
+</html>";
+
+
+		$mensaje = html_entity_decode($mensaje);
+
+
+		log_message('debug', "Enviando email a: " . implode(', ', $destinatarios));
+
+		$resultado = $this->sendEmail('info@exeleventos.com', $destinatarios, $asunto, $mensaje);
+
+		if ($resultado) {
+			log_message('debug', "Email enviado correctamente");
+			return true;
+		} else {
+			log_message('error', "Error al enviar email");
+			return false;
+		}
 	}
+
 
 	function GetRestaurantesTotales()
 	{
