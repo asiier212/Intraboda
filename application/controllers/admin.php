@@ -1637,7 +1637,7 @@ class Admin extends CI_Controller
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-
+	
 		if ($acc == 'add') {
 			if ($_POST) {
 				if (isset($_POST['anadir_partida'])) {
@@ -1645,36 +1645,27 @@ class Admin extends CI_Controller
 				}
 			}
 		}
+		
 		if ($acc == 'view') {
 			$this->load->database();
-
-			$anio_actual = date("Y");
-			$fecha_desde = $anio_actual;
-			$fecha_hasta = $anio_actual;
-
-			if ($_POST) {
-				if ($_POST["fecha_desde"] <> "") {
-					$fecha_desde = $_POST["fecha_desde"];
-				}
-				if ($_POST["fecha_hasta"] <> "") {
-					$fecha_hasta = $_POST["fecha_hasta"];
-				}
-			}
-
+	
+			$anio_actual = date("Y"); // Año predeterminado (actual)
+			$ano = isset($_POST["ano"]) ? $_POST["ano"] : $anio_actual; // Si hay un año seleccionado, úsalo
+	
 			if ($id) {
 				$data['partida'] = $this->admin_functions->GetPartidaPresupuestaria($id);
 				$acc = "viewdetails";
 			}
-
-			$data['fecha_desde'] = $fecha_desde;
-			$data['fecha_hasta'] = $fecha_hasta;
-			$data['partidas_ano'] = $this->admin_functions->BuscaPartidasPresupuestariasMovimientos($fecha_desde, $fecha_hasta);
-			$data['partidas'] = $this->admin_functions->GetPartidasPresupuestarias($fecha_desde, $fecha_hasta);
+	
+			$data['ano'] = $ano; // Guardar el año en la variable de datos
+			$data['partidas_ano'] = $this->admin_functions->BuscaPartidasPresupuestariasMovimientos($ano);
+			$data['partidas'] = $this->admin_functions->GetPartidasPresupuestarias($ano);
 		}
-
+	
 		$view = "contabilidad/partidas_presupuestarias_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
+	
 
 	public function movimientos($acc = false, $id = false)
 	{

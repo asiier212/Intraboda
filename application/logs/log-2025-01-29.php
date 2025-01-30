@@ -3316,3 +3316,35 @@ DEBUG - 2025-01-29 14:23:24 --> File loaded: application/views/admin/contabilida
 DEBUG - 2025-01-29 14:23:24 --> File loaded: application/views/admin/footer.php
 DEBUG - 2025-01-29 14:23:24 --> Final output sent to browser
 DEBUG - 2025-01-29 14:23:24 --> Total execution time: 0.0785
+DEBUG - 2025-01-29 14:25:20 --> Config Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Hooks Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Utf8 Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> UTF-8 Support Enabled
+DEBUG - 2025-01-29 14:25:20 --> URI Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Router Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Output Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Security Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Input Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-01-29 14:25:20 --> Language Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Loader Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Helper loaded: url_helper
+DEBUG - 2025-01-29 14:25:20 --> Controller Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Session Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Helper loaded: string_helper
+DEBUG - 2025-01-29 14:25:20 --> Session routines successfully run
+DEBUG - 2025-01-29 14:25:20 --> Model Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Model Class Initialized
+DEBUG - 2025-01-29 14:25:20 --> Database Driver Class Initialized
+ERROR - 2025-01-29 14:25:20 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\Intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-01-29 14:25:20 --> File loaded: application/views/admin/header.php
+ERROR - 2025-01-29 14:25:20 --> Severity: Warning  --> Division by zero C:\xampp\htdocs\Intraboda\application\views\admin\contabilidad\partidas_presupuestarias_view.php 76
+ERROR - 2025-01-29 14:25:20 --> Severity: Warning  --> Division by zero C:\xampp\htdocs\Intraboda\application\views\admin\contabilidad\partidas_presupuestarias_view.php 76
+ERROR - 2025-01-29 14:25:20 --> Severity: Warning  --> Division by zero C:\xampp\htdocs\Intraboda\application\views\admin\contabilidad\partidas_presupuestarias_view.php 76
+ERROR - 2025-01-29 14:25:20 --> Severity: Warning  --> Division by zero C:\xampp\htdocs\Intraboda\application\views\admin\contabilidad\partidas_presupuestarias_view.php 76
+ERROR - 2025-01-29 14:25:20 --> Severity: Warning  --> Division by zero C:\xampp\htdocs\Intraboda\application\views\admin\contabilidad\partidas_presupuestarias_view.php 76
+ERROR - 2025-01-29 14:25:20 --> Severity: Warning  --> Division by zero C:\xampp\htdocs\Intraboda\application\views\admin\contabilidad\partidas_presupuestarias_view.php 76
+DEBUG - 2025-01-29 14:25:20 --> File loaded: application/views/admin/contabilidad/partidas_presupuestarias_view.php
+DEBUG - 2025-01-29 14:25:20 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-01-29 14:25:20 --> Final output sent to browser
+DEBUG - 2025-01-29 14:25:20 --> Total execution time: 0.1451

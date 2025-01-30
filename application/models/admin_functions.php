@@ -1975,12 +1975,13 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function GetPartidasPresupuestarias($fecha_desde, $fecha_hasta)
+	function GetPartidasPresupuestarias($ano)
 	{
 		$data = false;
 		$this->load->database();
 
-		$query = $this->db->query("SELECT id_partida, concepto, importe, ano FROM partidas_presupuestarias WHERE ano>='" . $fecha_desde . "' AND ano<='" . $fecha_hasta . "' order by orden ASC");
+		$query = $this->db->query("SELECT id_partida, concepto, importe, ano FROM partidas_presupuestarias WHERE ano = '" . $ano . "' ORDER BY orden ASC");
+
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -1988,12 +1989,12 @@ class Admin_functions extends CI_Model
 				$data[$i]['concepto'] = $fila->concepto;
 				$data[$i]['importe'] = $fila->importe;
 				$data[$i]['año'] = $fila->ano;
-
 				$i++;
 			}
 		}
 		return $data;
 	}
+
 
 	function GetPartidasPresupuestariasAno($id_movimiento)
 	{
@@ -2021,25 +2022,28 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function BuscaPartidasPresupuestariasMovimientos($fecha_desde, $fecha_hasta)
+	function BuscaPartidasPresupuestariasMovimientos($ano)
 	{
 		$data = false;
 		$this->load->database();
 
-		$query = $this->db->query("SELECT partida_presupuestaria, importe, DATE_FORMAT(fecha,'%Y') as ano from movimientos_cuentas where fecha>='" . $fecha_desde . "-01-01' and fecha<='" . $fecha_hasta . "-31-12' AND partida_presupuestaria<>''");
+		$query = $this->db->query("SELECT partida_presupuestaria, importe, DATE_FORMAT(fecha,'%Y') as ano 
+                               FROM movimientos_cuentas 
+                               WHERE DATE_FORMAT(fecha, '%Y') = '" . $ano . "' 
+                               AND partida_presupuestaria<>''");
+
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
 				$data[$i]['partida_presupuestaria'] = $fila->partida_presupuestaria;
 				$data[$i]['importe'] = $fila->importe;
 				$data[$i]['año'] = $fila->ano;
-				$data[$i]['c'] = "SELECT partida_presupuestaria, importe, DATE_FORMAT(fecha,'%Y') as ano from movimientos_cuentas where fecha>='" . $fecha_desde . "-01-01' and fecha<='" . $fecha_hasta . "-31-12' AND partida_presupuestaria<>''";
 				$i++;
 			}
 		}
-
 		return $data;
 	}
+
 
 	function InsertMovimiento($data)
 	{
