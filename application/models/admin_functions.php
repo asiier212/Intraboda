@@ -163,7 +163,9 @@ class Admin_functions extends CI_Model
 
 			/* mail($data['email_novio'], $asunto, $mensaje, $cabeceras);
               mail($data['email_novia'], $asunto, $mensaje, $cabeceras); */
-			$this->sendEmail('info@exeleventos.com', [$data['email_novio'], $data['email_novia']], $asunto, $mensaje);
+			$this->sendEmail('info@exeleventos.com', [$data['email_novio']], $asunto, $mensaje);
+			$this->sendEmail('info@exeleventos.com', [$data['email_novia']], $asunto, $mensaje);
+
 		}
 
 		return $this->db->insert_id();
