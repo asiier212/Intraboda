@@ -24,7 +24,7 @@
     <form method="post" style="width:300px">
       <fieldset style="width:300px">
         <legend>Login Comercial</legend>
-        <label for="admin_name" style="float:left; margin:0 5px 0 0; width:120px">Usuario: </label>
+        <label for="admin_name" style="float:left; margin:0 5px 0 0; width:120px">Email: </label>
         <input style="float: left; margin:0 0 2px 0" type="text" name="email" value="" />
         <br style="clear:both; height:10px;" />
         <label  for="pass" style="float:left; margin:0 5px 0 0; width:120px">Contraseña: </label>
