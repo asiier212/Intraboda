@@ -102,21 +102,6 @@
 				$('#apellidos').focus();
 				return false;
 			}
-			if ($('#direccion').val() == '') {
-				alert("Debes añadir la dirección a la solicitud");
-				$('#direccion').focus();
-				return false;
-			}
-			if ($('#cp').val() == '') {
-				alert("Debes añadir el código postal a la solicitud");
-				$('#cp').focus();
-				return false;
-			}
-			if ($('#poblacion').val() == '') {
-				alert("Debes añadir la población a la solicitud");
-				$('#poblacion').focus();
-				return false;
-			}
 			if ($('#telefono').val() == '') {
 				alert("Debes añadir el teléfono a la solicitud");
 				$('#telefono').focus();
@@ -127,39 +112,9 @@
 				$('#email').focus();
 				return false;
 			}
-			if ($('#presupuesto_pdf').val() == '') {
-				alert("Debes añadir el presupuesto a la solicitud");
-				$('#presupuesto_pdf').focus();
-				return false;
-			}
 			if ($('#calendar').val() == '') {
 				alert("Debes añadir la fecha de la boda a la solicitud");
 				$('#calendar').focus();
-				return false;
-			}
-			if ($('#calendar_hora').val() == '') {
-				alert("Debes añadir la hora de la boda a la solicitud");
-				$('#calendar_hora').focus();
-				return false;
-			}
-			if ($('#restaurante').val() == '') {
-				alert("Debes añadir el restaurante a la solicitud");
-				$('#restaurante').focus();
-				return false;
-			}
-			if ($('#presupuesto_pdf').val() == '') {
-				alert("Debes añadir el presupuesto a la solicitud");
-				$('#presupuesto_pdf').focus();
-				return false;
-			}
-			if ($('#importe').val() == '') {
-				alert("Debes añadir el importe a la solicitud");
-				$('#importe').focus();
-				return false;
-			}
-			if ($('#descuento').val() == '') {
-				alert("Debes añadir el descuento a la solicitud");
-				$('#descuento').focus();
 				return false;
 			}
 			if (confirm("¿Deseas enviar un e-mail para que el cliente realice una encuesta para descuento sobre el presupuesto?")) {
@@ -205,14 +160,13 @@
 
 				<li><label>(*)Nombre:</label><input type="text" id="nombre" name="nombre" /> </li>
 				<li><label>(*)Apellidos:</label><input type="text" id="apellidos" name="apellidos" /> </li>
-				<li><label>(*)Direcci&oacute;n:</label><input type="text" id="direccion" name="direccion" /> </li>
-				<li><label>(*)CP:</label><input type="text" id="cp" name="cp" /> </li>
-				<li><label>(*)Poblaci&oacute;n:</label><input type="text" id="poblacion" name="poblacion" /> </li>
+				<li><label>Direcci&oacute;n:</label><input type="text" id="direccion" name="direccion" /> </li>
+				<li><label>CP:</label><input type="text" id="cp" name="cp" /> </li>
+				<li><label>Poblaci&oacute;n:</label><input type="text" id="poblacion" name="poblacion" /> </li>
 				<li><label>(*)Tel&eacute;fono:</label><input type="text" id="telefono" name="telefono" /> </li>
 				<li><label>(*)Email:</label><input type="text" id="email" name="email" /> </li>
-				<li><label>(*)Presupuesto:</label><input type="file" id="presupuesto_pdf" name="presupuesto_pdf" /> </li>
-				<li><label>(*)Importe:</label><input type="text" id="importe" name="importe" /> </li>
-				<li><label>(*)Descuento:</label><input type="text" id="descuento" name="descuento" /> </li>
+				<li><label>Importe:</label><input type="text" id="importe" name="importe" /> </li>
+				<li><label>Descuento:</label><input type="text" id="descuento" name="descuento" /> </li>
 			</ul>
 
 			<br />
@@ -227,8 +181,8 @@
 			</select> <br />
 
 			<br class="clear" />
-			(*)Estado de la solicitud: <select name="estado_solicitud">
-				<?php
+			Estado de la solicitud: <select name="estado_solicitud">
+			<?php
 				foreach ($estados_solicitudes as $estado) { ?>
 					<option value="<?php echo $estado['id_estado'] ?>"><?php echo $estado['nombre_estado'] ?></option>
 				<?php
@@ -240,8 +194,8 @@
 			<legend>Datos de la boda</legend>
 			<ul>
 				<li><label>(*)Fecha de la boda:</label><input type="text" name="fecha_boda" id="calendar" /></li>
-				<li><label>(*)Hora de la boda:</label><input type="text" name="hora_boda" id="calendar_hora" style="width:60px" /></li>
-				<li><label>(*)Restaurante:</label><input type="text" id="restaurante" name="restaurante" /></li>
+				<li><label>Hora de la boda:</label><input type="text" name="hora_boda" id="calendar_hora" style="width:60px" /></li>
+				<li><label>Restaurante:</label><input type="text" id="restaurante" name="restaurante" /></li>
 				<input value="<?php echo base_url() ?>" id="hiddenurl" type="hidden">
 			</ul>
 

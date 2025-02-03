@@ -84,17 +84,16 @@ class Comercial extends CI_Controller
 
 	function solicitudes($acc = false, $id = false)
 	{
-
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
+
 		if ($acc == 'add') {
 			$data['captacion'] = $this->comercial_functions->GetCaptacion();
 			$data['estados_solicitudes'] = $this->comercial_functions->GetEstados_Solicitudes();
 			$data['n_presupuesto'] = $this->CrearNumeroPresupuesto();
-			if ($_POST) {
-				$data = false;
 
+			if ($_POST) {
 				$data['n_presupuesto'] = $_POST['n_presupuesto'];
 				$data['email'] = $_POST['email'];
 				$data['nombre'] = $_POST['nombre'];
@@ -109,29 +108,11 @@ class Comercial extends CI_Controller
 				$data['estado_solicitud'] = $_POST['estado_solicitud'];
 				$data['id_comercial'] = $this->session->userdata('id');
 
-				$config['upload_path'] = './uploads/presupuestos_solicitudes/';
-				$config['allowed_types'] = 'pdf';
-				//$config['max_width']  = '600';
-
-				$this->load->library('upload', $config);
-
-				if (! $this->upload->do_upload("presupuesto_pdf")) {
-					$data['msg'] = $this->upload->display_errors();
-				} else {
-					$data['upload_data'] = $this->upload->data();
-					$data['presupuesto_pdf'] = $data['upload_data']['file_name'];
-					unset($data['upload_data']);
-				}
-
-
 				$data['importe'] = str_replace(',', '.', $_POST['importe']);
 				$data['descuento'] = str_replace(',', '.', $_POST['descuento']);
 
 				$id_solicitud = $this->comercial_functions->InsertSolicitud($data);
-				//redirect(base_url().'admin/clientes/view');
 
-
-				//ENVIAMOS UN E-MAIL CON EL ENLACE DE LA ENCUESTA SI ES QUE ES NECESARIO
 				if ($_POST['enviar_encuesta'] == "S") {
 					$this->enviar_email_encuesta($data['id_comercial'], $id_solicitud, html_entity_decode($_POST['email']));
 				}
@@ -139,35 +120,17 @@ class Comercial extends CI_Controller
 				redirect('comercial/solicitudes/view');
 			}
 		}
+
 		if ($acc == 'view') {
 			$this->load->database();
 			if ($id) {
 				if ($_POST) {
-
-					//$this->load->database();
-
 					if (isset($_POST['update_canal_captacion'])) {
 						$this->db->query("UPDATE solicitudes SET canal_captacion = '" . $_POST['canal_captacion'] . "' WHERE id_solicitud = {$id}");
 					}
 
 					if (isset($_POST['update_estado_solicitud'])) {
 						$this->db->query("UPDATE solicitudes SET estado_solicitud = '" . $_POST['estado_solicitud'] . "' WHERE id_solicitud = {$id}");
-					}
-
-					if (isset($_POST['anadir_presupuesto'])) {
-						$config['upload_path'] = './uploads/presupuestos_solicitudes/';
-						$config['allowed_types'] = 'pdf';
-						//$config['max_width']  = '600';
-
-						$this->load->library('upload', $config);
-
-						if (! $this->upload->do_upload("presupuesto_pdf")) {
-							$data['msg'] = $this->upload->display_errors();
-						} else {
-							$data['upload_data'] = $this->upload->data();
-							$_POST['presupuesto_pdf'] = $data['upload_data']['file_name'];
-						}
-						$this->db->query("UPDATE solicitudes SET presupuesto_pdf = '" . $_POST['presupuesto_pdf'] . "' WHERE id_solicitud = {$id}");
 					}
 
 					if (isset($_POST['add_observ'])) {
@@ -190,24 +153,7 @@ class Comercial extends CI_Controller
 				$data['llamadas_solicitud'] = $this->comercial_functions->GetLLamadas_Solicitud($id);
 				$acc = "viewdetails";
 			} else {
-				if ($_POST) {
-					$this->load->database();
-					$query = $this->db->query("SELECT presupuesto_pdf FROM solicitudes WHERE id_solicitud = " . $_POST['id'] . "");
-					foreach ($query->result() as $fila) {
-						$presupuesto = './uploads/presupuestos_solicitudes/' . $fila->presupuesto_pdf;
-						//echo $contrato ;
-						if (file_exists($presupuesto)) {
-							unlink($presupuesto);
-						}
-					}
-
-					$this->db->query("DELETE FROM solicitudes WHERE id_solicitud = " . $_POST['id'] . "");
-					$this->db->query("DELETE FROM observaciones_solicitudes WHERE id_solicitud = " . $_POST['id'] . "");
-					$this->db->query("DELETE FROM encuestas_solicitudes WHERE id_solicitud = " . $_POST['id'] . "");
-				}
-
 				$str_where = "";
-
 
 				if (isset($_GET['p']))
 					$data['page'] = $_GET['p'];
@@ -223,12 +169,8 @@ class Comercial extends CI_Controller
 					}
 				}
 
-				if (isset($_GET['estado_solicitud']) and $_GET['estado_solicitud'] <> "") {
-					if ($str_where == "") {
-						$str_where = $str_where . " WHERE estado_solicitud = " . $_GET['estado_solicitud'];
-					} else {
-						$str_where = $str_where . " AND estado_solicitud = " . $_GET['estado_solicitud'];
-					}
+				if (isset($_GET['estado_solicitud']) && $_GET['estado_solicitud'] <> "") {
+					$str_where .= $str_where == "" ? " WHERE estado_solicitud = " . $_GET['estado_solicitud'] : " AND estado_solicitud = " . $_GET['estado_solicitud'];
 				}
 
 				$query = $this->db->query("SELECT id_solicitud FROM solicitudes {$str_where}");
@@ -254,6 +196,7 @@ class Comercial extends CI_Controller
 		$view = "solicitudes_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
+
 
 
 	public function enviar_email_encuesta($id_comercial, $id_solicitud, $email)
