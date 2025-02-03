@@ -285,33 +285,33 @@ class Admin extends CI_Controller
 	}
 
 	public function reenviar_clave()
-{
-    $this->load->model('admin_functions');
+	{
+		$this->load->model('admin_functions');
 
-    // CodeIgniter 2.2 no maneja JSON directamente, así que usamos $_POST
-    $id_cliente = isset($_POST['id_cliente']) ? $_POST['id_cliente'] : null;
-    $destinatario = isset($_POST['destinatario']) ? $_POST['destinatario'] : null;
+		// CodeIgniter 2.2 no maneja JSON directamente, así que usamos $_POST
+		$id_cliente = isset($_POST['id_cliente']) ? $_POST['id_cliente'] : null;
+		$destinatario = isset($_POST['destinatario']) ? $_POST['destinatario'] : null;
 
-    log_message('debug', "Valores recibidos en POST -> id_cliente: " . json_encode($id_cliente) . ", destinatario: " . json_encode($destinatario));
+		log_message('debug', "Valores recibidos en POST -> id_cliente: " . json_encode($id_cliente) . ", destinatario: " . json_encode($destinatario));
 
-    if (!$id_cliente || !$destinatario) {
-        log_message('error', 'Faltan parámetros en la solicitud de reenvío de clave');
-        header('Content-Type: application/json');
-        echo json_encode(['success' => false, 'message' => 'Parámetros inválidos']);
-        return;
-    }
+		if (!$id_cliente || !$destinatario) {
+			log_message('error', 'Faltan parámetros en la solicitud de reenvío de clave');
+			header('Content-Type: application/json');
+			echo json_encode(['success' => false, 'message' => 'Parámetros inválidos']);
+			return;
+		}
 
-    // Llamar al modelo para reenviar la clave
-    $resultado = $this->admin_functions->reenviar_clave($id_cliente, $destinatario);
+		// Llamar al modelo para reenviar la clave
+		$resultado = $this->admin_functions->reenviar_clave($id_cliente, $destinatario);
 
-    log_message('debug', "Resultado de reenviar_clave(): " . ($resultado ? 'Éxito' : 'Fallo'));
+		log_message('debug', "Resultado de reenviar_clave(): " . ($resultado ? 'Éxito' : 'Fallo'));
 
-    header('Content-Type: application/json');
-    echo json_encode([
-        'success' => $resultado,
-        'message' => $resultado ? 'Clave reenviada correctamente' : 'No se pudo reenviar la clave'
-    ]);
-}
+		header('Content-Type: application/json');
+		echo json_encode([
+			'success' => $resultado,
+			'message' => $resultado ? 'Clave reenviada correctamente' : 'No se pudo reenviar la clave'
+		]);
+	}
 
 
 
@@ -1109,29 +1109,32 @@ class Admin extends CI_Controller
 				}
 
 				$str_where = "";
-
-
-				if (isset($_GET['p']))
-					$data['page'] = $_GET['p'];
-				else
-					$data['page'] = 1;
+				$busqueda_exacta = isset($_GET['especifica']); // Verificar si el checkbox está activado
 
 				if (isset($_GET['q'])) {
-					if ($_GET['f'] == 'fecha_boda') {
-						$date = strtotime($_GET['q']);
-						$str_where = "WHERE DATE(" . $_GET['f'] . ") = '" . date('Y-m-d', $date) . "'";
-					} elseif ($_GET['f'] == 'clientes.nombre') {
-						$str_where = "WHERE clientes.nombre_novia LIKE '%" . $_GET['q'] . "%' OR clientes.nombre_novio LIKE '%" . $_GET['q'] . "%'";
-					} elseif ($_GET['f'] == 'clientes.apellidos') {
-						$str_where = "WHERE clientes.apellidos_novia LIKE '%" . $_GET['q'] . "%' OR clientes.apellidos_novio LIKE '%" . $_GET['q'] . "%'";
-					} elseif ($_GET['f'] == 'clientes.poblacion') {
-						$str_where = "WHERE clientes.poblacion_novia LIKE '%" . $_GET['q'] . "%' OR clientes.poblacion_novio LIKE '%" . $_GET['q'] . "%'";
-					} elseif ($_GET['f'] == 'clientes.telefono') {
-						$str_where = "WHERE clientes.telefono_novia LIKE '%" . $_GET['q'] . "%' OR clientes.telefono_novio LIKE '%" . $_GET['q'] . "%'";
+					$campo = $_GET['f'];
+					$valor = $_GET['q'];
+
+					if ($campo == 'fecha_boda') {
+						$date = strtotime($valor);
+						$str_where = "WHERE DATE({$campo}) = '" . date('Y-m-d', $date) . "'";
+					} elseif ($campo == 'clientes.nombre') {
+						$str_where = "WHERE clientes.nombre_novia " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'") . " 
+                      OR clientes.nombre_novio " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'");
+					} elseif ($campo == 'clientes.apellidos') {
+						$str_where = "WHERE clientes.apellidos_novia " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'") . " 
+                      OR clientes.apellidos_novio " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'");
+					} elseif ($campo == 'clientes.poblacion') {
+						$str_where = "WHERE clientes.poblacion_novia " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'") . " 
+                      OR clientes.poblacion_novio " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'");
+					} elseif ($campo == 'clientes.telefono') {
+						$str_where = "WHERE clientes.telefono_novia " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'") . " 
+                      OR clientes.telefono_novio " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'");
 					} else {
-						$str_where = "WHERE " . $_GET['f'] . " LIKE '%" . $_GET['q'] . "%'";
+						$str_where = "WHERE {$campo} " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'");
 					}
 				}
+
 
 
 				$query = $this->db->query("SELECT clientes.id FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante {$str_where}");

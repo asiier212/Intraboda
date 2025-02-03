@@ -55,6 +55,7 @@ class Comercial extends CI_Controller
 
 	public function CrearNumeroPresupuesto()
 	{
+		//$anio_actual = "26";
 		$anio_actual = date('y');
 
 		$this->load->database();

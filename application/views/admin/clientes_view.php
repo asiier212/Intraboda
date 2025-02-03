@@ -23,8 +23,9 @@
 			</select>
 			<input type="text" name="q" value="<?php if (isset($_GET['q'])) echo $_GET['q'] ?>">
 			<input type="submit" value="Buscar" style="margin-right:30px" />
-			<a href="<?php echo base_url() ?>admin/clientes/view">Limpiar buscador</a>
-		</form>
+			<a href="<?php echo base_url() ?>admin/clientes/view">Limpiar buscador</a><br><br>
+			<a>Busqueda especifica:</a>
+			<input type="checkbox" style="width: 13px;" name="especifica" <?php if (isset($_GET['especifica'])) echo 'checked="checked"'; ?>>		</form>
 		<?php if ($clientes) {
 
 			if (isset($_GET['q']) && !isset($_GET['p']))
