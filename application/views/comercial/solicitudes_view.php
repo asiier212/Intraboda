@@ -27,7 +27,7 @@
             <a href="<?php echo base_url()?>comercial/solicitudes/view">Limpiar buscador</a>
                 
                 
-            <br>
+            <br><br>
             Estado solicitud: &nbsp;
             <select name="estado_solicitud">
             	<option value=""></option>

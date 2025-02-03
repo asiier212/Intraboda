@@ -213,7 +213,8 @@ function display_ct() {
 
 <?php
 $ahora=date("Y-m-d H:i:s");
-$fecha_limite = date("Y-m-d",strtotime('-2 day',strtotime($cliente['fecha_boda'])));
+$fecha_limite = date("31/01/2025");
+//$fecha_limite = date("Y-m-d",strtotime('-2 day',strtotime($cliente['fecha_boda'])));
 
 $tiempo_que_queda=strtotime($fecha_limite)-strtotime($ahora);
 ?>
@@ -250,7 +251,7 @@ if($ahora<$fecha_limite){?>
             <select style="display:block; float:left" name="momento_id">
             	<?php foreach($events as $e){?>
             	<option value="<?php echo $e['id']?>"><?php echo $e['nombre']?></option>
-                <? }?>
+                <?php }?>
             </select>
             <br><br>
             <input type="submit" style="width:100px; margin-left:10px; margin-left:150px;" name="add_song" value="A&ntilde;adir" /></li>
@@ -328,7 +329,7 @@ if($ahora<$fecha_limite){?>
                     	<a href="#" onclick="return deletecancion(<?php echo $c['id']?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a>
                     </li>
                    
-                     <? 
+                     <?php
 					}
 				 }
 			?>	 
@@ -352,7 +353,7 @@ if($ahora<$fecha_limite){?>
 				echo "<p style='text-align:center; padding:20px'>Tus listas y observaciones se han enviado correctamente. Gracias</p>";
 			
 			?>
-         <? } else {
+         <?php } else {
 			 echo "<p>No hay canciones</p>";	
 
 		 }?>
@@ -370,7 +371,7 @@ if($ahora<$fecha_limite){?>
         		<option value="0">General</option>
             	<?php foreach($events as $e){?>
             	<option value="<?php echo $e['id']?>"><?php echo $e['nombre']?></option>
-                <? }?>
+                <?php }?>
             </select>
             <br/><br/>
          <input type="submit" name="add_comentario" value="Añadir"/>
@@ -394,7 +395,7 @@ if($ahora<$fecha_limite){?>
            <li style="border-bottom:#CCC 1px solid" id="obs_<?php echo $c['id']?>"><span style="font-size:16px" class="edit_box" id="<?php echo $c['id']?>"><?php echo $c['comentario']?></span> <span style="font-size:11px"><br>(escrito el <?php echo $c['fecha']?>)</span>
                  	<a href="#" onclick="return deleteobservacion(<?php echo $c['id']?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a> 
              </li>
-           <? 
+           <?php
 	   }
 	 }
 		?>	 
@@ -429,7 +430,7 @@ if($ahora<$fecha_limite){?>
 							<a href="#" onclick="return deleteobservacion(<?php echo $c['id']?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a> 
 						</li>
 					   
-						 <? 
+						 <?php
 						}
 					 }
 			 

@@ -20735,4 +20735,3240 @@ Content-Transfer-Encoding: 8bit
   ),
    'previous' => NULL,
    'sqlstate' => 'HY000',
+))Vamos a enviar correo a array (
+  0 => '10patrick.deba@gmail.com',
+)Vamos a enviar correo a array (
+  0 => '10patrick.deba@gmail.com',
+)Vamos a enviar correo a array (
+  0 => '10patrick.deba@gmail.com',
+)Vamos a enviar correo a array (
+  0 => '10patrick.deba@gmail.com',
+)Vamos a enviar correo a array (
+  0 => '10patrick.deba@gmail.com',
+)Vamos a enviar correo a array (
+  0 => '10patrick.deba@gmail.com',
+)Vamos a enviar correo a array (
+  0 => '10patrick.deba@gmail.com',
+)Vamos a enviar correo a array (
+  0 => 'tuemail@ejemplo.com',
+)Algún tipo de error al enviar el correo PHPMailer\PHPMailer\Exception::__set_state(array(
+   'message' => 'SMTP Error: The following recipients failed: tuemail@ejemplo.com: Requested action not taken: domain does not accept mail
+invalid DNS MX or A/AAAA resource record 1MRT6b-1trOE342Uf-00QoKm
+',
+   'string' => '',
+   'code' => 1,
+   'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+   'line' => 2128,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+      'line' => 1689,
+      'function' => 'smtpSend',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'Date: Thu, 30 Jan 2025 12:06:29 +0100
+To: tuemail@ejemplo.com
+From: Exel Eventos <info@exeleventos.com>
+Reply-To: Exel Eventos <info@exeleventos.com>
+Subject: Prueba
+Message-ID: <oUPDeMeUUzyNitkgjU0ZvFzY7vABWgyOlvqECmHD7Y@localhost>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+',
+        1 => 'Este es un email de prueba
+',
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+      'line' => 1523,
+      'function' => 'postSend',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    2 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\controllers\\admin.php',
+      'line' => 1902,
+      'function' => 'send',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    3 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\controllers\\admin.php',
+      'line' => 300,
+      'function' => 'sendEmail',
+      'class' => 'Admin',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'info@exeleventos.com',
+        1 => 
+        array (
+          0 => 'tuemail@ejemplo.com',
+        ),
+        2 => 'Prueba',
+        3 => 'Este es un email de prueba',
+      ),
+    ),
+    4 => 
+    array (
+      'function' => 'reenviar_clave',
+      'class' => 'Admin',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    5 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\system\\core\\CodeIgniter.php',
+      'line' => 339,
+      'function' => 'call_user_func_array',
+      'args' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          Admin::__set_state(array(
+             'benchmark' => 
+            CI_Benchmark::__set_state(array(
+               'marker' => 
+              array (
+                'total_execution_time_start' => '0.71319200 1738235189',
+                'loading_time:_base_classes_start' => '0.71320100 1738235189',
+                'loading_time:_base_classes_end' => '0.74317800 1738235189',
+                'controller_execution_time_( admin / reenviar_clave )_start' => '0.74321800 1738235189',
+              ),
+            )),
+             'hooks' => 
+            CI_Hooks::__set_state(array(
+               'enabled' => false,
+               'hooks' => 
+              array (
+              ),
+               'in_progress' => false,
+            )),
+             'config' => 
+            CI_Config::__set_state(array(
+               'config' => 
+              array (
+                'base_url' => 'http://localhost/intraboda/',
+                'index_page' => 'index.php',
+                'uri_protocol' => 'AUTO',
+                'url_suffix' => '',
+                'language' => 'spanish',
+                'charset' => 'UTF-8',
+                'enable_hooks' => false,
+                'subclass_prefix' => 'MY_',
+                'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                'allow_get_array' => true,
+                'enable_query_strings' => false,
+                'controller_trigger' => 'c',
+                'function_trigger' => 'm',
+                'directory_trigger' => 'd',
+                'log_threshold' => 4,
+                'log_path' => '',
+                'log_date_format' => 'Y-m-d H:i:s',
+                'cache_path' => '',
+                'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                'sess_cookie_name' => 'ci_session',
+                'sess_expiration' => 7200,
+                'sess_expire_on_close' => false,
+                'sess_encrypt_cookie' => false,
+                'sess_use_database' => false,
+                'sess_table_name' => 'ci_sessions',
+                'sess_match_ip' => false,
+                'sess_match_useragent' => true,
+                'sess_time_to_update' => 300,
+                'cookie_prefix' => '',
+                'cookie_domain' => '',
+                'cookie_path' => '/',
+                'cookie_secure' => false,
+                'global_xss_filtering' => false,
+                'csrf_protection' => false,
+                'csrf_token_name' => 'csrf_test_name',
+                'csrf_cookie_name' => 'csrf_cookie_name',
+                'csrf_expire' => 7200,
+                'compress_output' => false,
+                'time_reference' => 'local',
+                'rewrite_short_tags' => false,
+                'proxy_ips' => '',
+                'host' => 'smtp.ionos.es',
+                'username' => 'info@exeleventos.com',
+                'password' => '1492BDJ5319',
+                'smtpauth' => true,
+                'smtpsecure' => 'ssl',
+                'port' => 465,
+              ),
+               'is_loaded' => 
+              array (
+                0 => 'application/config/mailconfig.php',
+              ),
+               '_config_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+              ),
+            )),
+             'log' => 
+            CI_Log::__set_state(array(
+               '_log_path' => 'application/logs/',
+               '_threshold' => 4,
+               '_date_fmt' => 'Y-m-d H:i:s',
+               '_enabled' => true,
+               '_levels' => 
+              array (
+                'ERROR' => '1',
+                'DEBUG' => '2',
+                'INFO' => '3',
+                'ALL' => '4',
+              ),
+            )),
+             'utf8' => 
+            CI_Utf8::__set_state(array(
+            )),
+             'uri' => 
+            CI_URI::__set_state(array(
+               'keyval' => 
+              array (
+              ),
+               'uri_string' => 'admin/reenviar_clave',
+               'segments' => 
+              array (
+                1 => 'admin',
+                2 => 'reenviar_clave',
+              ),
+               'rsegments' => 
+              array (
+                1 => 'admin',
+                2 => 'reenviar_clave',
+              ),
+               'config' => 
+              CI_Config::__set_state(array(
+                 'config' => 
+                array (
+                  'base_url' => 'http://localhost/intraboda/',
+                  'index_page' => 'index.php',
+                  'uri_protocol' => 'AUTO',
+                  'url_suffix' => '',
+                  'language' => 'spanish',
+                  'charset' => 'UTF-8',
+                  'enable_hooks' => false,
+                  'subclass_prefix' => 'MY_',
+                  'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                  'allow_get_array' => true,
+                  'enable_query_strings' => false,
+                  'controller_trigger' => 'c',
+                  'function_trigger' => 'm',
+                  'directory_trigger' => 'd',
+                  'log_threshold' => 4,
+                  'log_path' => '',
+                  'log_date_format' => 'Y-m-d H:i:s',
+                  'cache_path' => '',
+                  'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                  'sess_cookie_name' => 'ci_session',
+                  'sess_expiration' => 7200,
+                  'sess_expire_on_close' => false,
+                  'sess_encrypt_cookie' => false,
+                  'sess_use_database' => false,
+                  'sess_table_name' => 'ci_sessions',
+                  'sess_match_ip' => false,
+                  'sess_match_useragent' => true,
+                  'sess_time_to_update' => 300,
+                  'cookie_prefix' => '',
+                  'cookie_domain' => '',
+                  'cookie_path' => '/',
+                  'cookie_secure' => false,
+                  'global_xss_filtering' => false,
+                  'csrf_protection' => false,
+                  'csrf_token_name' => 'csrf_test_name',
+                  'csrf_cookie_name' => 'csrf_cookie_name',
+                  'csrf_expire' => 7200,
+                  'compress_output' => false,
+                  'time_reference' => 'local',
+                  'rewrite_short_tags' => false,
+                  'proxy_ips' => '',
+                  'host' => 'smtp.ionos.es',
+                  'username' => 'info@exeleventos.com',
+                  'password' => '1492BDJ5319',
+                  'smtpauth' => true,
+                  'smtpsecure' => 'ssl',
+                  'port' => 465,
+                ),
+                 'is_loaded' => 
+                array (
+                  0 => 'application/config/mailconfig.php',
+                ),
+                 '_config_paths' => 
+                array (
+                  0 => 'application/third_party/',
+                  1 => 'application/',
+                ),
+              )),
+            )),
+             'router' => 
+            CI_Router::__set_state(array(
+               'config' => 
+              CI_Config::__set_state(array(
+                 'config' => 
+                array (
+                  'base_url' => 'http://localhost/intraboda/',
+                  'index_page' => 'index.php',
+                  'uri_protocol' => 'AUTO',
+                  'url_suffix' => '',
+                  'language' => 'spanish',
+                  'charset' => 'UTF-8',
+                  'enable_hooks' => false,
+                  'subclass_prefix' => 'MY_',
+                  'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                  'allow_get_array' => true,
+                  'enable_query_strings' => false,
+                  'controller_trigger' => 'c',
+                  'function_trigger' => 'm',
+                  'directory_trigger' => 'd',
+                  'log_threshold' => 4,
+                  'log_path' => '',
+                  'log_date_format' => 'Y-m-d H:i:s',
+                  'cache_path' => '',
+                  'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                  'sess_cookie_name' => 'ci_session',
+                  'sess_expiration' => 7200,
+                  'sess_expire_on_close' => false,
+                  'sess_encrypt_cookie' => false,
+                  'sess_use_database' => false,
+                  'sess_table_name' => 'ci_sessions',
+                  'sess_match_ip' => false,
+                  'sess_match_useragent' => true,
+                  'sess_time_to_update' => 300,
+                  'cookie_prefix' => '',
+                  'cookie_domain' => '',
+                  'cookie_path' => '/',
+                  'cookie_secure' => false,
+                  'global_xss_filtering' => false,
+                  'csrf_protection' => false,
+                  'csrf_token_name' => 'csrf_test_name',
+                  'csrf_cookie_name' => 'csrf_cookie_name',
+                  'csrf_expire' => 7200,
+                  'compress_output' => false,
+                  'time_reference' => 'local',
+                  'rewrite_short_tags' => false,
+                  'proxy_ips' => '',
+                  'host' => 'smtp.ionos.es',
+                  'username' => 'info@exeleventos.com',
+                  'password' => '1492BDJ5319',
+                  'smtpauth' => true,
+                  'smtpsecure' => 'ssl',
+                  'port' => 465,
+                ),
+                 'is_loaded' => 
+                array (
+                  0 => 'application/config/mailconfig.php',
+                ),
+                 '_config_paths' => 
+                array (
+                  0 => 'application/third_party/',
+                  1 => 'application/',
+                ),
+              )),
+               'routes' => 
+              array (
+                'default_controller' => 'Home',
+                '404_override' => '',
+              ),
+               'error_routes' => 
+              array (
+              ),
+               'class' => 'admin',
+               'method' => 'reenviar_clave',
+               'directory' => '',
+               'default_controller' => 'home',
+               'uri' => 
+              CI_URI::__set_state(array(
+                 'keyval' => 
+                array (
+                ),
+                 'uri_string' => 'admin/reenviar_clave',
+                 'segments' => 
+                array (
+                  1 => 'admin',
+                  2 => 'reenviar_clave',
+                ),
+                 'rsegments' => 
+                array (
+                  1 => 'admin',
+                  2 => 'reenviar_clave',
+                ),
+                 'config' => 
+                CI_Config::__set_state(array(
+                   'config' => 
+                  array (
+                    'base_url' => 'http://localhost/intraboda/',
+                    'index_page' => 'index.php',
+                    'uri_protocol' => 'AUTO',
+                    'url_suffix' => '',
+                    'language' => 'spanish',
+                    'charset' => 'UTF-8',
+                    'enable_hooks' => false,
+                    'subclass_prefix' => 'MY_',
+                    'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                    'allow_get_array' => true,
+                    'enable_query_strings' => false,
+                    'controller_trigger' => 'c',
+                    'function_trigger' => 'm',
+                    'directory_trigger' => 'd',
+                    'log_threshold' => 4,
+                    'log_path' => '',
+                    'log_date_format' => 'Y-m-d H:i:s',
+                    'cache_path' => '',
+                    'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                    'sess_cookie_name' => 'ci_session',
+                    'sess_expiration' => 7200,
+                    'sess_expire_on_close' => false,
+                    'sess_encrypt_cookie' => false,
+                    'sess_use_database' => false,
+                    'sess_table_name' => 'ci_sessions',
+                    'sess_match_ip' => false,
+                    'sess_match_useragent' => true,
+                    'sess_time_to_update' => 300,
+                    'cookie_prefix' => '',
+                    'cookie_domain' => '',
+                    'cookie_path' => '/',
+                    'cookie_secure' => false,
+                    'global_xss_filtering' => false,
+                    'csrf_protection' => false,
+                    'csrf_token_name' => 'csrf_test_name',
+                    'csrf_cookie_name' => 'csrf_cookie_name',
+                    'csrf_expire' => 7200,
+                    'compress_output' => false,
+                    'time_reference' => 'local',
+                    'rewrite_short_tags' => false,
+                    'proxy_ips' => '',
+                    'host' => 'smtp.ionos.es',
+                    'username' => 'info@exeleventos.com',
+                    'password' => '1492BDJ5319',
+                    'smtpauth' => true,
+                    'smtpsecure' => 'ssl',
+                    'port' => 465,
+                  ),
+                   'is_loaded' => 
+                  array (
+                    0 => 'application/config/mailconfig.php',
+                  ),
+                   '_config_paths' => 
+                  array (
+                    0 => 'application/third_party/',
+                    1 => 'application/',
+                  ),
+                )),
+              )),
+            )),
+             'output' => 
+            CI_Output::__set_state(array(
+               'final_output' => NULL,
+               'cache_expiration' => 0,
+               'headers' => 
+              array (
+              ),
+               'mime_types' => 
+              array (
+                'hqx' => 'application/mac-binhex40',
+                'cpt' => 'application/mac-compactpro',
+                'csv' => 
+                array (
+                  0 => 'text/x-comma-separated-values',
+                  1 => 'text/comma-separated-values',
+                  2 => 'application/octet-stream',
+                  3 => 'application/vnd.ms-excel',
+                  4 => 'text/x-csv',
+                  5 => 'text/csv',
+                  6 => 'application/csv',
+                  7 => 'application/excel',
+                  8 => 'application/vnd.msexcel',
+                ),
+                'bin' => 'application/macbinary',
+                'dms' => 'application/octet-stream',
+                'lha' => 'application/octet-stream',
+                'lzh' => 'application/octet-stream',
+                'exe' => 
+                array (
+                  0 => 'application/octet-stream',
+                  1 => 'application/x-msdownload',
+                ),
+                'class' => 'application/octet-stream',
+                'psd' => 'application/x-photoshop',
+                'so' => 'application/octet-stream',
+                'sea' => 'application/octet-stream',
+                'dll' => 'application/octet-stream',
+                'oda' => 'application/oda',
+                'pdf' => 
+                array (
+                  0 => 'application/pdf',
+                  1 => 'application/x-download',
+                ),
+                'ai' => 'application/postscript',
+                'eps' => 'application/postscript',
+                'ps' => 'application/postscript',
+                'smi' => 'application/smil',
+                'smil' => 'application/smil',
+                'mif' => 'application/vnd.mif',
+                'xls' => 
+                array (
+                  0 => 'application/excel',
+                  1 => 'application/vnd.ms-excel',
+                  2 => 'application/msexcel',
+                ),
+                'ppt' => 
+                array (
+                  0 => 'application/powerpoint',
+                  1 => 'application/vnd.ms-powerpoint',
+                ),
+                'wbxml' => 'application/wbxml',
+                'wmlc' => 'application/wmlc',
+                'dcr' => 'application/x-director',
+                'dir' => 'application/x-director',
+                'dxr' => 'application/x-director',
+                'dvi' => 'application/x-dvi',
+                'gtar' => 'application/x-gtar',
+                'gz' => 'application/x-gzip',
+                'php' => 'application/x-httpd-php',
+                'php4' => 'application/x-httpd-php',
+                'php3' => 'application/x-httpd-php',
+                'phtml' => 'application/x-httpd-php',
+                'phps' => 'application/x-httpd-php-source',
+                'js' => 'application/x-javascript',
+                'swf' => 'application/x-shockwave-flash',
+                'sit' => 'application/x-stuffit',
+                'tar' => 'application/x-tar',
+                'tgz' => 
+                array (
+                  0 => 'application/x-tar',
+                  1 => 'application/x-gzip-compressed',
+                ),
+                'xhtml' => 'application/xhtml+xml',
+                'xht' => 'application/xhtml+xml',
+                'zip' => 
+                array (
+                  0 => 'application/x-zip',
+                  1 => 'application/zip',
+                  2 => 'application/x-zip-compressed',
+                ),
+                'mid' => 'audio/midi',
+                'midi' => 'audio/midi',
+                'mpga' => 'audio/mpeg',
+                'mp2' => 'audio/mpeg',
+                'mp3' => 
+                array (
+                  0 => 'audio/mpeg',
+                  1 => 'audio/mpg',
+                  2 => 'audio/mpeg3',
+                  3 => 'audio/mp3',
+                ),
+                'aif' => 'audio/x-aiff',
+                'aiff' => 'audio/x-aiff',
+                'aifc' => 'audio/x-aiff',
+                'ram' => 'audio/x-pn-realaudio',
+                'rm' => 'audio/x-pn-realaudio',
+                'rpm' => 'audio/x-pn-realaudio-plugin',
+                'ra' => 'audio/x-realaudio',
+                'rv' => 'video/vnd.rn-realvideo',
+                'wav' => 'audio/x-wav',
+                'bmp' => 'image/bmp',
+                'gif' => 'image/gif',
+                'jpeg' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'jpg' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'jpe' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'png' => 
+                array (
+                  0 => 'image/png',
+                  1 => 'image/x-png',
+                ),
+                'tiff' => 'image/tiff',
+                'tif' => 'image/tiff',
+                'css' => 'text/css',
+                'html' => 'text/html',
+                'htm' => 'text/html',
+                'shtml' => 'text/html',
+                'txt' => 'text/plain',
+                'text' => 'text/plain',
+                'log' => 
+                array (
+                  0 => 'text/plain',
+                  1 => 'text/x-log',
+                ),
+                'rtx' => 'text/richtext',
+                'rtf' => 'text/rtf',
+                'xml' => 'text/xml',
+                'xsl' => 'text/xml',
+                'mpeg' => 'video/mpeg',
+                'mpg' => 'video/mpeg',
+                'mpe' => 'video/mpeg',
+                'qt' => 'video/quicktime',
+                'mov' => 'video/quicktime',
+                'avi' => 'video/x-msvideo',
+                'movie' => 'video/x-sgi-movie',
+                'doc' => 'application/msword',
+                'docx' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                'xlsx' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                'word' => 
+                array (
+                  0 => 'application/msword',
+                  1 => 'application/octet-stream',
+                ),
+                'xl' => 'application/excel',
+                'eml' => 'message/rfc822',
+                'json' => 
+                array (
+                  0 => 'application/json',
+                  1 => 'text/json',
+                ),
+              ),
+               'enable_profiler' => false,
+               '_zlib_oc' => '',
+               '_profiler_sections' => 
+              array (
+              ),
+               'parse_exec_vars' => true,
+            )),
+             'security' => 
+            CI_Security::__set_state(array(
+               '_xss_hash' => '',
+               '_csrf_hash' => 'a2bc38d863e613d015942a1564a36222',
+               '_csrf_expire' => 7200,
+               '_csrf_token_name' => 'ci_csrf_token',
+               '_csrf_cookie_name' => 'ci_csrf_token',
+               '_never_allowed_str' => 
+              array (
+                'document.cookie' => '[removed]',
+                'document.write' => '[removed]',
+                '.parentNode' => '[removed]',
+                '.innerHTML' => '[removed]',
+                'window.location' => '[removed]',
+                '-moz-binding' => '[removed]',
+                '<!--' => '&lt;!--',
+                '-->' => '--&gt;',
+                '<![CDATA[' => '&lt;![CDATA[',
+              ),
+               '_never_allowed_regex' => 
+              array (
+                'javascript\\s*:' => '[removed]',
+                'expression\\s*(\\(|&\\#40;)' => '[removed]',
+                'vbscript\\s*:' => '[removed]',
+                'Redirect\\s+302' => '[removed]',
+              ),
+            )),
+             'input' => 
+            CI_Input::__set_state(array(
+               'ip_address' => false,
+               'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36',
+               '_allow_get_array' => true,
+               '_standardize_newlines' => true,
+               '_enable_xss' => false,
+               '_enable_csrf' => false,
+               'headers' => 
+              array (
+              ),
+               'security' => 
+              CI_Security::__set_state(array(
+                 '_xss_hash' => '',
+                 '_csrf_hash' => 'a2bc38d863e613d015942a1564a36222',
+                 '_csrf_expire' => 7200,
+                 '_csrf_token_name' => 'ci_csrf_token',
+                 '_csrf_cookie_name' => 'ci_csrf_token',
+                 '_never_allowed_str' => 
+                array (
+                  'document.cookie' => '[removed]',
+                  'document.write' => '[removed]',
+                  '.parentNode' => '[removed]',
+                  '.innerHTML' => '[removed]',
+                  'window.location' => '[removed]',
+                  '-moz-binding' => '[removed]',
+                  '<!--' => '&lt;!--',
+                  '-->' => '--&gt;',
+                  '<![CDATA[' => '&lt;![CDATA[',
+                ),
+                 '_never_allowed_regex' => 
+                array (
+                  'javascript\\s*:' => '[removed]',
+                  'expression\\s*(\\(|&\\#40;)' => '[removed]',
+                  'vbscript\\s*:' => '[removed]',
+                  'Redirect\\s+302' => '[removed]',
+                ),
+              )),
+               'uni' => 
+              CI_Utf8::__set_state(array(
+              )),
+            )),
+             'lang' => 
+            CI_Lang::__set_state(array(
+               'language' => 
+              array (
+              ),
+               'is_loaded' => 
+              array (
+              ),
+            )),
+             'load' => 
+            CI_Loader::__set_state(array(
+               '_ci_ob_level' => 1,
+               '_ci_view_path' => 'application/views/',
+               '_ci_library_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+                2 => 'C:/xampp/htdocs/Intraboda/system/',
+              ),
+               '_ci_model_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+              ),
+               '_ci_helper_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+                2 => 'C:/xampp/htdocs/Intraboda/system/',
+              ),
+               '_base_classes' => 
+              array (
+                'benchmark' => 'Benchmark',
+                'hooks' => 'Hooks',
+                'config' => 'Config',
+                'log' => 'Log',
+                'utf8' => 'Utf8',
+                'uri' => 'URI',
+                'router' => 'Router',
+                'output' => 'Output',
+                'security' => 'Security',
+                'input' => 'Input',
+                'lang' => 'Lang',
+                'loader' => 'Loader',
+              ),
+               '_ci_cached_vars' => 
+              array (
+              ),
+               '_ci_classes' => 
+              array (
+                'session' => 'session',
+                'phpmailer_lib' => 'phpmailer_lib',
+              ),
+               '_ci_loaded_files' => 
+              array (
+                0 => 'C:/xampp/htdocs/Intraboda/system/libraries/Session.php',
+                1 => 'application/libraries/PHPMailer_Lib.php',
+              ),
+               '_ci_models' => 
+              array (
+                0 => 'admin_functions',
+              ),
+               '_ci_helpers' => 
+              array (
+                'url_helper' => true,
+                'string_helper' => true,
+              ),
+               '_ci_varmap' => 
+              array (
+                'unit_test' => 'unit',
+                'user_agent' => 'agent',
+              ),
+            )),
+             'session' => 
+            CI_Session::__set_state(array(
+               'sess_encrypt_cookie' => false,
+               'sess_use_database' => false,
+               'sess_table_name' => 'ci_sessions',
+               'sess_expiration' => 7200,
+               'sess_expire_on_close' => false,
+               'sess_match_ip' => false,
+               'sess_match_useragent' => true,
+               'sess_cookie_name' => 'ci_session',
+               'cookie_prefix' => '',
+               'cookie_path' => '/',
+               'cookie_domain' => '',
+               'cookie_secure' => false,
+               'sess_time_to_update' => 300,
+               'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+               'flashdata_key' => 'flash',
+               'time_reference' => 'local',
+               'gc_probability' => 5,
+               'userdata' => 
+              array (
+                'session_id' => '86d401ca82d0b16a41dbcaea7788f0bb',
+                'ip_address' => '0.0.0.0',
+                'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb',
+                'last_activity' => 1738235184,
+                'admin' => true,
+              ),
+               'CI' => NULL,
+               'now' => 1738235189,
+            )),
+             'admin_functions' => 
+            Admin_functions::__set_state(array(
+            )),
+             'phpmailer_lib' => 
+            PHPMailer_Lib::__set_state(array(
+            )),
+          )),
+          1 => 'reenviar_clave',
+        ),
+        1 => 
+        array (
+        ),
+      ),
+    ),
+    6 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\index.php',
+      'line' => 205,
+      'args' => 
+      array (
+        0 => 'C:\\xampp\\htdocs\\Intraboda\\system\\core\\CodeIgniter.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))Vamos a enviar correo a array (
+  0 => 'tuemail@ejemplo.com',
+)Algún tipo de error al enviar el correo PHPMailer\PHPMailer\Exception::__set_state(array(
+   'message' => 'SMTP Error: The following recipients failed: tuemail@ejemplo.com: Requested action not taken: domain does not accept mail
+invalid DNS MX or A/AAAA resource record 1MVv4X-1u4dkW1NGn-00MT8p
+',
+   'string' => '',
+   'code' => 1,
+   'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+   'line' => 2128,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+      'line' => 1689,
+      'function' => 'smtpSend',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'Date: Thu, 30 Jan 2025 12:06:40 +0100
+To: tuemail@ejemplo.com
+From: Exel Eventos <info@exeleventos.com>
+Reply-To: Exel Eventos <info@exeleventos.com>
+Subject: Prueba
+Message-ID: <3GGlT8GLVeUZu7SI0xnHcKiPVZTw5GmZbcoWMTXq7E@localhost>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+',
+        1 => 'Este es un email de prueba
+',
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+      'line' => 1523,
+      'function' => 'postSend',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    2 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\controllers\\admin.php',
+      'line' => 1902,
+      'function' => 'send',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    3 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\controllers\\admin.php',
+      'line' => 300,
+      'function' => 'sendEmail',
+      'class' => 'Admin',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'info@exeleventos.com',
+        1 => 
+        array (
+          0 => 'tuemail@ejemplo.com',
+        ),
+        2 => 'Prueba',
+        3 => 'Este es un email de prueba',
+      ),
+    ),
+    4 => 
+    array (
+      'function' => 'reenviar_clave',
+      'class' => 'Admin',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    5 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\system\\core\\CodeIgniter.php',
+      'line' => 339,
+      'function' => 'call_user_func_array',
+      'args' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          Admin::__set_state(array(
+             'benchmark' => 
+            CI_Benchmark::__set_state(array(
+               'marker' => 
+              array (
+                'total_execution_time_start' => '0.05377300 1738235200',
+                'loading_time:_base_classes_start' => '0.05378900 1738235200',
+                'loading_time:_base_classes_end' => '0.08462200 1738235200',
+                'controller_execution_time_( admin / reenviar_clave )_start' => '0.08466100 1738235200',
+              ),
+            )),
+             'hooks' => 
+            CI_Hooks::__set_state(array(
+               'enabled' => false,
+               'hooks' => 
+              array (
+              ),
+               'in_progress' => false,
+            )),
+             'config' => 
+            CI_Config::__set_state(array(
+               'config' => 
+              array (
+                'base_url' => 'http://localhost/intraboda/',
+                'index_page' => 'index.php',
+                'uri_protocol' => 'AUTO',
+                'url_suffix' => '',
+                'language' => 'spanish',
+                'charset' => 'UTF-8',
+                'enable_hooks' => false,
+                'subclass_prefix' => 'MY_',
+                'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                'allow_get_array' => true,
+                'enable_query_strings' => false,
+                'controller_trigger' => 'c',
+                'function_trigger' => 'm',
+                'directory_trigger' => 'd',
+                'log_threshold' => 4,
+                'log_path' => '',
+                'log_date_format' => 'Y-m-d H:i:s',
+                'cache_path' => '',
+                'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                'sess_cookie_name' => 'ci_session',
+                'sess_expiration' => 7200,
+                'sess_expire_on_close' => false,
+                'sess_encrypt_cookie' => false,
+                'sess_use_database' => false,
+                'sess_table_name' => 'ci_sessions',
+                'sess_match_ip' => false,
+                'sess_match_useragent' => true,
+                'sess_time_to_update' => 300,
+                'cookie_prefix' => '',
+                'cookie_domain' => '',
+                'cookie_path' => '/',
+                'cookie_secure' => false,
+                'global_xss_filtering' => false,
+                'csrf_protection' => false,
+                'csrf_token_name' => 'csrf_test_name',
+                'csrf_cookie_name' => 'csrf_cookie_name',
+                'csrf_expire' => 7200,
+                'compress_output' => false,
+                'time_reference' => 'local',
+                'rewrite_short_tags' => false,
+                'proxy_ips' => '',
+                'host' => 'smtp.ionos.es',
+                'username' => 'info@exeleventos.com',
+                'password' => '1492BDJ5319',
+                'smtpauth' => true,
+                'smtpsecure' => 'ssl',
+                'port' => 465,
+              ),
+               'is_loaded' => 
+              array (
+                0 => 'application/config/mailconfig.php',
+              ),
+               '_config_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+              ),
+            )),
+             'log' => 
+            CI_Log::__set_state(array(
+               '_log_path' => 'application/logs/',
+               '_threshold' => 4,
+               '_date_fmt' => 'Y-m-d H:i:s',
+               '_enabled' => true,
+               '_levels' => 
+              array (
+                'ERROR' => '1',
+                'DEBUG' => '2',
+                'INFO' => '3',
+                'ALL' => '4',
+              ),
+            )),
+             'utf8' => 
+            CI_Utf8::__set_state(array(
+            )),
+             'uri' => 
+            CI_URI::__set_state(array(
+               'keyval' => 
+              array (
+              ),
+               'uri_string' => 'admin/reenviar_clave',
+               'segments' => 
+              array (
+                1 => 'admin',
+                2 => 'reenviar_clave',
+              ),
+               'rsegments' => 
+              array (
+                1 => 'admin',
+                2 => 'reenviar_clave',
+              ),
+               'config' => 
+              CI_Config::__set_state(array(
+                 'config' => 
+                array (
+                  'base_url' => 'http://localhost/intraboda/',
+                  'index_page' => 'index.php',
+                  'uri_protocol' => 'AUTO',
+                  'url_suffix' => '',
+                  'language' => 'spanish',
+                  'charset' => 'UTF-8',
+                  'enable_hooks' => false,
+                  'subclass_prefix' => 'MY_',
+                  'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                  'allow_get_array' => true,
+                  'enable_query_strings' => false,
+                  'controller_trigger' => 'c',
+                  'function_trigger' => 'm',
+                  'directory_trigger' => 'd',
+                  'log_threshold' => 4,
+                  'log_path' => '',
+                  'log_date_format' => 'Y-m-d H:i:s',
+                  'cache_path' => '',
+                  'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                  'sess_cookie_name' => 'ci_session',
+                  'sess_expiration' => 7200,
+                  'sess_expire_on_close' => false,
+                  'sess_encrypt_cookie' => false,
+                  'sess_use_database' => false,
+                  'sess_table_name' => 'ci_sessions',
+                  'sess_match_ip' => false,
+                  'sess_match_useragent' => true,
+                  'sess_time_to_update' => 300,
+                  'cookie_prefix' => '',
+                  'cookie_domain' => '',
+                  'cookie_path' => '/',
+                  'cookie_secure' => false,
+                  'global_xss_filtering' => false,
+                  'csrf_protection' => false,
+                  'csrf_token_name' => 'csrf_test_name',
+                  'csrf_cookie_name' => 'csrf_cookie_name',
+                  'csrf_expire' => 7200,
+                  'compress_output' => false,
+                  'time_reference' => 'local',
+                  'rewrite_short_tags' => false,
+                  'proxy_ips' => '',
+                  'host' => 'smtp.ionos.es',
+                  'username' => 'info@exeleventos.com',
+                  'password' => '1492BDJ5319',
+                  'smtpauth' => true,
+                  'smtpsecure' => 'ssl',
+                  'port' => 465,
+                ),
+                 'is_loaded' => 
+                array (
+                  0 => 'application/config/mailconfig.php',
+                ),
+                 '_config_paths' => 
+                array (
+                  0 => 'application/third_party/',
+                  1 => 'application/',
+                ),
+              )),
+            )),
+             'router' => 
+            CI_Router::__set_state(array(
+               'config' => 
+              CI_Config::__set_state(array(
+                 'config' => 
+                array (
+                  'base_url' => 'http://localhost/intraboda/',
+                  'index_page' => 'index.php',
+                  'uri_protocol' => 'AUTO',
+                  'url_suffix' => '',
+                  'language' => 'spanish',
+                  'charset' => 'UTF-8',
+                  'enable_hooks' => false,
+                  'subclass_prefix' => 'MY_',
+                  'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                  'allow_get_array' => true,
+                  'enable_query_strings' => false,
+                  'controller_trigger' => 'c',
+                  'function_trigger' => 'm',
+                  'directory_trigger' => 'd',
+                  'log_threshold' => 4,
+                  'log_path' => '',
+                  'log_date_format' => 'Y-m-d H:i:s',
+                  'cache_path' => '',
+                  'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                  'sess_cookie_name' => 'ci_session',
+                  'sess_expiration' => 7200,
+                  'sess_expire_on_close' => false,
+                  'sess_encrypt_cookie' => false,
+                  'sess_use_database' => false,
+                  'sess_table_name' => 'ci_sessions',
+                  'sess_match_ip' => false,
+                  'sess_match_useragent' => true,
+                  'sess_time_to_update' => 300,
+                  'cookie_prefix' => '',
+                  'cookie_domain' => '',
+                  'cookie_path' => '/',
+                  'cookie_secure' => false,
+                  'global_xss_filtering' => false,
+                  'csrf_protection' => false,
+                  'csrf_token_name' => 'csrf_test_name',
+                  'csrf_cookie_name' => 'csrf_cookie_name',
+                  'csrf_expire' => 7200,
+                  'compress_output' => false,
+                  'time_reference' => 'local',
+                  'rewrite_short_tags' => false,
+                  'proxy_ips' => '',
+                  'host' => 'smtp.ionos.es',
+                  'username' => 'info@exeleventos.com',
+                  'password' => '1492BDJ5319',
+                  'smtpauth' => true,
+                  'smtpsecure' => 'ssl',
+                  'port' => 465,
+                ),
+                 'is_loaded' => 
+                array (
+                  0 => 'application/config/mailconfig.php',
+                ),
+                 '_config_paths' => 
+                array (
+                  0 => 'application/third_party/',
+                  1 => 'application/',
+                ),
+              )),
+               'routes' => 
+              array (
+                'default_controller' => 'Home',
+                '404_override' => '',
+              ),
+               'error_routes' => 
+              array (
+              ),
+               'class' => 'admin',
+               'method' => 'reenviar_clave',
+               'directory' => '',
+               'default_controller' => 'home',
+               'uri' => 
+              CI_URI::__set_state(array(
+                 'keyval' => 
+                array (
+                ),
+                 'uri_string' => 'admin/reenviar_clave',
+                 'segments' => 
+                array (
+                  1 => 'admin',
+                  2 => 'reenviar_clave',
+                ),
+                 'rsegments' => 
+                array (
+                  1 => 'admin',
+                  2 => 'reenviar_clave',
+                ),
+                 'config' => 
+                CI_Config::__set_state(array(
+                   'config' => 
+                  array (
+                    'base_url' => 'http://localhost/intraboda/',
+                    'index_page' => 'index.php',
+                    'uri_protocol' => 'AUTO',
+                    'url_suffix' => '',
+                    'language' => 'spanish',
+                    'charset' => 'UTF-8',
+                    'enable_hooks' => false,
+                    'subclass_prefix' => 'MY_',
+                    'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                    'allow_get_array' => true,
+                    'enable_query_strings' => false,
+                    'controller_trigger' => 'c',
+                    'function_trigger' => 'm',
+                    'directory_trigger' => 'd',
+                    'log_threshold' => 4,
+                    'log_path' => '',
+                    'log_date_format' => 'Y-m-d H:i:s',
+                    'cache_path' => '',
+                    'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                    'sess_cookie_name' => 'ci_session',
+                    'sess_expiration' => 7200,
+                    'sess_expire_on_close' => false,
+                    'sess_encrypt_cookie' => false,
+                    'sess_use_database' => false,
+                    'sess_table_name' => 'ci_sessions',
+                    'sess_match_ip' => false,
+                    'sess_match_useragent' => true,
+                    'sess_time_to_update' => 300,
+                    'cookie_prefix' => '',
+                    'cookie_domain' => '',
+                    'cookie_path' => '/',
+                    'cookie_secure' => false,
+                    'global_xss_filtering' => false,
+                    'csrf_protection' => false,
+                    'csrf_token_name' => 'csrf_test_name',
+                    'csrf_cookie_name' => 'csrf_cookie_name',
+                    'csrf_expire' => 7200,
+                    'compress_output' => false,
+                    'time_reference' => 'local',
+                    'rewrite_short_tags' => false,
+                    'proxy_ips' => '',
+                    'host' => 'smtp.ionos.es',
+                    'username' => 'info@exeleventos.com',
+                    'password' => '1492BDJ5319',
+                    'smtpauth' => true,
+                    'smtpsecure' => 'ssl',
+                    'port' => 465,
+                  ),
+                   'is_loaded' => 
+                  array (
+                    0 => 'application/config/mailconfig.php',
+                  ),
+                   '_config_paths' => 
+                  array (
+                    0 => 'application/third_party/',
+                    1 => 'application/',
+                  ),
+                )),
+              )),
+            )),
+             'output' => 
+            CI_Output::__set_state(array(
+               'final_output' => NULL,
+               'cache_expiration' => 0,
+               'headers' => 
+              array (
+              ),
+               'mime_types' => 
+              array (
+                'hqx' => 'application/mac-binhex40',
+                'cpt' => 'application/mac-compactpro',
+                'csv' => 
+                array (
+                  0 => 'text/x-comma-separated-values',
+                  1 => 'text/comma-separated-values',
+                  2 => 'application/octet-stream',
+                  3 => 'application/vnd.ms-excel',
+                  4 => 'text/x-csv',
+                  5 => 'text/csv',
+                  6 => 'application/csv',
+                  7 => 'application/excel',
+                  8 => 'application/vnd.msexcel',
+                ),
+                'bin' => 'application/macbinary',
+                'dms' => 'application/octet-stream',
+                'lha' => 'application/octet-stream',
+                'lzh' => 'application/octet-stream',
+                'exe' => 
+                array (
+                  0 => 'application/octet-stream',
+                  1 => 'application/x-msdownload',
+                ),
+                'class' => 'application/octet-stream',
+                'psd' => 'application/x-photoshop',
+                'so' => 'application/octet-stream',
+                'sea' => 'application/octet-stream',
+                'dll' => 'application/octet-stream',
+                'oda' => 'application/oda',
+                'pdf' => 
+                array (
+                  0 => 'application/pdf',
+                  1 => 'application/x-download',
+                ),
+                'ai' => 'application/postscript',
+                'eps' => 'application/postscript',
+                'ps' => 'application/postscript',
+                'smi' => 'application/smil',
+                'smil' => 'application/smil',
+                'mif' => 'application/vnd.mif',
+                'xls' => 
+                array (
+                  0 => 'application/excel',
+                  1 => 'application/vnd.ms-excel',
+                  2 => 'application/msexcel',
+                ),
+                'ppt' => 
+                array (
+                  0 => 'application/powerpoint',
+                  1 => 'application/vnd.ms-powerpoint',
+                ),
+                'wbxml' => 'application/wbxml',
+                'wmlc' => 'application/wmlc',
+                'dcr' => 'application/x-director',
+                'dir' => 'application/x-director',
+                'dxr' => 'application/x-director',
+                'dvi' => 'application/x-dvi',
+                'gtar' => 'application/x-gtar',
+                'gz' => 'application/x-gzip',
+                'php' => 'application/x-httpd-php',
+                'php4' => 'application/x-httpd-php',
+                'php3' => 'application/x-httpd-php',
+                'phtml' => 'application/x-httpd-php',
+                'phps' => 'application/x-httpd-php-source',
+                'js' => 'application/x-javascript',
+                'swf' => 'application/x-shockwave-flash',
+                'sit' => 'application/x-stuffit',
+                'tar' => 'application/x-tar',
+                'tgz' => 
+                array (
+                  0 => 'application/x-tar',
+                  1 => 'application/x-gzip-compressed',
+                ),
+                'xhtml' => 'application/xhtml+xml',
+                'xht' => 'application/xhtml+xml',
+                'zip' => 
+                array (
+                  0 => 'application/x-zip',
+                  1 => 'application/zip',
+                  2 => 'application/x-zip-compressed',
+                ),
+                'mid' => 'audio/midi',
+                'midi' => 'audio/midi',
+                'mpga' => 'audio/mpeg',
+                'mp2' => 'audio/mpeg',
+                'mp3' => 
+                array (
+                  0 => 'audio/mpeg',
+                  1 => 'audio/mpg',
+                  2 => 'audio/mpeg3',
+                  3 => 'audio/mp3',
+                ),
+                'aif' => 'audio/x-aiff',
+                'aiff' => 'audio/x-aiff',
+                'aifc' => 'audio/x-aiff',
+                'ram' => 'audio/x-pn-realaudio',
+                'rm' => 'audio/x-pn-realaudio',
+                'rpm' => 'audio/x-pn-realaudio-plugin',
+                'ra' => 'audio/x-realaudio',
+                'rv' => 'video/vnd.rn-realvideo',
+                'wav' => 'audio/x-wav',
+                'bmp' => 'image/bmp',
+                'gif' => 'image/gif',
+                'jpeg' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'jpg' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'jpe' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'png' => 
+                array (
+                  0 => 'image/png',
+                  1 => 'image/x-png',
+                ),
+                'tiff' => 'image/tiff',
+                'tif' => 'image/tiff',
+                'css' => 'text/css',
+                'html' => 'text/html',
+                'htm' => 'text/html',
+                'shtml' => 'text/html',
+                'txt' => 'text/plain',
+                'text' => 'text/plain',
+                'log' => 
+                array (
+                  0 => 'text/plain',
+                  1 => 'text/x-log',
+                ),
+                'rtx' => 'text/richtext',
+                'rtf' => 'text/rtf',
+                'xml' => 'text/xml',
+                'xsl' => 'text/xml',
+                'mpeg' => 'video/mpeg',
+                'mpg' => 'video/mpeg',
+                'mpe' => 'video/mpeg',
+                'qt' => 'video/quicktime',
+                'mov' => 'video/quicktime',
+                'avi' => 'video/x-msvideo',
+                'movie' => 'video/x-sgi-movie',
+                'doc' => 'application/msword',
+                'docx' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                'xlsx' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                'word' => 
+                array (
+                  0 => 'application/msword',
+                  1 => 'application/octet-stream',
+                ),
+                'xl' => 'application/excel',
+                'eml' => 'message/rfc822',
+                'json' => 
+                array (
+                  0 => 'application/json',
+                  1 => 'text/json',
+                ),
+              ),
+               'enable_profiler' => false,
+               '_zlib_oc' => '',
+               '_profiler_sections' => 
+              array (
+              ),
+               'parse_exec_vars' => true,
+            )),
+             'security' => 
+            CI_Security::__set_state(array(
+               '_xss_hash' => '',
+               '_csrf_hash' => '3586e56d3801bb0d8332e989c8b78b24',
+               '_csrf_expire' => 7200,
+               '_csrf_token_name' => 'ci_csrf_token',
+               '_csrf_cookie_name' => 'ci_csrf_token',
+               '_never_allowed_str' => 
+              array (
+                'document.cookie' => '[removed]',
+                'document.write' => '[removed]',
+                '.parentNode' => '[removed]',
+                '.innerHTML' => '[removed]',
+                'window.location' => '[removed]',
+                '-moz-binding' => '[removed]',
+                '<!--' => '&lt;!--',
+                '-->' => '--&gt;',
+                '<![CDATA[' => '&lt;![CDATA[',
+              ),
+               '_never_allowed_regex' => 
+              array (
+                'javascript\\s*:' => '[removed]',
+                'expression\\s*(\\(|&\\#40;)' => '[removed]',
+                'vbscript\\s*:' => '[removed]',
+                'Redirect\\s+302' => '[removed]',
+              ),
+            )),
+             'input' => 
+            CI_Input::__set_state(array(
+               'ip_address' => false,
+               'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36',
+               '_allow_get_array' => true,
+               '_standardize_newlines' => true,
+               '_enable_xss' => false,
+               '_enable_csrf' => false,
+               'headers' => 
+              array (
+              ),
+               'security' => 
+              CI_Security::__set_state(array(
+                 '_xss_hash' => '',
+                 '_csrf_hash' => '3586e56d3801bb0d8332e989c8b78b24',
+                 '_csrf_expire' => 7200,
+                 '_csrf_token_name' => 'ci_csrf_token',
+                 '_csrf_cookie_name' => 'ci_csrf_token',
+                 '_never_allowed_str' => 
+                array (
+                  'document.cookie' => '[removed]',
+                  'document.write' => '[removed]',
+                  '.parentNode' => '[removed]',
+                  '.innerHTML' => '[removed]',
+                  'window.location' => '[removed]',
+                  '-moz-binding' => '[removed]',
+                  '<!--' => '&lt;!--',
+                  '-->' => '--&gt;',
+                  '<![CDATA[' => '&lt;![CDATA[',
+                ),
+                 '_never_allowed_regex' => 
+                array (
+                  'javascript\\s*:' => '[removed]',
+                  'expression\\s*(\\(|&\\#40;)' => '[removed]',
+                  'vbscript\\s*:' => '[removed]',
+                  'Redirect\\s+302' => '[removed]',
+                ),
+              )),
+               'uni' => 
+              CI_Utf8::__set_state(array(
+              )),
+            )),
+             'lang' => 
+            CI_Lang::__set_state(array(
+               'language' => 
+              array (
+              ),
+               'is_loaded' => 
+              array (
+              ),
+            )),
+             'load' => 
+            CI_Loader::__set_state(array(
+               '_ci_ob_level' => 1,
+               '_ci_view_path' => 'application/views/',
+               '_ci_library_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+                2 => 'C:/xampp/htdocs/Intraboda/system/',
+              ),
+               '_ci_model_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+              ),
+               '_ci_helper_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+                2 => 'C:/xampp/htdocs/Intraboda/system/',
+              ),
+               '_base_classes' => 
+              array (
+                'benchmark' => 'Benchmark',
+                'hooks' => 'Hooks',
+                'config' => 'Config',
+                'log' => 'Log',
+                'utf8' => 'Utf8',
+                'uri' => 'URI',
+                'router' => 'Router',
+                'output' => 'Output',
+                'security' => 'Security',
+                'input' => 'Input',
+                'lang' => 'Lang',
+                'loader' => 'Loader',
+              ),
+               '_ci_cached_vars' => 
+              array (
+              ),
+               '_ci_classes' => 
+              array (
+                'session' => 'session',
+                'phpmailer_lib' => 'phpmailer_lib',
+              ),
+               '_ci_loaded_files' => 
+              array (
+                0 => 'C:/xampp/htdocs/Intraboda/system/libraries/Session.php',
+                1 => 'application/libraries/PHPMailer_Lib.php',
+              ),
+               '_ci_models' => 
+              array (
+                0 => 'admin_functions',
+              ),
+               '_ci_helpers' => 
+              array (
+                'url_helper' => true,
+                'string_helper' => true,
+              ),
+               '_ci_varmap' => 
+              array (
+                'unit_test' => 'unit',
+                'user_agent' => 'agent',
+              ),
+            )),
+             'session' => 
+            CI_Session::__set_state(array(
+               'sess_encrypt_cookie' => false,
+               'sess_use_database' => false,
+               'sess_table_name' => 'ci_sessions',
+               'sess_expiration' => 7200,
+               'sess_expire_on_close' => false,
+               'sess_match_ip' => false,
+               'sess_match_useragent' => true,
+               'sess_cookie_name' => 'ci_session',
+               'cookie_prefix' => '',
+               'cookie_path' => '/',
+               'cookie_domain' => '',
+               'cookie_secure' => false,
+               'sess_time_to_update' => 300,
+               'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+               'flashdata_key' => 'flash',
+               'time_reference' => 'local',
+               'gc_probability' => 5,
+               'userdata' => 
+              array (
+                'session_id' => '86d401ca82d0b16a41dbcaea7788f0bb',
+                'ip_address' => '0.0.0.0',
+                'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb',
+                'last_activity' => 1738235184,
+                'admin' => true,
+              ),
+               'CI' => NULL,
+               'now' => 1738235200,
+            )),
+             'admin_functions' => 
+            Admin_functions::__set_state(array(
+            )),
+             'phpmailer_lib' => 
+            PHPMailer_Lib::__set_state(array(
+            )),
+          )),
+          1 => 'reenviar_clave',
+        ),
+        1 => 
+        array (
+        ),
+      ),
+    ),
+    6 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\index.php',
+      'line' => 205,
+      'args' => 
+      array (
+        0 => 'C:\\xampp\\htdocs\\Intraboda\\system\\core\\CodeIgniter.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))Vamos a enviar correo a array (
+  0 => '10patrick.deba@gmail.com',
+)Vamos a enviar correo a array (
+  0 => '10patrick.deba@gmail.com',
+)Vamos a enviar correo a array (
+  0 => '10patrick.deba@gmail.com',
+)Vamos a enviar correo a array (
+  0 => '10patrick@ejemplo.com',
+)Algún tipo de error al enviar el correo PHPMailer\PHPMailer\Exception::__set_state(array(
+   'message' => 'SMTP Error: The following recipients failed: 10patrick@ejemplo.com: Requested action not taken: domain does not accept mail
+invalid DNS MX or A/AAAA resource record 1MxmBi-1tFuVS3TQs-00yGmw
+',
+   'string' => '',
+   'code' => 1,
+   'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+   'line' => 2128,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+      'line' => 1689,
+      'function' => 'smtpSend',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'Date: Thu, 30 Jan 2025 12:29:07 +0100
+To: 10patrick@ejemplo.com
+From: Exel Eventos <info@exeleventos.com>
+Reply-To: Exel Eventos <info@exeleventos.com>
+Subject: Prueba
+Message-ID: <L3zOuVYDQbudWZFF5ES5umBgA2ENUmgc0PsXY2n3E@localhost>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+',
+        1 => 'Este es un email de prueba
+',
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+      'line' => 1523,
+      'function' => 'postSend',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    2 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\controllers\\admin.php',
+      'line' => 1909,
+      'function' => 'send',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    3 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\controllers\\admin.php',
+      'line' => 303,
+      'function' => 'sendEmail',
+      'class' => 'Admin',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'info@exeleventos.com',
+        1 => 
+        array (
+          0 => '10patrick@ejemplo.com',
+        ),
+        2 => 'Prueba',
+        3 => 'Este es un email de prueba',
+      ),
+    ),
+    4 => 
+    array (
+      'function' => 'reenviar_clave',
+      'class' => 'Admin',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    5 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\system\\core\\CodeIgniter.php',
+      'line' => 339,
+      'function' => 'call_user_func_array',
+      'args' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          Admin::__set_state(array(
+             'benchmark' => 
+            CI_Benchmark::__set_state(array(
+               'marker' => 
+              array (
+                'total_execution_time_start' => '0.53070000 1738236547',
+                'loading_time:_base_classes_start' => '0.53071300 1738236547',
+                'loading_time:_base_classes_end' => '0.56168900 1738236547',
+                'controller_execution_time_( admin / reenviar_clave )_start' => '0.56172800 1738236547',
+              ),
+            )),
+             'hooks' => 
+            CI_Hooks::__set_state(array(
+               'enabled' => false,
+               'hooks' => 
+              array (
+              ),
+               'in_progress' => false,
+            )),
+             'config' => 
+            CI_Config::__set_state(array(
+               'config' => 
+              array (
+                'base_url' => 'http://localhost/intraboda/',
+                'index_page' => 'index.php',
+                'uri_protocol' => 'AUTO',
+                'url_suffix' => '',
+                'language' => 'spanish',
+                'charset' => 'UTF-8',
+                'enable_hooks' => false,
+                'subclass_prefix' => 'MY_',
+                'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                'allow_get_array' => true,
+                'enable_query_strings' => false,
+                'controller_trigger' => 'c',
+                'function_trigger' => 'm',
+                'directory_trigger' => 'd',
+                'log_threshold' => 4,
+                'log_path' => '',
+                'log_date_format' => 'Y-m-d H:i:s',
+                'cache_path' => '',
+                'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                'sess_cookie_name' => 'ci_session',
+                'sess_expiration' => 7200,
+                'sess_expire_on_close' => false,
+                'sess_encrypt_cookie' => false,
+                'sess_use_database' => false,
+                'sess_table_name' => 'ci_sessions',
+                'sess_match_ip' => false,
+                'sess_match_useragent' => true,
+                'sess_time_to_update' => 300,
+                'cookie_prefix' => '',
+                'cookie_domain' => '',
+                'cookie_path' => '/',
+                'cookie_secure' => false,
+                'global_xss_filtering' => false,
+                'csrf_protection' => false,
+                'csrf_token_name' => 'csrf_test_name',
+                'csrf_cookie_name' => 'csrf_cookie_name',
+                'csrf_expire' => 7200,
+                'compress_output' => false,
+                'time_reference' => 'local',
+                'rewrite_short_tags' => false,
+                'proxy_ips' => '',
+                'host' => 'smtp.ionos.es',
+                'username' => 'info@exeleventos.com',
+                'password' => '1492BDJ5319',
+                'smtpauth' => true,
+                'smtpsecure' => 'ssl',
+                'port' => 465,
+              ),
+               'is_loaded' => 
+              array (
+                0 => 'application/config/mailconfig.php',
+              ),
+               '_config_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+              ),
+            )),
+             'log' => 
+            CI_Log::__set_state(array(
+               '_log_path' => 'application/logs/',
+               '_threshold' => 4,
+               '_date_fmt' => 'Y-m-d H:i:s',
+               '_enabled' => true,
+               '_levels' => 
+              array (
+                'ERROR' => '1',
+                'DEBUG' => '2',
+                'INFO' => '3',
+                'ALL' => '4',
+              ),
+            )),
+             'utf8' => 
+            CI_Utf8::__set_state(array(
+            )),
+             'uri' => 
+            CI_URI::__set_state(array(
+               'keyval' => 
+              array (
+              ),
+               'uri_string' => 'admin/reenviar_clave',
+               'segments' => 
+              array (
+                1 => 'admin',
+                2 => 'reenviar_clave',
+              ),
+               'rsegments' => 
+              array (
+                1 => 'admin',
+                2 => 'reenviar_clave',
+              ),
+               'config' => 
+              CI_Config::__set_state(array(
+                 'config' => 
+                array (
+                  'base_url' => 'http://localhost/intraboda/',
+                  'index_page' => 'index.php',
+                  'uri_protocol' => 'AUTO',
+                  'url_suffix' => '',
+                  'language' => 'spanish',
+                  'charset' => 'UTF-8',
+                  'enable_hooks' => false,
+                  'subclass_prefix' => 'MY_',
+                  'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                  'allow_get_array' => true,
+                  'enable_query_strings' => false,
+                  'controller_trigger' => 'c',
+                  'function_trigger' => 'm',
+                  'directory_trigger' => 'd',
+                  'log_threshold' => 4,
+                  'log_path' => '',
+                  'log_date_format' => 'Y-m-d H:i:s',
+                  'cache_path' => '',
+                  'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                  'sess_cookie_name' => 'ci_session',
+                  'sess_expiration' => 7200,
+                  'sess_expire_on_close' => false,
+                  'sess_encrypt_cookie' => false,
+                  'sess_use_database' => false,
+                  'sess_table_name' => 'ci_sessions',
+                  'sess_match_ip' => false,
+                  'sess_match_useragent' => true,
+                  'sess_time_to_update' => 300,
+                  'cookie_prefix' => '',
+                  'cookie_domain' => '',
+                  'cookie_path' => '/',
+                  'cookie_secure' => false,
+                  'global_xss_filtering' => false,
+                  'csrf_protection' => false,
+                  'csrf_token_name' => 'csrf_test_name',
+                  'csrf_cookie_name' => 'csrf_cookie_name',
+                  'csrf_expire' => 7200,
+                  'compress_output' => false,
+                  'time_reference' => 'local',
+                  'rewrite_short_tags' => false,
+                  'proxy_ips' => '',
+                  'host' => 'smtp.ionos.es',
+                  'username' => 'info@exeleventos.com',
+                  'password' => '1492BDJ5319',
+                  'smtpauth' => true,
+                  'smtpsecure' => 'ssl',
+                  'port' => 465,
+                ),
+                 'is_loaded' => 
+                array (
+                  0 => 'application/config/mailconfig.php',
+                ),
+                 '_config_paths' => 
+                array (
+                  0 => 'application/third_party/',
+                  1 => 'application/',
+                ),
+              )),
+            )),
+             'router' => 
+            CI_Router::__set_state(array(
+               'config' => 
+              CI_Config::__set_state(array(
+                 'config' => 
+                array (
+                  'base_url' => 'http://localhost/intraboda/',
+                  'index_page' => 'index.php',
+                  'uri_protocol' => 'AUTO',
+                  'url_suffix' => '',
+                  'language' => 'spanish',
+                  'charset' => 'UTF-8',
+                  'enable_hooks' => false,
+                  'subclass_prefix' => 'MY_',
+                  'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                  'allow_get_array' => true,
+                  'enable_query_strings' => false,
+                  'controller_trigger' => 'c',
+                  'function_trigger' => 'm',
+                  'directory_trigger' => 'd',
+                  'log_threshold' => 4,
+                  'log_path' => '',
+                  'log_date_format' => 'Y-m-d H:i:s',
+                  'cache_path' => '',
+                  'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                  'sess_cookie_name' => 'ci_session',
+                  'sess_expiration' => 7200,
+                  'sess_expire_on_close' => false,
+                  'sess_encrypt_cookie' => false,
+                  'sess_use_database' => false,
+                  'sess_table_name' => 'ci_sessions',
+                  'sess_match_ip' => false,
+                  'sess_match_useragent' => true,
+                  'sess_time_to_update' => 300,
+                  'cookie_prefix' => '',
+                  'cookie_domain' => '',
+                  'cookie_path' => '/',
+                  'cookie_secure' => false,
+                  'global_xss_filtering' => false,
+                  'csrf_protection' => false,
+                  'csrf_token_name' => 'csrf_test_name',
+                  'csrf_cookie_name' => 'csrf_cookie_name',
+                  'csrf_expire' => 7200,
+                  'compress_output' => false,
+                  'time_reference' => 'local',
+                  'rewrite_short_tags' => false,
+                  'proxy_ips' => '',
+                  'host' => 'smtp.ionos.es',
+                  'username' => 'info@exeleventos.com',
+                  'password' => '1492BDJ5319',
+                  'smtpauth' => true,
+                  'smtpsecure' => 'ssl',
+                  'port' => 465,
+                ),
+                 'is_loaded' => 
+                array (
+                  0 => 'application/config/mailconfig.php',
+                ),
+                 '_config_paths' => 
+                array (
+                  0 => 'application/third_party/',
+                  1 => 'application/',
+                ),
+              )),
+               'routes' => 
+              array (
+                'default_controller' => 'Home',
+                '404_override' => '',
+              ),
+               'error_routes' => 
+              array (
+              ),
+               'class' => 'admin',
+               'method' => 'reenviar_clave',
+               'directory' => '',
+               'default_controller' => 'home',
+               'uri' => 
+              CI_URI::__set_state(array(
+                 'keyval' => 
+                array (
+                ),
+                 'uri_string' => 'admin/reenviar_clave',
+                 'segments' => 
+                array (
+                  1 => 'admin',
+                  2 => 'reenviar_clave',
+                ),
+                 'rsegments' => 
+                array (
+                  1 => 'admin',
+                  2 => 'reenviar_clave',
+                ),
+                 'config' => 
+                CI_Config::__set_state(array(
+                   'config' => 
+                  array (
+                    'base_url' => 'http://localhost/intraboda/',
+                    'index_page' => 'index.php',
+                    'uri_protocol' => 'AUTO',
+                    'url_suffix' => '',
+                    'language' => 'spanish',
+                    'charset' => 'UTF-8',
+                    'enable_hooks' => false,
+                    'subclass_prefix' => 'MY_',
+                    'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                    'allow_get_array' => true,
+                    'enable_query_strings' => false,
+                    'controller_trigger' => 'c',
+                    'function_trigger' => 'm',
+                    'directory_trigger' => 'd',
+                    'log_threshold' => 4,
+                    'log_path' => '',
+                    'log_date_format' => 'Y-m-d H:i:s',
+                    'cache_path' => '',
+                    'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                    'sess_cookie_name' => 'ci_session',
+                    'sess_expiration' => 7200,
+                    'sess_expire_on_close' => false,
+                    'sess_encrypt_cookie' => false,
+                    'sess_use_database' => false,
+                    'sess_table_name' => 'ci_sessions',
+                    'sess_match_ip' => false,
+                    'sess_match_useragent' => true,
+                    'sess_time_to_update' => 300,
+                    'cookie_prefix' => '',
+                    'cookie_domain' => '',
+                    'cookie_path' => '/',
+                    'cookie_secure' => false,
+                    'global_xss_filtering' => false,
+                    'csrf_protection' => false,
+                    'csrf_token_name' => 'csrf_test_name',
+                    'csrf_cookie_name' => 'csrf_cookie_name',
+                    'csrf_expire' => 7200,
+                    'compress_output' => false,
+                    'time_reference' => 'local',
+                    'rewrite_short_tags' => false,
+                    'proxy_ips' => '',
+                    'host' => 'smtp.ionos.es',
+                    'username' => 'info@exeleventos.com',
+                    'password' => '1492BDJ5319',
+                    'smtpauth' => true,
+                    'smtpsecure' => 'ssl',
+                    'port' => 465,
+                  ),
+                   'is_loaded' => 
+                  array (
+                    0 => 'application/config/mailconfig.php',
+                  ),
+                   '_config_paths' => 
+                  array (
+                    0 => 'application/third_party/',
+                    1 => 'application/',
+                  ),
+                )),
+              )),
+            )),
+             'output' => 
+            CI_Output::__set_state(array(
+               'final_output' => NULL,
+               'cache_expiration' => 0,
+               'headers' => 
+              array (
+              ),
+               'mime_types' => 
+              array (
+                'hqx' => 'application/mac-binhex40',
+                'cpt' => 'application/mac-compactpro',
+                'csv' => 
+                array (
+                  0 => 'text/x-comma-separated-values',
+                  1 => 'text/comma-separated-values',
+                  2 => 'application/octet-stream',
+                  3 => 'application/vnd.ms-excel',
+                  4 => 'text/x-csv',
+                  5 => 'text/csv',
+                  6 => 'application/csv',
+                  7 => 'application/excel',
+                  8 => 'application/vnd.msexcel',
+                ),
+                'bin' => 'application/macbinary',
+                'dms' => 'application/octet-stream',
+                'lha' => 'application/octet-stream',
+                'lzh' => 'application/octet-stream',
+                'exe' => 
+                array (
+                  0 => 'application/octet-stream',
+                  1 => 'application/x-msdownload',
+                ),
+                'class' => 'application/octet-stream',
+                'psd' => 'application/x-photoshop',
+                'so' => 'application/octet-stream',
+                'sea' => 'application/octet-stream',
+                'dll' => 'application/octet-stream',
+                'oda' => 'application/oda',
+                'pdf' => 
+                array (
+                  0 => 'application/pdf',
+                  1 => 'application/x-download',
+                ),
+                'ai' => 'application/postscript',
+                'eps' => 'application/postscript',
+                'ps' => 'application/postscript',
+                'smi' => 'application/smil',
+                'smil' => 'application/smil',
+                'mif' => 'application/vnd.mif',
+                'xls' => 
+                array (
+                  0 => 'application/excel',
+                  1 => 'application/vnd.ms-excel',
+                  2 => 'application/msexcel',
+                ),
+                'ppt' => 
+                array (
+                  0 => 'application/powerpoint',
+                  1 => 'application/vnd.ms-powerpoint',
+                ),
+                'wbxml' => 'application/wbxml',
+                'wmlc' => 'application/wmlc',
+                'dcr' => 'application/x-director',
+                'dir' => 'application/x-director',
+                'dxr' => 'application/x-director',
+                'dvi' => 'application/x-dvi',
+                'gtar' => 'application/x-gtar',
+                'gz' => 'application/x-gzip',
+                'php' => 'application/x-httpd-php',
+                'php4' => 'application/x-httpd-php',
+                'php3' => 'application/x-httpd-php',
+                'phtml' => 'application/x-httpd-php',
+                'phps' => 'application/x-httpd-php-source',
+                'js' => 'application/x-javascript',
+                'swf' => 'application/x-shockwave-flash',
+                'sit' => 'application/x-stuffit',
+                'tar' => 'application/x-tar',
+                'tgz' => 
+                array (
+                  0 => 'application/x-tar',
+                  1 => 'application/x-gzip-compressed',
+                ),
+                'xhtml' => 'application/xhtml+xml',
+                'xht' => 'application/xhtml+xml',
+                'zip' => 
+                array (
+                  0 => 'application/x-zip',
+                  1 => 'application/zip',
+                  2 => 'application/x-zip-compressed',
+                ),
+                'mid' => 'audio/midi',
+                'midi' => 'audio/midi',
+                'mpga' => 'audio/mpeg',
+                'mp2' => 'audio/mpeg',
+                'mp3' => 
+                array (
+                  0 => 'audio/mpeg',
+                  1 => 'audio/mpg',
+                  2 => 'audio/mpeg3',
+                  3 => 'audio/mp3',
+                ),
+                'aif' => 'audio/x-aiff',
+                'aiff' => 'audio/x-aiff',
+                'aifc' => 'audio/x-aiff',
+                'ram' => 'audio/x-pn-realaudio',
+                'rm' => 'audio/x-pn-realaudio',
+                'rpm' => 'audio/x-pn-realaudio-plugin',
+                'ra' => 'audio/x-realaudio',
+                'rv' => 'video/vnd.rn-realvideo',
+                'wav' => 'audio/x-wav',
+                'bmp' => 'image/bmp',
+                'gif' => 'image/gif',
+                'jpeg' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'jpg' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'jpe' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'png' => 
+                array (
+                  0 => 'image/png',
+                  1 => 'image/x-png',
+                ),
+                'tiff' => 'image/tiff',
+                'tif' => 'image/tiff',
+                'css' => 'text/css',
+                'html' => 'text/html',
+                'htm' => 'text/html',
+                'shtml' => 'text/html',
+                'txt' => 'text/plain',
+                'text' => 'text/plain',
+                'log' => 
+                array (
+                  0 => 'text/plain',
+                  1 => 'text/x-log',
+                ),
+                'rtx' => 'text/richtext',
+                'rtf' => 'text/rtf',
+                'xml' => 'text/xml',
+                'xsl' => 'text/xml',
+                'mpeg' => 'video/mpeg',
+                'mpg' => 'video/mpeg',
+                'mpe' => 'video/mpeg',
+                'qt' => 'video/quicktime',
+                'mov' => 'video/quicktime',
+                'avi' => 'video/x-msvideo',
+                'movie' => 'video/x-sgi-movie',
+                'doc' => 'application/msword',
+                'docx' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                'xlsx' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                'word' => 
+                array (
+                  0 => 'application/msword',
+                  1 => 'application/octet-stream',
+                ),
+                'xl' => 'application/excel',
+                'eml' => 'message/rfc822',
+                'json' => 
+                array (
+                  0 => 'application/json',
+                  1 => 'text/json',
+                ),
+              ),
+               'enable_profiler' => false,
+               '_zlib_oc' => '',
+               '_profiler_sections' => 
+              array (
+              ),
+               'parse_exec_vars' => true,
+            )),
+             'security' => 
+            CI_Security::__set_state(array(
+               '_xss_hash' => '',
+               '_csrf_hash' => 'ff64d4d8bfe098f4c4bbbcea5f588e03',
+               '_csrf_expire' => 7200,
+               '_csrf_token_name' => 'ci_csrf_token',
+               '_csrf_cookie_name' => 'ci_csrf_token',
+               '_never_allowed_str' => 
+              array (
+                'document.cookie' => '[removed]',
+                'document.write' => '[removed]',
+                '.parentNode' => '[removed]',
+                '.innerHTML' => '[removed]',
+                'window.location' => '[removed]',
+                '-moz-binding' => '[removed]',
+                '<!--' => '&lt;!--',
+                '-->' => '--&gt;',
+                '<![CDATA[' => '&lt;![CDATA[',
+              ),
+               '_never_allowed_regex' => 
+              array (
+                'javascript\\s*:' => '[removed]',
+                'expression\\s*(\\(|&\\#40;)' => '[removed]',
+                'vbscript\\s*:' => '[removed]',
+                'Redirect\\s+302' => '[removed]',
+              ),
+            )),
+             'input' => 
+            CI_Input::__set_state(array(
+               'ip_address' => false,
+               'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36',
+               '_allow_get_array' => true,
+               '_standardize_newlines' => true,
+               '_enable_xss' => false,
+               '_enable_csrf' => false,
+               'headers' => 
+              array (
+              ),
+               'security' => 
+              CI_Security::__set_state(array(
+                 '_xss_hash' => '',
+                 '_csrf_hash' => 'ff64d4d8bfe098f4c4bbbcea5f588e03',
+                 '_csrf_expire' => 7200,
+                 '_csrf_token_name' => 'ci_csrf_token',
+                 '_csrf_cookie_name' => 'ci_csrf_token',
+                 '_never_allowed_str' => 
+                array (
+                  'document.cookie' => '[removed]',
+                  'document.write' => '[removed]',
+                  '.parentNode' => '[removed]',
+                  '.innerHTML' => '[removed]',
+                  'window.location' => '[removed]',
+                  '-moz-binding' => '[removed]',
+                  '<!--' => '&lt;!--',
+                  '-->' => '--&gt;',
+                  '<![CDATA[' => '&lt;![CDATA[',
+                ),
+                 '_never_allowed_regex' => 
+                array (
+                  'javascript\\s*:' => '[removed]',
+                  'expression\\s*(\\(|&\\#40;)' => '[removed]',
+                  'vbscript\\s*:' => '[removed]',
+                  'Redirect\\s+302' => '[removed]',
+                ),
+              )),
+               'uni' => 
+              CI_Utf8::__set_state(array(
+              )),
+            )),
+             'lang' => 
+            CI_Lang::__set_state(array(
+               'language' => 
+              array (
+              ),
+               'is_loaded' => 
+              array (
+              ),
+            )),
+             'load' => 
+            CI_Loader::__set_state(array(
+               '_ci_ob_level' => 1,
+               '_ci_view_path' => 'application/views/',
+               '_ci_library_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+                2 => 'C:/xampp/htdocs/Intraboda/system/',
+              ),
+               '_ci_model_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+              ),
+               '_ci_helper_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+                2 => 'C:/xampp/htdocs/Intraboda/system/',
+              ),
+               '_base_classes' => 
+              array (
+                'benchmark' => 'Benchmark',
+                'hooks' => 'Hooks',
+                'config' => 'Config',
+                'log' => 'Log',
+                'utf8' => 'Utf8',
+                'uri' => 'URI',
+                'router' => 'Router',
+                'output' => 'Output',
+                'security' => 'Security',
+                'input' => 'Input',
+                'lang' => 'Lang',
+                'loader' => 'Loader',
+              ),
+               '_ci_cached_vars' => 
+              array (
+              ),
+               '_ci_classes' => 
+              array (
+                'session' => 'session',
+                'phpmailer_lib' => 'phpmailer_lib',
+              ),
+               '_ci_loaded_files' => 
+              array (
+                0 => 'C:/xampp/htdocs/Intraboda/system/libraries/Session.php',
+                1 => 'application/libraries/PHPMailer_Lib.php',
+              ),
+               '_ci_models' => 
+              array (
+                0 => 'admin_functions',
+              ),
+               '_ci_helpers' => 
+              array (
+                'url_helper' => true,
+                'string_helper' => true,
+              ),
+               '_ci_varmap' => 
+              array (
+                'unit_test' => 'unit',
+                'user_agent' => 'agent',
+              ),
+            )),
+             'session' => 
+            CI_Session::__set_state(array(
+               'sess_encrypt_cookie' => false,
+               'sess_use_database' => false,
+               'sess_table_name' => 'ci_sessions',
+               'sess_expiration' => 7200,
+               'sess_expire_on_close' => false,
+               'sess_match_ip' => false,
+               'sess_match_useragent' => true,
+               'sess_cookie_name' => 'ci_session',
+               'cookie_prefix' => '',
+               'cookie_path' => '/',
+               'cookie_domain' => '',
+               'cookie_secure' => false,
+               'sess_time_to_update' => 300,
+               'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+               'flashdata_key' => 'flash',
+               'time_reference' => 'local',
+               'gc_probability' => 5,
+               'userdata' => 
+              array (
+                'session_id' => '42a62f29f8627e683901afc7f335de78',
+                'ip_address' => '0.0.0.0',
+                'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb',
+                'last_activity' => 1738236397,
+                'admin' => true,
+              ),
+               'CI' => NULL,
+               'now' => 1738236547,
+            )),
+             'admin_functions' => 
+            Admin_functions::__set_state(array(
+            )),
+             'phpmailer_lib' => 
+            PHPMailer_Lib::__set_state(array(
+            )),
+          )),
+          1 => 'reenviar_clave',
+        ),
+        1 => 
+        array (
+        ),
+      ),
+    ),
+    6 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\index.php',
+      'line' => 205,
+      'args' => 
+      array (
+        0 => 'C:\\xampp\\htdocs\\Intraboda\\system\\core\\CodeIgniter.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))Vamos a enviar correo a array (
+  0 => '10patrick@ejemplo.com',
+)Algún tipo de error al enviar el correo PHPMailer\PHPMailer\Exception::__set_state(array(
+   'message' => 'SMTP Error: The following recipients failed: 10patrick@ejemplo.com: Requested action not taken: domain does not accept mail
+invalid DNS MX or A/AAAA resource record 1MXXdn-1txSj63E9n-00KnnY
+',
+   'string' => '',
+   'code' => 1,
+   'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+   'line' => 2128,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+      'line' => 1689,
+      'function' => 'smtpSend',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'Date: Thu, 30 Jan 2025 12:29:42 +0100
+To: 10patrick@ejemplo.com
+From: Exel Eventos <info@exeleventos.com>
+Reply-To: Exel Eventos <info@exeleventos.com>
+Subject: Prueba
+Message-ID: <zJOXwXw0cuuN3lnlqq5gsQDeuRK6FHuowVR9r22Yw@localhost>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+',
+        1 => 'Este es un email de prueba
+',
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\third_party\\PHPMailer\\src\\PHPMailer.php',
+      'line' => 1523,
+      'function' => 'postSend',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    2 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\controllers\\admin.php',
+      'line' => 1909,
+      'function' => 'send',
+      'class' => 'PHPMailer\\PHPMailer\\PHPMailer',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    3 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\application\\controllers\\admin.php',
+      'line' => 303,
+      'function' => 'sendEmail',
+      'class' => 'Admin',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'info@exeleventos.com',
+        1 => 
+        array (
+          0 => '10patrick@ejemplo.com',
+        ),
+        2 => 'Prueba',
+        3 => 'Este es un email de prueba',
+      ),
+    ),
+    4 => 
+    array (
+      'function' => 'reenviar_clave',
+      'class' => 'Admin',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    5 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\system\\core\\CodeIgniter.php',
+      'line' => 339,
+      'function' => 'call_user_func_array',
+      'args' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          Admin::__set_state(array(
+             'benchmark' => 
+            CI_Benchmark::__set_state(array(
+               'marker' => 
+              array (
+                'total_execution_time_start' => '0.55606100 1738236582',
+                'loading_time:_base_classes_start' => '0.55607700 1738236582',
+                'loading_time:_base_classes_end' => '0.59046400 1738236582',
+                'controller_execution_time_( admin / reenviar_clave )_start' => '0.59050100 1738236582',
+              ),
+            )),
+             'hooks' => 
+            CI_Hooks::__set_state(array(
+               'enabled' => false,
+               'hooks' => 
+              array (
+              ),
+               'in_progress' => false,
+            )),
+             'config' => 
+            CI_Config::__set_state(array(
+               'config' => 
+              array (
+                'base_url' => 'http://localhost/intraboda/',
+                'index_page' => 'index.php',
+                'uri_protocol' => 'AUTO',
+                'url_suffix' => '',
+                'language' => 'spanish',
+                'charset' => 'UTF-8',
+                'enable_hooks' => false,
+                'subclass_prefix' => 'MY_',
+                'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                'allow_get_array' => true,
+                'enable_query_strings' => false,
+                'controller_trigger' => 'c',
+                'function_trigger' => 'm',
+                'directory_trigger' => 'd',
+                'log_threshold' => 4,
+                'log_path' => '',
+                'log_date_format' => 'Y-m-d H:i:s',
+                'cache_path' => '',
+                'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                'sess_cookie_name' => 'ci_session',
+                'sess_expiration' => 7200,
+                'sess_expire_on_close' => false,
+                'sess_encrypt_cookie' => false,
+                'sess_use_database' => false,
+                'sess_table_name' => 'ci_sessions',
+                'sess_match_ip' => false,
+                'sess_match_useragent' => true,
+                'sess_time_to_update' => 300,
+                'cookie_prefix' => '',
+                'cookie_domain' => '',
+                'cookie_path' => '/',
+                'cookie_secure' => false,
+                'global_xss_filtering' => false,
+                'csrf_protection' => false,
+                'csrf_token_name' => 'csrf_test_name',
+                'csrf_cookie_name' => 'csrf_cookie_name',
+                'csrf_expire' => 7200,
+                'compress_output' => false,
+                'time_reference' => 'local',
+                'rewrite_short_tags' => false,
+                'proxy_ips' => '',
+                'host' => 'smtp.ionos.es',
+                'username' => 'info@exeleventos.com',
+                'password' => '1492BDJ5319',
+                'smtpauth' => true,
+                'smtpsecure' => 'ssl',
+                'port' => 465,
+              ),
+               'is_loaded' => 
+              array (
+                0 => 'application/config/mailconfig.php',
+              ),
+               '_config_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+              ),
+            )),
+             'log' => 
+            CI_Log::__set_state(array(
+               '_log_path' => 'application/logs/',
+               '_threshold' => 4,
+               '_date_fmt' => 'Y-m-d H:i:s',
+               '_enabled' => true,
+               '_levels' => 
+              array (
+                'ERROR' => '1',
+                'DEBUG' => '2',
+                'INFO' => '3',
+                'ALL' => '4',
+              ),
+            )),
+             'utf8' => 
+            CI_Utf8::__set_state(array(
+            )),
+             'uri' => 
+            CI_URI::__set_state(array(
+               'keyval' => 
+              array (
+              ),
+               'uri_string' => 'admin/reenviar_clave',
+               'segments' => 
+              array (
+                1 => 'admin',
+                2 => 'reenviar_clave',
+              ),
+               'rsegments' => 
+              array (
+                1 => 'admin',
+                2 => 'reenviar_clave',
+              ),
+               'config' => 
+              CI_Config::__set_state(array(
+                 'config' => 
+                array (
+                  'base_url' => 'http://localhost/intraboda/',
+                  'index_page' => 'index.php',
+                  'uri_protocol' => 'AUTO',
+                  'url_suffix' => '',
+                  'language' => 'spanish',
+                  'charset' => 'UTF-8',
+                  'enable_hooks' => false,
+                  'subclass_prefix' => 'MY_',
+                  'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                  'allow_get_array' => true,
+                  'enable_query_strings' => false,
+                  'controller_trigger' => 'c',
+                  'function_trigger' => 'm',
+                  'directory_trigger' => 'd',
+                  'log_threshold' => 4,
+                  'log_path' => '',
+                  'log_date_format' => 'Y-m-d H:i:s',
+                  'cache_path' => '',
+                  'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                  'sess_cookie_name' => 'ci_session',
+                  'sess_expiration' => 7200,
+                  'sess_expire_on_close' => false,
+                  'sess_encrypt_cookie' => false,
+                  'sess_use_database' => false,
+                  'sess_table_name' => 'ci_sessions',
+                  'sess_match_ip' => false,
+                  'sess_match_useragent' => true,
+                  'sess_time_to_update' => 300,
+                  'cookie_prefix' => '',
+                  'cookie_domain' => '',
+                  'cookie_path' => '/',
+                  'cookie_secure' => false,
+                  'global_xss_filtering' => false,
+                  'csrf_protection' => false,
+                  'csrf_token_name' => 'csrf_test_name',
+                  'csrf_cookie_name' => 'csrf_cookie_name',
+                  'csrf_expire' => 7200,
+                  'compress_output' => false,
+                  'time_reference' => 'local',
+                  'rewrite_short_tags' => false,
+                  'proxy_ips' => '',
+                  'host' => 'smtp.ionos.es',
+                  'username' => 'info@exeleventos.com',
+                  'password' => '1492BDJ5319',
+                  'smtpauth' => true,
+                  'smtpsecure' => 'ssl',
+                  'port' => 465,
+                ),
+                 'is_loaded' => 
+                array (
+                  0 => 'application/config/mailconfig.php',
+                ),
+                 '_config_paths' => 
+                array (
+                  0 => 'application/third_party/',
+                  1 => 'application/',
+                ),
+              )),
+            )),
+             'router' => 
+            CI_Router::__set_state(array(
+               'config' => 
+              CI_Config::__set_state(array(
+                 'config' => 
+                array (
+                  'base_url' => 'http://localhost/intraboda/',
+                  'index_page' => 'index.php',
+                  'uri_protocol' => 'AUTO',
+                  'url_suffix' => '',
+                  'language' => 'spanish',
+                  'charset' => 'UTF-8',
+                  'enable_hooks' => false,
+                  'subclass_prefix' => 'MY_',
+                  'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                  'allow_get_array' => true,
+                  'enable_query_strings' => false,
+                  'controller_trigger' => 'c',
+                  'function_trigger' => 'm',
+                  'directory_trigger' => 'd',
+                  'log_threshold' => 4,
+                  'log_path' => '',
+                  'log_date_format' => 'Y-m-d H:i:s',
+                  'cache_path' => '',
+                  'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                  'sess_cookie_name' => 'ci_session',
+                  'sess_expiration' => 7200,
+                  'sess_expire_on_close' => false,
+                  'sess_encrypt_cookie' => false,
+                  'sess_use_database' => false,
+                  'sess_table_name' => 'ci_sessions',
+                  'sess_match_ip' => false,
+                  'sess_match_useragent' => true,
+                  'sess_time_to_update' => 300,
+                  'cookie_prefix' => '',
+                  'cookie_domain' => '',
+                  'cookie_path' => '/',
+                  'cookie_secure' => false,
+                  'global_xss_filtering' => false,
+                  'csrf_protection' => false,
+                  'csrf_token_name' => 'csrf_test_name',
+                  'csrf_cookie_name' => 'csrf_cookie_name',
+                  'csrf_expire' => 7200,
+                  'compress_output' => false,
+                  'time_reference' => 'local',
+                  'rewrite_short_tags' => false,
+                  'proxy_ips' => '',
+                  'host' => 'smtp.ionos.es',
+                  'username' => 'info@exeleventos.com',
+                  'password' => '1492BDJ5319',
+                  'smtpauth' => true,
+                  'smtpsecure' => 'ssl',
+                  'port' => 465,
+                ),
+                 'is_loaded' => 
+                array (
+                  0 => 'application/config/mailconfig.php',
+                ),
+                 '_config_paths' => 
+                array (
+                  0 => 'application/third_party/',
+                  1 => 'application/',
+                ),
+              )),
+               'routes' => 
+              array (
+                'default_controller' => 'Home',
+                '404_override' => '',
+              ),
+               'error_routes' => 
+              array (
+              ),
+               'class' => 'admin',
+               'method' => 'reenviar_clave',
+               'directory' => '',
+               'default_controller' => 'home',
+               'uri' => 
+              CI_URI::__set_state(array(
+                 'keyval' => 
+                array (
+                ),
+                 'uri_string' => 'admin/reenviar_clave',
+                 'segments' => 
+                array (
+                  1 => 'admin',
+                  2 => 'reenviar_clave',
+                ),
+                 'rsegments' => 
+                array (
+                  1 => 'admin',
+                  2 => 'reenviar_clave',
+                ),
+                 'config' => 
+                CI_Config::__set_state(array(
+                   'config' => 
+                  array (
+                    'base_url' => 'http://localhost/intraboda/',
+                    'index_page' => 'index.php',
+                    'uri_protocol' => 'AUTO',
+                    'url_suffix' => '',
+                    'language' => 'spanish',
+                    'charset' => 'UTF-8',
+                    'enable_hooks' => false,
+                    'subclass_prefix' => 'MY_',
+                    'permitted_uri_chars' => 'a-z 0-9~%.:_\\-',
+                    'allow_get_array' => true,
+                    'enable_query_strings' => false,
+                    'controller_trigger' => 'c',
+                    'function_trigger' => 'm',
+                    'directory_trigger' => 'd',
+                    'log_threshold' => 4,
+                    'log_path' => '',
+                    'log_date_format' => 'Y-m-d H:i:s',
+                    'cache_path' => '',
+                    'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+                    'sess_cookie_name' => 'ci_session',
+                    'sess_expiration' => 7200,
+                    'sess_expire_on_close' => false,
+                    'sess_encrypt_cookie' => false,
+                    'sess_use_database' => false,
+                    'sess_table_name' => 'ci_sessions',
+                    'sess_match_ip' => false,
+                    'sess_match_useragent' => true,
+                    'sess_time_to_update' => 300,
+                    'cookie_prefix' => '',
+                    'cookie_domain' => '',
+                    'cookie_path' => '/',
+                    'cookie_secure' => false,
+                    'global_xss_filtering' => false,
+                    'csrf_protection' => false,
+                    'csrf_token_name' => 'csrf_test_name',
+                    'csrf_cookie_name' => 'csrf_cookie_name',
+                    'csrf_expire' => 7200,
+                    'compress_output' => false,
+                    'time_reference' => 'local',
+                    'rewrite_short_tags' => false,
+                    'proxy_ips' => '',
+                    'host' => 'smtp.ionos.es',
+                    'username' => 'info@exeleventos.com',
+                    'password' => '1492BDJ5319',
+                    'smtpauth' => true,
+                    'smtpsecure' => 'ssl',
+                    'port' => 465,
+                  ),
+                   'is_loaded' => 
+                  array (
+                    0 => 'application/config/mailconfig.php',
+                  ),
+                   '_config_paths' => 
+                  array (
+                    0 => 'application/third_party/',
+                    1 => 'application/',
+                  ),
+                )),
+              )),
+            )),
+             'output' => 
+            CI_Output::__set_state(array(
+               'final_output' => NULL,
+               'cache_expiration' => 0,
+               'headers' => 
+              array (
+              ),
+               'mime_types' => 
+              array (
+                'hqx' => 'application/mac-binhex40',
+                'cpt' => 'application/mac-compactpro',
+                'csv' => 
+                array (
+                  0 => 'text/x-comma-separated-values',
+                  1 => 'text/comma-separated-values',
+                  2 => 'application/octet-stream',
+                  3 => 'application/vnd.ms-excel',
+                  4 => 'text/x-csv',
+                  5 => 'text/csv',
+                  6 => 'application/csv',
+                  7 => 'application/excel',
+                  8 => 'application/vnd.msexcel',
+                ),
+                'bin' => 'application/macbinary',
+                'dms' => 'application/octet-stream',
+                'lha' => 'application/octet-stream',
+                'lzh' => 'application/octet-stream',
+                'exe' => 
+                array (
+                  0 => 'application/octet-stream',
+                  1 => 'application/x-msdownload',
+                ),
+                'class' => 'application/octet-stream',
+                'psd' => 'application/x-photoshop',
+                'so' => 'application/octet-stream',
+                'sea' => 'application/octet-stream',
+                'dll' => 'application/octet-stream',
+                'oda' => 'application/oda',
+                'pdf' => 
+                array (
+                  0 => 'application/pdf',
+                  1 => 'application/x-download',
+                ),
+                'ai' => 'application/postscript',
+                'eps' => 'application/postscript',
+                'ps' => 'application/postscript',
+                'smi' => 'application/smil',
+                'smil' => 'application/smil',
+                'mif' => 'application/vnd.mif',
+                'xls' => 
+                array (
+                  0 => 'application/excel',
+                  1 => 'application/vnd.ms-excel',
+                  2 => 'application/msexcel',
+                ),
+                'ppt' => 
+                array (
+                  0 => 'application/powerpoint',
+                  1 => 'application/vnd.ms-powerpoint',
+                ),
+                'wbxml' => 'application/wbxml',
+                'wmlc' => 'application/wmlc',
+                'dcr' => 'application/x-director',
+                'dir' => 'application/x-director',
+                'dxr' => 'application/x-director',
+                'dvi' => 'application/x-dvi',
+                'gtar' => 'application/x-gtar',
+                'gz' => 'application/x-gzip',
+                'php' => 'application/x-httpd-php',
+                'php4' => 'application/x-httpd-php',
+                'php3' => 'application/x-httpd-php',
+                'phtml' => 'application/x-httpd-php',
+                'phps' => 'application/x-httpd-php-source',
+                'js' => 'application/x-javascript',
+                'swf' => 'application/x-shockwave-flash',
+                'sit' => 'application/x-stuffit',
+                'tar' => 'application/x-tar',
+                'tgz' => 
+                array (
+                  0 => 'application/x-tar',
+                  1 => 'application/x-gzip-compressed',
+                ),
+                'xhtml' => 'application/xhtml+xml',
+                'xht' => 'application/xhtml+xml',
+                'zip' => 
+                array (
+                  0 => 'application/x-zip',
+                  1 => 'application/zip',
+                  2 => 'application/x-zip-compressed',
+                ),
+                'mid' => 'audio/midi',
+                'midi' => 'audio/midi',
+                'mpga' => 'audio/mpeg',
+                'mp2' => 'audio/mpeg',
+                'mp3' => 
+                array (
+                  0 => 'audio/mpeg',
+                  1 => 'audio/mpg',
+                  2 => 'audio/mpeg3',
+                  3 => 'audio/mp3',
+                ),
+                'aif' => 'audio/x-aiff',
+                'aiff' => 'audio/x-aiff',
+                'aifc' => 'audio/x-aiff',
+                'ram' => 'audio/x-pn-realaudio',
+                'rm' => 'audio/x-pn-realaudio',
+                'rpm' => 'audio/x-pn-realaudio-plugin',
+                'ra' => 'audio/x-realaudio',
+                'rv' => 'video/vnd.rn-realvideo',
+                'wav' => 'audio/x-wav',
+                'bmp' => 'image/bmp',
+                'gif' => 'image/gif',
+                'jpeg' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'jpg' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'jpe' => 
+                array (
+                  0 => 'image/jpeg',
+                  1 => 'image/pjpeg',
+                ),
+                'png' => 
+                array (
+                  0 => 'image/png',
+                  1 => 'image/x-png',
+                ),
+                'tiff' => 'image/tiff',
+                'tif' => 'image/tiff',
+                'css' => 'text/css',
+                'html' => 'text/html',
+                'htm' => 'text/html',
+                'shtml' => 'text/html',
+                'txt' => 'text/plain',
+                'text' => 'text/plain',
+                'log' => 
+                array (
+                  0 => 'text/plain',
+                  1 => 'text/x-log',
+                ),
+                'rtx' => 'text/richtext',
+                'rtf' => 'text/rtf',
+                'xml' => 'text/xml',
+                'xsl' => 'text/xml',
+                'mpeg' => 'video/mpeg',
+                'mpg' => 'video/mpeg',
+                'mpe' => 'video/mpeg',
+                'qt' => 'video/quicktime',
+                'mov' => 'video/quicktime',
+                'avi' => 'video/x-msvideo',
+                'movie' => 'video/x-sgi-movie',
+                'doc' => 'application/msword',
+                'docx' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                'xlsx' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                'word' => 
+                array (
+                  0 => 'application/msword',
+                  1 => 'application/octet-stream',
+                ),
+                'xl' => 'application/excel',
+                'eml' => 'message/rfc822',
+                'json' => 
+                array (
+                  0 => 'application/json',
+                  1 => 'text/json',
+                ),
+              ),
+               'enable_profiler' => false,
+               '_zlib_oc' => '',
+               '_profiler_sections' => 
+              array (
+              ),
+               'parse_exec_vars' => true,
+            )),
+             'security' => 
+            CI_Security::__set_state(array(
+               '_xss_hash' => '',
+               '_csrf_hash' => '17b9d511dc5a563183beba14dae7fc16',
+               '_csrf_expire' => 7200,
+               '_csrf_token_name' => 'ci_csrf_token',
+               '_csrf_cookie_name' => 'ci_csrf_token',
+               '_never_allowed_str' => 
+              array (
+                'document.cookie' => '[removed]',
+                'document.write' => '[removed]',
+                '.parentNode' => '[removed]',
+                '.innerHTML' => '[removed]',
+                'window.location' => '[removed]',
+                '-moz-binding' => '[removed]',
+                '<!--' => '&lt;!--',
+                '-->' => '--&gt;',
+                '<![CDATA[' => '&lt;![CDATA[',
+              ),
+               '_never_allowed_regex' => 
+              array (
+                'javascript\\s*:' => '[removed]',
+                'expression\\s*(\\(|&\\#40;)' => '[removed]',
+                'vbscript\\s*:' => '[removed]',
+                'Redirect\\s+302' => '[removed]',
+              ),
+            )),
+             'input' => 
+            CI_Input::__set_state(array(
+               'ip_address' => false,
+               'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36',
+               '_allow_get_array' => true,
+               '_standardize_newlines' => true,
+               '_enable_xss' => false,
+               '_enable_csrf' => false,
+               'headers' => 
+              array (
+              ),
+               'security' => 
+              CI_Security::__set_state(array(
+                 '_xss_hash' => '',
+                 '_csrf_hash' => '17b9d511dc5a563183beba14dae7fc16',
+                 '_csrf_expire' => 7200,
+                 '_csrf_token_name' => 'ci_csrf_token',
+                 '_csrf_cookie_name' => 'ci_csrf_token',
+                 '_never_allowed_str' => 
+                array (
+                  'document.cookie' => '[removed]',
+                  'document.write' => '[removed]',
+                  '.parentNode' => '[removed]',
+                  '.innerHTML' => '[removed]',
+                  'window.location' => '[removed]',
+                  '-moz-binding' => '[removed]',
+                  '<!--' => '&lt;!--',
+                  '-->' => '--&gt;',
+                  '<![CDATA[' => '&lt;![CDATA[',
+                ),
+                 '_never_allowed_regex' => 
+                array (
+                  'javascript\\s*:' => '[removed]',
+                  'expression\\s*(\\(|&\\#40;)' => '[removed]',
+                  'vbscript\\s*:' => '[removed]',
+                  'Redirect\\s+302' => '[removed]',
+                ),
+              )),
+               'uni' => 
+              CI_Utf8::__set_state(array(
+              )),
+            )),
+             'lang' => 
+            CI_Lang::__set_state(array(
+               'language' => 
+              array (
+              ),
+               'is_loaded' => 
+              array (
+              ),
+            )),
+             'load' => 
+            CI_Loader::__set_state(array(
+               '_ci_ob_level' => 1,
+               '_ci_view_path' => 'application/views/',
+               '_ci_library_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+                2 => 'C:/xampp/htdocs/Intraboda/system/',
+              ),
+               '_ci_model_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+              ),
+               '_ci_helper_paths' => 
+              array (
+                0 => 'application/third_party/',
+                1 => 'application/',
+                2 => 'C:/xampp/htdocs/Intraboda/system/',
+              ),
+               '_base_classes' => 
+              array (
+                'benchmark' => 'Benchmark',
+                'hooks' => 'Hooks',
+                'config' => 'Config',
+                'log' => 'Log',
+                'utf8' => 'Utf8',
+                'uri' => 'URI',
+                'router' => 'Router',
+                'output' => 'Output',
+                'security' => 'Security',
+                'input' => 'Input',
+                'lang' => 'Lang',
+                'loader' => 'Loader',
+              ),
+               '_ci_cached_vars' => 
+              array (
+              ),
+               '_ci_classes' => 
+              array (
+                'session' => 'session',
+                'phpmailer_lib' => 'phpmailer_lib',
+              ),
+               '_ci_loaded_files' => 
+              array (
+                0 => 'C:/xampp/htdocs/Intraboda/system/libraries/Session.php',
+                1 => 'application/libraries/PHPMailer_Lib.php',
+              ),
+               '_ci_models' => 
+              array (
+                0 => 'admin_functions',
+              ),
+               '_ci_helpers' => 
+              array (
+                'url_helper' => true,
+                'string_helper' => true,
+              ),
+               '_ci_varmap' => 
+              array (
+                'unit_test' => 'unit',
+                'user_agent' => 'agent',
+              ),
+            )),
+             'session' => 
+            CI_Session::__set_state(array(
+               'sess_encrypt_cookie' => false,
+               'sess_use_database' => false,
+               'sess_table_name' => 'ci_sessions',
+               'sess_expiration' => 7200,
+               'sess_expire_on_close' => false,
+               'sess_match_ip' => false,
+               'sess_match_useragent' => true,
+               'sess_cookie_name' => 'ci_session',
+               'cookie_prefix' => '',
+               'cookie_path' => '/',
+               'cookie_domain' => '',
+               'cookie_secure' => false,
+               'sess_time_to_update' => 300,
+               'encryption_key' => 'A4ofK1tNj2309Asktndpaskdanstqaqw',
+               'flashdata_key' => 'flash',
+               'time_reference' => 'local',
+               'gc_probability' => 5,
+               'userdata' => 
+              array (
+                'session_id' => '42a62f29f8627e683901afc7f335de78',
+                'ip_address' => '0.0.0.0',
+                'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb',
+                'last_activity' => 1738236397,
+                'admin' => true,
+              ),
+               'CI' => NULL,
+               'now' => 1738236582,
+            )),
+             'admin_functions' => 
+            Admin_functions::__set_state(array(
+            )),
+             'phpmailer_lib' => 
+            PHPMailer_Lib::__set_state(array(
+            )),
+          )),
+          1 => 'reenviar_clave',
+        ),
+        1 => 
+        array (
+        ),
+      ),
+    ),
+    6 => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\Intraboda\\index.php',
+      'line' => 205,
+      'args' => 
+      array (
+        0 => 'C:\\xampp\\htdocs\\Intraboda\\system\\core\\CodeIgniter.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
 ))

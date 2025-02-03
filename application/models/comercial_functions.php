@@ -127,7 +127,7 @@ Class Comercial_functions extends CI_Model{
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT n_presupuesto, email, nombre, apellidos, direccion, cp, poblacion, telefono, canal_captacion, restaurante, DATE_FORMAT(fecha_boda, '%d-%m-%Y') as fecha_boda, DATE_FORMAT(fecha_boda, '%H:%i') as hora_boda, estado_solicitud, id_comercial, presupuesto_pdf, importe, descuento FROM solicitudes WHERE id_solicitud = {$id}");	
+		$query = $this->db->query("SELECT n_presupuesto, email, nombre, apellidos, direccion, cp, poblacion, telefono, canal_captacion, restaurante, DATE_FORMAT(fecha_boda, '%d-%m-%Y') as fecha_boda, DATE_FORMAT(fecha_boda, '%H:%i') as hora_boda, estado_solicitud, id_comercial, importe, descuento FROM solicitudes WHERE id_solicitud = {$id}");	
 		
 		if($query->num_rows() > 0){
 			$fila = $query->row();
