@@ -743,6 +743,40 @@ class Admin extends CI_Controller
 							$this->db->query("UPDATE clientes SET presupuesto_pdf  = '" . $data['upload_data']['file_name'] . "' WHERE id = {$id}");
 						}
 					}
+					if (isset($_POST['add_factura'])) {
+						$config['upload_path'] = './uploads/facturas/';
+						$config['allowed_types'] = 'pdf';
+
+						$this->load->library('upload', $config);
+
+						if (!$this->upload->do_upload("factura")) {
+							$data['msg_pdf'] = $this->upload->display_errors();
+						} else {
+							$upload_data = $this->upload->data();
+							$nombre_archivo = $upload_data['file_name'];
+							$fecha_factura = $this->input->post('fecha_factura');
+							$n_factura = $this->input->post('n_factura');
+
+							if (isset($id) && !empty($id)) {
+								$data_insert = array(
+									'id_cliente' => $id,
+									'fecha_factura' => $fecha_factura,
+									'n_factura' => $n_factura,
+									'factura_pdf' => $nombre_archivo
+								);
+
+								$this->db->insert('facturas', $data_insert);
+
+								$data['msg_pdf'] = "Factura subida correctamente.";
+							} else {
+								$data['msg_pdf'] = "Error: ID del cliente no definido.";
+							}
+						}
+					}
+
+
+
+
 					if (isset($_POST['add_contrato'])) {
 
 						$config['upload_path'] = './uploads/pdf/';
@@ -1013,6 +1047,10 @@ class Admin extends CI_Controller
 						$this->db->query("UPDATE clientes SET dj = '" . $_POST['dj_id'] . "' WHERE id = {$id}");
 					}
 
+					if (isset($_POST['eliminar_factura'])) {
+						$this->eliminar_factura();
+					}
+
 					if (isset($_POST['update_equipo_componentes'])) {
 						if ($_POST['equipo_componentes'] == "") {
 							$_POST['equipo_componentes'] = NULL;
@@ -1193,6 +1231,39 @@ class Admin extends CI_Controller
 		$view = "events_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
+
+	public function eliminar_factura()
+	{
+		if ($this->input->post('eliminar_factura')) {
+			$id_factura = $this->input->post('id_factura');
+	
+			// Verifica si existe la factura
+			$query = $this->db->get_where('facturas', ['id_factura' => $id_factura]);
+			$factura = $query->row();
+	
+			if ($factura) {
+				$ruta_archivo = './uploads/facturas/' . $factura->factura_pdf;
+	
+				// Eliminar el archivo del servidor si existe
+				if (file_exists($ruta_archivo)) {
+					unlink($ruta_archivo);
+				}
+	
+				// Eliminar la factura de la base de datos
+				$this->db->delete('facturas', ['id_factura' => $id_factura]);
+	
+				// Redirigir con mensaje de éxito
+				$this->session->set_flashdata('msg', 'Factura eliminada correctamente.');
+			} else {
+				$this->session->set_flashdata('msg', 'Error: La factura no existe.');
+			}
+	
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+	}
+	
+
+
 	function servicios($acc = false, $id = false)
 	{
 		$data_header = false;

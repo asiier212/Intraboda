@@ -489,10 +489,11 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT n_factura, fecha_factura, factura_pdf FROM facturas WHERE id_cliente = {$id}");
+		$query = $this->db->query("SELECT id_factura, n_factura, fecha_factura, factura_pdf FROM facturas WHERE id_cliente = {$id}");
 
 		if ($query->num_rows() > 0) {
 			$fila = $query->row();
+			$data['id_factura'] = $fila->id_factura;
 			$data['id_cliente'] = $id;
 			$data['n_factura'] = $fila->n_factura;
 			$data['fecha_factura'] = $fila->fecha_factura;

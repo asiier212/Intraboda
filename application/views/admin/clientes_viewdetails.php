@@ -99,44 +99,13 @@
 		});
 
 		$('#generar_factura').click(function(e) {
-			if ($("#cif").val() == "") {
-				alert("Debes rellenar el campo CIF, antes de generar la factura");
-				return false;
-			}
+
 			if ($("#fecha_factura").val() == "") {
 				alert("Debes rellenar el campo fecha de la factura, antes de generar la factura");
 				return false;
 			}
-			if ($("#facturar_a").val() == "") {
-				alert("Debes rellenar el campo Facturar a, antes de generar la factura");
-				return false;
-			}
-			if ($("#direccion").val() == "") {
-				alert("Debes rellenar el campo Dirección, antes de generar la factura");
-				return false;
-			}
-			if ($("#poblacion").val() == "") {
-				alert("Debes rellenar el campo Población, antes de generar la factura");
-				return false;
-			}
-			if ($("#cp").val() == "") {
-				alert("Debes rellenar el campo CP, antes de generar la factura");
-				return false;
-			}
-			if ($("#telefono").val() == "") {
-				alert("Debes rellenar el campo Teléfono, antes de generar la factura");
-				return false;
-			}
-			if ($("#email").val() == "") {
-				alert("Debes rellenar el campo E-mail, antes de generar la factura");
-				return false;
-			}
 			if ($("#n_factura").val() == "") {
 				alert("Debes rellenar el campo Nº de Factura, antes de generar la factura");
-				return false;
-			}
-			if ($("#concepto").val() == "") {
-				alert("Debes rellenar el campo Concepto, antes de generar la factura");
 				return false;
 			}
 		});
@@ -204,7 +173,6 @@
 		$_SESSION['id_dj'] =  'admin';
 	}
 	?>
-
 	<form method="post" enctype="multipart/form-data" id="form_cliente">
 		<fieldset class="datos">
 			<legend>Datos de contacto</legend>
@@ -767,29 +735,38 @@
 			</ul>
 			<?php if (isset($msg_pdf)) echo "<p>{$msg_pdf}</p>"; ?>
 		</fieldset>
+
+		<pre><?php print_r($factura); ?></pre>
+
 		<fieldset class="datos">
 			<legend>Factura</legend>
-			<?php
-			if ($factura) {
-				echo "<label>Factura:</label> <a href=" . base_url() . "uploads/facturas/" . urlencode(utf8_decode($factura["factura_pdf"])) . " target='_blank'>" . $factura["factura_pdf"] . "</a>";
-			} else {
-			?>
-				<ul>
-					<li><label>CIF/NIF</label><input type="text" name="cif" id="cif" /></li>
-					<li><label>Fecha de la factura</label><input type="text" name="fecha_factura" id="fecha_factura" /></li>
-					<li><label>Facturar a</label><input type="text" name="facturar_a" id="facturar_a" value="<?php echo $cliente["nombre_novio"] . ' ' . $cliente["apellidos_novio"] ?>" /></li>
-					<li><label>Dirección</label><input type="text" name="direccion" id="direccion" value="<?php echo $cliente["direccion_novio"] ?>" /></li>
-					<li><label>Población</label><input type="text" name="poblacion" id="poblacion" value="<?php echo $cliente["poblacion_novio"] ?>" /></li>
-					<li><label>CP</label><input type="text" name="cp" id="cp" value="<?php echo $cliente["cp_novio"] ?>" /></li>
-					<li><label>Teléfono</label><input type="text" name="telefono" id="telefono" value="<?php echo $cliente["telefono_novio"] ?>" /></li>
-					<li><label>E-mail</label><input type="text" name="email" id="email" value="<?php echo $cliente["email_novio"] ?>" /></li>
-					<li><label>Nº Factura</label><input type="text" name="n_factura" id="n_factura" /></li>
-					<li><label>Concepto para ingreso</label><input type="text" name="concepto" id="concepto" /></li><br>
-					<li><input type="submit" name="generar_factura" id="generar_factura" value="Generar factura" onClick="return comprueba_datos_factura()" /></li>
-				</ul><?php
-					}
-						?>
+			<?php if ($factura) { ?>
+				<label>Factura:</label>
+				<a href="<?php echo base_url() . "uploads/facturas/" . urlencode($factura["factura_pdf"]); ?>" target="_blank">
+					<?php echo $factura["factura_pdf"]; ?>
+				</a>
+				<form method="POST" action="<?php echo base_url('admin/eliminar_factura'); ?>">
+					<input type="hidden" name="id_factura" value="<?php echo $factura["id_factura"]; ?>">
+					<input type="submit" name="eliminar_factura" value="Eliminar" onclick="return confirm('¿Estás seguro de que quieres eliminar esta factura?');">
+				</form>
+
+			<?php } else { ?>
+				<form method="POST" enctype="multipart/form-data">
+					<input type="hidden" name="id_cliente" value="<?php echo $cliente['id_cliente']; ?>" />
+					<ul>
+						<li><label>Fecha de la factura</label><input type="text" name="fecha_factura" id="fecha_factura" /></li>
+						<li><label>Nº Factura</label><input type="text" name="n_factura" id="n_factura" /></li>
+						<li><label>Subir Factura:</label> <input type="file" name="factura" /></li>
+						<li><input type="submit" name="add_factura" value="Guardar"></li>
+					</ul>
+				</form>
+			<?php } ?>
 		</fieldset>
+
+
+
+
+
 		<fieldset class="datos">
 			<legend>Observaciones</legend>
 			<?php
@@ -968,6 +945,6 @@
 
 	.popup button {
 		margin: 3px;
-		padding:0px 4px
+		padding: 0px 4px
 	}
 </style>

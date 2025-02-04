@@ -160,95 +160,69 @@
             </table>
             </p>
        		
-            <table class="tabledata">
-            <th>Fecha</th>
-            <th>Nombre</th>
-            <th>Señal</th>
-            <th>Fecha Señal</th>
-            <th>50%</th>
-            <th>Fecha 50%</th>
-            <th>Final</th>
-            <th>Fecha Final</th>
-            <th>Total</th>
-            <th>Pendiente</th>
-            <th>Factura</th>
-            <th>Acceso</th>
-			<?php
-			if($contabilidad_clientes[0]<>""){
-				foreach($contabilidad_clientes as $conta)
-				{
-					?>
-					<tr>
-					<td><?php echo $conta['fecha_boda']?></td>
-					<td><?php echo $conta['nombre_novio']?> y <?php echo $conta['nombre_novia']?></td>
-                    <?php
-					if($conta['tipo_senal']=="B"){
-						?>
-                        <td style="color:#00F; background-color:#C6F">
-                        <?php
-					}else{
-						?>
-                    	<td style="color:#00F">
-						<?php
-					}
-					echo number_format($conta['senal'],2, ",", ".")?>
-                    </td>
-                    <td>
-						<?php echo $conta['fecha_senal']?>
-                    </td>
-                    <?php
-                    if($conta['tipo_50%']=="B"){
-						?>
-                        <td style="color:#F90; background-color:#C6F">
-                        <?php
-					}else{
-						?>
-                    	<td style="color:#F90">
-						<?php
-					}
-					echo number_format($conta['50%'],2, ",", ".")?>
-                    </td>
-                    <td>
-						<?php echo $conta['fecha_50%']?>
-                    </td>
-                    <?php
-                    if($conta['tipo_final']=="B"){
-						?>
-                        <td style="color:#F00; background-color:#C6F">
-                        <?php
-					}else{
-						?>
-                    	<td style="color:#F00">
-						<?php
-					} echo number_format($conta['final'],2, ",", ".")?></td>
-                    <td><?php echo $conta['fecha_final']?></td>
-                    <?php
-						$total_cliente=0;
-						$arr_servicios = unserialize( $conta['servicios'] );
-						$total_cliente = array_sum($arr_servicios);
-						$total_cliente=$total_cliente-$conta['descuento'];
-						
-						$pendiente=$total_cliente-$conta['senal']-$conta['50%']-$conta['final'];
-					?>
-                    <td><?php echo number_format($total_cliente,2, ",", ".")?></td>
-                    <td><?php echo number_format($pendiente,2, ",", ".")?></td>
-                    <?php
-					if($conta['factura']<>""){
-						?>
-                    	<td><?php echo "<a href=".base_url()."uploads/facturas/".urlencode(utf8_decode($conta['factura']))." target='_blank'>Factura</a>"?></td>
-                        <?php
-					}else{
-						?><td></td>
-                       	<?php
-					}
-					?>
-                    <td><a href="<?php echo base_url() ?>admin/clientes/view/<?php echo $conta['id'] ?>" target="_blank">Ver ficha</a></td>		
-					</tr>
-					<?php
-				}
-			}
-            ?>
-            </table>
+			<table class="tabledata">
+    <th>Fecha</th>
+    <th>Nombre</th>
+    <th>Señal</th>
+    <th>Fecha Señal</th>
+    <th>50%</th>
+    <th>Fecha 50%</th>
+    <th>Final</th>
+    <th>Fecha Final</th>
+    <th>Total</th>
+    <th>Pendiente</th>
+    <th>Factura</th> <!-- ✅ Se mantiene la columna de Factura -->
+    <th>Acceso</th>
+
+    <?php
+    if ($contabilidad_clientes[0] <> "") {
+        foreach ($contabilidad_clientes as $conta) {
+    ?>
+            <tr>
+                <td><?php echo $conta['fecha_boda'] ?></td>
+                <td><?php echo $conta['nombre_novio'] ?> y <?php echo $conta['nombre_novia'] ?></td>
+                
+                <td style="color:#00F; <?php echo ($conta['tipo_senal'] == "B") ? 'background-color:#C6F' : ''; ?>">
+                    <?php echo number_format($conta['senal'], 2, ",", ".") ?>
+                </td>
+                <td><?php echo $conta['fecha_senal'] ?></td>
+
+                <td style="color:#F90; <?php echo ($conta['tipo_50%'] == "B") ? 'background-color:#C6F' : ''; ?>">
+                    <?php echo number_format($conta['50%'], 2, ",", ".") ?>
+                </td>
+                <td><?php echo $conta['fecha_50%'] ?></td>
+
+                <td style="color:#F00; <?php echo ($conta['tipo_final'] == "B") ? 'background-color:#C6F' : ''; ?>">
+                    <?php echo number_format($conta['final'], 2, ",", ".") ?>
+                </td>
+                <td><?php echo $conta['fecha_final'] ?></td>
+
+                <?php
+                $total_cliente = 0;
+                $arr_servicios = unserialize($conta['servicios']);
+                $total_cliente = array_sum($arr_servicios) - $conta['descuento'];
+                $pendiente = $total_cliente - $conta['senal'] - $conta['50%'] - $conta['final'];
+                ?>
+                <td><?php echo number_format($total_cliente, 2, ",", ".") ?></td>
+                <td><?php echo number_format($pendiente, 2, ",", ".") ?></td>
+
+                <!-- ✅ Mostrar enlace de la factura solo si existe -->
+                <td>
+                    <?php if (!empty($conta['factura'])) { ?>
+                        <a href="<?php echo base_url() . "uploads/facturas/" . urlencode(utf8_decode($conta['factura'])); ?>" target="_blank">Ver Factura</a>
+                    <?php } else { ?>
+                        Factura no disponible
+                    <?php } ?>
+                </td>
+
+                <td><a href="<?php echo base_url() ?>admin/clientes/view/<?php echo $conta['id'] ?>" target="_blank">Ver ficha</a></td>
+            </tr>
+    <?php
+        }
+    }
+    ?>
+</table>
+
             </fieldset></p>
 
         <br class="clear" />
