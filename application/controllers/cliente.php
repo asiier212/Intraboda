@@ -1,26 +1,27 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Cliente extends CI_Controller {
-	
+<?php if (! defined('BASEPATH')) exit('No direct script access allowed');
+class Cliente extends CI_Controller
+{
+
 	function __construct()
-		{
-			parent::__construct();
-			$this->load->library('session');
-			$this->load->model('cliente_functions');
-			
-			if(!$this->session->userdata('user_id') && $this->router->method != 'login' && $this->router->method != 'recordar_pass' && $this->router->method != 'generar_pass') {
-				 redirect('cliente/login');
-			}
+	{
+		parent::__construct();
+		$this->load->library('session');
+		$this->load->model('cliente_functions');
+
+		if (!$this->session->userdata('user_id') && $this->router->method != 'login' && $this->router->method != 'recordar_pass' && $this->router->method != 'generar_pass') {
+			redirect('cliente/login');
 		}
-		
+	}
+
 	public function login()
 	{
 		$data = false;
-		
-		if($_POST) {
+
+		if ($_POST) {
 			$arr_userdata = $this->cliente_functions->ClientLogin($_POST['email'], $_POST['pass']);
-			if($arr_userdata){
+			if ($arr_userdata) {
 				$this->session->set_userdata($arr_userdata);
-				redirect('cliente','location');
+				redirect('cliente', 'location');
 				///////
 			} else {
 				$data['msg'] = 'Login o contrase&ntilde;a incorrecto';
@@ -31,38 +32,37 @@ class Cliente extends CI_Controller {
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect('cliente','location');
+		redirect('cliente', 'location');
 	}
-	
+
 	public function recordar_pass()
 	{
 		$data = false;
-		if($_POST) {
+		if ($_POST) {
 			$this->load->database();
 			$this->load->library('encrypt');
-			
+
 			//Comprobamos que exista el email en la base de datos
-			$query = $this->db->query("SELECT COUNT(clientes.id) as num_emails, clientes.id as id, oficinas.email as email_oficina FROM clientes INNER JOIN oficinas ON clientes.id_oficina=oficinas.id_oficina WHERE email_novio = '".$_POST['email']."' OR email_novia= '".$_POST['email']."'");	
+			$query = $this->db->query("SELECT COUNT(clientes.id) as num_emails, clientes.id as id, oficinas.email as email_oficina FROM clientes INNER JOIN oficinas ON clientes.id_oficina=oficinas.id_oficina WHERE email_novio = '" . $_POST['email'] . "' OR email_novia= '" . $_POST['email'] . "'");
 			$fila = $query->row();
-			$num_emails=0;
+			$num_emails = 0;
 			$num_emails = $fila->num_emails;
 			$id_cliente = $fila->id;
 			$email_oficina = $fila->email_oficina;
-			
-			if($num_emails==0){
+
+			if ($num_emails == 0) {
 				$data['msg'] = 'No existe esa dirección de e-mail en nuestra base de datos';
-			}
-			else{
-				
-	
+			} else {
+
+
 				//Mandamos el email
 				$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 				$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-				$cabeceras .= 'From: '.$email_oficina;
-				
-				$asunto='E-mail restablecimiento de contraseña Intraboda';
-				
-				$mensaje='<table border="0" width="100%">
+				$cabeceras .= 'From: ' . $email_oficina;
+
+				$asunto = 'E-mail restablecimiento de contraseña Intraboda';
+
+				$mensaje = '<table border="0" width="100%">
 				<tr>
 					<td>
 						<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
@@ -72,7 +72,7 @@ class Cliente extends CI_Controller {
 					<td align="justify">
 					<div style="padding:50px;">
 					
-					<p>Para restablecer tu clave haz click <a href="http://www.bilbodj.com/intranetv3/cliente/generar_pass/'.$id_cliente.'/'.urlencode($_POST['email']).'" target="_blank">AQUI</a></p>
+					<p>Para restablecer tu clave haz click <a href="http://www.bilbodj.com/intranetv3/cliente/generar_pass/' . $id_cliente . '/' . urlencode($_POST['email']) . '" target="_blank">AQUI</a></p>
 					</div>
 						 
 					</td>
@@ -81,110 +81,106 @@ class Cliente extends CI_Controller {
 						<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
 					</tr>
 				</table>';
-				
-				
-			
-				$asunto=html_entity_decode(utf8_decode($asunto));
-				$mensaje=html_entity_decode(utf8_decode($mensaje));
-				
-				//mail($_POST['email'], $asunto, $mensaje, $cabeceras);
-                $this->sendEmail('info@exeleventos.com', [$_POST['email']], $asunto, $mensaje);
 
-                $data['msg'] = 'E-mail de restablecimiento de contraseña enviado';
+
+
+				$asunto = html_entity_decode(utf8_decode($asunto));
+				$mensaje = html_entity_decode(utf8_decode($mensaje));
+
+				//mail($_POST['email'], $asunto, $mensaje, $cabeceras);
+				$this->sendEmail('info@exeleventos.com', [$_POST['email']], $asunto, $mensaje);
+
+				$data['msg'] = 'E-mail de restablecimiento de contraseña enviado';
 			}
 		}
-		
+
 		$this->load->view('cliente/recordar_pass', $data);
 	}
-	
+
 	public function generar_pass($id_cliente, $email)
 	{
 		$data = false;
-		
+
 		$this->load->database();
 		$this->load->library('encrypt');
 		//Generamos una clave aleatoria de máximo 5 caracteres
-		$clave_nueva=substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 5);
-		
+		$clave_nueva = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 5);
+
 		//Comprobamos que el id y el email de alguno de los novios coincide para evitar hackeos
-		$email=str_replace("%40","@",$email);
-		$query = $this->db->query("SELECT COUNT(id) as num_emails FROM clientes WHERE id = '".$id_cliente."' AND (email_novio = '".$email."' OR email_novia= '".$email."')");
+		$email = str_replace("%40", "@", $email);
+		$query = $this->db->query("SELECT COUNT(id) as num_emails FROM clientes WHERE id = '" . $id_cliente . "' AND (email_novio = '" . $email . "' OR email_novia= '" . $email . "')");
 		$fila = $query->row();
-		$num_emails=0;
+		$num_emails = 0;
 		$num_emails = $fila->num_emails;
-		
+
 		//Si coincide actualizamos la clave
-		if($num_emails<>0){
-			$this->db->query("UPDATE clientes SET clave = '".$this->encrypt->encode($clave_nueva)."' WHERE id = '".$id_cliente."'");
+		if ($num_emails <> 0) {
+			$this->db->query("UPDATE clientes SET clave = '" . $this->encrypt->encode($clave_nueva) . "' WHERE id = '" . $id_cliente . "'");
 		}
-		
+
 		$data['msg'] = $clave_nueva;
 		//$data['msg']="SELECT COUNT(id) as num_emails FROM clientes WHERE id = '".$id_cliente."' AND (email_novio = '".$email."' OR email_novia= '".$email."')";
 		$this->load->view('cliente/generar_pass', $data);
 	}
-	
+
 	public function index()
 	{
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-		
-		$this->load->database();	
-		
-		
+
+		$this->load->database();
+
+
 		//COMPROBAMOS QUE EL CLIENTE HA HECHO LA ENCUESTA AL INICIAR LA SESIÓN///
-		$query = $this->db->query("SELECT COUNT(id_respuesta) as respuestas FROM respuestas_encuesta_datos_boda WHERE id_cliente = ".$this->session->userdata('user_id')."");	
+		$query = $this->db->query("SELECT COUNT(id_respuesta) as respuestas FROM respuestas_encuesta_datos_boda WHERE id_cliente = " . $this->session->userdata('user_id') . "");
 		$fila = $query->row();
-		$respuestas=0;
+		$respuestas = 0;
 		$respuestas = $fila->respuestas;
-		if($respuestas<>0){
-			
+		if ($respuestas <> 0) {
+
 			//$this->_loadViews($data_header, $data, $data_footer, "home");
-			redirect('cliente/datos/view','location');//ARRANCAMOS INICIALMENTE LA PANTALLA DE DATOS DEL CLIENTE
-			
-		}else{
-			
-			if($_POST){
-				
+			redirect('cliente/datos/view', 'location'); //ARRANCAMOS INICIALMENTE LA PANTALLA DE DATOS DEL CLIENTE
+
+		} else {
+
+			if ($_POST) {
+
 				$config['upload_path'] = './uploads/foto_perfil/';
 				$config['allowed_types'] = 'gif|jpg|png';
 				//$config['max_width']  = '600';
-				
+
 				$this->load->library('upload', $config);
-		
-				
-				if ( ! $this->upload->do_upload("foto"))
-				{
+
+
+				if (! $this->upload->do_upload("foto")) {
 					$data['msg'] = $this->upload->display_errors();
-				}
-				else
-				{
+				} else {
 					$data['upload_data'] = $this->upload->data();
-					 $this->cliente_functions->UpdatefotoCliente($this->session->userdata('user_id'), $data['upload_data']['file_name']);
+					$this->cliente_functions->UpdatefotoCliente($this->session->userdata('user_id'), $data['upload_data']['file_name']);
 					//$data['msg'] = "La imagen se ha subido correctamente";
-				
+
 				}
-				
+
 				$_POST['mas_importancia'] = implode(",", $_POST['mas_importancia']);
 				$_POST['menos_importancia'] = implode(",", $_POST['menos_importancia']);
-				
-				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','1','".$this->session->userdata('user_id')."','".$_POST['participativo_dj']."')");
-				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','2','".$this->session->userdata('user_id')."','".$_POST['participativos_invitados']."')");	
-				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','3','".$this->session->userdata('user_id')."','".$_POST['num_invitados']."')");
-				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','4','".$this->session->userdata('user_id')."','".$_POST['ampliar_fiesta']."')");
-				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','5','".$this->session->userdata('user_id')."','".$_POST['flexibilidad_restaurante']."')");
-				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','6','".$this->session->userdata('user_id')."','".$_POST['hora_ultimo_autobus']."')");
-				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','7','".$this->session->userdata('user_id')."','".$_POST['mas_importancia']."')");
-				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','8','".$this->session->userdata('user_id')."','".$_POST['menos_importancia']."')");
-				
+
+				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','1','" . $this->session->userdata('user_id') . "','" . $_POST['participativo_dj'] . "')");
+				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','2','" . $this->session->userdata('user_id') . "','" . $_POST['participativos_invitados'] . "')");
+				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','3','" . $this->session->userdata('user_id') . "','" . $_POST['num_invitados'] . "')");
+				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','4','" . $this->session->userdata('user_id') . "','" . $_POST['ampliar_fiesta'] . "')");
+				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','5','" . $this->session->userdata('user_id') . "','" . $_POST['flexibilidad_restaurante'] . "')");
+				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','6','" . $this->session->userdata('user_id') . "','" . $_POST['hora_ultimo_autobus'] . "')");
+				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','7','" . $this->session->userdata('user_id') . "','" . $_POST['mas_importancia'] . "')");
+				$this->db->query("INSERT INTO respuestas_encuesta_datos_boda VALUES('','8','" . $this->session->userdata('user_id') . "','" . $_POST['menos_importancia'] . "')");
+
 				//$this->_loadViews($data_header, $data, $data_footer, "home");
-				redirect('cliente/datos/view','location');
-			}
-			else{
-				
+				redirect('cliente/datos/view', 'location');
+			} else {
+
 				//$data['momentos_especiales'] = $this->cliente_functions->GetMomentos_Especiales();
 				//$data['canciones_mas_elegidas'] = $this->cliente_functions->GetCanciones_Mas_Elegidas();
-		
+
 				$data['cliente'] = $this->cliente_functions->GetCliente($this->session->userdata('user_id'));
 				$data['preguntas_encuesta_datos_boda'] = $this->cliente_functions->GetPreguntasEncuestaDatosBoda();
 				//$this->_loadViews($data_header, $data, $data_footer, "home");
@@ -196,87 +192,105 @@ class Cliente extends CI_Controller {
 				//$this->_loadViews("header_en_blanco", $data, $data_footer, "encuesta");
 			}
 		}
-			
 	}
-	public function topSongs(){
-		$data_header=false;
-		$data = false;
-		$data_footer= false;
-		$data['topsongs'] = $this->cliente_functions->getTopSongs();
-		
-		$this->_loadViews($data_header,$data,$data_footer,"topsongs");
-	}
-	public function canciones_mas_elegidas(){
+	public function topSongs() {
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-		
-		$this->load->database();
-		
-		$data['momentos_especiales'] = $this->cliente_functions->GetMomentos_Especiales();
-		$data['canciones_mas_elegidas'] = $this->cliente_functions->GetCanciones_Mas_Elegidas();
-		
-		$data['cliente'] = $this->cliente_functions->GetCliente($this->session->userdata('user_id'));
-       // error_log("Los datos a mostrar son " . var_export($data,1),3,"./r");
-		$this->_loadViews($data_header, $data, $data_footer, "home");
+	
+		// Obtener filtros desde la URL
+		$fechaDesde = $this->input->get('fecha_desde');
+		$fechaHasta = $this->input->get('fecha_hasta');
+		$momentoSeleccionado = $this->input->get('momento');
+	
+		// Obtener todas las opciones de momentos de la base de datos (sin filtros)
+		$momentosDisponibles = $this->cliente_functions->getAllMomentos(); 
+	
+		// Obtener las canciones filtradas
+		$topsongs = $this->cliente_functions->getTopSongs($fechaDesde, $fechaHasta, $momentoSeleccionado);
+	
+		$data['topsongs'] = $topsongs;
+		$data['momentos'] = $momentosDisponibles; // Usar todos los momentos en el select
+		$data['momentoSeleccionado'] = $momentoSeleccionado;
+	
+		$this->_loadViews($data_header, $data, $data_footer, "topsongs");
 	}
 	
+
+
+
+
+
+	public function canciones_mas_elegidas()
+	{
+		$data_header = false;
+		$data = false;
+		$data_footer = false;
+
+		$this->load->database();
+
+		$data['momentos_especiales'] = $this->cliente_functions->GetMomentos_Especiales();
+		$data['canciones_mas_elegidas'] = $this->cliente_functions->GetCanciones_Mas_Elegidas();
+
+		$data['cliente'] = $this->cliente_functions->GetCliente($this->session->userdata('user_id'));
+		// error_log("Los datos a mostrar son " . var_export($data,1),3,"./r");
+		$this->_loadViews($data_header, $data, $data_footer, "home");
+	}
+
 	public function datos($acc)
 	{
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-		if($acc == 'view') {
-			if($_POST) {
-				if(isset($_POST['clave']) && $_POST['clave'] != '') {
+		if ($acc == 'view') {
+			if ($_POST) {
+				if (isset($_POST['clave']) && $_POST['clave'] != '') {
 					$this->load->database();
 					$this->load->library('encrypt');
-					$this->db->query("UPDATE clientes SET clave = '".$this->encrypt->encode($_POST['clave'])."' WHERE id = ".$this->session->userdata('user_id')."");
+					$this->db->query("UPDATE clientes SET clave = '" . $this->encrypt->encode($_POST['clave']) . "' WHERE id = " . $this->session->userdata('user_id') . "");
 					$data['msg_clave'] = 'La contrase&ntilde;a ha sido cambiada con &eacute;xito';
 				}
-				if(isset($_POST['subir_foto']) && $_POST['subir_foto'] != '') {
-					
+				if (isset($_POST['subir_foto']) && $_POST['subir_foto'] != '') {
+
 					$config['upload_path'] = './uploads/foto_perfil/';
 					$config['allowed_types'] = 'gif|jpg|png';
 					$this->load->library('upload', $config);
-					if ( ! $this->upload->do_upload("foto"))
-					{
+					if (! $this->upload->do_upload("foto")) {
 						$data['msg_foto'] = $this->upload->display_errors();
 					} else {
 						$data['upload_data'] = $this->upload->data();
-					 	$this->cliente_functions->UpdatefotoCliente($this->session->userdata('user_id'), $data['upload_data']['file_name']);
+						$this->cliente_functions->UpdatefotoCliente($this->session->userdata('user_id'), $data['upload_data']['file_name']);
 						$data['msg_foto'] = "La imagen se ha subido correctamente";
-				
 					}
 				}
-				if(isset($_POST['actualizar_encuesta'])){
+				if (isset($_POST['actualizar_encuesta'])) {
 					$this->load->database();
-					
+
 					$_POST['mas_importancia'] = implode(",", $_POST['mas_importancia']);
 					$_POST['menos_importancia'] = implode(",", $_POST['menos_importancia']);
-					
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='".$_POST['participativo_dj']."' WHERE id_pregunta='1' AND id_cliente='".$this->session->userdata('user_id')."'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='".$_POST['participativos_invitados']."' WHERE id_pregunta='2' AND id_cliente='".$this->session->userdata('user_id')."'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='".$_POST['num_invitados']."' WHERE id_pregunta='3' AND id_cliente='".$this->session->userdata('user_id')."'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='".$_POST['ampliar_fiesta']."' WHERE id_pregunta='4' AND id_cliente='".$this->session->userdata('user_id')."'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='".$_POST['flexibilidad_restaurante']."' WHERE id_pregunta='5' AND id_cliente='".$this->session->userdata('user_id')."'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='".$_POST['hora_ultimo_autobus']."' WHERE id_pregunta='6' AND id_cliente='".$this->session->userdata('user_id')."'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='".$_POST['mas_importancia']."' WHERE id_pregunta='7' AND id_cliente='".$this->session->userdata('user_id')."'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='".$_POST['menos_importancia']."' WHERE id_pregunta='8' AND id_cliente='".$this->session->userdata('user_id')."'");
+
+					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['participativo_dj'] . "' WHERE id_pregunta='1' AND id_cliente='" . $this->session->userdata('user_id') . "'");
+					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['participativos_invitados'] . "' WHERE id_pregunta='2' AND id_cliente='" . $this->session->userdata('user_id') . "'");
+					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['num_invitados'] . "' WHERE id_pregunta='3' AND id_cliente='" . $this->session->userdata('user_id') . "'");
+					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['ampliar_fiesta'] . "' WHERE id_pregunta='4' AND id_cliente='" . $this->session->userdata('user_id') . "'");
+					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['flexibilidad_restaurante'] . "' WHERE id_pregunta='5' AND id_cliente='" . $this->session->userdata('user_id') . "'");
+					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['hora_ultimo_autobus'] . "' WHERE id_pregunta='6' AND id_cliente='" . $this->session->userdata('user_id') . "'");
+					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['mas_importancia'] . "' WHERE id_pregunta='7' AND id_cliente='" . $this->session->userdata('user_id') . "'");
+					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['menos_importancia'] . "' WHERE id_pregunta='8' AND id_cliente='" . $this->session->userdata('user_id') . "'");
 					//Mandamos un email de que se ha actualizado la encuesta
-					$query = $this->db->query("SELECT nombre_novio, nombre_novia, fecha_boda FROM clientes WHERE id = '".$this->session->userdata('user_id')."'");
+					$query = $this->db->query("SELECT nombre_novio, nombre_novia, fecha_boda FROM clientes WHERE id = '" . $this->session->userdata('user_id') . "'");
 					$fila = $query->row();
 					$nombre_novio = $fila->nombre_novio;
 					$nombre_novia = $fila->nombre_novia;
 					$fecha_boda = $fila->fecha_boda;
-					$mensaje='<table border="0" width="100%">
+					$mensaje = '<table border="0" width="100%">
 						<tr>
 							<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/logo_intranet.png" width="200"></td>
 							<td align="justify">
 							
 							<p>¡¡Hola!!</p>
 											 
-							<p>Se ha actualizado la encuesta respecto a la boda de '.$nombre_novio.' y '.$nombre_novia.' que se casan el día '.$fecha_boda.'.</p>
+							<p>Se ha actualizado la encuesta respecto a la boda de ' . $nombre_novio . ' y ' . $nombre_novia . ' que se casan el día ' . $fecha_boda . '.</p>
 								
 							<p>Atentamente Administración EXEL Eventos</p>
 								 
@@ -284,20 +298,19 @@ class Cliente extends CI_Controller {
 							</tr>
 						</table>';
 					$this->enviar_mail(utf8_decode("IntraBoda - Actualización de encuesta respecto a la boda"), utf8_decode($mensaje));
-					
 				}
 			}
 			$data['cliente'] = $this->cliente_functions->GetCliente($this->session->userdata('user_id'));
-			$arr_servicios = unserialize( $data['cliente']['servicios'] );
-			$arr_serv_keys = array_keys($arr_servicios); 
-			
-			
+			$arr_servicios = unserialize($data['cliente']['servicios']);
+			$arr_serv_keys = array_keys($arr_servicios);
+
+
 			$data['preguntas_encuesta_datos_boda'] = $this->cliente_functions->GetPreguntasEncuestaDatosBoda();
-			$data['respuestas_encuesta_datos_boda'] = $this->cliente_functions->GetRespuestasEncuestaDatosBoda($this->session->userdata('user_id'));	
-			$data['servicios'] = $this->cliente_functions->GetServicios(implode(",",$arr_serv_keys));
+			$data['respuestas_encuesta_datos_boda'] = $this->cliente_functions->GetRespuestasEncuestaDatosBoda($this->session->userdata('user_id'));
+			$data['servicios'] = $this->cliente_functions->GetServicios(implode(",", $arr_serv_keys));
 			$data['pagos'] = $this->cliente_functions->GetPagos($this->session->userdata('user_id'));
 			$data['dj'] = $this->cliente_functions->GetDjAsignado($this->session->userdata('user_id'));
-		}	
+		}
 		$this->_loadViews($data_header, $data, $data_footer, "cliente_details");
 	}
 
@@ -332,30 +345,30 @@ class Cliente extends CI_Controller {
 			
 			
 		}*/
-		
+
 		$data['mensajes_contacto'] = $this->cliente_functions->GetMensajesContacto($this->session->userdata('user_id'));
-		if($_POST){
+		if ($_POST) {
 			$this->load->database();
-			$email_dj="";
-			
+			$email_dj = "";
+
 			//Datos para los emails
-			$query = $this->db->query("SELECT djs.email as email_dj FROM djs JOIN clientes WHERE djs.id=clientes.dj AND clientes.id = ".$this->session->userdata('user_id')."");
-			if($query->num_rows() > 0){	
+			$query = $this->db->query("SELECT djs.email as email_dj FROM djs JOIN clientes WHERE djs.id=clientes.dj AND clientes.id = " . $this->session->userdata('user_id') . "");
+			if ($query->num_rows() > 0) {
 				$fila = $query->row();
 				$email_dj = $fila->email_dj;
 			}
-			
-			$query = $this->db->query("SELECT oficinas.email as email_oficina FROM oficinas JOIN clientes WHERE oficinas.id_oficina=clientes.id_oficina AND clientes.id = ".$this->session->userdata('user_id')."");	
+
+			$query = $this->db->query("SELECT oficinas.email as email_oficina FROM oficinas JOIN clientes WHERE oficinas.id_oficina=clientes.id_oficina AND clientes.id = " . $this->session->userdata('user_id') . "");
 			$fila = $query->row();
 			$email_oficina = $fila->email_oficina;
-			
+
 			$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 			$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-			$cabeceras .= 'From: '.$data['email_novio'];
-			
-			$local='http://'.$_SERVER['HTTP_HOST'].base_url();
-				
-			$mensaje='<html>
+			$cabeceras .= 'From: ' . $data['email_novio'];
+
+			$local = 'http://' . $_SERVER['HTTP_HOST'] . base_url();
+
+			$mensaje = '<html>
 						<head>
 						</head>
 						
@@ -366,16 +379,16 @@ class Cliente extends CI_Controller {
 								<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
 						  </td>
 						</tr>';
-						
-						  
-			if($this->session->userdata('admin')){
+
+
+			if ($this->session->userdata('admin')) {
 				//Mandamos email a los dos novios
-				$usuario='administrador';
-				$id_usuario="";
-				$id_cliente=$this->session->userdata('user_id');
-				
-				$asunto='BilboDJ ha contactado contigo';
-				$mensaje_cliente=$mensaje.'<tr><td>
+				$usuario = 'administrador';
+				$id_usuario = "";
+				$id_cliente = $this->session->userdata('user_id');
+
+				$asunto = 'BilboDJ ha contactado contigo';
+				$mensaje_cliente = $mensaje . '<tr><td>
                                         <tr><td align="justify">
                                               <div style="padding:50px;">
                                         ' . utf8_decode('BilboDJ ha contactado contigo, por favor accede a la sección <strong>chat</strong> de tu panel de cliente <a href="http://www.bilbodj.com/intranetv3/cliente" target="_blank">AQUÍ</a>.') . '
@@ -383,8 +396,8 @@ class Cliente extends CI_Controller {
                                       </td></tr>
                                       <tr>
                                         <td>'
-                        . $_POST["mensaje"] .
-                        '</td>
+					. $_POST["mensaje"] .
+					'</td>
                                       </tr>
                                             <tr>
                                                     <td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
@@ -392,32 +405,32 @@ class Cliente extends CI_Controller {
 						  </table>
 						  </body>
 						  </html>';
-                $mensaje = $mensaje_cliente;
-                $hay_email_novio = strpos($this->session->userdata('email_novio'), '@');
+				$mensaje = $mensaje_cliente;
+				$hay_email_novio = strpos($this->session->userdata('email_novio'), '@');
 				$hay_email_novia = strpos($this->session->userdata('email_novia'), '@');
 				$destino = [];
-                if($hay_email_novio !== false){
+				if ($hay_email_novio !== false) {
 					//mail($this->session->userdata('email_novio'), $asunto, $mensaje_cliente, $cabeceras);
-                    $destino[] = $this->session->userdata('email_novio');
-                }
-				if($hay_email_novia !== false){
+					$destino[] = $this->session->userdata('email_novio');
+				}
+				if ($hay_email_novia !== false) {
 					//mail($this->session->userdata('email_novia'), $asunto, $mensaje_cliente, $cabeceras);
-                    $destino[] = $this->session->userdata('email_novia');
-                }
-                if (count($destino) > 0) {
-                    $this->sendEmail('info@exeleventos.com', $destino, $asunto, $mensaje);
-                }
-            }else{
+					$destino[] = $this->session->userdata('email_novia');
+				}
+				if (count($destino) > 0) {
+					$this->sendEmail('info@exeleventos.com', $destino, $asunto, $mensaje);
+				}
+			} else {
 				//Mandamos email al dj y a la oficina
-				$usuario='cliente';
-				$id_usuario=$this->session->userdata('user_id');
-				$id_cliente=$this->session->userdata('user_id');
-				
-				$asunto='Un cliente ha contactado contigo';
+				$usuario = 'cliente';
+				$id_usuario = $this->session->userdata('user_id');
+				$id_cliente = $this->session->userdata('user_id');
+
+				$asunto = 'Un cliente ha contactado contigo';
 				$mensaje_oficina_y_dj = $mensaje . '
                                                         <tr><td align="justify">
                                                               <div style="padding:50px;">' .
-                        utf8_decode('El cliente <strong>' . $this->session->userdata('nombre_novio') . ' ' . $this->session->userdata('apellidos_novio') . '</strong> (' . $this->session->userdata('email_novio') . ') y <strong>' . $this->session->userdata('nombre_novia') . ' ' . $this->session->userdata('apellidos_novia') . '</strong> (' . $this->session->userdata('email_novia') . ') te ha escrito: ' . $_POST['mensaje'] . 'Accede a tu panel para ver la conversación completa.
+					utf8_decode('El cliente <strong>' . $this->session->userdata('nombre_novio') . ' ' . $this->session->userdata('apellidos_novio') . '</strong> (' . $this->session->userdata('email_novio') . ') y <strong>' . $this->session->userdata('nombre_novia') . ' ' . $this->session->userdata('apellidos_novia') . '</strong> (' . $this->session->userdata('email_novia') . ') te ha escrito: ' . $_POST['mensaje'] . 'Accede a tu panel para ver la conversación completa.
                                                               </div>
                                                       </td></tr>
 										
@@ -429,128 +442,109 @@ class Cliente extends CI_Controller {
 						  </body>
 						  </html>');
 				//mail($email_oficina, $asunto, $mensaje_oficina_y_dj, $cabeceras);
-                $destino[] = $email_oficina;
-                if ($email_dj != "") {
-                    //mail($email_dj, $asunto, $mensaje_oficina_y_dj, $cabeceras);
-                    $destino[] = $email_dj;
-                }
-                $this->sendEmail('info@exeleventos.com', $destino, $asunto, $mensaje_oficina_y_dj);
-            }
-			
-			$this->db->query("INSERT INTO contacto (id_cliente, usuario, id_usuario, mensaje) VALUES ('".$id_cliente."','".$usuario."','".$id_usuario."','".str_replace("'", "''",$_POST['mensaje'])."')");
-			
+				$destino[] = $email_oficina;
+				if ($email_dj != "") {
+					//mail($email_dj, $asunto, $mensaje_oficina_y_dj, $cabeceras);
+					$destino[] = $email_dj;
+				}
+				$this->sendEmail('info@exeleventos.com', $destino, $asunto, $mensaje_oficina_y_dj);
+			}
+
+			$this->db->query("INSERT INTO contacto (id_cliente, usuario, id_usuario, mensaje) VALUES ('" . $id_cliente . "','" . $usuario . "','" . $id_usuario . "','" . str_replace("'", "''", $_POST['mensaje']) . "')");
+
 			redirect('cliente/chat');
 		}
-				
+
 		$this->_loadViews($data_header, $data, $data_footer, "chat");
 	}
-	
+
 	public function canciones()
 	{
 		$data_header = false;
 		$data_footer = false;
-		
-		
-		if($_POST){
-			
-			if(isset($_POST['add_moment']))
+
+
+		if ($_POST) {
+
+			if (isset($_POST['add_moment']))
 				$this->cliente_functions->InsertEvent($_POST['nombre_moment'], $this->session->userdata('user_id'));
-			
-			if(isset($_POST['add_song']))
+
+			if (isset($_POST['add_song']))
 				$this->cliente_functions->InsertCancion($_POST, $this->session->userdata('user_id'));
-			
-			if(isset($_POST['add_comentario']))
+
+			if (isset($_POST['add_comentario']))
 				$this->cliente_functions->InsertCancionComentario($_POST['momento_id'], $_POST['comentario'], $this->session->userdata('user_id'));
-			
-			
 		}
 		$data['cliente'] = $this->cliente_functions->GetCliente($this->session->userdata('user_id'));
-		$data['events'] = $this->cliente_functions->GetEvents($this->session->userdata('user_id'));	
+		$data['events'] = $this->cliente_functions->GetEvents($this->session->userdata('user_id'));
 		$data['events_user'] = $this->cliente_functions->GetmomentosUser($this->session->userdata('user_id'));
 		$data['canciones_user'] = $this->cliente_functions->GetcancionesUser($this->session->userdata('user_id'));
 		$data['canciones_observaciones_momesp'] = $this->cliente_functions->GetObservaciones_momesp($this->session->userdata('user_id'));
 		$data['canciones_observaciones_general'] = $this->cliente_functions->GetObservaciones_general($this->session->userdata('user_id'));
 		$data['dj_asignado'] = $this->cliente_functions->GetDJAsignado($this->session->userdata('user_id'));
-		
-		$str_mail="Lista de canciones de usuario: ". $this->session->userdata('nombre_novia') . "(".$this->session->userdata('email_novia').") & ". $this->session->userdata('nombre_novio') . "(".$this->session->userdata('email_novio').")<br/><br/><br/>";
-		if(isset($_POST['send_todj'])){
-			foreach($data['events_user'] as $eu)
-			{
-				$str_mail .= "<h3>".$eu['nombre']."</h3><ul>";
-				 foreach($data['canciones_user'] as $c)
-				 {
-					 if($eu['momento_id'] == $c['momento_id']) {
-					 $str_mail .= "<li>".$c['nombre']."</li>";
-					 }
-				 }
-				 $str_mail .= "</ul>";
+
+		$str_mail = "Lista de canciones de usuario: " . $this->session->userdata('nombre_novia') . "(" . $this->session->userdata('email_novia') . ") & " . $this->session->userdata('nombre_novio') . "(" . $this->session->userdata('email_novio') . ")<br/><br/><br/>";
+		if (isset($_POST['send_todj'])) {
+			foreach ($data['events_user'] as $eu) {
+				$str_mail .= "<h3>" . $eu['nombre'] . "</h3><ul>";
+				foreach ($data['canciones_user'] as $c) {
+					if ($eu['momento_id'] == $c['momento_id']) {
+						$str_mail .= "<li>" . $c['nombre'] . "</li>";
+					}
+				}
+				$str_mail .= "</ul>";
 			}
-		
-		
+
+
 			$str_mail .= "<br/><br/><h3>Observaciones</h3><br/>";
-			if( !$data['canciones_observaciones_general'] && !$data['canciones_observaciones_momesp'] ) {
+			if (!$data['canciones_observaciones_general'] && !$data['canciones_observaciones_momesp']) {
 				$str_mail .= "<p>No hay observaciones</p>";
 			} else {
-				
-				if($data['canciones_observaciones_general'])
-				{
+
+				if ($data['canciones_observaciones_general']) {
 					$str_mail .= "<ul>";
-					foreach($data['canciones_observaciones_general'] as $c)
-					{
-						$str_mail .= "<li>".$c['comentario']." (escrito el ".$c['fecha'].")</li>";
+					foreach ($data['canciones_observaciones_general'] as $c) {
+						$str_mail .= "<li>" . $c['comentario'] . " (escrito el " . $c['fecha'] . ")</li>";
 					}
 					$str_mail .= "</ul>";
 				}
-				
-				 if($data['canciones_observaciones_momesp'])
-				 {
-					$momentos_ids = array();
-					foreach($data['canciones_observaciones_momesp'] as $c)
-					{
-					 $momentos_ids[] = $c['momento_id'];
-					}
-				
-			
-					 foreach($data['events_user'] as $eu)
-					 {
-						if (in_array($eu['momento_id'], $momentos_ids, true))
-						{
-							$str_mail .= "<h3>".$eu['nombre'] ."</h3><ul>";
-						}
-						foreach($data['canciones_observaciones_momesp'] as $c)
-						{
-							if($eu['momento_id'] == $c['momento_id']) 
-							{
-								
-							$str_mail .= "<li>".$c['comentario']." (escrito el ".$c['fecha'].")</li>";
-							
-							}
-								
-						}
-						
-						if (in_array($eu['momento_id'], $momentos_ids, true)) $str_mail .= "</ul>";
-							
-					
-					 }
-					 
-				}
-						
-			}
-	
-		$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-		$cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-		$cabeceras .= 'From: info@exeleventos.com';
 
-            foreach($data['dj_asignado'] as $dj)
-		{
-			$email_dj = $dj['email'];
+				if ($data['canciones_observaciones_momesp']) {
+					$momentos_ids = array();
+					foreach ($data['canciones_observaciones_momesp'] as $c) {
+						$momentos_ids[] = $c['momento_id'];
+					}
+
+
+					foreach ($data['events_user'] as $eu) {
+						if (in_array($eu['momento_id'], $momentos_ids, true)) {
+							$str_mail .= "<h3>" . $eu['nombre'] . "</h3><ul>";
+						}
+						foreach ($data['canciones_observaciones_momesp'] as $c) {
+							if ($eu['momento_id'] == $c['momento_id']) {
+
+								$str_mail .= "<li>" . $c['comentario'] . " (escrito el " . $c['fecha'] . ")</li>";
+							}
+						}
+
+						if (in_array($eu['momento_id'], $momentos_ids, true)) $str_mail .= "</ul>";
+					}
+				}
+			}
+
+			$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+			$cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+			$cabeceras .= 'From: info@exeleventos.com';
+
+			foreach ($data['dj_asignado'] as $dj) {
+				$email_dj = $dj['email'];
+			}
+
+			//$send = mail($email_dj, "Lista de canciones", $str_mail, $cabeceras);
+			//$send = mail("info@exeleventos.com", "Lista de canciones", $str_mail, $cabeceras); //Copia del listado para info@exeleventos.com
+			$this->sendEmail('info@exeleventos.com', [$email_dj, 'info@exeleventos.com'], "Lista de canciones", $str_mail);
 		}
-	
-		//$send = mail($email_dj, "Lista de canciones", $str_mail, $cabeceras);
-            //$send = mail("info@exeleventos.com", "Lista de canciones", $str_mail, $cabeceras); //Copia del listado para info@exeleventos.com
-            $this->sendEmail('info@exeleventos.com', [$email_dj, 'info@exeleventos.com'], "Lista de canciones", $str_mail);
-        }
-	
+
 		$this->_loadViews($data_header, $data, $data_footer, "canciones");
 	}
 	public function galerias()
@@ -558,113 +552,108 @@ class Cliente extends CI_Controller {
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-		
-		
-		
-		if($_POST){
+
+
+
+		if ($_POST) {
 			$this->load->database();
-			
+
 			/*string para la url de la galeria para que no se pueda ver otras galeria por accidente*/
-			$auth_code="";
+			$auth_code = "";
 			$chars = "abcdefghijklmnopqrstuvwxwz0123456789";
-        	for($i = 0; $i <= 10; $i++){
-            	$rand_key = mt_rand(0, strlen($chars));
-            	$auth_code  .= substr($chars, $rand_key, 1);
-        	}
-		
+			for ($i = 0; $i <= 10; $i++) {
+				$rand_key = mt_rand(0, strlen($chars));
+				$auth_code  .= substr($chars, $rand_key, 1);
+			}
+
 			$arr = array("client_id" => $this->session->userdata('user_id'), "nombre" => $_POST['nombre'], "auth_code" => $auth_code);
-			$this->db->insert('galeria', $arr); 
+			$this->db->insert('galeria', $arr);
 			$id_gallery = $this->db->insert_id();
-			
-			mkdir("./uploads/gallery/".$id_gallery, 0777);
-			mkdir("./uploads/gallery/".$id_gallery."/orginal", 0777);
-			mkdir("./uploads/gallery/".$id_gallery."/thumbs", 0777);
+
+			mkdir("./uploads/gallery/" . $id_gallery, 0777);
+			mkdir("./uploads/gallery/" . $id_gallery . "/orginal", 0777);
+			mkdir("./uploads/gallery/" . $id_gallery . "/thumbs", 0777);
 		}
-		$data['galerias'] =  $this->cliente_functions->GetGaleria($this->session->userdata('user_id'));		
+		$data['galerias'] =  $this->cliente_functions->GetGaleria($this->session->userdata('user_id'));
 		$this->_loadViews($data_header, $data, $data_footer, "galerias");
 	}
 	public function galeria($id = false, $start = 0)
 	{
 		$data = array(
-        'dir' => array(
-            'original' => './uploads/gallery/'.$id.'/orginal/',
-            'thumb' => './uploads/gallery/'.$id.'/thumbs/'
-        ),
-        'total' => 0,
-        'images' => array(),
-        'error' => '',
-		'id' => $id
-    	);
-		
+			'dir' => array(
+				'original' => './uploads/gallery/' . $id . '/orginal/',
+				'thumb' => './uploads/gallery/' . $id . '/thumbs/'
+			),
+			'total' => 0,
+			'images' => array(),
+			'error' => '',
+			'id' => $id
+		);
+
 		$data_header = false;
-		
+
 		$data_footer = false;
-		
-		 if ($this->input->post('btn_upload')) {
-            $data['error'] = $this->upload($data);
-        }
+
+		if ($this->input->post('btn_upload')) {
+			$data['error'] = $this->upload($data);
+		}
 
 
-        $this->load->library('pagination');
+		$this->load->library('pagination');
 
-        $c_paginate['base_url'] = base_url(). 'cliente/galeria/'.$id;
-        $c_paginate['per_page'] = '6';
-        $finish = $start + $c_paginate['per_page'];
-        
-        if (is_dir($data['dir']['thumb']))
-        {
-            $i = 0;
-			
-            if ($dh = opendir($data['dir']['thumb'])) {
-            
-				while (($file = readdir($dh)) !== false) 
-				{
-            		if($file != '.' && $file != '..')
-					{
+		$c_paginate['base_url'] = base_url() . 'cliente/galeria/' . $id;
+		$c_paginate['per_page'] = '6';
+		$finish = $start + $c_paginate['per_page'];
+
+		if (is_dir($data['dir']['thumb'])) {
+			$i = 0;
+
+			if ($dh = opendir($data['dir']['thumb'])) {
+
+				while (($file = readdir($dh)) !== false) {
+					if ($file != '.' && $file != '..') {
 						//echo $file;
 						// get file extension
-						$ar_file = explode(".",$file);
+						$ar_file = explode(".", $file);
 						$ext = end($ar_file);
-                    	//$ext = strrev(strstr(strrev($file), ".", TRUE));
-                    	if ($ext == 'jpg' || $ext == 'JPG' || $ext == 'jpeg') 
-						{
-                        	if ($start <= $data['total'] && $data['total'] < $finish) 
-							{
-                            $data['images'][$i]['thumb'] = $file;
-                            $data['images'][$i]['original'] = str_replace('thumb_', '', $file);
-                            $i++;
-                        	}
-                        	$data['total']++;
-                    	}
-                	}
+						//$ext = strrev(strstr(strrev($file), ".", TRUE));
+						if ($ext == 'jpg' || $ext == 'JPG' || $ext == 'jpeg') {
+							if ($start <= $data['total'] && $data['total'] < $finish) {
+								$data['images'][$i]['thumb'] = $file;
+								$data['images'][$i]['original'] = str_replace('thumb_', '', $file);
+								$i++;
+							}
+							$data['total']++;
+						}
+					}
 				}
-                closedir($dh);
-            }
-        }
+				closedir($dh);
+			}
+		}
 
-        $c_paginate['total_rows'] = $data['total'];
+		$c_paginate['total_rows'] = $data['total'];
 
-        $this->pagination->initialize($c_paginate);
-		
+		$this->pagination->initialize($c_paginate);
+
 		$this->_loadViews($data_header, $data, $data_footer, "gallery");
 	}
-	  private function upload($data)
-    {
-        $error = false;
+	private function upload($data)
+	{
+		$error = false;
 		$c_upload['upload_path']    = $data['dir']['original'];
-        $c_upload['allowed_types']  = 'JPG|jpg|jpeg';
-        $c_upload['max_size']       = '3000';
+		$c_upload['allowed_types']  = 'JPG|jpg|jpeg';
+		$c_upload['max_size']       = '3000';
 		//$c_upload['max_width']      = '1600';
 		//$c_upload['max_height']     = '1200';
-        $c_upload['remove_spaces']  = TRUE;
+		$c_upload['remove_spaces']  = TRUE;
 
-        $this->load->library('upload', $c_upload);
-        
-        if ($this->upload->do_upload('userfile')) {
-            
-            $img = $this->upload->data();
-           // print_r($img);
-			
+		$this->load->library('upload', $c_upload);
+
+		if ($this->upload->do_upload('userfile')) {
+
+			$img = $this->upload->data();
+			// print_r($img);
+
 			/*if($img['image_width'] > '1600'){
 				$img_lib = array(
                 'image_library'     => 'gd2',
@@ -677,56 +666,54 @@ class Cliente extends CI_Controller {
 				$this->load->library('image_lib', $img_lib);
             	$this->image_lib->resize();	
 			}*/
-			
-			
-            // create thumbnail
-            $new_image = $data['dir']['thumb'].'thumb_'.$img['file_name'];
-            
-            $c_img_lib = array(
-                'image_library'     => 'gd2',
-                'source_image'      => $img['full_path'],
-                'maintain_ratio'    => TRUE,
-                'width'             => 150,
-                'height'            => 150,
-                'new_image'         => $new_image
-            );
-            
-            $this->load->library('image_lib', $c_img_lib);
-            $this->image_lib->resize();
-        } else {
-            $error = $this->upload->display_errors();
-			
-        }
-		return $error;
-    }
 
-    public function delete($id, $ori_img)
-    {
-      
-		unlink('./uploads/gallery/'.$id.'/orginal/'.$ori_img);
-        unlink('./uploads/gallery/'.$id.'/thumbs/thumb_'.$ori_img);
-        redirect('cliente/galeria/'.$id);
-    }
+
+			// create thumbnail
+			$new_image = $data['dir']['thumb'] . 'thumb_' . $img['file_name'];
+
+			$c_img_lib = array(
+				'image_library'     => 'gd2',
+				'source_image'      => $img['full_path'],
+				'maintain_ratio'    => TRUE,
+				'width'             => 150,
+				'height'            => 150,
+				'new_image'         => $new_image
+			);
+
+			$this->load->library('image_lib', $c_img_lib);
+			$this->image_lib->resize();
+		} else {
+			$error = $this->upload->display_errors();
+		}
+		return $error;
+	}
+
+	public function delete($id, $ori_img)
+	{
+
+		unlink('./uploads/gallery/' . $id . '/orginal/' . $ori_img);
+		unlink('./uploads/gallery/' . $id . '/thumbs/thumb_' . $ori_img);
+		redirect('cliente/galeria/' . $id);
+	}
 	public function ofertas()
 	{
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-		
-		if (isset($_POST['servicios'])) 
-		{
+
+		if (isset($_POST['servicios'])) {
 			////////CON ESTA FUNCION SE ACTUALIZAN LOS SERVICIOS DEL CLIENTE QUE HA SELECCIONADO
 			///////EN OFERTAS (NO FUNCIONA PORQUE LOS SERVICIOS ESTÁN SIN SERIALIZAR)
 			$this->load->database();
 			//COMENTO LA ACTUALIZACION DE LA BASE DE DATOS PORQUE ESTÁ SIN SERIALIZAR
 			//$this->db->query("UPDATE clientes SET servicios = CONCAT(servicios, ',', '".implode(",", $_POST['servicios'])."') WHERE id = ".$this->session->userdata('user_id')."");
 			$data['msg'] = "Los servicios se han actualizado con &eacute;xito";
-			
-			$mensaje = "Usuario ". $this->session->userdata('nombre_novia') . " (".$this->session->userdata('email_novia').") & ". $this->session->userdata('nombre_novio') . " (".$this->session->userdata('email_novio')." ha a&ntilde;adido nuevos servicios.";
+
+			$mensaje = "Usuario " . $this->session->userdata('nombre_novia') . " (" . $this->session->userdata('email_novia') . ") & " . $this->session->userdata('nombre_novio') . " (" . $this->session->userdata('email_novio') . " ha a&ntilde;adido nuevos servicios.";
 			//$this->enviar_mail("IntraBoda - Nuevos servicios", $mensaje);
-			
+
 		}
-		$data['servicios'] = $this->cliente_functions->GetAvailableServicios($this->session->userdata('user_id'));		
+		$data['servicios'] = $this->cliente_functions->GetAvailableServicios($this->session->userdata('user_id'));
 		$this->_loadViews($data_header, $data, $data_footer, "ofertas");
 	}
 	function _loadViews($data_header, $data, $data_footer, $view)
@@ -735,71 +722,70 @@ class Cliente extends CI_Controller {
 
 		$this->load->view('cliente/header', $data_header);
 
-		$this->load->view('cliente/'.$view, $data);
+		$this->load->view('cliente/' . $view, $data);
 
 		$this->load->view('cliente/footer', $data_footer);
-
 	}
 	public function is_logged_in()
-    {
-        $user = $this->session->userdata('user_id');
-        return isset($user);
-    }
+	{
+		$user = $this->session->userdata('user_id');
+		return isset($user);
+	}
 	function enviar_mail($asunto, $mensaje)
 	{
 		$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 		$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 		$cabeceras .= 'From: info@exeleventos.com';
-        $this->sendEmail('info@exeleventos.com', ["info@exeleventos.com"], $asunto, $mensaje);
-    }
+		$this->sendEmail('info@exeleventos.com', ["info@exeleventos.com"], $asunto, $mensaje);
+	}
 
-    private function sendEmail($from, $to, $subject, $message) {
-        try {
-           
-            $this->config->load('mailconfig');
-            $this->load->library('PHPMailer_Lib');
-            $mail = $this->phpmailer_lib->load();
-            $mail->isSMTP();
-            $mail->Host = $this->config->item('host');
-            $mail->SMTPAuth = $this->config->item('smtpauth');
-            $mail->Username = $this->config->item('username');
-            $mail->Password = $this->config->item('password');
-            $mail->SMTPSecure = $this->config->item('smtpsecure');
-            $mail->Port = $this->config->item('port');
-            $mail->isHTML(true);
-            $mail->CharSet = 'UTF-8';
-            $mail->setFrom($from, 'Exel Eventos');
-            $mail->addReplyTo($from, 'Exel Eventos');
-            // Add a recipient
-            if (filter_var($to[0], FILTER_VALIDATE_EMAIL)) {
-                $mail->addAddress($to[0]);
-            } else {
-                error_log("Email invalido " . var_export($to, 1), 3, "./r");
-            }
-            // Add cc or bcc
-            for ($i = 1; $i < count($to) - 1; $i++) {
-                if (filter_var($to[$i], FILTER_VALIDATE_EMAIL)) {
-                    $mail->addCC($to[$i]);
-                }
-            }
+	private function sendEmail($from, $to, $subject, $message)
+	{
+		try {
 
-            $mail->addCC('raljopa@gmail.com');
-            /* $mail->addBCC('bcc@example.com'); */
-            error_log("VAmos a enviar un email a " . var_export($to, 1), 3, "./r");
-            // Email subject
-            $mail->Subject = $subject;
-            // Set email format to HTML
-            $mail->isHTML(true);
-            // Email body content
+			$this->config->load('mailconfig');
+			$this->load->library('PHPMailer_Lib');
+			$mail = $this->phpmailer_lib->load();
+			$mail->isSMTP();
+			$mail->Host = $this->config->item('host');
+			$mail->SMTPAuth = $this->config->item('smtpauth');
+			$mail->Username = $this->config->item('username');
+			$mail->Password = $this->config->item('password');
+			$mail->SMTPSecure = $this->config->item('smtpsecure');
+			$mail->Port = $this->config->item('port');
+			$mail->isHTML(true);
+			$mail->CharSet = 'UTF-8';
+			$mail->setFrom($from, 'Exel Eventos');
+			$mail->addReplyTo($from, 'Exel Eventos');
+			// Add a recipient
+			if (filter_var($to[0], FILTER_VALIDATE_EMAIL)) {
+				$mail->addAddress($to[0]);
+			} else {
+				error_log("Email invalido " . var_export($to, 1), 3, "./r");
+			}
+			// Add cc or bcc
+			for ($i = 1; $i < count($to) - 1; $i++) {
+				if (filter_var($to[$i], FILTER_VALIDATE_EMAIL)) {
+					$mail->addCC($to[$i]);
+				}
+			}
 
-            $mail->Body = $message;
-            // Send email
-            if (!$mail->send()) {
-                error_log("\r\n Message could not be sent.'Mailer Error: " . $mail->ErrorInfo . "\r\n", 3, "./r");
-            }
-        } catch (Exception $e) {
-            error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
-        }
-    }
+			$mail->addCC('raljopa@gmail.com');
+			/* $mail->addBCC('bcc@example.com'); */
+			error_log("VAmos a enviar un email a " . var_export($to, 1), 3, "./r");
+			// Email subject
+			$mail->Subject = $subject;
+			// Set email format to HTML
+			$mail->isHTML(true);
+			// Email body content
+
+			$mail->Body = $message;
+			// Send email
+			if (!$mail->send()) {
+				error_log("\r\n Message could not be sent.'Mailer Error: " . $mail->ErrorInfo . "\r\n", 3, "./r");
+			}
+		} catch (Exception $e) {
+			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
+		}
+	}
 }
-

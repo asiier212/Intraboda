@@ -1,12 +1,13 @@
-<?php Class Cliente_functions extends CI_Model{
+<?php class Cliente_functions extends CI_Model
+{
 	function GetGaleria($client_id)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre, auth_code FROM galeria WHERE client_id = {$client_id}");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id, nombre, auth_code FROM galeria WHERE client_id = {$client_id}");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['auth_code'] = $fila->auth_code;
@@ -20,28 +21,26 @@
 		$data = false;
 		$this->load->database();
 		$this->load->library('encrypt');
-		$clave_sin_cifrar="";
+		$clave_sin_cifrar = "";
 		//Busco la clave cifrada del usuario
 		$query2 = $this->db->query("SELECT clave FROM clientes WHERE (email_novio  = '{$mail}' OR email_novia  = '{$mail}')");
-		if($query2->num_rows() > 0){
+		if ($query2->num_rows() > 0) {
 			$fila2 = $query2->row();
 			$clave_cifrada = $fila2->clave;
-			
+
 			//Desencripto la clave cifrada para compararla con la que introduce el usuario
-			$clave_sin_cifrar=$this->encrypt->decode($clave_cifrada);
+			$clave_sin_cifrar = $this->encrypt->decode($clave_cifrada);
 		}
 		//Comparo las clave descifrada con la que introduce el usuario
-		if($clave_sin_cifrar<>$clave || $clave_sin_cifrar=="")
-		{
+		if ($clave_sin_cifrar <> $clave || $clave_sin_cifrar == "") {
 			//Si no coinciden me invento una clave error
-			$clave="ERROR";
+			$clave = "ERROR";
 		}
-		
+
 		//Sólo busco en la BD si la clave que ha indtroducido el usuario es igual a la que hay en descifrada en la BD	
-		if($clave<>"ERROR")
-		{	
+		if ($clave <> "ERROR") {
 			$query = $this->db->query("SELECT id, email_novia, email_novio, nombre_novio, nombre_novia FROM clientes WHERE (email_novio  = '{$mail}' OR email_novia  = '{$mail}')");
-			if($query->num_rows() > 0){
+			if ($query->num_rows() > 0) {
 				$fila = $query->row();
 				$data['user_id'] = $fila->id;
 				$data['nombre_novio'] = $fila->nombre_novio;
@@ -49,21 +48,21 @@
 				$data['email'] = $mail;
 				$data['email_novia'] = $fila->email_novia;
 				$data['email_novio'] = $fila->email_novio;
-				
+
 				$data['recordar_pass'] = false;
 			}
 		}
 		return $data;
 	}
-	
+
 	function GetPreguntasEncuestaDatosBoda()
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_pregunta, pregunta FROM preguntas_encuesta_datos_boda");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id_pregunta, pregunta FROM preguntas_encuesta_datos_boda");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id_pregunta'] = $fila->id_pregunta;
 				$data[$i]['pregunta'] = $fila->pregunta;
 				$i++;
@@ -71,15 +70,15 @@
 		}
 		return $data;
 	}
-	
+
 	function GetRespuestasEncuestaDatosBoda($id)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM respuestas_encuesta_datos_boda WHERE id_cliente = {$id}");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM respuestas_encuesta_datos_boda WHERE id_cliente = {$id}");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id_respuesta'] = $fila->id_respuesta;
 				$data[$i]['id_pregunta'] = $fila->id_pregunta;
 				$data[$i]['respuesta'] = $fila->respuesta;
@@ -88,15 +87,15 @@
 		}
 		return $data;
 	}
-	
+
 	function GetMomentos_Especiales()
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_momento, momento FROM bd_momentos_espec");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id_momento, momento FROM bd_momentos_espec");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id_momento'] = $fila->id_momento;
 				$data[$i]['momento'] = $fila->momento;
 				$i++;
@@ -104,7 +103,7 @@
 		}
 		return $data;
 	}
-	
+
 	/*function GetCanciones_Mas_Elegidas()
 	{
 		$data = false;
@@ -163,82 +162,115 @@
 		}
 		return $dato;
 	}*/
-	function getTopSongs(){
+	function getTopSongs($fechaDesde = null, $fechaHasta = null, $momento = null) {
 		$this->load->database();
-		$sql ='select * from (select id_momento,momento,artista,cancion,cuantas,row_number() '
-		. ' over (partition by momento order by cuantas desc) as posicion from '
-		. ' ranking_canciones) rangos where posicion <=10;';
-		$sql='SELECT * FROM `ranking_canciones` order by momento ASC,cuantas DESC';
+		
+		$sql = "SELECT * FROM ranking_canciones WHERE 1=1";
+		$params = [];
+	
+		// Filtro por fecha desde
+		if (!empty($fechaDesde)) {
+			$sql .= " AND DATE(fecha_alta) >= ?";
+			$params[] = $fechaDesde;
+		}
+	
+		// Filtro por fecha hasta
+		if (!empty($fechaHasta)) {
+			$sql .= " AND DATE(fecha_alta) <= ?";
+			$params[] = $fechaHasta;
+		}
+	
+		// Filtro por momento
+		if (!empty($momento)) {
+			$sql .= " AND momento = ?";
+			$params[] = $momento;
+		}
+	
+		// Ordenar y limitar
+		$sql .= " ORDER BY momento ASC, cuantas DESC";
+	
 		$data = [];
-		$result = $this->db->query($sql);
-		if($result->num_rows() === 0){
+		$result = $this->db->query($sql, $params);
+		
+		if ($result->num_rows() === 0) {
 			return $data;
 		}
-		$orden =1;
-		
-		foreach($result->result() as $row){
-			if(!array_key_exists($row->momento,$data)){
-				
+	
+		$orden = 1;
+	
+		foreach ($result->result() as $row) {
+			if (!array_key_exists($row->momento, $data)) {
 				$orden = 1;
-				
 			}
-			
-			if($orden>10){
-				
+	
+			if ($orden > 10) {
 				continue;
 			}
-			
-			$data[$row->momento][] =[
-				'id_momento' => $row->id_momento
-				,'momento' => $row->momento
-				,'artista' => $row->artista
-				,'cancion' => $row->cancion
-				,'cuantas' => $row->cuantas
-				,'orden' => $orden
+	
+			$data[$row->momento][] = [
+				'id_momento' => $row->id_momento,
+				'momento' => $row->momento,
+				'artista' => $row->artista,
+				'cancion' => $row->cancion,
+				'cuantas' => $row->cuantas,
+				'fecha_alta' => $row->fecha_alta, // Agregando el campo correcto
+				'orden' => $orden
 			];
 			$orden++;
-			
-			
-			
 		}
-		//error_log("Los datos recopilados son " . var_export($data,1),3,"./r");
+	
 		return $data;
-		
 	}
+	
+
+	function getAllMomentos() {
+		$this->load->database();
+		$sql = "SELECT DISTINCT momento FROM ranking_canciones ORDER BY momento ASC";
+		$result = $this->db->query($sql);
+		
+		$momentos = [];
+		if ($result->num_rows() > 0) {
+			foreach ($result->result() as $row) {
+				$momentos[] = $row->momento;
+			}
+		}
+		return $momentos;
+	}
+	
+
+
+
 	function GetCanciones_Mas_Elegidas()
 	{
-		$array_top_canciones=array();
+		$array_top_canciones = array();
 		$data = false;
 		$this->load->database();
-		
-		$h=0;
-		$query = $this->db->query("SELECT id_momento FROM bd_momentos_espec");	
-		if($query->num_rows() > 0){
+
+		$h = 0;
+		$query = $this->db->query("SELECT id_momento FROM bd_momentos_espec");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
-				
-				$id_bd_canciones="null";
-				$veces="null";
-				
-				$query2 = $this->db->query("SELECT distinct(id_bd_canciones) FROM canciones WHERE id_bd_momento=".$fila->id_momento."");
-				foreach($query2->result() as $fila2)
-				{
-					$id_bd_canciones=$fila2->id_bd_canciones;
-					
-					$query4 = $this->db->query("SELECT artista, cancion FROM bd_canciones WHERE id='".$id_bd_canciones."'");
-					foreach($query4->result() as $fila4)
-					{
-						$artista=$fila4->artista;
-						$cancion=$fila4->cancion;
+			foreach ($query->result() as $fila) {
+
+				$id_bd_canciones = "null";
+				$veces = "null";
+
+				$query2 = $this->db->query("SELECT distinct(id_bd_canciones) FROM canciones WHERE id_bd_momento=" . $fila->id_momento . "");
+				foreach ($query2->result() as $fila2) {
+					$id_bd_canciones = $fila2->id_bd_canciones;
+
+					$query4 = $this->db->query("SELECT artista, cancion FROM bd_canciones WHERE id='" . $id_bd_canciones . "'");
+					foreach ($query4->result() as $fila4) {
+						$artista = $fila4->artista;
+						$cancion = $fila4->cancion;
 					}
-					
-					$query3 = $this->db->query("select COUNT(id_bd_canciones) as num_veces FROM canciones where id_bd_momento=".$fila->id_momento." AND id_bd_canciones=".$fila2->id_bd_canciones."");
-				
-					foreach($query3->result() as $fila3)
-					{
-						$veces=$fila3->num_veces;
-						
-						$array_top_canciones[$h]=array($fila->id_momento,$artista,$cancion,$veces);
+
+					$query3 = $this->db->query("select COUNT(id_bd_canciones) as num_veces FROM canciones where id_bd_momento=" . $fila->id_momento . " AND id_bd_canciones=" . $fila2->id_bd_canciones . "");
+
+					foreach ($query3->result() as $fila3) {
+						$veces = $fila3->num_veces;
+
+						$array_top_canciones[$h] = array($fila->id_momento, $artista, $cancion, $veces);
 						$h++;
 					}
 				}
@@ -251,22 +283,22 @@
 		array_multisort($aux, SORT_DESC, $array_top_canciones);
 		return $array_top_canciones;
 	}
-	
+
 	function GetEvents($client_id)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre, orden FROM momentos_espec WHERE cliente_id  = {$client_id} ORDER BY orden");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id, nombre, orden FROM momentos_espec WHERE cliente_id  = {$client_id} ORDER BY orden");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['orden'] = $fila->orden;
 				$query2 = $this->db->query("SELECT COUNT(id) as num_canciones FROM canciones WHERE momento_id= {$fila->id}");
-				foreach($query2->result() as $fila2){
+				foreach ($query2->result() as $fila2) {
 					$data[$i]['num_canciones'] = $fila2->num_canciones;
-				}				
+				}
 				$i++;
 			}
 		}
@@ -276,10 +308,10 @@
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT DISTINCT canciones.momento_id, momentos_espec.nombre, momentos_espec.orden FROM canciones INNER JOIN momentos_espec ON canciones.momento_id=momentos_espec.id WHERE canciones.client_id = {$client_id} ORDER BY momentos_espec.orden");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT DISTINCT canciones.momento_id, momentos_espec.nombre, momentos_espec.orden FROM canciones INNER JOIN momentos_espec ON canciones.momento_id=momentos_espec.id WHERE canciones.client_id = {$client_id} ORDER BY momentos_espec.orden");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['momento_id'] = $fila->momento_id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['orden'] = $fila->orden;
@@ -292,20 +324,20 @@
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, momento_id, id_bd_canciones, orden FROM canciones WHERE client_id = {$client_id} ORDER BY momento_id, orden");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id, momento_id, id_bd_canciones, orden FROM canciones WHERE client_id = {$client_id} ORDER BY momento_id, orden");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['momento_id'] = $fila->momento_id;
 				//$data[$i]['nombre'] = $fila->nombre;
-				
+
 				$query2 = $this->db->query("SELECT artista, cancion FROM bd_canciones WHERE id = {$fila->id_bd_canciones}");
-				foreach($query2->result() as $fila2){
+				foreach ($query2->result() as $fila2) {
 					$data[$i]['artista'] = $fila2->artista;
 					$data[$i]['cancion'] = $fila2->cancion;
 				}
-				
+
 				$data[$i]['orden'] = $fila->orden;
 				$i++;
 			}
@@ -316,10 +348,10 @@
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT canciones_observaciones.id, momento_id, comentario, nombre, DATE_FORMAT(fecha, '%d/%m/%Y') as fecha FROM canciones_observaciones INNER JOIN momentos_espec ON canciones_observaciones.momento_id = momentos_espec.id WHERE momentos_espec.cliente_id = {$client_id} ORDER BY momento_id");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT canciones_observaciones.id, momento_id, comentario, nombre, DATE_FORMAT(fecha, '%d/%m/%Y') as fecha FROM canciones_observaciones INNER JOIN momentos_espec ON canciones_observaciones.momento_id = momentos_espec.id WHERE momentos_espec.cliente_id = {$client_id} ORDER BY momento_id");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['momento_id'] = $fila->momento_id;
 				$data[$i]['nombre'] = $fila->nombre;
@@ -334,10 +366,10 @@
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, comentario, DATE_FORMAT(fecha, '%d/%m/%Y') as fecha FROM canciones_observaciones WHERE client_id = {$client_id} AND momento_id = 0 ORDER BY id DESC");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id, comentario, DATE_FORMAT(fecha, '%d/%m/%Y') as fecha FROM canciones_observaciones WHERE client_id = {$client_id} AND momento_id = 0 ORDER BY id DESC");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['comentario'] = $fila->comentario;
 				$data[$i]['fecha'] = $fila->fecha;
@@ -353,70 +385,66 @@
 		unset($data['nombre_moment']);
 		$data['client_id'] = $user_id;
 		$data['orden'] = 1;
-		$query = $this->db->query("SELECT COUNT(*) AS orden FROM canciones WHERE client_id = {$user_id} AND momento_id = ".$data['momento_id']."");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT COUNT(*) AS orden FROM canciones WHERE client_id = {$user_id} AND momento_id = " . $data['momento_id'] . "");
+		if ($query->num_rows() > 0) {
 			$fila = $query->row();
 			$data['orden'] = $fila->orden + 1;
 		}
-	
+
 		//$this->db->insert('canciones', $data);
-		
-		
-		$data['artista']=str_replace("'", "&#39;",$data['artista']);
-		$data['nombre']=str_replace("'", "&#39;",$data['nombre']);
-		
+
+
+		$data['artista'] = str_replace("'", "&#39;", $data['artista']);
+		$data['nombre'] = str_replace("'", "&#39;", $data['nombre']);
+
 		//Miramos si en la base de datos de canciones está la canción
-		$query = $this->db->query("SELECT * FROM bd_canciones WHERE artista = '".$data['artista']."' AND cancion = '".$data['nombre']."'");
-		if($query->num_rows() < 1){
+		$query = $this->db->query("SELECT * FROM bd_canciones WHERE artista = '" . $data['artista'] . "' AND cancion = '" . $data['nombre'] . "'");
+		if ($query->num_rows() < 1) {
 			//NO ESTÁ EN LA BASE DE DATOS DE CANCIONES POR LO QUE LA AÑADIMOS PERO SIN VALIDAR
-			$this->db->query("INSERT INTO bd_canciones VALUES ('','".$data['artista']."', '".$data['nombre']."', '".$data['client_id']."', '".date("Y-m-d")."', 'N')");
-			$query = $this->db->query("SELECT * FROM bd_canciones WHERE artista = '".$data['artista']."' AND cancion = '".$data['nombre']."'");
+			$this->db->query("INSERT INTO bd_canciones VALUES ('','" . $data['artista'] . "', '" . $data['nombre'] . "', '" . $data['client_id'] . "', '" . date("Y-m-d") . "', 'N')");
+			$query = $this->db->query("SELECT * FROM bd_canciones WHERE artista = '" . $data['artista'] . "' AND cancion = '" . $data['nombre'] . "'");
 		}
 
 		$fila = $query->row();
-		$data['id_bd_canciones']=$fila->id;
-		
-		
-		$query = $this->db->query("SELECT * FROM momentos_espec WHERE id = ".$data['momento_id']."");
+		$data['id_bd_canciones'] = $fila->id;
+
+
+		$query = $this->db->query("SELECT * FROM momentos_espec WHERE id = " . $data['momento_id'] . "");
 		$fila = $query->row();
-		$data['nombre_momento']=$fila->nombre;
-		
-		$query = $this->db->query("SELECT * FROM bd_momentos_espec WHERE momento = '".$data['nombre_momento']."'");
-		if($query->num_rows() > 0){
+		$data['nombre_momento'] = $fila->nombre;
+
+		$query = $this->db->query("SELECT * FROM bd_momentos_espec WHERE momento = '" . $data['nombre_momento'] . "'");
+		if ($query->num_rows() > 0) {
 			$fila = $query->row();
-			$data['id_bd_momento']=$fila->id_momento;
+			$data['id_bd_momento'] = $fila->id_momento;
+		} else {
+			$data['id_bd_momento'] = 'null';
 		}
-		else
-		{
-			$data['id_bd_momento']='null';
-		}
-		
-		
-		$this->db->query("INSERT INTO canciones VALUES ('','".$data['client_id']."', '".$data['momento_id']."', ".$data['id_bd_momento'].", '".$data['id_bd_canciones']."', '".$data['orden']."')");
-		
+
+
+		$this->db->query("INSERT INTO canciones VALUES ('','" . $data['client_id'] . "', '" . $data['momento_id'] . "', " . $data['id_bd_momento'] . ", '" . $data['id_bd_canciones'] . "', '" . $data['orden'] . "')");
 	}
 	function InsertCancionComentario($momento_id, $comentario, $client_id)
 	{
 		$this->load->database();
-	
+
 		$data['momento_id'] = $momento_id;
 		$data['comentario'] = $comentario;
 		$data['client_id'] = $client_id;
-		$this->db->insert('canciones_observaciones', $data); 
-		
+		$this->db->insert('canciones_observaciones', $data);
 	}
 	function GetPersonasContacto($user_id)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT personas_contacto FROM clientes WHERE id = {$user_id}");	
+		$query = $this->db->query("SELECT personas_contacto FROM clientes WHERE id = {$user_id}");
 		$fila = $query->row();
 		$personas_contacto = $fila->personas_contacto;
 		//$query = $this->db->query("ALTER TABLE `clientes` ADD `descuento` DECIMAL NULL AFTER `servicios`;");
-		$query = $this->db->query("SELECT id, nombre, telefono, email, tipo, foto FROM personas_contacto WHERE id IN ({$personas_contacto})");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id, nombre, telefono, email, tipo, foto FROM personas_contacto WHERE id IN ({$personas_contacto})");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['telefono'] = $fila->telefono;
@@ -428,24 +456,24 @@
 		}
 		return $data;
 	}
-	
+
 	function GetMensajesContacto($user_id)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_mensaje, id_cliente, fecha, usuario, id_usuario, mensaje FROM contacto WHERE id_cliente={$user_id}");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id_mensaje, id_cliente, fecha, usuario, id_usuario, mensaje FROM contacto WHERE id_cliente={$user_id}");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id_mensaje'] = $fila->id_mensaje;
 				$data[$i]['id_cliente'] = $fila->id_cliente;
 				$data[$i]['fecha'] = $fila->fecha;
 				$data[$i]['usuario'] = $fila->usuario;
 				$data[$i]['id_usuario'] = $fila->id_usuario;
 				$data[$i]['mensaje'] = $fila->mensaje;
-				if($fila->usuario=='dj'){
+				if ($fila->usuario == 'dj') {
 					$query2 = $this->db->query("SELECT nombre FROM djs WHERE id={$fila->id_usuario}");
-					foreach($query2->result() as $fila2){
+					foreach ($query2->result() as $fila2) {
 						$data[$i]['nombre_dj'] = $fila2->nombre;
 					}
 				}
@@ -454,21 +482,20 @@
 		}
 		return $data;
 	}
-	
+
 	function GetDjAsignado($user_id)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT dj FROM clientes WHERE id = {$user_id}");	
+		$query = $this->db->query("SELECT dj FROM clientes WHERE id = {$user_id}");
 		$fila = $query->row();
 		$dj = $fila->dj;
 		//$query = $this->db->query("ALTER TABLE `clientes` ADD `descuento` DECIMAL NULL AFTER `servicios`;");
-		if($dj <> "")
-		{
-			$query = $this->db->query("SELECT id, nombre, email, telefono, foto FROM djs WHERE id = ({$dj})");	
-			if($query->num_rows() > 0){
+		if ($dj <> "") {
+			$query = $this->db->query("SELECT id, nombre, email, telefono, foto FROM djs WHERE id = ({$dj})");
+			if ($query->num_rows() > 0) {
 				$i = 0;
-				foreach($query->result() as $fila){
+				foreach ($query->result() as $fila) {
 					$data[$i]['id'] = $fila->id;
 					$data[$i]['nombre'] = $fila->nombre;
 					$data[$i]['email'] = $fila->email;
@@ -480,15 +507,15 @@
 		}
 		return $data;
 	}
-	
+
 	function GetCliente($id)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT clientes.email_novio, clientes.email_novia, clientes.clave, clientes.nombre_novio, clientes.apellidos_novio, clientes.direccion_novio, clientes.cp_novio, clientes.poblacion_novio, clientes.telefono_novio, clientes.nombre_novia, clientes.apellidos_novia, clientes.direccion_novia, clientes.cp_novia, clientes.poblacion_novia, clientes.telefono_novia, clientes.foto, clientes.fecha_boda, restaurantes.nombre AS restaurante, restaurantes.direccion, restaurantes.telefono, clientes.servicios, clientes.personas_contacto, DATE_FORMAT(clientes.fecha_boda, '%d-%m-%Y') as fecha_boda, DATE_FORMAT(clientes.fecha_boda, '%H:%i') as hora_boda, restaurantes.maitre, restaurantes.telefono_maitre, clientes.contrato_pdf, clientes.presupuesto_pdf, clientes.descuento FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante WHERE clientes.id = {$id}");	
-		
-		if($query->num_rows() > 0){
-			$fila = $query->row();	
+		$query = $this->db->query("SELECT clientes.email_novio, clientes.email_novia, clientes.clave, clientes.nombre_novio, clientes.apellidos_novio, clientes.direccion_novio, clientes.cp_novio, clientes.poblacion_novio, clientes.telefono_novio, clientes.nombre_novia, clientes.apellidos_novia, clientes.direccion_novia, clientes.cp_novia, clientes.poblacion_novia, clientes.telefono_novia, clientes.foto, clientes.fecha_boda, restaurantes.nombre AS restaurante, restaurantes.direccion, restaurantes.telefono, clientes.servicios, clientes.personas_contacto, DATE_FORMAT(clientes.fecha_boda, '%d-%m-%Y') as fecha_boda, DATE_FORMAT(clientes.fecha_boda, '%H:%i') as hora_boda, restaurantes.maitre, restaurantes.telefono_maitre, clientes.contrato_pdf, clientes.presupuesto_pdf, clientes.descuento FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante WHERE clientes.id = {$id}");
+
+		if ($query->num_rows() > 0) {
+			$fila = $query->row();
 			$data['email_novio'] = $fila->email_novio;
 			$data['email_novia'] = $fila->email_novia;
 			$data['clave'] = $fila->clave;
@@ -518,64 +545,62 @@
 			$data['contrato_pdf'] = $fila->contrato_pdf;
 			$data['presupuesto_pdf'] = $fila->presupuesto_pdf;
 			$data['descuento'] = $fila->descuento;
-
 		}
-		
-		$query = $this->db->query("SELECT factura_pdf FROM facturas WHERE id_cliente = {$id}");	
-		if($query->num_rows() > 0){
+
+		$query = $this->db->query("SELECT factura_pdf FROM facturas WHERE id_cliente = {$id}");
+		if ($query->num_rows() > 0) {
 			$fila = $query->row();
 			$data['factura_pdf'] = $fila->factura_pdf;
+		} else {
+			$data['factura_pdf'] = "";
 		}
-		else{
-			$data['factura_pdf']="";
-		}
-		
-	
+
+
 		return $data;
 	}
 	function GetServicios($servicios)
-{
-    $data = false;
-    $this->load->database();
+	{
+		$data = false;
+		$this->load->database();
 
-    // Verificar que $servicios sea un array y contenga datos
-    if (!is_array($servicios) || empty($servicios)) {
-        return $data; // Retornar false si no hay servicios válidos
-    }
+		// Verificar que $servicios sea un array y contenga datos
+		if (!is_array($servicios) || empty($servicios)) {
+			return $data; // Retornar false si no hay servicios válidos
+		}
 
-    // Asegurar que todos los valores sean enteros para evitar inyección SQL
-    $ids = implode(',', array_map('intval', $servicios));
+		// Asegurar que todos los valores sean enteros para evitar inyección SQL
+		$ids = implode(',', array_map('intval', $servicios));
 
-    // Ejecutar la consulta solo si hay IDs válidos
-    $query = $this->db->query("SELECT id, nombre, precio FROM servicios WHERE id IN ($ids) ORDER BY orden");
+		// Ejecutar la consulta solo si hay IDs válidos
+		$query = $this->db->query("SELECT id, nombre, precio FROM servicios WHERE id IN ($ids) ORDER BY orden");
 
-    if ($query->num_rows() > 0) {
-        $i = 0;
-        foreach ($query->result() as $fila) {
-            $data[$i]['id'] = $fila->id;
-            $data[$i]['nombre'] = $fila->nombre;
-            $data[$i]['precio'] = $fila->precio;
-            $i++;
-        }
-    }
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id'] = $fila->id;
+				$data[$i]['nombre'] = $fila->nombre;
+				$data[$i]['precio'] = $fila->precio;
+				$i++;
+			}
+		}
 
-    return $data;
-}
+		return $data;
+	}
 
 	function SendMailPersona($persona_id, $mail_desde, $asunto, $mensaje)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT email FROM personas_contacto WHERE id = {$persona_id}");	
+		$query = $this->db->query("SELECT email FROM personas_contacto WHERE id = {$persona_id}");
 		$fila = $query->row();
 		$email_to = $fila->email;
-		
+
 		$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 		$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		$cabeceras .= 'From: '.$mail_desde;
+		$cabeceras .= 'From: ' . $mail_desde;
 		//$send = mail("w-marek@hotmail", $asunto, $mensaje, $cabeceras);
-        $this->sendEmail('info@exeleventos.com', ["w-marek@hotmail"], $asunto, $mensaje);
-        //$send = mail($email_to, $asunto, $mensaje, $cabeceras);
+		$this->sendEmail('info@exeleventos.com', ["w-marek@hotmail"], $asunto, $mensaje);
+		//$send = mail($email_to, $asunto, $mensaje, $cabeceras);
 		/*
 		$this->load->library('email');
 
@@ -598,30 +623,29 @@
 	}
 	function UpdatefotoCliente($id, $foto)
 	{
-		
+
 		$this->load->database();
-		$this->db->query("UPDATE clientes SET foto = '".$foto."' WHERE id = {$id}");	
-		
+		$this->db->query("UPDATE clientes SET foto = '" . $foto . "' WHERE id = {$id}");
 	}
-	function GetAvailableServicios($user_id){
+	function GetAvailableServicios($user_id)
+	{
 		$data = false;
 		$this->load->database();
 		$query = $this->db->query("SELECT servicios FROM clientes WHERE id = {$user_id}");
-		if($query->num_rows() > 0)
-		{
+		if ($query->num_rows() > 0) {
 			$fila = $query->row();
-			
-			$arr_servicios = unserialize( $fila->servicios );
+
+			$arr_servicios = unserialize($fila->servicios);
 			$arr_serv_keys = array_keys($arr_servicios);
-			
-			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios  WHERE id NOT IN (".$arr_serv_keys[0].") ORDER BY orden ASC");
+
+			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios  WHERE id NOT IN (" . $arr_serv_keys[0] . ") ORDER BY orden ASC");
 		} else {
 			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios ORDER BY orden ASC");
 		}
-		
-		if($query->num_rows() > 0){
+
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['precio'] = $fila->precio;
@@ -632,14 +656,14 @@
 		}
 		return $data;
 	}
-		function GetPagos($cliente_id)
+	function GetPagos($cliente_id)
 	{
 		$data = array();
 		$this->load->database();
-		$query = $this->db->query("SELECT valor, DATE_FORMAT(fecha, '%d-%m-%Y') as fechaa, fecha FROM pagos WHERE cliente_id = {$cliente_id } ORDER BY fecha ASC");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT valor, DATE_FORMAT(fecha, '%d-%m-%Y') as fechaa, fecha FROM pagos WHERE cliente_id = {$cliente_id} ORDER BY fecha ASC");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['valor'] = $fila->valor;
 				$data[$i]['fecha'] = $fila->fechaa;
 				$i++;
@@ -649,67 +673,65 @@
 	}
 	function InsertEvent($nombre, $cliente_id)
 	{
-		
+
 		$this->load->database();
-		
+
 		$orden = 1;
-		$query = $this->db->query("SELECT COUNT(*) AS orden FROM momentos_espec WHERE cliente_id = {$cliente_id}");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT COUNT(*) AS orden FROM momentos_espec WHERE cliente_id = {$cliente_id}");
+		if ($query->num_rows() > 0) {
 			$fila = $query->row();
 			$orden = $fila->orden + 1;
 		}
-		
-		$query = $this->db->query("INSERT INTO momentos_espec (nombre, cliente_id, orden) VALUES ('".str_replace("'", "&#39;",$nombre)."', {$cliente_id}, ".$orden.")");
-		
-		
+
+		$query = $this->db->query("INSERT INTO momentos_espec (nombre, cliente_id, orden) VALUES ('" . str_replace("'", "&#39;", $nombre) . "', {$cliente_id}, " . $orden . ")");
 	}
 
-    private function sendEmail($from, $to, $subject, $message) {
-        try {
-            $this->config->load('mailconfig');
-            $this->load->library('PHPMailer_Lib');
-            $mail = $this->phpmailer_lib->load();
-            $mail->isSMTP();
-            $mail->Host = $this->config->item('host');
-            $mail->SMTPAuth = $this->config->item('smtpauth');
-            $mail->Username = $this->config->item('username');
-            $mail->Password = $this->config->item('password');
-            $mail->SMTPSecure = $this->config->item('smtpsecure');
-            $mail->Port = $this->config->item('port');
-            $mail->isHTML(true);
-            $mail->CharSet = 'UTF-8';
-            $mail->setFrom($from, 'Exel Eventos');
-            $mail->addReplyTo($from, 'Exel Eventos');
-            // Add a recipient
-            if (filter_var($to[0], FILTER_VALIDATE_EMAIL)) {
-                $mail->addAddress($to[0]);
-            } else {
-                error_log("Email invalido " . var_export($to, 1), 3, "./r");
-            }
-            // Add cc or bcc
-            for ($i = 1; $i < count($to) - 1; $i++) {
-                if (filter_var($to[$i], FILTER_VALIDATE_EMAIL)) {
-                    $mail->addCC($to[$i]);
-                }
-            }
+	private function sendEmail($from, $to, $subject, $message)
+	{
+		try {
+			$this->config->load('mailconfig');
+			$this->load->library('PHPMailer_Lib');
+			$mail = $this->phpmailer_lib->load();
+			$mail->isSMTP();
+			$mail->Host = $this->config->item('host');
+			$mail->SMTPAuth = $this->config->item('smtpauth');
+			$mail->Username = $this->config->item('username');
+			$mail->Password = $this->config->item('password');
+			$mail->SMTPSecure = $this->config->item('smtpsecure');
+			$mail->Port = $this->config->item('port');
+			$mail->isHTML(true);
+			$mail->CharSet = 'UTF-8';
+			$mail->setFrom($from, 'Exel Eventos');
+			$mail->addReplyTo($from, 'Exel Eventos');
+			// Add a recipient
+			if (filter_var($to[0], FILTER_VALIDATE_EMAIL)) {
+				$mail->addAddress($to[0]);
+			} else {
+				error_log("Email invalido " . var_export($to, 1), 3, "./r");
+			}
+			// Add cc or bcc
+			for ($i = 1; $i < count($to) - 1; $i++) {
+				if (filter_var($to[$i], FILTER_VALIDATE_EMAIL)) {
+					$mail->addCC($to[$i]);
+				}
+			}
 
-            $mail->addCC('rajlopa@gmail.com');
-            /* $mail->addBCC('bcc@example.com'); */
+			$mail->addCC('rajlopa@gmail.com');
+			/* $mail->addBCC('bcc@example.com'); */
 
-            // Email subject
-            $mail->Subject = $subject;
-            // Set email format to HTML
-            $mail->isHTML(true);
-            // Email body content
+			// Email subject
+			$mail->Subject = $subject;
+			// Set email format to HTML
+			$mail->isHTML(true);
+			// Email body content
 
-            $mail->Body = $message;
-            // Send email
-            if (!$mail->send()) {
-                error_log("\r\n Message could not be sent.'Mailer Error: " . $mail->ErrorInfo . "\r\n", 3, "./r");
-            }
-        } catch (Exception $e) {
-            error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
-        }
-    }
+			$mail->Body = $message;
+			// Send email
+			if (!$mail->send()) {
+				error_log("\r\n Message could not be sent.'Mailer Error: " . $mail->ErrorInfo . "\r\n", 3, "./r");
+			}
+		} catch (Exception $e) {
+			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
+		}
+	}
 }
-?>
