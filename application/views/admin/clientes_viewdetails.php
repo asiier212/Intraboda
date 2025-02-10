@@ -736,7 +736,6 @@
 			<?php if (isset($msg_pdf)) echo "<p>{$msg_pdf}</p>"; ?>
 		</fieldset>
 
-		<pre><?php print_r($factura); ?></pre>
 
 		<fieldset class="datos">
 			<legend>Factura</legend>

@@ -64,6 +64,7 @@
 				type: 'POST',
 				url: '<?php echo base_url() ?>index.php/ajax/validarbdcancion',
 				data: 'id=' + id,
+				dataType: 'json',
 				success: function(data) {
 					//$("#can_" + id).css("display", "none");
 					//$("#result").html("");
