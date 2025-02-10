@@ -124,72 +124,80 @@ class Ajax extends CI_Controller
 	{
 		if ($_POST) {
 			$this->load->database();
-			
+
 			// Obtener el valor original antes de actualizar
-			$queryOriginal = $this->db->query("SELECT artista FROM bd_canciones WHERE id = ?", array($_POST['id']));
-			$artista_original = $queryOriginal->row()->artista;
-			
+			$queryOriginal = $this->db->query("SELECT artista, cancion FROM bd_canciones WHERE id = ?", array($_POST['id']));
+			$fila = $queryOriginal->row();
+			$artista_original = $fila->artista;
+			$cancion_original = $fila->cancion;
+
 			// Verificar si ya existe un cambio registrado para esta canción
-			$queryCheck = $this->db->query("SELECT id, artista_original FROM bd_cambios_canciones WHERE id_cancion = ?", array($_POST['id']));
-			
+			$queryCheck = $this->db->query("SELECT id, artista_original, cancion_original, cancion_nueva FROM bd_cambios_canciones WHERE id_cancion = ?", array($_POST['id']));
+
 			if ($queryCheck->num_rows() > 0) {
 				$cambio = $queryCheck->row();
-				$artista_original = is_null($cambio->artista_original) ? $artista_original : $cambio->artista_original; // Mantener el original del cliente solo si es null
-				
-				// Actualizamos solo el artista nuevo
+				$artista_original = is_null($cambio->artista_original) ? $artista_original : $cambio->artista_original;
+				$cancion_original = $cambio->cancion_original ?: $cancion_original; // Mantener la canción original si existe
+				$cancion_nueva = $cambio->cancion_nueva ?: $cancion_original;
+
+				// Actualizamos solo el artista nuevo, manteniendo los valores de la canción
 				$this->db->query(
-					"UPDATE bd_cambios_canciones SET artista_original = ?, artista_nuevo = ? WHERE id_cancion = ?",
-					array($artista_original, $_POST['value'], $_POST['id'])
+					"UPDATE bd_cambios_canciones SET artista_original = ?, artista_nuevo = ?, cancion_original = ?, cancion_nueva = ? WHERE id_cancion = ?",
+					array($artista_original, $_POST['value'], $cancion_original, $cancion_nueva, $_POST['id'])
 				);
 			} else {
-				// Si no existe, insertamos un nuevo registro
+				// Si no existe, insertamos un nuevo registro con los valores originales
 				$this->db->query(
-					"INSERT INTO bd_cambios_canciones (id_cancion, artista_original, artista_nuevo) VALUES (?, ?, ?)",
-					array($_POST['id'], $artista_original, $_POST['value'])
+					"INSERT INTO bd_cambios_canciones (id_cancion, artista_original, artista_nuevo, cancion_original, cancion_nueva) VALUES (?, ?, ?, ?, ?)",
+					array($_POST['id'], $artista_original, $_POST['value'], $cancion_original, $cancion_original)
 				);
 			}
-			
+
 			// Actualizar la BD con el nuevo artista
 			$this->db->query("UPDATE bd_canciones SET artista = ? WHERE id = ?", array($_POST['value'], $_POST['id']));
 			echo $_POST['value'];
 		}
 	}
-	
+
 	function updatebdcancion()
 	{
 		if ($_POST) {
 			$this->load->database();
-			
+
 			// Obtener el valor original antes de actualizar
-			$queryOriginal = $this->db->query("SELECT cancion FROM bd_canciones WHERE id = ?", array($_POST['id']));
-			$cancion_original = $queryOriginal->row()->cancion;
-			
+			$queryOriginal = $this->db->query("SELECT cancion, artista FROM bd_canciones WHERE id = ?", array($_POST['id']));
+			$fila = $queryOriginal->row();
+			$cancion_original = $fila->cancion;
+			$artista_original = $fila->artista;
+
 			// Verificar si ya existe un cambio registrado para esta canción
-			$queryCheck = $this->db->query("SELECT id, cancion_original FROM bd_cambios_canciones WHERE id_cancion = ?", array($_POST['id']));
-			
+			$queryCheck = $this->db->query("SELECT id, cancion_original, artista_original, artista_nuevo FROM bd_cambios_canciones WHERE id_cancion = ?", array($_POST['id']));
+
 			if ($queryCheck->num_rows() > 0) {
 				$cambio = $queryCheck->row();
-				$cancion_original = is_null($cambio->cancion_original) ? $cancion_original : $cambio->cancion_original; // Mantener el original del cliente solo si es null
-				
-				// Actualizamos solo la canción nueva
+				$cancion_original = is_null($cambio->cancion_original) ? $cancion_original : $cambio->cancion_original;
+				$artista_original = $cambio->artista_original ?: $artista_original; // Mantener el artista original si existe
+				$artista_nuevo = $cambio->artista_nuevo ?: $artista_original;
+
+				// Actualizamos solo la canción nueva, manteniendo los valores del artista
 				$this->db->query(
-					"UPDATE bd_cambios_canciones SET cancion_original = ?, cancion_nueva = ? WHERE id_cancion = ?",
-					array($cancion_original, $_POST['value'], $_POST['id'])
+					"UPDATE bd_cambios_canciones SET cancion_original = ?, cancion_nueva = ?, artista_original = ?, artista_nuevo = ? WHERE id_cancion = ?",
+					array($cancion_original, $_POST['value'], $artista_original, $artista_nuevo, $_POST['id'])
 				);
 			} else {
-				// Si no existe, insertamos un nuevo registro
+				// Si no existe, insertamos un nuevo registro con los valores originales
 				$this->db->query(
-					"INSERT INTO bd_cambios_canciones (id_cancion, cancion_original, cancion_nueva) VALUES (?, ?, ?)",
-					array($_POST['id'], $cancion_original, $_POST['value'])
+					"INSERT INTO bd_cambios_canciones (id_cancion, cancion_original, cancion_nueva, artista_original, artista_nuevo) VALUES (?, ?, ?, ?, ?)",
+					array($_POST['id'], $cancion_original, $_POST['value'], $artista_original, $artista_original)
 				);
 			}
-			
+
 			// Actualizar la BD con la nueva canción
 			$this->db->query("UPDATE bd_canciones SET cancion = ? WHERE id = ?", array($_POST['value'], $_POST['id']));
 			echo $_POST['value'];
 		}
 	}
-	
+
 
 
 
@@ -197,7 +205,6 @@ class Ajax extends CI_Controller
 	{
 		if ($_POST) {
 			$this->load->database();
-			$this->load->library('email');
 
 			$id_cancion = intval($_POST['id']);
 
@@ -207,7 +214,8 @@ class Ajax extends CI_Controller
 
 			if (!$fila) {
 				log_message('error', "No se encontró la canción con ID: $id_cancion");
-				return;
+				echo json_encode(['status' => 'error', 'message' => 'Canción no encontrada']);
+				exit();
 			}
 
 			$id_cliente = $fila->id_cliente;
@@ -246,8 +254,12 @@ class Ajax extends CI_Controller
 				// Si no hay duplicados, simplemente validamos la canción
 				$this->db->query("UPDATE bd_canciones SET validada = 'S' WHERE id = ?", array($id_cancion));
 			}
+
+			echo json_encode(['status' => 'success']);
+			exit();
 		}
 	}
+
 
 
 	function enviarAvisoModificacion($id_cliente, $cancion_original, $artista_original, $cancion_nueva, $artista_nuevo)
@@ -267,11 +279,18 @@ class Ajax extends CI_Controller
 		}
 
 		$subject = "Corrección en tu registro de música";
-		$message = "<p>Hola,</p>
-                <p>Tu registro de canción ha sido corregido.</p>
-                <p><strong>Original:</strong> \"{$cancion_original}\" de \"{$artista_original}\"</p>
-                <p><strong>Corregido:</strong> \"{$cancion_nueva}\" de \"{$artista_nuevo}\"</p>
-                <p>Saludos,<br>Exel Eventos</p>";
+		$message = "<div style='font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px;'>
+		<h2 style='color: #568F23;'>Corrección en tu canción</h2>
+		<p style='font-size: 16px;'>Buenas,</p>
+		<p style='font-size: 16px;'>Una de tus canciones ha sido corregida.</p>
+		<p style='font-size: 16px; background-color: #f8f8f8; padding: 10px; border-left: 4px solid #568F23;'>
+			La canción <strong>\"{$cancion_original}\"</strong> de <strong>\"{$artista_original}\"</strong> ha sido modificada por
+			<strong>\"{$cancion_nueva}\"</strong> de <strong>\"{$artista_nuevo}\"</strong>.
+		</p>
+		<p style='font-size: 16px;'>Si tienes alguna duda, por favor, ponte en contacto con nosotros.</p>
+		<p style='font-size: 16px;'>Un saludo,</p>
+		<p style='font-size: 18px; font-weight: bold; color: #568F23;'>Exel Eventos</p>
+	</div>";
 
 		$this->sendEmail('info@exeleventos.com', $emails, $subject, $message);
 	}

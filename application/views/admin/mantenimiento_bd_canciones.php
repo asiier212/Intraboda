@@ -58,23 +58,31 @@
 	});
 
 	function validarcancion(id) {
-		if (confirm("\u00BFSeguro que desea validar la canci\u00f3n?")) {
-			//$("#result").html("Actualizando...");
-			$.ajax({
-				type: 'POST',
-				url: '<?php echo base_url() ?>index.php/ajax/validarbdcancion',
-				data: 'id=' + id,
-				dataType: 'json',
-				success: function(data) {
-					//$("#can_" + id).css("display", "none");
-					//$("#result").html("");
-					//location.reload();
-					location.href = '<?php echo base_url() ?>admin/mantenimiento_bd_canciones';
-				}
-			});
-		}
-		return false
-	}
+    if (confirm("\u00BFSeguro que desea validar la canci\u00f3n?")) {
+        $.ajax({
+            type: 'POST',
+            url: '<?php echo base_url() ?>index.php/ajax/validarbdcancion',
+            data: { id: id },
+            dataType: 'json',
+            success: function(response) {
+                console.log("Respuesta del servidor:", response);
+                
+                if (response.status === "success") {
+                    // Redirigir a la página de mantenimiento tras la validación
+                    location.href = '<?php echo base_url() ?>admin/mantenimiento_bd_canciones';
+                } else {
+                    alert("Error: " + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.log("Error en AJAX:", xhr.responseText);
+                alert("Se produjo un error al validar la canción.");
+            }
+        });
+    }
+    return false;
+}
+
 
 	function deletebdcancion(id) {
 		if (confirm("\u00BFSeguro que desea borrar la canci\u00f3n?")) {
