@@ -9,4 +9,4 @@ Desarrollo y solución de errores del sistema 'Intraboda' de exeleventos.com/
   $db['default']['database'] = 'db536033527'; (en principio, el nombre de la BD es la misma).<br>
 2. Cambiar la contraseña de admin en /application/controllers/admin.php de "a" a "49999327Bdj%ExEv".
 
-3. Las rutas del ajax como en servicios_view, parametrizacion, partidas presupuestarias, clientes_viewdetails, etc esta puestas para localhost...
+<strike>3. Las rutas del ajax como en servicios_view, parametrizacion, partidas presupuestarias, clientes_viewdetails, etc esta puestas para localhost...</strike>
