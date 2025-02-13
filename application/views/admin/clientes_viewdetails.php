@@ -227,7 +227,7 @@
 						destinatario
 					});
 
-					fetch("http://localhost/intraboda/admin/reenviar_clave", {
+					fetch(<?php echo site_url('admin/reenviar_clave') ?>, {
 							method: "POST",
 							headers: {
 								"Content-Type": "application/x-www-form-urlencoded"

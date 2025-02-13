@@ -76,29 +76,29 @@
 				  ?>
          <? if ($num_rows > $rows_page) {
 			 	if ($page > 2) { ?>
-                	<a class="pP" href="<?=$url_pag;?><?=$page-1;?>" title="Pagina <?=$page-1;?>">&laquo; Anterior</a>
+                	<a class="pP" href="<?php=$url_pag;?><?php=$page-1;?>" title="Pagina <?php=$page-1;?>">&laquo; Anterior</a>
 				<? } 
 				if ($page == 2) { ?>
-			    	<a href="<?=$url_pag;?>1" title="Pagina <?=$page-1;?>">&laquo; Anterior</a>
+			    	<a href="<?php=$url_pag;?>1" title="Pagina <?php=$page-1;?>">&laquo; Anterior</a>
 				<? } 
 				if ($page > 3) { ?>
-			    	<a href="<?=$url_pag;?>1">1</a> ...<?
+			    	<a href="<?php=$url_pag;?>1">1</a> ...<?
 				}
 				for ($i = $page - 2; $i <= $page + 2; $i++) {
 					if ($i == 1) { ?>
-			    		<a href="<?=$url_pag;?>1">1</a><?
+			    		<a href="<?php=$url_pag;?>1">1</a><?
 					}
 			  		if ($i == $page && $i != 1) { ?>
-				    	<a href="#" class="sel"><?=$i;?></a> <?
+				    	<a href="#" class="sel"><?php=$i;?></a> <?
 					} elseif ($i > 1 && $i <= $last_page) { ?>
-			        	<a href="<?=$url_pag;?><?=$i;?>" title="Pagina <?=$i;?>"><?=$i;?></a><?
+			        	<a href="<?php=$url_pag;?><?php=$i;?>" title="Pagina <?php=$i;?>"><?php=$i;?></a><?
 			  		}
 		 		}
 				if ($i - 1 < $last_page) { ?>
-			     	... <a href="<?=$url_pag;?><?=$last_page;?>" title="Pagina <?=$last_page;?>"><?=$last_page;?></a><?
+			     	... <a href="<?php=$url_pag;?><?php=$last_page;?>" title="Pagina <?php=$last_page;?>"><?php=$last_page;?></a><?
 				}
 				if ($page < $last_page) { ?>
-			  		<a class="nP" href="<?=$url_pag;?><?=$page+1;?>" title="Pagina <?=$page+1;?>">Siguiente &raquo;</a><?
+			  		<a class="nP" href="<?php=$url_pag;?><?php=$page+1;?>" title="Pagina <?php=$page+1;?>">Siguiente &raquo;</a><?
 				}
 		} ?>       
 </div> 

@@ -257,7 +257,7 @@ $(function() {
                 <option value=""></option>
                 <?php foreach($equipos as $e){?>
                 <option value="<?php echo $e['id_grupo']?>"><?php echo $e['nombre_grupo']?></option>
-             <? }?>
+             <?php }?>
             </select>
             <br><br><br>
             <label style="width:100px">Nombre:</label>
@@ -278,7 +278,7 @@ $(function() {
                 <option value=""></option>
                 <?php foreach($componentes as $c){?>
                 <option value="<?php echo $c['id_componente']?>"><?php echo $c['n_registro']?></option>
-                <? }?>
+                <?php }?>
             </select>
             <br><br><br>
             <label style="width:100px">Nº de registro:</label>
@@ -301,14 +301,14 @@ $(function() {
             <select style="display:block; float:left" name="grupo_equipos">
             	<?php foreach($equipos as $e){?>
             	<option value="<?php echo $e['id_grupo']?>"><?php echo $e['nombre_grupo']?></option>
-                <? }?>
+                <?php }?>
             </select>
         
         <label style="width:150px">Componentes:</label>
             <select style="display:block; float:left" name="grupo_componentes">
             	<?php foreach($componentes_no_asociados as $c){?>
             	<option value="<?php echo $c['id_componente']?>"><?php echo $c['n_registro']?></option>
-                <? }?>
+                <?php }?>
             </select>
             <input type="submit" style="width:100px; margin-left:10px; margin-left:150px;" name="asociar" value="Asociar" />
     </fieldset>
@@ -396,7 +396,7 @@ $(function() {
                 <option value=""></option>
                 <?php foreach($componentes as $c){?>
                 <option value="<?php echo $c['id_componente']?>"><?php echo $c['n_registro']?></option>
-                <? }?>
+                <?php }?>
             </select><br>
             <label style="width:100px">Reparación:</label>
             <textarea name="descripcion_reparacion" id="descripcion_reparacion" cols="30" rows="5" required /></textarea>            <br><br>
@@ -451,7 +451,7 @@ $(function() {
            </table>
            
            <div class="pag">
-        <?
+        <?php
 		if(isset($_GET['q']) && !isset($_GET['ord']))
 			$url_pag = base_url()."admin/mantenimiento_equipos?f=".$_GET['f']."&q=".$_GET['q']."&p=";
 		elseif(isset($_GET['q']) && isset($_GET['ord']))
@@ -461,31 +461,31 @@ $(function() {
 		
 		
 				  ?>
-         <? if ($num_rows > $rows_page) {
+         <?php if ($num_rows > $rows_page) {
 			 	if ($page > 2) { ?>
-                	<a class="pP" href="<?=$url_pag;?><?=$page-1;?>" title="Pagina <?=$page-1;?>">&laquo; Anterior</a>
-				<? } 
+                	<a class="pP" href="<?php=$url_pag;?><?php=$page-1;?>" title="Pagina <?php=$page-1;?>">&laquo; Anterior</a>
+				<?php } 
 				if ($page == 2) { ?>
-			    	<a href="<?=$url_pag;?>1" title="Pagina <?=$page-1;?>">&laquo; Anterior</a>
-				<? } 
+			    	<a href="<?php=$url_pag;?>1" title="Pagina <?php=$page-1;?>">&laquo; Anterior</a>
+				<?php } 
 				if ($page > 3) { ?>
-			    	<a href="<?=$url_pag;?>1">1</a> ...<?
+			    	<a href="<?php=$url_pag;?>1">1</a> ...<?php
 				}
 				for ($i = $page - 2; $i <= $page + 2; $i++) {
 					if ($i == 1) { ?>
-			    		<a href="<?=$url_pag;?>1">1</a><?
+			    		<a href="<?php=$url_pag;?>1">1</a><?php
 					}
 			  		if ($i == $page && $i != 1) { ?>
-				    	<a href="#" class="sel"><?=$i;?></a> <?
+				    	<a href="#" class="sel"><?php=$i;?></a> <?php
 					} elseif ($i > 1 && $i <= $last_page) { ?>
-			        	<a href="<?=$url_pag;?><?=$i;?>" title="Pagina <?=$i;?>"><?=$i;?></a><?
+			        	<a href="<?php=$url_pag;?><?php=$i;?>" title="Pagina <?php=$i;?>"><?php=$i;?></a><?php
 			  		}
 		 		}
 				if ($i - 1 < $last_page) { ?>
-			     	... <a href="<?=$url_pag;?><?=$last_page;?>" title="Pagina <?=$last_page;?>"><?=$last_page;?></a><?
+			     	... <a href="<?php=$url_pag;?><?php=$last_page;?>" title="Pagina <?php=$last_page;?>"><?php=$last_page;?></a><?php
 				}
 				if ($page < $last_page) { ?>
-			  		<a class="nP" href="<?=$url_pag;?><?=$page+1;?>" title="Pagina <?=$page+1;?>">Siguiente &raquo;</a><?
+			  		<a class="nP" href="<?php=$url_pag;?><?php=$page+1;?>" title="Pagina <?php=$page+1;?>">Siguiente &raquo;</a><?php
 				}
 		 }?>       
 </div> 

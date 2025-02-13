@@ -1,3 +1,4 @@
+
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <!-- jQuery UI -->
@@ -123,7 +124,7 @@
 					});
 				});
 				$.ajax({
-					url: "http://localhost/intraboda/admin/actualizar_orden_partidas_presupuestarias",
+					url: "<?php echo site_url('admin/actualizar_orden_partidas_presupuestarias'); ?>",
 					method: "POST",
 					data: {
 						order: order

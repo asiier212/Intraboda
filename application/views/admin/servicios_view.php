@@ -67,7 +67,7 @@
                     });
                 });
                 $.ajax({
-                    url: "http://localhost/intraboda/admin/actualizar_orden_servicios",
+                    url: "<?php echo site_url('admin/actualizar_orden_servicios'); ?>",
                     method: "POST",
                     data: {
                         order: order
@@ -82,7 +82,7 @@
                 var mostrar = $(this).is(":checked") ? 1 : 0;
 
                 $.ajax({
-                    url: "http://localhost/intraboda/admin/actualizar_mostrar_servicio",
+                    url: "<?php echo site_url('admin/actualizar_mostrar_servicio'); ?>",
                     method: "POST",
                     data: {
                         id: servicioId,

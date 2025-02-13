@@ -1,3 +1,4 @@
+
 <script src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery-1.10.2.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery-ui-1.10.4.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php echo base_url() ?>js/colorpicker/js/evol.colorpicker.min.js" type="text/javascript" charset="utf-8"></script>
@@ -121,7 +122,7 @@
 				<?php if (!empty($cuentas_bancarias)) : ?>
 					<?php foreach ($cuentas_bancarias as $cuenta) : ?>
 						<li id="cuenta_<?php echo $cuenta['id_cuenta'] ?>" class="sortable-item">
-							<?php echo $cuenta['orden'] . ". " . $cuenta['entidad'] . " - " . $cuenta['iban'] . " " . $cuenta['codigo_entidad'] . " " . $cuenta['codigo_oficina'] . " " . $cuenta['codigo_control'] . " " . $cuenta['numero_cuenta']; ?>
+							<?php echo $cuenta['orden'] . " " . $cuenta['entidad'] . " - " . $cuenta['iban'] . " " . $cuenta['codigo_entidad'] . " " . $cuenta['codigo_oficina'] . " " . $cuenta['codigo_control'] . " " . $cuenta['numero_cuenta']; ?>
 							<a href="#" onclick="return deletecuenta_bancaria(<?php echo $cuenta['id_cuenta'] ?>)">
 								<img src="<?php echo base_url() ?>img/delete.gif" width="15" />
 							</a>
@@ -279,7 +280,7 @@
 
 				// Enviar el nuevo orden al servidor
 				$.ajax({
-					url: "http://localhost/intraboda/admin/actualizar_orden_cuentas",
+					url: "<?php echo site_url('admin/actualizar_orden_cuentas'); ?>",
 					method: "POST",
 					data: {
 						order: order
@@ -305,7 +306,7 @@
 
 				// Enviar el nuevo orden al servidor
 				$.ajax({
-					url: "http://localhost/intraboda/admin/actualizar_orden_canales",
+					url: "<?php echo site_url('admin/actualizar_orden_canales'); ?>",
 					method: "POST",
 					data: {
 						order: order
@@ -331,7 +332,7 @@
 
 				// Enviar el nuevo orden al servidor
 				$.ajax({
-					url: "http://localhost/intraboda/admin/actualizar_orden_momentos",
+					url: "<?php echo site_url('admin/actualizar_orden_momentos'); ?>",
 					method: "POST",
 					data: {
 						order: order
@@ -357,7 +358,7 @@
 
 				// Enviar el nuevo orden al servidor
 				$.ajax({
-					url: "http://localhost/intraboda/admin/actualizar_orden_estados",
+					url: "<?php echo site_url('admin/actualizar_orden_estados'); ?>",
 					method: "POST",
 					data: {
 						order: order
@@ -383,7 +384,7 @@
 
                 // Enviar el nuevo orden al servidor
 				$.ajax({
-					url: "http://localhost/intraboda/admin/actualizar_orden_tipos_clientes",
+					url: "<?php echo site_url('admin/actualizar_orden_tipos_clientes'); ?>",
 					method: "POST",
 					data: {
 						order: order

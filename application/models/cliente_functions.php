@@ -629,33 +629,52 @@
 	}
 	function GetAvailableServicios($user_id)
 	{
-		$data = false;
+		$data = [];
 		$this->load->database();
-		$query = $this->db->query("SELECT servicios FROM clientes WHERE id = {$user_id}");
+	
+		// Evitar inyección SQL asegurando que user_id es un número
+		$query = $this->db->query("SELECT servicios FROM clientes WHERE id = ?", [$user_id]);
+	
 		if ($query->num_rows() > 0) {
 			$fila = $query->row();
-
-			$arr_servicios = unserialize($fila->servicios);
-			$arr_serv_keys = array_keys($arr_servicios);
-
-			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios  WHERE id NOT IN (" . $arr_serv_keys[0] . ") ORDER BY orden ASC");
+	
+			// Verificar si el campo 'servicios' está serializado antes de unserialize()
+			$arr_servicios = @unserialize($fila->servicios);
+			if ($arr_servicios === false && $fila->servicios !== 'b:0;') {
+				$arr_servicios = json_decode($fila->servicios, true);
+			}
+	
+			// Verificar que sea un array válido antes de usar array_keys()
+			$arr_serv_keys = is_array($arr_servicios) ? array_keys($arr_servicios) : [];
+	
+			// Construir la consulta evitando errores de SQL
+			if (!empty($arr_serv_keys)) {
+				$placeholders = implode(',', array_map('intval', $arr_serv_keys));
+				$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios 
+					WHERE id NOT IN ($placeholders) ORDER BY orden ASC");
+			} else {
+				$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios ORDER BY orden ASC");
+			}
 		} else {
 			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios ORDER BY orden ASC");
 		}
-
+	
+		// Procesar resultados
 		if ($query->num_rows() > 0) {
-			$i = 0;
 			foreach ($query->result() as $fila) {
-				$data[$i]['id'] = $fila->id;
-				$data[$i]['nombre'] = $fila->nombre;
-				$data[$i]['precio'] = $fila->precio;
-				$data[$i]['precio_oferta'] = $fila->precio_oferta;
-				$data[$i]['mostrar'] = $fila->mostrar;
-				$i++;
+				$data[] = [
+					'id' => $fila->id,
+					'nombre' => $fila->nombre,
+					'precio' => $fila->precio,
+					'precio_oferta' => $fila->precio_oferta,
+					'mostrar' => $fila->mostrar
+				];
 			}
 		}
+	
 		return $data;
 	}
+	
 	function GetPagos($cliente_id)
 	{
 		$data = array();
