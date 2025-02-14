@@ -586,6 +586,7 @@ class Admin extends CI_Controller
 		}
 		if ($acc == 'view') {
 			$this->load->database();
+			log_message('debug', '🔍 ID recibido: ' . var_export($id, true));
 			if ($id) {
 				if ($_POST) {
 					if (isset($_POST['enviar_archivo'])) {
@@ -630,16 +631,18 @@ class Admin extends CI_Controller
 			$str_where = "";
 
 			if (isset($_GET['p']))
-				$data['page'] = $_GET['p'];
+			$data['page'] = $_GET['p'];
 			else
-				$data['page'] = 1;
+			$data['page'] = 1;
 
 			if (isset($_GET['q'])) {
 
-				$str_where = "WHERE " . $_GET['f'] . " LIKE '%" . $_GET['q'] . "%'";
+			$str_where = "WHERE " . $_GET['f'] . " LIKE '%" . $_GET['q'] . "%'";
 			}
 
 			$query = $this->db->query("SELECT id_restaurante FROM restaurantes {$str_where}");
+			log_message('debug', 'Consulta SQL: SELECT id_restaurante FROM restaurantes ' . $str_where);
+
 			$data['num_rows'] = $query->num_rows();
 
 			$data['rows_page'] = 15;

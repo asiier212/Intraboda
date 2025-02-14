@@ -390,6 +390,42 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
+	function InsertRestaurante($data)
+	{
+		
+		$this->load->database();
+					
+		$this->db->insert('restaurantes', $data);
+		
+		$id_cliente = $this->db->insert_id();
+		
+		return $this->db->insert_id();
+	
+	}
+	
+	function GetRestaurantes($str_where, $ord, $limit)
+	{
+		$data = false;
+		$this->load->database();
+		
+		$query = $this->db->query("SELECT id_restaurante, nombre, direccion, telefono, maitre, telefono_maitre, hora_limite_fiesta FROM restaurantes {$str_where} ORDER BY {$ord}   {$limit}");
+		if($query->num_rows() > 0){
+			$i = 0;
+			foreach($query->result() as $fila){				
+				$data[$i]['id_restaurante'] = $fila->id_restaurante;
+				$data[$i]['nombre'] = $fila->nombre;
+				$data[$i]['direccion'] = $fila->direccion;
+				$data[$i]['telefono'] = $fila->telefono;
+				$data[$i]['maitre'] = $fila->maitre;
+				$data[$i]['telefono_maitre'] = $fila->telefono_maitre;
+				$data[$i]['hora_limite_fiesta'] = $fila->hora_limite_fiesta;
+				$i++;
+			}
+		}
+		return $data;
+	}
+	
+
 	function GetRestaurante($id)
 	{
 		$data = false;
