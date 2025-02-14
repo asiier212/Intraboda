@@ -1,3 +1,4 @@
+
 <script type="text/javascript" src="<?php echo base_url() ?>js/jquery/development-bundle/ui/jquery.jeditable.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url() ?>js/tooltip.js"></script>
@@ -227,8 +228,8 @@
 						destinatario
 					});
 
-					fetch(<?php echo site_url('admin/reenviar_clave') ?>, {
-							method: "POST",
+					fetch("<?php echo site_url('admin/reenviar_clave'); ?>", {
+						method: "POST",
 							headers: {
 								"Content-Type": "application/x-www-form-urlencoded"
 							},

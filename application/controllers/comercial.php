@@ -10,6 +10,7 @@ class Comercial extends CI_Controller
 		//$this->load->helper(array('form', 'url'));
 		$this->load->library('session');
 		$this->load->model('comercial_functions');
+		$this->load->database(); // Ensure the database library is loaded
 		if (!$this->session->userdata('id') && $this->router->method != 'login') {
 			redirect('comercial/login');
 		}
@@ -329,6 +330,180 @@ class Comercial extends CI_Controller
 	}
 
 
+
+
+	function emails($acc = false, $id = false)
+	{
+		$data_header = false;
+		$data = false;
+		$data_footer = false;
+
+		if ($acc == 'add' && $_POST) {
+			$this->add_email();
+			return;
+		}
+
+		if ($acc == 'delete') {
+			$this->drop_email($id);
+			return;
+		}
+
+		if ($acc == 'edit') {
+			$this->edit_email($id);
+			return;
+		}
+
+		if ($acc == 'view') {
+			$this->load->database();
+			$data['emails'] = $this->db->get('emails_automaticos')->result();
+		}
+
+		$this->_loadViews($data_header, $data, $data_footer, "emails");
+	}
+
+	private function add_email()
+	{
+		$this->load->database();
+
+		if (empty($_POST['asunto']) || empty($_POST['cuerpo']) || empty($_POST['dias'])) {
+			echo "Error: Todos los campos son obligatorios.";
+			return;
+		}
+
+		$asunto = $this->input->post('asunto');
+		$cuerpo = $this->input->post('cuerpo');
+		$dias = (int) $this->input->post('dias');
+
+		// Manejo de la firma (JPG)
+		$firma_nombre = "";
+		if (!empty($_FILES['firma']['name'])) {
+			$config['upload_path'] = './uploads/comerciales/firmas/';
+			$config['allowed_types'] = 'jpg';
+			$config['max_size'] = 2048; // 2MB máximo
+			$config['file_name'] = time() . '_' . $_FILES['firma']['name'];
+
+			$this->load->library('upload', $config);
+
+			if ($this->upload->do_upload('firma')) {
+				$upload_data = $this->upload->data();
+				$firma_nombre = $upload_data['file_name'];
+			} else {
+				echo "Error al subir la firma: " . $this->upload->display_errors();
+				return;
+			}
+		}
+
+		// Insertar en la base de datos
+		$data_insert = array(
+			'asunto' => $asunto,
+			'cuerpo' => $cuerpo,
+			'dias' => $dias,
+			'firma' => $firma_nombre,
+			'estado' => 'activo'
+		);
+
+		if ($this->db->insert('emails_automaticos', $data_insert)) {
+			redirect('comercial/emails/view');
+		} else {
+			echo "Error al insertar el email.";
+		}
+	}
+
+	function drop_email($id)
+	{
+		$this->load->database();
+		$this->db->where('id', $id);
+		$this->db->delete('emails_automaticos');
+		redirect('comercial/emails/view');
+	}
+
+	function edit_email($id)
+	{
+		$this->load->database();
+
+		// Si se envió el formulario (método POST), procesamos la actualización
+		if ($_POST) {
+			// Validar datos obligatorios
+			if (empty($_POST['asunto']) || empty($_POST['cuerpo']) || empty($_POST['dias'])) {
+				echo "Error: Todos los campos son obligatorios.";
+				return;
+			}
+
+			$asunto = $this->input->post('asunto');
+			$cuerpo = $this->input->post('cuerpo');
+			$dias = (int) $this->input->post('dias');
+
+			// Obtener datos actuales para no perder la firma si no se sube una nueva
+			$email_actual = $this->db->get_where('emails_automaticos', ['id' => $id])->row();
+			$firma_nombre = $email_actual->firma;
+
+			// Manejo de la firma (si se sube una nueva)
+			if (!empty($_FILES['firma']['name'])) {
+				$config['upload_path'] = './uploads/comerciales/firmas/';
+				$config['allowed_types'] = 'jpg';
+				$config['max_size'] = 2048; // 2MB máximo
+				$config['file_name'] = time() . '_' . $_FILES['firma']['name'];
+
+				$this->load->library('upload', $config);
+
+				if ($this->upload->do_upload('firma')) {
+					$upload_data = $this->upload->data();
+					$firma_nombre = $upload_data['file_name']; // Guardamos el nuevo nombre de la firma
+				} else {
+					echo "Error al subir la firma: " . $this->upload->display_errors();
+					return;
+				}
+			}
+
+			// Actualizar en la base de datos
+			$data_update = array(
+				'asunto' => $asunto,
+				'cuerpo' => $cuerpo,
+				'dias' => $dias,
+				'firma' => $firma_nombre
+			);
+
+			$this->db->where('id', $id);
+			if ($this->db->update('emails_automaticos', $data_update)) {
+				redirect('comercial/emails/view');
+			} else {
+				echo "Error al actualizar el email.";
+			}
+			return;
+		}
+
+		// Si no se envió el formulario, mostramos la vista con los datos actuales
+		$data['email'] = $this->db->get_where('emails_automaticos', ['id' => $id])->row();
+		$this->_loadViews($data_header, $data, $data_footer, "edit_email");
+	}
+
+
+    public function update_email_status()
+    {
+        $this->load->database();
+    
+        // REGISTRA LO QUE SE ESTÁ RECIBIENDO
+        log_message('error', 'POST DATA: ' . json_encode($_POST));
+    
+        $id = $this->input->post('id');
+        $estado = $this->input->post('estado');
+    
+        if (!isset($id) || !isset($estado)) {
+            log_message('error', 'Faltan datos: ID=' . $id . ', Estado=' . $estado);
+            echo json_encode(['success' => false, 'message' => 'Datos incorrectos']);
+            return;
+        }
+    
+        $this->db->where('id', $id);
+        $success = $this->db->update('emails_automaticos', ["estado" => $estado]);
+
+        if (!$success) {
+            log_message('error', 'SQL ERROR: ' . $this->db->error()['message']);
+        }
+    
+        echo json_encode(['success' => $success]);
+    }
+	
 
 
 
@@ -781,7 +956,7 @@ class Comercial extends CI_Controller
 				}
 			}
 
-			$mail->addCC('rajlopa@gmail.com');
+			//$mail->addCC('rajlopa@gmail.com');
 			/* $mail->addBCC('bcc@example.com'); */
 
 			// Email subject
