@@ -6,7 +6,7 @@ class Comercial extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		//$this->load->helper('url');
+		$this->load->helper('url');
 		//$this->load->helper(array('form', 'url'));
 		$this->load->library('session');
 		$this->load->model('comercial_functions');
@@ -354,7 +354,9 @@ class Comercial extends CI_Controller
 		}
 
 		if ($acc == 'view') {
+			$id_comercial = $this->session->userdata('id');
 			$this->load->database();
+			$this->db->where('id_comercial', $id_comercial);
 			$data['emails'] = $this->db->get('emails_automaticos')->result();
 		}
 
@@ -365,14 +367,17 @@ class Comercial extends CI_Controller
 	{
 		$this->load->database();
 
-		if (empty($_POST['asunto']) || empty($_POST['cuerpo']) || empty($_POST['dias'])) {
+		if (empty($_POST['asunto']) || empty($_POST['cuerpo']) || empty($_POST['fecha_envio'])) {
 			echo "Error: Todos los campos son obligatorios.";
 			return;
 		}
 
 		$asunto = $this->input->post('asunto');
-		$cuerpo = $this->input->post('cuerpo');
-		$dias = (int) $this->input->post('dias');
+		$cuerpo = $this->input->post('cuerpo', false);
+		$fecha_envio = $this->input->post('fecha_envio');
+		$email_prueba = $this->input->post('email_prueba');
+		$id_comercial = $this->session->userdata('id');
+
 
 		// Manejo de la firma (JPG)
 		$firma_nombre = "";
@@ -397,8 +402,10 @@ class Comercial extends CI_Controller
 		$data_insert = array(
 			'asunto' => $asunto,
 			'cuerpo' => $cuerpo,
-			'dias' => $dias,
+			'fecha_envio' => $fecha_envio,
 			'firma' => $firma_nombre,
+			'email_prueba' => $email_prueba,
+			'id_comercial' => $id_comercial,
 			'estado' => 'activo'
 		);
 
@@ -424,18 +431,19 @@ class Comercial extends CI_Controller
 		// Si se envió el formulario (método POST), procesamos la actualización
 		if ($_POST) {
 			// Validar datos obligatorios
-			if (empty($_POST['asunto']) || empty($_POST['cuerpo']) || empty($_POST['dias'])) {
+			if (empty($_POST['asunto']) || empty($_POST['cuerpo']) || empty($_POST['fecha_envio'])) {
 				echo "Error: Todos los campos son obligatorios.";
 				return;
 			}
 
 			$asunto = $this->input->post('asunto');
 			$cuerpo = $this->input->post('cuerpo');
-			$dias = (int) $this->input->post('dias');
+			$fecha_envio = $this->input->post('fecha_envio');
 
 			// Obtener datos actuales para no perder la firma si no se sube una nueva
 			$email_actual = $this->db->get_where('emails_automaticos', ['id' => $id])->row();
 			$firma_nombre = $email_actual->firma;
+			$email_prueba = $this->input->post('email_prueba');
 
 			// Manejo de la firma (si se sube una nueva)
 			if (!empty($_FILES['firma']['name'])) {
@@ -459,8 +467,9 @@ class Comercial extends CI_Controller
 			$data_update = array(
 				'asunto' => $asunto,
 				'cuerpo' => $cuerpo,
-				'dias' => $dias,
-				'firma' => $firma_nombre
+				'fecha_envio' => $fecha_envio,
+				'firma' => $firma_nombre,
+				'email_prueba' => $email_prueba
 			);
 
 			$this->db->where('id', $id);
@@ -478,32 +487,139 @@ class Comercial extends CI_Controller
 	}
 
 
-    public function update_email_status()
-    {
-        $this->load->database();
-    
-        // REGISTRA LO QUE SE ESTÁ RECIBIENDO
-        log_message('error', 'POST DATA: ' . json_encode($_POST));
-    
-        $id = $this->input->post('id');
-        $estado = $this->input->post('estado');
-    
-        if (!isset($id) || !isset($estado)) {
-            log_message('error', 'Faltan datos: ID=' . $id . ', Estado=' . $estado);
-            echo json_encode(['success' => false, 'message' => 'Datos incorrectos']);
-            return;
-        }
-    
-        $this->db->where('id', $id);
-        $success = $this->db->update('emails_automaticos', ["estado" => $estado]);
+	public function update_email_status()
+	{
+		$this->load->database();
 
-        if (!$success) {
-            log_message('error', 'SQL ERROR: ' . $this->db->error()['message']);
-        }
-    
-        echo json_encode(['success' => $success]);
-    }
-	
+		// REGISTRA LO QUE SE ESTÁ RECIBIENDO
+		log_message('error', 'POST DATA: ' . json_encode($_POST));
+
+		$id = $this->input->post('id');
+		$estado = $this->input->post('estado');
+
+		if (!isset($id) || !isset($estado)) {
+			log_message('error', 'Faltan datos: ID=' . $id . ', Estado=' . $estado);
+			echo json_encode(['success' => false, 'message' => 'Datos incorrectos']);
+			return;
+		}
+
+		$this->db->where('id', $id);
+		$success = $this->db->update('emails_automaticos', ["estado" => $estado]);
+
+		if (!$success) {
+			log_message('error', 'SQL ERROR: ' . $this->db->error()['message']);
+		}
+
+		echo json_encode(['success' => $success]);
+	}
+
+	public function enviarEmailsPendientes()
+	{
+		// Obtener los emails automáticos activos que deben enviarse hoy
+		$emails = $this->comercial_functions->getEmailsParaEnviar();
+		log_message('info', "Emails automáticos a enviar hoy: " . json_encode($emails));
+
+		foreach ($emails as $email) {
+			// Si tiene un email de prueba, enviar solo a ese email
+			if (!empty($email->email_prueba)) {
+				$this->enviarEmailAutomatico($email->email_prueba, $email, null);
+				continue; // Pasar al siguiente email automático
+			}
+
+			// Si no tiene email de prueba, buscar clientes que deban recibirlo
+			$clientes = $this->comercial_functions->getClientesPendientes($email->fecha_envio);
+			log_message('info', "Clientes a los que enviar el email: " . json_encode($clientes));
+
+			if (!empty($clientes)) {
+				foreach ($clientes as $cliente) {
+					$this->enviarEmailAutomatico($cliente->email, $email, $cliente);
+					log_message('info', "Email enviado a {$cliente->email}");
+				}
+			}
+		}
+	}
+
+	private function enviarEmailAutomatico($destinatario, $email, $cliente = null)
+	{
+		$from = $this->session->userdata('email_comercial');  // Email del comercial desde la sesión
+
+		if (empty($from)) {
+			log_message('error', "No se pudo obtener el email del comercial.");
+			return;
+		}
+
+		log_message('info', "Email del comercial obtenido: " . $from);
+
+		$subject = $email->asunto;
+		$message = "<p>{$email->cuerpo}</p>";
+
+		if (!empty($email->firma)) {
+			$message .= "<br><img src='" . base_url() . "uploads/comerciales/firmas/{$email->firma}' alt='Firma' style='max-width: 200px;'>";
+		}
+
+		// Enviar email desde el servidor SMTP central con la dirección del comercial
+		if ($this->sendEmailAutomatico($from, $destinatario, $subject, $message)) {
+			log_message('info', "Email automático enviado correctamente.");
+			if ($cliente) {
+				$this->comercial_functions->registrarEmailEnviado($email->id, $cliente->id_solicitud, $cliente->id_comercial);
+			}
+		} else {
+			log_message('error', "Fallo en el envío del email automático.");
+		}
+	}
+
+
+
+	private function sendEmailAutomatico($from, $to, $subject, $message)
+	{
+		try {
+			$this->load->library('PHPMailer_Lib');
+			$mail = $this->phpmailer_lib->load();
+			$mail->isSMTP();
+
+			// Usamos la configuración de mailconfig.php
+			$this->config->load('mailconfig');
+			$mail->Host = $this->config->item('host');
+			$mail->SMTPAuth = $this->config->item('smtpauth');
+			$mail->Username = $this->config->item('username');  // Usuario del SMTP central
+			$mail->Password = $this->config->item('password');  // Contraseña del SMTP central
+			$mail->SMTPSecure = $this->config->item('smtpsecure');
+			$mail->Port = $this->config->item('port');
+			$mail->isHTML(true);
+			$mail->CharSet = 'UTF-8';
+
+			// Enviar email desde la cuenta centralizada
+			$mail->setFrom($this->config->item('username'), 'Exel Eventos');
+			$mail->addReplyTo($from, 'Exel Eventos');  // Esto hace que las respuestas vayan al comercial
+
+			// Validar destinatario
+			if (filter_var($to, FILTER_VALIDATE_EMAIL)) {
+				$mail->addAddress($to);
+			} else {
+				log_message('error', "Email inválido: " . var_export($to, true));
+				return false;
+			}
+
+			// Asunto y cuerpo del email
+			$mail->Subject = $subject;
+			$mail->Body = $message;
+
+			// Enviar email
+			if (!$mail->send()) {
+				log_message('error', "Error al enviar email automático desde {$from}: " . $mail->ErrorInfo);
+				return false;
+			}
+
+			log_message('info', "Email automático enviado desde {$this->config->item('username')} a {$to} con asunto: {$subject}. Responderán a: {$from}");
+			return true;
+		} catch (Exception $e) {
+			log_message('error', "Error en sendEmailAutomatico: " . $e->getMessage());
+			return false;
+		}
+	}
+
+
+
 
 
 
@@ -956,14 +1072,8 @@ class Comercial extends CI_Controller
 				}
 			}
 
-			//$mail->addCC('rajlopa@gmail.com');
-			/* $mail->addBCC('bcc@example.com'); */
-
-			// Email subject
 			$mail->Subject = $subject;
-			// Set email format to HTML
 			$mail->isHTML(true);
-			// Email body content
 
 			$mail->Body = $message;
 			// Send email
@@ -972,6 +1082,18 @@ class Comercial extends CI_Controller
 			}
 		} catch (Exception $e) {
 			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
+		}
+	}
+
+	public function borrarFirma()
+	{
+		$id = $this->input->post('id');
+
+		if ($id) {
+			$this->comercial_functions->vaciarFirma($id);
+			echo json_encode(['status' => 'success']);
+		} else {
+			echo json_encode(['status' => 'error', 'message' => 'ID no válido']);
 		}
 	}
 }
