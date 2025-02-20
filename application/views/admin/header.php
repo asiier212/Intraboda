@@ -53,6 +53,7 @@
                     <li><a href="<?php echo base_url() ?>admin/persons/view">Personas de contacto</a></li>
                     <li><a href="<?php echo base_url() ?>admin/djs/view">DJs</a></li>
                     <li><a href="<?php echo base_url() ?>admin/comerciales/view">Comerciales</a></li>
+                    <li><a href="<?php echo base_url() ?>admin/emails_enviados">Emails Automáticos</a></li>
                     <li><a href="<?php echo base_url() ?>admin/restaurantes/view">Restaurantes</a></li>
                 </ul>
             </li>

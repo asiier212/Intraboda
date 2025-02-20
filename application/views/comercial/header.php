@@ -55,7 +55,7 @@ function posicionarMenu() {
             <li><a href="<?php echo base_url() ?>comercial/presupuestos_eventos/view">Listar Presupuestos Eventos</a></li>
             <li><a href="">Emails</a>
                 <ul>
-                    <li><a href="<?php echo base_url() ?>comercial/emails">Emails Automaticos</a></li>
+                    <li><a href="<?php echo base_url() ?>comercial/emails">Emails Automáticos</a></li>
                     <li><a href="<?php echo base_url() ?>comercial/emails_enviados">Emails Enviados</a></li>
                 </ul>
             </li>

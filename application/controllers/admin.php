@@ -45,6 +45,35 @@ class Admin extends CI_Controller
 		$this->load->view('admin/login', $data);
 	}
 
+	function emails_enviados($acc = false, $id = false)
+	{
+		$data_header = false;
+		$data = false;
+		$data_footer = false;
+
+		$this->load->database();
+
+		$this->db->select('
+        emails_enviados.id,
+		emails_automaticos.id AS id_email,
+        emails_automaticos.asunto AS asunto_email,
+        solicitudes.nombre AS nombre_solicitante,
+        solicitudes.apellidos AS apellido_solicitante,
+        comerciales.nombre AS nombre_comercial,
+        emails_enviados.fecha_envio
+    ');
+		$this->db->from('emails_enviados');
+		$this->db->join('emails_automaticos', 'emails_enviados.id_email = emails_automaticos.id', 'left');
+		$this->db->join('solicitudes', 'emails_enviados.id_solicitud = solicitudes.id_solicitud', 'left');
+		$this->db->join('comerciales', 'emails_enviados.id_comercial = comerciales.id', 'left');
+
+		$query = $this->db->get();
+		$data['emails_enviados'] = $query->result();
+
+		// Cargar la vista con los datos
+		$this->_loadViews($data_header, $data, $data_footer, "emails_enviados");
+	}
+
 	public function actualizar_orden_servicios()
 	{
 		$order = $this->input->post('order');

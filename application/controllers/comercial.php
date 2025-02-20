@@ -330,6 +330,34 @@ class Comercial extends CI_Controller
 	}
 
 
+	function emails_enviados($acc = false, $id = false)
+	{
+		$data_header = false;
+		$data = false;
+		$data_footer = false;
+
+		$this->load->database();
+
+		$this->db->select('
+        emails_enviados.id,
+		emails_automaticos.id AS id_email,
+        emails_automaticos.asunto AS asunto_email,
+        solicitudes.nombre AS nombre_solicitante,
+        solicitudes.apellidos AS apellido_solicitante,
+        comerciales.nombre AS nombre_comercial,
+        emails_enviados.fecha_envio
+    ');
+		$this->db->from('emails_enviados');
+		$this->db->join('emails_automaticos', 'emails_enviados.id_email = emails_automaticos.id', 'left');
+		$this->db->join('solicitudes', 'emails_enviados.id_solicitud = solicitudes.id_solicitud', 'left');
+		$this->db->join('comerciales', 'emails_enviados.id_comercial = comerciales.id', 'left');
+
+		$query = $this->db->get();
+		$data['emails_enviados'] = $query->result();
+
+		// Cargar la vista con los datos
+		$this->_loadViews($data_header, $data, $data_footer, "emails_enviados");
+	}
 
 
 	function emails($acc = false, $id = false)
@@ -353,8 +381,9 @@ class Comercial extends CI_Controller
 			return;
 		}
 
-		if ($acc == 'view') {
+		if ($acc == '' || $acc == 'view') {
 			$id_comercial = $this->session->userdata('id');
+			log_message('info', "ID Comercial: " . $id_comercial);
 			$this->load->database();
 			$this->db->where('id_comercial', $id_comercial);
 			$data['emails'] = $this->db->get('emails_automaticos')->result();
@@ -539,9 +568,10 @@ class Comercial extends CI_Controller
 		}
 	}
 
-	private function enviarEmailAutomatico($destinatario, $email, $cliente = null)
+	private function enviarEmailAutomatico($destinatario, $email, $cliente)
 	{
 		$from = $this->session->userdata('email_comercial');  // Email del comercial desde la sesión
+		$id_comercial = $this->session->userdata('id');
 
 		if (empty($from)) {
 			log_message('error', "No se pudo obtener el email del comercial.");
@@ -560,9 +590,8 @@ class Comercial extends CI_Controller
 		// Enviar email desde el servidor SMTP central con la dirección del comercial
 		if ($this->sendEmailAutomatico($from, $destinatario, $subject, $message)) {
 			log_message('info', "Email automático enviado correctamente.");
-			if ($cliente) {
-				$this->comercial_functions->registrarEmailEnviado($email->id, $cliente->id_solicitud, $cliente->id_comercial);
-			}
+			log_message('info', "ID Solicitud: " . $id_solicitud);
+			$this->comercial_functions->registrarEmailEnviado($email->id, $cliente->id_solicitud, $id_comercial);
 		} else {
 			log_message('error', "Fallo en el envío del email automático.");
 		}

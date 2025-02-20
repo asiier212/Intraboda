@@ -570,14 +570,18 @@ class Comercial_functions extends CI_Model
 	public function getEmailsParaEnviar()
 	{
 		$fechaHoy = date('Y-m-d');
+		$id_comercial = $this->session->userdata('id');
+		log_message("INFO", "id comercial: " . $id_comercial);
+		
 
 		$this->db->select('*');
 		$this->db->from('emails_automaticos');
 		$this->db->where('estado', 1);
 		$this->db->where('fecha_envio', $fechaHoy);
-
+		$this->db->where('id_comercial', $id_comercial);
 		return $this->db->get()->result();
 	}
+
 
 	public function getClientesPendientes($fecha_envio)
 	{

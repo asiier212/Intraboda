@@ -1,4 +1,4 @@
-<h2>Emails</h2>
+<h2>Emails Automáticos</h2>
 <!-- Botón para mostrar el formulario -->
 <button id="toggleFormButton" style="margin-bottom: 20px; width: 180px; cursor: pointer;">
     Añadir Email
