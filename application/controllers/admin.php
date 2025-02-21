@@ -660,13 +660,13 @@ class Admin extends CI_Controller
 			$str_where = "";
 
 			if (isset($_GET['p']))
-			$data['page'] = $_GET['p'];
+				$data['page'] = $_GET['p'];
 			else
-			$data['page'] = 1;
+				$data['page'] = 1;
 
 			if (isset($_GET['q'])) {
 
-			$str_where = "WHERE " . $_GET['f'] . " LIKE '%" . $_GET['q'] . "%'";
+				$str_where = "WHERE " . $_GET['f'] . " LIKE '%" . $_GET['q'] . "%'";
 			}
 
 			$query = $this->db->query("SELECT id_restaurante FROM restaurantes {$str_where}");
@@ -922,9 +922,24 @@ class Admin extends CI_Controller
 						$servicios = serialize($_POST['servicios']);
 						$this->db->query("UPDATE clientes SET servicios = '" . $servicios . "' WHERE id = {$id}");
 					}
-					if (isset($_POST['add_observ'])) {
-						$this->db->query("INSERT INTO observaciones (id_cliente,comentario) VALUES ({$id}, '" . str_replace("'", "''", $_POST['observaciones']) . "')");
+					if (isset($_POST['add_observ']) && !empty($_POST['observaciones']) && $id) {
+						$data_insert = array(
+							'id_cliente' => $id,
+							'comentario' => $_POST['observaciones'],
+							'link' => $_POST['link']
+						);
+
+						if ($this->db->insert('observaciones', $data_insert)) {
+							$this->session->set_flashdata('msg', 'Se ha añadido con éxito');
+						} else {
+							$this->session->set_flashdata('msg', 'Error al añadir la observación.');
+						}
+
+						redirect("admin/clientes/view/{$id}");
 					}
+
+
+
 
 					if (isset($_POST['update_dj'])) {
 						//ACTUALIZAMOS LA TABLA DE HORAS CON EL NUEVO DJ O EN BLANCO SI EL DJ LO DEJAMOS SIN ASIGNAR//
@@ -1268,32 +1283,32 @@ class Admin extends CI_Controller
 	{
 		if ($this->input->post('eliminar_factura')) {
 			$id_factura = $this->input->post('id_factura');
-	
+
 			// Verifica si existe la factura
 			$query = $this->db->get_where('facturas', ['id_factura' => $id_factura]);
 			$factura = $query->row();
-	
+
 			if ($factura) {
 				$ruta_archivo = './uploads/facturas/' . $factura->factura_pdf;
-	
+
 				// Eliminar el archivo del servidor si existe
 				if (file_exists($ruta_archivo)) {
 					unlink($ruta_archivo);
 				}
-	
+
 				// Eliminar la factura de la base de datos
 				$this->db->delete('facturas', ['id_factura' => $id_factura]);
-	
+
 				// Redirigir con mensaje de éxito
 				$this->session->set_flashdata('msg', 'Factura eliminada correctamente.');
 			} else {
 				$this->session->set_flashdata('msg', 'Error: La factura no existe.');
 			}
-	
+
 			redirect($_SERVER['HTTP_REFERER']);
 		}
 	}
-	
+
 
 
 	function servicios($acc = false, $id = false)

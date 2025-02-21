@@ -1,4 +1,3 @@
-
 <script type="text/javascript" src="<?php echo base_url() ?>js/jquery/development-bundle/ui/jquery.jeditable.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url() ?>js/tooltip.js"></script>
@@ -229,7 +228,7 @@
 					});
 
 					fetch("<?php echo site_url('admin/reenviar_clave'); ?>", {
-						method: "POST",
+							method: "POST",
 							headers: {
 								"Content-Type": "application/x-www-form-urlencoded"
 							},
@@ -669,14 +668,27 @@
 			<legend>Servicios</legend>
 			<ul>
 				<?php
-				$arr_servicios = unserialize($cliente['servicios']);
-				$total = array_sum($arr_servicios);
+				$arr_servicios = !empty($cliente['servicios']) ? unserialize($cliente['servicios']) : [];
+				$total = !empty($arr_servicios) ? array_sum($arr_servicios) : 0;
 				$arr_serv_keys = array_keys($arr_servicios);
+
 				foreach ($servicios as $servicio) {
 				?>
-					<li><input type="checkbox" name="servicios[<?php echo $servicio['id'] ?>]" <?php echo in_array($servicio['id'], $arr_serv_keys) ? 'checked="checked"' : '' ?> id="chserv_<?php echo $servicio['id'] ?>" value="<?php echo in_array($servicio['id'], $arr_serv_keys) ? $arr_servicios[$servicio['id']] : $servicio['precio'] ?>" style="width:30px; vertical-align:middle" /><?php echo $servicio['nombre'] . " - "; ?><input type="text" onchange="$('#chserv_<?php echo $servicio['id'] ?>').val(this.value)" id="precioserv_<?php echo $servicio['id'] ?>" name="servicio_precio[<?php echo $servicio['id'] ?>]" value="<?php echo in_array($servicio['id'], $arr_serv_keys) ? $arr_servicios[$servicio['id']] : $servicio['precio'] ?>" style="width:50px; text-align:center" /> &euro;</li>
+					<li>
+						<input type="checkbox" name="servicios[<?php echo $servicio['id']; ?>]"
+							<?php echo (is_array($arr_servicios) && in_array($servicio['id'], $arr_serv_keys)) ? 'checked="checked"' : ''; ?>
+							id="chserv_<?php echo $servicio['id']; ?>"
+							value="<?php echo (is_array($arr_servicios) && in_array($servicio['id'], $arr_serv_keys)) ? $arr_servicios[$servicio['id']] : $servicio['precio']; ?>"
+							style="width:30px; vertical-align:middle" />
+						<?php echo $servicio['nombre'] . " - "; ?>
+						<input type="text"
+							onchange="$('#chserv_<?php echo $servicio['id']; ?>').val(this.value)"
+							id="precioserv_<?php echo $servicio['id']; ?>"
+							name="servicio_precio[<?php echo $servicio['id']; ?>]"
+							value="<?php echo (is_array($arr_servicios) && in_array($servicio['id'], $arr_serv_keys)) ? $arr_servicios[$servicio['id']] : $servicio['precio']; ?>"
+							style="width:50px; text-align:center" /> &euro;
+					</li>
 				<?php } ?>
-
 			</ul>
 
 			<input type="submit" name="update_servicios" value="Actualizar servicios" />
@@ -769,28 +781,60 @@
 
 		<fieldset class="datos">
 			<legend>Observaciones</legend>
-			<?php
-			if (!$observaciones_cliente)
-				echo '<p style="text-align:center;padding:20px">Todav&iacute;a no se ha a&ntilde;adido observaciones</p>';
-			else {
-				echo "<ul class=\"observaciones obs_admin\">";
 
-				foreach ($observaciones_cliente as $observacion) { ?>
+			<?php if (!$observaciones_cliente): ?>
+				<p style="text-align:center;padding:20px">Todavía no se han añadido observaciones</p>
+			<?php else: ?>
+				<ul class="observaciones obs_admin" id="lista_observaciones">
+					<?php foreach ($observaciones_cliente as $observacion): ?>
+						<li id="o_<?php echo $observacion['id']; ?>"
+							style="margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; 
+                   border-radius: 5px; background-color: #f9f9f9; 
+                   display: flex; justify-content: space-between; align-items: center;">
 
-					<li id="o_<?php echo $observacion['id'] ?>"><?php echo $observacion['comentario'] . " (" . $observacion['fecha'] ?>)
-						<a href="#" onclick="return deleteobservacion_admin(<?php echo $observacion['id'] ?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a>
-					</li>
-			<?php }
+							<div>
+								<strong>Observación:</strong> <?php echo $observacion['comentario']; ?><br>
 
-				echo "</ul>";
-			}
+								<?php
+								$url = trim($observacion['link']); // Eliminar espacios extra
+								if (!empty($url)) {
+									if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
+										$url = "http://" . $url; // Agregar "http://" si no está presente
+									}
+									echo '<a href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . '" target="_blank" style="color: #007bff; text-decoration: none;">' . htmlspecialchars($observacion['link'], ENT_QUOTES, 'UTF-8') . '</a><br>';
+								}
+								?>
 
-			?>
-			<textarea name="observaciones" style="width:600px; height:100px; float:left"></textarea>
+								<small style="color: #666;">Fecha: <?php echo date('d/m/Y', strtotime($observacion['fecha'])); ?></small>
+							</div>
 
-			<div style="padding:20px; text-align:center"><input type="submit" name="add_observ" value="Añadir"></div>
-			<div style="text-align:center; clear: left; margin-top:20px"><?php if (isset($_POST['add_observ'])) echo "Se ha añadido con &eacute;xito"; ?></div>
+							<a href="#" onclick="return deleteobservacion_admin(<?php echo $observacion['id']; ?>)">
+								<img src="<?php echo base_url(); ?>img/delete.gif" width="15" alt="Eliminar" style="margin-right: 10px" />
+							</a>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+
+
+
+			<?php endif; ?>
+
+			<form method="post" action="" id="form_observacion" style="display: flex; flex-direction: column;">
+				<textarea name="observaciones" id="observaciones" style="width:600px; height:100px; float:left" placeholder="Observación"></textarea>
+				<br>
+				<input style="text-align: left" type="text" name="link" id="link" placeholder="Link" style="width:300px; float:left" />
+				<br>
+				<input type="submit" name="add_observ" value="Añadir">
+
+			</form>
+
+			<div style="text-align:center; clear: left; margin-top:20px">
+				<?php if ($this->session->flashdata('msg')): ?>
+					<p><?php echo $this->session->flashdata('msg'); ?></p>
+				<?php endif; ?>
+			</div>
 		</fieldset>
+
 		<div class="clear"> </div>
 		<fieldset class="datos">
 			<legend>Listado personas de contacto</legend>

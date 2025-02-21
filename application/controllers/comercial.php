@@ -583,14 +583,15 @@ class Comercial extends CI_Controller
 		$subject = $email->asunto;
 		$message = "<p>{$email->cuerpo}</p>";
 
+		// Adjuntar la firma si existe
+		$firma_path = "";
 		if (!empty($email->firma)) {
-			$message .= "<br><img src='" . base_url() . "uploads/comerciales/firmas/{$email->firma}' alt='Firma' style='max-width: 200px;'>";
+			$firma_path = FCPATH . "uploads/comerciales/firmas/{$email->firma}";
 		}
 
-		// Enviar email desde el servidor SMTP central con la dirección del comercial
-		if ($this->sendEmailAutomatico($from, $destinatario, $subject, $message)) {
+		// Enviar email y pasar la ruta de la firma
+		if ($this->sendEmailAutomatico($from, $destinatario, $subject, $message, $firma_path)) {
 			log_message('info', "Email automático enviado correctamente.");
-			log_message('info', "ID Solicitud: " . $id_solicitud);
 			$this->comercial_functions->registrarEmailEnviado($email->id, $cliente->id_solicitud, $id_comercial);
 		} else {
 			log_message('error', "Fallo en el envío del email automático.");
@@ -599,7 +600,8 @@ class Comercial extends CI_Controller
 
 
 
-	private function sendEmailAutomatico($from, $to, $subject, $message)
+
+	private function sendEmailAutomatico($from, $to, $subject, $message, $firma_path = "")
 	{
 		try {
 			$this->load->library('PHPMailer_Lib');
@@ -610,8 +612,8 @@ class Comercial extends CI_Controller
 			$this->config->load('mailconfig');
 			$mail->Host = $this->config->item('host');
 			$mail->SMTPAuth = $this->config->item('smtpauth');
-			$mail->Username = $this->config->item('username');  // Usuario del SMTP central
-			$mail->Password = $this->config->item('password');  // Contraseña del SMTP central
+			$mail->Username = $this->config->item('username');
+			$mail->Password = $this->config->item('password');
 			$mail->SMTPSecure = $this->config->item('smtpsecure');
 			$mail->Port = $this->config->item('port');
 			$mail->isHTML(true);
@@ -619,7 +621,7 @@ class Comercial extends CI_Controller
 
 			// Enviar email desde la cuenta centralizada
 			$mail->setFrom($this->config->item('username'), 'Exel Eventos');
-			$mail->addReplyTo($from, 'Exel Eventos');  // Esto hace que las respuestas vayan al comercial
+			$mail->addReplyTo($from, 'Exel Eventos');
 
 			// Validar destinatario
 			if (filter_var($to, FILTER_VALIDATE_EMAIL)) {
@@ -627,6 +629,12 @@ class Comercial extends CI_Controller
 			} else {
 				log_message('error', "Email inválido: " . var_export($to, true));
 				return false;
+			}
+
+			// Adjuntar imagen de la firma si existe
+			if (!empty($firma_path) && file_exists($firma_path)) {
+				$cid = $mail->addEmbeddedImage($firma_path, 'firma_img', basename($firma_path));
+				$message .= "<br><img src='cid:firma_img' alt='Firma' style='max-width: 200px;'>";
 			}
 
 			// Asunto y cuerpo del email
@@ -646,11 +654,6 @@ class Comercial extends CI_Controller
 			return false;
 		}
 	}
-
-
-
-
-
 
 
 
