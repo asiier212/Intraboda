@@ -61,6 +61,7 @@
 <script>
     tinymce.init({
         selector: 'textarea',
+        branding: false,
         plugins: ['autolink', 'emoticons', 'link', 'lists', 'searchreplace', 'table', 'wordcount'],
         toolbar: 'undo redo | bold italic underline | link image media table | checklist numlist bullist | emoticons charmap | removeformat',
     });

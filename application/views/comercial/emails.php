@@ -63,6 +63,7 @@
 <script>
     tinymce.init({
         selector: 'textarea',
+        branding: false,
         plugins: [
             // Core editing features
             'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',

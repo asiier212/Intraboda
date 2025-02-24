@@ -1,5 +1,7 @@
 <h2>Emails Enviados</h2>
 
+<p style="font-style: italic; color: gray;">Haz click en el email para ver mas información.</p>
+
 <table class="tabledata">
     <tr>
         <th style="width:100px"><a style="color:#FFF; text-decoration:underline">Email</th>

@@ -794,7 +794,7 @@
 
 							<div>
 								<strong>Observación:</strong> <?php echo $observacion['comentario']; ?><br>
-
+								<span>Link:</span>
 								<?php
 								$url = trim($observacion['link']); // Eliminar espacios extra
 								if (!empty($url)) {
@@ -814,19 +814,31 @@
 						</li>
 					<?php endforeach; ?>
 				</ul>
-
-
-
 			<?php endif; ?>
-
-			<form method="post" action="" id="form_observacion" style="display: flex; flex-direction: column;">
-				<textarea name="observaciones" id="observaciones" style="width:600px; height:100px; float:left" placeholder="Observación"></textarea>
+			<li style="padding:8px 0;"><strong>Añadir Observación:</strong></li>
+			<form method="post" action="" id="form_observacion" style="display: flex; flex-direction: column; align-items: left;">
+				<textarea name="observaciones" id="observaciones" style="width:100%; height:50px; float:left" placeholder="Observación" required></textarea>
 				<br>
-				<input style="text-align: left" type="text" name="link" id="link" placeholder="Link" style="width:300px; float:left" />
+				<li style="padding:8px 0;"><strong>Link:</strong></li>
+				<input style="text-align: left" type="text" name="link" id="link" placeholder="Ej.: https://www.youtube.com/watch?v=a1Femq4NPxs" style="width:300px; float:left" />
 				<br>
 				<input type="submit" name="add_observ" value="Añadir">
 
 			</form>
+
+			<!-- Place the first <script> tag in your HTML's <head> -->
+			<script src="https://cdn.tiny.cloud/1/o6bdbfrosyztaa19zntejfp6e2chzykthzzh728vtdjokot2/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+			<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+			<script>
+				tinymce.init({
+					selector: 'textarea', // Asegúrate de que este es tu selector correcto
+					toolbar: 'bold italic fontsizeselect', // Solo negritas, cursiva y cambio de tamaño
+					font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt', // Tamaños permitidos
+					content_style: 'body { font-size: 14px; }', // Ajusta el tamaño predeterminado
+					branding: false // Oculta el logo de TinyMCE
+				});
+			</script>
 
 			<div style="text-align:center; clear: left; margin-top:20px">
 				<?php if ($this->session->flashdata('msg')): ?>

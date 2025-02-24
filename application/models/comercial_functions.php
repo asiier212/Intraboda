@@ -219,8 +219,7 @@ class Comercial_functions extends CI_Model
 		$data = false;
 		$this->load->database();
 
-
-		$query = $this->db->query("SELECT solicitudes.id_solicitud, llamadas_solicitudes.id_llamada, DATE_FORMAT(llamadas_solicitudes.fecha_llamada, '%d-%m-%Y %H:%i') as fecha_llamada, llamadas_solicitudes.id_comercial,  llamadas_solicitudes.proxima_llamada FROM solicitudes INNER JOIN llamadas_solicitudes ON solicitudes.id_solicitud=llamadas_solicitudes.id_solicitud WHERE solicitudes.estado_solicitud<>2 AND solicitudes.estado_solicitud<>5 AND solicitudes.estado_solicitud<>8 ORDER BY llamadas_solicitudes.proxima_llamada ASC");
+		$query = $this->db->query("SELECT solicitudes.id_solicitud, llamadas_solicitudes.id_llamada, DATE_FORMAT(llamadas_solicitudes.fecha_llamada, '%d-%m-%Y %H:%i') as fecha_llamada, llamadas_solicitudes.id_comercial,  llamadas_solicitudes.proxima_llamada FROM solicitudes INNER JOIN llamadas_solicitudes ON solicitudes.id_solicitud=llamadas_solicitudes.id_solicitud WHERE solicitudes.estado_solicitud<>2 AND solicitudes.estado_solicitud<>5 ORDER BY llamadas_solicitudes.proxima_llamada ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
