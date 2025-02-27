@@ -338,15 +338,30 @@
 			<ul>
 				<?php
 				foreach ($servicios as $servicio) { ?>
-					<li><input type="checkbox" name="servicios[<?php echo $servicio['id'] ?>]" id="chserv_<?php echo $servicio['id'] ?>" value="<?php echo $servicio['precio'] ?>" style="width:30px; vertical-align:middle" /><?php echo $servicio['nombre']; ?><input type="text" onchange="$('#chserv_<?php echo $servicio['id'] ?>').val(this.value)" value="<?php echo $servicio['precio'] ?>" style="width:50px; text-align:center" /> &euro;</li>
+					<li>
+						<input type="checkbox" name="servicios[<?php echo $servicio['id'] ?>]"
+							id="chserv_<?php echo $servicio['id'] ?>"
+							style="width:30px; vertical-align:middle" />
+						<?php echo $servicio['nombre']; ?> -
+						<input type="text" id="precio_<?php echo $servicio['id'] ?>"
+							value="<?php echo $servicio['precio']; ?>"
+							style="width:50px; text-align:center" />€
+						Dto
+						<input type="text"
+							id="dtoserv_<?php echo $servicio['id']; ?>"
+							name="servicio_dto[<?php echo $servicio['id']; ?>]"
+							value="<?php echo $servicio['descuento']; ?>"
+							style="width:50px; text-align:center" />
+
+					</li>
+
+
+
 				<?php } ?>
 				<li>Descuento: <input type="text" name="descuento" style="width:60px" /></li>
 			</ul>
 		</fieldset>
-		<!--<fieldset class="datos"> 
-        <legend>Observaciones</legend>
-        <textarea name="observaciones" style="width:100%; height:200px"></textarea>
-     </fieldset>-->
+
 		<div class="clear"> </div>
 		<fieldset class="datos">
 			<legend>Listado personas de contacto</legend>

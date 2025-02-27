@@ -193,29 +193,30 @@ class Cliente extends CI_Controller
 			}
 		}
 	}
-	public function topSongs() {
+	public function topSongs()
+	{
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-	
+
 		// Obtener filtros desde la URL
 		$fechaDesde = $this->input->get('fecha_desde');
 		$fechaHasta = $this->input->get('fecha_hasta');
 		$momentoSeleccionado = $this->input->get('momento');
-	
+
 		// Obtener todas las opciones de momentos de la base de datos (sin filtros)
-		$momentosDisponibles = $this->cliente_functions->getAllMomentos(); 
-	
+		$momentosDisponibles = $this->cliente_functions->getAllMomentos();
+
 		// Obtener las canciones filtradas
 		$topsongs = $this->cliente_functions->getTopSongs($fechaDesde, $fechaHasta, $momentoSeleccionado);
-	
+
 		$data['topsongs'] = $topsongs;
 		$data['momentos'] = $momentosDisponibles; // Usar todos los momentos en el select
 		$data['momentoSeleccionado'] = $momentoSeleccionado;
-	
+
 		$this->_loadViews($data_header, $data, $data_footer, "topsongs");
 	}
-	
+
 
 
 
@@ -242,6 +243,7 @@ class Cliente extends CI_Controller
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
+
 		if ($acc == 'view') {
 			if ($_POST) {
 				if (isset($_POST['clave']) && $_POST['clave'] != '') {
@@ -251,11 +253,10 @@ class Cliente extends CI_Controller
 					$data['msg_clave'] = 'La contrase&ntilde;a ha sido cambiada con &eacute;xito';
 				}
 				if (isset($_POST['subir_foto']) && $_POST['subir_foto'] != '') {
-
 					$config['upload_path'] = './uploads/foto_perfil/';
 					$config['allowed_types'] = 'gif|jpg|png';
 					$this->load->library('upload', $config);
-					if (! $this->upload->do_upload("foto")) {
+					if (!$this->upload->do_upload("foto")) {
 						$data['msg_foto'] = $this->upload->display_errors();
 					} else {
 						$data['upload_data'] = $this->upload->data();
@@ -269,50 +270,90 @@ class Cliente extends CI_Controller
 					$_POST['mas_importancia'] = implode(",", $_POST['mas_importancia']);
 					$_POST['menos_importancia'] = implode(",", $_POST['menos_importancia']);
 
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['participativo_dj'] . "' WHERE id_pregunta='1' AND id_cliente='" . $this->session->userdata('user_id') . "'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['participativos_invitados'] . "' WHERE id_pregunta='2' AND id_cliente='" . $this->session->userdata('user_id') . "'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['num_invitados'] . "' WHERE id_pregunta='3' AND id_cliente='" . $this->session->userdata('user_id') . "'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['ampliar_fiesta'] . "' WHERE id_pregunta='4' AND id_cliente='" . $this->session->userdata('user_id') . "'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['flexibilidad_restaurante'] . "' WHERE id_pregunta='5' AND id_cliente='" . $this->session->userdata('user_id') . "'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['hora_ultimo_autobus'] . "' WHERE id_pregunta='6' AND id_cliente='" . $this->session->userdata('user_id') . "'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['mas_importancia'] . "' WHERE id_pregunta='7' AND id_cliente='" . $this->session->userdata('user_id') . "'");
-					$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST['menos_importancia'] . "' WHERE id_pregunta='8' AND id_cliente='" . $this->session->userdata('user_id') . "'");
-					//Mandamos un email de que se ha actualizado la encuesta
+					$preguntas = [
+						'participativo_dj' => 1,
+						'participativos_invitados' => 2,
+						'num_invitados' => 3,
+						'ampliar_fiesta' => 4,
+						'flexibilidad_restaurante' => 5,
+						'hora_ultimo_autobus' => 6,
+						'mas_importancia' => 7,
+						'menos_importancia' => 8
+					];
+
+					foreach ($preguntas as $campo => $id_pregunta) {
+						$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST[$campo] . "' WHERE id_pregunta='$id_pregunta' AND id_cliente='" . $this->session->userdata('user_id') . "'");
+					}
+
+					// Notificación por email
 					$query = $this->db->query("SELECT nombre_novio, nombre_novia, fecha_boda FROM clientes WHERE id = '" . $this->session->userdata('user_id') . "'");
 					$fila = $query->row();
-					$nombre_novio = $fila->nombre_novio;
-					$nombre_novia = $fila->nombre_novia;
-					$fecha_boda = $fila->fecha_boda;
 					$mensaje = '<table border="0" width="100%">
-						<tr>
-							<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/logo_intranet.png" width="200"></td>
-							<td align="justify">
-							
-							<p>¡¡Hola!!</p>
-											 
-							<p>Se ha actualizado la encuesta respecto a la boda de ' . $nombre_novio . ' y ' . $nombre_novia . ' que se casan el día ' . $fecha_boda . '.</p>
-								
-							<p>Atentamente Administración EXEL Eventos</p>
-								 
-							</td>
-							</tr>
-						</table>';
+                    <tr>
+                        <td align="center"><img src="http://www.bilbodj.com/intranetv3/img/logo_intranet.png" width="200"></td>
+                        <td align="justify">
+                        <p>¡¡Hola!!</p>
+                        <p>Se ha actualizado la encuesta respecto a la boda de ' . $fila->nombre_novio . ' y ' . $fila->nombre_novia . ' que se casan el día ' . $fila->fecha_boda . '.</p>
+                        <p>Atentamente Administración EXEL Eventos</p>
+                        </td>
+                    </tr>
+                </table>';
 					$this->enviar_mail(utf8_decode("IntraBoda - Actualización de encuesta respecto a la boda"), utf8_decode($mensaje));
 				}
 			}
+
+			// Obtener datos del cliente
 			$data['cliente'] = $this->cliente_functions->GetCliente($this->session->userdata('user_id'));
-			$arr_servicios = unserialize($data['cliente']['servicios']);
+
+			// Deserializar `servicios` y asegurar compatibilidad con el formato antiguo
+			$arr_servicios = !empty($data['cliente']['servicios']) ? unserialize($data['cliente']['servicios']) : [];
+
+			foreach ($arr_servicios as $id => $valor) {
+				// Si el formato es antiguo (solo precios), convertirlo a nuevo
+				if (!is_array($valor)) {
+					$arr_servicios[$id] = array(
+						'precio' => floatval($valor),
+						'descuento' => 0
+					);
+				}
+			}
+
+			// Guardamos los servicios corregidos en `$data['cliente']['servicios']`
+			$data['cliente']['servicios'] = $arr_servicios;
+
+			log_message('debug', 'Servicios después de conversión: ' . print_r($data['cliente']['servicios'], true));
+
 			$arr_serv_keys = array_keys($arr_servicios);
 
+			if (!empty($arr_serv_keys)) {
+				$ids = implode(",", array_map('intval', $arr_serv_keys)); // Asegurar que son números
+				log_message('debug', 'Buscando servicios con IDs: ' . $ids);
 
+				$data['servicios'] = $this->cliente_functions->GetServicios($ids);
+
+				if (empty($data['servicios'])) {
+					log_message('error', '⚠️ ERROR: GetServicios() devolvió vacío. Posibles causas: IDs incorrectos o tabla vacía.');
+					$data['servicios'] = []; // Evita el error en la vista
+				} else {
+					log_message('debug', 'Servicios obtenidos en el controlador: ' . print_r($data['servicios'], true));
+				}
+			} else {
+				log_message('debug', 'No hay servicios en el array de claves.');
+				$data['servicios'] = [];
+			}
+
+
+			// Cargar otros datos necesarios
 			$data['preguntas_encuesta_datos_boda'] = $this->cliente_functions->GetPreguntasEncuestaDatosBoda();
 			$data['respuestas_encuesta_datos_boda'] = $this->cliente_functions->GetRespuestasEncuestaDatosBoda($this->session->userdata('user_id'));
-			$data['servicios'] = $this->cliente_functions->GetServicios(implode(",", $arr_serv_keys));
 			$data['pagos'] = $this->cliente_functions->GetPagos($this->session->userdata('user_id'));
 			$data['dj'] = $this->cliente_functions->GetDjAsignado($this->session->userdata('user_id'));
 		}
+
+		// Cargar la vista con los datos
 		$this->_loadViews($data_header, $data, $data_footer, "cliente_details");
 	}
+
 
 	public function chat()
 	{
@@ -770,7 +811,6 @@ class Cliente extends CI_Controller
 				}
 			}
 
-			$mail->addCC('raljopa@gmail.com');
 			/* $mail->addBCC('bcc@example.com'); */
 			error_log("VAmos a enviar un email a " . var_export($to, 1), 3, "./r");
 			// Email subject

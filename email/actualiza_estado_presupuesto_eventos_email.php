@@ -123,7 +123,6 @@ function sendEmail($from, $to, $subject, $message) {
             }
         }
 
-        $mail->addCC('rajlopa@gmail.com');
         /* $mail->addBCC('bcc@example.com'); */
 
         // Email subject

@@ -165,7 +165,6 @@ class Admin_functions extends CI_Model
               mail($data['email_novia'], $asunto, $mensaje, $cabeceras); */
 			$this->sendEmail('info@exeleventos.com', [$data['email_novio']], $asunto, $mensaje);
 			$this->sendEmail('info@exeleventos.com', [$data['email_novia']], $asunto, $mensaje);
-
 		}
 
 		return $this->db->insert_id();
@@ -392,26 +391,25 @@ class Admin_functions extends CI_Model
 
 	function InsertRestaurante($data)
 	{
-		
+
 		$this->load->database();
-					
+
 		$this->db->insert('restaurantes', $data);
-		
+
 		$id_cliente = $this->db->insert_id();
-		
+
 		return $this->db->insert_id();
-	
 	}
-	
+
 	function GetRestaurantes($str_where, $ord, $limit)
 	{
 		$data = false;
 		$this->load->database();
-		
+
 		$query = $this->db->query("SELECT id_restaurante, nombre, direccion, telefono, maitre, telefono_maitre, hora_limite_fiesta FROM restaurantes {$str_where} ORDER BY {$ord}   {$limit}");
-		if($query->num_rows() > 0){
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){				
+			foreach ($query->result() as $fila) {
 				$data[$i]['id_restaurante'] = $fila->id_restaurante;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['direccion'] = $fila->direccion;
@@ -424,7 +422,7 @@ class Admin_functions extends CI_Model
 		}
 		return $data;
 	}
-	
+
 
 	function GetRestaurante($id)
 	{
@@ -1142,11 +1140,11 @@ class Admin_functions extends CI_Model
 	}
 
 
-	function GetPreguntasEncuestaDatosBoda()
+	function GetPreguntasEncuestaCliente()
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_pregunta, pregunta FROM preguntas_encuesta_datos_boda");
+		$query = $this->db->query("SELECT id_pregunta, pregunta FROM preguntas_encuesta_datos_boda ORDER BY id_pregunta ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -1158,11 +1156,46 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function GetRespuestasEncuestaDatosBoda($id)
+	function GetRespuestasEncuestaCliente()
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM respuestas_encuesta_datos_boda WHERE id_cliente = {$id}");
+		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM respuestas_encuesta_datos_boda Where id_pregunta = 1 ORDER BY id_respuesta ASC");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_respuesta'] = $fila->id_respuesta;
+				$data[$i]['id_pregunta'] = $fila->id_pregunta;
+				$data[$i]['respuesta'] = $fila->respuesta;
+				$i++;
+			}
+		}
+		return $data;
+	}
+	
+
+	function GetPreguntasEncuesta()
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id_pregunta, pregunta, importe_descuento FROM preguntas_encuesta ORDER BY id_pregunta ASC");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_pregunta'] = $fila->id_pregunta;
+				$data[$i]['pregunta'] = $fila->pregunta;
+				$data[$i]['importe_descuento'] = $fila->importe_descuento;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
+	function GetRespuestasPreguntas()
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM respuestas_encuesta ORDER BY id_respuesta ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -1566,40 +1599,6 @@ class Admin_functions extends CI_Model
 				$data[$i]['email'] = $fila->email;
 				$data[$i]['web'] = $fila->web;
 				$data[$i]['logo_mail'] = $fila->logo_mail;
-				$i++;
-			}
-		}
-		return $data;
-	}
-
-	function GetPreguntasEncuesta()
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT id_pregunta, pregunta, importe_descuento FROM preguntas_encuesta ORDER BY id_pregunta ASC");
-		if ($query->num_rows() > 0) {
-			$i = 0;
-			foreach ($query->result() as $fila) {
-				$data[$i]['id_pregunta'] = $fila->id_pregunta;
-				$data[$i]['pregunta'] = $fila->pregunta;
-				$data[$i]['importe_descuento'] = $fila->importe_descuento;
-				$i++;
-			}
-		}
-		return $data;
-	}
-
-	function GetRespuestasPreguntas()
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM respuestas_encuesta ORDER BY id_respuesta ASC");
-		if ($query->num_rows() > 0) {
-			$i = 0;
-			foreach ($query->result() as $fila) {
-				$data[$i]['id_respuesta'] = $fila->id_respuesta;
-				$data[$i]['id_pregunta'] = $fila->id_pregunta;
-				$data[$i]['respuesta'] = $fila->respuesta;
 				$i++;
 			}
 		}

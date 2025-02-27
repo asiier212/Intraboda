@@ -732,7 +732,6 @@ class Clientedj extends CI_Controller {
                 }
             }
 
-            $mail->addCC('rajlopa@gmail.com');
             /* $mail->addBCC('bcc@example.com'); */
 
             // Email subject

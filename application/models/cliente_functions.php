@@ -558,34 +558,24 @@
 
 		return $data;
 	}
-	function GetServicios($servicios)
-	{
-		$data = false;
-		$this->load->database();
-
-		// Verificar que $servicios sea un array y contenga datos
-		if (!is_array($servicios) || empty($servicios)) {
-			return $data; // Retornar false si no hay servicios válidos
+	public function GetServicios($ids) {
+		if (empty($ids)) {
+			log_message('error', '⚠️ ERROR en GetServicios(): No se recibieron IDs.');
+			return [];
 		}
-
-		// Asegurar que todos los valores sean enteros para evitar inyección SQL
-		$ids = implode(',', array_map('intval', $servicios));
-
-		// Ejecutar la consulta solo si hay IDs válidos
-		$query = $this->db->query("SELECT id, nombre, precio FROM servicios WHERE id IN ($ids) ORDER BY orden");
-
-		if ($query->num_rows() > 0) {
-			$i = 0;
-			foreach ($query->result() as $fila) {
-				$data[$i]['id'] = $fila->id;
-				$data[$i]['nombre'] = $fila->nombre;
-				$data[$i]['precio'] = $fila->precio;
-				$i++;
-			}
+	
+		log_message('debug', 'Ejecutando consulta: SELECT id, nombre FROM servicios WHERE id IN (' . $ids . ')');
+		
+		$query = $this->db->query("SELECT id, nombre FROM servicios WHERE id IN ($ids)");
+		
+		if ($query->num_rows() == 0) {
+			log_message('error', '⚠️ ERROR: La consulta a servicios no devolvió resultados.');
+			return [];
 		}
-
-		return $data;
+	
+		return $query->result_array();
 	}
+	
 
 	function SendMailPersona($persona_id, $mail_desde, $asunto, $mensaje)
 	{
@@ -735,7 +725,6 @@
 				}
 			}
 
-			$mail->addCC('rajlopa@gmail.com');
 			/* $mail->addBCC('bcc@example.com'); */
 
 			// Email subject

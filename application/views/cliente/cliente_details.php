@@ -128,71 +128,71 @@
     			<?php
 				if ($respuestas_encuesta_datos_boda[0] <> "") {
 					foreach ($preguntas_encuesta_datos_boda as $preguntas) {
-				?><li>- <strong><?php echo $preguntas['pregunta'] ?></strong></li><br><?php
-																						foreach ($respuestas_encuesta_datos_boda as $respuestas) {
-																							if ($respuestas['id_pregunta'] == $preguntas['id_pregunta']) {
-																								if ($preguntas['id_pregunta'] == '1') {
-																						?>
+				?><li><strong><?php echo $preguntas['pregunta'] ?></strong></li><br><?php
+																					foreach ($respuestas_encuesta_datos_boda as $respuestas) {
+																						if ($respuestas['id_pregunta'] == $preguntas['id_pregunta']) {
+																							if ($preguntas['id_pregunta'] == '1') {
+																					?>
     								<p><select name="participativo_dj" id="participacion1">
     										<option value="<?php echo $respuestas['respuesta'] ?>"><?php echo $respuestas['respuesta'] ?></option>
     										<?php
-																									for ($i = 1; $i <= 10; $i++) {
+																								for ($i = 1; $i <= 10; $i++) {
 											?><option value="<?php echo $i ?>"><?php echo $i ?></option><?php
 																									}
 																										?>
     									</select></p>
     							<?php
-																								}
-																								if ($preguntas['id_pregunta'] == '2') {
+																							}
+																							if ($preguntas['id_pregunta'] == '2') {
 								?>
     								<p><select name="participativos_invitados" id="participacion2">
     										<option value="<?php echo $respuestas['respuesta'] ?>"><?php echo $respuestas['respuesta'] ?></option>
     										<?php
-																									for ($i = 1; $i <= 10; $i++) {
+																								for ($i = 1; $i <= 10; $i++) {
 											?><option value="<?php echo $i ?>"><?php echo $i ?></option><?php
 																									}
 																										?>
     									</select></p>
     							<?php
-																								}
-																								if ($preguntas['id_pregunta'] == '3') {
+																							}
+																							if ($preguntas['id_pregunta'] == '3') {
 								?>
     								<li>Invitados: <input type="text" id="num_invitados" name="num_invitados" value="<?php echo $respuestas['respuesta'] ?>"></li><br>
     								<?php
-																								}
-																								if ($preguntas['id_pregunta'] == '4') {
-																									if ($respuestas['respuesta'] == 'Si') {
+																							}
+																							if ($preguntas['id_pregunta'] == '4') {
+																								if ($respuestas['respuesta'] == 'Si') {
 									?>
     									<li><input type="radio" name="ampliar_fiesta" value="Si" checked> Sí</li>
     									<li><input type="radio" id="ampliar_fiesta" name="ampliar_fiesta" value="No"> No</li><br>
     								<?php
-																									} else {
+																								} else {
 									?>
     									<li><input type="radio" name="ampliar_fiesta" value="Si"> Sí</li>
     									<li><input type="radio" id="ampliar_fiesta" name="ampliar_fiesta" value="No" checked> No</li><br>
     								<?php
-																									}
 																								}
-																								if ($preguntas['id_pregunta'] == '5') {
-																									if ($respuestas['respuesta'] == 'Si') {
+																							}
+																							if ($preguntas['id_pregunta'] == '5') {
+																								if ($respuestas['respuesta'] == 'Si') {
 									?>
     									<li><input type="radio" name="flexibilidad_restaurante" value="Si" checked> Sí</li>
     									<li><input type="radio" id="flexibilidad_restaurante" name="flexibilidad_restaurante" value="No"> No</li><br>
     								<?php
-																									} else {
+																								} else {
 									?>
     									<li><input type="radio" name="flexibilidad_restaurante" value="Si"> Sí</li>
     									<li><input type="radio" id="flexibilidad_restaurante" name="flexibilidad_restaurante" value="No" checked> No</li><br>
     								<?php
-																									}
 																								}
-																								if ($preguntas['id_pregunta'] == '6') {
+																							}
+																							if ($preguntas['id_pregunta'] == '6') {
 									?>
     								<li>Hora: <input type="text" id="hora_ultimo_autobus" name="hora_ultimo_autobus" value="<?php echo $respuestas['respuesta'] ?>"></li><br>
     							<?php
-																								}
-																								if ($preguntas['id_pregunta'] == 7) {
-																									$mas = explode(",", $respuestas['respuesta']);
+																							}
+																							if ($preguntas['id_pregunta'] == 7) {
+																								$mas = explode(",", $respuestas['respuesta']);
 								?>
     								<li><input type="checkbox" name="mas_importancia[]" value="Rock" <?php echo in_array('Rock', $mas) ? 'checked="checked"' : '' ?>> Rock</li>
     								<li><input type="checkbox" name="mas_importancia[]" value="Años70" <?php echo in_array('Años70', $mas) ? 'checked="checked"' : '' ?>> Años70</li>
@@ -208,9 +208,9 @@
     								<li><input type="checkbox" name="mas_importancia[]" value="Nos es indiferente" <?php echo in_array('Nos es indiferente', $mas) ? 'checked="checked"' : '' ?>> Nos es indiferente</li>
     								<br>
     							<?php
-																								}
-																								if ($preguntas['id_pregunta'] == 8) {
-																									$menos = explode(",", $respuestas['respuesta']);
+																							}
+																							if ($preguntas['id_pregunta'] == 8) {
+																								$menos = explode(",", $respuestas['respuesta']);
 								?>
     								<li><input type="checkbox" name="menos_importancia[]" value="Rock" <?php echo in_array('Rock', $menos) ? 'checked="checked"' : '' ?>> Rock</li>
     								<li><input type="checkbox" name="menos_importancia[]" value="Años70" <?php echo in_array('Años70', $menos) ? 'checked="checked"' : '' ?>> Años70</li>
@@ -226,10 +226,10 @@
     								<li><input type="checkbox" name="menos_importancia[]" value="Nos es indiferente" <?php echo in_array('Nos es indiferente', $menos) ? 'checked="checked"' : '' ?>> Nos es indiferente</li>
     								<br>
     				<?php
-																								}
 																							}
 																						}
 																					}
+																				}
 					?>
     				<center><input type="submit" id="actualizar_encuesta" name="actualizar_encuesta" value="Actualizar Encuesta"></center>
     			<?php
@@ -244,43 +244,56 @@
     			<table class="tabledata">
     				<tr>
     					<th style="width:400px">Servicio</th>
-    					<th style="width:200px">Importe</th>
+    					<th style="width:200px; text-align:right;">Importe</th>
     				</tr>
     				<?php
 					$total = 0;
-					$arr_servicios = unserialize($cliente['servicios']);
-					$total = array_sum($arr_servicios);
-					foreach ($servicios as $servicio) {
-					?>
-    					<tr>
-    						<td><?php echo $servicio['nombre'] ?></td>
-    						<td style="text-align:right;"><?php echo number_format($arr_servicios[$servicio['id']], 2, ',', '.') . " &euro;" ?></td>
-    					</tr>
-    				<?php
+					$totalDescuento = 0;
 
-					}
-					if ($cliente['descuento'] <> 0) {
+					if (!empty($cliente['servicios'])) {
+						foreach ($cliente['servicios'] as $id => $datos) {
+							// Buscar el nombre del servicio
+							$nombreServicio = "Servicio no encontrado"; // Por defecto, si no lo encuentra
+							foreach ($servicios as $servicio) {
+								if ($servicio['id'] == $id) {
+									$nombreServicio = $servicio['nombre'];
+									break;
+								}
+							}
+
+							$precio = $datos['precio'];
+							$descuento = $datos['descuento'];
+							$precioFinal = $precio - $descuento;
+
+							$total += $precio;
+							$totalDescuento += $descuento;
 					?>
+    						<tr>
+    							<td><?php echo $nombreServicio; ?></td>
+    							<td style="text-align:right;">
+    								<?php if ($descuento > 0) { ?>
+    									<span style="text-decoration: line-through; color: red; font-weight: bold"><?php echo number_format($precio, 2, ',', '.') . "€"; ?></span>
+    								<?php } ?>
+    								<b><?php echo number_format($precioFinal, 2, ',', '.') . "€"; ?></b>
+    							</td>
+    						</tr>
+    					<?php } ?>
     					<tr>
-    						<td><b>Subtotal</b></td>
-    						<td style="text-align:right;"><b><?php echo number_format($total, 2, ',', '.') ?> &euro;</b></td>
+    						<td><b>Total del contrato</b></td>
+    						<td style="text-align:right;">
+    							<?php if ($totalDescuento > 0) { ?>
+    								<span style="text-decoration: line-through; color: red; font-weight: bold"><?php echo number_format($total, 2, ',', '.') . "€"; ?></span>
+    							<?php } ?>
+    							<b><?php echo number_format(($total - $totalDescuento), 2, ',', '.') . "€"; ?></b>
+    						</td>
     					</tr>
-    				<?php
-					}
-					if ($cliente['descuento'] <> 0) {
-					?>
+    				<?php } else { ?>
     					<tr>
-    						<td>Descuento adicional aplicado</td>
-    						<td style="text-align:right;"><?php echo number_format($cliente['descuento'], 2, ',', '.') ?> &euro;</td>
+    						<td colspan="2" style="text-align:center; color: red;">No hay servicios contratados</td>
     					</tr>
-    				<?php
-					}
-					?>
-    				<tr>
-    					<td><b>Total del contrato</b></td>
-    					<td style="text-align:right;"><b><?php echo number_format(($total -  $cliente['descuento']), 2, ',', '.') ?> &euro;</b></td>
-    				</tr>
+    				<?php } ?>
     			</table>
+
 
     			<br /><br />
 

@@ -943,7 +943,6 @@ function buscarrestaurantearchivos($nombre)
 				}
 			}
 
-			//$mail->addCC('rajlopa@gmail.com');
 			/* $mail->addBCC('bcc@example.com'); */
 
 			// Email subject

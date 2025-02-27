@@ -664,48 +664,102 @@
 																																										} ?>
 			</fieldset>
 		</fieldset>
+		<?php
+		// Deserializar datos
+		$arr_servicios = !empty($cliente['servicios']) ? unserialize($cliente['servicios']) : [];
+
+		// Revisar si el formato es el antiguo o el nuevo
+		foreach ($arr_servicios as $id => $valor) {
+			// Si el formato es antiguo (solo tiene precio como string)
+			if (!is_array($valor)) {
+				$arr_servicios[$id] = array(
+					'precio' => floatval($valor), // Convertimos el precio a número
+					'descuento' => 0 // Asignamos 0 por defecto
+				);
+			}
+		}
+
+		$total = !empty($arr_servicios) ? array_sum(array_column($arr_servicios, 'precio')) : 0;
+		$totalDescuento = 0;
+		?>
+
 		<fieldset class="datos">
 			<legend>Servicios</legend>
 			<ul>
-				<?php
-				$arr_servicios = !empty($cliente['servicios']) ? unserialize($cliente['servicios']) : [];
-				$total = !empty($arr_servicios) ? array_sum($arr_servicios) : 0;
-				$arr_serv_keys = array_keys($arr_servicios);
-
-				foreach ($servicios as $servicio) {
+				<?php foreach ($servicios as $servicio):
+					$id = $servicio['id'];
+					$precio = isset($arr_servicios[$id]['precio']) ? $arr_servicios[$id]['precio'] : $servicio['precio'];
+					$descuento = isset($arr_servicios[$id]['descuento']) ? $arr_servicios[$id]['descuento'] : 0;
+					$totalDescuento += $descuento;
 				?>
 					<li>
-						<input type="checkbox" name="servicios[<?php echo $servicio['id']; ?>]"
-							<?php echo (is_array($arr_servicios) && in_array($servicio['id'], $arr_serv_keys)) ? 'checked="checked"' : ''; ?>
-							id="chserv_<?php echo $servicio['id']; ?>"
-							value="<?php echo (is_array($arr_servicios) && in_array($servicio['id'], $arr_serv_keys)) ? $arr_servicios[$servicio['id']] : $servicio['precio']; ?>"
-							style="width:30px; vertical-align:middle" />
+						<input type="checkbox" name="servicios[<?php echo $id; ?>][activo]"
+							<?php echo isset($arr_servicios[$id]) ? 'checked="checked"' : ''; ?>
+							id="chserv_<?php echo $id; ?>" style="width:30px; vertical-align:middle" />
+
 						<?php echo $servicio['nombre'] . " - "; ?>
+
 						<input type="text"
-							onchange="$('#chserv_<?php echo $servicio['id']; ?>').val(this.value)"
-							id="precioserv_<?php echo $servicio['id']; ?>"
-							name="servicio_precio[<?php echo $servicio['id']; ?>]"
-							value="<?php echo (is_array($arr_servicios) && in_array($servicio['id'], $arr_serv_keys)) ? $arr_servicios[$servicio['id']] : $servicio['precio']; ?>"
+							onchange="$('#chserv_<?php echo $id; ?>').prop('checked', true);"
+							id="precioserv_<?php echo $id; ?>"
+							name="servicios[<?php echo $id; ?>][precio]"
+							value="<?php echo $precio; ?>"
+							style="width:50px; text-align:center" /> &euro;
+
+						Dto <input type="text"
+							onchange="$('#chserv_<?php echo $id; ?>').prop('checked', true);"
+							id="dtoserv_<?php echo $id; ?>"
+							name="servicios[<?php echo $id; ?>][descuento]"
+							value="<?php echo $descuento; ?>"
 							style="width:50px; text-align:center" /> &euro;
 					</li>
-				<?php } ?>
+				<?php endforeach; ?>
 			</ul>
 
-			<input type="submit" name="update_servicios" value="Actualizar servicios" />
-			<br /><br />
-			Descuento: <input type="text" name="descuento" style="width:80px" value="<?php echo $cliente['descuento'] ?>" />&euro; &nbsp; <input type="submit" name="update_descuento" value="Actualizar descuento" />
-			<br /><br />
-			Total:
-			<?php
-			if ($cliente['descuento'] != '' && $cliente['descuento'] != '0') {
-				echo $total . "&euro; - " . $cliente['descuento'] . "&euro; = " . ($total - $cliente['descuento']);
-				$total = $total - $cliente['descuento'];
-			} else
-				echo $total;
+			<form method="POST" action="">
+				<!-- Otras entradas del formulario -->
+				 <br>
+				<input type="hidden" name="id_cliente" value="<?php echo isset($cliente['id']) ? $cliente['id'] : ''; ?>">
+				<input type="submit" style="width:15%" name="update_servicios" value="Actualizar servicios y descuentos" />
+				</form>
 
-			?>
-			&euro;
+			<br /><br />
+			<label style="width: 20%; text-align: left;">Descuento: <?php echo $totalDescuento ?>€</label>
+			<br />
+			<label style="width: 20%; text-align: left; font-size: 1.3em">
+				<strong>Total:
+					<?php
+					if ($totalDescuento > 0) {
+						echo $total . "€ - " . $totalDescuento . "€ = " . ($total - $totalDescuento) . "€";
+					} else {
+						echo $total . "€";
+					}
+					?>
+				</strong>
+			</label>
 		</fieldset>
+
+
+
+		<script>
+			function actualizarTotalDescuento() {
+				let total = 0;
+
+				document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+					if (checkbox.checked) {
+						let servicioId = checkbox.id.replace("chserv_", ""); // Obtener el ID del servicio
+						let descuentoInput = document.getElementById("dtoserv_" + servicioId);
+
+						if (descuentoInput) {
+							total += parseFloat(descuentoInput.value) || 0;
+						}
+					}
+				});
+
+				document.getElementById("totalDescuento").innerText = total.toFixed(2) + "€";
+				document.getElementById("input_totalDescuento").value = total.toFixed(2);
+			}
+		</script>
 		<fieldset>
 			<legend>Pagos, Presupuesto &amp; Contrato</legend>
 

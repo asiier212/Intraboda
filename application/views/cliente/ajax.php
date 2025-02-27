@@ -154,7 +154,6 @@ public function send_mail($mensaje){
                 }
             }
 
-            $mail->addCC('rajlopa@gmail.com');
             /* $mail->addBCC('bcc@example.com'); */
 
             // Email subject
