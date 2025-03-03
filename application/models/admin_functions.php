@@ -1139,17 +1139,18 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-
 	function GetPreguntasEncuestaCliente()
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_pregunta, pregunta FROM preguntas_encuesta_datos_boda ORDER BY id_pregunta ASC");
+		$query = $this->db->query("SELECT id_pregunta, pregunta, descripcion, tipo_pregunta FROM preguntas_encuesta_datos_boda ORDER BY id_pregunta ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
 				$data[$i]['id_pregunta'] = $fila->id_pregunta;
 				$data[$i]['pregunta'] = $fila->pregunta;
+				$data[$i]['descripcion'] = $fila->descripcion;
+				$data[$i]['tipo_pregunta'] = $fila->tipo_pregunta;
 				$i++;
 			}
 		}
@@ -1160,7 +1161,8 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM respuestas_encuesta_datos_boda Where id_pregunta = 1 ORDER BY id_respuesta ASC");
+		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM opciones_respuesta_encuesta_datos_boda ORDER BY id_respuesta ASC");
+	
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -1172,6 +1174,7 @@ class Admin_functions extends CI_Model
 		}
 		return $data;
 	}
+	
 	
 
 	function GetPreguntasEncuesta()
@@ -1193,20 +1196,20 @@ class Admin_functions extends CI_Model
 
 	function GetRespuestasPreguntas()
 	{
-		$data = false;
 		$this->load->database();
 		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM respuestas_encuesta ORDER BY id_respuesta ASC");
-		if ($query->num_rows() > 0) {
-			$i = 0;
-			foreach ($query->result() as $fila) {
-				$data[$i]['id_respuesta'] = $fila->id_respuesta;
-				$data[$i]['id_pregunta'] = $fila->id_pregunta;
-				$data[$i]['respuesta'] = $fila->respuesta;
-				$i++;
-			}
+		
+		$data = [];
+		foreach ($query->result() as $fila) {
+			$data[] = [
+				'id_respuesta' => $fila->id_respuesta,
+				'id_pregunta' => $fila->id_pregunta,
+				'respuesta' => $fila->respuesta
+			];
 		}
 		return $data;
 	}
+	
 
 
 	function InsertContratoDJ($data)

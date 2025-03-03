@@ -794,50 +794,197 @@ function buscarrestaurantearchivos($nombre)
 		}
 	}
 
-	function deletepregunta_encuesta()
+	public function anadir_pregunta()
 	{
-		if ($_POST) {
+		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$this->load->database();
-			$this->db->query("DELETE FROM preguntas_encuesta WHERE id_pregunta = " . $_POST['id_pregunta'] . "");
-			$this->db->query("DELETE FROM respuestas_encuesta WHERE id_pregunta = " . $_POST['id_pregunta'] . "");
-			//Cabría la posibilidad de borrar las respuestas de la tabla encuestas_solicitudes cuya id_pregunta coinicida
-			//con la que se borra (Lo realizamos)
-			$this->db->query("DELETE FROM encuestas_solicitudes WHERE id_pregunta = " . $_POST['id_pregunta'] . "");
+			$data = json_decode(file_get_contents("php://input"), true);
+
+			if (empty($data['pregunta'])) {
+				echo json_encode(["success" => false, "message" => "La pregunta no puede estar vacía."]);
+				return;
+			}
+
+			log_message('error', "Datos recibidos en anadir_pregunta: " . print_r($data, true));
+
+			$insertData = ["pregunta" => $data['pregunta']];
+
+			if (isset($data['importe_descuento']) && $data['importe_descuento'] !== null) {
+				// Encuesta Comercial
+				$insertData['importe_descuento'] = floatval($data['importe_descuento']);
+				$this->db->insert('preguntas_encuesta', $insertData);
+			} elseif (isset($data['descripcion']) && isset($data['tipo_pregunta'])) {
+				// Encuesta Inicial Cliente
+				$insertData['descripcion'] = $data['descripcion'];
+				$insertData['tipo_pregunta'] = $data['tipo_pregunta'];
+				$this->db->insert('preguntas_encuesta_datos_boda', $insertData);
+			}
+
+			if ($this->db->affected_rows() > 0) {
+				echo json_encode(["success" => true, "message" => "Pregunta añadida con éxito"]);
+			} else {
+				log_message('error', "Error en la inserción SQL: " . $this->db->last_query()); // Log de la última consulta ejecutada
+				echo json_encode(["success" => false, "message" => "Error al añadir la pregunta"]);
+			}
+		}
+	}
+	public function anadir_respuesta()
+	{
+		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+			$this->load->database();
+			$data = json_decode(file_get_contents("php://input"), true);
+	
+			log_message('error', "📥 Datos recibidos para nueva respuesta: " . print_r($data, true));
+	
+			if (empty($data['id_pregunta']) || empty($data['respuesta'])) {
+				echo json_encode(["success" => false, "message" => "Faltan datos."]);
+				return;
+			}
+	
+			// Verificar si la pregunta existe
+			$existeEncuesta1 = $this->db->get_where('preguntas_encuesta', ['id_pregunta' => $data['id_pregunta']])->num_rows() > 0;
+			$existeEncuesta2 = $this->db->get_where('preguntas_encuesta_datos_boda', ['id_pregunta' => $data['id_pregunta']])->num_rows() > 0;
+	
+			if (!$existeEncuesta1 && !$existeEncuesta2) {
+				log_message('error', "❌ ERROR: No se encontró la pregunta con ID: " . $data['id_pregunta']);
+				echo json_encode(["success" => false, "message" => "La pregunta no existe."]);
+				return;
+			}
+	
+			// Determinar la tabla según la pregunta
+			$tabla = $existeEncuesta1 ? "respuestas_encuesta" : "opciones_respuesta_encuesta_datos_boda";
+	
+			log_message('error', "✅ Insertando en la tabla: $tabla");
+	
+			$insertData = [
+				"id_pregunta" => $data['id_pregunta'],
+				"respuesta" => $data['respuesta']
+			];
+			$this->db->insert($tabla, $insertData);
+	
+			if ($this->db->affected_rows() > 0) {
+				echo json_encode(["success" => true, "message" => "Respuesta añadida correctamente"]);
+			} else {
+				echo json_encode(["success" => false, "message" => "Error al añadir respuesta"]);
+			}
 		}
 	}
 
-	function edita_pregunta_encuesta()
+
+	public function deletepregunta_encuesta()
 	{
-		if ($_POST) {
+		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$this->load->database();
-			$this->db->query("UPDATE preguntas_encuesta SET pregunta='" . $_POST['pregunta'] . "' WHERE id_pregunta = " . $_POST['id_pregunta'] . "");
+			$data = json_decode(file_get_contents("php://input"), true);
+
+			error_log("Recibido para eliminar: " . print_r($data, true)); // Depuración
+
+			if (empty($data['id_pregunta'])) {
+				echo json_encode(["success" => false, "message" => "ID de pregunta no recibido."]);
+				return;
+			}
+
+			// Asegúrate de que la ID es válida
+			$this->db->where('id_pregunta', intval($data['id_pregunta']));
+			$this->db->delete('preguntas_encuesta');
+
+			if ($this->db->affected_rows() > 0) {
+				echo json_encode(["success" => true, "message" => "Pregunta eliminada"]);
+			} else {
+				echo json_encode(["success" => false, "message" => "No se pudo eliminar la pregunta"]);
+			}
 		}
 	}
 
-	function edita_respuesta_encuesta()
+	public function editar_pregunta()
 	{
-		if ($_POST) {
+		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$this->load->database();
-			$this->db->query("UPDATE respuestas_encuesta SET respuesta='" . $_POST['respuesta'] . "' WHERE id_respuesta = " . $_POST['id_respuesta'] . "");
+			$data = json_decode(file_get_contents("php://input"), true);
+
+			if (empty($data['id_pregunta']) || empty($data['pregunta'])) {
+				echo json_encode(["success" => false, "message" => "Datos insuficientes."]);
+				return;
+			}
+
+			// Determinar la tabla según los datos recibidos
+			if (isset($data['descripcion']) && isset($data['tipo_pregunta'])) {
+				// Encuesta Inicial Cliente -> Actualiza preguntas_encuesta_datos_boda
+				$updateData = [
+					"pregunta" => $data['pregunta'],
+					"descripcion" => $data['descripcion'],
+					"tipo_pregunta" => $data['tipo_pregunta']
+				];
+				$this->db->where('id_pregunta', $data['id_pregunta']);
+				$success = $this->db->update('preguntas_encuesta_datos_boda', $updateData);
+
+				// Actualizar respuestas en la tabla opciones_respuesta_encuesta_datos_boda
+				if (!empty($data['respuestas'])) {
+					foreach ($data['respuestas'] as $resp) {
+						$this->db->where('id_respuesta', $resp['id_respuesta']);
+						$this->db->update('opciones_respuesta_encuesta_datos_boda', ['respuesta' => $resp['respuesta']]);
+					}
+				}
+			} else {
+				// Encuesta Comercial -> Actualiza preguntas_encuesta
+				$updateData = ["pregunta" => $data['pregunta']];
+				if (isset($data['importe_descuento'])) {
+					$updateData['importe_descuento'] = floatval($data['importe_descuento']);
+				}
+				$this->db->where('id_pregunta', $data['id_pregunta']);
+				$success = $this->db->update('preguntas_encuesta', $updateData);
+
+				// Actualizar respuestas en la tabla respuestas_encuesta
+				if (!empty($data['respuestas'])) {
+					foreach ($data['respuestas'] as $resp) {
+						$this->db->where('id_respuesta', $resp['id_respuesta']);
+						$this->db->update('respuestas_encuesta', ['respuesta' => $resp['respuesta']]);
+					}
+				}
+			}
+
+			if ($success) {
+				echo json_encode(["success" => true, "message" => "Pregunta y respuestas actualizadas correctamente"]);
+			} else {
+				echo json_encode(["success" => false, "message" => "No se pudo actualizar la pregunta"]);
+			}
 		}
 	}
 
-	function modifica_importe_descuento_pregunta_encuesta()
-	{
-		if ($_POST) {
-			$this->load->database();
-			$this->db->query("UPDATE preguntas_encuesta SET importe_descuento='" . $_POST['importe_descuento'] . "' WHERE id_pregunta = " . $_POST['id_pregunta'] . "");
-		}
-	}
 
-	function deleterespuesta_encuesta()
+	public function eliminar_respuesta()
 	{
-		if ($_POST) {
+		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$this->load->database();
-			$this->db->query("DELETE FROM respuestas_encuesta WHERE id_respuesta = " . $_POST['id_respuesta'] . "");
-			//Cabría la posibilidad de borrar las respuestas de la tabla encuestas_solicitudes cuya id_respuesta coinicida
-			//con la que se borra (Lo realizamos)
-			$this->db->query("DELETE FROM encuestas_solicitudes WHERE id_respuesta = " . $_POST['id_pregunta'] . "");
+			$data = json_decode(file_get_contents("php://input"), true);
+
+			if (empty($data['id_respuesta'])) {
+				echo json_encode(["success" => false, "message" => "ID de respuesta no recibido."]);
+				return;
+			}
+
+			// Verificar si la respuesta existe en respuestas_encuesta
+			$this->db->where('id_respuesta', $data['id_respuesta']);
+			$existsInRespuestasEncuesta = $this->db->get('respuestas_encuesta')->num_rows() > 0;
+
+			if ($existsInRespuestasEncuesta) {
+				$this->db->where('id_respuesta', $data['id_respuesta']);
+				$this->db->delete('respuestas_encuesta');
+			} else {
+				// Verificar si la respuesta existe en opciones_respuesta_encuesta_datos_boda
+				$this->db->where('id_respuesta', $data['id_respuesta']);
+				$existsInOpcionesRespuesta = $this->db->get('opciones_respuesta_encuesta_datos_boda')->num_rows() > 0;
+
+				if ($existsInOpcionesRespuesta) {
+					$this->db->where('id_respuesta', $data['id_respuesta']);
+					$this->db->delete('opciones_respuesta_encuesta_datos_boda');
+				} else {
+					echo json_encode(["success" => false, "message" => "La respuesta no existe."]);
+					return;
+				}
+			}
+
+			echo json_encode(["success" => true, "message" => "Respuesta eliminada correctamente"]);
 		}
 	}
 

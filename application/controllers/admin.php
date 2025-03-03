@@ -919,59 +919,59 @@ class Admin extends CI_Controller
 					}
 					if (isset($_POST['update_servicios'])) {
 						log_message('debug', 'Botón de actualizar servicios presionado.');
-					
+
 						if (!isset($_POST['id_cliente']) || empty($_POST['id_cliente'])) {
 							log_message('error', 'Error: ID del cliente no encontrado.');
 							die("Error: ID del cliente no encontrado.");
 						}
-					
+
 						$id = intval($_POST['id_cliente']);
 						log_message('debug', 'ID del cliente recibido: ' . $id);
-					
+
 						if (!isset($_POST['servicios']) || !is_array($_POST['servicios'])) {
 							log_message('error', 'Error: No se han enviado servicios.');
 							die("Error: No se han enviado servicios.");
 						}
-					
+
 						log_message('debug', 'Datos de servicios recibidos: ' . print_r($_POST['servicios'], true));
-					
+
 						$servicios = array();
 						$totalDescuento = 0; // Iniciar variable para el descuento total
-					
+
 						foreach ($_POST['servicios'] as $id_servicio => $datos) {
 							if (isset($datos['activo'])) {
 								$precio = isset($datos['precio']) ? floatval($datos['precio']) : 0;
 								$descuento = isset($datos['descuento']) && $datos['descuento'] !== '' ? floatval($datos['descuento']) : 0;
-					
+
 								$servicios[$id_servicio] = array(
 									'precio' => $precio,
 									'descuento' => $descuento
 								);
-					
+
 								$totalDescuento += $descuento; // Sumar todos los descuentos
 								log_message('debug', "Servicio {$id_servicio} - Precio: {$precio}€, Descuento: {$descuento}€");
 							}
 						}
-					
+
 						if (empty($servicios)) {
 							log_message('error', 'Error: Ningún servicio seleccionado.');
 							die("Error: No hay servicios seleccionados.");
 						}
-					
+
 						$servicios_serializados = serialize($servicios);
 						log_message('debug', 'Datos serializados: ' . $servicios_serializados);
-					
+
 						$servicios_serializados = mysql_real_escape_string($servicios_serializados);
-					
+
 						// Actualizar la base de datos con los servicios y el descuento total
 						$query = "UPDATE clientes SET servicios = '" . $servicios_serializados . "', descuento = " . floatval($totalDescuento) . " WHERE id = " . intval($id);
 						log_message('debug', 'Ejecutando consulta: ' . $query);
-					
+
 						$this->db->query($query);
 						log_message('debug', 'Consulta ejecutada correctamente. Descuento total actualizado: ' . $totalDescuento);
 					}
-					
-					
+
+
 
 					if (isset($_POST['add_observ']) && !empty($_POST['observaciones']) && $id) {
 						$data_insert = array(
@@ -1204,8 +1204,6 @@ class Admin extends CI_Controller
 				$data['dj'] = $this->admin_functions->GetDjAsignado($id);
 				$data['djs'] = $this->admin_functions->GetDjs($id);
 				$data['horas_dj'] = $this->admin_functions->GetHorasDJ($id);
-				$data['preguntas_encuestaCliente'] = $this->admin_functions->GetPreguntasEncuestaCliente();
-				$data['respuestas_preguntasCliente'] = $this->admin_functions->GetRespuestasEncuestaCliente($id);
 				$data['equipos_disponibles'] = $this->admin_functions->GetEquiposDisponibles($id);
 				$data['componentes'] = $this->admin_functions->GetComponentes();
 				$data['equipo_componentes_asignado'] = $this->admin_functions->GetEquiposComponentesAsignado($id);
@@ -1656,6 +1654,10 @@ class Admin extends CI_Controller
 
 		$data['preguntas_encuesta'] = $this->admin_functions->GetPreguntasEncuesta();
 		$data['respuestas_preguntas'] = $this->admin_functions->GetRespuestasPreguntas();
+
+		$data['preguntas_encuesta_cliente'] = $this->admin_functions->GetPreguntasEncuestaCliente();
+		$data['respuestas_encuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaCliente();
+
 		$data['estadistica_encuestas'] = $this->admin_functions->GetEstadisticaEncuestas($fecha_desde, $fecha_hasta);
 
 		$view = "estadisticas";
@@ -1753,6 +1755,7 @@ class Admin extends CI_Controller
 
 	public function encuesta()
 	{
+		
 		if (isset($_POST['pregunta']) && $_POST['pregunta'] <> "") {
 			$this->load->database();
 			$data['pregunta'] = $_POST['pregunta'];
@@ -1774,9 +1777,8 @@ class Admin extends CI_Controller
 		$data_footer = false;
 		$data['preguntas_encuesta'] = $this->admin_functions->GetPreguntasEncuesta();
 		$data['respuestas_preguntas'] = $this->admin_functions->GetRespuestasPreguntas();
-
 		$data['preguntas_encuesta_cliente'] = $this->admin_functions->GetPreguntasEncuestaCliente();
-		$data['respuestas_encuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaCliente();
+		$data['respuestas_preguntasClientes'] = $this->admin_functions->GetRespuestasEncuestaCliente();
 		$view = "encuesta";
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
