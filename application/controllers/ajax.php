@@ -876,25 +876,29 @@ function buscarrestaurantearchivos($nombre)
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$this->load->database();
 			$data = json_decode(file_get_contents("php://input"), true);
-
+	
 			error_log("Recibido para eliminar: " . print_r($data, true)); // Depuración
-
-			if (empty($data['id_pregunta'])) {
-				echo json_encode(["success" => false, "message" => "ID de pregunta no recibido."]);
+	
+			if (empty($data['id_pregunta']) || empty($data['tipo_encuesta'])) {
+				echo json_encode(["success" => false, "message" => "Faltan datos en la solicitud."]);
 				return;
 			}
-
-			// Asegúrate de que la ID es válida
+	
+			// Determinar de qué tabla eliminar
+			$tabla = ($data['tipo_encuesta'] === 'encuesta1') ? 'preguntas_encuesta' : 'preguntas_encuesta_datos_boda';
+	
+			// Intentar eliminar la pregunta de la tabla correspondiente
 			$this->db->where('id_pregunta', intval($data['id_pregunta']));
-			$this->db->delete('preguntas_encuesta');
-
+			$this->db->delete($tabla);
+	
 			if ($this->db->affected_rows() > 0) {
-				echo json_encode(["success" => true, "message" => "Pregunta eliminada"]);
+				echo json_encode(["success" => true, "message" => "Pregunta eliminada correctamente"]);
 			} else {
 				echo json_encode(["success" => false, "message" => "No se pudo eliminar la pregunta"]);
 			}
 		}
 	}
+	
 
 	public function editar_pregunta()
 	{

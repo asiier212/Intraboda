@@ -126,117 +126,131 @@
     		<fieldset>
     			<legend>Encuesta del cliente respecto a la boda:</legend>
     			<?php
-				if ($respuestas_encuesta_datos_boda[0] <> "") {
-					foreach ($preguntas_encuesta_datos_boda as $preguntas) {
-				?><li><strong><?php echo $preguntas['pregunta'] ?></strong></li><br><?php
-																					foreach ($respuestas_encuesta_datos_boda as $respuestas) {
-																						if ($respuestas['id_pregunta'] == $preguntas['id_pregunta']) {
-																							if ($preguntas['id_pregunta'] == '1') {
-																					?>
-    								<p><select name="participativo_dj" id="participacion1">
-    										<option value="<?php echo $respuestas['respuesta'] ?>"><?php echo $respuestas['respuesta'] ?></option>
-    										<?php
-																								for ($i = 1; $i <= 10; $i++) {
-											?><option value="<?php echo $i ?>"><?php echo $i ?></option><?php
-																									}
-																										?>
-    									</select></p>
+				$preguntas_encuesta_datos_boda = $this->cliente_functions->GetPreguntasEncuestaDatosBoda();
+				$opciones_respuestas_encuesta_datos_boda = $this->cliente_functions->GetOpcionesRespuestasEncuestaDatosBoda();
+
+				if (!empty($preguntas_encuesta_datos_boda)) { ?>
+    				<form method="post" action="procesar_encuesta.php">
+    					<?php foreach ($preguntas_encuesta_datos_boda as $pregunta) { ?>
+    						<div>
+    							<strong><?php echo htmlspecialchars($pregunta['pregunta']); ?></strong>
+    							<?php if (!empty($pregunta['descripcion'])) { ?>
+    								<div><?php echo $pregunta['descripcion']; ?></div>
+    							<?php } else echo "<br><br>"; ?>
+
     							<?php
-																							}
-																							if ($preguntas['id_pregunta'] == '2') {
+								// Obtener respuestas para la pregunta
+								$respuestas = array();
+								foreach ($opciones_respuestas_encuesta_datos_boda as $resp) {
+									if (intval($resp['id_pregunta']) === intval($pregunta['id_pregunta'])) {
+										$respuestas[] = $resp;
+									}
+								}
+
+								// Determinar el tipo de pregunta
+								$tipo = isset($pregunta['tipo_pregunta']) ? strtolower($pregunta['tipo_pregunta']) : '';
 								?>
-    								<p><select name="participativos_invitados" id="participacion2">
-    										<option value="<?php echo $respuestas['respuesta'] ?>"><?php echo $respuestas['respuesta'] ?></option>
-    										<?php
-																								for ($i = 1; $i <= 10; $i++) {
-											?><option value="<?php echo $i ?>"><?php echo $i ?></option><?php
-																									}
-																										?>
-    									</select></p>
-    							<?php
-																							}
-																							if ($preguntas['id_pregunta'] == '3') {
-								?>
-    								<li>Invitados: <input type="text" id="num_invitados" name="num_invitados" value="<?php echo $respuestas['respuesta'] ?>"></li><br>
-    								<?php
-																							}
-																							if ($preguntas['id_pregunta'] == '4') {
-																								if ($respuestas['respuesta'] == 'Si') {
-									?>
-    									<li><input type="radio" name="ampliar_fiesta" value="Si" checked> Sí</li>
-    									<li><input type="radio" id="ampliar_fiesta" name="ampliar_fiesta" value="No"> No</li><br>
-    								<?php
-																								} else {
-									?>
-    									<li><input type="radio" name="ampliar_fiesta" value="Si"> Sí</li>
-    									<li><input type="radio" id="ampliar_fiesta" name="ampliar_fiesta" value="No" checked> No</li><br>
-    								<?php
-																								}
-																							}
-																							if ($preguntas['id_pregunta'] == '5') {
-																								if ($respuestas['respuesta'] == 'Si') {
-									?>
-    									<li><input type="radio" name="flexibilidad_restaurante" value="Si" checked> Sí</li>
-    									<li><input type="radio" id="flexibilidad_restaurante" name="flexibilidad_restaurante" value="No"> No</li><br>
-    								<?php
-																								} else {
-									?>
-    									<li><input type="radio" name="flexibilidad_restaurante" value="Si"> Sí</li>
-    									<li><input type="radio" id="flexibilidad_restaurante" name="flexibilidad_restaurante" value="No" checked> No</li><br>
-    								<?php
-																								}
-																							}
-																							if ($preguntas['id_pregunta'] == '6') {
-									?>
-    								<li>Hora: <input type="text" id="hora_ultimo_autobus" name="hora_ultimo_autobus" value="<?php echo $respuestas['respuesta'] ?>"></li><br>
-    							<?php
-																							}
-																							if ($preguntas['id_pregunta'] == 7) {
-																								$mas = explode(",", $respuestas['respuesta']);
-								?>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Rock" <?php echo in_array('Rock', $mas) ? 'checked="checked"' : '' ?>> Rock</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Años70" <?php echo in_array('Años70', $mas) ? 'checked="checked"' : '' ?>> Años70</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Años 80 movida madrileña" <?php echo in_array('Años 80 movida madrileña', $mas) ? 'checked="checked"' : '' ?>> Años 80, movida madrileña</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Comercial (40 Principales)" <?php echo in_array('Comercial (40 Principales)', $mas) ? 'checked="checked"' : '' ?>> Comercial (40 Principales)</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Musica Latina" <?php echo in_array('Musica Latina', $mas) ? 'checked="checked"' : '' ?>> Musica Latina</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Bachata" <?php echo in_array('Bachata', $mas) ? 'checked="checked"' : '' ?>> Bachata</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Salsa" <?php echo in_array('Salsa', $mas) ? 'checked="checked"' : '' ?>> Salsa</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Merengue" <?php echo in_array('Merengue', $mas) ? 'checked="checked"' : '' ?>> Merengue</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Reggaeton" <?php echo in_array('Reggaeton', $mas) ? 'checked="checked"' : '' ?>> Reggaeton</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Revival (flying free ecuador...)" <?php echo in_array('Revival (flying free ecuador...)', $mas) ? 'checked="checked"' : '' ?>> Revival (flying free, ecuador...)</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Pachangueras" <?php echo in_array('Pachangueras', $mas) ? 'checked="checked"' : '' ?>> Pachangueras</li>
-    								<li><input type="checkbox" name="mas_importancia[]" value="Nos es indiferente" <?php echo in_array('Nos es indiferente', $mas) ? 'checked="checked"' : '' ?>> Nos es indiferente</li>
-    								<br>
-    							<?php
-																							}
-																							if ($preguntas['id_pregunta'] == 8) {
-																								$menos = explode(",", $respuestas['respuesta']);
-								?>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Rock" <?php echo in_array('Rock', $menos) ? 'checked="checked"' : '' ?>> Rock</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Años70" <?php echo in_array('Años70', $menos) ? 'checked="checked"' : '' ?>> Años70</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Años 80 movida madrileña" <?php echo in_array('Años 80 movida madrileña', $menos) ? 'checked="checked"' : '' ?>> Años 80, movida madrileña</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Comercial (40 Principales)" <?php echo in_array('Comercial (40 Principales)', $menos) ? 'checked="checked"' : '' ?>> Comercial (40 Principales)</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Musica Latina" <?php echo in_array('Musica Latina', $menos) ? 'checked="checked"' : '' ?>> Musica Latina</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Bachata" <?php echo in_array('Bachata', $menos) ? 'checked="checked"' : '' ?>> Bachata</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Salsa" <?php echo in_array('Salsa', $menos) ? 'checked="checked"' : '' ?>> Salsa</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Merengue" <?php echo in_array('Merengue', $menos) ? 'checked="checked"' : '' ?>> Merengue</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Reggaeton" <?php echo in_array('Reggaeton', $menos) ? 'checked="checked"' : '' ?>> Reggaeton</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Revival (flying free ecuador...)" <?php echo in_array('Revival (flying free ecuador...)', $menos) ? 'checked="checked"' : '' ?>> Revival (flying free, ecuador...)</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Pachangueras" <?php echo in_array('Pachangueras', $menos) ? 'checked="checked"' : '' ?>> Pachangueras</li>
-    								<li><input type="checkbox" name="menos_importancia[]" value="Nos es indiferente" <?php echo in_array('Nos es indiferente', $menos) ? 'checked="checked"' : '' ?>> Nos es indiferente</li>
-    								<br>
-    				<?php
-																							}
-																						}
-																					}
-																				}
-					?>
-    				<center><input type="submit" id="actualizar_encuesta" name="actualizar_encuesta" value="Actualizar Encuesta"></center>
-    			<?php
-				} else {
-				?><li>No se ha realizado la encuesta</li><br><?php
-															} ?>
+
+    							<?php if ($tipo == 'rango') { ?>
+    								<input type="range" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]" min="0" max="10" value="5"
+    									oninput="document.getElementById('valor_<?php echo $pregunta['id_pregunta']; ?>').innerText = this.value;">
+    								<span id="valor_<?php echo $pregunta['id_pregunta']; ?>">5</span>
+
+    							<?php } elseif ($tipo == 'opciones' && !empty($respuestas)) { ?>
+    								<?php foreach ($respuestas as $respuesta) { ?>
+    									<label>
+    										<input type="radio" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]" value="<?php echo htmlspecialchars($respuesta['respuesta']); ?>">
+    										<?php echo htmlspecialchars($respuesta['respuesta']); ?>
+    									</label><br>
+    								<?php } ?>
+
+    							<?php } elseif ($tipo == 'multiple' && !empty($respuestas)) { ?>
+    								<?php foreach ($respuestas as $respuesta) { ?>
+    									<label>
+    										<input type="checkbox" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]" value="<?php echo htmlspecialchars($respuesta['respuesta']); ?>">
+    										<?php echo htmlspecialchars($respuesta['respuesta']); ?>
+    									</label><br>
+    								<?php } ?>
+
+    								<!-- Checkbox y campo de texto para "Otro..." -->
+    								<div id="otros_inputs_<?php echo $pregunta['id_pregunta']; ?>">
+    									<label>
+    										<input type="checkbox" id="check_otro_<?php echo $pregunta['id_pregunta']; ?>" onclick="toggleOtroInput(this, '<?php echo $pregunta['id_pregunta']; ?>')">
+    										<input type="text" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]" placeholder="Otro..." disabled
+    											id="otro_input_<?php echo $pregunta['id_pregunta']; ?>" onkeyup="checkOtroInput('<?php echo $pregunta['id_pregunta']; ?>')">
+    									</label>
+    								</div>
+
+    							<?php } elseif ($tipo == 'texto') { ?>
+    								<input type="text" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]" value="">
+
+    							<?php } else { ?>
+    								<p>El tipo de pregunta <strong><?php echo htmlspecialchars($tipo); ?></strong> no está soportado.</p>
+    							<?php } ?>
+    						</div>
+    						<br>
+    					<?php } ?>
+
+    					<center><input type="submit" name="actualizar_encuesta" value="Actualizar Encuesta"></center>
+    				</form>
+    			<?php } else { ?>
+    				<li>No se ha realizado la encuesta</li>
+    			<?php } ?>
     		</fieldset>
+
+    		<script type="text/javascript">
+    			function toggleOtroInput(checkbox, idPregunta) {
+    				var inputOtro = checkbox.nextElementSibling;
+
+    				if (checkbox.checked) {
+    					inputOtro.disabled = false;
+    					inputOtro.focus();
+    				} else {
+    					removeOtroInput(checkbox.parentNode);
+    				}
+    			}
+
+    			function checkOtroInput(idPregunta) {
+    				var divOtros = document.getElementById("otros_inputs_" + idPregunta);
+    				var inputs = divOtros.getElementsByTagName("input");
+    				var ultimoInput = inputs[inputs.length - 1];
+
+    				if (ultimoInput.type === "text" && ultimoInput.value.trim() !== "") {
+    					var nuevoLabel = document.createElement("label");
+
+    					var nuevoCheckbox = document.createElement("input");
+    					nuevoCheckbox.type = "checkbox";
+    					nuevoCheckbox.onclick = function() {
+    						toggleOtroInput(this, idPregunta);
+    					};
+
+    					var nuevoInput = document.createElement("input");
+    					nuevoInput.type = "text";
+    					nuevoInput.name = "respuesta[" + idPregunta + "][]";
+    					nuevoInput.placeholder = "Otro...";
+    					nuevoInput.disabled = true;
+    					nuevoInput.onkeyup = function() {
+    						checkOtroInput(idPregunta);
+    					};
+
+    					nuevoLabel.appendChild(nuevoCheckbox);
+    					nuevoLabel.appendChild(nuevoInput);
+    					divOtros.appendChild(document.createElement("br"));
+    					divOtros.appendChild(nuevoLabel);
+    				}
+    			}
+
+    			function removeOtroInput(label) {
+    				var divOtros = label.parentNode;
+    				if (label.previousSibling && label.previousSibling.nodeName === "BR") {
+    					divOtros.removeChild(label.previousSibling);
+    				}
+    				divOtros.removeChild(label);
+    			}
+    		</script>
+
+
+
 
     		<fieldset class="datos">
     			<legend>Mis servicios contratados</legend>

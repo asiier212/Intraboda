@@ -3,6 +3,23 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>js/alertify/themes/alertify.core.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>js/alertify/themes/alertify.default.css" />
 
+<!-- Place the first <script> tag in your HTML's <head> -->
+<script src="https://cdn.tiny.cloud/1/o6bdbfrosyztaa19zntejfp6e2chzykthzzh728vtdjokot2/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+	function initTinyMCE(selector) {
+		tinymce.init({
+			selector: selector,
+			height: 200,
+			menubar: false,
+			toolbar: 'bold italic fontsizeselect',
+			font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+			content_style: 'body { font-size: 14px; }',
+			branding: false
+		});
+	}
+</script>
+
 <script>
 	function anadirPreguntaPopup() {
 		let activeTab = document.querySelector('.tab.active').getAttribute('data-tab');
@@ -25,8 +42,8 @@
                 <select id='tipo_pregunta' class='popup-input'>
                     <option value='texto'>Texto</option>
                     <option value='rango'>Rango</option>
-                    <option value='opciones'>Opciones</option>
-                    <option value='multiple'>Multiple</option>
+                    <option value='opciones'>Opción Única</option>
+                    <option value='multiple'>Múltiples Opciones</option>
                 </select><br><br>
             `;
 		}
@@ -45,6 +62,7 @@
         `;
 
 		document.body.insertAdjacentHTML('beforeend', popup);
+		initTinyMCE('#descripcion');
 	}
 
 	function cerrarPopup() {
@@ -64,7 +82,7 @@
 
 			data.importe_descuento = importe !== "" ? parseFloat(importe) : null;
 		} else if (tab === 'encuesta2') {
-			data.descripcion = document.getElementById('descripcion').value.trim();
+			data.descripcion = tinymce.get('descripcion').getContent().trim();
 			data.tipo_pregunta = document.getElementById('tipo_pregunta').value;
 		}
 
@@ -106,8 +124,8 @@
                 <select id='edit_tipo_pregunta' class='popup-input'>
                     <option value='texto' ${tipo_pregunta === 'texto' ? 'selected' : ''}>Texto</option>
                     <option value='rango' ${tipo_pregunta === 'rango' ? 'selected' : ''}>Rango</option>
-                    <option value='opciones' ${tipo_pregunta === 'opciones' ? 'selected' : ''}>Opciones</option>
-                    <option value='multiple' ${tipo_pregunta === 'multiple' ? 'selected' : ''}>Múltiple</option>
+                    <option value='opciones' ${tipo_pregunta === 'opciones' ? 'selected' : ''}>Opción Única</option>
+                    <option value='multiple' ${tipo_pregunta === 'multiple' ? 'selected' : ''}>Múltiples Opciones</option>
                 </select><br><br>`;
 		}
 
@@ -136,6 +154,7 @@
         </div>`;
 
 		document.body.insertAdjacentHTML('beforeend', popup);
+		initTinyMCE('#edit_descripcion');
 	}
 
 	function guardarEdicionPregunta(id_pregunta, tab) {
@@ -148,7 +167,7 @@
 		if (tab === 'encuesta1') {
 			data.importe_descuento = document.getElementById('edit_importe_descuento').value.trim();
 		} else if (tab === 'encuesta2') {
-			data.descripcion = document.getElementById('edit_descripcion').value.trim();
+			data.descripcion = tinymce.get('edit_descripcion').getContent().trim();
 			data.tipo_pregunta = document.getElementById('edit_tipo_pregunta').value;
 		}
 
@@ -200,120 +219,126 @@
 	}
 
 	function deletepregunta(id_pregunta) {
-		console.log("Enviando ID:", id_pregunta);
+    let activeTab = document.querySelector('.tab.active').getAttribute('data-tab');
+    console.log("🔵 Eliminando pregunta en", activeTab, "ID:", id_pregunta);
 
-		if (confirm("¿Seguro que deseas eliminar esta pregunta?")) {
-			fetch('<?php echo base_url() ?>index.php/ajax/deletepregunta_encuesta', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json'
-					},
-					body: JSON.stringify({
-						id_pregunta: id_pregunta
-					})
-				})
-				.then(response => response.json())
-				.then(result => {
-					console.log("Respuesta del servidor:", result);
-					if (result.success) {
-						location.reload(); // Recargar la página para reflejar los cambios
-					} else {
-						alert("Error al eliminar la pregunta");
-					}
-				});
-		}
-	}
+    if (confirm("¿Seguro que deseas eliminar esta pregunta?")) {
+        fetch('<?php echo base_url() ?>index.php/ajax/deletepregunta_encuesta', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                id_pregunta: id_pregunta, 
+                tipo_encuesta: activeTab  // Se envía la encuesta activa 
+            })
+        })
+        .then(response => response.json())
+        .then(result => {
+            console.log("🟢 Respuesta del servidor:", result);
+            if (result.success) {
+                location.reload();
+            } else {
+                alert("❌ Error al eliminar la pregunta: " + result.message);
+            }
+        })
+        .catch(error => console.error("🔴 Error en fetch:", error));
+    }
+}
+
+
 
 	function anadir_respuesta(id_pregunta) {
-    let activeTab = document.querySelector('.tab.active').getAttribute('data-tab'); // Identificar la encuesta activa
-    let preguntaFieldset = document.getElementById(`pregunta_${id_pregunta}`);
+		let activeTab = document.querySelector('.tab.active').getAttribute('data-tab'); // Identificar la encuesta activa
+		let preguntaFieldset = document.getElementById(`pregunta_${id_pregunta}`);
 
-    if (!preguntaFieldset) {
-        console.error(`❌ No se encontró el fieldset para la pregunta con ID: ${id_pregunta}`);
-        return;
-    }
+		if (!preguntaFieldset) {
+			console.error(`❌ No se encontró el fieldset para la pregunta con ID: ${id_pregunta}`);
+			return;
+		}
 
-    // Verificar si el contenedor de respuestas existe, si no, crearlo
-    let respuestasContainer = preguntaFieldset.querySelector(".respuestas");
-    if (!respuestasContainer) {
-        respuestasContainer = document.createElement("ul");
-        respuestasContainer.className = "respuestas";
-        preguntaFieldset.appendChild(respuestasContainer);
-    }
+		// Verificar si el contenedor de respuestas existe, si no, crearlo
+		let respuestasContainer = preguntaFieldset.querySelector(".respuestas");
+		if (!respuestasContainer) {
+			respuestasContainer = document.createElement("ul");
+			respuestasContainer.className = "respuestas";
+			preguntaFieldset.appendChild(respuestasContainer);
+		}
 
-    // Verificar si ya existe un input para evitar duplicados
-    if (document.getElementById(`nueva_respuesta_${id_pregunta}`)) {
-        return;
-    }
+		// Verificar si ya existe un input para evitar duplicados
+		if (document.getElementById(`nueva_respuesta_${id_pregunta}`)) {
+			return;
+		}
 
-    // Crear el input para la nueva respuesta
-    let inputRespuesta = document.createElement("input");
-    inputRespuesta.type = "text";
-    inputRespuesta.id = `nueva_respuesta_${id_pregunta}`;
-    inputRespuesta.className = "respuesta-input";
-    inputRespuesta.placeholder = "Escribe la respuesta";
+		// Crear el input para la nueva respuesta
+		let inputRespuesta = document.createElement("input");
+		inputRespuesta.type = "text";
+		inputRespuesta.id = `nueva_respuesta_${id_pregunta}`;
+		inputRespuesta.className = "respuesta-input";
+		inputRespuesta.placeholder = "Escribe la respuesta";
 
-    // Crear botón de confirmar ✔
-    let btnConfirmar = document.createElement("button");
-    btnConfirmar.innerText = "✔";
-    btnConfirmar.onclick = function () {
-        guardar_respuesta(id_pregunta, activeTab);
-    };
+		// Crear botón de confirmar ✔
+		let btnConfirmar = document.createElement("button");
+		btnConfirmar.innerText = "✔";
+		btnConfirmar.onclick = function() {
+			guardar_respuesta(id_pregunta, activeTab);
+		};
 
-    // Crear botón de cancelar ✖
-    let btnCancelar = document.createElement("button");
-    btnCancelar.innerText = "✖";
-    btnCancelar.onclick = function () {
-        inputRespuesta.remove();
-        btnConfirmar.remove();
-        btnCancelar.remove();
-    };
+		// Crear botón de cancelar ✖
+		let btnCancelar = document.createElement("button");
+		btnCancelar.innerText = "✖";
+		btnCancelar.onclick = function() {
+			inputRespuesta.remove();
+			btnConfirmar.remove();
+			btnCancelar.remove();
+		};
 
-    // Agregar input y botones al contenedor de respuestas
-    respuestasContainer.appendChild(inputRespuesta);
-    respuestasContainer.appendChild(btnConfirmar);
-    respuestasContainer.appendChild(btnCancelar);
+		// Agregar input y botones al contenedor de respuestas
+		respuestasContainer.appendChild(inputRespuesta);
+		respuestasContainer.appendChild(btnConfirmar);
+		respuestasContainer.appendChild(btnCancelar);
 
-    // 🔹 AUTOFOCUS para escribir de inmediato
-    inputRespuesta.focus();
-}
-
-
-function guardar_respuesta(id_pregunta) {
-    let respuestaInput = document.querySelector(`#pregunta_${id_pregunta} .respuesta-input`);
-    console.log("Input encontrado:", respuestaInput); // Verifica si se encuentra el input
-    if (!respuestaInput) {
-        console.error("No se encontró el input para la respuesta.");
-        return;
-    }
-
-    let respuesta = respuestaInput.value.trim();
-    console.log("Respuesta:", respuesta); // Verifica el valor de la respuesta
-    if (respuesta === "") {
-        alert("La respuesta no puede estar vacía.");
-        return;
-    }
-
-    console.log("🔵 Enviando respuesta:", respuesta, "para la pregunta con ID:", id_pregunta);
-
-    fetch('<?php echo base_url() ?>index.php/ajax/anadir_respuesta', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id_pregunta: id_pregunta, respuesta: respuesta })
-    })
-    .then(response => response.json())
-    .then(result => {
-        console.log("🟢 Respuesta del servidor:", result);
-        if (result.success) {
-            location.reload();
-        } else {
-            alert(result.message);
-        }
-    })
-    .catch(error => console.error("🔴 Error en la petición fetch:", error));
-}
+		// 🔹 AUTOFOCUS para escribir de inmediato
+		inputRespuesta.focus();
+	}
 
 
+	function guardar_respuesta(id_pregunta) {
+		let respuestaInput = document.querySelector(`#pregunta_${id_pregunta} .respuesta-input`);
+		console.log("Input encontrado:", respuestaInput); // Verifica si se encuentra el input
+		if (!respuestaInput) {
+			console.error("No se encontró el input para la respuesta.");
+			return;
+		}
+
+		let respuesta = respuestaInput.value.trim();
+		console.log("Respuesta:", respuesta); // Verifica el valor de la respuesta
+		if (respuesta === "") {
+			alert("La respuesta no puede estar vacía.");
+			return;
+		}
+
+		console.log("🔵 Enviando respuesta:", respuesta, "para la pregunta con ID:", id_pregunta);
+
+		fetch('<?php echo base_url() ?>index.php/ajax/anadir_respuesta', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					id_pregunta: id_pregunta,
+					respuesta: respuesta
+				})
+			})
+			.then(response => response.json())
+			.then(result => {
+				console.log("🟢 Respuesta del servidor:", result);
+				if (result.success) {
+					location.reload();
+				} else {
+					alert(result.message);
+				}
+			})
+			.catch(error => console.error("🔴 Error en la petición fetch:", error));
+	}
 </script>
 
 
@@ -476,6 +501,7 @@ function guardar_respuesta(id_pregunta) {
 
 
 <script>
+
 	function openTab(tabId) {
 		// Oculta todos los contenidos y quita la clase activa de las pestañas
 		document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
@@ -484,11 +510,15 @@ function guardar_respuesta(id_pregunta) {
 		// Activa la pestaña y su contenido correspondiente
 		document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
 		document.getElementById(tabId).classList.add('active');
+
+		// Guarda la pestaña activa en localStorage
+		localStorage.setItem('activeTab', tabId);
 	}
 
 	document.addEventListener("DOMContentLoaded", function() {
-		// Activa la primera pestaña por defecto
-		openTab('encuesta1');
+		// Recupera la pestaña activa de localStorage o usa 'encuesta1' por defecto
+		const activeTab = localStorage.getItem('activeTab') || 'encuesta1';
+		openTab(activeTab);
 	});
 </script>
 

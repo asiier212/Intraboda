@@ -266,40 +266,73 @@ class Cliente extends CI_Controller
 				}
 				if (isset($_POST['actualizar_encuesta'])) {
 					$this->load->database();
-
-					$_POST['mas_importancia'] = implode(",", $_POST['mas_importancia']);
-					$_POST['menos_importancia'] = implode(",", $_POST['menos_importancia']);
-
-					$preguntas = [
-						'participativo_dj' => 1,
-						'participativos_invitados' => 2,
-						'num_invitados' => 3,
-						'ampliar_fiesta' => 4,
-						'flexibilidad_restaurante' => 5,
-						'hora_ultimo_autobus' => 6,
-						'mas_importancia' => 7,
-						'menos_importancia' => 8
-					];
-
-					foreach ($preguntas as $campo => $id_pregunta) {
-						$this->db->query("UPDATE respuestas_encuesta_datos_boda SET respuesta='" . $_POST[$campo] . "' WHERE id_pregunta='$id_pregunta' AND id_cliente='" . $this->session->userdata('user_id') . "'");
+				
+					log_message('debug', 'Respuestas recibidas: ' . print_r($_POST['respuesta'], true));
+				
+					foreach ($_POST['respuesta'] as $id_pregunta => $valor_respuesta) {
+						if (is_array($valor_respuesta)) {
+							$valor_respuesta = implode(",", $valor_respuesta); // Para respuestas múltiples
+						}
+				
+						$id_cliente = $this->session->userdata('user_id');
+				
+						// Comprobar si ya existe una respuesta en la BD
+						$query = $this->db->query("
+							SELECT COUNT(*) as total FROM respuestas_encuesta_datos_boda 
+							WHERE id_pregunta = ? AND id_cliente = ?", 
+							array($id_pregunta, $id_cliente)
+						);
+				
+						$existe = $query->row()->total;
+				
+						if ($existe > 0) {
+							// Si ya existe, actualizar
+							$this->db->query("
+								UPDATE respuestas_encuesta_datos_boda 
+								SET respuesta = ? 
+								WHERE id_pregunta = ? AND id_cliente = ?", 
+								array($valor_respuesta, $id_pregunta, $id_cliente)
+							);
+						} else {
+							// Si no existe, insertar nueva respuesta
+							$this->db->query("
+								INSERT INTO respuestas_encuesta_datos_boda (id_pregunta, id_cliente, respuesta) 
+								VALUES (?, ?, ?)", 
+								array($id_pregunta, $id_cliente, $valor_respuesta)
+							);
+						}
 					}
-
-					// Notificación por email
-					$query = $this->db->query("SELECT nombre_novio, nombre_novia, fecha_boda FROM clientes WHERE id = '" . $this->session->userdata('user_id') . "'");
-					$fila = $query->row();
-					$mensaje = '<table border="0" width="100%">
-                    <tr>
-                        <td align="center"><img src="http://www.bilbodj.com/intranetv3/img/logo_intranet.png" width="200"></td>
-                        <td align="justify">
-                        <p>¡¡Hola!!</p>
-                        <p>Se ha actualizado la encuesta respecto a la boda de ' . $fila->nombre_novio . ' y ' . $fila->nombre_novia . ' que se casan el día ' . $fila->fecha_boda . '.</p>
-                        <p>Atentamente Administración EXEL Eventos</p>
-                        </td>
-                    </tr>
-                </table>';
-					$this->enviar_mail(utf8_decode("IntraBoda - Actualización de encuesta respecto a la boda"), utf8_decode($mensaje));
+				
+					log_message('debug', 'Última consulta ejecutada: ' . $this->db->last_query());
+				
+					// **Enviar notificación por email**
+					$query = $this->db->query("
+						SELECT nombre_novio, nombre_novia, fecha_boda FROM clientes 
+						WHERE id = ?", array($id_cliente)
+					);
+				
+					if ($query->num_rows() > 0) {
+						$fila = $query->row();
+						$mensaje = '
+							<table border="0" width="100%">
+								<tr>
+									<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/logo_intranet.png" width="200"></td>
+									<td align="justify">
+										<p>¡¡Hola!!</p>
+										<p>Se ha actualizado la encuesta respecto a la boda de ' . 
+										htmlspecialchars($fila->nombre_novio) . ' y ' . 
+										htmlspecialchars($fila->nombre_novia) . ' que se casan el día ' . 
+										htmlspecialchars($fila->fecha_boda) . '.</p>
+										<p>Atentamente Administración EXEL Eventos</p>
+									</td>
+								</tr>
+							</table>';
+				
+						// **Descomentar si deseas enviar email**
+						// $this->enviar_mail("IntraBoda - Actualización de encuesta respecto a la boda", $mensaje);
+					}
 				}
+				
 			}
 
 			// Obtener datos del cliente
@@ -321,30 +354,25 @@ class Cliente extends CI_Controller
 			// Guardamos los servicios corregidos en `$data['cliente']['servicios']`
 			$data['cliente']['servicios'] = $arr_servicios;
 
-			log_message('debug', 'Servicios después de conversión: ' . print_r($data['cliente']['servicios'], true));
-
 			$arr_serv_keys = array_keys($arr_servicios);
 
 			if (!empty($arr_serv_keys)) {
 				$ids = implode(",", array_map('intval', $arr_serv_keys)); // Asegurar que son números
-				log_message('debug', 'Buscando servicios con IDs: ' . $ids);
 
 				$data['servicios'] = $this->cliente_functions->GetServicios($ids);
 
 				if (empty($data['servicios'])) {
-					log_message('error', '⚠️ ERROR: GetServicios() devolvió vacío. Posibles causas: IDs incorrectos o tabla vacía.');
 					$data['servicios'] = []; // Evita el error en la vista
 				} else {
-					log_message('debug', 'Servicios obtenidos en el controlador: ' . print_r($data['servicios'], true));
 				}
 			} else {
-				log_message('debug', 'No hay servicios en el array de claves.');
 				$data['servicios'] = [];
 			}
 
 
 			// Cargar otros datos necesarios
 			$data['preguntas_encuesta_datos_boda'] = $this->cliente_functions->GetPreguntasEncuestaDatosBoda();
+			$data['opciones_respuestas_encuesta_datos_boda'] = $this->cliente_functions->GetOpcionesRespuestasEncuestaDatosBoda();
 			$data['respuestas_encuesta_datos_boda'] = $this->cliente_functions->GetRespuestasEncuestaDatosBoda($this->session->userdata('user_id'));
 			$data['pagos'] = $this->cliente_functions->GetPagos($this->session->userdata('user_id'));
 			$data['dj'] = $this->cliente_functions->GetDjAsignado($this->session->userdata('user_id'));
