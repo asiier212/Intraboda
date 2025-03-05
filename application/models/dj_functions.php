@@ -1,4 +1,4 @@
-<?
+<?php
 Class Dj_functions extends CI_Model{
 	
 	function DjLogin($mail, $clave)
