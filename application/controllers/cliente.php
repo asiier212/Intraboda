@@ -373,7 +373,7 @@ class Cliente extends CI_Controller
 			// Cargar otros datos necesarios
 			$data['preguntas_encuesta_datos_boda'] = $this->cliente_functions->GetPreguntasEncuestaDatosBoda();
 			$data['opciones_respuestas_encuesta_datos_boda'] = $this->cliente_functions->GetOpcionesRespuestasEncuestaDatosBoda();
-			$data['respuestas_encuesta_datos_boda'] = $this->cliente_functions->GetRespuestasEncuestaDatosBoda($this->session->userdata('user_id'));
+			$data['respuesta_cliente'] = $this->cliente_functions->GetRespuestasEncuestaDatosBoda($this->session->userdata('user_id'));
 			$data['pagos'] = $this->cliente_functions->GetPagos($this->session->userdata('user_id'));
 			$data['dj'] = $this->cliente_functions->GetDjAsignado($this->session->userdata('user_id'));
 		}

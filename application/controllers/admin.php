@@ -732,6 +732,10 @@ class Admin extends CI_Controller
 		}
 		if ($acc == 'view') {
 			$this->load->database();
+			if (isset($_GET['p']))
+				$data['page'] = $_GET['p'];
+			else
+				$data['page'] = 1;
 			if ($id) {
 				if ($_POST) {
 
@@ -829,12 +833,13 @@ class Admin extends CI_Controller
 						$this->db->query("UPDATE clientes SET descuento = '" . $_POST['descuento'] . "' WHERE id = {$id}");
 					}
 					if (isset($_POST['add_pago'])) {
+						error_log("Insertando pago para cliente: " . $id . " - Valor: " . $_POST['valor']);
 						if (isset($_POST['tipo_pago'])) {
 							$_POST['tipo_pago'] = 'B';
 						} else {
 							$_POST['tipo_pago'] = 'A';
 						}
-						$this->db->query("INSERT INTO pagos (cliente_id, valor, tipo) VALUES ({$id}, '" . str_replace(',', '.', $_POST['valor']) . "', '" . $_POST['tipo_pago'] . "')");
+						$this->db->query("INSERT INTO pagos (cliente_id, valor, tipo, fecha) VALUES ({$id}, '{$valor}', '{$tipo_pago}', CURRENT_TIMESTAMP)");
 
 						//MANDAMOS UN E-MAIL A LOS CLIENTES SI SE HA MARCADO LA OPCIÓN Y CUANDO SE HAYA REALIZADO UN PAGO EN A QUE NO ES DE 0€
 						//if(isset($_POST['enviar_email_pago']) && $_POST['tipo_pago']=='A' && $_POST['valor']>0){
@@ -1220,6 +1225,9 @@ class Admin extends CI_Controller
 				$data['incidencias'] = $this->admin_functions->GetIncidencias($id);
 				$data['canciones_pendientes'] = $this->admin_functions->GetCancionesPendientes($id);
 				$data['restaurantes'] = $this->admin_functions->GetRestaurantesTotales();
+				$data['preguntas_encuesta_datos_boda'] = $this->admin_functions->GetPreguntasEncuestaDatosBoda();
+				$data['opciones_respuestas_encuesta_datos_boda'] = $this->admin_functions->GetOpcionesRespuestasEncuestaDatosBoda();
+				$data['respuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda($id);
 				$acc = "viewdetails";
 			} else {
 				if ($_POST) {
@@ -1755,7 +1763,7 @@ class Admin extends CI_Controller
 
 	public function encuesta()
 	{
-		
+
 		if (isset($_POST['pregunta']) && $_POST['pregunta'] <> "") {
 			$this->load->database();
 			$data['pregunta'] = $_POST['pregunta'];

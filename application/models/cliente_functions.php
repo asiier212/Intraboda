@@ -90,7 +90,6 @@
 	}
 
 
-
 	function GetRespuestasEncuestaDatosBoda($id)
 	{
 		$data = false;

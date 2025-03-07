@@ -646,23 +646,130 @@
 				</select>
 				<input style="width:60px;" type="submit" name="update_equipo_extra2" value="Cambiar" />
 			</fieldset>
+			<style>
+				fieldset.datos label {
+					width: 100%;
+					float: left;
+					text-align: left;
+					padding-right: 20px;
+				}
 
-			<fieldset style="width:88%">
+				fieldset.datos input[type="radio"],
+				fieldset.datos input[type="checkbox"] {
+					width: 20px;
+				}
+			</style>
+
+			<fieldset style="width:95%">
 				<legend>Encuesta del cliente respecto a la boda:</legend>
-				<?php
-				foreach ($preguntas_encuesta_datos_boda as $preguntas) {
-				?><li>- <strong><?php echo $preguntas['pregunta'] ?></strong></li><br><?php
-																						if ($respuestas_encuesta_datos_boda[0] <> "") {
-																							foreach ($respuestas_encuesta_datos_boda as $respuestas) {
-																								if ($respuestas['id_pregunta'] == $preguntas['id_pregunta']) {
-																						?><li><?php echo $respuestas['respuesta'] ?></li><br><?php
-																																			}
-																																		}
-																																	} else {
-																																				?><li>No hay respuesta</li><br><?php
-																																											}
-																																										} ?>
+
+				<?php if (!empty($preguntas_encuesta_datos_boda)) { ?>
+					<form>
+						<?php foreach ($preguntas_encuesta_datos_boda as $pregunta) { ?>
+							<span>
+								<strong><?php echo htmlspecialchars($pregunta['pregunta']); ?></strong>
+								<?php if (!empty($pregunta['descripcion'])) { ?>
+									<span><?php echo $pregunta['descripcion']; ?></span> <!-- Permite HTML -->
+								<?php } else { ?>
+									<br><br>
+								<?php } ?>
+
+								<?php
+								// Filtrar las respuestas disponibles para esta pregunta
+								$respuestas = array();
+								foreach ($opciones_respuestas_encuesta_datos_boda as $resp) {
+									if (intval($resp['id_pregunta']) === intval($pregunta['id_pregunta'])) {
+										$respuestas[] = $resp;
+									}
+								}
+
+								// Asegurar que $respuesta_cliente es un array
+								if (!is_array($respuesta_cliente)) {
+									$respuesta_cliente = array();
+								}
+
+								// Obtener la respuesta del cliente si existe
+								$respuesta_cliente_actual = null;
+								$respuestas_seleccionadas = array();
+
+								// Buscar manualmente la respuesta correcta en el array
+								foreach ($respuesta_cliente as $resp) {
+									if ($resp['id_pregunta'] == $pregunta['id_pregunta']) {
+										if ($pregunta['tipo_pregunta'] == 'multiple') {
+											// Dividir respuestas separadas por comas y limpiar espacios
+											$respuestas_seleccionadas = array_merge($respuestas_seleccionadas, array_map('trim', explode(',', $resp['respuesta'])));
+										} else {
+											$respuesta_cliente_actual = $resp['respuesta']; // Solo guarda la última en caso de opción única
+										}
+									}
+								}
+
+								// Determinar el tipo de pregunta
+								$tipo = isset($pregunta['tipo_pregunta']) ? strtolower($pregunta['tipo_pregunta']) : '';
+								?>
+
+								<?php if ($tipo == 'rango') { ?>
+									<input type="range" min="0" max="10" value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 5); ?>" disabled>
+									<span><?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?></span>
+
+								<?php } elseif ($tipo == 'opciones' && !empty($respuestas)) { ?>
+									<?php foreach ($respuestas as $respuesta) { ?>
+										<label>
+											<input type="radio" disabled
+												<?php echo (!empty($respuesta_cliente_actual) && $respuesta_cliente_actual == $respuesta['respuesta']) ? 'checked' : ''; ?>>
+											<?php echo htmlspecialchars($respuesta['respuesta']); ?>
+										</label><br>
+									<?php } ?>
+
+								<?php } elseif ($tipo == 'multiple' && !empty($respuestas)) { ?>
+									<?php
+									// Obtener todas las respuestas posibles de la base de datos
+									$respuestas_disponibles = array();
+									foreach ($respuestas as $respuesta) {
+										$respuestas_disponibles[] = trim($respuesta['respuesta']);
+									}
+
+									// Buscar respuestas que no estén en la lista de opciones disponibles
+									$respuestas_extra = array();
+									foreach ($respuestas_seleccionadas as $respuesta) {
+										if (!in_array($respuesta, $respuestas_disponibles)) {
+											$respuestas_extra[] = $respuesta; // Añadir respuestas desconocidas
+										}
+									}
+									?>
+
+									<!-- Mostrar las respuestas de la base de datos -->
+									<?php foreach ($respuestas as $respuesta) { ?>
+										<label>
+											<input type="checkbox" disabled
+												<?php echo (!empty($respuestas_seleccionadas) && in_array(trim($respuesta['respuesta']), $respuestas_seleccionadas)) ? 'checked' : ''; ?>>
+											<?php echo htmlspecialchars($respuesta['respuesta']); ?>
+										</label><br>
+									<?php } ?>
+
+									<!-- Agregar checkboxes para respuestas adicionales que no están en la lista -->
+									<?php foreach ($respuestas_extra as $respuesta_extra) { ?>
+										<label>
+											<input type="checkbox" disabled checked>
+											<?php echo htmlspecialchars($respuesta_extra); ?>
+										</label><br>
+									<?php } ?>
+
+								<?php } elseif ($tipo == 'texto') { ?>
+									<input type="text" value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?>" disabled>
+
+								<?php } else { ?>
+									<p>El tipo de pregunta <strong><?php echo htmlspecialchars($tipo); ?></strong> no está soportado.</p>
+								<?php } ?>
+							</span>
+							<br><br>
+						<?php } ?>
+					</form>
+				<?php } else { ?>
+					<li>No se ha realizado la encuesta</li>
+				<?php } ?>
 			</fieldset>
+
 		</fieldset>
 		<?php
 		// Deserializar datos
@@ -718,10 +825,10 @@
 
 			<form method="POST" action="">
 				<!-- Otras entradas del formulario -->
-				 <br>
+				<br>
 				<input type="hidden" name="id_cliente" value="<?php echo isset($cliente['id']) ? $cliente['id'] : ''; ?>">
 				<input type="submit" style="width:15%" name="update_servicios" value="Actualizar servicios y descuentos" />
-				</form>
+			</form>
 
 			<br /><br />
 			<label style="width: 20%; text-align: left;">Descuento: <?php echo $totalDescuento ?>€</label>
@@ -843,22 +950,22 @@
 					<?php foreach ($observaciones_cliente as $observacion): ?>
 						<li id="o_<?php echo $observacion['id']; ?>"
 							style="margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; 
-                   border-radius: 5px; background-color: #f9f9f9; 
-                   display: flex; justify-content: space-between; align-items: center;">
+                    border-radius: 5px; background-color: #f9f9f9; 
+                    display: flex; justify-content: space-between; align-items: center;">
 
 							<div>
 								<strong>Observación:</strong> <?php echo $observacion['comentario']; ?><br>
 								<span>Link:</span>
 								<?php
-								$url = trim($observacion['link']); // Eliminar espacios extra
+								$url = trim($observacion['link']);
 								if (!empty($url)) {
 									if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
-										$url = "http://" . $url; // Agregar "http://" si no está presente
+										$url = "http://" . $url;
 									}
-									echo '<a href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . '" target="_blank" style="color: #007bff; text-decoration: none;">' . htmlspecialchars($observacion['link'], ENT_QUOTES, 'UTF-8') . '</a><br>';
+									echo '<a href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . '" target="_blank" 
+                            style="color: #007bff; text-decoration: none;">' . htmlspecialchars($observacion['link'], ENT_QUOTES, 'UTF-8') . '</a><br>';
 								}
 								?>
-
 								<small style="color: #666;">Fecha: <?php echo date('d/m/Y', strtotime($observacion['fecha'])); ?></small>
 							</div>
 
@@ -869,28 +976,51 @@
 					<?php endforeach; ?>
 				</ul>
 			<?php endif; ?>
+
 			<li style="padding:8px 0;"><strong>Añadir Observación:</strong></li>
+
 			<form method="post" action="" id="form_observacion" style="display: flex; flex-direction: column; align-items: left;">
-				<textarea name="observaciones" id="observaciones" style="width:100%; height:50px; float:left" placeholder="Observación" required></textarea>
+				<textarea name="observaciones" id="observaciones" style="width:100%; height:50px; float:left;"
+					placeholder="Observación"></textarea>
 				<br>
+
 				<li style="padding:8px 0;"><strong>Link:</strong></li>
-				<input style="text-align: left" type="text" name="link" id="link" placeholder="Ej.: https://www.youtube.com/watch?v=a1Femq4NPxs" style="width:300px; float:left" />
+				<input style="text-align: left" type="text" name="link" id="link"
+					placeholder="Ej.: https://www.youtube.com/watch?v=a1Femq4NPxs" style="width:300px; float:left" />
 				<br>
 				<input type="submit" name="add_observ" value="Añadir">
-
 			</form>
 
-			<!-- Place the first <script> tag in your HTML's <head> -->
+			<!-- Cargar TinyMCE -->
 			<script src="https://cdn.tiny.cloud/1/o6bdbfrosyztaa19zntejfp6e2chzykthzzh728vtdjokot2/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 
-			<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
 			<script>
+				// Inicialización de TinyMCE
 				tinymce.init({
-					selector: 'textarea', // Asegúrate de que este es tu selector correcto
-					toolbar: 'bold italic fontsizeselect', // Solo negritas, cursiva y cambio de tamaño
-					font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt', // Tamaños permitidos
-					content_style: 'body { font-size: 14px; }', // Ajusta el tamaño predeterminado
-					branding: false // Oculta el logo de TinyMCE
+					selector: 'textarea',
+					toolbar: 'bold italic fontsizeselect',
+					font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+					content_style: 'body { font-size: 14px; }',
+					branding: false
+				});
+
+				document.addEventListener("DOMContentLoaded", function() {
+					var form = document.getElementById("form_observacion");
+					var textarea = document.getElementById("observaciones");
+
+					// Eliminar required porque el campo está oculto
+					textarea.removeAttribute("required");
+
+					// Agregar validación en el submit
+					form.addEventListener("submit", function(event) {
+						var editor = tinymce.get("observaciones"); // Obtener instancia de TinyMCE
+						var content = editor ? editor.getContent().trim() : textarea.value.trim(); // Obtener contenido
+
+						if (!content) {
+							alert("El campo de observación no puede estar vacío.");
+							event.preventDefault(); // Evita el envío del formulario
+						}
+					});
 				});
 			</script>
 
@@ -900,6 +1030,7 @@
 				<?php endif; ?>
 			</div>
 		</fieldset>
+
 
 		<div class="clear"> </div>
 		<fieldset class="datos">
