@@ -585,7 +585,7 @@
 	
 		log_message('debug', 'Ejecutando consulta: SELECT id, nombre FROM servicios WHERE id IN (' . $ids . ')');
 		
-		$query = $this->db->query("SELECT id, nombre FROM servicios WHERE id IN ($ids)");
+		$query = $this->db->query("SELECT id, nombre FROM servicios WHERE id IN ($ids) Order by orden ASC");
 		
 		if ($query->num_rows() == 0) {
 			log_message('error', '⚠️ ERROR: La consulta a servicios no devolvió resultados.');
