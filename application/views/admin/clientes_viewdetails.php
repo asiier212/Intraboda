@@ -647,20 +647,25 @@
 				<input style="width:60px;" type="submit" name="update_equipo_extra2" value="Cambiar" />
 			</fieldset>
 			<style>
-				fieldset.datos label {
+				fieldset.fieldsetencuesta label {
 					width: 100%;
 					float: left;
 					text-align: left;
 					padding-right: 20px;
 				}
 
+
 				fieldset.datos input[type="radio"],
 				fieldset.datos input[type="checkbox"] {
 					width: 20px;
 				}
+
+				.fieldsetencuesta {
+					width: 95%;
+				}
 			</style>
 
-			<fieldset style="width:95%">
+			<fieldset class="fieldsetencuesta">
 				<legend>Encuesta del cliente respecto a la boda:</legend>
 
 				<?php if (!empty($preguntas_encuesta_datos_boda)) { ?>
