@@ -7205,3 +7205,730 @@ DEBUG - 2025-03-07 14:17:49 --> UTF-8 Support Enabled
 DEBUG - 2025-03-07 14:17:49 --> URI Class Initialized
 DEBUG - 2025-03-07 14:17:49 --> Router Class Initialized
 ERROR - 2025-03-07 14:17:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:19:46 --> Config Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:19:46 --> URI Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Router Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Output Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Security Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Input Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:19:46 --> Language Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:19:46 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Session Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:19:46 --> Session routines successfully run
+DEBUG - 2025-03-07 14:19:46 --> Model Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Model Class Initialized
+ERROR - 2025-03-07 14:19:46 --> 404 Page Not Found --> admin/datos
+DEBUG - 2025-03-07 14:19:46 --> Config Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:19:46 --> URI Class Initialized
+DEBUG - 2025-03-07 14:19:46 --> Router Class Initialized
+ERROR - 2025-03-07 14:19:46 --> 404 Page Not Found --> favicon.ico
+DEBUG - 2025-03-07 14:19:50 --> Config Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:19:50 --> URI Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Router Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Output Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Security Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Input Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:19:50 --> Language Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:19:50 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Session Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:19:50 --> Session routines successfully run
+DEBUG - 2025-03-07 14:19:50 --> Model Class Initialized
+DEBUG - 2025-03-07 14:19:50 --> Model Class Initialized
+ERROR - 2025-03-07 14:19:50 --> 404 Page Not Found --> admin/d
+DEBUG - 2025-03-07 14:19:54 --> Config Class Initialized
+DEBUG - 2025-03-07 14:19:54 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:19:54 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:19:54 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:19:54 --> URI Class Initialized
+DEBUG - 2025-03-07 14:19:54 --> Router Class Initialized
+DEBUG - 2025-03-07 14:19:54 --> Output Class Initialized
+DEBUG - 2025-03-07 14:19:54 --> Security Class Initialized
+DEBUG - 2025-03-07 14:19:55 --> Input Class Initialized
+DEBUG - 2025-03-07 14:19:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:19:55 --> Language Class Initialized
+DEBUG - 2025-03-07 14:19:55 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:19:55 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:19:55 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:19:55 --> Session Class Initialized
+DEBUG - 2025-03-07 14:19:55 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:19:55 --> Session routines successfully run
+DEBUG - 2025-03-07 14:19:55 --> Model Class Initialized
+DEBUG - 2025-03-07 14:19:55 --> Model Class Initialized
+DEBUG - 2025-03-07 14:19:55 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-07 14:19:55 --> File loaded: application/views/admin/home.php
+DEBUG - 2025-03-07 14:19:55 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-07 14:19:55 --> Final output sent to browser
+DEBUG - 2025-03-07 14:19:55 --> Total execution time: 0.0559
+DEBUG - 2025-03-07 14:19:57 --> Config Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:19:57 --> URI Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Router Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Output Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Security Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Input Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:19:57 --> Language Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:19:57 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Session Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:19:57 --> Session routines successfully run
+DEBUG - 2025-03-07 14:19:57 --> Model Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Model Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Database Driver Class Initialized
+ERROR - 2025-03-07 14:19:57 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-07 14:19:57 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-07 14:19:57 --> File loaded: application/views/admin/clientes_view.php
+DEBUG - 2025-03-07 14:19:57 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-07 14:19:57 --> Final output sent to browser
+DEBUG - 2025-03-07 14:19:57 --> Total execution time: 0.0679
+DEBUG - 2025-03-07 14:19:57 --> Config Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Config Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:19:57 --> URI Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Router Class Initialized
+ERROR - 2025-03-07 14:19:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:19:57 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:19:57 --> URI Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Router Class Initialized
+ERROR - 2025-03-07 14:19:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:19:57 --> Config Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:19:57 --> URI Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Router Class Initialized
+ERROR - 2025-03-07 14:19:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:19:57 --> Config Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:19:57 --> URI Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Router Class Initialized
+ERROR - 2025-03-07 14:19:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:19:57 --> Config Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:19:57 --> URI Class Initialized
+DEBUG - 2025-03-07 14:19:57 --> Router Class Initialized
+ERROR - 2025-03-07 14:19:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:20:05 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:05 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Router Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Output Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Security Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Input Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:20:05 --> Language Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:20:05 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Session Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:20:05 --> Session routines successfully run
+DEBUG - 2025-03-07 14:20:05 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:05 --> Database Driver Class Initialized
+ERROR - 2025-03-07 14:20:05 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-07 14:20:05 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-07 14:20:05 --> File loaded: application/views/admin/servicios_view.php
+DEBUG - 2025-03-07 14:20:05 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-07 14:20:05 --> Final output sent to browser
+DEBUG - 2025-03-07 14:20:05 --> Total execution time: 0.0630
+DEBUG - 2025-03-07 14:20:12 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:12 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Router Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Output Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Security Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Input Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:20:12 --> Language Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:20:12 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Session Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:20:12 --> Session routines successfully run
+DEBUG - 2025-03-07 14:20:12 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:12 --> Database Driver Class Initialized
+ERROR - 2025-03-07 14:20:12 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 5 con orden: 1
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 13 con orden: 2
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 10 con orden: 3
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 4 con orden: 4
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 12 con orden: 5
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 11 con orden: 6
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 9 con orden: 7
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 32 con orden: 8
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 18 con orden: 9
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 26 con orden: 10
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 27 con orden: 11
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 28 con orden: 12
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 29 con orden: 13
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 30 con orden: 14
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 33 con orden: 15
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 38 con orden: 16
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 39 con orden: 17
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 41 con orden: 18
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 42 con orden: 19
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 43 con orden: 20
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 44 con orden: 21
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 46 con orden: 22
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 47 con orden: 23
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 49 con orden: 24
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 50 con orden: 25
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 51 con orden: 26
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 52 con orden: 27
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 53 con orden: 28
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 54 con orden: 29
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 55 con orden: 30
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 56 con orden: 31
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 57 con orden: 32
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 58 con orden: 33
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 59 con orden: 34
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 60 con orden: 35
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 61 con orden: 36
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 62 con orden: 37
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 63 con orden: 38
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 64 con orden: 39
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 65 con orden: 40
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 66 con orden: 41
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 67 con orden: 42
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 68 con orden: 43
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 69 con orden: 44
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 70 con orden: 45
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 71 con orden: 46
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 72 con orden: 47
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 73 con orden: 48
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 74 con orden: 49
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 75 con orden: 50
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 76 con orden: 51
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 77 con orden: 52
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 78 con orden: 53
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 79 con orden: 54
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 80 con orden: 55
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 81 con orden: 56
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 82 con orden: 57
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 83 con orden: 58
+DEBUG - 2025-03-07 14:20:12 --> Orden actualizado para ID: 84 con orden: 59
+DEBUG - 2025-03-07 14:20:12 --> Final output sent to browser
+DEBUG - 2025-03-07 14:20:12 --> Total execution time: 0.3722
+DEBUG - 2025-03-07 14:20:16 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:16 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Router Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Output Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Security Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Input Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:20:16 --> Language Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:20:16 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Session Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:20:16 --> Session routines successfully run
+DEBUG - 2025-03-07 14:20:16 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:16 --> Database Driver Class Initialized
+ERROR - 2025-03-07 14:20:16 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 4 con orden: 1
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 5 con orden: 2
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 13 con orden: 3
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 10 con orden: 4
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 12 con orden: 5
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 11 con orden: 6
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 9 con orden: 7
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 32 con orden: 8
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 18 con orden: 9
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 26 con orden: 10
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 27 con orden: 11
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 28 con orden: 12
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 29 con orden: 13
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 30 con orden: 14
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 33 con orden: 15
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 38 con orden: 16
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 39 con orden: 17
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 41 con orden: 18
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 42 con orden: 19
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 43 con orden: 20
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 44 con orden: 21
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 46 con orden: 22
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 47 con orden: 23
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 49 con orden: 24
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 50 con orden: 25
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 51 con orden: 26
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 52 con orden: 27
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 53 con orden: 28
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 54 con orden: 29
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 55 con orden: 30
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 56 con orden: 31
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 57 con orden: 32
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 58 con orden: 33
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 59 con orden: 34
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 60 con orden: 35
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 61 con orden: 36
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 62 con orden: 37
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 63 con orden: 38
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 64 con orden: 39
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 65 con orden: 40
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 66 con orden: 41
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 67 con orden: 42
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 68 con orden: 43
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 69 con orden: 44
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 70 con orden: 45
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 71 con orden: 46
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 72 con orden: 47
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 73 con orden: 48
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 74 con orden: 49
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 75 con orden: 50
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 76 con orden: 51
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 77 con orden: 52
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 78 con orden: 53
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 79 con orden: 54
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 80 con orden: 55
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 81 con orden: 56
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 82 con orden: 57
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 83 con orden: 58
+DEBUG - 2025-03-07 14:20:16 --> Orden actualizado para ID: 84 con orden: 59
+DEBUG - 2025-03-07 14:20:16 --> Final output sent to browser
+DEBUG - 2025-03-07 14:20:16 --> Total execution time: 0.3537
+DEBUG - 2025-03-07 14:20:22 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:22 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Router Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Output Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Security Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Input Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:20:22 --> Language Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:20:22 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Session Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:20:22 --> Session routines successfully run
+DEBUG - 2025-03-07 14:20:22 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:22 --> Database Driver Class Initialized
+ERROR - 2025-03-07 14:20:22 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 4 con orden: 1
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 5 con orden: 2
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 9 con orden: 3
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 13 con orden: 4
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 10 con orden: 5
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 12 con orden: 6
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 11 con orden: 7
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 32 con orden: 8
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 18 con orden: 9
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 26 con orden: 10
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 27 con orden: 11
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 28 con orden: 12
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 29 con orden: 13
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 30 con orden: 14
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 33 con orden: 15
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 38 con orden: 16
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 39 con orden: 17
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 41 con orden: 18
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 42 con orden: 19
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 43 con orden: 20
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 44 con orden: 21
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 46 con orden: 22
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 47 con orden: 23
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 49 con orden: 24
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 50 con orden: 25
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 51 con orden: 26
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 52 con orden: 27
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 53 con orden: 28
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 54 con orden: 29
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 55 con orden: 30
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 56 con orden: 31
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 57 con orden: 32
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 58 con orden: 33
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 59 con orden: 34
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 60 con orden: 35
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 61 con orden: 36
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 62 con orden: 37
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 63 con orden: 38
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 64 con orden: 39
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 65 con orden: 40
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 66 con orden: 41
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 67 con orden: 42
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 68 con orden: 43
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 69 con orden: 44
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 70 con orden: 45
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 71 con orden: 46
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 72 con orden: 47
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 73 con orden: 48
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 74 con orden: 49
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 75 con orden: 50
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 76 con orden: 51
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 77 con orden: 52
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 78 con orden: 53
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 79 con orden: 54
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 80 con orden: 55
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 81 con orden: 56
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 82 con orden: 57
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 83 con orden: 58
+DEBUG - 2025-03-07 14:20:22 --> Orden actualizado para ID: 84 con orden: 59
+DEBUG - 2025-03-07 14:20:22 --> Final output sent to browser
+DEBUG - 2025-03-07 14:20:22 --> Total execution time: 0.3347
+DEBUG - 2025-03-07 14:20:28 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:28 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Router Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Output Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Security Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Input Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:20:28 --> Language Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:20:28 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Session Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:20:28 --> Session routines successfully run
+DEBUG - 2025-03-07 14:20:28 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:28 --> Database Driver Class Initialized
+ERROR - 2025-03-07 14:20:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 4 con orden: 1
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 5 con orden: 2
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 9 con orden: 3
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 10 con orden: 4
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 13 con orden: 5
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 12 con orden: 6
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 11 con orden: 7
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 32 con orden: 8
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 18 con orden: 9
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 26 con orden: 10
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 27 con orden: 11
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 28 con orden: 12
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 29 con orden: 13
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 30 con orden: 14
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 33 con orden: 15
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 38 con orden: 16
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 39 con orden: 17
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 41 con orden: 18
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 42 con orden: 19
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 43 con orden: 20
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 44 con orden: 21
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 46 con orden: 22
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 47 con orden: 23
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 49 con orden: 24
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 50 con orden: 25
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 51 con orden: 26
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 52 con orden: 27
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 53 con orden: 28
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 54 con orden: 29
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 55 con orden: 30
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 56 con orden: 31
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 57 con orden: 32
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 58 con orden: 33
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 59 con orden: 34
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 60 con orden: 35
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 61 con orden: 36
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 62 con orden: 37
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 63 con orden: 38
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 64 con orden: 39
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 65 con orden: 40
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 66 con orden: 41
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 67 con orden: 42
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 68 con orden: 43
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 69 con orden: 44
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 70 con orden: 45
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 71 con orden: 46
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 72 con orden: 47
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 73 con orden: 48
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 74 con orden: 49
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 75 con orden: 50
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 76 con orden: 51
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 77 con orden: 52
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 78 con orden: 53
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 79 con orden: 54
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 80 con orden: 55
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 81 con orden: 56
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 82 con orden: 57
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 83 con orden: 58
+DEBUG - 2025-03-07 14:20:28 --> Orden actualizado para ID: 84 con orden: 59
+DEBUG - 2025-03-07 14:20:28 --> Final output sent to browser
+DEBUG - 2025-03-07 14:20:28 --> Total execution time: 0.3347
+DEBUG - 2025-03-07 14:20:32 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:32 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Router Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Output Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Security Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Input Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:20:32 --> Language Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:20:32 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Session Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:20:32 --> Session routines successfully run
+DEBUG - 2025-03-07 14:20:32 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:32 --> Database Driver Class Initialized
+ERROR - 2025-03-07 14:20:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 4 con orden: 1
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 5 con orden: 2
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 9 con orden: 3
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 10 con orden: 4
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 11 con orden: 5
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 13 con orden: 6
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 12 con orden: 7
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 32 con orden: 8
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 18 con orden: 9
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 26 con orden: 10
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 27 con orden: 11
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 28 con orden: 12
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 29 con orden: 13
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 30 con orden: 14
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 33 con orden: 15
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 38 con orden: 16
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 39 con orden: 17
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 41 con orden: 18
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 42 con orden: 19
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 43 con orden: 20
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 44 con orden: 21
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 46 con orden: 22
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 47 con orden: 23
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 49 con orden: 24
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 50 con orden: 25
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 51 con orden: 26
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 52 con orden: 27
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 53 con orden: 28
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 54 con orden: 29
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 55 con orden: 30
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 56 con orden: 31
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 57 con orden: 32
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 58 con orden: 33
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 59 con orden: 34
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 60 con orden: 35
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 61 con orden: 36
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 62 con orden: 37
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 63 con orden: 38
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 64 con orden: 39
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 65 con orden: 40
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 66 con orden: 41
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 67 con orden: 42
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 68 con orden: 43
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 69 con orden: 44
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 70 con orden: 45
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 71 con orden: 46
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 72 con orden: 47
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 73 con orden: 48
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 74 con orden: 49
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 75 con orden: 50
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 76 con orden: 51
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 77 con orden: 52
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 78 con orden: 53
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 79 con orden: 54
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 80 con orden: 55
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 81 con orden: 56
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 82 con orden: 57
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 83 con orden: 58
+DEBUG - 2025-03-07 14:20:32 --> Orden actualizado para ID: 84 con orden: 59
+DEBUG - 2025-03-07 14:20:32 --> Final output sent to browser
+DEBUG - 2025-03-07 14:20:32 --> Total execution time: 0.3405
+DEBUG - 2025-03-07 14:20:39 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:39 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Router Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Output Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Security Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Input Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:20:39 --> Language Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:20:39 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Session Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:20:39 --> Session routines successfully run
+DEBUG - 2025-03-07 14:20:39 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:39 --> Database Driver Class Initialized
+ERROR - 2025-03-07 14:20:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 4 con orden: 1
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 5 con orden: 2
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 9 con orden: 3
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 10 con orden: 4
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 27 con orden: 5
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 11 con orden: 6
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 13 con orden: 7
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 12 con orden: 8
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 32 con orden: 9
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 18 con orden: 10
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 26 con orden: 11
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 28 con orden: 12
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 29 con orden: 13
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 30 con orden: 14
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 33 con orden: 15
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 38 con orden: 16
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 39 con orden: 17
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 41 con orden: 18
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 42 con orden: 19
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 43 con orden: 20
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 44 con orden: 21
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 46 con orden: 22
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 47 con orden: 23
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 49 con orden: 24
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 50 con orden: 25
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 51 con orden: 26
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 52 con orden: 27
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 53 con orden: 28
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 54 con orden: 29
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 55 con orden: 30
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 56 con orden: 31
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 57 con orden: 32
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 58 con orden: 33
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 59 con orden: 34
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 60 con orden: 35
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 61 con orden: 36
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 62 con orden: 37
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 63 con orden: 38
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 64 con orden: 39
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 65 con orden: 40
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 66 con orden: 41
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 67 con orden: 42
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 68 con orden: 43
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 69 con orden: 44
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 70 con orden: 45
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 71 con orden: 46
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 72 con orden: 47
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 73 con orden: 48
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 74 con orden: 49
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 75 con orden: 50
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 76 con orden: 51
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 77 con orden: 52
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 78 con orden: 53
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 79 con orden: 54
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 80 con orden: 55
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 81 con orden: 56
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 82 con orden: 57
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 83 con orden: 58
+DEBUG - 2025-03-07 14:20:39 --> Orden actualizado para ID: 84 con orden: 59
+DEBUG - 2025-03-07 14:20:39 --> Final output sent to browser
+DEBUG - 2025-03-07 14:20:39 --> Total execution time: 0.3327
+DEBUG - 2025-03-07 14:20:41 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:41 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Router Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Output Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Security Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Input Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-07 14:20:41 --> Language Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Loader Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Helper loaded: url_helper
+DEBUG - 2025-03-07 14:20:41 --> Controller Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Session Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Helper loaded: string_helper
+DEBUG - 2025-03-07 14:20:41 --> Session routines successfully run
+DEBUG - 2025-03-07 14:20:41 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Model Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Database Driver Class Initialized
+ERROR - 2025-03-07 14:20:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-07 14:20:41 --> Encrypt Class Initialized
+DEBUG - 2025-03-07 14:20:41 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-03-07 14:20:41 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-07 14:20:42 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-03-07 14:20:42 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-07 14:20:42 --> Final output sent to browser
+DEBUG - 2025-03-07 14:20:42 --> Total execution time: 0.9251
+DEBUG - 2025-03-07 14:20:42 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:42 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Router Class Initialized
+ERROR - 2025-03-07 14:20:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:20:42 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:42 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Router Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Utf8 Class Initialized
+ERROR - 2025-03-07 14:20:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:20:42 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:42 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Router Class Initialized
+ERROR - 2025-03-07 14:20:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:20:42 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:42 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Router Class Initialized
+ERROR - 2025-03-07 14:20:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:20:42 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:42 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:42 --> Router Class Initialized
+ERROR - 2025-03-07 14:20:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:20:43 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:43 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:43 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:43 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:43 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:43 --> Router Class Initialized
+ERROR - 2025-03-07 14:20:43 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-07 14:20:43 --> Config Class Initialized
+DEBUG - 2025-03-07 14:20:43 --> Hooks Class Initialized
+DEBUG - 2025-03-07 14:20:43 --> Utf8 Class Initialized
+DEBUG - 2025-03-07 14:20:43 --> UTF-8 Support Enabled
+DEBUG - 2025-03-07 14:20:43 --> URI Class Initialized
+DEBUG - 2025-03-07 14:20:43 --> Router Class Initialized
+ERROR - 2025-03-07 14:20:43 --> 404 Page Not Found --> uploads

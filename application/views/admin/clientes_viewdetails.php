@@ -776,6 +776,7 @@
 			</fieldset>
 
 		</fieldset>
+
 		<?php
 		// Deserializar datos
 		$arr_servicios = !empty($cliente['servicios']) ? unserialize($cliente['servicios']) : [];
@@ -793,63 +794,69 @@
 
 		$total = !empty($arr_servicios) ? array_sum(array_column($arr_servicios, 'precio')) : 0;
 		$totalDescuento = 0;
+		$descuento1 = $cliente['descuento'];
 		?>
 
-		<fieldset class="datos">
-			<legend>Servicios</legend>
-			<ul>
-				<?php foreach ($servicios as $servicio):
-					$id = $servicio['id'];
-					$precio = isset($arr_servicios[$id]['precio']) ? $arr_servicios[$id]['precio'] : $servicio['precio'];
-					$descuento = isset($arr_servicios[$id]['descuento']) ? $arr_servicios[$id]['descuento'] : 0;
-					$totalDescuento += $descuento;
-				?>
-					<li>
-						<input type="checkbox" name="servicios[<?php echo $id; ?>][activo]"
-							<?php echo isset($arr_servicios[$id]) ? 'checked="checked"' : ''; ?>
-							id="chserv_<?php echo $id; ?>" style="width:30px; vertical-align:middle" />
-
-						<?php echo $servicio['nombre'] . " - "; ?>
-
-						<input type="text"
-							onchange="$('#chserv_<?php echo $id; ?>').prop('checked', true);"
-							id="precioserv_<?php echo $id; ?>"
-							name="servicios[<?php echo $id; ?>][precio]"
-							value="<?php echo $precio; ?>"
-							style="width:50px; text-align:center" /> &euro;
-
-						Dto <input type="text"
-							onchange="$('#chserv_<?php echo $id; ?>').prop('checked', true);"
-							id="dtoserv_<?php echo $id; ?>"
-							name="servicios[<?php echo $id; ?>][descuento]"
-							value="<?php echo $descuento; ?>"
-							style="width:50px; text-align:center" /> &euro;
-					</li>
-				<?php endforeach; ?>
-			</ul>
-
-			<form method="POST" action="">
-				<!-- Otras entradas del formulario -->
-				<br>
-				<input type="hidden" name="id_cliente" value="<?php echo isset($cliente['id']) ? $cliente['id'] : ''; ?>">
-				<input type="submit" style="width:15%" name="update_servicios" value="Actualizar servicios y descuentos" />
-			</form>
-
-			<br /><br />
-			<label style="width: 20%; text-align: left;">Descuento: <?php echo $totalDescuento ?>€</label>
-			<br />
-			<label style="width: 20%; text-align: left; font-size: 1.3em">
-				<strong>Total:
-					<?php
-					if ($totalDescuento > 0) {
-						echo $total . "€ - " . $totalDescuento . "€ = " . ($total - $totalDescuento) . "€";
-					} else {
-						echo $total . "€";
-					}
+		<form method="POST" action="">
+			<fieldset class="datos">
+				<legend>Servicios</legend>
+				<ul>
+					<?php foreach ($servicios as $servicio):
+						$id = $servicio['id'];
+						$precio = isset($arr_servicios[$id]['precio']) ? $arr_servicios[$id]['precio'] : $servicio['precio'];
+						$descuento = isset($arr_servicios[$id]['descuento']) ? $arr_servicios[$id]['descuento'] : 0;
+						$totalDescuento += $descuento;
 					?>
-				</strong>
-			</label>
-		</fieldset>
+						<li>
+							<input type="checkbox" name="servicios[<?php echo $id; ?>][activo]"
+								value="1"
+								<?php echo isset($arr_servicios[$id]) ? 'checked="checked"' : ''; ?>
+								id="chserv_<?php echo $id; ?>" style="width:30px; vertical-align:middle" />
+
+							<?php echo $servicio['nombre'] . " - "; ?>
+
+							<input type="text"
+								onchange="$('#chserv_<?php echo $id; ?>').prop('checked', true);"
+								id="precioserv_<?php echo $id; ?>"
+								name="servicios[<?php echo $id; ?>][precio]"
+								value="<?php echo $precio; ?>"
+								style="width:50px; text-align:center" /> &euro;
+
+							Dto <input type="text"
+								onchange="$('#chserv_<?php echo $id; ?>').prop('checked', true);"
+								id="dtoserv_<?php echo $id; ?>"
+								name="servicios[<?php echo $id; ?>][descuento]"
+								value="<?php echo $descuento; ?>"
+								style="width:50px; text-align:center" /> &euro;
+						</li>
+					<?php endforeach; ?>
+				</ul>
+
+				<!-- Input oculto para asegurarse de que siempre haya datos en $_POST['servicios'] -->
+				<input type="hidden" name="servicios_check" value="1">
+
+				<!-- Otros inputs del formulario -->
+				<input type="hidden" name="id_cliente" value="<?php echo isset($cliente['id']) ? $cliente['id'] : ''; ?>">
+				<br>
+				<input type="submit" style="width:15%" name="update_servicios" value="Actualizar servicios y descuentos" />
+
+				<br /><br />
+				<label style="width: 20%; text-align: left;">Descuento1: <?php echo $descuento1 ?>€</label><br>
+				<label style="width: 20%; text-align: left;">Descuento2: <?php echo $totalDescuento ?>€</label><br>
+
+				<br />
+				<label style="width: 20%; text-align: left; font-size: 1.3em">
+					<strong>Total:
+						<?php
+							$descuento1_text = $descuento1 != 0 ? " - " . $descuento1 . "€" : "";
+							$totalDescuento_text = $totalDescuento != 0 ? " - " . $totalDescuento . "€" : "";
+							$total_final = $total - $descuento1 - $totalDescuento;
+							echo $total . "€" . $descuento1_text . $totalDescuento_text . " = " . $total_final . "€";
+						?>
+					</strong>
+				</label>
+			</fieldset>
+		</form>
 
 
 

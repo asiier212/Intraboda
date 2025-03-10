@@ -316,7 +316,7 @@ class Admin_functions extends CI_Model
 		$data['msg3'] = $this->encrypt->decode($data['msg2']);*/
 
 		$this->load->database();
-		$query = $this->db->query("SELECT clientes.email_novio, clientes.email_novia, clientes.clave, clientes.nombre_novio, clientes.apellidos_novio, clientes.direccion_novio, clientes.cp_novio, clientes.poblacion_novio, clientes.telefono_novio, clientes.nombre_novia, clientes.apellidos_novia, clientes.direccion_novia, clientes.cp_novia, clientes.poblacion_novia, clientes.telefono_novia, clientes.foto, clientes.canal_captacion, clientes.id_oficina, clientes.id_tipo_cliente, clientes.enviar_emails, clientes.fecha_boda, clientes.id_restaurante, restaurantes.nombre AS restaurante, restaurantes.direccion AS direccion_restaurante, restaurantes.telefono AS telefono_restaurante, clientes.servicios, clientes.personas_contacto, DATE_FORMAT(clientes.fecha_boda, '%d-%m-%Y') as fecha_boda, DATE_FORMAT(clientes.fecha_boda, '%H:%i') as hora_boda, restaurantes.maitre, restaurantes.telefono_maitre, clientes.contrato_pdf, clientes.presupuesto_pdf, clientes.descuento, clientes.observaciones FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante WHERE id = {$id}");
+		$query = $this->db->query("SELECT clientes.email_novio, clientes.email_novia, clientes.clave, clientes.nombre_novio, clientes.apellidos_novio, clientes.direccion_novio, clientes.cp_novio, clientes.poblacion_novio, clientes.telefono_novio, clientes.nombre_novia, clientes.apellidos_novia, clientes.direccion_novia, clientes.cp_novia, clientes.poblacion_novia, clientes.telefono_novia, clientes.foto, clientes.canal_captacion, clientes.id_oficina, clientes.id_tipo_cliente, clientes.enviar_emails, clientes.fecha_boda, clientes.id_restaurante, restaurantes.nombre AS restaurante, restaurantes.direccion AS direccion_restaurante, restaurantes.telefono AS telefono_restaurante, clientes.servicios, clientes.personas_contacto, DATE_FORMAT(clientes.fecha_boda, '%d-%m-%Y') as fecha_boda, DATE_FORMAT(clientes.fecha_boda, '%H:%i') as hora_boda, restaurantes.maitre, restaurantes.telefono_maitre, clientes.contrato_pdf, clientes.presupuesto_pdf, clientes.descuento, clientes.observaciones, clientes.descuento2 FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante WHERE id = {$id}");
 
 		if ($query->num_rows() > 0) {
 			$fila = $query->row();
@@ -356,6 +356,7 @@ class Admin_functions extends CI_Model
 			$data['presupuesto_pdf'] = $fila->presupuesto_pdf;
 			$data['descuento'] = $fila->descuento;
 			$data['observaciones'] = $fila->observaciones;
+			$data['descuento2'] = $fila->descuento2;
 
 			$query2 = $this->db->query("SELECT archivo, descripcion FROM restaurantes_archivos WHERE id_restaurante = {$fila->id_restaurante}");
 			if ($query2->num_rows() > 0) {
@@ -1931,7 +1932,6 @@ class Admin_functions extends CI_Model
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['servicios'] = $fila->servicios;
 				$data[$i]['descuento'] = $fila->descuento;
-
 				$data[$i]['senal'] = 0;
 				$data[$i]['50%'] = 0;
 				$data[$i]['final'] = 0;

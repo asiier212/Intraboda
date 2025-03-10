@@ -925,9 +925,10 @@ class Admin extends CI_Controller
 					if (isset($_POST['update_servicios'])) {
 						log_message('debug', 'Botón de actualizar servicios presionado.');
 
+						log_message('debug', 'Contenido de $_POST después del envío: ' . print_r($_POST, true));						
+
 						if (!isset($_POST['id_cliente']) || empty($_POST['id_cliente'])) {
 							log_message('error', 'Error: ID del cliente no encontrado.');
-							die("Error: ID del cliente no encontrado.");
 						}
 
 						$id = intval($_POST['id_cliente']);
@@ -935,7 +936,6 @@ class Admin extends CI_Controller
 
 						if (!isset($_POST['servicios']) || !is_array($_POST['servicios'])) {
 							log_message('error', 'Error: No se han enviado servicios.');
-							die("Error: No se han enviado servicios.");
 						}
 
 						log_message('debug', 'Datos de servicios recibidos: ' . print_r($_POST['servicios'], true));
@@ -960,7 +960,6 @@ class Admin extends CI_Controller
 
 						if (empty($servicios)) {
 							log_message('error', 'Error: Ningún servicio seleccionado.');
-							die("Error: No hay servicios seleccionados.");
 						}
 
 						$servicios_serializados = serialize($servicios);
@@ -969,7 +968,7 @@ class Admin extends CI_Controller
 						$servicios_serializados = mysql_real_escape_string($servicios_serializados);
 
 						// Actualizar la base de datos con los servicios y el descuento total
-						$query = "UPDATE clientes SET servicios = '" . $servicios_serializados . "', descuento = " . floatval($totalDescuento) . " WHERE id = " . intval($id);
+						$query = "UPDATE clientes SET servicios = '" . $servicios_serializados . "', descuento2 = " . floatval($totalDescuento) . " WHERE id = " . intval($id);
 						log_message('debug', 'Ejecutando consulta: ' . $query);
 
 						$this->db->query($query);
