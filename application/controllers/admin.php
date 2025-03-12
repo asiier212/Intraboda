@@ -925,7 +925,7 @@ class Admin extends CI_Controller
 					if (isset($_POST['update_servicios'])) {
 						log_message('debug', 'Botón de actualizar servicios presionado.');
 
-						log_message('debug', 'Contenido de $_POST después del envío: ' . print_r($_POST, true));						
+						log_message('debug', 'Contenido de $_POST después del envío: ' . print_r($_POST, true));
 
 						if (!isset($_POST['id_cliente']) || empty($_POST['id_cliente'])) {
 							log_message('error', 'Error: ID del cliente no encontrado.');
@@ -1256,9 +1256,16 @@ class Admin extends CI_Controller
 					$campo = $_GET['f'];
 					$valor = $_GET['q'];
 
-					if ($campo == 'fecha_boda') {
-						$date = strtotime($valor);
-						$str_where = "WHERE DATE({$campo}) = '" . date('Y-m-d', $date) . "'";
+					if ($campo == 'clientes.fecha_boda') {
+						// Convertir de dd-mm-yyyy a yyyy-mm-dd
+						$fecha_convertida = DateTime::createFromFormat('d-m-Y', $valor);
+
+						if ($fecha_convertida) {
+							$valor = $fecha_convertida->format('Y-m-d');
+							$str_where = "WHERE DATE(clientes.fecha_boda) " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'");
+						} else {
+							$str_where = "WHERE 1=0"; // En caso de que el formato sea incorrecto, evita la búsqueda errónea
+						}
 					} elseif ($campo == 'clientes.nombre') {
 						$str_where = "WHERE clientes.nombre_novia " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'") . " 
                       OR clientes.nombre_novio " . ($busqueda_exacta ? "= '{$valor}'" : "LIKE '%{$valor}%'");

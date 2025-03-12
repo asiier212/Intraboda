@@ -18,14 +18,15 @@
 				<option value="clientes.apellidos" <?php if (isset($_GET['f']) && $_GET['f'] == 'clientes.apellidos') echo 'selected="selected"' ?>>Apellidos</option>
 				<option value="clientes.poblacion" <?php if (isset($_GET['f']) && $_GET['f'] == 'clientes.poblacion') echo 'selected="selected"' ?>>Poblacion</option>
 				<option value="clientes.telefono" <?php if (isset($_GET['f']) && $_GET['f'] == 'clientes.telefono') echo 'selected="selected"' ?>>Telefono</option>
-				<option value="clientes.fecha_boda" <?php if (isset($_GET['f']) && $_GET['f'] == 'fecha_boda') echo 'selected="selected"' ?>>Fecha boda (dd-mm-aaaa)</option>
-				<option value="restaurantes.nombre" <?php if (isset($_GET['f']) && $_GET['f'] == 'restaurante') echo 'selected="selected"' ?>>Restaurante</option>
+				<option value="clientes.fecha_boda" <?php if (isset($_GET['f']) && $_GET['f'] == 'clientes.fecha_boda') echo 'selected="selected"' ?>>Fecha boda (dd-mm-aaaa)</option>
+				<option value="restaurantes.nombre" <?php if (isset($_GET['f']) && $_GET['f'] == 'restaurante.nombre') echo 'selected="selected"' ?>>Restaurante</option>
 			</select>
 			<input type="text" name="q" value="<?php if (isset($_GET['q'])) echo $_GET['q'] ?>">
 			<input type="submit" value="Buscar" style="margin-right:30px" />
 			<a href="<?php echo base_url() ?>admin/clientes/view">Limpiar buscador</a><br><br>
 			<a>Busqueda especifica:</a>
-			<input type="checkbox" style="width: 13px;" name="especifica" <?php if (isset($_GET['especifica'])) echo 'checked="checked"'; ?>>		</form>
+			<input type="checkbox" style="width: 13px;" name="especifica" <?php if (isset($_GET['especifica'])) echo 'checked="checked"'; ?>>
+		</form>
 		<?php if ($clientes) {
 
 			if (isset($_GET['q']) && !isset($_GET['p']))
