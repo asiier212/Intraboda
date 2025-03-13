@@ -5,48 +5,89 @@ class Admin_functions extends CI_Model
 
 	function InsertCliente($data)
 	{
-
 		$this->load->database();
 		$this->load->library('encrypt');
-		//$data['servicios'] = implode(",", $data['servicios']);
-		$servicios_momentos = array();
-		$servicios_momentos = $data['servicios'];
-		$servicios = array();
-		$servicios = serialize($data['servicios']);
-		$data['servicios'] = $servicios;
-		$data['personas_contacto'] = implode(",", $data['personas_contacto']);
-		$data['fecha_boda'] = $data['fecha_boda'] . " " . $data['hora_boda'];
-		unset($data['hora_boda']);
 
+		// Verificar que se han recibido servicios correctamente
+		if (!isset($data['servicios']) || !is_array($data['servicios'])) {
+			log_message('error', 'Error: No se han enviado servicios.');
+			return false; // Detener la ejecución si no hay servicios
+		}
+
+		// Procesar servicios y descuentos
+		$servicios_final = [];
+		$totalDescuento = 0;
+
+		foreach ($data['servicios'] as $id_servicio => $datos) {
+			if (isset($datos['activo'])) { // Solo si el servicio está marcado
+				$precio = isset($datos['precio']) ? floatval($datos['precio']) : 0;
+				$descuento = isset($datos['descuento']) && $datos['descuento'] !== '' ? floatval($datos['descuento']) : 0;
+
+				$servicios_final[$id_servicio] = [
+					"precio" => $precio,
+					"descuento" => $descuento
+				];
+
+				$totalDescuento += $descuento; // Acumulamos el total del descuento
+			}
+		}
+
+		if (empty($servicios_final)) {
+			log_message('error', 'Error: Ningún servicio seleccionado.');
+			return false;
+		}
+
+		// Serializar los servicios antes de insertarlos
+		$data['servicios'] = serialize($servicios_final);
+
+		// **Agregar el total del descuento a la base de datos**
+		$data['descuento'] = $totalDescuento;
+
+		// Asegurar que otros datos sean correctos
+		if (isset($data['personas_contacto']) && is_array($data['personas_contacto'])) {
+			$data['personas_contacto'] = implode(",", $data['personas_contacto']);
+		}
+
+		if (isset($data['fecha_boda'], $data['hora_boda'])) {
+			$data['fecha_boda'] = $data['fecha_boda'] . " " . $data['hora_boda'];
+			unset($data['hora_boda']);
+		}
+
+		// Configuración de carga de archivos PDF
 		$config['upload_path'] = './uploads/pdf/';
 		$config['allowed_types'] = 'pdf';
 		$this->load->library('upload', $config);
 
-		if (! $this->upload->do_upload("presupuesto")) {
-			$pdf['msg_pdf'] = $this->upload->display_errors();
-		} else {
+		if ($this->upload->do_upload("presupuesto")) {
 			$pdf['upload_data'] = $this->upload->data();
 			$data['presupuesto_pdf'] = $pdf['upload_data']['file_name'];
 		}
 
-		if (! $this->upload->do_upload("contrato")) {
-			$pdf2['msg_pdf'] = $this->upload->display_errors();
-		} else {
+		if ($this->upload->do_upload("contrato")) {
 			$pdf2['upload_data'] = $this->upload->data();
 			$data['contrato_pdf'] = $pdf2['upload_data']['file_name'];
 		}
 
-		$data['canal_captacion'] = $data['canal_captacion'];
-		$data['id_oficina'] = $data['id_oficina'];
-		$clave = $data['clave'];
-		$data['clave'] = $this->encrypt->encode($data['clave']);
+		// Encriptar clave si está presente
+		if (isset($data['clave'])) {
+			$data['clave'] = $this->encrypt->encode($data['clave']);
+		}
 
+		// Eliminar servicios_check antes de insertar en la BD
+		if (isset($data['servicios_check'])) {
+			unset($data['servicios_check']);
+		}
 
+		// Asegurar que 'id_cliente' no se incluya en la base de datos
+		if (isset($data['id_cliente'])) {
+			$data['id'] = $data['id_cliente']; // Si lo necesitas como 'id', lo renombramos
+			unset($data['id_cliente']); // Eliminar 'id_cliente'
+		}
+
+		// Insertar en la base de datos
 		$this->db->insert('clientes', $data);
 
-		$id_cliente = $this->db->insert_id();
-
-
+		return $this->db->insert_id();
 
 		//PERSONALIZAMOS LOS MOMENTOS ESPECIALES QUE SE AÑADEN DEPENDIENDO LOS SERVICIOS CONTRATADOS
 		$orden = 1;
@@ -1163,7 +1204,7 @@ class Admin_functions extends CI_Model
 		$data = false;
 		$this->load->database();
 		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM opciones_respuesta_encuesta_datos_boda ORDER BY id_respuesta ASC");
-	
+
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -1175,8 +1216,8 @@ class Admin_functions extends CI_Model
 		}
 		return $data;
 	}
-	
-	
+
+
 
 	function GetPreguntasEncuestaDatosBoda()
 	{
@@ -1196,7 +1237,8 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function GetOpcionesRespuestasEncuestaDatosBoda(){
+	function GetOpcionesRespuestasEncuestaDatosBoda()
+	{
 		$data = false;
 		$this->load->database();
 		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM opciones_respuesta_encuesta_datos_boda");
@@ -1230,8 +1272,8 @@ class Admin_functions extends CI_Model
 		}
 		return $data;
 	}
-	
-	
+
+
 
 
 	function InsertContratoDJ($data)

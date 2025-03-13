@@ -333,34 +333,46 @@
 			<legend>Clave de acceso al sitio de usuario</legend>
 			<label>(*)Clave:</label><input type="text" name="clave" />
 		</fieldset>
+
 		<fieldset class="datos">
 			<legend>Servicios</legend>
 			<ul>
-				<?php
-				foreach ($servicios as $servicio) { ?>
+				<?php foreach ($servicios as $servicio):
+					$id = $servicio['id'];
+					$precio = isset($arr_servicios[$id]['precio']) ? $arr_servicios[$id]['precio'] : $servicio['precio'];
+					$descuento = isset($arr_servicios[$id]['descuento']) ? $arr_servicios[$id]['descuento'] : 0;
+				?>
 					<li>
-						<input type="checkbox" name="servicios[<?php echo $servicio['id'] ?>]"
-							id="chserv_<?php echo $servicio['id'] ?>"
-							style="width:30px; vertical-align:middle" />
+						<!-- Checkbox para seleccionar el servicio -->
+						<input type="checkbox" name="servicios[<?php echo $id; ?>][activo]" value="1"
+							<?php echo isset($arr_servicios[$id]) ? 'checked="checked"' : ''; ?>
+							id="chserv_<?php echo $id; ?>" style="width:30px; vertical-align:middle" />
+
 						<?php echo $servicio['nombre']; ?> -
-						<input type="text" id="precio_<?php echo $servicio['id'] ?>"
-							value="<?php echo $servicio['precio']; ?>"
-							style="width:50px; text-align:center" />€
-						Dto
-						<input type="text"
-							id="dtoserv_<?php echo $servicio['id']; ?>"
-							name="servicio_dto[<?php echo $servicio['id']; ?>]"
-							value="<?php echo $servicio['descuento']; ?>"
-							style="width:50px; text-align:center" />
 
+						<!-- Campo de precio -->
+						<input type="text" id="precioserv_<?php echo $id; ?>"
+							name="servicios[<?php echo $id; ?>][precio]"
+							value="<?php echo $precio; ?>"
+							style="width:50px; text-align:center" /> &euro;
+
+						<!-- Campo de descuento -->
+						Dto <input type="text" id="dtoserv_<?php echo $id; ?>"
+							name="servicios[<?php echo $id; ?>][descuento]"
+							value="<?php echo $descuento; ?>"
+							style="width:50px; text-align:center" /> &euro;
 					</li>
-
-
-
-				<?php } ?>
-				<li>Descuento: <input type="text" name="descuento" style="width:60px" /></li>
+				<?php endforeach; ?>
 			</ul>
+
+			<!-- Input oculto para asegurarse de que siempre haya datos en $_POST['servicios'] -->
+			<input type="hidden" name="servicios_check" value="1">
+
+			<!-- Otros inputs del formulario -->
+			<input type="hidden" name="id" value="<?php echo isset($cliente['id']) ? $cliente['id'] : ''; ?>">
 		</fieldset>
+
+
 
 		<div class="clear"> </div>
 		<fieldset class="datos">
