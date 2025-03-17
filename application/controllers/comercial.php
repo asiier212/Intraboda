@@ -351,6 +351,7 @@ class Comercial extends CI_Controller
 		$this->db->join('emails_automaticos', 'emails_enviados.id_email = emails_automaticos.id', 'left');
 		$this->db->join('solicitudes', 'emails_enviados.id_solicitud = solicitudes.id_solicitud', 'left');
 		$this->db->join('comerciales', 'emails_enviados.id_comercial = comerciales.id', 'left');
+		$this->db->order_by('emails_enviados.fecha_envio', 'DESC');
 
 		$query = $this->db->get();
 		$data['emails_enviados'] = $query->result();
