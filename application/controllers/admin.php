@@ -336,10 +336,6 @@ class Admin extends CI_Controller
 		log_message('debug', "Resultado de reenviar_clave(): " . ($resultado ? 'Éxito' : 'Fallo'));
 
 		header('Content-Type: application/json');
-		echo json_encode([
-			'success' => $resultado,
-			'message' => $resultado ? 'Clave reenviada correctamente' : 'No se pudo reenviar la clave'
-		]);
 	}
 
 
