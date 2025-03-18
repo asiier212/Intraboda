@@ -131,15 +131,15 @@
 				$respuestas_cliente = $this->cliente_functions->GetRespuestasEncuestaDatosBoda($this->session->userdata('user_id'));
 
 				if (!empty($preguntas_encuesta_datos_boda)) { ?>
-					<form method="post" action="procesar_encuesta.php">
-						<?php foreach ($preguntas_encuesta_datos_boda as $pregunta) { ?>
-							<div>
-								<strong><?php echo htmlspecialchars($pregunta['pregunta']); ?></strong>
-								<?php if (!empty($pregunta['descripcion'])) { ?>
-									<div><?php echo $pregunta['descripcion']; ?></div>
-								<?php } else echo "<br><br>"; ?>
-			
-								<?php
+    				<form method="post" action="procesar_encuesta.php">
+    					<?php foreach ($preguntas_encuesta_datos_boda as $pregunta) { ?>
+    						<div>
+    							<strong><?php echo htmlspecialchars($pregunta['pregunta']); ?></strong>
+    							<?php if (!empty($pregunta['descripcion'])) { ?>
+    								<div><?php echo $pregunta['descripcion']; ?></div>
+    							<?php } else echo "<br><br>"; ?>
+
+    							<?php
 								// Obtener opciones de respuesta
 								$respuestas = [];
 								foreach ($opciones_respuestas_encuesta_datos_boda as $resp) {
@@ -147,11 +147,11 @@
 										$respuestas[] = $resp;
 									}
 								}
-			
+
 								// Obtener la respuesta guardada del cliente
 								$respuesta_cliente_actual = null;
 								$respuestas_seleccionadas = [];
-			
+
 								foreach ($respuestas_cliente as $resp) {
 									if ($resp['id_pregunta'] == $pregunta['id_pregunta']) {
 										if ($pregunta['tipo_pregunta'] == 'multiple') {
@@ -161,83 +161,83 @@
 										}
 									}
 								}
-			
+
 								// Determinar el tipo de pregunta
 								$tipo = isset($pregunta['tipo_pregunta']) ? strtolower($pregunta['tipo_pregunta']) : '';
 								?>
-			
-								<?php if ($tipo == 'rango') { ?>
-									<input type="range" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]" min="0" max="10"
-										   value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 5); ?>"
-										   oninput="document.getElementById('valor_<?php echo $pregunta['id_pregunta']; ?>').innerText = this.value;">
-									<span id="valor_<?php echo $pregunta['id_pregunta']; ?>"><?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : '5'); ?></span>
-			
-								<?php } elseif ($tipo == 'opciones' && !empty($respuestas)) { ?>
-									<?php foreach ($respuestas as $respuesta) { ?>
-										<label>
-											<input type="radio" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]" 
-												   value="<?php echo htmlspecialchars($respuesta['respuesta']); ?>"
-												   <?php echo (!empty($respuesta_cliente_actual) && $respuesta_cliente_actual == $respuesta['respuesta']) ? 'checked' : ''; ?>>
-											<?php echo htmlspecialchars($respuesta['respuesta']); ?>
-										</label><br>
-									<?php } ?>
-			
-								<?php } elseif ($tipo == 'multiple' && !empty($respuestas)) { ?>
-									<?php
+
+    							<?php if ($tipo == 'rango') { ?>
+    								<input type="range" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]" min="0" max="10"
+    									value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 5); ?>"
+    									oninput="document.getElementById('valor_<?php echo $pregunta['id_pregunta']; ?>').innerText = this.value;">
+    								<span id="valor_<?php echo $pregunta['id_pregunta']; ?>"><?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : '5'); ?></span>
+
+    							<?php } elseif ($tipo == 'opciones' && !empty($respuestas)) { ?>
+    								<?php foreach ($respuestas as $respuesta) { ?>
+    									<label>
+    										<input type="radio" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]"
+    											value="<?php echo htmlspecialchars($respuesta['respuesta']); ?>"
+    											<?php echo (!empty($respuesta_cliente_actual) && $respuesta_cliente_actual == $respuesta['respuesta']) ? 'checked' : ''; ?>>
+    										<?php echo htmlspecialchars($respuesta['respuesta']); ?>
+    									</label><br>
+    								<?php } ?>
+
+    							<?php } elseif ($tipo == 'multiple' && !empty($respuestas)) { ?>
+    								<?php
 									// Obtener todas las opciones de respuesta de la BD
 									$respuestas_disponibles = array_map(function ($resp) {
 										return trim($resp['respuesta']);
 									}, $respuestas);
-			
+
 									// Buscar respuestas "extra" (no presentes en la lista de opciones)
 									$respuestas_extra = array_diff($respuestas_seleccionadas, $respuestas_disponibles);
 									?>
-			
-									<!-- Mostrar opciones de la BD -->
-									<?php foreach ($respuestas as $respuesta) { ?>
-										<label>
-											<input type="checkbox" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]" 
-												   value="<?php echo htmlspecialchars($respuesta['respuesta']); ?>"
-												   <?php echo (!empty($respuestas_seleccionadas) && in_array(trim($respuesta['respuesta']), $respuestas_seleccionadas)) ? 'checked' : ''; ?>>
-											<?php echo htmlspecialchars($respuesta['respuesta']); ?>
-										</label><br>
-									<?php } ?>
-			
-									<!-- Checkbox y campo de texto para "Otro..." -->
-									<div id="otros_inputs_<?php echo $pregunta['id_pregunta']; ?>">
-										<label>
-											<input type="checkbox" id="check_otro_<?php echo $pregunta['id_pregunta']; ?>"
-												   onclick="toggleOtroInput(this, '<?php echo $pregunta['id_pregunta']; ?>')">
-											<input type="text" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]" placeholder="Otro..." disabled
-												   id="otro_input_<?php echo $pregunta['id_pregunta']; ?>" onkeyup="checkOtroInput('<?php echo $pregunta['id_pregunta']; ?>')">
-										</label>
-									</div>
-			
-									<!-- Mostrar respuestas "extra" ya guardadas -->
-									<?php foreach ($respuestas_extra as $extra) { ?>
-										<label>
-											<input type="checkbox" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]" value="<?php echo htmlspecialchars($extra); ?>" checked>
-											<?php echo htmlspecialchars($extra); ?> (Otro)
-										</label><br>
-									<?php } ?>
-			
-								<?php } elseif ($tipo == 'texto') { ?>
-									<input type="text" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]" 
-										   value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : ''); ?>">
-			
-								<?php } else { ?>
-									<p>El tipo de pregunta <strong><?php echo htmlspecialchars($tipo); ?></strong> no está soportado.</p>
-								<?php } ?>
-							</div>
-							<br>
-						<?php } ?>
-			
-						<center><input type="submit" name="actualizar_encuesta" value="Actualizar Encuesta"></center>
-					</form>
-				<?php } else { ?>
-					<li>No se ha realizado la encuesta</li>
-				<?php } ?>
-			</fieldset>
+
+    								<!-- Mostrar opciones de la BD -->
+    								<?php foreach ($respuestas as $respuesta) { ?>
+    									<label>
+    										<input type="checkbox" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]"
+    											value="<?php echo htmlspecialchars($respuesta['respuesta']); ?>"
+    											<?php echo (!empty($respuestas_seleccionadas) && in_array(trim($respuesta['respuesta']), $respuestas_seleccionadas)) ? 'checked' : ''; ?>>
+    										<?php echo htmlspecialchars($respuesta['respuesta']); ?>
+    									</label><br>
+    								<?php } ?>
+
+    								<!-- Checkbox y campo de texto para "Otro..." -->
+    								<div id="otros_inputs_<?php echo $pregunta['id_pregunta']; ?>">
+    									<label>
+    										<input type="checkbox" id="check_otro_<?php echo $pregunta['id_pregunta']; ?>"
+    											onclick="toggleOtroInput(this, '<?php echo $pregunta['id_pregunta']; ?>')">
+    										<input type="text" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]" placeholder="Otro..." disabled
+    											id="otro_input_<?php echo $pregunta['id_pregunta']; ?>" onkeyup="checkOtroInput('<?php echo $pregunta['id_pregunta']; ?>')">
+    									</label>
+    								</div>
+
+    								<!-- Mostrar respuestas "extra" ya guardadas -->
+    								<?php foreach ($respuestas_extra as $extra) { ?>
+    									<label>
+    										<input type="checkbox" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]" value="<?php echo htmlspecialchars($extra); ?>" checked>
+    										<?php echo htmlspecialchars($extra); ?> (Otro)
+    									</label><br>
+    								<?php } ?>
+
+    							<?php } elseif ($tipo == 'texto') { ?>
+    								<input type="text" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]"
+    									value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : ''); ?>">
+
+    							<?php } else { ?>
+    								<p>El tipo de pregunta <strong><?php echo htmlspecialchars($tipo); ?></strong> no está soportado.</p>
+    							<?php } ?>
+    						</div>
+    						<br>
+    					<?php } ?>
+
+    					<center><input type="submit" name="actualizar_encuesta" value="Actualizar Encuesta"></center>
+    				</form>
+    			<?php } else { ?>
+    				<li>No se ha realizado la encuesta</li>
+    			<?php } ?>
+    		</fieldset>
 
 
 
@@ -411,11 +411,20 @@
     		</fieldset>
     		<fieldset class="datos">
     			<legend>Cambio de la contrase&ntilde;a</legend>
-    			<ul>
-    				<li><label>Nueva contrase&ntilde;a:</label><input type="password" name="clave" /> <input type="submit" style="width:80px" value="Cambiar" /></li>
-    			</ul>
-    			<p style="text-align:center"><?php if (isset($msg_clave)) echo $msg_clave; ?></p>
+    			<form method="post" action="">
+    				<ul>
+    					<li>
+    						<label>Nueva contrase&ntilde;a:</label>
+    						<input type="password" name="clave" required />
+    						<input type="submit" style="width:80px" value="Cambiar" />
+    					</li>
+    				</ul>
+    			</form>
+    			<p style="text-align:center">
+    				<?php if (isset($msg_clave)) echo $msg_clave; ?>
+    			</p>
     		</fieldset>
+
 
     		<p style="text-align:center"></p>
     	</form>
