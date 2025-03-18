@@ -409,12 +409,20 @@
     				<a href="<?php echo base_url() ?>uploads/facturas/<?php echo urlencode(utf8_decode($cliente['factura_pdf'])) ?>" style="color:#333; font-weight:bold" target="_blank">Descargar Factura en PDF</a>
     			<?php } ?>
     		</fieldset>
-    		<fieldset class="datos">
+    		    		<fieldset class="datos">
     			<legend>Cambio de la contrase&ntilde;a</legend>
-    			<ul>
-    				<li><label>Nueva contrase&ntilde;a:</label><input type="password" name="clave" /> <input type="submit" style="width:80px" value="Cambiar" /></li>
-    			</ul>
-    			<p style="text-align:center"><?php if (isset($msg_clave)) echo $msg_clave; ?></p>
+    			<form method="post" action="">
+    				<ul>
+    					<li>
+    						<label>Nueva contrase&ntilde;a:</label>
+    						<input type="password" name="clave" required />
+    						<input type="submit" style="width:80px" value="Cambiar" />
+    					</li>
+    				</ul>
+    			</form>
+    			<p style="text-align:center">
+    				<?php if (isset($msg_clave)) echo $msg_clave; ?>
+    			</p>
     		</fieldset>
 
     		<p style="text-align:center"></p>

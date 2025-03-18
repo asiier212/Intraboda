@@ -213,8 +213,7 @@ function display_ct() {
 
 <?php
 $ahora=date("Y-m-d H:i:s");
-$fecha_limite = date("31/01/2025");
-//$fecha_limite = date("Y-m-d",strtotime('-2 day',strtotime($cliente['fecha_boda'])));
+$fecha_limite = date("Y-m-d",strtotime('-2 day',strtotime($cliente['fecha_boda'])));
 
 $tiempo_que_queda=strtotime($fecha_limite)-strtotime($ahora);
 ?>

@@ -90,37 +90,42 @@ class Comercial extends CI_Controller
 		$data_footer = false;
 
 		if ($acc == 'add') {
+			// Datos para la vista
 			$data['captacion'] = $this->comercial_functions->GetCaptacion();
 			$data['estados_solicitudes'] = $this->comercial_functions->GetEstados_Solicitudes();
 			$data['n_presupuesto'] = $this->CrearNumeroPresupuesto();
-
+		
 			if ($_POST) {
-				$data['n_presupuesto'] = $_POST['n_presupuesto'];
-				$data['email'] = $_POST['email'];
-				$data['nombre'] = $_POST['nombre'];
-				$data['apellidos'] = $_POST['apellidos'];
-				$data['direccion'] = $_POST['direccion'];
-				$data['cp'] = $_POST['cp'];
-				$data['poblacion'] = $_POST['poblacion'];
-				$data['telefono'] = $_POST['telefono'];
-				$data['fecha_boda'] = $_POST['fecha_boda'] . " " . $_POST["hora_boda"];
-				$data['restaurante'] = $_POST['restaurante'];
-				$data['canal_captacion'] = $_POST['canal_captacion'];
-				$data['estado_solicitud'] = $_POST['estado_solicitud'];
-				$data['id_comercial'] = $this->session->userdata('id');
-
-				$data['importe'] = str_replace(',', '.', $_POST['importe']);
-				$data['descuento'] = str_replace(',', '.', $_POST['descuento']);
-
-				$id_solicitud = $this->comercial_functions->InsertSolicitud($data);
-
+				// Solo los datos que van a la base de datos
+				$insert_data = [];
+				$insert_data['n_presupuesto'] = $_POST['n_presupuesto'];
+				$insert_data['email'] = $_POST['email'];
+				$insert_data['nombre'] = $_POST['nombre'];
+				$insert_data['apellidos'] = $_POST['apellidos'];
+				$insert_data['direccion'] = $_POST['direccion'];
+				$insert_data['cp'] = $_POST['cp'];
+				$insert_data['poblacion'] = $_POST['poblacion'];
+				$insert_data['telefono'] = $_POST['telefono'];
+				$insert_data['fecha_boda'] = $_POST['fecha_boda'] . " " . $_POST["hora_boda"];
+				$insert_data['restaurante'] = $_POST['restaurante'];
+				$insert_data['canal_captacion'] = $_POST['canal_captacion']; // OK
+				$insert_data['estado_solicitud'] = $_POST['estado_solicitud']; // OK
+				$insert_data['id_comercial'] = $this->session->userdata('id');
+		
+				$insert_data['importe'] = str_replace(',', '.', $_POST['importe']);
+				$insert_data['descuento'] = str_replace(',', '.', $_POST['descuento']);
+		
+				// Insertar solo los datos correctos
+				$id_solicitud = $this->comercial_functions->InsertSolicitud($insert_data);
+		
 				if ($_POST['enviar_encuesta'] == "S") {
-					$this->enviar_email_encuesta($data['id_comercial'], $id_solicitud, html_entity_decode($_POST['email']));
+					$this->enviar_email_encuesta($insert_data['id_comercial'], $id_solicitud, html_entity_decode($_POST['email']));
 				}
-
+		
 				redirect('comercial/solicitudes/view');
 			}
 		}
+		
 
 		if ($acc == 'view') {
 			$this->load->database();
@@ -238,7 +243,7 @@ class Comercial extends CI_Controller
 						<table width="100%">
 						<tr>
 							<td colspan="2">
-								<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+								<img src="http://www.bilbodj.com/intranetv3_4.4/img/img_mail/cabecera.jpg" width="100%">
 							</td>
 						</tr>
 										  <tr>
@@ -275,12 +280,12 @@ class Comercial extends CI_Controller
 											 </td>
 											 <td align="justify">
 											 	<b>¡Gracias por solicitar presupuesto! Consigue hasta <font color="#0000FF"><b>' . $descuento . '&euro;</b></font> de descuento adicional en tu presupuesto rellenando esta sencilla encuesta. Sólo te llevará unos minutos:</b><br><br>
-											<center><a href="' . $local . '/informes/encuesta.php?id_solicitud=' . $id_solicitud . '&email=' . $email . '"><img src="' . $local . '/img/logos_mail/btn_realizar_encuesta.jpg" alt="Realizar encuesta"></a></center>
+											<center><a href="' . $local . '/informes/encuesta.php?id_solicitud=' . $id_solicitud . '&email=' . $email . '"><img src="http://www.bilbodj.com/intranetv3_4.4/img/logos_mail/btn_realizar_encuesta.jpg" alt="Realizar encuesta"></a></center>
 											 </td>									 
 										
 										  </tr>
 							<tr>
-								<td align="center" colspan="2"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+								<td align="center" colspan="2"><img src="http://www.bilbodj.com/intranetv3_4.4/img/img_mail/pie.jpg" width="100%"></td>
 							</tr>
 						  </table></body></html>';
 
@@ -351,6 +356,7 @@ class Comercial extends CI_Controller
 		$this->db->join('emails_automaticos', 'emails_enviados.id_email = emails_automaticos.id', 'left');
 		$this->db->join('solicitudes', 'emails_enviados.id_solicitud = solicitudes.id_solicitud', 'left');
 		$this->db->join('comerciales', 'emails_enviados.id_comercial = comerciales.id', 'left');
+		$this->db->order_by('emails_enviados.fecha_envio', 'DESC');
 
 		$query = $this->db->get();
 		$data['emails_enviados'] = $query->result();
@@ -776,7 +782,7 @@ class Comercial extends CI_Controller
 						<table width="100%">
 							<tr>
 							  <td colspan="2">
-									<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+									<img src="http://www.bilbodj.com/intranetv3_4.4/img/img_mail/cabecera.jpg" width="100%">
 							  </td>
 							</tr>
 						<tr><td align="center"><font size="+3"><b>PRESUPUESTO</b></font></td>
@@ -900,7 +906,7 @@ class Comercial extends CI_Controller
 											</td>
 						  </tr>
 						  <tr>
-									<td align="center" colspan="2"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+									<td align="center" colspan="2"><img src="http://www.bilbodj.com/intranetv3_4.4/img/img_mail/pie.jpg" width="100%"></td>
 						  </tr>
 										  
 							</table>

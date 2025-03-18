@@ -32,7 +32,7 @@ class Admin extends CI_Controller
 		$data = false;
 
 		if ($_POST) {
-			if ($_POST['email'] == "admin" && $_POST['pass'] == "a") {
+			if ($_POST['email'] == "admin" && $_POST['pass'] == "49999327Bdj%ExEv") {
 				$this->session->set_userdata(array("admin" => true));
 				redirect('admin', 'location');
 			} else if ($_POST['email'] == "admin2" && $_POST['pass'] == "1492Bdj5319") {
@@ -336,10 +336,6 @@ class Admin extends CI_Controller
 		log_message('debug', "Resultado de reenviar_clave(): " . ($resultado ? 'Éxito' : 'Fallo'));
 
 		header('Content-Type: application/json');
-		echo json_encode([
-			'success' => $resultado,
-			'message' => $resultado ? 'Clave reenviada correctamente' : 'No se pudo reenviar la clave'
-		]);
 	}
 
 

@@ -114,26 +114,18 @@
 <br>
 <br>
 
-<!-- TinyMCE -->
-<script src="https://cdn.tiny.cloud/1/o6bdbfrosyztaa19zntejfp6e2chzykthzzh728vtdjokot2/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="<?php echo base_url() ."js/tinymce/tinymce.min.js"?>"></script>
 
 <script>
-tinymce.init({
-    selector: 'textarea.whatsapp-textarea',
-    menubar: false,
-    toolbar: 'bold italic',
-    content_style: 'body { font-size: 16px; font-family: Arial, sans-serif; background: #ffffff;}',
-    branding: false,
-    width: '100%',
-    height: 105, // Altura inicial
-    min_height: 105, // Altura mínima
-    max_height: 250, // Altura máxima antes de que aparezca el scrollbar
-    autoresize_bottom_margin: 10, // Espacio extra antes de activar el scroll
-    autoresize_on_init: true, // Se ajusta automáticamente al iniciar
-    statusbar: false,
-    plugins: 'autoresize', // Habilita el crecimiento automático
-    autoresize_max_height: 250, // Altura máxima antes del scroll
-    autoresize_min_height: 105, // Altura mínima inicial
+document.addEventListener("DOMContentLoaded", function() {
+    tinymce.init({
+        selector: 'textarea.whatsapp-textarea',
+        menubar: false,
+        toolbar: 'bold italic',
+        statusbar: false,
+        branding: false,
+        width: '100%',
+        height: 105
+	});
 });
-
 </script>
