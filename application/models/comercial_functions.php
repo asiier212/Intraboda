@@ -84,7 +84,11 @@ class Comercial_functions extends CI_Model
 	{
 
 		$this->load->database();
+		print_r($data);
 		$this->db->insert('solicitudes', $data);
+		unset($data['captacion']);
+		unset($data['estados_solicitudes']);
+
 		$id_solicitud = $this->db->insert_id();
 
 		//Damos de alta el seguimiento de llamadas
@@ -571,7 +575,7 @@ class Comercial_functions extends CI_Model
 		$fechaHoy = date('Y-m-d');
 		$id_comercial = $this->session->userdata('id');
 		log_message("INFO", "id comercial: " . $id_comercial);
-		
+
 
 		$this->db->select('*');
 		$this->db->from('emails_automaticos');
