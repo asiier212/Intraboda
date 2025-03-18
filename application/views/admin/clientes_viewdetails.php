@@ -848,10 +848,10 @@
 				<label style="width: 20%; text-align: left; font-size: 1.3em">
 					<strong>Total:
 						<?php
-							$descuento1_text = $descuento1 != 0 ? " - " . $descuento1 . "€" : "";
-							$totalDescuento_text = $totalDescuento != 0 ? " - " . $totalDescuento . "€" : "";
-							$total_final = $total - $descuento1 - $totalDescuento;
-							echo $total . "€" . $descuento1_text . $totalDescuento_text . " = " . $total_final . "€";
+						$descuento1_text = $descuento1 != 0 ? " - " . $descuento1 . "€" : "";
+						$totalDescuento_text = $totalDescuento != 0 ? " - " . $totalDescuento . "€" : "";
+						$total_final = $total - $descuento1 - $totalDescuento;
+						echo $total . "€" . $descuento1_text . $totalDescuento_text . " = " . $total_final . "€";
 						?>
 					</strong>
 				</label>
@@ -1004,16 +1004,19 @@
 			</form>
 
 			<!-- Cargar TinyMCE -->
-			<script src="https://cdn.tiny.cloud/1/o6bdbfrosyztaa19zntejfp6e2chzykthzzh728vtdjokot2/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+			<script src="<?php echo base_url() . "js/tinymce/tinymce.min.js" ?>"></script>
 
 			<script>
 				// Inicialización de TinyMCE
-				tinymce.init({
-					selector: 'textarea',
-					toolbar: 'bold italic fontsizeselect',
-					font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
-					content_style: 'body { font-size: 14px; }',
-					branding: false
+				document.addEventListener("DOMContentLoaded", function() {
+					tinymce.init({
+						selector: 'textarea',
+						toolbar: 'bold italic fontsizeselect',
+						font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+						content_style: 'body { font-size: 14px; }',
+						branding: false,
+						menubar: false,
+					});
 				});
 
 				document.addEventListener("DOMContentLoaded", function() {
@@ -1140,7 +1143,7 @@
 
 		<fieldset class="datos">
 			<legend>Incidencias</legend>
-			<table class="tabledata">
+			<table style="width:100%" class="tabledata">
 				<tr><?php
 					foreach ($incidencias as $incidencia) { ?>
 
@@ -1154,7 +1157,7 @@
 
 		<fieldset class="datos">
 			<legend>Canciones</legend>
-			<table class="tabledata">
+			<table style="width:100%" class="tabledata">
 				<tr><?php
 					foreach ($canciones_pendientes as $canciones_p) { ?>
 

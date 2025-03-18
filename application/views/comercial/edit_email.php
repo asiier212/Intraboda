@@ -56,15 +56,20 @@
     </form>
 </fieldset>
 
-<!-- Editor TinyMCE -->
-<script src="https://cdn.tiny.cloud/1/o6bdbfrosyztaa19zntejfp6e2chzykthzzh728vtdjokot2/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<!-- Cargar TinyMCE desde el servidor -->
+<script src="<?php echo base_url() ."js/tinymce/tinymce.min.js"?>"></script>
+
 <script>
+document.addEventListener("DOMContentLoaded", function() {
     tinymce.init({
         selector: 'textarea',
-        branding: false,
+        branding: false, // Elimina la publicidad de TinyMCE
         plugins: ['autolink', 'emoticons', 'link', 'lists', 'searchreplace', 'table', 'wordcount'],
-        toolbar: 'undo redo | bold italic underline | link image media table | checklist numlist bullist | emoticons charmap | removeformat',
+        toolbar: 'undo redo | bold italic underline | link image media table | ' +
+                 'checklist numlist bullist | emoticons charmap | removeformat',
+        menubar: false // Oculta el menú superior si no es necesario
     });
+});
 </script>
 
 <!-- Control de visibilidad de los campos -->

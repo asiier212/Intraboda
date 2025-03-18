@@ -56,19 +56,22 @@
     </form>
 </fieldset>
 
-<!-- Place the first <script> tag in your HTML's <head> -->
-<script src="https://cdn.tiny.cloud/1/o6bdbfrosyztaa19zntejfp6e2chzykthzzh728vtdjokot2/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="<?php echo base_url() ."js/tinymce/tinymce.min.js"?>"></script>
 
-<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
 <script>
+document.addEventListener("DOMContentLoaded", function() {
     tinymce.init({
-        selector: 'textarea',
-        branding: false,
+        selector: 'textarea', // Asegurar que solo se aplique a los textarea correctos
+        branding: false, // Oculta la marca de TinyMCE
         plugins: [
-            'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount'
+            'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 
+            'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount'
         ],
-        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | numlist bullist indent outdent | emoticons charmap | removeformat',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | ' + 
+                 'link image media table | numlist bullist indent outdent | emoticons charmap | removeformat',
+        menubar: false // Opcional: Oculta el menú superior si no lo necesitas
     });
+});
 
 
     document.getElementById("toggleFormButton").addEventListener("click", function() {
