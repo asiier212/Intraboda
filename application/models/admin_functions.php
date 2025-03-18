@@ -155,28 +155,28 @@ class Admin_functions extends CI_Model
 					  <table width="100%" border="0">
 					  <tr>
 						<td align="center">
-							<img src="http://www.bilbodj.com/intranetv3_4.4/img/alta_perfil/cabecera.jpg" width="100%">
+							<img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/cabecera.jpg" width="100%">
 						</td>
 					  </tr>
 					  <tr>
 						<td><table width="100%" border="0">
 						  <tr>
-							<td width="14%" align="center"><img src="http://www.bilbodj.com/intranetv3_4.4/img/alta_perfil/1.jpg" width="100%"></td>
+							<td width="14%" align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/1.jpg" width="100%"></td>
 							<td width="63%"><div align="justify">Accede a <a href="http://www.exeleventos.com" target="_blank">www.exeleventos.com</a> con tu navegador y haz click sobre “ZONA CLIENTE” en el margen superior derecho.<br>
 							  Introduce tu email como usuario y en la clave introduce la siguiente contraseña:<br>
 							  <br>
 							  <font size="+4"><center>' . $clave . '</center></font></div></td>
-							<td width="23%" align="center"><img src="http://www.bilbodj.com/intranetv3_4.4/img/alta_perfil/zona_cliente.jpg" width="100%"></td>
+							<td width="23%" align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/zona_cliente.jpg" width="100%"></td>
 						  </tr>
 						  <tr>
-							<td align="center"><img src="http://www.bilbodj.com/intranetv3_4.4/img/alta_perfil/2.jpg" width="100%"></td>
+							<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/2.jpg" width="100%"></td>
 							<td><div align="justify">Tras introducir la clave en vuestro primer acceso, el sistema os pedirá una foto. Seguidamente tendréis que contestar a unas preguntas en un breve formulario que nos servirán para crear un perfil de DJ Animador para vuestra boda. Como ya sabéis, el DJ será asignado un mes antes del evento. Una vez completado, podremos continuar para acceder al perfil.</div></td>
-							<td align="center"><img src="http://www.bilbodj.com/intranetv3_4.4/img/alta_perfil/foto_instrucciones.jpg" width="100%"></td>
+							<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/foto_instrucciones.jpg" width="100%"></td>
 						  </tr>
 						</table>
 						  <table width="100%" border="0">
 							<tr>
-							  <td width="14%" align="center"><img src="http://www.bilbodj.com/intranetv3_4.4/img/alta_perfil/3.jpg" width="100%"></td>
+							  <td width="14%" align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/3.jpg" width="100%"></td>
 							  <td width="86%"><div align="justify">En la parte superior de la pantalla encontraréis un menú de navegación para trabajar sobre las diferentes secciones de la herramienta.<br>
 								- En <i>"Canciones más elegidas"</i> podréis ver un Top 10 de los temas más elegidos por todas las parejas BilboDJ y también para qué momento lo han señalado (Ceremonia, Cocktail, Entrada al Banquete, Corte de Tarta, Entrega del Ramo, Regalo a amig@s, Fiesta, …)<br>
 								- En <i>"Mis datos"</i> podréis revisar toda la información (horarios, foto y datos del DJ Animador asignado, cambiar encuesta inicial, servicios contratados, actualidad de pagos y cambio de contraseña).<br>
@@ -184,14 +184,14 @@ class Admin_functions extends CI_Model
 							  - <i>"Ofertas destacadas"</i> para valorar posibles nuevos servicios.</div></td>
 							</tr>
 							<tr>
-							  <td align="center"><img src="http://www.bilbodj.com/intranetv3_4.4/img/alta_perfil/4.jpg" width="100%"></td>
+							  <td align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/4.jpg" width="100%"></td>
 							  <td><div align="justify">Para finalizar, podremos mantener un contacto directo en la pestaña de <i>"Chat"</i>.  Reflejad cualquier duda que os pueda surgir con los preparativos o cuestiones que nos queráis plantear y os contestaremos desde nuestras oficinas a la mayor brevedad posible. Así mismo, el DJ Animador pasará a formar parte de ese Chat una vez haya sido asignado.</div></td>
 							</tr>
 						</table></td>
 					  </tr>
 					  <tr>
 						<td align="center">
-							<img src="http://www.bilbodj.com/intranetv3_4.4/img/alta_perfil/pie.jpg" width="100%">
+							<img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/pie.jpg" width="100%">
 						</td>
 					  </tr>
 					</table>

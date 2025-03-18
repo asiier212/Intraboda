@@ -243,7 +243,7 @@ class Comercial extends CI_Controller
 						<table width="100%">
 						<tr>
 							<td colspan="2">
-								<img src="http://www.bilbodj.com/intranetv3_4.4/img/img_mail/cabecera.jpg" width="100%">
+								<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
 							</td>
 						</tr>
 										  <tr>
@@ -280,12 +280,12 @@ class Comercial extends CI_Controller
 											 </td>
 											 <td align="justify">
 											 	<b>¡Gracias por solicitar presupuesto! Consigue hasta <font color="#0000FF"><b>' . $descuento . '&euro;</b></font> de descuento adicional en tu presupuesto rellenando esta sencilla encuesta. Sólo te llevará unos minutos:</b><br><br>
-											<center><a href="' . $local . '/informes/encuesta.php?id_solicitud=' . $id_solicitud . '&email=' . $email . '"><img src="http://www.bilbodj.com/intranetv3_4.4/img/logos_mail/btn_realizar_encuesta.jpg" alt="Realizar encuesta"></a></center>
+											<center><a href="' . $local . '/informes/encuesta.php?id_solicitud=' . $id_solicitud . '&email=' . $email . '"><img src="http://www.bilbodj.com/intranetv3/img/logos_mail/btn_realizar_encuesta.jpg" alt="Realizar encuesta"></a></center>
 											 </td>									 
 										
 										  </tr>
 							<tr>
-								<td align="center" colspan="2"><img src="http://www.bilbodj.com/intranetv3_4.4/img/img_mail/pie.jpg" width="100%"></td>
+								<td align="center" colspan="2"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
 							</tr>
 						  </table></body></html>';
 
@@ -782,7 +782,7 @@ class Comercial extends CI_Controller
 						<table width="100%">
 							<tr>
 							  <td colspan="2">
-									<img src="http://www.bilbodj.com/intranetv3_4.4/img/img_mail/cabecera.jpg" width="100%">
+									<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
 							  </td>
 							</tr>
 						<tr><td align="center"><font size="+3"><b>PRESUPUESTO</b></font></td>
@@ -906,7 +906,7 @@ class Comercial extends CI_Controller
 											</td>
 						  </tr>
 						  <tr>
-									<td align="center" colspan="2"><img src="http://www.bilbodj.com/intranetv3_4.4/img/img_mail/pie.jpg" width="100%"></td>
+									<td align="center" colspan="2"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
 						  </tr>
 										  
 							</table>
