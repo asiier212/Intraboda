@@ -879,48 +879,95 @@
 				document.getElementById("input_totalDescuento").value = total.toFixed(2);
 			}
 		</script>
-		<fieldset>
-			<legend>Pagos, Presupuesto &amp; Contrato</legend>
 
-			<ul>
-				<li><strong>Presupuesto:</strong> <?php if ($cliente['presupuesto_pdf'] != '') { ?>
-						<a href="<?php echo base_url() ?>uploads/pdf/<?php echo $cliente['presupuesto_pdf'] ?>">Descargar</a>
-					<?php } else echo "No hay Presupuesto"; ?>
-				</li>
-				<li style="padding:8px 0;"><label>Subir Presupuesto:</label> <input type="file" name="presupuesto" /> <input type="submit" name="add_presupuesto" value="Subir" /> </li>
-				<li><strong>Contrato:</strong> <?php if ($cliente['contrato_pdf'] != '') { ?>
-						<a href="<?php echo base_url() ?>uploads/pdf/<?php echo $cliente['contrato_pdf'] ?>">Descargar</a>
-					<?php } else echo "No hay Contrato"; ?>
-				</li>
-				<li style="padding:8px 0;"><label>Subir Contrato:</label> <input type="file" name="contrato" /> <input type="submit" name="add_contrato" value="Subir" /> </li>
-				<li style="padding:8px 0;"><strong>Estado de Pagos</strong></li>
+		<form method="post" action="" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Pagos, Presupuesto &amp; Contrato</legend>
 
-				<?php
-				$suma_pagos = 0;
-				if (count($pagos) == 0) {
-					echo "<li>A&uacute;n no se han hecho pagos</li>";
-					echo '<li style="padding:8px 0;">Pago Inicial: <input type="number" step="0.01" name="valor"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
-				} else {
-					foreach ($pagos as $p) {
-						$suma_pagos = $suma_pagos + $p['valor']; ?>
-						<li style="padding:8px 0;"><strong><?php echo date("d-m-Y", strtotime($p['fecha'])) . " - " . number_format($p['valor'], 2, ",", ".") ?></strong>&euro; <a href="#" onclick="return deletepago('<?php echo $cliente['id'] ?>','<?php echo $p['valor'] ?>','<?php echo $p['fecha'] ?>')"><img src="<?php echo base_url() ?>img/delete.gif" width="15" height="15" /></a></li><?php
-																																																																																																}
-																																																																																																if (count($pagos) == 1) {
-																																																																																																	echo '<li style="padding:8px 0;">Segundo pago: <input type="numer" step="0.01" name="valor" value="' . number_format(($total / 2) - $suma_pagos, 2, ",", ".") . '"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
-																																																																																																} else {
-																																																																																																	echo '<li style="padding:8px 0;">Siguiente pago: <input type="number" step="0.01" name="valor" value="' .
-																																																																																																		($cliente['descuento'] != '' && $cliente['descuento'] != '0'  ?
-																																																																																																			number_format($total - $suma_pagos - $cliente['descuento'], 2, ",", ".") : number_format($total - $suma_pagos, 2)) . '"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
-																																																																																																}
-																																																																																															}
+				<ul>
+					<!-- Presupuesto -->
+					<li><strong>Presupuesto:</strong>
+						<?php if (!empty($cliente['presupuesto_pdf'])) { ?>
+							<a href="<?php echo base_url() ?>uploads/pdf/<?php echo $cliente['presupuesto_pdf'] ?>">Descargar</a>
+						<?php } else echo "No hay Presupuesto"; ?>
+					</li>
+					<li style="padding:8px 0;">
+						<label>Subir Presupuesto:</label>
+						<input type="file" name="presupuesto" />
+						<input type="hidden" name="cliente_id" value="<?php echo $cliente['id']; ?>">
+						<input type="submit" name="add_presupuesto" value="Subir" />
+					</li>
 
-																																																																																																	?>
-				<li style="padding:8px 0;">Pendiente por pagar: <strong><?php
-																		echo number_format(count($pagos) == 0 ? $total :  $total - $suma_pagos, 2, ",", ".");
-																		?></strong>&euro;</li>
-			</ul>
-			<?php if (isset($msg_pdf)) echo "<p>{$msg_pdf}</p>"; ?>
-		</fieldset>
+					<!-- Contrato -->
+					<li><strong>Contrato:</strong>
+						<?php if (!empty($cliente['contrato_pdf'])) { ?>
+							<a href="<?php echo base_url() ?>uploads/pdf/<?php echo $cliente['contrato_pdf'] ?>">Descargar</a>
+						<?php } else echo "No hay Contrato"; ?>
+					</li>
+					<li style="padding:8px 0;">
+						<label>Subir Contrato:</label>
+						<input type="file" name="contrato" />
+						<input type="hidden" name="cliente_id" value="<?php echo $cliente['id']; ?>">
+						<input type="submit" name="add_contrato" value="Subir" />
+					</li>
+
+					<!-- Estado de Pagos -->
+					<li style="padding:8px 0;"><strong>Estado de Pagos</strong></li>
+
+					<?php
+					$suma_pagos = 0;
+					if (count($pagos) == 0) {
+						echo "<li>Aún no se han hecho pagos</li>";
+						echo '<li style="padding:8px 0;">Pago Inicial: 
+                    <input type="number" step="0.01" name="valor"> 
+                    ¿Pago en B? <input type="checkbox" name="tipo_pago"> 
+                    ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> 
+                    <input type="submit" name="add_pago" value="Subir" />
+                </li>';
+					} else {
+						foreach ($pagos as $p) {
+							$suma_pagos += $p['valor']; ?>
+							<li style="padding:8px 0;">
+								<strong><?php echo date("d-m-Y", strtotime($p['fecha'])) . " - " . number_format($p['valor'], 2, ",", ".") ?></strong>€
+								<a href="#" onclick="return deletepago('<?php echo $cliente['id'] ?>','<?php echo $p['valor'] ?>','<?php echo $p['fecha'] ?>')">
+									<img src="<?php echo base_url() ?>img/delete.gif" width="15" height="15" />
+								</a>
+							</li>
+					<?php }
+
+						if (count($pagos) == 1) {
+							echo '<li style="padding:8px 0;">Segundo pago: 
+                        <input type="number" step="0.01" name="valor" value="' . number_format(($total / 2) - $suma_pagos, 2, ",", ".") . '"> 
+                        ¿Pago en B? <input type="checkbox" name="tipo_pago"> 
+                        ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> 
+                        <input type="submit" name="add_pago" value="Subir" />
+                    </li>';
+						} else {
+							echo '<li style="padding:8px 0;">Siguiente pago: 
+                        <input type="number" step="0.01" name="valor" value="' .
+								($cliente['descuento'] != '' && $cliente['descuento'] != '0'
+									? number_format($total - $suma_pagos - $cliente['descuento'], 2, ",", ".")
+									: number_format($total - $suma_pagos, 2)) . '"> 
+                        ¿Pago en B? <input type="checkbox" name="tipo_pago"> 
+                        ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> 
+                        <input type="submit" name="add_pago" value="Subir" />
+                    </li>';
+						}
+					}
+					?>
+
+					<!-- Total pendiente -->
+					<li style="padding:8px 0;">Pendiente por pagar:
+						<strong><?php echo number_format(count($pagos) == 0 ? $total :  $total - $suma_pagos, 2, ",", "."); ?></strong>€
+					</li>
+				</ul>
+
+				<!-- Mostrar mensaje si hay error o éxito -->
+				<?php if (isset($msg_pdf)) echo "<p>{$msg_pdf}</p>"; ?>
+
+			</fieldset>
+		</form>
+
 
 
 		<fieldset class="datos">
