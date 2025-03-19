@@ -307,7 +307,7 @@
 					if (!empty($cliente['servicios'])) {
 						foreach ($cliente['servicios'] as $id => $datos) {
 							// Buscar el nombre del servicio
-							$nombreServicio = "Servicio no encontrado"; // Por defecto, si no lo encuentra
+							$nombreServicio = "Servicio no encontrado";
 							foreach ($servicios as $servicio) {
 								if ($servicio['id'] == $id) {
 									$nombreServicio = $servicio['nombre'];
@@ -326,7 +326,9 @@
     							<td><?php echo $nombreServicio; ?></td>
     							<td style="text-align:right;">
     								<?php if ($descuento > 0) { ?>
-    									<span style="text-decoration: line-through; color: red; font-weight: bold"><?php echo number_format($precio, 2, ',', '.') . "€"; ?></span>
+    									<span style="text-decoration: line-through; color: red; font-weight: bold">
+    										<?php echo number_format($precio, 2, ',', '.') . "€"; ?>
+    									</span>
     								<?php } ?>
     								<b><?php echo number_format($precioFinal, 2, ',', '.') . "€"; ?></b>
     							</td>
@@ -335,10 +337,12 @@
     					<tr>
     						<td><b>Total del contrato</b></td>
     						<td style="text-align:right;">
-    							<?php if ($totalDescuento > 0) { ?>
-    								<span style="text-decoration: line-through; color: red; font-weight: bold"><?php echo number_format($total, 2, ',', '.') . "€"; ?></span>
+    							<?php if ($cliente['descuento'] > 0) { ?>
+    								<span style="text-decoration: line-through; color: red; font-weight: bold">
+    									<?php echo number_format($total - $totalDescuento, 2, ',', '.') . "€"; ?>
+    								</span>
     							<?php } ?>
-    							<b><?php echo number_format(($total - $totalDescuento), 2, ',', '.') . "€"; ?></b>
+    							<b><?php echo number_format(($total - $totalDescuento - $cliente['descuento']), 2, ',', '.') . "€"; ?></b>
     						</td>
     					</tr>
     				<?php } else { ?>
@@ -348,19 +352,16 @@
     				<?php } ?>
     			</table>
 
-
     			<br /><br />
 
     			<ul>
     				<li style="padding:8px 0;"><strong>Mi Estado de Pagos</strong></li>
 
-
     				<?php
 					$suma_pagos = 0;
 					if (count($pagos) == 0) {
-						echo "<li>A&uacute;n no se han hecho pagos</li>";
+						echo "<li>Aún no se han hecho pagos</li>";
 					} else {
-
 					?>
     					<table class="tabledata">
     						<tr>
@@ -371,12 +372,13 @@
     						<?php
 							$i = 1;
 							foreach ($pagos as $p) {
-								$suma_pagos = $suma_pagos + $p['valor'];
+								$suma_pagos += $p['valor'];
 							?>
     							<tr>
     								<td>
-    									<?php echo ($i == 1 ? "Pago Se&ntilde;al " : "") . ($i == 2 ? "Pago de 50% " : "") . ($i == 3 ? "Pago final " : "")						?></td>
-    								<td align="center"><?php echo $p['fecha'] ?></td>
+    									<?php echo ($i == 1 ? "Pago Se&ntilde;al " : "") . ($i == 2 ? "Pago de 50% " : "") . ($i == 3 ? "Pago final " : ""); ?>
+    								</td>
+    								<td align="center"><?php echo $p['fecha']; ?></td>
     								<td align="right"><b><?php echo number_format($p['valor'], 2, ',', '.') . " &euro;"; ?></b></td>
     							</tr>
     						<?php
@@ -385,15 +387,14 @@
 							?>
     						<tr>
     							<td colspan="2">Pendiente por pagar: </td>
-    							<td align="right"><b><?php echo number_format(count($pagos) == 0 ? $total - $cliente['descuento'] :  $total - $suma_pagos - $cliente['descuento'], 2, ',', '.') . " &euro;"; ?></b></td>
+    							<td align="right">
+    								<b><?php echo number_format(count($pagos) == 0 ? $total - $totalDescuento - $cliente['descuento'] : $total - $suma_pagos - $totalDescuento - $cliente['descuento'], 2, ',', '.') . " &euro;"; ?></b>
+    							</td>
     						</tr>
     					</table>
-
     				<?php
 					}
-
 					?>
-
     			</ul>
 
     			<br /><br />
@@ -409,7 +410,8 @@
     				<a href="<?php echo base_url() ?>uploads/facturas/<?php echo urlencode(utf8_decode($cliente['factura_pdf'])) ?>" style="color:#333; font-weight:bold" target="_blank">Descargar Factura en PDF</a>
     			<?php } ?>
     		</fieldset>
-    		    		<fieldset class="datos">
+
+    		<fieldset class="datos">
     			<legend>Cambio de la contrase&ntilde;a</legend>
     			<form method="post" action="">
     				<ul>

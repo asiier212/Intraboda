@@ -954,11 +954,14 @@
                     </li>';
 						}
 					}
+
+					// Nuevo cálculo de "pendiente por pagar"
+					$pendiente = $total - $suma_pagos - $descuento1 - $totalDescuento;
 					?>
 
-					<!-- Total pendiente -->
+					<!-- Total pendiente corregido -->
 					<li style="padding:8px 0;">Pendiente por pagar:
-						<strong><?php echo number_format(count($pagos) == 0 ? $total :  $total - $suma_pagos, 2, ",", "."); ?></strong>€
+						<strong><?php echo number_format($pendiente, 2, ",", "."); ?></strong>€
 					</li>
 				</ul>
 
