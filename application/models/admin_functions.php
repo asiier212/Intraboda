@@ -151,7 +151,7 @@ class Admin_functions extends CI_Model
 			$cabeceras .= 'From: ' . $email_oficina;
 
 			$asunto = 'Bienvenido/a a IntraBoda - ' . $nombre_oficina;
-						$mensaje = '<font color="#C79ED6">
+			$mensaje = '<font color="#C79ED6">
 					  <table width="100%" border="0">
 					  <tr>
 						<td align="center">
@@ -1252,7 +1252,39 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
+	function GetPreguntasEncuesta()
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id_pregunta, pregunta, importe_descuento FROM preguntas_encuesta ORDER BY id_pregunta ASC");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_pregunta'] = $fila->id_pregunta;
+				$data[$i]['pregunta'] = $fila->pregunta;
+				$data[$i]['importe_descuento'] = $fila->importe_descuento;
+				$i++;
+			}
+		}
+		return $data;
+	}
 
+	function GetRespuestasPreguntas()
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM respuestas_encuesta ORDER BY id_respuesta ASC");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_respuesta'] = $fila->id_respuesta;
+				$data[$i]['id_pregunta'] = $fila->id_pregunta;
+				$data[$i]['respuesta'] = $fila->respuesta;
+				$i++;
+			}
+		}
+		return $data;
+	}
 
 	function GetRespuestasEncuestaDatosBoda($id)
 	{
@@ -2363,9 +2395,9 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-private function sendEmail($from, $to, $subject, $message)
+	private function sendEmail($from, $to, $subject, $message)
 	{
-  error_log("✅ Se llamó a sendEmail al crear cliente", 3, "/tmp/mail_debug.log");
+		error_log("✅ Se llamó a sendEmail al crear cliente", 3, "/tmp/mail_debug.log");
 		try {
 
 

@@ -3,8 +3,8 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>js/alertify/themes/alertify.core.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>js/alertify/themes/alertify.default.css" />
 
-<!-- Place the first <script> tag in your HTML's <head> -->
-<script src="https://cdn.tiny.cloud/1/o6bdbfrosyztaa19zntejfp6e2chzykthzzh728vtdjokot2/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<!-- Cargar TinyMCE desde la versión local -->
+<script src="<?php echo base_url() . "js/tinymce/tinymce.min.js"; ?>"></script>
 
 <script>
 	function initTinyMCE(selector) {
@@ -542,7 +542,7 @@
 		padding: 20px;
 		border-radius: 10px;
 		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-		width: 20%;
+		width: 30%;
 		text-align: center;
 	}
 
