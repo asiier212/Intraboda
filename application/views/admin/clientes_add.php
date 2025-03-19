@@ -142,62 +142,29 @@
 
 <script>
 	function comprueba_datos_obligatorios() {
-		if (
-			document.formulario_cliente.nombre_novio.value == '' ||
-			document.formulario_cliente.apellidos_novio.value == '' ||
-			document.formulario_cliente.direccion_novio.value == '' ||
-			document.formulario_cliente.cp_novio.value == '' ||
-			document.formulario_cliente.poblacion_novio.value == '' ||
-			document.formulario_cliente.telefono_novio.value == '' ||
-			document.formulario_cliente.email_novio.value == '' ||
+		console.log("🔍 Validando formulario...");
 
-			document.formulario_cliente.nombre_novia.value == '' ||
-			document.formulario_cliente.apellidos_novia.value == '' ||
-			document.formulario_cliente.direccion_novia.value == '' ||
-			document.formulario_cliente.cp_novia.value == '' ||
-			document.formulario_cliente.poblacion_novia.value == '' ||
-			document.formulario_cliente.telefono_novia.value == '' ||
-			document.formulario_cliente.email_novia.value == '' ||
+		let campos = [
+			"nombre_novio", "apellidos_novio", "direccion_novio", "cp_novio", "poblacion_novio", "telefono_novio", "email_novio",
+			"nombre_novia", "apellidos_novia", "direccion_novia", "cp_novia", "poblacion_novia", "telefono_novia", "email_novia",
+			"fecha_boda", "hora_boda", "id_restaurante", "clave"
+		];
 
-			document.formulario_cliente.fecha_boda.value == '' ||
-			document.formulario_cliente.hora_boda.value == '' ||
-			document.formulario_cliente.restaurante.value == '' ||
-			document.formulario_cliente.direccion_restaurante.value == '' ||
-
-			document.formulario_cliente.clave.value == '' ||
-
-			document.formulario_cliente.presupuesto.value == '' ||
-			document.formulario_cliente.contrato.value == '') {
-			alert("Rellene los campos de datos obligatorios");
-			return false;
-		}
-
-
-		//SERVICIOS
-		checkeados = false;
-		for (i = 0; i < document.formulario_cliente['servicios[]'].length; i++) {
-			if (document.formulario_cliente['servicios[]'][i].checked) {
-				checkeados = true;
+		for (let campo of campos) {
+			let input = document.forms["formulario_cliente"][campo];
+			if (!input) {
+				console.error(`❌ El campo "${campo}" no existe en el formulario.`);
+				alert(`Error: El campo "${campo}" no está en el formulario.`);
+				return false;
+			} else if (input.value.trim() === "") {
+				console.warn(`⚠️ El campo "${campo}" está vacío.`);
+				alert(`Debe completar el campo: ${campo}`);
+				return false;
 			}
 		}
-		if (checkeados == false) {
-			alert('Seleccione por lo menos 1 casilla de servicios');
-			return false;
-		}
 
-		//PERSONAS DE CONTACTO
-		checkeados = false;
-		for (i = 0; i < document.formulario_cliente['personas_contacto[]'].length; i++) {
-			if (document.formulario_cliente['personas_contacto[]'][i].checked) {
-				checkeados = true;
-			}
-		}
-		if (checkeados == false) {
-			alert('Seleccione por lo menos 1 persona de contacto');
-			return false;
-		}
-
-		return true;
+		console.log("✅ Validación correcta. Enviando formulario...");
+		return true; // Permite el envío del formulario
 	}
 </script>
 <h2>

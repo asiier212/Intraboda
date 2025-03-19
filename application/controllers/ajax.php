@@ -312,29 +312,46 @@ class Ajax extends CI_Controller
 	function buscarrestaurante()
 	{
 		$data = array();
-
-		if ($_POST) {
+	
+		if ($_POST && isset($_POST['id_restaurante']) && !empty($_POST['id_restaurante'])) {
 			$this->load->database();
-
-			$query = $this->db->query("SELECT * FROM restaurantes WHERE id_restaurante='" . $_POST['id_restaurante'] . "'");
-			foreach ($query->result() as $fila) {
-				$data['nombre'] = $fila->nombre;
-				$data['direccion'] = $fila->direccion;
-				$data['telefono'] = $fila->telefono;
-				$data['maitre'] = $fila->maitre;
-				$data['telefono_maitre'] = $fila->telefono_maitre;
-				$i = 0;
-				$query2 = $this->db->query("SELECT * FROM restaurantes_archivos WHERE id_restaurante='" . $_POST['id_restaurante'] . "'");
+	
+			// Evitar SQL Injection manualmente
+			$id_restaurante = (int) $_POST['id_restaurante']; // Convertir a entero si aplica
+			$query = $this->db->query("SELECT * FROM restaurantes WHERE id_restaurante = '$id_restaurante'");
+			$restaurante = $query->row(); // Tomar solo una fila
+	
+			if ($restaurante) {
+				// Asignamos los datos del restaurante
+				$data['nombre'] = $restaurante->nombre;
+				$data['direccion'] = $restaurante->direccion;
+				$data['telefono'] = $restaurante->telefono;
+				$data['maitre'] = $restaurante->maitre;
+				$data['telefono_maitre'] = $restaurante->telefono_maitre;
+	
+				// Obtener archivos del restaurante
+				$query2 = $this->db->query("SELECT * FROM restaurantes_archivos WHERE id_restaurante = '$id_restaurante'");
+				$data['archivos'] = array();
+	
 				foreach ($query2->result() as $fila2) {
-					$data['archivos'][$i]['descripcion'] = $fila2->descripcion;
-					$data['archivos'][$i]['archivo'] = $fila2->archivo;
-					$i++;
+					$data['archivos'][] = array(
+						'descripcion' => $fila2->descripcion,
+						'archivo' => $fila2->archivo
+					);
 				}
+			} else {
+				// En caso de no encontrar restaurante
+				$data['error'] = "No se encontró el restaurante.";
 			}
-
-			echo json_encode($data);
+		} else {
+			$data['error'] = "ID de restaurante no proporcionado.";
 		}
+	
+		// Enviar respuesta JSON
+		header('Content-Type: application/json');
+		echo json_encode($data);
 	}
+	
 	/*function buscarrestaurante($nombre)
 {
 	$this->load->database();
@@ -833,35 +850,35 @@ function buscarrestaurantearchivos($nombre)
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$this->load->database();
 			$data = json_decode(file_get_contents("php://input"), true);
-	
+
 			log_message('error', "📥 Datos recibidos para nueva respuesta: " . print_r($data, true));
-	
+
 			if (empty($data['id_pregunta']) || empty($data['respuesta'])) {
 				echo json_encode(["success" => false, "message" => "Faltan datos."]);
 				return;
 			}
-	
+
 			// Verificar si la pregunta existe
 			$existeEncuesta1 = $this->db->get_where('preguntas_encuesta', ['id_pregunta' => $data['id_pregunta']])->num_rows() > 0;
 			$existeEncuesta2 = $this->db->get_where('preguntas_encuesta_datos_boda', ['id_pregunta' => $data['id_pregunta']])->num_rows() > 0;
-	
+
 			if (!$existeEncuesta1 && !$existeEncuesta2) {
 				log_message('error', "❌ ERROR: No se encontró la pregunta con ID: " . $data['id_pregunta']);
 				echo json_encode(["success" => false, "message" => "La pregunta no existe."]);
 				return;
 			}
-	
+
 			// Determinar la tabla según la pregunta
 			$tabla = $existeEncuesta1 ? "respuestas_encuesta" : "opciones_respuesta_encuesta_datos_boda";
-	
+
 			log_message('error', "✅ Insertando en la tabla: $tabla");
-	
+
 			$insertData = [
 				"id_pregunta" => $data['id_pregunta'],
 				"respuesta" => $data['respuesta']
 			];
 			$this->db->insert($tabla, $insertData);
-	
+
 			if ($this->db->affected_rows() > 0) {
 				echo json_encode(["success" => true, "message" => "Respuesta añadida correctamente"]);
 			} else {
@@ -876,21 +893,21 @@ function buscarrestaurantearchivos($nombre)
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$this->load->database();
 			$data = json_decode(file_get_contents("php://input"), true);
-	
+
 			error_log("Recibido para eliminar: " . print_r($data, true)); // Depuración
-	
+
 			if (empty($data['id_pregunta']) || empty($data['tipo_encuesta'])) {
 				echo json_encode(["success" => false, "message" => "Faltan datos en la solicitud."]);
 				return;
 			}
-	
+
 			// Determinar de qué tabla eliminar
 			$tabla = ($data['tipo_encuesta'] === 'encuesta1') ? 'preguntas_encuesta' : 'preguntas_encuesta_datos_boda';
-	
+
 			// Intentar eliminar la pregunta de la tabla correspondiente
 			$this->db->where('id_pregunta', intval($data['id_pregunta']));
 			$this->db->delete($tabla);
-	
+
 			if ($this->db->affected_rows() > 0) {
 				echo json_encode(["success" => true, "message" => "Pregunta eliminada correctamente"]);
 			} else {
@@ -898,7 +915,7 @@ function buscarrestaurantearchivos($nombre)
 			}
 		}
 	}
-	
+
 
 	public function editar_pregunta()
 	{
