@@ -1665,8 +1665,8 @@ class Admin extends CI_Controller
 		$data['preguntas_encuesta'] = $this->admin_functions->GetPreguntasEncuesta();
 		$data['respuestas_preguntas'] = $this->admin_functions->GetRespuestasPreguntas();
 
-		$data['preguntas_encuesta_cliente'] = $this->admin_functions->GetPreguntasEncuestaCliente();
-		$data['respuestas_encuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaCliente();
+		$data['preguntas_encuesta_cliente'] = $this->admin_functions->GetPreguntasEncuestaDatosBoda();
+		$data['respuestas_encuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda();
 
 		$data['estadistica_encuestas'] = $this->admin_functions->GetEstadisticaEncuestas($fecha_desde, $fecha_hasta);
 
@@ -1787,8 +1787,8 @@ class Admin extends CI_Controller
 		$data_footer = false;
 		$data['preguntas_encuesta'] = $this->admin_functions->GetPreguntasEncuesta();
 		$data['respuestas_preguntas'] = $this->admin_functions->GetRespuestasPreguntas();
-		$data['preguntas_encuesta_cliente'] = $this->admin_functions->GetPreguntasEncuestaCliente();
-		$data['respuestas_preguntasClientes'] = $this->admin_functions->GetRespuestasEncuestaCliente();
+		$data['preguntas_encuesta_cliente'] = $this->admin_functions->GetPreguntasEncuestaDatosBoda();
+		$data['respuestas_preguntasClientes'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda();
 		$view = "encuesta";
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
