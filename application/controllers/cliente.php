@@ -268,13 +268,22 @@ class Cliente extends CI_Controller
 					$this->load->database();
 				
 					log_message('debug', 'Respuestas recibidas: ' . print_r($_POST['respuesta'], true));
+					log_message('debug', 'Números exactos recibidos: ' . print_r($_POST['numero_exacto'], true));
 				
 					foreach ($_POST['respuesta'] as $id_pregunta => $valor_respuesta) {
-						if (is_array($valor_respuesta)) {
+						$id_cliente = $this->session->userdata('user_id');
+				
+						// Comprobamos si hay número exacto introducido
+						$numero_exacto = isset($_POST['numero_exacto'][$id_pregunta]) && $_POST['numero_exacto'][$id_pregunta] !== '' 
+										? trim($_POST['numero_exacto'][$id_pregunta]) 
+										: null;
+				
+						// Si hay un número exacto, lo priorizamos sobre cualquier otra respuesta
+						if ($numero_exacto !== null) {
+							$valor_respuesta = $numero_exacto;
+						} elseif (is_array($valor_respuesta)) {
 							$valor_respuesta = implode(",", $valor_respuesta); // Para respuestas múltiples
 						}
-				
-						$id_cliente = $this->session->userdata('user_id');
 				
 						// Comprobar si ya existe una respuesta en la BD
 						$query = $this->db->query("
@@ -332,6 +341,8 @@ class Cliente extends CI_Controller
 						// $this->enviar_mail("IntraBoda - Actualización de encuesta respecto a la boda", $mensaje);
 					}
 				}
+				
+				
 				
 			}
 

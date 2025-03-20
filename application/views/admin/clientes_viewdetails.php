@@ -674,13 +674,12 @@
 							<span>
 								<strong><?php echo htmlspecialchars($pregunta['pregunta']); ?></strong>
 								<?php if (!empty($pregunta['descripcion'])) { ?>
-									<span><?php echo $pregunta['descripcion']; ?></span> <!-- Permite HTML -->
+									<span><?php echo $pregunta['descripcion']; ?></span>
 								<?php } else { ?>
 									<br><br>
 								<?php } ?>
 
 								<?php
-								// Filtrar las respuestas disponibles para esta pregunta
 								$respuestas = array();
 								foreach ($opciones_respuestas_encuesta_datos_boda as $resp) {
 									if (intval($resp['id_pregunta']) === intval($pregunta['id_pregunta'])) {
@@ -688,28 +687,23 @@
 									}
 								}
 
-								// Asegurar que $respuesta_cliente es un array
 								if (!is_array($respuesta_cliente)) {
 									$respuesta_cliente = array();
 								}
 
-								// Obtener la respuesta del cliente si existe
 								$respuesta_cliente_actual = null;
 								$respuestas_seleccionadas = array();
 
-								// Buscar manualmente la respuesta correcta en el array
 								foreach ($respuesta_cliente as $resp) {
 									if ($resp['id_pregunta'] == $pregunta['id_pregunta']) {
 										if ($pregunta['tipo_pregunta'] == 'multiple') {
-											// Dividir respuestas separadas por comas y limpiar espacios
 											$respuestas_seleccionadas = array_merge($respuestas_seleccionadas, array_map('trim', explode(',', $resp['respuesta'])));
 										} else {
-											$respuesta_cliente_actual = $resp['respuesta']; // Solo guarda la última en caso de opción única
+											$respuesta_cliente_actual = $resp['respuesta'];
 										}
 									}
 								}
 
-								// Determinar el tipo de pregunta
 								$tipo = isset($pregunta['tipo_pregunta']) ? strtolower($pregunta['tipo_pregunta']) : '';
 								?>
 
@@ -718,6 +712,15 @@
 									<span><?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?></span>
 
 								<?php } elseif ($tipo == 'opciones' && !empty($respuestas)) { ?>
+									<?php
+									$respuesta_encontrada = false;
+									foreach ($respuestas as $respuesta) {
+										if (!empty($respuesta_cliente_actual) && $respuesta_cliente_actual == $respuesta['respuesta']) {
+											$respuesta_encontrada = true;
+										}
+									}
+									?>
+
 									<?php foreach ($respuestas as $respuesta) { ?>
 										<label>
 											<input type="radio" disabled
@@ -726,24 +729,26 @@
 										</label><br>
 									<?php } ?>
 
+									<?php if (!$respuesta_encontrada && !empty($respuesta_cliente_actual)) { ?>
+										<!-- Mostrar input de número si la respuesta no coincide con ninguna opción -->
+										<label>
+										<input type="radio" disabled checked>
+											Número exacto:
+											<input type="number" value="<?php echo htmlspecialchars($respuesta_cliente_actual); ?>" disabled>
+										</label><br>
+									<?php } ?>
+
 								<?php } elseif ($tipo == 'multiple' && !empty($respuestas)) { ?>
 									<?php
-									// Obtener todas las respuestas posibles de la base de datos
-									$respuestas_disponibles = array();
-									foreach ($respuestas as $respuesta) {
-										$respuestas_disponibles[] = trim($respuesta['respuesta']);
-									}
+									$respuestas_disponibles = array_map(function ($r) {
+										return trim($r['respuesta']);
+									}, $respuestas);
 
-									// Buscar respuestas que no estén en la lista de opciones disponibles
-									$respuestas_extra = array();
-									foreach ($respuestas_seleccionadas as $respuesta) {
-										if (!in_array($respuesta, $respuestas_disponibles)) {
-											$respuestas_extra[] = $respuesta; // Añadir respuestas desconocidas
-										}
-									}
+									$respuestas_extra = array_filter($respuestas_seleccionadas, function ($r) use ($respuestas_disponibles) {
+										return !in_array($r, $respuestas_disponibles);
+									});
 									?>
 
-									<!-- Mostrar las respuestas de la base de datos -->
 									<?php foreach ($respuestas as $respuesta) { ?>
 										<label>
 											<input type="checkbox" disabled
@@ -752,7 +757,6 @@
 										</label><br>
 									<?php } ?>
 
-									<!-- Agregar checkboxes para respuestas adicionales que no están en la lista -->
 									<?php foreach ($respuestas_extra as $respuesta_extra) { ?>
 										<label>
 											<input type="checkbox" disabled checked>
@@ -936,11 +940,11 @@
 					<?php }
 
 						if (count($pagos) == 1) {
-							echo '<li style="padding:8px 0;">Segundo pago: <input type="numer" step="0.01" name="valor" value="'.number_format(($total / 2) - $suma_pagos,2,",",".").'"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
+							echo '<li style="padding:8px 0;">Segundo pago: <input type="numer" step="0.01" name="valor" value="' . number_format(($total / 2) - $suma_pagos, 2, ",", ".") . '"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
 						} else {
-							echo '<li style="padding:8px 0;">Siguiente pago: <input type="number" step="0.01" name="valor" value="'.
-						( $cliente['descuento'] != '' && $cliente['descuento'] != '0'  ?
-							number_format($total-$suma_pagos-$cliente['descuento'], 2,",",".") : number_format($total-$suma_pagos, 2)).'"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
+							echo '<li style="padding:8px 0;">Siguiente pago: <input type="number" step="0.01" name="valor" value="' .
+								($cliente['descuento'] != '' && $cliente['descuento'] != '0'  ?
+									number_format($total - $suma_pagos - $cliente['descuento'], 2, ",", ".") : number_format($total - $suma_pagos, 2)) . '"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
 						}
 					}
 

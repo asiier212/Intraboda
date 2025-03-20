@@ -173,14 +173,36 @@
     								<span id="valor_<?php echo $pregunta['id_pregunta']; ?>"><?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : '5'); ?></span>
 
     							<?php } elseif ($tipo == 'opciones' && !empty($respuestas)) { ?>
-    								<?php foreach ($respuestas as $respuesta) { ?>
+    								<?php
+									$respuesta_encontrada = false; // Para saber si la respuesta es de las opciones predefinidas
+									$id_pregunta = $pregunta['id_pregunta']; // ID de la pregunta
+									?>
+
+    								<?php foreach ($respuestas as $respuesta) {
+										$checked = (!empty($respuesta_cliente_actual) && $respuesta_cliente_actual == $respuesta['respuesta']) ? 'checked' : '';
+										if ($checked) {
+											$respuesta_encontrada = true; // Si se encuentra la respuesta en el rango, la marcamos
+										}
+									?>
     									<label>
-    										<input type="radio" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]"
-    											value="<?php echo htmlspecialchars($respuesta['respuesta']); ?>"
-    											<?php echo (!empty($respuesta_cliente_actual) && $respuesta_cliente_actual == $respuesta['respuesta']) ? 'checked' : ''; ?>>
-    										<?php echo htmlspecialchars($respuesta['respuesta']); ?>
+    										<input type="radio" name="respuesta[<?php echo $id_pregunta; ?>]"
+    											value="<?php echo htmlspecialchars($respuesta['respuesta'], ENT_QUOTES, 'UTF-8'); ?>"
+    											class="opcion_radio_<?php echo $id_pregunta; ?>"
+    											<?php echo $checked; ?>>
+    										<?php echo htmlspecialchars($respuesta['respuesta'], ENT_QUOTES, 'UTF-8'); ?>
     									</label><br>
     								<?php } ?>
+
+    								<!-- Opción de Número Exacto -->
+    								<label>
+    									<input type="radio" name="respuesta[<?php echo $id_pregunta; ?>]"
+    										value="numero_exacto" id="numero_exacto_radio_<?php echo $id_pregunta; ?>"
+    										<?php echo (!$respuesta_encontrada && !empty($respuesta_cliente_actual)) ? 'checked' : ''; ?>>
+    									Introducir número exacto:
+    									<input type="number" style="width:40px" name="numero_exacto[<?php echo $id_pregunta; ?>]"
+    										id="numero_exacto_input_<?php echo $id_pregunta; ?>"
+    										value="<?php echo (!$respuesta_encontrada && !empty($respuesta_cliente_actual)) ? htmlspecialchars($respuesta_cliente_actual, ENT_QUOTES, 'UTF-8') : ''; ?>">
+    								</label><br>
 
     							<?php } elseif ($tipo == 'multiple' && !empty($respuestas)) { ?>
     								<?php
@@ -242,6 +264,29 @@
 
 
     		<script type="text/javascript">
+    			// Función para manejar el comportamiento dinámico de las opciones
+    			(function() {
+    				let radioButtons = document.querySelectorAll('.opcion_radio_<?php echo $id_pregunta; ?>');
+    				let numeroExactoRadio = document.getElementById("numero_exacto_radio_<?php echo $id_pregunta; ?>");
+    				let numeroExactoInput = document.getElementById("numero_exacto_input_<?php echo $id_pregunta; ?>");
+
+    				radioButtons.forEach(radio => {
+    					radio.addEventListener("change", function() {
+    						if (this !== numeroExactoRadio) {
+    							numeroExactoRadio.checked = false;
+    							numeroExactoInput.value = ""; // Vaciar input al seleccionar otra opción
+    						}
+    					});
+    				});
+
+    				numeroExactoInput.addEventListener("click", function() {
+    					numeroExactoRadio.checked = true;
+    					radioButtons.forEach(radio => {
+    						radio.checked = false;
+    					});
+    				});
+    			})();
+
     			function toggleOtroInput(checkbox, idPregunta) {
     				var inputOtro = checkbox.nextElementSibling;
 
