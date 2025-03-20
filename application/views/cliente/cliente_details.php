@@ -239,7 +239,7 @@
     								<?php foreach ($respuestas_extra as $extra) { ?>
     									<label>
     										<input type="checkbox" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]" value="<?php echo htmlspecialchars($extra); ?>" checked>
-    										<?php echo htmlspecialchars($extra); ?> (Otro)
+    										<?php echo htmlspecialchars($extra); ?>
     									</label><br>
     								<?php } ?>
 
@@ -287,14 +287,15 @@
     				});
     			})();
 
-    			function toggleOtroInput(checkbox, idPregunta) {
+    			function toggleOtroInput(checkbox) {
     				var inputOtro = checkbox.nextElementSibling;
 
     				if (checkbox.checked) {
     					inputOtro.disabled = false;
     					inputOtro.focus();
     				} else {
-    					removeOtroInput(checkbox.parentNode);
+    					inputOtro.disabled = true; // Solo desactiva el input, no lo borra
+    					inputOtro.value = ""; // Limpia el contenido cuando se desactiva
     				}
     			}
 
@@ -309,7 +310,7 @@
     					var nuevoCheckbox = document.createElement("input");
     					nuevoCheckbox.type = "checkbox";
     					nuevoCheckbox.onclick = function() {
-    						toggleOtroInput(this, idPregunta);
+    						toggleOtroInput(this);
     					};
 
     					var nuevoInput = document.createElement("input");
@@ -326,14 +327,6 @@
     					divOtros.appendChild(document.createElement("br"));
     					divOtros.appendChild(nuevoLabel);
     				}
-    			}
-
-    			function removeOtroInput(label) {
-    				var divOtros = label.parentNode;
-    				if (label.previousSibling && label.previousSibling.nodeName === "BR") {
-    					divOtros.removeChild(label.previousSibling);
-    				}
-    				divOtros.removeChild(label);
     			}
     		</script>
 
