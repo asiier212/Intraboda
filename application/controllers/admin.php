@@ -835,12 +835,12 @@ class Admin extends CI_Controller
 						} else {
 							$_POST['tipo_pago'] = 'A';
 						}
-						$this->db->query("INSERT INTO pagos (cliente_id, valor, tipo, fecha) VALUES ({$id}, '{$valor}', '{$tipo_pago}', CURRENT_TIMESTAMP)");
+						$this->db->query("INSERT INTO pagos (cliente_id, valor, tipo) VALUES ({$id}, '" . str_replace(',', '.', $_POST['valor']) . "', '" . $_POST['tipo_pago'] . "')");
 
 						//MANDAMOS UN E-MAIL A LOS CLIENTES SI SE HA MARCADO LA OPCIÓN Y CUANDO SE HAYA REALIZADO UN PAGO EN A QUE NO ES DE 0€
 						//if(isset($_POST['enviar_email_pago']) && $_POST['tipo_pago']=='A' && $_POST['valor']>0){
 
-						if (isset($_POST['enviar_email_pago']) && $_POST['valor'] > 0 || true) {
+						if (isset($_POST['enviar_email_pago']) && $_POST['valor'] > 0) {
 							//BUSCAMOS QUÉ NÚMERO DE PAGO ES: SEÑAL, 50% O FINAL
 							$query = $this->db->query("SELECT COUNT(valor) as num_pagos FROM pagos WHERE cliente_id = {$id}");
 							foreach ($query->result() as $fila) {

@@ -923,7 +923,7 @@
                     ¿Pago en B? <input type="checkbox" name="tipo_pago"> 
                     ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> 
                     <input type="submit" name="add_pago" value="Subir" />
-                </li>';
+                	</li>';
 					} else {
 						foreach ($pagos as $p) {
 							$suma_pagos += $p['valor']; ?>
@@ -936,22 +936,11 @@
 					<?php }
 
 						if (count($pagos) == 1) {
-							echo '<li style="padding:8px 0;">Segundo pago: 
-                        <input type="number" step="0.01" name="valor" value="' . number_format(($total / 2) - $suma_pagos, 2, ",", ".") . '"> 
-                        ¿Pago en B? <input type="checkbox" name="tipo_pago"> 
-                        ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> 
-                        <input type="submit" name="add_pago" value="Subir" />
-                    </li>';
+							echo '<li style="padding:8px 0;">Segundo pago: <input type="numer" step="0.01" name="valor" value="'.number_format(($total / 2) - $suma_pagos,2,",",".").'"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
 						} else {
-							echo '<li style="padding:8px 0;">Siguiente pago: 
-                        <input type="number" step="0.01" name="valor" value="' .
-								($cliente['descuento'] != '' && $cliente['descuento'] != '0'
-									? number_format($total - $suma_pagos - $cliente['descuento'], 2, ",", ".")
-									: number_format($total - $suma_pagos, 2)) . '"> 
-                        ¿Pago en B? <input type="checkbox" name="tipo_pago"> 
-                        ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> 
-                        <input type="submit" name="add_pago" value="Subir" />
-                    </li>';
+							echo '<li style="padding:8px 0;">Siguiente pago: <input type="number" step="0.01" name="valor" value="'.
+						( $cliente['descuento'] != '' && $cliente['descuento'] != '0'  ?
+							number_format($total-$suma_pagos-$cliente['descuento'], 2,",",".") : number_format($total-$suma_pagos, 2)).'"> ¿Pago en B? <input type="checkbox" name="tipo_pago"> ¿Enviar e-mail? <input type="checkbox" name="enviar_email_pago" checked> <input type="submit" name="add_pago" value="Subir" /></li>';
 						}
 					}
 
