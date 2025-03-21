@@ -52,7 +52,117 @@ class Admin extends CI_Controller
 		$data_footer = false;
 
 		$this->load->database();
-		$this->_loadViews($data_header, $data, $data_footer, "apariencia");	}
+
+		// Ruta completa al archivo config.php
+		$config_file = APPPATH . 'config/config.php';
+		include($config_file);
+
+		// Ruta del logo actual
+		$current_logo_path = isset($config['logo_header']) ? $config['logo_header'] : 'img/logo_intranet.png';
+		$default_logo = 'img/logo_intranet.png';
+
+		// Procesar eliminación del logo
+		if (isset($_POST['delete_logo'])) {
+			if ($current_logo_path !== $default_logo && file_exists(FCPATH . $current_logo_path)) {
+				unlink(FCPATH . $current_logo_path); // Borrar archivo
+			}
+
+			// Sobrescribir config.php con logo por defecto
+			$this->_update_config_logo($default_logo);
+			redirect('admin/apariencia');
+			return;
+		}
+
+		// Procesar subida de nuevo logo
+		if (isset($_POST['update_logo']) && isset($_FILES['logo'])) {
+			$fileTmpPath = $_FILES['logo']['tmp_name'];
+			$fileName = $_FILES['logo']['name'];
+			$fileNameCmps = explode(".", $fileName);
+			$fileExtension = strtolower(end($fileNameCmps));
+
+			$allowedExtensions = ['png', 'jpg', 'jpeg', 'gif'];
+			if (in_array($fileExtension, $allowedExtensions)) {
+				$newFileName = 'logo_' . time() . '.' . $fileExtension;
+				$dest_path = FCPATH . 'img/' . $newFileName;
+
+				if (move_uploaded_file($fileTmpPath, $dest_path)) {
+					// Eliminar el anterior si no es el default
+					if ($current_logo_path !== $default_logo && file_exists(FCPATH . $current_logo_path)) {
+						unlink(FCPATH . $current_logo_path);
+					}
+
+					// Actualizar config.php con la nueva ruta
+					$this->_update_config_logo('img/' . $newFileName);
+					redirect('admin/apariencia');
+					return;
+				}
+			}
+		}
+
+		// Ruta actual y por defecto
+		$favicon_default = 'img/favicon.png';
+		$favicon_path = isset($config['favicon']) ? $config['favicon'] : $favicon_default;
+
+		// Eliminar favicon
+		if (isset($_POST['delete_favicon'])) {
+			if ($favicon_path !== $favicon_default && file_exists(FCPATH . $favicon_path)) {
+				unlink(FCPATH . $favicon_path);
+			}
+			$this->_update_config_value('favicon', $favicon_default);
+			redirect('admin/apariencia');
+			return;
+		}
+
+		// Subir nuevo favicon
+		if (isset($_POST['update_favicon']) && isset($_FILES['favicon'])) {
+			$fileTmpPath = $_FILES['favicon']['tmp_name'];
+			$fileName = $_FILES['favicon']['name'];
+			$fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+			$allowed = ['ico', 'png'];
+
+			if (in_array($fileExt, $allowed)) {
+				$newName = 'favicon_' . time() . '.' . $fileExt;
+				$dest = FCPATH . 'img/' . $newName;
+
+				if (move_uploaded_file($fileTmpPath, $dest)) {
+					if ($favicon_path !== $favicon_default && file_exists(FCPATH . $favicon_path)) {
+						unlink(FCPATH . $favicon_path);
+					}
+					$this->_update_config_value('favicon', 'img/' . $newName);
+					redirect('admin/apariencia');
+					return;
+				}
+			}
+		}
+
+
+		$this->_loadViews($data_header, $data, $data_footer, "apariencia");
+	}
+
+	private function _update_config_logo($new_logo_path)
+	{
+		$config_path = APPPATH . 'config/config.php';
+		$config_content = file_get_contents($config_path);
+
+		$pattern = '/\$config\[\'logo_header\'\]\s*=\s*\'.*?\';/';
+		$replacement = "\$config['logo_header'] = '" . $new_logo_path . "';";
+
+		$new_content = preg_replace($pattern, $replacement, $config_content);
+		file_put_contents($config_path, $new_content);
+	}
+
+
+	private function _update_config_value($key, $value)
+	{
+		$config_path = APPPATH . 'config/config.php';
+		$config_content = file_get_contents($config_path);
+
+		$pattern = '/\$config\[\'' . preg_quote($key, '/') . '\'\]\s*=\s*\'.*?\';/';
+		$replacement = "\$config['$key'] = '$value';";
+
+		$new_content = preg_replace($pattern, $replacement, $config_content);
+		file_put_contents($config_path, $new_content);
+	}
 
 
 	function emails_enviados($acc = false, $id = false)

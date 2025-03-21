@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="icon" type="image/png" href="<?php echo base_url() ?>img/favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo base_url() . $this->config->item('favicon') ?>" />
     <title>
         Página principal
     </title>
@@ -38,7 +38,9 @@
 
     <div id="header">
         <ul class="nav">
-            <li class="logo"><img src="<?php echo base_url() ?>img/logo_intranet.png" width="25" height="25" /></li>
+            <li class="logo">
+                <img src="<?php echo base_url() . $this->config->item('logo_header') ?>" width="25" height="25" />
+            </li>
             <li><a href="">Clientes</a>
                 <ul>
                     <li><a href="<?php echo base_url() ?>admin/clientes/add">Añadir Cliente</a></li>

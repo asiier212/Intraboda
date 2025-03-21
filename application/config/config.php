@@ -16,6 +16,11 @@
 */
 $config['base_url']	= '';
 
+
+$config['logo_header'] = 'img/logo_intranet.png';
+$config['favicon'] = 'img/favicon.png';
+
+
 /*
 |--------------------------------------------------------------------------
 | Index File
