@@ -48,6 +48,7 @@
             <li><a href="">Gestión</a>
                 <ul>
                     <li><a href="<?php echo base_url() ?>admin/oficinas">Oficinas</a></li>
+                    <li><a href="<?php echo base_url() ?>admin/apariencia">Apariencia</a></li>
                     <li><a href="<?php echo base_url() ?>admin/mantenimiento_equipos">Equipamiento</a></li>
                     <li><a href="<?php echo base_url() ?>admin/servicios/view">Servicios</a></li>
                     <li><a href="<?php echo base_url() ?>admin/persons/view">Personas de contacto</a></li>

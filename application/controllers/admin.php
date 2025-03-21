@@ -45,6 +45,16 @@ class Admin extends CI_Controller
 		$this->load->view('admin/login', $data);
 	}
 
+	public function apariencia()
+	{
+		$data_header = false;
+		$data = false;
+		$data_footer = false;
+
+		$this->load->database();
+		$this->_loadViews($data_header, $data, $data_footer, "apariencia");	}
+
+
 	function emails_enviados($acc = false, $id = false)
 	{
 		$data_header = false;
