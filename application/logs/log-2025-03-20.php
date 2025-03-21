@@ -8039,3 +8039,1758 @@ DEBUG - 2025-03-20 13:33:40 --> URI Class Initialized
 ERROR - 2025-03-20 13:33:40 --> 404 Page Not Found --> uploads
 DEBUG - 2025-03-20 13:33:40 --> Router Class Initialized
 ERROR - 2025-03-20 13:33:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:37:41 --> Config Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:37:41 --> URI Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Router Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Output Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Security Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Input Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:37:41 --> Language Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:37:41 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Session Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:37:41 --> Session routines successfully run
+DEBUG - 2025-03-20 13:37:41 --> Model Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Model Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:37:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:37:41 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 13:37:41 --> File loaded: application/views/admin/clientes_view.php
+DEBUG - 2025-03-20 13:37:41 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 13:37:41 --> Final output sent to browser
+DEBUG - 2025-03-20 13:37:41 --> Total execution time: 0.0782
+DEBUG - 2025-03-20 13:37:41 --> Config Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:37:41 --> URI Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Router Class Initialized
+ERROR - 2025-03-20 13:37:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:37:41 --> Config Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:37:41 --> URI Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Config Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:37:41 --> URI Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Router Class Initialized
+ERROR - 2025-03-20 13:37:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:37:41 --> Router Class Initialized
+ERROR - 2025-03-20 13:37:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:37:41 --> Config Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Config Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:37:41 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> URI Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:37:41 --> Router Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> URI Class Initialized
+DEBUG - 2025-03-20 13:37:41 --> Router Class Initialized
+ERROR - 2025-03-20 13:37:41 --> 404 Page Not Found --> uploads
+ERROR - 2025-03-20 13:37:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:37:46 --> Config Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:37:46 --> URI Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Router Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Output Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Security Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Input Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:37:46 --> Language Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:37:46 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Session Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:37:46 --> Session routines successfully run
+DEBUG - 2025-03-20 13:37:46 --> Model Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Model Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:37:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:37:46 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: url_pag C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 84
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: url_pag C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 87
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: url_pag C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 90
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: url_pag C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 94
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: i C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 97
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: url_pag C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 99
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: i C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 99
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: i C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 99
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: i C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 99
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: url_pag C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 103
+ERROR - 2025-03-20 13:37:46 --> Severity: Notice  --> Undefined variable: url_pag C:\xampp\htdocs\intraboda\application\views\dj\clientes_view.php 106
+DEBUG - 2025-03-20 13:37:46 --> File loaded: application/views/dj/clientes_view.php
+DEBUG - 2025-03-20 13:37:46 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 13:37:46 --> Final output sent to browser
+DEBUG - 2025-03-20 13:37:46 --> Total execution time: 0.2014
+DEBUG - 2025-03-20 13:37:46 --> Config Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:37:46 --> URI Class Initialized
+DEBUG - 2025-03-20 13:37:46 --> Router Class Initialized
+ERROR - 2025-03-20 13:37:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:37:48 --> Config Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:37:48 --> URI Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Router Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Output Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Security Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Input Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:37:48 --> Language Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:37:48 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Session Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:37:48 --> Session routines successfully run
+DEBUG - 2025-03-20 13:37:48 --> Model Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Model Class Initialized
+DEBUG - 2025-03-20 13:37:48 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:37:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:37:48 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 13:37:48 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 360
+ERROR - 2025-03-20 13:37:48 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 360
+ERROR - 2025-03-20 13:37:48 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 360
+ERROR - 2025-03-20 13:37:48 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 360
+ERROR - 2025-03-20 13:37:48 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 360
+DEBUG - 2025-03-20 13:37:48 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:37:48 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 13:37:48 --> Final output sent to browser
+DEBUG - 2025-03-20 13:37:48 --> Total execution time: 0.0894
+DEBUG - 2025-03-20 13:40:49 --> Config Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:40:49 --> URI Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Router Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Output Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Security Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Input Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:40:49 --> Language Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:40:49 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Session Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:40:49 --> Session routines successfully run
+DEBUG - 2025-03-20 13:40:49 --> Model Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Model Class Initialized
+DEBUG - 2025-03-20 13:40:49 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:40:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:40:49 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 13:40:49 --> Severity: Notice  --> Undefined variable: respuesta_cliente C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 326
+ERROR - 2025-03-20 13:40:49 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:40:49 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:40:49 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:40:49 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:40:49 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+DEBUG - 2025-03-20 13:40:49 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:40:49 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 13:40:49 --> Final output sent to browser
+DEBUG - 2025-03-20 13:40:49 --> Total execution time: 0.4849
+DEBUG - 2025-03-20 13:44:34 --> Config Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:44:34 --> URI Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Router Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Output Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Security Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Input Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:44:34 --> Language Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:44:34 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Session Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:44:34 --> Session routines successfully run
+DEBUG - 2025-03-20 13:44:34 --> Model Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Model Class Initialized
+DEBUG - 2025-03-20 13:44:34 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:44:34 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:44:34 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 13:44:35 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 454
+ERROR - 2025-03-20 13:44:35 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 454
+ERROR - 2025-03-20 13:44:35 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 454
+ERROR - 2025-03-20 13:44:35 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 454
+ERROR - 2025-03-20 13:44:35 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 454
+DEBUG - 2025-03-20 13:44:35 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:44:35 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 13:44:35 --> Final output sent to browser
+DEBUG - 2025-03-20 13:44:35 --> Total execution time: 0.5072
+DEBUG - 2025-03-20 13:44:44 --> Config Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:44:44 --> URI Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Router Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Output Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Security Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Input Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:44:44 --> Language Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:44:44 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Session Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:44:44 --> Session routines successfully run
+DEBUG - 2025-03-20 13:44:44 --> Model Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Model Class Initialized
+DEBUG - 2025-03-20 13:44:44 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:44:44 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:44:44 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 13:44:44 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:44:44 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:44:44 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:44:44 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:44:44 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+DEBUG - 2025-03-20 13:44:44 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:44:44 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 13:44:44 --> Final output sent to browser
+DEBUG - 2025-03-20 13:44:44 --> Total execution time: 0.6136
+DEBUG - 2025-03-20 13:44:53 --> Config Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:44:53 --> URI Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Router Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Output Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Security Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Input Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:44:53 --> Language Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:44:53 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Session Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:44:53 --> Session routines successfully run
+DEBUG - 2025-03-20 13:44:53 --> Model Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Model Class Initialized
+DEBUG - 2025-03-20 13:44:53 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:44:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:44:54 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 13:44:54 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:44:54 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:44:54 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:44:54 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+ERROR - 2025-03-20 13:44:54 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 457
+DEBUG - 2025-03-20 13:44:54 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:44:54 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 13:44:54 --> Final output sent to browser
+DEBUG - 2025-03-20 13:44:54 --> Total execution time: 0.0846
+DEBUG - 2025-03-20 13:46:43 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:43 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Output Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Security Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Input Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:46:43 --> Language Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:46:43 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Session Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:46:43 --> Session routines successfully run
+DEBUG - 2025-03-20 13:46:43 --> Model Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> Model Class Initialized
+DEBUG - 2025-03-20 13:46:43 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 13:46:43 --> File loaded: application/views/admin/home.php
+DEBUG - 2025-03-20 13:46:43 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 13:46:43 --> Final output sent to browser
+DEBUG - 2025-03-20 13:46:43 --> Total execution time: 0.0586
+DEBUG - 2025-03-20 13:46:46 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:46 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Output Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Security Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Input Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:46:46 --> Language Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:46:46 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Session Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:46:46 --> Session routines successfully run
+DEBUG - 2025-03-20 13:46:46 --> Model Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Model Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:46:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:46:46 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 13:46:46 --> File loaded: application/views/admin/clientes_view.php
+DEBUG - 2025-03-20 13:46:46 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 13:46:46 --> Final output sent to browser
+DEBUG - 2025-03-20 13:46:46 --> Total execution time: 0.0731
+DEBUG - 2025-03-20 13:46:46 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:46 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:46 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> URI Class Initialized
+ERROR - 2025-03-20 13:46:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:46 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:46 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:46 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:46 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:46 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:46 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:46 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:46 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:51 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:51 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Output Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Security Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Input Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:46:51 --> Language Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:46:51 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Session Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:46:51 --> Session routines successfully run
+DEBUG - 2025-03-20 13:46:51 --> Model Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Model Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:46:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:46:51 --> Encrypt Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-03-20 13:46:51 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 13:46:51 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:46:51 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 13:46:51 --> Final output sent to browser
+DEBUG - 2025-03-20 13:46:51 --> Total execution time: 0.1456
+DEBUG - 2025-03-20 13:46:51 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:51 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:51 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> UTF-8 Support Enabled
+ERROR - 2025-03-20 13:46:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:51 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:51 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Hooks Class Initialized
+ERROR - 2025-03-20 13:46:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:51 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:51 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:51 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:51 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:51 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:52 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:52 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:52 --> UTF-8 Support Enabled
+ERROR - 2025-03-20 13:46:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:52 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:52 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:55 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:55 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Output Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Security Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Input Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:46:55 --> Language Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:46:55 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Session Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:46:55 --> Session routines successfully run
+DEBUG - 2025-03-20 13:46:55 --> Model Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Model Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:46:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:46:55 --> Encrypt Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-03-20 13:46:55 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 13:46:55 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:46:55 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 13:46:55 --> Final output sent to browser
+DEBUG - 2025-03-20 13:46:55 --> Total execution time: 0.1517
+DEBUG - 2025-03-20 13:46:55 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:55 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:55 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:55 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:55 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:55 --> Config Class Initialized
+ERROR - 2025-03-20 13:46:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:55 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:55 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:55 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:55 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:55 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:55 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:55 --> 404 Page Not Found --> uploads
+ERROR - 2025-03-20 13:46:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:56 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:56 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Output Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Security Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Input Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:46:56 --> Language Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:46:56 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Session Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:46:56 --> Session routines successfully run
+DEBUG - 2025-03-20 13:46:56 --> Model Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Model Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:46:56 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:46:56 --> Encrypt Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-03-20 13:46:56 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 13:46:56 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:46:56 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 13:46:56 --> Final output sent to browser
+DEBUG - 2025-03-20 13:46:56 --> Total execution time: 0.2241
+DEBUG - 2025-03-20 13:46:56 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:56 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Utf8 Class Initialized
+ERROR - 2025-03-20 13:46:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:56 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:56 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Router Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> UTF-8 Support Enabled
+ERROR - 2025-03-20 13:46:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:56 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:56 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:56 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:56 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:56 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:46:56 --> Config Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:46:56 --> URI Class Initialized
+DEBUG - 2025-03-20 13:46:56 --> Router Class Initialized
+ERROR - 2025-03-20 13:46:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 13:48:51 --> Config Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:48:51 --> URI Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Router Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Output Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Security Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Input Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:48:51 --> Language Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:48:51 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Session Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:48:51 --> Session routines successfully run
+DEBUG - 2025-03-20 13:48:51 --> Model Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Model Class Initialized
+DEBUG - 2025-03-20 13:48:51 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:48:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:48:51 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 13:48:52 --> Severity: Notice  --> Undefined variable: respuesta_cliente C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 321
+ERROR - 2025-03-20 13:48:52 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:48:52 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:48:52 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:48:52 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:48:52 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+DEBUG - 2025-03-20 13:48:52 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:48:52 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 13:48:52 --> Final output sent to browser
+DEBUG - 2025-03-20 13:48:52 --> Total execution time: 0.5882
+DEBUG - 2025-03-20 13:54:35 --> Config Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:54:35 --> URI Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Router Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Output Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Security Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Input Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:54:35 --> Language Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:54:35 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Session Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:54:35 --> Session routines successfully run
+DEBUG - 2025-03-20 13:54:35 --> Model Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Model Class Initialized
+DEBUG - 2025-03-20 13:54:35 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:54:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:54:35 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 13:54:35 --> Severity: Notice  --> Undefined variable: respuesta_cliente C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 321
+ERROR - 2025-03-20 13:54:35 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:35 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:35 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:35 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:35 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+DEBUG - 2025-03-20 13:54:35 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:54:35 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 13:54:35 --> Final output sent to browser
+DEBUG - 2025-03-20 13:54:35 --> Total execution time: 0.1572
+DEBUG - 2025-03-20 13:54:37 --> Config Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:54:37 --> URI Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Router Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Output Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Security Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Input Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:54:37 --> Language Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:54:37 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Session Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:54:37 --> Session routines successfully run
+DEBUG - 2025-03-20 13:54:37 --> Model Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Model Class Initialized
+DEBUG - 2025-03-20 13:54:37 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:54:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:54:37 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 13:54:37 --> Severity: Notice  --> Undefined variable: respuesta_cliente C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 321
+ERROR - 2025-03-20 13:54:37 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:37 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:37 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:37 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:37 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+DEBUG - 2025-03-20 13:54:37 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:54:37 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 13:54:37 --> Final output sent to browser
+DEBUG - 2025-03-20 13:54:37 --> Total execution time: 0.1042
+DEBUG - 2025-03-20 13:54:47 --> Config Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Hooks Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 13:54:47 --> URI Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Router Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Output Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Security Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Input Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 13:54:47 --> Language Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Loader Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 13:54:47 --> Controller Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Session Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 13:54:47 --> Session routines successfully run
+DEBUG - 2025-03-20 13:54:47 --> Model Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Model Class Initialized
+DEBUG - 2025-03-20 13:54:47 --> Database Driver Class Initialized
+ERROR - 2025-03-20 13:54:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 13:54:47 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 13:54:47 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:47 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:47 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:47 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 13:54:47 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+DEBUG - 2025-03-20 13:54:47 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 13:54:47 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 13:54:47 --> Final output sent to browser
+DEBUG - 2025-03-20 13:54:47 --> Total execution time: 0.1602
+DEBUG - 2025-03-20 14:02:36 --> Config Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:02:36 --> URI Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Router Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Output Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Security Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Input Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:02:36 --> Language Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:02:36 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Session Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:02:36 --> Session routines successfully run
+DEBUG - 2025-03-20 14:02:36 --> Model Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Model Class Initialized
+DEBUG - 2025-03-20 14:02:36 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:02:36 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:02:36 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:02:36 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 471
+ERROR - 2025-03-20 14:02:36 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 471
+ERROR - 2025-03-20 14:02:36 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 471
+ERROR - 2025-03-20 14:02:36 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 471
+ERROR - 2025-03-20 14:02:36 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 471
+DEBUG - 2025-03-20 14:02:36 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:02:36 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:02:36 --> Final output sent to browser
+DEBUG - 2025-03-20 14:02:36 --> Total execution time: 0.5726
+DEBUG - 2025-03-20 14:06:00 --> Config Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:06:00 --> URI Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Router Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Output Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Security Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Input Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:06:00 --> Language Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:06:00 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Session Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:06:00 --> Session routines successfully run
+DEBUG - 2025-03-20 14:06:00 --> Model Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Model Class Initialized
+DEBUG - 2025-03-20 14:06:00 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:06:00 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:06:00 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:06:00 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:06:00 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:06:00 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:06:00 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:06:00 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+DEBUG - 2025-03-20 14:06:00 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:06:00 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:06:00 --> Final output sent to browser
+DEBUG - 2025-03-20 14:06:00 --> Total execution time: 0.2007
+DEBUG - 2025-03-20 14:06:08 --> Config Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:06:08 --> URI Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Router Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Output Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Security Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Input Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:06:08 --> Language Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:06:08 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Session Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:06:08 --> Session routines successfully run
+DEBUG - 2025-03-20 14:06:08 --> Model Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Model Class Initialized
+DEBUG - 2025-03-20 14:06:08 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:06:08 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:06:08 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:06:08 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:06:08 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:06:08 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:06:08 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:06:08 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+DEBUG - 2025-03-20 14:06:08 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:06:08 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:06:08 --> Final output sent to browser
+DEBUG - 2025-03-20 14:06:08 --> Total execution time: 0.6244
+DEBUG - 2025-03-20 14:10:44 --> Config Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:10:44 --> URI Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Router Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Output Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Security Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Input Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:10:44 --> Language Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:10:44 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Session Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:10:44 --> Session routines successfully run
+DEBUG - 2025-03-20 14:10:44 --> Model Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Model Class Initialized
+DEBUG - 2025-03-20 14:10:44 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:10:44 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:10:44 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:10:45 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:10:45 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:10:45 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:10:45 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:10:45 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+DEBUG - 2025-03-20 14:10:45 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:10:45 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:10:45 --> Final output sent to browser
+DEBUG - 2025-03-20 14:10:45 --> Total execution time: 0.4963
+DEBUG - 2025-03-20 14:11:22 --> Config Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:11:22 --> URI Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Router Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Output Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Security Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Input Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:11:22 --> Language Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:11:22 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Session Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:11:22 --> Session routines successfully run
+DEBUG - 2025-03-20 14:11:22 --> Model Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Model Class Initialized
+DEBUG - 2025-03-20 14:11:22 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:11:22 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:11:22 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:11:22 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:11:22 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:11:22 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:11:22 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:11:22 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+DEBUG - 2025-03-20 14:11:22 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:11:22 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:11:22 --> Final output sent to browser
+DEBUG - 2025-03-20 14:11:22 --> Total execution time: 0.5254
+DEBUG - 2025-03-20 14:11:36 --> Config Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:11:36 --> URI Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Router Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Output Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Security Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Input Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:11:36 --> Language Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:11:36 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Session Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:11:36 --> Session routines successfully run
+DEBUG - 2025-03-20 14:11:36 --> Model Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Model Class Initialized
+DEBUG - 2025-03-20 14:11:36 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:11:36 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:11:36 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:11:36 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:11:36 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:11:36 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:11:36 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:11:36 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+DEBUG - 2025-03-20 14:11:36 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:11:36 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:11:36 --> Final output sent to browser
+DEBUG - 2025-03-20 14:11:36 --> Total execution time: 0.5174
+DEBUG - 2025-03-20 14:12:05 --> Config Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:12:05 --> URI Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Router Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Output Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Security Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Input Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:12:05 --> Language Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:12:05 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Session Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:12:05 --> Session routines successfully run
+DEBUG - 2025-03-20 14:12:05 --> Model Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Model Class Initialized
+DEBUG - 2025-03-20 14:12:05 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:12:05 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:12:05 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:12:06 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:06 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:06 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:06 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:06 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+DEBUG - 2025-03-20 14:12:06 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:12:06 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:12:06 --> Final output sent to browser
+DEBUG - 2025-03-20 14:12:06 --> Total execution time: 0.6338
+DEBUG - 2025-03-20 14:12:07 --> Config Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:12:07 --> URI Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Router Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Output Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Security Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Input Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:12:07 --> Language Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:12:07 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Session Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:12:07 --> Session routines successfully run
+DEBUG - 2025-03-20 14:12:07 --> Model Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Model Class Initialized
+DEBUG - 2025-03-20 14:12:07 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:12:07 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:12:07 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:12:07 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:07 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:07 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:07 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:07 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+DEBUG - 2025-03-20 14:12:07 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:12:07 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:12:07 --> Final output sent to browser
+DEBUG - 2025-03-20 14:12:07 --> Total execution time: 0.0901
+DEBUG - 2025-03-20 14:12:15 --> Config Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:12:15 --> URI Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Router Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Output Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Security Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Input Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:12:15 --> Language Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:12:15 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Session Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:12:15 --> Session routines successfully run
+DEBUG - 2025-03-20 14:12:15 --> Model Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Model Class Initialized
+DEBUG - 2025-03-20 14:12:15 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:12:15 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:12:15 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:12:15 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:15 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:15 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:15 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:15 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+DEBUG - 2025-03-20 14:12:15 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:12:15 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:12:15 --> Final output sent to browser
+DEBUG - 2025-03-20 14:12:15 --> Total execution time: 0.5516
+DEBUG - 2025-03-20 14:12:25 --> Config Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:12:25 --> URI Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Router Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Output Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Security Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Input Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:12:25 --> Language Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:12:25 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Session Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:12:25 --> Session routines successfully run
+DEBUG - 2025-03-20 14:12:25 --> Model Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Model Class Initialized
+DEBUG - 2025-03-20 14:12:25 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:12:25 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:12:25 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:12:25 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:25 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:25 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:25 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+ERROR - 2025-03-20 14:12:25 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 487
+DEBUG - 2025-03-20 14:12:25 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:12:25 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:12:25 --> Final output sent to browser
+DEBUG - 2025-03-20 14:12:25 --> Total execution time: 0.5287
+DEBUG - 2025-03-20 14:14:58 --> Config Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:14:58 --> URI Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Router Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Output Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Security Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Input Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:14:58 --> Language Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:14:58 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Session Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:14:58 --> Session routines successfully run
+DEBUG - 2025-03-20 14:14:58 --> Model Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Model Class Initialized
+DEBUG - 2025-03-20 14:14:58 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:14:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:14:58 --> File loaded: application/views/dj/header.php
+DEBUG - 2025-03-20 14:15:43 --> Config Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:15:43 --> URI Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Router Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Output Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Security Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Input Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:15:43 --> Language Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:15:43 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Session Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:15:43 --> Session routines successfully run
+DEBUG - 2025-03-20 14:15:43 --> Model Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Model Class Initialized
+DEBUG - 2025-03-20 14:15:43 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:15:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:15:43 --> File loaded: application/views/dj/header.php
+DEBUG - 2025-03-20 14:16:33 --> Config Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:16:33 --> URI Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Router Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Output Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Security Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Input Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:16:33 --> Language Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:16:33 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Session Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:16:33 --> Session routines successfully run
+DEBUG - 2025-03-20 14:16:33 --> Model Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Model Class Initialized
+DEBUG - 2025-03-20 14:16:33 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:16:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:16:33 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:16:34 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:16:34 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:16:34 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:16:34 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:16:34 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+DEBUG - 2025-03-20 14:16:34 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:16:34 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:16:34 --> Final output sent to browser
+DEBUG - 2025-03-20 14:16:34 --> Total execution time: 0.5280
+DEBUG - 2025-03-20 14:16:55 --> Config Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:16:55 --> URI Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Router Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Output Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Security Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Input Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:16:55 --> Language Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:16:55 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Session Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:16:55 --> Session routines successfully run
+DEBUG - 2025-03-20 14:16:55 --> Model Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Model Class Initialized
+DEBUG - 2025-03-20 14:16:55 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:16:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:16:55 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:16:56 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:16:56 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:16:56 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:16:56 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+ERROR - 2025-03-20 14:16:56 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 486
+DEBUG - 2025-03-20 14:16:56 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:16:56 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:16:56 --> Final output sent to browser
+DEBUG - 2025-03-20 14:16:56 --> Total execution time: 0.4985
+DEBUG - 2025-03-20 14:19:23 --> Config Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:19:23 --> URI Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Router Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Output Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Security Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Input Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:19:23 --> Language Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:19:23 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Session Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:19:23 --> Session routines successfully run
+DEBUG - 2025-03-20 14:19:23 --> Model Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Model Class Initialized
+DEBUG - 2025-03-20 14:19:23 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:19:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:19:23 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:19:24 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:19:24 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:19:24 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:19:24 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:19:24 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+DEBUG - 2025-03-20 14:19:24 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:19:24 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:19:24 --> Final output sent to browser
+DEBUG - 2025-03-20 14:19:24 --> Total execution time: 0.6403
+DEBUG - 2025-03-20 14:19:57 --> Config Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:19:57 --> URI Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Router Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Output Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Security Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Input Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:19:57 --> Language Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:19:57 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Session Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:19:57 --> Session routines successfully run
+DEBUG - 2025-03-20 14:19:57 --> Model Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Model Class Initialized
+DEBUG - 2025-03-20 14:19:57 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:19:57 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:19:57 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:19:58 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:19:58 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:19:58 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:19:58 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:19:58 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+DEBUG - 2025-03-20 14:19:58 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:19:58 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:19:58 --> Final output sent to browser
+DEBUG - 2025-03-20 14:19:58 --> Total execution time: 0.5794
+DEBUG - 2025-03-20 14:20:14 --> Config Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:20:14 --> URI Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Router Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Output Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Security Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Input Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:20:14 --> Language Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:20:14 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Session Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:20:14 --> Session routines successfully run
+DEBUG - 2025-03-20 14:20:14 --> Model Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Model Class Initialized
+DEBUG - 2025-03-20 14:20:14 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:20:14 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:20:14 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:20:15 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:20:15 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:20:15 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:20:15 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:20:15 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+DEBUG - 2025-03-20 14:20:15 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:20:15 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:20:15 --> Final output sent to browser
+DEBUG - 2025-03-20 14:20:15 --> Total execution time: 0.5259
+DEBUG - 2025-03-20 14:20:59 --> Config Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:20:59 --> URI Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Router Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Output Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Security Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Input Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:20:59 --> Language Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:20:59 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Session Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:20:59 --> Session routines successfully run
+DEBUG - 2025-03-20 14:20:59 --> Model Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Model Class Initialized
+DEBUG - 2025-03-20 14:20:59 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:20:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:20:59 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:20:59 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:20:59 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:20:59 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:20:59 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:20:59 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+DEBUG - 2025-03-20 14:20:59 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:20:59 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:20:59 --> Final output sent to browser
+DEBUG - 2025-03-20 14:20:59 --> Total execution time: 0.2250
+DEBUG - 2025-03-20 14:21:12 --> Config Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:21:12 --> URI Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Router Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Output Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Security Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Input Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:21:12 --> Language Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:21:12 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Session Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:21:12 --> Session routines successfully run
+DEBUG - 2025-03-20 14:21:12 --> Model Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Model Class Initialized
+DEBUG - 2025-03-20 14:21:12 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:21:12 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:21:12 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:21:12 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:21:12 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:21:12 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:21:12 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:21:12 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+DEBUG - 2025-03-20 14:21:12 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:21:12 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:21:12 --> Final output sent to browser
+DEBUG - 2025-03-20 14:21:12 --> Total execution time: 0.1680
+DEBUG - 2025-03-20 14:22:15 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:15 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Router Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Output Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Security Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Input Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:22:15 --> Language Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:22:15 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Session Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:22:15 --> Session routines successfully run
+DEBUG - 2025-03-20 14:22:15 --> Model Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> Model Class Initialized
+DEBUG - 2025-03-20 14:22:15 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 14:22:15 --> File loaded: application/views/admin/home.php
+DEBUG - 2025-03-20 14:22:15 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 14:22:15 --> Final output sent to browser
+DEBUG - 2025-03-20 14:22:15 --> Total execution time: 0.0637
+DEBUG - 2025-03-20 14:22:18 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:18 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Router Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Output Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Security Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Input Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:22:18 --> Language Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:22:18 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Session Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:22:18 --> Session routines successfully run
+DEBUG - 2025-03-20 14:22:18 --> Model Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Model Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:22:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:22:18 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 14:22:18 --> File loaded: application/views/admin/clientes_view.php
+DEBUG - 2025-03-20 14:22:18 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 14:22:18 --> Final output sent to browser
+DEBUG - 2025-03-20 14:22:18 --> Total execution time: 0.0823
+DEBUG - 2025-03-20 14:22:18 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:18 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:18 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Router Class Initialized
+DEBUG - 2025-03-20 14:22:18 --> Router Class Initialized
+ERROR - 2025-03-20 14:22:18 --> 404 Page Not Found --> uploads
+ERROR - 2025-03-20 14:22:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 14:22:19 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:19 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> Router Class Initialized
+ERROR - 2025-03-20 14:22:19 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 14:22:19 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:19 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> Router Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> Hooks Class Initialized
+ERROR - 2025-03-20 14:22:19 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 14:22:19 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:19 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:19 --> Router Class Initialized
+ERROR - 2025-03-20 14:22:19 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 14:22:21 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:21 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:21 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:21 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:21 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:21 --> Router Class Initialized
+DEBUG - 2025-03-20 14:22:21 --> Output Class Initialized
+DEBUG - 2025-03-20 14:22:21 --> Security Class Initialized
+DEBUG - 2025-03-20 14:22:21 --> Input Class Initialized
+DEBUG - 2025-03-20 14:22:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:22:22 --> Language Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:22:22 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Session Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:22:22 --> Session routines successfully run
+DEBUG - 2025-03-20 14:22:22 --> Model Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Model Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:22:22 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:22:22 --> Encrypt Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-03-20 14:22:22 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 14:22:22 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:22:22 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 14:22:22 --> Final output sent to browser
+DEBUG - 2025-03-20 14:22:22 --> Total execution time: 0.1538
+DEBUG - 2025-03-20 14:22:22 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:22 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:22 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:22 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:22 --> Router Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Router Class Initialized
+ERROR - 2025-03-20 14:22:22 --> 404 Page Not Found --> uploads
+ERROR - 2025-03-20 14:22:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 14:22:22 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Router Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Config Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:22 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:22:22 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> URI Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Router Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Router Class Initialized
+DEBUG - 2025-03-20 14:22:22 --> Router Class Initialized
+ERROR - 2025-03-20 14:22:22 --> 404 Page Not Found --> uploads
+ERROR - 2025-03-20 14:22:22 --> 404 Page Not Found --> uploads
+ERROR - 2025-03-20 14:22:22 --> 404 Page Not Found --> uploads
+ERROR - 2025-03-20 14:22:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 14:23:50 --> Config Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:23:50 --> URI Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Router Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Output Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Security Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Input Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:23:50 --> Language Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:23:50 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Session Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:23:50 --> Session routines successfully run
+DEBUG - 2025-03-20 14:23:50 --> Model Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Model Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:23:50 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:23:50 --> Config Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:23:50 --> URI Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Router Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Output Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Security Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Input Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:23:50 --> Language Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:23:50 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Session Class Initialized
+DEBUG - 2025-03-20 14:23:50 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:23:51 --> Session routines successfully run
+DEBUG - 2025-03-20 14:23:51 --> Model Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> Model Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:23:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:23:51 --> Ejecutando consulta: SELECT id, nombre FROM servicios WHERE id IN (80,81,82,83,84)
+DEBUG - 2025-03-20 14:23:51 --> File loaded: application/views/cliente/header.php
+DEBUG - 2025-03-20 14:23:51 --> File loaded: application/views/cliente/cliente_details.php
+DEBUG - 2025-03-20 14:23:51 --> File loaded: application/views/cliente/footer.php
+DEBUG - 2025-03-20 14:23:51 --> Final output sent to browser
+DEBUG - 2025-03-20 14:23:51 --> Total execution time: 0.1174
+DEBUG - 2025-03-20 14:23:51 --> Config Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:23:51 --> URI Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> Config Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> Router Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> UTF-8 Support Enabled
+ERROR - 2025-03-20 14:23:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 14:23:51 --> URI Class Initialized
+DEBUG - 2025-03-20 14:23:51 --> Router Class Initialized
+ERROR - 2025-03-20 14:23:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-03-20 14:23:53 --> Config Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:23:53 --> URI Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Router Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Output Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Security Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Input Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:23:53 --> Language Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:23:53 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Session Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:23:53 --> Session routines successfully run
+DEBUG - 2025-03-20 14:23:53 --> Model Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Model Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:23:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:23:53 --> File loaded: application/views/cliente/header.php
+DEBUG - 2025-03-20 14:23:53 --> File loaded: application/views/cliente/chat.php
+DEBUG - 2025-03-20 14:23:53 --> File loaded: application/views/cliente/footer.php
+DEBUG - 2025-03-20 14:23:53 --> Final output sent to browser
+DEBUG - 2025-03-20 14:23:53 --> Total execution time: 0.0806
+DEBUG - 2025-03-20 14:23:53 --> Config Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:23:53 --> URI Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Router Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> No URI present. Default controller set.
+DEBUG - 2025-03-20 14:23:53 --> Output Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Security Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Input Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:23:53 --> Language Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:23:53 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Session Class Initialized
+DEBUG - 2025-03-20 14:23:53 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:23:53 --> Session routines successfully run
+DEBUG - 2025-03-20 14:23:53 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 14:23:53 --> File loaded: application/views/admin/home.php
+DEBUG - 2025-03-20 14:23:53 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 14:23:53 --> Final output sent to browser
+DEBUG - 2025-03-20 14:23:53 --> Total execution time: 0.0608
+DEBUG - 2025-03-20 14:24:47 --> Config Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:24:47 --> URI Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Router Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Output Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Security Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Input Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:24:47 --> Language Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:24:47 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Session Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:24:47 --> Session routines successfully run
+DEBUG - 2025-03-20 14:24:47 --> Model Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Model Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:24:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:24:47 --> File loaded: application/views/cliente/header.php
+DEBUG - 2025-03-20 14:24:47 --> File loaded: application/views/cliente/chat.php
+DEBUG - 2025-03-20 14:24:47 --> File loaded: application/views/cliente/footer.php
+DEBUG - 2025-03-20 14:24:47 --> Final output sent to browser
+DEBUG - 2025-03-20 14:24:47 --> Total execution time: 0.0797
+DEBUG - 2025-03-20 14:24:47 --> Config Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:24:47 --> URI Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Router Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> No URI present. Default controller set.
+DEBUG - 2025-03-20 14:24:47 --> Output Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Security Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Input Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:24:47 --> Language Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:24:47 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Session Class Initialized
+DEBUG - 2025-03-20 14:24:47 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:24:47 --> Session routines successfully run
+DEBUG - 2025-03-20 14:24:47 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-03-20 14:24:47 --> File loaded: application/views/admin/home.php
+DEBUG - 2025-03-20 14:24:47 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-03-20 14:24:47 --> Final output sent to browser
+DEBUG - 2025-03-20 14:24:47 --> Total execution time: 0.0695
+DEBUG - 2025-03-20 14:24:54 --> Config Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:24:54 --> URI Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Router Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Output Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Security Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Input Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:24:54 --> Language Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:24:54 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Session Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:24:54 --> Session routines successfully run
+DEBUG - 2025-03-20 14:24:54 --> Model Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Model Class Initialized
+DEBUG - 2025-03-20 14:24:54 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:24:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:24:54 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:24:55 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:24:55 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:24:55 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:24:55 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:24:55 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+DEBUG - 2025-03-20 14:24:55 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:24:55 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:24:55 --> Final output sent to browser
+DEBUG - 2025-03-20 14:24:55 --> Total execution time: 0.4997
+DEBUG - 2025-03-20 14:25:31 --> Config Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:25:31 --> URI Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Router Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Output Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Security Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Input Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:25:31 --> Language Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:25:31 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Session Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:25:31 --> Session routines successfully run
+DEBUG - 2025-03-20 14:25:31 --> Model Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Model Class Initialized
+DEBUG - 2025-03-20 14:25:31 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:25:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:25:31 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:25:31 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 475
+ERROR - 2025-03-20 14:25:31 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 475
+ERROR - 2025-03-20 14:25:31 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 475
+ERROR - 2025-03-20 14:25:31 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 475
+ERROR - 2025-03-20 14:25:31 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 475
+DEBUG - 2025-03-20 14:25:31 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:25:31 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:25:31 --> Final output sent to browser
+DEBUG - 2025-03-20 14:25:31 --> Total execution time: 0.2900
+DEBUG - 2025-03-20 14:25:48 --> Config Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:25:48 --> URI Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Router Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Output Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Security Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Input Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:25:48 --> Language Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:25:48 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Session Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:25:48 --> Session routines successfully run
+DEBUG - 2025-03-20 14:25:48 --> Model Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Model Class Initialized
+DEBUG - 2025-03-20 14:25:48 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:25:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:25:49 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:25:49 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 477
+ERROR - 2025-03-20 14:25:49 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 477
+ERROR - 2025-03-20 14:25:49 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 477
+ERROR - 2025-03-20 14:25:49 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 477
+ERROR - 2025-03-20 14:25:49 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 477
+DEBUG - 2025-03-20 14:25:49 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:25:49 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:25:49 --> Final output sent to browser
+DEBUG - 2025-03-20 14:25:49 --> Total execution time: 0.6078
+DEBUG - 2025-03-20 14:26:01 --> Config Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:26:01 --> URI Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Router Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Output Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Security Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Input Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:26:01 --> Language Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:26:01 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Session Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:26:01 --> Session routines successfully run
+DEBUG - 2025-03-20 14:26:01 --> Model Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Model Class Initialized
+DEBUG - 2025-03-20 14:26:01 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:26:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:26:01 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:26:01 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 477
+ERROR - 2025-03-20 14:26:01 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 477
+ERROR - 2025-03-20 14:26:01 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 477
+ERROR - 2025-03-20 14:26:01 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 477
+ERROR - 2025-03-20 14:26:01 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 477
+DEBUG - 2025-03-20 14:26:01 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:26:01 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:26:01 --> Final output sent to browser
+DEBUG - 2025-03-20 14:26:01 --> Total execution time: 0.0849
+DEBUG - 2025-03-20 14:29:30 --> Config Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:29:30 --> URI Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Router Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Output Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Security Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Input Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:29:30 --> Language Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:29:30 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Session Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:29:30 --> Session routines successfully run
+DEBUG - 2025-03-20 14:29:30 --> Model Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Model Class Initialized
+DEBUG - 2025-03-20 14:29:30 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:29:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:29:30 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:29:30 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:29:30 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:29:30 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:29:30 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+ERROR - 2025-03-20 14:29:30 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 478
+DEBUG - 2025-03-20 14:29:30 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:29:30 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:29:30 --> Final output sent to browser
+DEBUG - 2025-03-20 14:29:30 --> Total execution time: 0.2679
+DEBUG - 2025-03-20 14:29:53 --> Config Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Hooks Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Utf8 Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> UTF-8 Support Enabled
+DEBUG - 2025-03-20 14:29:53 --> URI Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Router Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Output Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Security Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Input Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-03-20 14:29:53 --> Language Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Loader Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Helper loaded: url_helper
+DEBUG - 2025-03-20 14:29:53 --> Controller Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Session Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Helper loaded: string_helper
+DEBUG - 2025-03-20 14:29:53 --> Session routines successfully run
+DEBUG - 2025-03-20 14:29:53 --> Model Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Model Class Initialized
+DEBUG - 2025-03-20 14:29:53 --> Database Driver Class Initialized
+ERROR - 2025-03-20 14:29:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-03-20 14:29:53 --> File loaded: application/views/dj/header.php
+ERROR - 2025-03-20 14:29:54 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:29:54 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:29:54 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:29:54 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+ERROR - 2025-03-20 14:29:54 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\dj\clientes_viewdetails.php 449
+DEBUG - 2025-03-20 14:29:54 --> File loaded: application/views/dj/clientes_viewdetails.php
+DEBUG - 2025-03-20 14:29:54 --> File loaded: application/views/dj/footer.php
+DEBUG - 2025-03-20 14:29:54 --> Final output sent to browser
+DEBUG - 2025-03-20 14:29:54 --> Total execution time: 0.4957

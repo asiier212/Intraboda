@@ -1059,6 +1059,7 @@
 						content_style: 'body { font-size: 14px; }',
 						branding: false,
 						menubar: false,
+						height: 200,
 					});
 				});
 

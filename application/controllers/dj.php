@@ -166,11 +166,20 @@ class Dj extends CI_Controller {
 						$servicios = implode(",", $_POST['servicios']);
 						$this->db->query("UPDATE clientes SET servicios = '".$servicios."' WHERE id = {$id}");								  
 					}
-					if(isset($_POST['add_observ'])) 
-					{
-						$this->db->query("INSERT INTO observaciones (id_cliente,comentario) VALUES ({$id}, '".str_replace("'", "''",$_POST['observaciones'])."')");
-						
-						
+					if (isset($_POST['add_observ']) && !empty($_POST['observaciones']) && $id) {
+						$data_insert = array(
+							'id_cliente' => $id,
+							'comentario' => $_POST['observaciones'],
+							'link' => $_POST['link']
+						);
+
+						if ($this->db->insert('observaciones', $data_insert)) {
+							$this->session->set_flashdata('msg', 'Se ha añadido con éxito');
+						} else {
+							$this->session->set_flashdata('msg', 'Error al añadir la observación.');
+						}
+
+						redirect("dj/clientes/view/{$id}");
 					}
 				}
 				
@@ -181,7 +190,8 @@ class Dj extends CI_Controller {
 				$data['servicios'] = $this->dj_functions->GetServicios(implode(",",$arr_serv_keys));
 				
 				$data['preguntas_encuesta_datos_boda'] = $this->dj_functions->GetPreguntasEncuestaDatosBoda();
-				$data['respuestas_encuesta_datos_boda'] = $this->dj_functions->GetRespuestasEncuestaDatosBoda($id);
+				$data['opciones_respuestas_encuesta_datos_boda'] = $this->dj_functions->GetOpcionesRespuestasEncuestaDatosBoda();
+				$data['respuesta_cliente'] = $this->dj_functions->GetRespuestasEncuestaDatosBoda($id);
 				$data['componentes'] = $this->dj_functions->GetComponentes();
 				$data['equipo_componentes_asignado'] = $this->dj_functions->GetEquiposComponentesAsignado($id);
 				$data['equipo_luces_asignado'] = $this->dj_functions->GetEquiposLucesAsignado($id);
