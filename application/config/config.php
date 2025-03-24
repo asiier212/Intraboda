@@ -19,6 +19,8 @@ $config['base_url']	= '';
 
 $config['logo_header'] = 'img/logo_intranet.png';
 $config['favicon'] = 'img/favicon.png';
+$config['email_header'] = 'img/img_mail/cabecera.jpg';
+$config['email_footer'] = 'img/img_mail/pie.jpg';
 
 
 /*

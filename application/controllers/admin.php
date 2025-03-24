@@ -135,6 +135,71 @@ class Admin extends CI_Controller
 			}
 		}
 
+		// Rutas por defecto
+		$email_header_default = 'img/img_mail/cabecera.jpg';
+		$email_footer_default = 'img/img_mail/pie.jpg';
+		$current_email_header = isset($config['email_header']) ? $config['email_header'] : $email_header_default;
+		$current_email_footer = isset($config['email_footer']) ? $config['email_footer'] : $email_footer_default;
+
+		// Eliminar cabecera
+		if (isset($_POST['delete_email_header'])) {
+			if ($current_email_header !== $email_header_default && file_exists(FCPATH . $current_email_header)) {
+				unlink(FCPATH . $current_email_header);
+			}
+			$this->_update_config_value('email_header', $email_header_default);
+			redirect('admin/apariencia');
+			return;
+		}
+
+		// Subir nueva cabecera
+		if (isset($_POST['update_email_header']) && isset($_FILES['cabecera_mail'])) {
+			$tmp = $_FILES['cabecera_mail']['tmp_name'];
+			$name = $_FILES['cabecera_mail']['name'];
+			$ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+			$allowed = ['jpg', 'jpeg', 'png', 'gif'];
+			if (in_array($ext, $allowed)) {
+				$new_name = 'cabecera_' . time() . '.' . $ext;
+				$dest = FCPATH . 'img/img_mail/' . $new_name;
+				if (move_uploaded_file($tmp, $dest)) {
+					if ($current_email_header !== $email_header_default && file_exists(FCPATH . $current_email_header)) {
+						unlink(FCPATH . $current_email_header);
+					}
+					$this->_update_config_value('email_header', 'img/img_mail/' . $new_name);
+					redirect('admin/apariencia');
+					return;
+				}
+			}
+		}
+
+		// Eliminar pie
+		if (isset($_POST['delete_email_footer'])) {
+			if ($current_email_footer !== $email_footer_default && file_exists(FCPATH . $current_email_footer)) {
+				unlink(FCPATH . $current_email_footer);
+			}
+			$this->_update_config_value('email_footer', $email_footer_default);
+			redirect('admin/apariencia');
+			return;
+		}
+
+		// Subir nuevo pie
+		if (isset($_POST['update_email_footer']) && isset($_FILES['pie_mail'])) {
+			$tmp = $_FILES['pie_mail']['tmp_name'];
+			$name = $_FILES['pie_mail']['name'];
+			$ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+			$allowed = ['jpg', 'jpeg', 'png', 'gif'];
+			if (in_array($ext, $allowed)) {
+				$new_name = 'pie_' . time() . '.' . $ext;
+				$dest = FCPATH . 'img/img_mail/' . $new_name;
+				if (move_uploaded_file($tmp, $dest)) {
+					if ($current_email_footer !== $email_footer_default && file_exists(FCPATH . $current_email_footer)) {
+						unlink(FCPATH . $current_email_footer);
+					}
+					$this->_update_config_value('email_footer', 'img/img_mail/' . $new_name);
+					redirect('admin/apariencia');
+					return;
+				}
+			}
+		}
 
 		$this->_loadViews($data_header, $data, $data_footer, "apariencia");
 	}

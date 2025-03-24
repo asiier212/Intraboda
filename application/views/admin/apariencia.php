@@ -48,3 +48,40 @@
     </form>
 </fieldset>
 
+<fieldset>
+    <legend>Cabecera Email</legend>
+    <?php $cabecera = $this->config->item('email_header'); ?>
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="<?php echo base_url() . $cabecera ?>" style="max-width:400px" alt="Cabecera" />
+        <?php if ($cabecera !== 'img/img_mail/cabecera.jpg'): ?>
+            <form action="" method="post">
+                <input type="submit" name="delete_email_header" value="x">
+            </form>
+        <?php endif; ?>
+    </div>
+    <br>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="cabecera_mail">Subir nueva cabecera:</label>
+        <input type="file" name="cabecera_mail" accept="image/*"><br><br>
+        <input type="submit" name="update_email_header" value="Subir">
+    </form>
+</fieldset>
+
+<fieldset>
+    <legend>Pie Email</legend>
+    <?php $pie = $this->config->item('email_footer'); ?>
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="<?php echo base_url() . $pie ?>" style="max-width:400px" alt="Pie Email" />
+        <?php if ($pie !== 'img/img_mail/pie.jpg'): ?>
+            <form action="" method="post">
+                <input type="submit" name="delete_email_footer" value="x">
+            </form>
+        <?php endif; ?>
+    </div>
+    <br>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="pie_mail">Subir nuevo pie:</label>
+        <input type="file" name="pie_mail" accept="image/*"><br><br>
+        <input type="submit" name="update_email_footer" value="Subir">
+    </form>
+</fieldset>

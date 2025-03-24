@@ -127,12 +127,15 @@ class Admin_functions extends CI_Model
 
 			$asunto = 'Bienvenido/a a IntraBoda - ' . $nombre_oficina;
 			$clave_visible = $this->encrypt->decode($data['clave']);
+			$header_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_header');
+			$footer_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_footer');
+
 
 			$mensaje = '
 <table width="100%" cellpadding="30" style="font-family: Arial, sans-serif; color: #333; background-color: #ffffff;">
   <tr>
     <td align="center">
-      <img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%" alt="Cabecera">
+<img src="' . $header_mail . '" width="100%" alt="Cabecera">
     </td>
   </tr>
   <tr>
@@ -170,7 +173,7 @@ class Admin_functions extends CI_Model
   </tr>
   <tr>
     <td align="center">
-      <img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%" alt="Pie">
+<img src="' . $footer_mail . '" width="100%" alt="Pie">
     </td>
   </tr>
 </table>';
