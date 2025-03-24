@@ -8,42 +8,32 @@ class Admin_functions extends CI_Model
 		$this->load->database();
 		$this->load->library('encrypt');
 
-		// Verificar que se han recibido servicios correctamente
-		if (!isset($data['servicios']) || !is_array($data['servicios'])) {
-			log_message('error', 'Error: No se han enviado servicios.');
-			return false; // Detener la ejecución si no hay servicios
-		}
-
-		// Procesar servicios y descuentos
+		// Procesar servicios y descuentos (puede ser vacío)
 		$servicios_final = [];
 		$totalDescuento = 0;
+		$servicios_momentos = []; // ← IMPORTANTE: siempre array
 
-		foreach ($data['servicios'] as $id_servicio => $datos) {
-			if (isset($datos['activo'])) { // Solo si el servicio está marcado
-				$precio = isset($datos['precio']) ? floatval($datos['precio']) : 0;
-				$descuento = isset($datos['descuento']) && $datos['descuento'] !== '' ? floatval($datos['descuento']) : 0;
+		if (isset($data['servicios']) && is_array($data['servicios'])) {
+			foreach ($data['servicios'] as $id_servicio => $datos) {
+				if (isset($datos['activo'])) {
+					$precio = isset($datos['precio']) ? floatval($datos['precio']) : 0;
+					$descuento = isset($datos['descuento']) && $datos['descuento'] !== '' ? floatval($datos['descuento']) : 0;
 
-				$servicios_final[$id_servicio] = [
-					"precio" => $precio,
-					"descuento" => $descuento
-				];
+					$servicios_final[$id_servicio] = [
+						"precio" => $precio,
+						"descuento" => $descuento
+					];
 
-				$totalDescuento += $descuento; // Acumulamos el total del descuento
+					$totalDescuento += $descuento;
+					$servicios_momentos[$id_servicio] = true;
+				}
 			}
 		}
 
-		if (empty($servicios_final)) {
-			log_message('error', 'Error: Ningún servicio seleccionado.');
-			return false;
-		}
-
-		// Serializar los servicios antes de insertarlos
-		$data['servicios'] = serialize($servicios_final);
-
-		// **Agregar el total del descuento a la base de datos**
+		// Serializar servicios aunque esté vacío
+		$data['servicios'] = !empty($servicios_final) ? serialize($servicios_final) : NULL;
 		$data['descuento'] = $totalDescuento;
 
-		// Asegurar que otros datos sean correctos
 		if (isset($data['personas_contacto']) && is_array($data['personas_contacto'])) {
 			$data['personas_contacto'] = implode(",", $data['personas_contacto']);
 		}
@@ -53,7 +43,7 @@ class Admin_functions extends CI_Model
 			unset($data['hora_boda']);
 		}
 
-		// Configuración de carga de archivos PDF
+		// Carga de PDFs
 		$config['upload_path'] = './uploads/pdf/';
 		$config['allowed_types'] = 'pdf';
 		$this->load->library('upload', $config);
@@ -68,79 +58,64 @@ class Admin_functions extends CI_Model
 			$data['contrato_pdf'] = $pdf2['upload_data']['file_name'];
 		}
 
-		// Encriptar clave si está presente
 		if (isset($data['clave'])) {
 			$data['clave'] = $this->encrypt->encode($data['clave']);
 		}
 
-		// Eliminar servicios_check antes de insertar en la BD
 		if (isset($data['servicios_check'])) {
 			unset($data['servicios_check']);
 		}
 
-		// Asegurar que 'id_cliente' no se incluya en la base de datos
 		if (isset($data['id_cliente'])) {
-			$data['id'] = $data['id_cliente']; // Si lo necesitas como 'id', lo renombramos
-			unset($data['id_cliente']); // Eliminar 'id_cliente'
+			$data['id'] = $data['id_cliente'];
+			unset($data['id_cliente']);
 		}
 
-		// Insertar en la base de datos
 		$this->db->insert('clientes', $data);
+		$id_cliente = $this->db->insert_id(); // ¡IMPORTANTE! para usarlo en momentos_espec
 
-		//PERSONALIZAMOS LOS MOMENTOS ESPECIALES QUE SE AÑADEN DEPENDIENDO LOS SERVICIOS CONTRATADOS
+		// Momentos especiales según servicios
 		$orden = 1;
 		$arr_serv_keys = array_keys($servicios_momentos);
-		//Escogen Djs animadores 2 horas
-		if (in_array(4, $arr_serv_keys)) {
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Apertura del baile', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Fiesta', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-		}
-		//Escogen Sonorización Cocktail
-		if (in_array(9, $arr_serv_keys)) {
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Música Cocktail', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-		}
-		//Sonorización momentos del banquete
-		if (in_array(10, $arr_serv_keys)) {
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrada al banquete', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Corte de tarta', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrega de muñecos tarta', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrega del ramo', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-		}
-		//Escogen Sonorización de ceremonia civil
-		if (in_array(11, $arr_serv_keys)) {
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrada del novio a la ceremonia', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrada de la novia a la ceremonia', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Lectura 1', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Lectura 2', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-			$query = $this->db->query("INSERT INTO momentos_espec VALUES ('', 'Firma de acta y salida', '" . $orden . "', '" . $id_cliente . "')");
-			$orden++;
-		}
 
-
-		//SE AÑADEN AUTOMÁTICAMENTE LOS MOMENTOS ESPECIALES QUE ESTÁN EN BD MOMENTOS ESPECIALES
-		/*$query= $this->db->query("SELECT momento FROM bd_momentos_espec");
-		if($query->num_rows() > 0){
-			$orden=1;
-			foreach($query->result() as $fila){
-				$query= $this->db->query("INSERT INTO momentos_espec VALUES ('', '".$fila->momento."', '".$orden."', '".$id_cliente."')");
+		if (!empty($arr_serv_keys)) {
+			if (in_array(4, $arr_serv_keys)) {
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Apertura del baile', '$orden', '$id_cliente')");
+				$orden++;
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Fiesta', '$orden', '$id_cliente')");
 				$orden++;
 			}
-		}*/
+			if (in_array(9, $arr_serv_keys)) {
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Música Cocktail', '$orden', '$id_cliente')");
+				$orden++;
+			}
+			if (in_array(10, $arr_serv_keys)) {
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrada al banquete', '$orden', '$id_cliente')");
+				$orden++;
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Corte de tarta', '$orden', '$id_cliente')");
+				$orden++;
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrega de muñecos tarta', '$orden', '$id_cliente')");
+				$orden++;
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrega del ramo', '$orden', '$id_cliente')");
+				$orden++;
+			}
+			if (in_array(11, $arr_serv_keys)) {
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrada del novio a la ceremonia', '$orden', '$id_cliente')");
+				$orden++;
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrada de la novia a la ceremonia', '$orden', '$id_cliente')");
+				$orden++;
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Lectura 1', '$orden', '$id_cliente')");
+				$orden++;
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Lectura 2', '$orden', '$id_cliente')");
+				$orden++;
+				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Firma de acta y salida', '$orden', '$id_cliente')");
+				$orden++;
+			}
+		}
 
-
+		// Email de bienvenida
 		if ($data['enviar_emails'] == 'S') {
-			$query = $this->db->query("select nombre, email from oficinas where id_oficina='" . $data['id_oficina'] . "'");
+			$query = $this->db->query("SELECT nombre, email FROM oficinas WHERE id_oficina='" . $data['id_oficina'] . "'");
 			foreach ($query->result() as $fila) {
 				$nombre_oficina = $fila->nombre;
 				$email_oficina = $fila->email;
@@ -151,62 +126,64 @@ class Admin_functions extends CI_Model
 			$cabeceras .= 'From: ' . $email_oficina;
 
 			$asunto = 'Bienvenido/a a IntraBoda - ' . $nombre_oficina;
-			$mensaje = '<font color="#C79ED6">
-					  <table width="100%" border="0">
-					  <tr>
-						<td align="center">
-							<img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/cabecera.jpg" width="100%">
-						</td>
-					  </tr>
-					  <tr>
-						<td><table width="100%" border="0">
-						  <tr>
-							<td width="14%" align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/1.jpg" width="100%"></td>
-							<td width="63%"><div align="justify">Accede a <a href="http://www.exeleventos.com" target="_blank">www.exeleventos.com</a> con tu navegador y haz click sobre “ZONA CLIENTE” en el margen superior derecho.<br>
-							  Introduce tu email como usuario y en la clave introduce la siguiente contraseña:<br>
-							  <br>
-							  <font size="+4"><center>' . $clave . '</center></font></div></td>
-							<td width="23%" align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/zona_cliente.jpg" width="100%"></td>
-						  </tr>
-						  <tr>
-							<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/2.jpg" width="100%"></td>
-							<td><div align="justify">Tras introducir la clave en vuestro primer acceso, el sistema os pedirá una foto. Seguidamente tendréis que contestar a unas preguntas en un breve formulario que nos servirán para crear un perfil de DJ Animador para vuestra boda. Como ya sabéis, el DJ será asignado un mes antes del evento. Una vez completado, podremos continuar para acceder al perfil.</div></td>
-							<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/foto_instrucciones.jpg" width="100%"></td>
-						  </tr>
-						</table>
-						  <table width="100%" border="0">
-							<tr>
-							  <td width="14%" align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/3.jpg" width="100%"></td>
-							  <td width="86%"><div align="justify">En la parte superior de la pantalla encontraréis un menú de navegación para trabajar sobre las diferentes secciones de la herramienta.<br>
-								- En <i>"Canciones más elegidas"</i> podréis ver un Top 10 de los temas más elegidos por todas las parejas BilboDJ y también para qué momento lo han señalado (Ceremonia, Cocktail, Entrada al Banquete, Corte de Tarta, Entrega del Ramo, Regalo a amig@s, Fiesta, …)<br>
-								- En <i>"Mis datos"</i> podréis revisar toda la información (horarios, foto y datos del DJ Animador asignado, cambiar encuesta inicial, servicios contratados, actualidad de pagos y cambio de contraseña).<br>
-								- <i>"Mi listado de canciones"</i> es la sección diseñada para que podáis definir todas las canciones que no queréis que falten y las observaciones a tener en cuenta el día de la boda.<br>
-							  - <i>"Ofertas destacadas"</i> para valorar posibles nuevos servicios.</div></td>
-							</tr>
-							<tr>
-							  <td align="center"><img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/4.jpg" width="100%"></td>
-							  <td><div align="justify">Para finalizar, podremos mantener un contacto directo en la pestaña de <i>"Chat"</i>.  Reflejad cualquier duda que os pueda surgir con los preparativos o cuestiones que nos queráis plantear y os contestaremos desde nuestras oficinas a la mayor brevedad posible. Así mismo, el DJ Animador pasará a formar parte de ese Chat una vez haya sido asignado.</div></td>
-							</tr>
-						</table></td>
-					  </tr>
-					  <tr>
-						<td align="center">
-							<img src="http://www.bilbodj.com/intranetv3/img/alta_perfil/pie.jpg" width="100%">
-						</td>
-					  </tr>
-					</table>
-					</font>';
+			$clave_visible = $this->encrypt->decode($data['clave']);
+
+			$mensaje = '
+<table width="100%" cellpadding="30" style="font-family: Arial, sans-serif; color: #333; background-color: #ffffff;">
+  <tr>
+    <td align="center">
+      <img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%" alt="Cabecera">
+    </td>
+  </tr>
+  <tr>
+    <td>
+
+      <h2 style="color:#C79ED6; font-size: 24px;">PASO 1</h2>
+      <p style="font-size: 16px; line-height: 1.5; text-align: justify;">
+        Accede a <a href="http://www.exeleventos.com" target="_blank" style="color:#C79ED6; font-weight: bold;">www.exeleventos.com</a> con tu navegador y haz click sobre “ZONA CLIENTE” en el margen superior derecho.<br>
+        Introduce tu email como usuario y en la clave introduce la siguiente contraseña:
+      </p>
+      <div style="background-color: #f2f2f2; border: 1px dashed #ccc; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; margin: 20px 0; letter-spacing: 2px;">
+        ' . $clave_visible . '
+      </div>
+
+      <h2 style="color:#C79ED6; font-size: 24px;">PASO 2</h2>
+      <p style="font-size: 16px; line-height: 1.5; text-align: justify;">
+        Tras introducir la clave en vuestro primer acceso, el sistema os pedirá una foto. Seguidamente tendréis que contestar a unas preguntas en un breve formulario que nos servirán para crear un perfil de DJ Animador para vuestra boda. Como ya sabéis, el DJ será asignado un mes antes del evento. Una vez completado, podremos continuar para acceder al perfil.
+      </p>
+
+      <h2 style="color:#C79ED6; font-size: 24px;">PASO 3</h2>
+      <p style="font-size: 16px; line-height: 1.5; text-align: justify;">
+        En la parte superior de la pantalla encontraréis un menú de navegación para trabajar sobre las diferentes secciones de la herramienta.<br><br>
+        - En <i>"Canciones más elegidas"</i> podréis ver un Top 10 de los temas más elegidos por todas las parejas BilboDJ y también para qué momento lo han señalado (Ceremonia, Cocktail, Entrada al Banquete, Corte de Tarta, Entrega del Ramo, Regalo a amig@s, Fiesta, …)<br>
+        - En <i>"Mis datos"</i> podréis revisar toda la información (horarios, foto y datos del DJ Animador asignado, cambiar encuesta inicial, servicios contratados, actualidad de pagos y cambio de contraseña).<br>
+        - <i>"Mi listado de canciones"</i> es la sección diseñada para que podáis definir todas las canciones que no queréis que falten y las observaciones a tener en cuenta el día de la boda.<br>
+        - <i>"Ofertas destacadas"</i> para valorar posibles nuevos servicios.
+      </p>
+
+      <h2 style="color:#C79ED6; font-size: 24px;">PASO 4</h2>
+      <p style="font-size: 16px; line-height: 1.5; text-align: justify;">
+        Para finalizar, podremos mantener un contacto directo en la pestaña de <i>"Chat"</i>. Reflejad cualquier duda que os pueda surgir con los preparativos o cuestiones que nos queráis plantear y os contestaremos desde nuestras oficinas a la mayor brevedad posible. Así mismo, el DJ Animador pasará a formar parte de ese Chat una vez haya sido asignado.
+      </p>
+
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%" alt="Pie">
+    </td>
+  </tr>
+</table>';
+
 
 			$asunto = html_entity_decode($asunto);
 			$mensaje = html_entity_decode($mensaje);
 
-			/* mail($data['email_novio'], $asunto, $mensaje, $cabeceras);
-              mail($data['email_novia'], $asunto, $mensaje, $cabeceras); */
 			$this->sendEmail('info@exeleventos.com', [$data['email_novio']], $asunto, $mensaje);
 			$this->sendEmail('info@exeleventos.com', [$data['email_novia']], $asunto, $mensaje);
 		}
 
-		return $this->db->insert_id();
+		return $id_cliente;
 	}
 
 	function reenviar_clave($id_cliente, $destinatario)
@@ -1271,7 +1248,7 @@ class Admin_functions extends CI_Model
 
 
 
-	
+
 
 	function GetPreguntasEncuesta()
 	{
