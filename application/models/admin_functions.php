@@ -1933,7 +1933,7 @@ class Admin_functions extends CI_Model
 		$data = false;
 		$this->load->database();
 
-		$query = $this->db->query("SELECT id, DATE_FORMAT(fecha_boda, '%d-%m-%Y') as fecha_bodaa, fecha_boda, nombre_novio, nombre_novia, servicios, descuento FROM clientes WHERE fecha_boda>='" . $fecha_desde . " 00:00:00' and fecha_boda<='" . $fecha_hasta . " 23:59:59' and id_oficina='" . $oficina . "' order by fecha_boda ASC");
+		$query = $this->db->query("SELECT id, DATE_FORMAT(fecha_boda, '%d-%m-%Y') as fecha_bodaa, fecha_boda, nombre_novio, nombre_novia, servicios, descuento, descuento2 FROM clientes WHERE fecha_boda>='" . $fecha_desde . " 00:00:00' and fecha_boda<='" . $fecha_hasta . " 23:59:59' and id_oficina='" . $oficina . "' order by fecha_boda ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -1943,6 +1943,7 @@ class Admin_functions extends CI_Model
 				$data[$i]['nombre_novia'] = $fila->nombre_novia;
 				$data[$i]['servicios'] = $fila->servicios;
 				$data[$i]['descuento'] = $fila->descuento;
+				$data[$i]['descuento2'] = $fila->descuento2;
 
 				$data[$i]['senal'] = 0;
 				$data[$i]['50%'] = 0;
