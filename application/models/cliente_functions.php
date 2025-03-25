@@ -307,13 +307,14 @@
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre, orden FROM momentos_espec WHERE cliente_id  = {$client_id} ORDER BY orden");
+		$query = $this->db->query("SELECT id, nombre, orden, hora FROM momentos_espec WHERE cliente_id  = {$client_id} ORDER BY orden");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['orden'] = $fila->orden;
+				$data[$i]['hora'] = $fila->hora;
 				$query2 = $this->db->query("SELECT COUNT(id) as num_canciones FROM canciones WHERE momento_id= {$fila->id}");
 				foreach ($query2->result() as $fila2) {
 					$data[$i]['num_canciones'] = $fila2->num_canciones;
@@ -327,13 +328,14 @@
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT DISTINCT canciones.momento_id, momentos_espec.nombre, momentos_espec.orden FROM canciones INNER JOIN momentos_espec ON canciones.momento_id=momentos_espec.id WHERE canciones.client_id = {$client_id} ORDER BY momentos_espec.orden");
+		$query = $this->db->query("SELECT DISTINCT canciones.momento_id, momentos_espec.nombre, momentos_espec.orden, momentos_espec.hora FROM canciones INNER JOIN momentos_espec ON canciones.momento_id=momentos_espec.id WHERE canciones.client_id = {$client_id} ORDER BY momentos_espec.orden");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
 				$data[$i]['momento_id'] = $fila->momento_id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['orden'] = $fila->orden;
+				$data[$i]['hora'] = $fila->hora;
 				$i++;
 			}
 		}

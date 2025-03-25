@@ -72,7 +72,7 @@ class Cliente extends CI_Controller
 					<td align="justify">
 					<div style="padding:50px;">
 					
-					<p>Para restablecer tu clave haz click <a href="http://www.bilbodj.com/intranetv3/cliente/generar_pass/' . $id_cliente . '/' . urlencode($_POST['email']) . '" target="_blank">AQUI</a></p>
+					<p>Para restablecer tu clave haz click <a href="https://intranet.exeleventos.com/cliente/generar_pass/' . $id_cliente . '/' . urlencode($_POST['email']) . '" target="_blank">AQUI</a></p>
 					</div>
 						 
 					</td>

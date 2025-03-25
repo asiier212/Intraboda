@@ -115,22 +115,42 @@
 
 			}
 		});
-
+		// Actualiza orden y horas al mover momentos
 		$(".momentos").sortable({
 			update: function() {
 				$("#result").html("Actualizando...");
 				var order = $(this).sortable('toArray');
-				var id = $(this).attr('id').substring(2);
+				var id_cliente = $(this).attr('id').substring(2);
+
+				var horas = {};
+				order.forEach(function(itemId) {
+					var id_real = itemId.replace("mom_", "");
+					var hora = $("input[name='hora_" + id_real + "']").val();
+					if (hora) {
+						horas[id_real] = hora;
+					}
+				});
 
 				$.ajax({
 					type: 'POST',
 					url: '<?php echo base_url() ?>index.php/ajax/updateordenmomentos',
-					data: 'id_cliente=' + id + "&order=" + order,
-					success: function(data) {
-						$("#result").html("")
+					data: {
+						id_cliente: id_cliente,
+						order: order.map(id => id.replace("mom_", "")).join(','),
+						horas: horas
+					},
+					success: function() {
+						$("#result").html("");
 					}
 				});
+			}
+		});
 
+		// Al cambiar una hora, forzar el mismo comportamiento
+		$(document).on('change', 'input[type="time"]', function() {
+			var $momentos = $(".momentos");
+			if ($momentos.length > 0) {
+				$momentos.sortable("option", "update").call($momentos[0], null, $momentos.data("ui-sortable"));
 			}
 		});
 
@@ -226,7 +246,8 @@
 
 	<?php
 	$ahora = date("Y-m-d H:i:s");
-	$fecha_limite = date("Y-m-d", strtotime('-2 day', strtotime($cliente['fecha_boda'])));
+	$fecha_limite = ('2031-09-30 23:59:59');
+	// $fecha_limite = date("Y-m-d", strtotime('-2 day', strtotime($cliente['fecha_boda'])));
 
 	$tiempo_que_queda = strtotime($fecha_limite) - strtotime($ahora);
 	?>
@@ -293,94 +314,79 @@
 	</form>
 
 	<fieldset class="datos">
-		<legend>Ordena los momentos especiales <img src="<?php echo base_url() ?>/img/interrogacion.png" width="16" height="16" onMouseOver="Tip('<p>Ordena los momentos arrastrándolos y haz click en <b>Actualizar el orden</b>.</p>')" onMouseOut="UnTip()"></legend>
-		<h4> *cambia el orden de los momentos especiales arrastrándolos</h4>
-		<h4> *elimina los momentos especiales que no vayas a utilizar</h4><br>
-		<ul class="momentos" id="l_<?php echo $this->session->userdata('user_id') ?>">
-			<?php
-			foreach ($events as $eu) {
-				if ($eu['nombre'] <> 'Fiesta') { //NO PERMITIMOS BORRAR EL MOMENTO ESPECIAL con nombre 'Fiesta' (es la única manera puesto que no lo podemos hacer por id porque añadimos un id nuevo cada vez que se crea un cliente
-					if ($eu['num_canciones'] == 0) {
-			?>
-						<li id="mom_<?php echo $eu['id'] ?>"><img src="<?php echo base_url() ?>img/admiracion.png" width="15" onMouseOver="Tip('No hay ninguna canción asignada para este momento especial')" onMouseOut="UnTip()" /><?php echo $eu['orden'] . '.- ' . $eu['nombre'] ?><a href="#" onclick="return deletemomento(<?php echo $eu['id'] ?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a>
-						<?php
-					} else {
-						?>
-						<li id="mom_<?php echo $eu['id'] ?>"><img src="<?php echo base_url() ?>img/check.png" width="15" onMouseOver="Tip('Existen canciones asignadas para este momento especial')" onMouseOut="UnTip()" /><?php echo $eu['orden'] . '.- ' . $eu['nombre'] ?><a href="#" onclick="return deletemomento(<?php echo $eu['id'] ?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a>
-						<?php
-					} ?>
-						</li>
-						<?php
-					} else {
-						if ($eu['num_canciones'] == 0) {
-						?>
-							<li id="mom_<?php echo $eu['id'] ?>"><img src="<?php echo base_url() ?>img/admiracion.png" width="15" onMouseOver="Tip('No hay ninguna canción asignada para este momento especial')" onMouseOut="UnTip()" /><?php echo $eu['orden'] . '.- ' . $eu['nombre'] ?><a href="#" onclick="return deletemomento(<?php echo $eu['id'] ?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a>
-							<?php
-						} else {
-							?>
-							<li id="mom_<?php echo $eu['id'] ?>"><img src="<?php echo base_url() ?>img/check.png" width="15" onMouseOver="Tip('Existen canciones asignadas para este momento especial')" onMouseOut="UnTip()" /><?php echo $eu['orden'] . '.- ' . $eu['nombre'] ?><a href="#" onclick="return deletemomento(<?php echo $eu['id'] ?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a>
-							<?php
-						} ?>
-							</li>
-					<?php
-					}
-				}
-					?>
-		</ul>
-		<div style="clear:both;"><input type="button" value="Actualizar el orden" onclick="location.href='<?php base_url() ?>canciones'"></div>
+		<legend>Ordena los momentos especiales
+			<img src="<?php echo base_url() ?>/img/interrogacion.png" width="16" height="16"
+				onMouseOver="Tip('<p>Ordena los momentos arrastrándolos y haz click en <b>Actualizar el orden</b>.</p>')"
+				onMouseOut="UnTip()">
+		</legend>
+		<h4>* cambia el orden de los momentos especiales arrastrándolos</h4>
+		<h4>* elimina los momentos especiales que no vayas a utilizar</h4>
+		<br>
 
+		<ul class="momentos" id="l_<?php echo $this->session->userdata('user_id') ?>">
+			<?php foreach ($events as $eu): ?>
+				<?php if ($eu['nombre'] !== 'Fiesta'): ?>
+					<li id="mom_<?php echo $eu['id'] ?>" style="display: flex; justify-content: space-between; align-items: center;">
+						<span>
+							<img src="<?php echo base_url() ?>img/<?php echo ($eu['num_canciones'] == 0) ? 'admiracion' : 'check' ?>.png" width="15"
+								onMouseOver="Tip('<?php echo ($eu['num_canciones'] == 0) ? 'No hay ninguna canción asignada para este momento especial' : 'Existen canciones asignadas para este momento especial' ?>')"
+								onMouseOut="UnTip()" />
+
+							<?php echo $eu['orden'] . '.- ' . $eu['nombre'] ?>
+						</span>
+
+						<span style="display: flex; align-items: center; gap: 8px;">
+							<input type="time" name="hora_<?php echo $eu['id'] ?>"
+								value="<?php echo substr($eu['hora'], 0, 5) ?>"
+								style="width:70px; margin-right:20px" />
+
+							<a href="#" onclick="return deletemomento(<?php echo $eu['id'] ?>)">
+								<img src="<?php echo base_url() ?>img/delete.gif" width="15" />
+							</a>
+						</span>
+					</li>
+
+				<?php endif; ?>
+			<?php endforeach; ?>
+		</ul>
 	</fieldset>
+
 
 	<fieldset class="datos">
 		<legend>Mis Listas de canciones</legend>
-		<?php
-		if ($events_user != false) {
-		?>
-			<h4> *Cambia el orden de canciones arrastrándolas</h4>
 
-			<?php
-			foreach ($events_user as $eu) { ?>
-				<div class="momentos">
-					<h3><?php echo $eu['orden'] . '.- ' . $eu['nombre']; ?></h3>
+		<?php if ($events_user != false): ?>
+			<h4>* Cambia el orden de canciones arrastrándolas</h4>
+
+			<?php foreach ($events_user as $eu): ?>
+				<div class="momentos" style="margin-bottom: 30px; border: 1px solid #ccc; padding: 10px; ">
+					<h3 style="margin-bottom: 10px;">
+						<?php echo $eu['orden'] . '.- ' . $eu['nombre']; ?>
+						<?php if (!empty($eu['hora'])): ?>
+							<small style="color: #777; font-size: 13px;">(<?php echo substr($eu['hora'], 0, 5); ?>)</small>
+						<?php endif; ?>
+					</h3>
+
 					<ul class="canciones" id="m_<?php echo $eu['momento_id'] ?>">
-						<?php
-
-
-						foreach ($canciones_user as $c) {
-							if ($eu['momento_id'] == $c['momento_id']) {
-						?>
-								<li id="c_<?php echo $c['id'] ?>"><?php echo $c['artista'] ?> - <?php echo $c['cancion'] ?>
-									<a href="#" onclick="return deletecancion(<?php echo $c['id'] ?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a>
+						<?php foreach ($canciones_user as $c): ?>
+							<?php if ($eu['momento_id'] == $c['momento_id']): ?>
+								<li id="c_<?php echo $c['id'] ?>" style="margin-bottom: 8px;">
+									<?php echo $c['artista'] ?> - <?php echo $c['cancion'] ?>
+									<a href="#" onclick="return deletecancion(<?php echo $c['id'] ?>)">
+										<img src="<?php echo base_url() ?>img/delete.gif" width="15" style="margin-left: 10px;" />
+									</a>
 								</li>
-
-						<?php
-							}
-						}
-						?>
+							<?php endif; ?>
+						<?php endforeach; ?>
 					</ul>
 				</div>
+			<?php endforeach; ?>
 
-
-			<?php } ?>
-			<div id="result"></div>
-			<?php
-			if ($dj_asignado) {
-			?>
-				<!--<form method="post">
-					<p style="text-align:center; padding-top:40px"><input type="submit" name="send_todj" value="Mandar mis listas a mi DJ"/></p>   
-				</form>-->
-			<?php
-			}
-
-			if (isset($_POST['send_todj']))
-				echo "<p style='text-align:center; padding:20px'>Tus listas y observaciones se han enviado correctamente. Gracias</p>";
-
-			?>
-		<?php } else {
-			echo "<p>No hay canciones</p>";
-		} ?>
-
+		<?php else: ?>
+			<p>No hay canciones</p>
+		<?php endif; ?>
 	</fieldset>
+
 	<fieldset>
 		<legend>Observaciones</legend>
 		<form method="post">

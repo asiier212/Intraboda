@@ -28,24 +28,40 @@ class Ajax extends CI_Controller
 	function updateordenmomentos()
 	{
 		if ($_POST) {
+			log_message('debug', 'Horas recibidas: ' . print_r($_POST['horas'], true));
 			$order = str_replace('mom_', '', $_POST['order']);
 			$arr = explode(',', $order);
+			$horas = isset($_POST['horas']) ? $_POST['horas'] : [];
+
 			$this->load->database();
 
-			$query = $this->db->query("SELECT id FROM momentos_espec WHERE id IN ({$order}) ORDER BY FIELD( id, {$order} )");
+			$query = $this->db->query("SELECT id FROM momentos_espec WHERE id IN ({$order}) ORDER BY FIELD(id, {$order})");
 
 			if ($query->num_rows() > 0) {
 				$i = 1;
 				foreach ($query->result() as $fila) {
-					$q[] = "UPDATE momentos_espec SET orden = {$i} WHERE id = " . $fila->id . "";
+					$id_momento = $fila->id;
+
+					// Si existe hora para este momento, escapamos el valor, si no, lo dejamos como NULL
+					$hora = isset($horas[$id_momento]) ? $this->db->escape($horas[$id_momento]) : 'NULL';
+
+					// Actualizar orden + hora
+					$q[] = "UPDATE momentos_espec SET orden = {$i}, hora = {$hora} WHERE id = {$id_momento}";
 					$i++;
 				}
 			}
-			foreach ($q as $r) {
-				$this->db->query($r);
+
+			if (!empty($q)) {
+				foreach ($q as $r) {
+					$this->db->query($r);
+					if ($this->db->affected_rows() === 0) {
+						log_message('error', "No se actualizó nada con: $r");
+					}
+				}
 			}
 		}
 	}
+
 
 	function actualizarestaurantecliente()
 	{
@@ -312,15 +328,15 @@ class Ajax extends CI_Controller
 	function buscarrestaurante()
 	{
 		$data = array();
-	
+
 		if ($_POST && isset($_POST['id_restaurante']) && !empty($_POST['id_restaurante'])) {
 			$this->load->database();
-	
+
 			// Evitar SQL Injection manualmente
 			$id_restaurante = (int) $_POST['id_restaurante']; // Convertir a entero si aplica
 			$query = $this->db->query("SELECT * FROM restaurantes WHERE id_restaurante = '$id_restaurante'");
 			$restaurante = $query->row(); // Tomar solo una fila
-	
+
 			if ($restaurante) {
 				// Asignamos los datos del restaurante
 				$data['nombre'] = $restaurante->nombre;
@@ -328,11 +344,11 @@ class Ajax extends CI_Controller
 				$data['telefono'] = $restaurante->telefono;
 				$data['maitre'] = $restaurante->maitre;
 				$data['telefono_maitre'] = $restaurante->telefono_maitre;
-	
+
 				// Obtener archivos del restaurante
 				$query2 = $this->db->query("SELECT * FROM restaurantes_archivos WHERE id_restaurante = '$id_restaurante'");
 				$data['archivos'] = array();
-	
+
 				foreach ($query2->result() as $fila2) {
 					$data['archivos'][] = array(
 						'descripcion' => $fila2->descripcion,
@@ -346,12 +362,12 @@ class Ajax extends CI_Controller
 		} else {
 			$data['error'] = "ID de restaurante no proporcionado.";
 		}
-	
+
 		// Enviar respuesta JSON
 		header('Content-Type: application/json');
 		echo json_encode($data);
 	}
-	
+
 	/*function buscarrestaurante($nombre)
 {
 	$this->load->database();
