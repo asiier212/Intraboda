@@ -68,6 +68,85 @@
             <p>
             <fieldset>
                 <legend>Eventos Contratados entre <?php echo $fecha_desde ?> y <?php echo $fecha_hasta ?></legend>
+                <?php
+                // NUEVO BLOQUE DE CÁLCULO DE CONTABILIDAD CORREGIDO
+
+                // Inicializar acumuladores
+                $total_oficina = 0;
+                $total_ingreso_oficina = 0;
+                $total_pendiente_oficina = 0;
+                $n_eventos_oficina = 0;
+
+                $total_exel_eventos = 0;
+                $total_ingreso = 0;
+                $total_pendiente = 0;
+                $n_eventos_totales = 0;
+
+                // Calcular totales para la oficina seleccionada
+                if (!empty($contabilidad_clientes[0])) {
+                    foreach ($contabilidad_clientes as $conta) {
+                        $arr_servicios = @unserialize($conta['servicios']);
+                        $total_cliente = 0;
+                        if (is_array($arr_servicios)) {
+                            foreach ($arr_servicios as $servicio) {
+                                $total_cliente += is_array($servicio)
+                                    ? (isset($servicio['precio']) ? floatval($servicio['precio']) : 0)
+                                    : floatval($servicio);
+                            }
+                        }
+
+                        $descuento1 = isset($conta['descuento']) ? floatval($conta['descuento']) : 0;
+                        $descuento2 = isset($conta['descuento2']) ? floatval($conta['descuento2']) : 0;
+                        $total_cliente -= ($descuento1 + $descuento2);
+
+                        $senal = isset($conta['senal']) ? floatval($conta['senal']) : 0;
+                        $p50 = isset($conta['50%']) ? floatval($conta['50%']) : 0;
+                        $final = isset($conta['final']) ? floatval($conta['final']) : 0;
+
+                        $ingreso_cliente = $senal + $p50 + $final;
+                        $pendiente_cliente = $total_cliente - $ingreso_cliente;
+
+                        $total_oficina += $total_cliente;
+                        $total_ingreso_oficina += $ingreso_cliente;
+                        $total_pendiente_oficina += $pendiente_cliente;
+                        $n_eventos_oficina++;
+                    }
+                }
+
+                // Calcular totales globales (Exel Eventos)
+                if (!empty($contabilidad_total[0])) {
+                    foreach ($contabilidad_total as $conta_total) {
+                        $arr_servicios = @unserialize($conta_total['servicios']);
+                        $total_cliente = 0;
+                        if (is_array($arr_servicios)) {
+                            foreach ($arr_servicios as $servicio) {
+                                $total_cliente += is_array($servicio)
+                                    ? (isset($servicio['precio']) ? floatval($servicio['precio']) : 0)
+                                    : floatval($servicio);
+                            }
+                        }
+
+                        $descuento1 = isset($conta_total['descuento']) ? floatval($conta_total['descuento']) : 0;
+                        $descuento2 = isset($conta_total['descuento2']) ? floatval($conta_total['descuento2']) : 0;
+                        $total_cliente -= ($descuento1 + $descuento2);
+
+                        $senal = isset($conta_total['senal']) ? floatval($conta_total['senal']) : 0;
+                        $p50 = isset($conta_total['50%']) ? floatval($conta_total['50%']) : 0;
+                        $final = isset($conta_total['final']) ? floatval($conta_total['final']) : 0;
+
+                        $ingreso_cliente = $senal + $p50 + $final;
+                        $pendiente_cliente = $total_cliente - $ingreso_cliente;
+
+                        $total_exel_eventos += $total_cliente;
+                        $total_ingreso += $ingreso_cliente;
+                        $total_pendiente += $pendiente_cliente;
+                        $n_eventos_totales++;
+                    }
+                }
+                ?>
+
+                <!-- AHORA LA TABLA MUESTRA LAS VARIABLES CALCULADAS CORRECTAMENTE -->
+
                 <table class="tabledata">
                     <tr>
                         <th colspan="3">TOTAL CONTABILIDAD</th>
@@ -85,65 +164,10 @@
                         <th>Exel Eventos</th>
                     </tr>
                     <tr>
-                        <?php
-                        $total_oficina = 0;
-                        $n_eventos_oficina = 0;
-                        if ($contabilidad_clientes[0] <> "") {
-                            foreach ($contabilidad_clientes as $conta) {
-                                $total_cliente = 0;
-                                $arr_servicios = unserialize($conta['servicios']);
-                                $total_cliente = array_sum($arr_servicios);
-                                $total_cliente = $total_cliente - $conta['descuento'];
-
-                                $total_oficina = $total_oficina + $total_cliente;
-                                $n_eventos_oficina++;
-                            }
-                        }
-                        ?>
                         <th>Total</th>
                         <td align="center"><?php echo number_format($total_oficina, 2, ",", ".") ?></td>
-                        <?php
-                        $total_exel_eventos = 0;
-                        $n_eventos_totales = 0;
-                        if ($contabilidad_total[0] <> "") {
-                            foreach ($contabilidad_total as $conta_total) {
-                                $total_cliente = 0;
-                                $arr_servicios = unserialize($conta_total['servicios']);
-                                $total_cliente = array_sum($arr_servicios);
-                                $total_cliente = $total_cliente - $conta_total['descuento'];
-
-                                $total_exel_eventos = $total_exel_eventos + $total_cliente;
-                                $n_eventos_totales++;
-                            }
-                        }
-                        ?>
                         <td align="center"><?php echo number_format($total_exel_eventos, 2, ",", ".") ?></td>
                     </tr>
-
-                    <?php
-                    $total_ingreso_oficina = 0;
-                    $total_pendiente_oficina = 0;
-                    if ($contabilidad_clientes[0] <> "") {
-                        foreach ($contabilidad_clientes as $conta) {
-                            $total_ingreso_oficina = $total_ingreso_oficina + $conta['senal'] + $conta['50%'] + $conta['final'];
-                        }
-                    }
-                    $total_pendiente_oficina = $total_oficina - $total_ingreso_oficina;
-
-                    $total_ingreso = 0;
-                    $total_pendiente = 0;
-                    if ($contabilidad_total[0] <> "") {
-                        foreach ($contabilidad_total as $conta_total) {
-                            $total_ingreso = $total_ingreso + $conta_total['senal'] + $conta_total['50%'] + $conta_total['final'];
-                        }
-                    }
-                    $total_pendiente = $total_exel_eventos - $total_ingreso;
-                    ?>
-
-
-
-
-
                     <tr>
                         <th>Ingreso</th>
                         <td align="center"><?php echo number_format($total_ingreso_oficina, 2, ",", ".") ?></td>
@@ -154,11 +178,13 @@
                         <td align="center"><?php echo number_format($total_pendiente_oficina, 2, ",", ".") ?></td>
                         <td align="center"><?php echo number_format($total_pendiente, 2, ",", ".") ?></td>
                     </tr>
-                    <th>Nº Eventos</th>
-                    <td align="center"><?php echo $n_eventos_oficina ?></td>
-                    <td align="center"><?php echo $n_eventos_totales ?></td>
+                    <tr>
+                        <th>Nº Eventos</th>
+                        <td align="center"><?php echo $n_eventos_oficina ?></td>
+                        <td align="center"><?php echo $n_eventos_totales ?></td>
                     </tr>
                 </table>
+
                 </p>
 
                 <table class="tabledata">
@@ -215,7 +241,7 @@
                                             $total_servicios += floatval($servicio);
                                         }
                                     }
-                                }                  
+                                }
 
                                 // Descuento1 directo (puede no existir)
                                 $descuento1 = isset($conta['descuento']) ? floatval($conta['descuento']) : 0;

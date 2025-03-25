@@ -1979,13 +1979,14 @@ class Admin_functions extends CI_Model
 		$data = false;
 		$this->load->database();
 
-		$query = $this->db->query("SELECT id, servicios, descuento FROM clientes WHERE fecha_boda>='" . $fecha_desde . " 00:00:00' and fecha_boda<='" . $fecha_hasta . " 23:59:59'");
+		$query = $this->db->query("SELECT id, servicios, descuento, descuento2 FROM clientes WHERE fecha_boda>='" . $fecha_desde . " 00:00:00' and fecha_boda<='" . $fecha_hasta . " 23:59:59'");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['servicios'] = $fila->servicios;
 				$data[$i]['descuento'] = $fila->descuento;
+				$data[$i]['descuento2'] = $fila->descuento2;
 				$data[$i]['senal'] = 0;
 				$data[$i]['50%'] = 0;
 				$data[$i]['final'] = 0;
