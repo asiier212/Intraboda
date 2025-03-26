@@ -300,6 +300,8 @@ class Clientedj extends CI_Controller {
 			$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 			$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 			$cabeceras .= 'From: '.$data['email_novio'];
+			$header_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_header');
+			$footer_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_footer');
 				
 			$local='http://'.$_SERVER['HTTP_HOST'].base_url();
 				
@@ -312,7 +314,7 @@ class Clientedj extends CI_Controller {
 						<table width="100%">
 						<tr>
 						  <td>
-								<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+								<img src="' . $header_mail . '" width="100%">
 						  </td>
 						</tr>';
 			
@@ -334,7 +336,7 @@ class Clientedj extends CI_Controller {
                                                                                   </td>
                                                                                   </tr>
 								<tr>
-									<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+									<td align="center"><img src="' . $footer_mail . '" width="100%"></td>
 								</tr>
 						  </table>
 						  </body>
@@ -364,7 +366,7 @@ class Clientedj extends CI_Controller {
 										
 										  </td></tr>
 								<tr>
-									<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+									<td align="center"><img src="' . $footer_mail . '" width="100%"></td>
 								</tr>
 						  </table>
 						  </body>
