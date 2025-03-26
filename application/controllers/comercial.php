@@ -94,7 +94,7 @@ class Comercial extends CI_Controller
 			$data['captacion'] = $this->comercial_functions->GetCaptacion();
 			$data['estados_solicitudes'] = $this->comercial_functions->GetEstados_Solicitudes();
 			$data['n_presupuesto'] = $this->CrearNumeroPresupuesto();
-		
+
 			if ($_POST) {
 				// Solo los datos que van a la base de datos
 				$insert_data = [];
@@ -111,21 +111,21 @@ class Comercial extends CI_Controller
 				$insert_data['canal_captacion'] = $_POST['canal_captacion']; // OK
 				$insert_data['estado_solicitud'] = $_POST['estado_solicitud']; // OK
 				$insert_data['id_comercial'] = $this->session->userdata('id');
-		
+
 				$insert_data['importe'] = str_replace(',', '.', $_POST['importe']);
 				$insert_data['descuento'] = str_replace(',', '.', $_POST['descuento']);
-		
+
 				// Insertar solo los datos correctos
 				$id_solicitud = $this->comercial_functions->InsertSolicitud($insert_data);
-		
+
 				if ($_POST['enviar_encuesta'] == "S") {
 					$this->enviar_email_encuesta($insert_data['id_comercial'], $id_solicitud, html_entity_decode($_POST['email']));
 				}
-		
+
 				redirect('comercial/solicitudes/view');
 			}
 		}
-		
+
 
 		if ($acc == 'view') {
 			$this->load->database();
@@ -234,6 +234,9 @@ class Comercial extends CI_Controller
 
 		$local = 'http://' . $_SERVER['HTTP_HOST'] . base_url();
 
+		$header_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_header');
+		$footer_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_footer');
+
 		$html = '<html>
 						<head>
 						<link href="' . $local . 'css/style.css" rel="stylesheet" type="text/css" />
@@ -243,7 +246,7 @@ class Comercial extends CI_Controller
 						<table width="100%">
 						<tr>
 							<td colspan="2">
-								<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+								<img src="' . $header_mail . '" width="100%">
 							</td>
 						</tr>
 										  <tr>
@@ -285,7 +288,7 @@ class Comercial extends CI_Controller
 										
 										  </tr>
 							<tr>
-								<td align="center" colspan="2"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+								<td align="center" colspan="2"><img src="' . $footer_mail . '" width="100%"></td>
 							</tr>
 						  </table></body></html>';
 
@@ -771,7 +774,8 @@ class Comercial extends CI_Controller
 
 						$local = 'http://' . $_SERVER['HTTP_HOST'] . base_url();
 
-
+						$header_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_header');
+						$footer_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_footer');
 
 						$html = '<html>
 						<head>
@@ -782,7 +786,7 @@ class Comercial extends CI_Controller
 						<table width="100%">
 							<tr>
 							  <td colspan="2">
-									<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+									<img src="' . $header_mail . '" width="100%">
 							  </td>
 							</tr>
 						<tr><td align="center"><font size="+3"><b>PRESUPUESTO</b></font></td>
@@ -906,7 +910,7 @@ class Comercial extends CI_Controller
 											</td>
 						  </tr>
 						  <tr>
-									<td align="center" colspan="2"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+									<td align="center" colspan="2"><img src="' . $footer_mail . '" width="100%"></td>
 						  </tr>
 										  
 							</table>
