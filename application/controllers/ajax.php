@@ -595,26 +595,33 @@ function buscarrestaurantearchivos($nombre)
 	{
 		if ($_POST) {
 			$this->load->database();
+			$this->load->library('encrypt');
 
 			if ($_POST['id'] == 'nombre') {
-				//Consultamos el nombre viejo
+				// Consultamos el nombre viejo
 				$query = $this->db->query("SELECT nombre FROM restaurantes WHERE id_restaurante = {$id}");
 				foreach ($query->result() as $fila) {
 					$nombre_viejo = $fila->nombre;
 				}
 
-				//Actualizamos la tabla presupuestos_eventos
+				// Actualizamos tablas relacionadas
 				$this->db->query("UPDATE presupuesto_eventos SET restaurante = '" . str_replace("'", "&#39;", $_POST['value']) . "' WHERE restaurante = '" . $nombre_viejo . "'");
-				//Actualizamos la tabla solicitudes
 				$this->db->query("UPDATE solicitudes SET restaurante = '" . str_replace("'", "&#39;", $_POST['value']) . "' WHERE restaurante = '" . $nombre_viejo . "'");
 			}
 
-			$this->db->query("UPDATE restaurantes SET " . $_POST['id'] . " = '" . str_replace("'", "&#39;", $_POST['value']) . "' WHERE id_restaurante = {$id}");
-			$result = $_POST['value'];
+			$campo = $_POST['id'];
+			$valor = str_replace("'", "&#39;", $_POST['value']);
 
-			echo $result;
+			// Encriptar si el campo es clave
+			if ($campo === 'clave') {
+				$valor = $this->encrypt->encode($valor);
+			}
+
+			$this->db->query("UPDATE restaurantes SET {$campo} = '{$valor}' WHERE id_restaurante = {$id}");
+			echo $_POST['value']; // devuelve la versión "plana", no encriptada
 		}
 	}
+
 
 	function elimina_archivo_restaurante()
 	{

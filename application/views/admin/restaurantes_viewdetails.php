@@ -60,7 +60,9 @@
 				<li><label>Nombre:</label><span class="edit_box" id="nombre"><?php echo $restaurante['nombre'] ?></span> </li>
 				<li><label>Direcci&oacute;n:</label><span class="edit_box" id="direccion"><?php echo $restaurante['direccion'] ?></span></li>
 				<li><label>Telefono:</label><span class="edit_box" id="telefono"><?php echo $restaurante['telefono'] ?></span></li>
-				<li><label>Maitre:</label><span class="edit_box" id="maitre"><?php echo $restaurante['maitre'] ?></span></li>
+				<li><label>Nombre Maitre:</label><span class="edit_box" id="maitre"><?php echo $restaurante['maitre'] ?></span></li>
+				<li><label>Email Maitre:</label><span class="edit_box" id="email_maitre"><?php echo $restaurante['email_maitre'] ?></span></li>
+				<li><label>Clave:</label><span class="edit_box" id="clave"><?php echo $restaurante['clave'] ?></span></li>
 				<li><label>Telefono Maitre:</label><span class="edit_box" id="telefono_maitre"><?php echo $restaurante['telefono_maitre'] ?></span></li>
 				<li><label>Otro Personal:</label><span class="edit_box" id="otro_personal"><?php echo $restaurante['otro_personal'] ?></span></li>
 				<li><label>Hora limite de fiesta:</label><span class="edit_box" id="hora_limite_fiesta"><?php echo $restaurante['hora_limite_fiesta'] ?></span></li>

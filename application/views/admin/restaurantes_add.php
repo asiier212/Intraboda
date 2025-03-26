@@ -69,7 +69,9 @@ $(function() {
             	<li><label>(*)Nombre:</label><input type="text" id="nombre" name="nombre" /> </li>
                 <li><label>Direcci&oacute;n:</label><input type="text" id="direccion" name="direccion" /> </li>
                 <li><label>Tel&eacute;fono:</label><input type="text" id="telefono" name="telefono" /> </li>
-                <li><label>Maitre:</label><input type="text" id="maitre" name="maitre" /> </li>
+                <li><label>Nombre Maitre:</label><input type="text" id="maitre" name="maitre" /> </li>
+				<li><label>Email Maitre:</label><input type="text" id="email_maitre" name="email_maitre" /> </li>
+				<li><label>Clave:</label><input type="text" id="clave" name="clave" /> </li>
                 <li><label>Tel&eacute;fono Maitre:</label><input type="text" id="telefono_maitre" name="telefono_maitre" /> </li>
                 <li><label>Otro personal:</label><input type="text" id="otro_personal" name="otro_personal" /> </li>
                 <li><label>Hora límite de fiesta:</label><input type="text" id="hora_limite_fiesta" name="hora_limite_fiesta" /> </li>

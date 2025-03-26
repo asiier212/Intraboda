@@ -41,6 +41,8 @@
                 <th><a style="color:#FFF; text-decoration:underline" href="<?php echo $url_ord; ?>nombre">Nombre</a></th>
                 <th><a style="color:#FFF; text-decoration:underline" href="<?php echo $url_ord; ?>direccion">Dirección</a></th>
                 <th><a style="color:#FFF; text-decoration:underline" href="<?php echo $url_ord; ?>maitre">Maitre</a></th>
+                <th><a style="color:#FFF; text-decoration:underline" href="<?php echo $url_ord; ?>maitre">Email Maitre</a></th>
+                <th><a style="color:#FFF; text-decoration:underline" href="<?php echo $url_ord; ?>maitre">Clave</a></th>
                 <th><a style="color:#FFF; text-decoration:underline" href="<?php echo $url_ord; ?>telefono_maitre">Teléfono Maitre</a></th>
                 <th><a style="color:#FFF; text-decoration:underline" href="<?php echo $url_ord; ?>hora_limite_fiesta">Hora límite de fiesta</a></th>
                 <th style="width:220px"></th>
@@ -48,9 +50,14 @@
             
             <?php foreach ($restaurantes as $r) { ?>
             <tr>
+            <?php $clave_encriptada= $r['clave'] ; 
+            $clave_plana = $this->encrypt->decode($clave_encriptada);?>
+
                 <td><?php echo $r['nombre']; ?></td>
                 <td><?php echo $r['direccion']; ?></td>
                 <td><?php echo $r['maitre']; ?></td>
+                <td><?php echo $r['email_maitre']; ?></td>
+                <td><?php echo $clave_encriptada ?></td>
                 <td><?php echo $r['telefono_maitre']; ?></td>
                 <td><?php echo $r['hora_limite_fiesta']; ?></td>
                 <td>

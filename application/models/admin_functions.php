@@ -277,8 +277,9 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
+		$this->load->library('encrypt');
 
-		$query = $this->db->query("SELECT id_restaurante, nombre, direccion, telefono, maitre, telefono_maitre, hora_limite_fiesta FROM restaurantes ORDER BY nombre ASC");
+		$query = $this->db->query("SELECT id_restaurante, nombre, direccion, telefono, maitre, telefono_maitre, hora_limite_fiesta, email_maitre, clave FROM restaurantes ORDER BY nombre ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -289,6 +290,8 @@ class Admin_functions extends CI_Model
 				$data[$i]['maitre'] = $fila->maitre;
 				$data[$i]['telefono_maitre'] = $fila->telefono_maitre;
 				$data[$i]['hora_limite_fiesta'] = $fila->hora_limite_fiesta;
+				$data[$i]['email_maitre'] = $fila->email_maitre;
+				$data[$i]['clave'] = $this->encrypt->decode($fila->clave);
 				$i++;
 			}
 		}
@@ -411,12 +414,14 @@ class Admin_functions extends CI_Model
 
 	function InsertRestaurante($data)
 	{
-
 		$this->load->database();
+		$this->load->library('encrypt');
+
+		if (isset($data['clave'])) {
+			$data['clave'] = $this->encrypt->encode($data['clave']);
+		}
 
 		$this->db->insert('restaurantes', $data);
-
-		$id_cliente = $this->db->insert_id();
 
 		return $this->db->insert_id();
 	}
@@ -425,8 +430,9 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
+		$this->load->library('encrypt');
 
-		$query = $this->db->query("SELECT id_restaurante, nombre, direccion, telefono, maitre, telefono_maitre, hora_limite_fiesta FROM restaurantes {$str_where} ORDER BY {$ord}   {$limit}");
+		$query = $this->db->query("SELECT id_restaurante, nombre, direccion, telefono, maitre, telefono_maitre, hora_limite_fiesta, email_maitre, clave FROM restaurantes {$str_where} ORDER BY {$ord}   {$limit}");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -437,6 +443,8 @@ class Admin_functions extends CI_Model
 				$data[$i]['maitre'] = $fila->maitre;
 				$data[$i]['telefono_maitre'] = $fila->telefono_maitre;
 				$data[$i]['hora_limite_fiesta'] = $fila->hora_limite_fiesta;
+				$data[$i]['email_maitre'] = $fila->email_maitre;
+				$data[$i]['clave'] = $this->encrypt->decode($fila->clave);
 				$i++;
 			}
 		}
@@ -448,8 +456,9 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
+		$this->load->library('encrypt');
 
-		$query = $this->db->query("SELECT id_restaurante, nombre, direccion, telefono, maitre, telefono_maitre, otro_personal, hora_limite_fiesta, empresa_habitual FROM restaurantes WHERE id_restaurante = {$id}");
+		$query = $this->db->query("SELECT id_restaurante, nombre, direccion, telefono, maitre, telefono_maitre, otro_personal, hora_limite_fiesta, empresa_habitual, email_maitre, clave FROM restaurantes WHERE id_restaurante = {$id}");
 
 		if ($query->num_rows() > 0) {
 			$fila = $query->row();
@@ -462,6 +471,8 @@ class Admin_functions extends CI_Model
 			$data['otro_personal'] = $fila->otro_personal;
 			$data['hora_limite_fiesta'] = $fila->hora_limite_fiesta;
 			$data['empresa_habitual'] = $fila->empresa_habitual;
+			$data['email_maitre'] = $fila->email_maitre;
+			$data['clave'] = $this->encrypt->decode($fila->clave);
 		}
 
 		return $data;
