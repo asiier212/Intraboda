@@ -61,11 +61,13 @@ class Cliente extends CI_Controller
 				$cabeceras .= 'From: ' . $email_oficina;
 
 				$asunto = 'E-mail restablecimiento de contraseña Intraboda';
+				$header_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_header');
+				$footer_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_footer');
 
 				$mensaje = '<table border="0" width="100%">
 				<tr>
 					<td>
-						<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+						<img src="' . $header_mail . '" width="100%">
 					</td>
 				</tr>
 				<tr>
@@ -78,7 +80,7 @@ class Cliente extends CI_Controller
 					</td>
 					</tr>
 					<tr>
-						<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+						<td align="center"><img src="' . $footer_mail . '" width="100%"></td>
 					</tr>
 				</table>';
 
@@ -266,60 +268,65 @@ class Cliente extends CI_Controller
 				}
 				if (isset($_POST['actualizar_encuesta'])) {
 					$this->load->database();
-				
+
 					log_message('debug', 'Respuestas recibidas: ' . print_r($_POST['respuesta'], true));
 					log_message('debug', 'Números exactos recibidos: ' . print_r($_POST['numero_exacto'], true));
-				
+
 					foreach ($_POST['respuesta'] as $id_pregunta => $valor_respuesta) {
 						$id_cliente = $this->session->userdata('user_id');
-				
+
 						// Comprobamos si hay número exacto introducido
-						$numero_exacto = isset($_POST['numero_exacto'][$id_pregunta]) && $_POST['numero_exacto'][$id_pregunta] !== '' 
-										? trim($_POST['numero_exacto'][$id_pregunta]) 
-										: null;
-				
+						$numero_exacto = isset($_POST['numero_exacto'][$id_pregunta]) && $_POST['numero_exacto'][$id_pregunta] !== ''
+							? trim($_POST['numero_exacto'][$id_pregunta])
+							: null;
+
 						// Si hay un número exacto, lo priorizamos sobre cualquier otra respuesta
 						if ($numero_exacto !== null) {
 							$valor_respuesta = $numero_exacto;
 						} elseif (is_array($valor_respuesta)) {
 							$valor_respuesta = implode(",", $valor_respuesta); // Para respuestas múltiples
 						}
-				
+
 						// Comprobar si ya existe una respuesta en la BD
-						$query = $this->db->query("
+						$query = $this->db->query(
+							"
 							SELECT COUNT(*) as total FROM respuestas_encuesta_datos_boda 
-							WHERE id_pregunta = ? AND id_cliente = ?", 
+							WHERE id_pregunta = ? AND id_cliente = ?",
 							array($id_pregunta, $id_cliente)
 						);
-				
+
 						$existe = $query->row()->total;
-				
+
 						if ($existe > 0) {
 							// Si ya existe, actualizar
-							$this->db->query("
+							$this->db->query(
+								"
 								UPDATE respuestas_encuesta_datos_boda 
 								SET respuesta = ? 
-								WHERE id_pregunta = ? AND id_cliente = ?", 
+								WHERE id_pregunta = ? AND id_cliente = ?",
 								array($valor_respuesta, $id_pregunta, $id_cliente)
 							);
 						} else {
 							// Si no existe, insertar nueva respuesta
-							$this->db->query("
+							$this->db->query(
+								"
 								INSERT INTO respuestas_encuesta_datos_boda (id_pregunta, id_cliente, respuesta) 
-								VALUES (?, ?, ?)", 
+								VALUES (?, ?, ?)",
 								array($id_pregunta, $id_cliente, $valor_respuesta)
 							);
 						}
 					}
-				
+
 					log_message('debug', 'Última consulta ejecutada: ' . $this->db->last_query());
-				
+
 					// **Enviar notificación por email**
-					$query = $this->db->query("
+					$query = $this->db->query(
+						"
 						SELECT nombre_novio, nombre_novia, fecha_boda FROM clientes 
-						WHERE id = ?", array($id_cliente)
+						WHERE id = ?",
+						array($id_cliente)
 					);
-				
+
 					if ($query->num_rows() > 0) {
 						$fila = $query->row();
 						$mensaje = '
@@ -328,22 +335,19 @@ class Cliente extends CI_Controller
 									<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/logo_intranet.png" width="200"></td>
 									<td align="justify">
 										<p>¡¡Hola!!</p>
-										<p>Se ha actualizado la encuesta respecto a la boda de ' . 
-										htmlspecialchars($fila->nombre_novio) . ' y ' . 
-										htmlspecialchars($fila->nombre_novia) . ' que se casan el día ' . 
-										htmlspecialchars($fila->fecha_boda) . '.</p>
+										<p>Se ha actualizado la encuesta respecto a la boda de ' .
+							htmlspecialchars($fila->nombre_novio) . ' y ' .
+							htmlspecialchars($fila->nombre_novia) . ' que se casan el día ' .
+							htmlspecialchars($fila->fecha_boda) . '.</p>
 										<p>Atentamente Administración EXEL Eventos</p>
 									</td>
 								</tr>
 							</table>';
-				
+
 						// **Descomentar si deseas enviar email**
 						// $this->enviar_mail("IntraBoda - Actualización de encuesta respecto a la boda", $mensaje);
 					}
 				}
-				
-				
-				
 			}
 
 			// Obtener datos del cliente
@@ -445,6 +449,8 @@ class Cliente extends CI_Controller
 			$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 			$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 			$cabeceras .= 'From: ' . $data['email_novio'];
+			$header_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_header');
+			$footer_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_footer');
 
 			$local = 'http://' . $_SERVER['HTTP_HOST'] . base_url();
 
@@ -456,7 +462,7 @@ class Cliente extends CI_Controller
 						<table width="100%">
 						<tr>
 						  <td>
-								<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+								<img src="' . $header_mail . '" width="100%">
 						  </td>
 						</tr>';
 
@@ -480,7 +486,7 @@ class Cliente extends CI_Controller
 					'</td>
                                       </tr>
                                             <tr>
-                                                    <td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+                                                    <td align="center"><img src="' . $footer_mail . '" width="100%"></td>
                                             </tr>
 						  </table>
 						  </body>
