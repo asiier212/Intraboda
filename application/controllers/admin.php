@@ -1055,7 +1055,7 @@ class Admin extends CI_Controller
 								<p>Hola,</p>
 								<p>Hemos recibido correctamente el pago de la señal. Podéis comprobar el estado de pagos en vuestro perfil IntraBoda.</p>
 								<p>¡Gracias por confiar en EXEL Eventos S.L!</p>
-								<p>Atentamente, Administración EXEL Eventos </p>
+								<p>Atentamente, Administración EXEL Eventos. </p>
 								';
 							} elseif ($num_pagos == 2) {
 								$asunto = 'Pago del 50% - BILBODJ';
@@ -1063,7 +1063,7 @@ class Admin extends CI_Controller
 								<p>Hola,</p>
 								<p>Hemos recibido correctamente el pago correspondiente al 50% del total del evento. Podéis comprobar el estado de pagos en vuestro perfil IntraBoda.</p>
 								<p>¡Gracias por confiar en EXEL Eventos S.L!</p>
-								<p>Atentamente, Administración EXEL Eventos </p>
+								<p>Atentamente, Administración EXEL Eventos. </p>
 								';
 							} else {
 								$asunto = 'Pago final - BILBODJ';
@@ -1071,14 +1071,17 @@ class Admin extends CI_Controller
 								<p>Hola,</p>
 								<p>Hemos recibido correctamente el pago final del evento. Podéis comprobar el estado de pagos en vuestro perfil IntraBoda. ¡Ha sido un placer trabajar con vosotros!</p>
 								<p>¡Un saludo y hasta pronto!</p>
-								<p>Atentamente, Administración EXEL Eventos </p>
+								<p>Atentamente, Administración EXEL Eventos. </p>
 								';
 							}
+
+							$header_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_header');
+							$footer_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_footer');
 
 							$mensaje = '<table border="0" width="100%">
 							<tr>
 								<td>
-									<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+									<img src="' . $header_mail . '" width="100%">
 								</td>
 							</tr>
 							<tr>
@@ -1090,9 +1093,10 @@ class Admin extends CI_Controller
 								</td>
 								</tr>
 							<tr>
-								<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+								<td align="center"><img src="' . $footer_mail . '" width="100%"></td>
 							</tr>
-							</table>';
+							</table>
+							<a>' . $footer_mail . '</a>';
 
 							$asunto = html_entity_decode($asunto);
 							$mensaje = html_entity_decode($mensaje);
@@ -1212,6 +1216,8 @@ class Admin extends CI_Controller
 								$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 								$cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 								$cabeceras .= 'From: ' . $email_dj_nuevo;
+								$header_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_header');
+								$footer_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_footer');
 
 								if (isset($nombre_dj_viejo)) {
 
@@ -1220,7 +1226,7 @@ class Admin extends CI_Controller
 									$mensaje = '<table border="0" width="100%">
 								<tr>
 									<td>
-										<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+										<img src="' . $header_mail . '" width="100%">
 									</td>
 								</tr>
 								<tr>
@@ -1242,7 +1248,7 @@ class Admin extends CI_Controller
 									</td>
 									</tr>
 									<tr>
-										<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+										<td align="center"><img src="' . $footer_mail . '" width="100%"></td>
 									</tr>
 								</table>';
 								} else {
@@ -1250,7 +1256,7 @@ class Admin extends CI_Controller
 									$mensaje = '<table border="0" width="100%">
 								<tr>
 									<td>
-										<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+										<img src="' . $header_mail . '" width="100%">
 									</td>
 								</tr>
 								<tr>
@@ -1275,7 +1281,7 @@ class Admin extends CI_Controller
 									</td>
 									</tr>
 									<tr>
-										<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+										<td align="center"><img src="' . $footer_mail . '" width="100%"></td>
 									</tr>
 								</table>';
 								}
@@ -1294,12 +1300,14 @@ class Admin extends CI_Controller
 							$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 							$cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 							$cabeceras .= 'From: info@exeleventos.com';
+							$header_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_header');
+							$footer_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_footer');
 
 							$asunto = 'Nuevo cliente asignado - BilboDJ';
 							$mensaje = '<table border="0" width="100%">
 							<tr>
 									<td>
-										<img src="http://www.bilbodj.com/intranetv3/img/img_mail/cabecera.jpg" width="100%">
+										<img src="' . $header_mail . '" width="100%">
 									</td>
 								</tr>
 								<tr>
@@ -1315,7 +1323,7 @@ class Admin extends CI_Controller
 									</td>
 									</tr>
 									<tr>
-										<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
+										<td align="center"><img src="' . $footer_mail . '" width="100%"></td>
 									</tr>
 								</table>';
 							$asunto = html_entity_decode($asunto);
