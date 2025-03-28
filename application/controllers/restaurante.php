@@ -174,4 +174,41 @@ class Restaurante extends CI_Controller
 		$view = "clientes_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
+
+
+	public function listado_canciones($id = false)
+	{
+		$data_header = false;
+		$data_footer = false;
+		$data = false;
+
+		if (!$id || !is_numeric($id)) {
+			show_error("ID de cliente no válido", 400);
+		}
+		
+		$cliente = $this->restaurante_functions->GetCliente($id);
+		if (!$cliente) {
+			show_error("Cliente no encontrado", 404);
+		}
+
+		if ($id) {
+			$cliente = $this->restaurante_functions->GetCliente($id);
+
+			if ($cliente) {
+				// Asignar datos
+				$data['cliente'] = $cliente;
+				$data['events'] = $this->restaurante_functions->GetEvents($id);
+				$data['events_user'] = $this->restaurante_functions->GetmomentosUser($id);
+				$data['canciones_user'] = $this->restaurante_functions->GetcancionesUser($id);
+				$data['canciones_observaciones_momesp'] = $this->restaurante_functions->GetObservaciones_momesp($id);
+				$data['canciones_observaciones_general'] = $this->restaurante_functions->GetObservaciones_general($id);
+
+				$this->_loadViews($data_header, $data, $data_footer, 'listado_canciones');
+			} else {
+				show_error('Cliente no encontrado.');
+			}
+		} else {
+			show_error('ID de cliente no proporcionado.');
+		}
+	}
 }

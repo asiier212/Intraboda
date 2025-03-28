@@ -10,10 +10,6 @@
     <fieldset class="datos">
         <legend>Clientes</legend>
 
-        <?php echo "ID de inicio de sesión: " . $this->session->userdata('restaurante_id');
-
-        ?>
-
         <form method="get" style="margin:10px 0">
             Buscar por: &nbsp;
             <select name="f">

@@ -43,7 +43,7 @@
 <div class="main form">
     <?php
     session_start(); //Sesión para controlar que no puedan acceder DJ a fichas de clientes que NO son suyos
-    $_SESSION['id_dj'] =  $this->session->userdata('id');
+    $_SESSION['id_restaurante'] =  $this->session->userdata('restaurante_id');
     ?>
 
     <form method="post" enctype="multipart/form-data">
@@ -104,7 +104,7 @@
                 </ul><?php
                     }
                         ?>
-    
+
         </fieldset>
 
 
@@ -116,14 +116,22 @@
                 $total = array_sum($arr_servicios);
                 $arr_serv_keys = array_keys($arr_servicios);
                 foreach ($servicios as $servicio) {
+                    if (!in_array($servicio['id'], $arr_serv_keys)) continue; // ← esto filtra los no marcados
                 ?>
-                    <li><input type="checkbox" name="servicios[<?php echo $servicio['id'] ?>]" <?php echo in_array($servicio['id'], $arr_serv_keys) ? 'checked="checked"' : '' ?> id="chserv_<?php echo $servicio['id'] ?>" value="<?php echo in_array($servicio['id'], $arr_serv_keys) ? $arr_servicios[$servicio['id']] : $servicio['precio'] ?>" style="width:30px; vertical-align:middle" disabled /><?php echo $servicio['nombre']; ?></li>
+                    <li>
+                        <input type="checkbox"
+                            name="servicios[<?php echo $servicio['id'] ?>]"
+                            checked="checked"
+                            id="chserv_<?php echo $servicio['id'] ?>"
+                            value="<?php echo $arr_servicios[$servicio['id']] ?>"
+                            style="width:30px; vertical-align:middle"
+                            disabled />
+                        <?php echo $servicio['nombre']; ?>
+                    </li>
                 <?php } ?>
-
             </ul>
-
-
         </fieldset>
+
         <fieldset class="datos">
             <legend>Observaciones</legend>
 

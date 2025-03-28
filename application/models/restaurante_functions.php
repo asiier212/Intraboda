@@ -42,8 +42,8 @@ class Restaurante_functions extends CI_Model
 
 		// Obtener el restaurante_id desde la sesión
 		$restaurante_id = $this->session->userdata('restaurante_id');
-		
-		
+
+
 
 		// Agregar filtro obligatorio por restaurante
 		if (trim($str_where) === "") {
@@ -107,6 +107,7 @@ class Restaurante_functions extends CI_Model
 			$data['telefono_novia'] = $fila->telefono_novia;
 			$data['foto'] = $fila->foto;
 			$data['restaurante'] = $fila->restaurante;
+			$data['id_restaurante'] = $fila->id_restaurante;
 			$data['telefono_novia'] = $fila->telefono_novia;
 			$data['direccion_restaurante'] = $fila->direccion_restaurante;
 			$data['telefono_restaurante'] = $fila->telefono_restaurante;
@@ -176,4 +177,109 @@ class Restaurante_functions extends CI_Model
 		}
 		return $data;
 	}
+
+	function GetEvents($id)
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id, nombre, orden, hora FROM momentos_espec WHERE cliente_id  = {$id} ORDER BY orden");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id'] = $fila->id;
+				$data[$i]['nombre'] = $fila->nombre;
+				$data[$i]['orden'] = $fila->orden;
+				$data[$i]['hora'] = $fila->hora;
+				$query2 = $this->db->query("SELECT COUNT(id) as num_canciones FROM canciones WHERE momento_id= {$fila->id}");
+				foreach ($query2->result() as $fila2) {
+					$data[$i]['num_canciones'] = $fila2->num_canciones;
+				}
+				$i++;
+			}
+		}
+		return $data;
+	}
+	function GetmomentosUser($id)
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT DISTINCT canciones.momento_id, momentos_espec.nombre, momentos_espec.orden, momentos_espec.hora FROM canciones INNER JOIN momentos_espec ON canciones.momento_id=momentos_espec.id WHERE canciones.client_id = {$id} ORDER BY momentos_espec.orden");
+	
+
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['momento_id'] = $fila->momento_id;
+				$data[$i]['nombre'] = $fila->nombre;
+				$data[$i]['orden'] = $fila->orden;
+				$data[$i]['hora'] = $fila->hora;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
+	function GetcancionesUser($id)
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id, momento_id, id_bd_canciones, orden FROM canciones WHERE client_id = {$id} ORDER BY momento_id, orden");
+	
+
+
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id'] = $fila->id;
+				$data[$i]['momento_id'] = $fila->momento_id;
+
+				$query2 = $this->db->query("SELECT artista, cancion FROM bd_canciones WHERE id = {$fila->id_bd_canciones}");
+				foreach ($query2->result() as $fila2) {
+					$data[$i]['artista'] = $fila2->artista;
+					$data[$i]['cancion'] = $fila2->cancion;
+				}
+
+				$data[$i]['orden'] = $fila->orden;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
+	function GetObservaciones_momesp($id)
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT canciones_observaciones.id, momento_id, comentario, nombre, DATE_FORMAT(fecha, '%d/%m/%Y') as fecha FROM canciones_observaciones INNER JOIN momentos_espec ON canciones_observaciones.momento_id = momentos_espec.id WHERE momentos_espec.cliente_id = {$id} ORDER BY momento_id");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id'] = $fila->id;
+				$data[$i]['momento_id'] = $fila->momento_id;
+				$data[$i]['nombre'] = $fila->nombre;
+				$data[$i]['comentario'] = $fila->comentario;
+				$data[$i]['fecha'] = $fila->fecha;
+				$i++;
+			}
+		}
+		return $data;
+	}
+	function GetObservaciones_general($id)
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id, comentario, DATE_FORMAT(fecha, '%d/%m/%Y') as fecha FROM canciones_observaciones WHERE id = {$id} AND momento_id = 0 ORDER BY id DESC");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id'] = $fila->id;
+				$data[$i]['comentario'] = $fila->comentario;
+				$data[$i]['fecha'] = $fila->fecha;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
+	
 }

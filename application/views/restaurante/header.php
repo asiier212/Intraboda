@@ -48,7 +48,7 @@
             </li>
 
             <li><a href="<?php echo base_url() ?>restaurante/clientes/view">Listar Clientes</a></li>
-            <?php if ($this->uri->segment(3) == 'view' && is_numeric($this->uri->segment(4))) : ?>
+            <?php if (($this->uri->segment(3) == 'view' && is_numeric($this->uri->segment(4))) || $this->uri->segment(2) == 'listado_canciones') : ?>
                 <li><a href="<?php echo base_url() ?>restaurante/listado_canciones/<?php echo $this->uri->segment(4); ?>">Canciones Elegidas</a></li>
             <?php endif; ?>
             <div class="loginDisplay">
