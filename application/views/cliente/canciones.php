@@ -246,8 +246,7 @@
 
 	<?php
 	$ahora = date("Y-m-d H:i:s");
-	$fecha_limite = ('2031-09-30 23:59:59');
-	// $fecha_limite = date("Y-m-d", strtotime('-2 day', strtotime($cliente['fecha_boda'])));
+	$fecha_limite = date("Y-m-d", strtotime('-2 day', strtotime($cliente['fecha_boda'])));
 
 	$tiempo_que_queda = strtotime($fecha_limite) - strtotime($ahora);
 	?>

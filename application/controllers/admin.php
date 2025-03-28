@@ -1858,9 +1858,6 @@ class Admin extends CI_Controller
 		$data['preguntas_encuesta'] = $this->admin_functions->GetPreguntasEncuesta();
 		$data['respuestas_preguntas'] = $this->admin_functions->GetRespuestasPreguntas();
 
-		$data['preguntas_encuesta_cliente'] = $this->admin_functions->GetPreguntasEncuestaDatosBoda();
-		$data['respuestas_encuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda();
-
 		$data['estadistica_encuestas'] = $this->admin_functions->GetEstadisticaEncuestas($fecha_desde, $fecha_hasta);
 
 		$view = "estadisticas";
