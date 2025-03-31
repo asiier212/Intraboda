@@ -20,11 +20,59 @@
     </h2>
     <div class="main form">
 
+    	<div id="popupInvitado" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+	background-color:rgba(0,0,0,0.5); z-index:1000;">
+
+    		<div style="background:white; width:400px; padding:20px; border-radius:10px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+    			<h3>Crear Cuenta Invitado</h3><br>
+
+    			<form method="post" action="">
+    				<p><label>Usuario:</label><br>
+    					<input type="text" name="nuevo_username" required />
+    				</p>
+    				<p><label>Contraseña:</label><br>
+    					<input type="text" name="nuevo_clave" required />
+    				</p>
+    				<p><label>Email:</label><br>
+    					<input type="email" name="nuevo_email" />
+    				</p>
+    				<p><label>Fecha de expiración:</label><br>
+    					<input type="date" name="nuevo_expiracion" />
+    				</p>
+    				<p style="text-align:center">
+    					<input type="submit" name="crear_invitado" value="Crear Invitado" />
+    				</p>
+    			</form>
+
+    			<a onclick="cerrarPopupInvitado()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:16px; color:#999">✖</a>
+    		</div>
+    	</div>
+
+    	<script type="text/javascript">
+    		function abrirPopupInvitado() {
+    			document.getElementById('popupInvitado').style.display = 'block';
+    		}
+
+    		function cerrarPopupInvitado() {
+    			document.getElementById('popupInvitado').style.display = 'none';
+    		}
+    	</script>
+
+		<p style="color:green;"><?php echo $msg_invitado; ?></p>
+
+
+
+
     	<form method="post" enctype="multipart/form-data">
 
     		<fieldset class="datos">
     			<legend>Datos de contacto</legend>
     			<span style="font-size:11px">Para editar los datos haz click sobre el texto</span>
+    			<?php if ($this->session->userdata('user_id') == 1) {
+					echo '<p style="text-align:right"><a style="text-decoration:underline; cursor:pointer;" onclick="abrirPopupInvitado()">Crear Cuenta Invitado</a></p>';
+				}
+				?>
+
     			<br clear="left" />
     			<fieldset style="width:350px">
     				<legend>Datos del Novio/a</legend>

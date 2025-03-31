@@ -393,6 +393,41 @@ class Cliente extends CI_Controller
 			$data['dj'] = $this->cliente_functions->GetDjAsignado($this->session->userdata('user_id'));
 		}
 
+		if (isset($_POST['crear_invitado'])) {
+			$username = trim($_POST['nuevo_username']);
+			$clave = $_POST['nuevo_clave'];
+			$email = trim($_POST['nuevo_email']);
+			$expiracion = !empty($_POST['nuevo_expiracion']) ? $_POST['nuevo_expiracion'] : null;
+			$id_cliente = $this->session->userdata('user_id');
+
+			$this->load->database();
+
+			// Verificar si ya existe el username
+			$existe = $this->db->get_where('invitado', array('username' => $username))->num_rows();
+			if ($existe > 0) {
+				$data['msg_invitado'] = "Ese nombre de usuario ya está en uso.";
+			} else {
+				$this->load->library('encrypt'); // Solo si usas encrypt
+				$clave_encriptada = $this->encrypt->encode($_POST['nuevo_clave']);
+
+				$data_insert = array(
+					'id_cliente' => $id_cliente,
+					'username' => $username,
+					'clave' => $clave_encriptada,
+					'email' => $email,
+					'fecha_expiracion' => $expiracion,
+					'valido' => 1
+				);
+
+				if ($this->db->insert('invitado', $data_insert)) {
+					$data['msg_invitado'] = "Invitado creado correctamente.";
+				} else {
+					$data['msg_invitado'] = "Error al guardar el invitado.";
+				}
+			}
+		}
+
+
 		// Cargar la vista con los datos
 		$this->_loadViews($data_header, $data, $data_footer, "cliente_details");
 	}
