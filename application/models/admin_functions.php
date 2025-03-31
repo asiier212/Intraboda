@@ -957,6 +957,39 @@ class Admin_functions extends CI_Model
 		}
 		return $data;
 	}
+
+	function GetInvitados()
+	{
+		$data = false;
+		$this->load->database();
+		$this->load->library('encrypt');
+		$query = $this->db->query("
+			SELECT invitado.id, invitado.id_cliente, clientes.nombre_novio, clientes.nombre_novia,
+				   invitado.username, invitado.clave, invitado.email, invitado.valido,
+				   invitado.fecha_creacion, invitado.fecha_expiracion
+			FROM invitado 
+			JOIN clientes ON invitado.id_cliente = clientes.id
+		");
+
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id'] = $fila->id;
+				$data[$i]['id_cliente'] = $fila->id_cliente;
+				$data[$i]['nombre_novio'] = $fila->nombre_novio;
+				$data[$i]['nombre_novia'] = $fila->nombre_novia;
+				$data[$i]['username'] = $fila->username;
+				$data[$i]['clave'] = $fila->clave;
+				$data[$i]['email'] = $fila->email;
+				$data[$i]['valido'] = $fila->valido;
+				$data[$i]['fecha_creacion'] = $fila->fecha_creacion;
+				$data[$i]['fecha_expiracion'] = $fila->fecha_expiracion;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
 	function DeleteServicio($id)
 	{
 		$this->load->database();

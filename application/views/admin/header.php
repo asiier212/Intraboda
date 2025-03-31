@@ -58,6 +58,7 @@
                     <li><a href="<?php echo base_url() ?>admin/comerciales/view">Comerciales</a></li>
                     <li><a href="<?php echo base_url() ?>admin/emails_enviados">Emails Automáticos</a></li>
                     <li><a href="<?php echo base_url() ?>admin/restaurantes/view">Restaurantes</a></li>
+                    <li><a href="<?php echo base_url() ?>admin/invitados">Usuarios Invitado</a></li>
                 </ul>
             </li>
             <li><a href="">Administración</a>

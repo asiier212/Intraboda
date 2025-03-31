@@ -225,6 +225,14 @@
     									</label><br>
     								<?php } ?>
 
+    								<!-- Mostrar respuestas "extra" ya guardadas -->
+    								<?php foreach ($respuestas_extra as $extra) { ?>
+    									<label>
+    										<input type="checkbox" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]" value="<?php echo htmlspecialchars($extra); ?>" checked>
+    										<?php echo htmlspecialchars($extra); ?>
+    									</label><br>
+    								<?php } ?>
+
     								<!-- Checkbox y campo de texto para "Otro..." -->
     								<div id="otros_inputs_<?php echo $pregunta['id_pregunta']; ?>">
     									<label>
@@ -235,13 +243,6 @@
     									</label>
     								</div>
 
-    								<!-- Mostrar respuestas "extra" ya guardadas -->
-    								<?php foreach ($respuestas_extra as $extra) { ?>
-    									<label>
-    										<input type="checkbox" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>][]" value="<?php echo htmlspecialchars($extra); ?>" checked>
-    										<?php echo htmlspecialchars($extra); ?>
-    									</label><br>
-    								<?php } ?>
 
     							<?php } elseif ($tipo == 'texto') { ?>
     								<input type="text" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]"

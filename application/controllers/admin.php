@@ -229,6 +229,37 @@ class Admin extends CI_Controller
 		file_put_contents($config_path, $new_content);
 	}
 
+	public function invitados()
+	{
+		$data_header = false;
+		$data = false;
+		$data_footer = false;
+
+		$data['invitados'] = $this->admin_functions->GetInvitados();
+		$this->_loadViews($data_header, $data, $data_footer, 'invitados');
+	}
+
+	public function eliminar_invitado($id)
+	{
+		$this->load->database();
+		$this->db->where('id', $id);
+		$this->db->delete('invitado');
+		redirect('admin/invitados');
+	}
+
+	public function accion($accion, $id)
+	{
+		$this->load->database();
+		if ($accion == "activar") {
+			$this->db->where('id', $id);
+			$this->db->update('invitado', array('valido' => 1));
+		} else if ($accion == "desactivar") {
+			$this->db->where('id', $id);
+			$this->db->update('invitado', array('valido' => 0));
+		}
+		redirect('admin/invitados');
+	}
+
 
 	function emails_enviados($acc = false, $id = false)
 	{
