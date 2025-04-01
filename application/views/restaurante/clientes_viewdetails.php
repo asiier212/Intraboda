@@ -4,29 +4,7 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>js/alertify/themes/alertify.default.css" />
 
 <script language="javascript">
-    $(document).ready(function() {
-        $('.edit_box').editable('<?php echo base_url() ?>index.php/ajax/updatedatocliente/<?php echo $cliente['id'] ?>', {
-            type: 'text',
-            submit: '<img src="<?php echo base_url() ?>img/save.gif" />',
-            tooltip: 'Click para editar...',
-        });
-    });
 
-    function deleteobservacion_admin(id) {
-        if (confirm("\u00BFSeguro que desea borrar la observaci\u00f3n?")) {
-
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo base_url() ?>index.php/ajax/deleteobservacion_admin',
-                data: 'id=' + id,
-                success: function(data) {
-                    $("#o_" + id).css("display", "none");
-                    $("#result").html("");
-                }
-            });
-        }
-        return false
-    }
 
     function muestra_componentes_equipo(componentes) {
         alertify.alert(componentes);
@@ -160,65 +138,11 @@
                                 ?>
                                 <small style="color: #666;">Fecha: <?php echo date('d/m/Y', strtotime($observacion['fecha'])); ?></small>
                             </div>
-
-                            <a href="#" onclick="return deleteobservacion_admin(<?php echo $observacion['id']; ?>)">
-                                <img src="<?php echo base_url(); ?>img/delete.gif" width="15" alt="Eliminar" style="margin-right: 10px" />
-                            </a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
 
-            <li style="padding:8px 0;"><strong>Añadir Observación:</strong></li>
-
-            <form method="post" action="" id="form_observacion" style="display: flex; flex-direction: column; align-items: left;">
-                <textarea name="observaciones" id="observaciones" style="width:100%; height:50px; float:left;"
-                    placeholder="Observación"></textarea>
-                <br>
-
-                <li style="padding:8px 0;"><strong>Link:</strong></li>
-                <input style="text-align: left" type="text" name="link" id="link"
-                    placeholder="Ej.: https://www.youtube.com/watch?v=a1Femq4NPxs" style="width:300px; float:left" />
-                <br>
-                <input type="submit" name="add_observ" value="Añadir">
-            </form>
-
-            <!-- Cargar TinyMCE -->
-            <script src="<?php echo base_url() . "js/tinymce/tinymce.min.js" ?>"></script>
-
-            <script>
-                // Inicialización de TinyMCE
-                document.addEventListener("DOMContentLoaded", function() {
-                    tinymce.init({
-                        selector: 'textarea',
-                        toolbar: 'bold italic fontsizeselect',
-                        font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
-                        content_style: 'body { font-size: 14px; }',
-                        branding: false,
-                        menubar: false,
-                        height: 200,
-                    });
-                });
-
-                document.addEventListener("DOMContentLoaded", function() {
-                    var form = document.getElementById("form_observacion");
-                    var textarea = document.getElementById("observaciones");
-
-                    // Eliminar required porque el campo está oculto
-                    textarea.removeAttribute("required");
-
-                    // Agregar validación en el submit
-                    form.addEventListener("submit", function(event) {
-                        var editor = tinymce.get("observaciones"); // Obtener instancia de TinyMCE
-                        var content = editor ? editor.getContent().trim() : textarea.value.trim(); // Obtener contenido
-
-                        if (!content) {
-                            alert("El campo de observación no puede estar vacío.");
-                            event.preventDefault(); // Evita el envío del formulario
-                        }
-                    });
-                });
-            </script>
 
             <div style="text-align:center; clear: left; margin-top:20px">
                 <?php if ($this->session->flashdata('msg')): ?>

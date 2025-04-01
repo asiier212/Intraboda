@@ -89,26 +89,6 @@ class Restaurante extends CI_Controller
 		if ($acc == 'view') {
 			$this->load->database();
 			if ($id) {
-				if ($_POST) {
-
-					$this->load->database();
-
-					if (isset($_POST['add_observ']) && !empty($_POST['observaciones']) && $id) {
-						$data_insert = array(
-							'id_cliente' => $id,
-							'comentario' => $_POST['observaciones'],
-							'link' => $_POST['link']
-						);
-
-						if ($this->db->insert('observaciones', $data_insert)) {
-							$this->session->set_flashdata('msg', 'Se ha añadido con éxito');
-						} else {
-							$this->session->set_flashdata('msg', 'Error al añadir la observación.');
-						}
-
-						redirect("restaurante/clientes/view/{$id}");
-					}
-				}
 
 				$data['cliente'] = $this->restaurante_functions->GetCliente($id);
 				$arr_servicios = unserialize($data['cliente']['servicios']);

@@ -223,6 +223,10 @@ class Admin_functions extends CI_Model
 			if (!empty($cliente->email_novia)) {
 				$destinatarios[] = $cliente->email_novia;
 			}
+			// ⚠️ Solución clave: duplicar el último elemento para forzar al sendEmail a procesarlo
+			if (count($destinatarios) === 2) {
+				$destinatarios[] = end($destinatarios); // duplicamos el último
+			}
 		}
 
 		if (empty($destinatarios)) {
