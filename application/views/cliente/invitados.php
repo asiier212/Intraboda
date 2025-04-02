@@ -1,6 +1,60 @@
 <h2>Usuarios Invitados</h2>
 <fieldset>
     <legend>Usuarios Invitados</legend>
+    <div id="popupInvitado" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:1000;">
+
+        <div style="background:white; width:400px; padding:20px; border-radius:10px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+            <h3>Crear Cuenta Invitado</h3><br>
+
+            <form method="post" action="">
+                <p><label>Usuario:</label><br>
+                    <input type="text" name="nuevo_username" required />
+                </p>
+                <p><label>Contraseña:</label><br>
+                    <input type="text" name="nuevo_clave" required />
+                </p>
+                <p><label>Email:</label><br>
+                    <input type="email" name="nuevo_email" required />
+                </p>
+                <p><label>Fecha de expiración:</label><br>
+                    <input type="date" name="nuevo_expiracion" />
+                </p>
+                <?php
+                $msg_invitado = $this->session->flashdata('msg_invitado');
+                if (!empty($msg_invitado)) {
+                    echo '<div style="color:red; font-weight:bold; margin-bottom:10px; text-align:center;">' . $msg_invitado . '</div>';
+                }
+                ?>
+                <p style="text-align:center">
+                    <input type="submit" name="crear_invitado" value="Crear Invitado" />
+                </p>
+            </form>
+
+            <?php if (!empty($msg_invitado)): ?>
+                <script type="text/javascript">
+                    window.onload = function() {
+                        document.getElementById('popupInvitado').style.display = 'block';
+                    };
+                </script>
+            <?php endif; ?>
+
+
+            <a onclick="cerrarPopupInvitado()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:16px; color:#999">✖</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function abrirPopupInvitado() {
+            document.getElementById('popupInvitado').style.display = 'block';
+        }
+
+        function cerrarPopupInvitado() {
+            document.getElementById('popupInvitado').style.display = 'none';
+        }
+    </script>
+
+    <p style="text-align:right;"><a style="text-decoration:underline; cursor:pointer;" onclick="abrirPopupInvitado()">Crear Cuenta Invitado</a></p>
+
     <p style="font-style:italic; color: gray">Listado de invitados creados por los clientes. Puedes Desactivarlos o eliminarlos.</p>
     <form method="get" style="margin-bottom: 20px; display: flex; gap: 10px; align-items: center;">
         <label for="filtro_campo">Buscar por:</label>
@@ -39,12 +93,7 @@
             $nombre_cliente = $inv['nombre_novio'] . " y " . $inv['nombre_novia'];
             ?>
             <tr>
-                <td>
-                    <a href="<?php echo base_url() . 'admin/clientes/view/' . $inv['id_cliente']; ?>">
-                        <?php echo $nombre_cliente; ?>
-                    </a>
-                </td>
-
+                <td><?php echo $nombre_cliente; ?></td>
                 <td><span class="edit_box" id="username_<?php echo $inv['id']; ?>"><?php echo htmlspecialchars($inv['username']); ?></span></td>
                 <td><span class="edit_box" id="email_<?php echo $inv['id']; ?>"><?php echo htmlspecialchars($inv['email']); ?></span></td>
                 <td><span class="edit_box" id="clave_<?php echo $inv['id']; ?>"><?php echo htmlspecialchars($clave_plana); ?></span></td>
@@ -68,12 +117,12 @@
                     <?php if ($expirada): ?>
                         <span style="color:gray;">Expirado</span>
                     <?php else: ?>
-                        <a href="<?php echo base_url() . 'admin/accion/' . ($inv['valido'] ? 'desactivar' : 'activar') . '/' . $inv['id']; ?>">
+                        <a href="<?php echo base_url() . 'cliente/accion/' . ($inv['valido'] ? 'desactivar' : 'activar') . '/' . $inv['id']; ?>">
                             <?php echo $inv['valido'] ? 'Desactivar' : 'Activar'; ?>
                         </a>
                     <?php endif; ?>
                     |
-                    <a href="<?php echo base_url() . 'admin/eliminar_invitado/' . $inv['id']; ?>" onclick="return confirm('¿Eliminar este invitado?')">
+                    <a href="<?php echo base_url() . 'cliente/eliminar_invitado/' . $inv['id']; ?>" onclick="return confirm('¿Eliminar este invitado?')">
                         Eliminar
                     </a>
                 </td>
@@ -92,6 +141,22 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
+        $(document).ajaxError(function(event, jqxhr, settings, thrownError) {
+            if (settings.url.indexOf("updateinvitado") !== -1) {
+                if (jqxhr.status === 409) {
+                    alert(jqxhr.responseText);
+                } else if (jqxhr.status === 400 || jqxhr.status === 500) {
+                    alert("Error: " + jqxhr.responseText);
+                } else {
+                    alert("Error desconocido al guardar el campo.");
+                }
+
+                // Recargar para que se vea todo en estado correcto
+                window.location.reload();
+            }
+        });
+
+
         $('.edit_box').each(function() {
             var id = $(this).attr('id');
             var options = {
@@ -108,6 +173,11 @@
                         alert('El campo no puede estar vacío');
                         return false;
                     }
+                },
+                submitdata: function(value, settings) {
+                    return {
+                        id: this.id
+                    };
                 },
                 callback: function(value, settings) {
                     $(this).html(value);
@@ -134,15 +204,26 @@
                             const idCliente = this.id.split('_')[1];
 
                             const baseUrl = '<?php echo base_url(); ?>';
-                            const enlaceAccion = `<a href="${baseUrl}admin/accion/${accion}/${idCliente}">${texto}</a>`;
+                            const enlaceAccion = `<a href="${baseUrl}cliente/accion/${accion}/${idCliente}">${texto}</a>`;
                             const enlaceEliminar = tdAcciones.find('a:contains("Eliminar")')[0].outerHTML;
 
                             tdAcciones.html(`${enlaceAccion} | ${enlaceEliminar}`);
                         }
                     }
-                }
+                },
+                error: function(xhr) {
+                    if (xhr.status === 409) {
+                        alert(xhr.responseText); // Email duplicado
+                    } else if (xhr.status === 400 || xhr.status === 500) {
+                        alert("Error: " + xhr.responseText);
+                    } else {
+                        alert("Ocurrió un error inesperado.");
+                    }
 
+                    $(this).html(this.revert); // Revertir si falla
+                }
             };
+
 
             if (id.startsWith('expira_')) {
                 options.onedit = function() {
@@ -178,6 +259,10 @@
                     }, 100);
                 };
             }
+            $(this).on('click', function() {
+                window.lastEditedElement = this;
+                $(this).attr('data-original', $(this).html());
+            });
 
             $(this).editable('<?php echo base_url() ?>index.php/ajax/updateinvitado', options);
         });

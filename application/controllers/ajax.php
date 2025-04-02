@@ -92,82 +92,95 @@ class Ajax extends CI_Controller
 	}
 
 	public function updateinvitado()
-{
-    $this->load->library('encrypt');
-    $this->load->database();
+	{
+		$this->load->library('encrypt');
+		$this->load->database();
 
-    if (!isset($_POST['id']) || !isset($_POST['value'])) {
-        http_response_code(400);
-        echo "Datos incompletos.";
-        return;
-    }
+		if (!isset($_POST['id']) || !isset($_POST['value'])) {
+			http_response_code(400);
+			echo "Datos incompletos.";
+			return;
+		}
 
-    $element_id = $_POST['id'];
-    $nuevo_valor = trim($_POST['value']);
+		$element_id = $_POST['id']; // Ej: email_5
+		$nuevo_valor = trim($_POST['value']);
 
-    if (strpos($element_id, "_") === false) {
-        http_response_code(400);
-        echo "Formato incorrecto de ID.";
-        return;
-    }
+		if (strpos($element_id, "_") === false) {
+			http_response_code(400);
+			echo "Formato incorrecto de ID.";
+			return;
+		}
 
-    list($campo, $id) = explode("_", $element_id);
+		list($campo, $id) = explode("_", $element_id);
+		if (!is_numeric($id)) {
+			http_response_code(400);
+			echo "ID inválido.";
+			return;
+		}
 
-    if (!is_numeric($id)) {
-        http_response_code(400);
-        echo "ID inválido.";
-        return;
-    }
+		// Obtener id_cliente del invitado actual
+		$consulta = $this->db->get_where('invitado', array('id' => $id));
+		if ($consulta->num_rows() == 0) {
+			http_response_code(404);
+			echo "Invitado no encontrado.";
+			return;
+		}
+		$invitado = $consulta->row();
+		$id_cliente = $invitado->id_cliente;
 
-    // Mapeo de campos visibles a columnas reales en la base de datos
-    if ($campo === 'expira') {
-        $campo_db = 'fecha_expiracion';
-    } else {
-        $campo_db = $campo;
-    }
+		// Validación de email duplicado para el mismo cliente
+		if ($campo == 'email') {
+			$this->db->where('email', $nuevo_valor);
+			$this->db->where('id_cliente', $id_cliente);
+			$this->db->where('id !=', $id); // excluir el actual
+			$existe = $this->db->get('invitado')->num_rows();
+			if ($existe > 0) {
+				http_response_code(409);
+				echo "Este email ya está en uso por otro invitado de este cliente.";
+				return;
+			}
+		}
 
-    // Encriptar clave si corresponde
-    if ($campo === 'clave') {
-        if ($nuevo_valor === '') {
-            http_response_code(400);
-            echo "La clave no puede estar vacía.";
-            return;
-        }
-        $nuevo_valor = $this->encrypt->encode($nuevo_valor);
-    }
+		if ($campo == 'clave') {
+			if ($nuevo_valor === '') {
+				http_response_code(400);
+				echo "La clave no puede estar vacía.";
+				return;
+			}
+			$nuevo_valor = $this->encrypt->encode($nuevo_valor);
+		}
 
-    // Formatear fecha si es expira
-    if ($campo === 'expira') {
-        $fecha = DateTime::createFromFormat('d/m/Y', $nuevo_valor);
-        if (!$fecha || $fecha->format('d/m/Y') !== $nuevo_valor) {
-            http_response_code(400);
-            echo "Formato de fecha inválido. Usa dd/mm/yyyy.";
-            return;
-        }
-        $nuevo_valor = $fecha->format('Y-m-d');
-    }
+		if ($campo == 'expira') {
+			$fecha = DateTime::createFromFormat('d/m/Y', $nuevo_valor);
+			if (!$fecha || $fecha->format('d/m/Y') !== $nuevo_valor) {
+				http_response_code(400);
+				echo "Formato de fecha inválido. Usa dd/mm/yyyy.";
+				return;
+			}
+			$nuevo_valor = $fecha->format('Y-m-d');
+			$campo = 'fecha_expiracion'; // Mapear a nombre real
+		}
 
-    // Actualización
-    $this->db->where('id', $id);
-    $exito = $this->db->update('invitado', array($campo_db => $nuevo_valor));
+		$this->db->where('id', $id);
+		$exito = $this->db->update('invitado', array($campo => $nuevo_valor));
 
-    if (!$exito) {
-        http_response_code(500);
-        echo "Error al actualizar la base de datos.";
-        return;
-    }
+		if (!$exito) {
+			http_response_code(500);
+			echo "Error al actualizar la base de datos.";
+			return;
+		}
 
-    // Devolver valor actualizado
-    if ($campo === 'clave') {
-        echo $this->encrypt->decode($nuevo_valor);
-    } elseif ($campo === 'expira') {
-        echo $fecha->format('d/m/Y');
-    } else {
-        echo $nuevo_valor;
-    }
-}
+		if ($campo == 'clave') {
+			echo $this->encrypt->decode($nuevo_valor);
+		} elseif ($campo == 'fecha_expiracion') {
+			echo $fecha->format('d/m/Y');
+		} else {
+			echo $nuevo_valor;
+		}
+	}
 
-	
+
+
 
 	function buscarartista($nombre)
 	{

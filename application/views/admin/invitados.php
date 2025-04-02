@@ -92,6 +92,22 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
+        $(document).ajaxError(function(event, jqxhr, settings, thrownError) {
+    if (settings.url.indexOf("updateinvitado") !== -1) {
+        if (jqxhr.status === 409) {
+            alert(jqxhr.responseText);
+        } else if (jqxhr.status === 400 || jqxhr.status === 500) {
+            alert("Error: " + jqxhr.responseText);
+        } else {
+            alert("Error desconocido al guardar el campo.");
+        }
+
+        // Recargar para que se vea todo en estado correcto
+        window.location.reload();
+    }
+});
+
+
         $('.edit_box').each(function() {
             var id = $(this).attr('id');
             var options = {
@@ -100,7 +116,7 @@
                 tooltip: 'Haz clic para editar...',
                 indicator: 'Guardando...',
                 cssclass: 'editable-form',
-                onblur: 'ignore', // no cerrar si se hace clic fuera
+                onblur: 'ignore',
                 event: 'click',
                 onsubmit: function(settings, original) {
                     const input = $('input', this);
@@ -109,14 +125,16 @@
                         return false;
                     }
                 },
+                submitdata: function(value, settings) {
+                    return {
+                        id: this.id
+                    };
+                },
                 callback: function(value, settings) {
                     $(this).html(value);
 
-                    // Si es el campo fecha de expiración, actualizar columna de acciones
                     if (this.id.startsWith('expira_')) {
                         const id = this.id.split('_')[1];
-
-                        // Parsear fecha dd/mm/yyyy a objeto Date
                         const parts = value.split('/');
                         const nuevaFecha = new Date(parts[2], parts[1] - 1, parts[0]);
                         const hoy = new Date();
@@ -140,9 +158,20 @@
                             tdAcciones.html(`${enlaceAccion} | ${enlaceEliminar}`);
                         }
                     }
-                }
+                },
+                error: function(xhr) {
+                    if (xhr.status === 409) {
+                        alert(xhr.responseText); // Email duplicado
+                    } else if (xhr.status === 400 || xhr.status === 500) {
+                        alert("Error: " + xhr.responseText);
+                    } else {
+                        alert("Ocurrió un error inesperado.");
+                    }
 
+                    $(this).html(this.revert); // Revertir si falla
+                }
             };
+
 
             if (id.startsWith('expira_')) {
                 options.onedit = function() {
@@ -178,6 +207,10 @@
                     }, 100);
                 };
             }
+            $(this).on('click', function() {
+                window.lastEditedElement = this;
+                $(this).attr('data-original', $(this).html());
+            });
 
             $(this).editable('<?php echo base_url() ?>index.php/ajax/updateinvitado', options);
         });

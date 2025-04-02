@@ -201,16 +201,76 @@ class Cliente extends CI_Controller
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-	
+
 		// Capturar filtros desde GET
 		$filtro_campo = $this->input->get('filtro_campo');
 		$filtro_valor = $this->input->get('filtro_valor');
 		$solo_activos = $this->input->get('solo_activos');
-	
+
 		// Pasar filtros al modelo
 		$data['invitados'] = $this->cliente_functions->GetInvitados($filtro_campo, $filtro_valor, $solo_activos);
-	
+
+		if (isset($_POST['crear_invitado'])) {
+			$username = trim($_POST['nuevo_username']);
+			$clave = $_POST['nuevo_clave'];
+			$email = trim($_POST['nuevo_email']);
+			$expiracion = !empty($_POST['nuevo_expiracion']) ? $_POST['nuevo_expiracion'] : null;
+			$id_cliente = $this->session->userdata('user_id');
+
+			$this->load->database();
+
+			$this->db->where('email', $email);
+			$this->db->where('id_cliente', $id_cliente);
+			$existe = $this->db->get('invitado')->num_rows();
+			
+			if ($existe > 0) {
+				$this->session->set_flashdata('msg_invitado', 'Ese email ya está registrado por ti.');
+				redirect($_SERVER['HTTP_REFERER']);
+			}
+					
+
+			$this->load->library('encrypt'); // Solo si usas encrypt
+			$clave_encriptada = $this->encrypt->encode($_POST['nuevo_clave']);
+
+			$data_insert = array(
+				'id_cliente' => $id_cliente,
+				'username' => $username,
+				'clave' => $clave_encriptada,
+				'email' => $email,
+				'fecha_expiracion' => $expiracion,
+				'valido' => 1
+			);
+
+			if ($this->db->insert('invitado', $data_insert)) {
+				$data['msg_invitado'] = "Invitado creado correctamente.";
+				redirect('cliente/invitados', 'location'); // Redirigir a la lista de invitados después de crear uno nuevo
+			} else {
+				$data['msg_invitado'] = "Error al guardar el invitado.";
+			}
+		}
+
 		$this->_loadViews($data_header, $data, $data_footer, 'invitados');
+	}
+
+	public function eliminar_invitado($id)
+	{
+		$this->load->database();
+		$this->db->where('id', $id);
+		$this->db->delete('invitado');
+		redirect('cliente/invitados');
+	}
+
+	public function accion($accion, $id)
+	{
+		$this->load->database();
+		if ($accion == "activar") {
+			$this->db->where('id', $id);
+			$this->db->update('invitado', array('valido' => 1));
+		} else if ($accion == "desactivar") {
+			$this->db->where('id', $id);
+			$this->db->update('invitado', array('valido' => 0));
+		}
+		redirect('cliente/invitados');
 	}
 
 	public function topSongs()
@@ -420,29 +480,33 @@ class Cliente extends CI_Controller
 
 			$this->load->database();
 
-			// Verificar si ya existe el username
-			$existe = $this->db->get_where('invitado', array('email' => $email))->num_rows();
+			$this->db->where('email', $email);
+			$this->db->where('id_cliente', $id_cliente);
+			$existe = $this->db->get('invitado')->num_rows();
+			
 			if ($existe > 0) {
-				$data['msg_invitado'] = "Ese email ya está en uso.";
+				$this->session->set_flashdata('msg_invitado', 'Ese email ya está registrado por ti.');
+				redirect($_SERVER['HTTP_REFERER']);
+			}
+					
+
+			$this->load->library('encrypt'); // Solo si usas encrypt
+			$clave_encriptada = $this->encrypt->encode($_POST['nuevo_clave']);
+
+			$data_insert = array(
+				'id_cliente' => $id_cliente,
+				'username' => $username,
+				'clave' => $clave_encriptada,
+				'email' => $email,
+				'fecha_expiracion' => $expiracion,
+				'valido' => 1
+			);
+
+			if ($this->db->insert('invitado', $data_insert)) {
+				$data['msg_invitado'] = "Invitado creado correctamente.";
+				redirect('cliente/invitados', 'location'); // Redirigir a la lista de invitados después de crear uno nuevo
 			} else {
-				$this->load->library('encrypt'); // Solo si usas encrypt
-				$clave_encriptada = $this->encrypt->encode($_POST['nuevo_clave']);
-
-				$data_insert = array(
-					'id_cliente' => $id_cliente,
-					'username' => $username,
-					'clave' => $clave_encriptada,
-					'email' => $email,
-					'fecha_expiracion' => $expiracion,
-					'valido' => 1
-				);
-
-				if ($this->db->insert('invitado', $data_insert)) {
-					$data['msg_invitado'] = "Invitado creado correctamente.";
-					redirect('cliente/invitados', 'location'); // Redirigir a la lista de invitados después de crear uno nuevo
-				} else {
-					$data['msg_invitado'] = "Error al guardar el invitado.";
-				}
+				$data['msg_invitado'] = "Error al guardar el invitado.";
 			}
 		}
 
