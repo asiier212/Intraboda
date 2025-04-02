@@ -5457,3 +5457,5735 @@ DEBUG - 2025-04-02 12:55:11 --> UTF-8 Support Enabled
 DEBUG - 2025-04-02 12:55:11 --> URI Class Initialized
 DEBUG - 2025-04-02 12:55:11 --> Router Class Initialized
 ERROR - 2025-04-02 12:55:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:08:18 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:18 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Router Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Output Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Security Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Input Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:08:18 --> Language Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:08:18 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Session Class Initialized
+DEBUG - 2025-04-02 13:08:18 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:08:18 --> Session routines successfully run
+DEBUG - 2025-04-02 13:08:19 --> Model Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Model Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:08:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:08:19 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:08:19 --> File loaded: application/views/admin/clientes_view.php
+DEBUG - 2025-04-02 13:08:19 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:08:19 --> Final output sent to browser
+DEBUG - 2025-04-02 13:08:19 --> Total execution time: 0.0944
+DEBUG - 2025-04-02 13:08:19 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:19 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Router Class Initialized
+ERROR - 2025-04-02 13:08:19 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:08:19 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:19 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Router Class Initialized
+ERROR - 2025-04-02 13:08:19 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:08:19 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:19 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Router Class Initialized
+ERROR - 2025-04-02 13:08:19 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:08:19 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:19 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Router Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Config Class Initialized
+ERROR - 2025-04-02 13:08:19 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:08:19 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:19 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:19 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Router Class Initialized
+DEBUG - 2025-04-02 13:08:19 --> Router Class Initialized
+ERROR - 2025-04-02 13:08:19 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:08:19 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:08:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Router Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Output Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Security Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Input Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:08:20 --> Language Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:08:20 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Session Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:08:20 --> Session routines successfully run
+DEBUG - 2025-04-02 13:08:20 --> Model Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Model Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:08:20 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:08:20 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:08:20 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:08:20 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:08:20 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:08:20 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:08:20 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:08:20 --> Final output sent to browser
+DEBUG - 2025-04-02 13:08:20 --> Total execution time: 0.2137
+DEBUG - 2025-04-02 13:08:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:08:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:08:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:08:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:08:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:08:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:08:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Router Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:08:21 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:08:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:08:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:08:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:08:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:08:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:11:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Router Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Output Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Security Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Input Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:11:47 --> Language Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:11:47 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Session Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:11:47 --> Session routines successfully run
+DEBUG - 2025-04-02 13:11:47 --> Model Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Model Class Initialized
+DEBUG - 2025-04-02 13:11:47 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:11:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:11:47 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:11:48 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:11:48 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:11:48 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:11:49 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:11:49 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:11:49 --> Final output sent to browser
+DEBUG - 2025-04-02 13:11:49 --> Total execution time: 1.5985
+DEBUG - 2025-04-02 13:11:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Router Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Router Class Initialized
+ERROR - 2025-04-02 13:11:49 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:11:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:11:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Router Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:11:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:11:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Router Class Initialized
+ERROR - 2025-04-02 13:11:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:11:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Router Class Initialized
+ERROR - 2025-04-02 13:11:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:11:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:49 --> Router Class Initialized
+ERROR - 2025-04-02 13:11:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:11:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Router Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Output Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Security Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Input Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:11:50 --> Language Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:11:50 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Session Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:11:50 --> Session routines successfully run
+DEBUG - 2025-04-02 13:11:50 --> Model Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Model Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:11:50 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:11:50 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:11:50 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:11:50 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:11:50 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:11:50 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:11:50 --> Final output sent to browser
+DEBUG - 2025-04-02 13:11:50 --> Total execution time: 0.2079
+DEBUG - 2025-04-02 13:11:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Router Class Initialized
+ERROR - 2025-04-02 13:11:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:11:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Router Class Initialized
+ERROR - 2025-04-02 13:11:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:11:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Router Class Initialized
+ERROR - 2025-04-02 13:11:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:11:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Router Class Initialized
+ERROR - 2025-04-02 13:11:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:11:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:11:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Router Class Initialized
+DEBUG - 2025-04-02 13:11:50 --> Router Class Initialized
+ERROR - 2025-04-02 13:11:50 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:11:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:12:55 --> Config Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:12:55 --> URI Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Router Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Output Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Security Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Input Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:12:55 --> Language Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:12:55 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Session Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:12:55 --> Session routines successfully run
+DEBUG - 2025-04-02 13:12:55 --> Model Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Model Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:12:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:12:55 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:12:55 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:12:55 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:12:55 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:12:56 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:12:56 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:12:56 --> Final output sent to browser
+DEBUG - 2025-04-02 13:12:56 --> Total execution time: 1.1628
+DEBUG - 2025-04-02 13:12:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:12:57 --> URI Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Router Class Initialized
+ERROR - 2025-04-02 13:12:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:12:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:12:57 --> URI Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Router Class Initialized
+ERROR - 2025-04-02 13:12:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:12:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:12:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:12:57 --> URI Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> URI Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Router Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Router Class Initialized
+ERROR - 2025-04-02 13:12:57 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:12:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:12:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:12:57 --> URI Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Router Class Initialized
+ERROR - 2025-04-02 13:12:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:12:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:12:57 --> URI Class Initialized
+DEBUG - 2025-04-02 13:12:57 --> Router Class Initialized
+ERROR - 2025-04-02 13:12:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:34 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:34 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Router Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Output Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Security Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Input Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:13:34 --> Language Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:13:34 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Session Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:13:34 --> Session routines successfully run
+DEBUG - 2025-04-02 13:13:34 --> Model Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Model Class Initialized
+DEBUG - 2025-04-02 13:13:34 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:13:34 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:13:35 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:13:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:13:35 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:13:35 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:35 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Router Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Output Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Security Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Input Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:13:35 --> Language Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:13:35 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Session Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:13:35 --> Session routines successfully run
+DEBUG - 2025-04-02 13:13:35 --> Model Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Model Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:13:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:13:35 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:13:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:13:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:13:35 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:13:35 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:13:35 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:13:35 --> Final output sent to browser
+DEBUG - 2025-04-02 13:13:35 --> Total execution time: 1.0243
+DEBUG - 2025-04-02 13:13:35 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:13:35 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:13:35 --> Final output sent to browser
+DEBUG - 2025-04-02 13:13:35 --> Total execution time: 0.3647
+DEBUG - 2025-04-02 13:13:36 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:36 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Router Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:13:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:36 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:36 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:36 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:36 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:36 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:36 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:36 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:36 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:36 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:36 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:45 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:45 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Router Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Output Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Security Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Input Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:13:45 --> Language Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:13:45 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Session Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:13:45 --> Session routines successfully run
+DEBUG - 2025-04-02 13:13:45 --> Model Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Model Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:13:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:13:45 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:13:45 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:13:45 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:13:45 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:13:46 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:13:46 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:13:46 --> Final output sent to browser
+DEBUG - 2025-04-02 13:13:46 --> Total execution time: 0.9385
+DEBUG - 2025-04-02 13:13:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Router Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:47 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:47 --> URI Class Initialized
+ERROR - 2025-04-02 13:13:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:47 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Router Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:47 --> URI Class Initialized
+ERROR - 2025-04-02 13:13:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:47 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:47 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:52 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:52 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Router Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Output Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Security Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Input Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:13:52 --> Language Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:13:52 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Session Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:13:52 --> Session routines successfully run
+DEBUG - 2025-04-02 13:13:52 --> Model Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Model Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:13:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:13:52 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:13:52 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:13:52 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:13:52 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:13:53 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:13:53 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:13:53 --> Final output sent to browser
+DEBUG - 2025-04-02 13:13:53 --> Total execution time: 0.9037
+DEBUG - 2025-04-02 13:13:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:13:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:13:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Router Class Initialized
+DEBUG - 2025-04-02 13:13:53 --> Router Class Initialized
+ERROR - 2025-04-02 13:13:53 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:13:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:19 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:19 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Output Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Security Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Input Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:14:19 --> Language Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:14:19 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Session Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:14:19 --> Session routines successfully run
+DEBUG - 2025-04-02 13:14:19 --> Model Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Model Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:14:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:14:19 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:14:19 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:14:19 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:14:19 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:14:19 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:14:19 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:14:19 --> Final output sent to browser
+DEBUG - 2025-04-02 13:14:19 --> Total execution time: 0.5109
+DEBUG - 2025-04-02 13:14:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:20 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:20 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> URI Class Initialized
+ERROR - 2025-04-02 13:14:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:20 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:20 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Output Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Security Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Input Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:14:21 --> Language Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:14:21 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Session Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:14:21 --> Session routines successfully run
+DEBUG - 2025-04-02 13:14:21 --> Model Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Model Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:14:21 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:14:21 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:14:21 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:14:21 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:14:21 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:14:21 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:14:21 --> Final output sent to browser
+DEBUG - 2025-04-02 13:14:21 --> Total execution time: 0.1775
+DEBUG - 2025-04-02 13:14:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Config Class Initialized
+ERROR - 2025-04-02 13:14:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:14:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:22 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:35 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:35 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Output Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Security Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Input Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:14:35 --> Language Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:14:35 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Session Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:14:35 --> Session routines successfully run
+DEBUG - 2025-04-02 13:14:35 --> Model Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Model Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:14:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:14:35 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:14:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:14:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:14:35 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:14:37 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:14:37 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:14:37 --> Final output sent to browser
+DEBUG - 2025-04-02 13:14:37 --> Total execution time: 1.5719
+DEBUG - 2025-04-02 13:14:37 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:37 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:37 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:37 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:37 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:37 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:37 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:37 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:37 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:37 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:37 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:37 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:37 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Output Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Security Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Input Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:14:50 --> Language Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:14:50 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Session Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:14:50 --> Session routines successfully run
+DEBUG - 2025-04-02 13:14:50 --> Model Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Model Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:14:50 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:14:50 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:14:50 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:14:50 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:14:50 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:14:51 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:14:51 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:14:51 --> Final output sent to browser
+DEBUG - 2025-04-02 13:14:51 --> Total execution time: 0.9615
+DEBUG - 2025-04-02 13:14:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:51 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:14:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:14:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:14:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:14:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Router Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:14:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:14:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:14:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:14:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:15:27 --> Config Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:15:27 --> URI Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Router Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Output Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Security Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Input Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:15:27 --> Language Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:15:27 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Session Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:15:27 --> Session routines successfully run
+DEBUG - 2025-04-02 13:15:27 --> Model Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Model Class Initialized
+DEBUG - 2025-04-02 13:15:27 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:15:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:15:28 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:15:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:15:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:15:28 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:15:28 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:15:28 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:15:28 --> Final output sent to browser
+DEBUG - 2025-04-02 13:15:28 --> Total execution time: 0.8949
+DEBUG - 2025-04-02 13:15:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:15:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Router Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:15:29 --> Config Class Initialized
+ERROR - 2025-04-02 13:15:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:15:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Router Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:15:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:15:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:15:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:15:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:15:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:15:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:15:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:15:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:15:29 --> Router Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:15:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:15:29 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:15:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:17:03 --> Config Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:17:03 --> URI Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Router Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Output Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Security Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Input Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:17:03 --> Language Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:17:03 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Session Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:17:03 --> Session routines successfully run
+DEBUG - 2025-04-02 13:17:03 --> Model Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Model Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:17:03 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:17:03 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:17:03 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:17:03 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:17:03 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:17:04 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:17:04 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:17:04 --> Final output sent to browser
+DEBUG - 2025-04-02 13:17:04 --> Total execution time: 0.9650
+DEBUG - 2025-04-02 13:17:04 --> Config Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:17:04 --> URI Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Router Class Initialized
+ERROR - 2025-04-02 13:17:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:17:04 --> Config Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:17:04 --> URI Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Config Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Router Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Utf8 Class Initialized
+ERROR - 2025-04-02 13:17:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:17:04 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:17:04 --> URI Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Config Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Router Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:17:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:17:04 --> Config Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> URI Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Router Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:17:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:17:04 --> URI Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Config Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Router Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:17:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:17:04 --> URI Class Initialized
+DEBUG - 2025-04-02 13:17:04 --> Router Class Initialized
+ERROR - 2025-04-02 13:17:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:18:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:18:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Router Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Output Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Security Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Input Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:18:20 --> Language Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:18:20 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Session Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:18:20 --> Session routines successfully run
+DEBUG - 2025-04-02 13:18:20 --> Model Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Model Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:18:20 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:18:20 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:18:20 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:18:20 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:18:20 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:18:20 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:18:20 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:18:20 --> Final output sent to browser
+DEBUG - 2025-04-02 13:18:20 --> Total execution time: 0.9906
+DEBUG - 2025-04-02 13:18:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:18:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:18:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:18:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Router Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Router Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:18:21 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:18:21 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:18:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:18:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:18:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:18:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:18:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:18:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:18:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:18:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:18:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:18:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:18:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:04 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:04 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Router Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Output Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Security Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Input Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:19:04 --> Language Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:19:04 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Session Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:19:04 --> Session routines successfully run
+DEBUG - 2025-04-02 13:19:04 --> Model Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Model Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:19:04 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:19:04 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:19:04 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:19:04 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:19:04 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:19:05 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:19:05 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:19:05 --> Final output sent to browser
+DEBUG - 2025-04-02 13:19:05 --> Total execution time: 0.9501
+DEBUG - 2025-04-02 13:19:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:05 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Router Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:19:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:06 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:28 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:28 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Router Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Output Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Security Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Input Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:19:28 --> Language Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:19:28 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Session Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:19:28 --> Session routines successfully run
+DEBUG - 2025-04-02 13:19:28 --> Model Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Model Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:19:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:19:28 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:19:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:19:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:19:28 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:19:29 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:19:29 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:19:29 --> Final output sent to browser
+DEBUG - 2025-04-02 13:19:29 --> Total execution time: 0.9720
+DEBUG - 2025-04-02 13:19:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:30 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:30 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:30 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:30 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:30 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:30 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:30 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:30 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:30 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:30 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:30 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:40 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:40 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Router Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Output Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Security Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Input Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:19:40 --> Language Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:19:40 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Session Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:19:40 --> Session routines successfully run
+DEBUG - 2025-04-02 13:19:40 --> Model Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Model Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:19:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:19:40 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:19:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:19:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:19:40 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:19:41 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:19:41 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:19:41 --> Final output sent to browser
+DEBUG - 2025-04-02 13:19:41 --> Total execution time: 0.9773
+DEBUG - 2025-04-02 13:19:41 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:41 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:41 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:41 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:41 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:41 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:41 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:41 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:41 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:41 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Router Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:19:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:19:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:19:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:19:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:19:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:16 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:16 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Router Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Output Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Security Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Input Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:20:16 --> Language Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:20:16 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Session Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:20:16 --> Session routines successfully run
+DEBUG - 2025-04-02 13:20:16 --> Model Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Model Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:20:16 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:20:16 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:20:16 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:20:16 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:20:16 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:20:17 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:20:17 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:20:17 --> Final output sent to browser
+DEBUG - 2025-04-02 13:20:17 --> Total execution time: 0.8822
+DEBUG - 2025-04-02 13:20:17 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:17 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Router Class Initialized
+ERROR - 2025-04-02 13:20:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:17 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:17 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:17 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Router Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Router Class Initialized
+ERROR - 2025-04-02 13:20:17 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:20:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:17 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:17 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Router Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:20:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:17 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:17 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:17 --> Router Class Initialized
+ERROR - 2025-04-02 13:20:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:18 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:18 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:18 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:18 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:18 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:18 --> Router Class Initialized
+ERROR - 2025-04-02 13:20:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:33 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:33 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Router Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Output Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Security Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Input Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:20:33 --> Language Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:20:33 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Session Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:20:33 --> Session routines successfully run
+DEBUG - 2025-04-02 13:20:33 --> Model Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Model Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:20:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:20:33 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:20:33 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:20:33 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:20:33 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:20:34 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:20:34 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:20:34 --> Final output sent to browser
+DEBUG - 2025-04-02 13:20:34 --> Total execution time: 0.9298
+DEBUG - 2025-04-02 13:20:34 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:34 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:34 --> Router Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> URI Class Initialized
+ERROR - 2025-04-02 13:20:34 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:34 --> Router Class Initialized
+ERROR - 2025-04-02 13:20:34 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:34 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:34 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> Router Class Initialized
+ERROR - 2025-04-02 13:20:34 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:34 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:34 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:34 --> Router Class Initialized
+ERROR - 2025-04-02 13:20:35 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:35 --> Config Class Initialized
+DEBUG - 2025-04-02 13:20:35 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:35 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:35 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:35 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:35 --> Router Class Initialized
+DEBUG - 2025-04-02 13:20:35 --> Config Class Initialized
+ERROR - 2025-04-02 13:20:35 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:20:35 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:20:35 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:20:35 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:20:35 --> URI Class Initialized
+DEBUG - 2025-04-02 13:20:35 --> Router Class Initialized
+ERROR - 2025-04-02 13:20:35 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:00 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:00 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Router Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Output Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Security Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Input Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:21:00 --> Language Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:21:00 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Session Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:21:00 --> Session routines successfully run
+DEBUG - 2025-04-02 13:21:00 --> Model Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Model Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:21:00 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:21:00 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:21:00 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:21:00 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:21:00 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:21:01 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:21:01 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:21:01 --> Final output sent to browser
+DEBUG - 2025-04-02 13:21:01 --> Total execution time: 0.9768
+DEBUG - 2025-04-02 13:21:01 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:01 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:01 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:01 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:01 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:01 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:01 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:01 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:01 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:02 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:02 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Router Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:02 --> Utf8 Class Initialized
+ERROR - 2025-04-02 13:21:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:02 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:02 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Router Class Initialized
+DEBUG - 2025-04-02 13:21:02 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:02 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:21:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:19 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:19 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Router Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Output Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Security Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Input Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:21:19 --> Language Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:21:19 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Session Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:21:19 --> Session routines successfully run
+DEBUG - 2025-04-02 13:21:19 --> Model Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Model Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:21:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:21:19 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:21:19 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:21:19 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:21:19 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:21:20 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:21:20 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:21:20 --> Final output sent to browser
+DEBUG - 2025-04-02 13:21:20 --> Total execution time: 0.8565
+DEBUG - 2025-04-02 13:21:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Router Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:21:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:20 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:21 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:21 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:45 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:45 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Router Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Output Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Security Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Input Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:21:45 --> Language Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:21:45 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Session Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:21:45 --> Session routines successfully run
+DEBUG - 2025-04-02 13:21:45 --> Model Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Model Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:21:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:21:45 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:21:45 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:21:45 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:21:45 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:21:45 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:21:45 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:21:45 --> Final output sent to browser
+DEBUG - 2025-04-02 13:21:45 --> Total execution time: 0.6360
+DEBUG - 2025-04-02 13:21:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Router Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Config Class Initialized
+ERROR - 2025-04-02 13:21:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:21:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:21:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:21:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:21:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:21:47 --> Router Class Initialized
+DEBUG - 2025-04-02 13:21:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:21:47 --> Router Class Initialized
+ERROR - 2025-04-02 13:21:47 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:21:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:22:04 --> Config Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:22:04 --> URI Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Router Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Output Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Security Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Input Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:22:04 --> Language Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:22:04 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Session Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:22:04 --> Session routines successfully run
+DEBUG - 2025-04-02 13:22:04 --> Model Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Model Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:22:04 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:22:04 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:22:04 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:22:04 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:22:04 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:22:04 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:22:04 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:22:04 --> Final output sent to browser
+DEBUG - 2025-04-02 13:22:04 --> Total execution time: 0.5047
+DEBUG - 2025-04-02 13:22:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:22:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:22:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Router Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Config Class Initialized
+ERROR - 2025-04-02 13:22:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:22:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Router Class Initialized
+ERROR - 2025-04-02 13:22:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:22:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:22:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Router Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:22:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:22:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Router Class Initialized
+ERROR - 2025-04-02 13:22:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:22:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:22:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:22:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Router Class Initialized
+DEBUG - 2025-04-02 13:22:05 --> Router Class Initialized
+ERROR - 2025-04-02 13:22:05 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:22:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:23:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:23:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Router Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Output Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Security Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Input Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:23:53 --> Language Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:23:53 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Session Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:23:53 --> Session routines successfully run
+DEBUG - 2025-04-02 13:23:53 --> Model Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Model Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:23:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:23:53 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:23:53 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:23:53 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:23:53 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:23:53 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:23:53 --> Final output sent to browser
+DEBUG - 2025-04-02 13:23:53 --> Total execution time: 0.2134
+DEBUG - 2025-04-02 13:23:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:23:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:23:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Router Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Router Class Initialized
+ERROR - 2025-04-02 13:23:53 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:23:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:23:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:23:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Router Class Initialized
+ERROR - 2025-04-02 13:23:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:23:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:23:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:23:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:23:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:23:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:23:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:23:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:23:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:23:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:23:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:23:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Output Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Security Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Input Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:24:09 --> Language Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:24:09 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Session Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:24:09 --> Session routines successfully run
+DEBUG - 2025-04-02 13:24:09 --> Model Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Model Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:24:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:24:09 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:24:09 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:24:09 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:24:09 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:24:09 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:24:09 --> Final output sent to browser
+DEBUG - 2025-04-02 13:24:09 --> Total execution time: 0.1714
+DEBUG - 2025-04-02 13:24:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:09 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:10 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:10 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:10 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:10 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:10 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:10 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:10 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:10 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:10 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:10 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:10 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:10 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:24:10 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:14 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:14 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Output Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Security Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Input Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:24:14 --> Language Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:24:14 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Session Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:24:14 --> Session routines successfully run
+DEBUG - 2025-04-02 13:24:14 --> Model Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Model Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:24:14 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:24:14 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:24:14 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:24:14 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:24:14 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:24:14 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:24:14 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:24:14 --> Final output sent to browser
+DEBUG - 2025-04-02 13:24:14 --> Total execution time: 0.1811
+DEBUG - 2025-04-02 13:24:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:15 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:24:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:24:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Config Class Initialized
+ERROR - 2025-04-02 13:24:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:15 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Output Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Security Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Input Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:24:42 --> Language Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:24:42 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Session Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:24:42 --> Session routines successfully run
+DEBUG - 2025-04-02 13:24:42 --> Model Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Model Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:24:42 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:24:42 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:24:42 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:24:42 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:24:42 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:24:42 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:24:42 --> Final output sent to browser
+DEBUG - 2025-04-02 13:24:42 --> Total execution time: 0.2296
+DEBUG - 2025-04-02 13:24:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:24:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:42 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:42 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:24:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Output Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Security Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Input Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:24:46 --> Language Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:24:46 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Session Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:24:46 --> Session routines successfully run
+DEBUG - 2025-04-02 13:24:46 --> Model Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Model Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:24:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:24:46 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:24:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:24:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:24:46 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:24:46 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:24:46 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:24:46 --> Final output sent to browser
+DEBUG - 2025-04-02 13:24:46 --> Total execution time: 0.1763
+DEBUG - 2025-04-02 13:24:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:24:47 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:24:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:47 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Output Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Security Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Input Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:24:53 --> Language Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:24:53 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Session Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:24:53 --> Session routines successfully run
+DEBUG - 2025-04-02 13:24:53 --> Model Class Initialized
+DEBUG - 2025-04-02 13:24:53 --> Model Class Initialized
+DEBUG - 2025-04-02 13:24:54 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:24:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:24:54 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:24:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:24:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:24:54 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:24:54 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:24:54 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:24:54 --> Final output sent to browser
+DEBUG - 2025-04-02 13:24:54 --> Total execution time: 0.9044
+DEBUG - 2025-04-02 13:24:55 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:55 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:55 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:55 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:55 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:55 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:24:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:55 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:55 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:55 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Router Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:55 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:24:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:24:55 --> Config Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:24:55 --> URI Class Initialized
+DEBUG - 2025-04-02 13:24:55 --> Router Class Initialized
+ERROR - 2025-04-02 13:24:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:12 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:12 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Router Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Output Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Security Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Input Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:25:12 --> Language Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:25:12 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Session Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:25:12 --> Session routines successfully run
+DEBUG - 2025-04-02 13:25:12 --> Model Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Model Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:25:12 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:25:12 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:25:12 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:25:12 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:25:12 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:25:12 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:25:12 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:25:12 --> Final output sent to browser
+DEBUG - 2025-04-02 13:25:12 --> Total execution time: 0.6399
+DEBUG - 2025-04-02 13:25:13 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:13 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:13 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:13 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:13 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:13 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:13 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:13 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:13 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Router Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:13 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:25:13 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:13 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:13 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:13 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Router Class Initialized
+DEBUG - 2025-04-02 13:25:13 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:13 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:25:13 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:45 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:45 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Router Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Output Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Security Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Input Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:25:45 --> Language Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:25:45 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Session Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:25:45 --> Session routines successfully run
+DEBUG - 2025-04-02 13:25:45 --> Model Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Model Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:25:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:25:45 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:25:45 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:25:45 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:25:45 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:25:45 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:25:45 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:25:45 --> Final output sent to browser
+DEBUG - 2025-04-02 13:25:45 --> Total execution time: 0.5615
+DEBUG - 2025-04-02 13:25:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Router Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:25:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:46 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:46 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:46 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Router Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Output Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Security Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Input Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:25:53 --> Language Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:25:53 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Session Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:25:53 --> Session routines successfully run
+DEBUG - 2025-04-02 13:25:53 --> Model Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Model Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:25:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:25:53 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:25:53 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:25:53 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:25:53 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:25:54 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:25:54 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:25:54 --> Final output sent to browser
+DEBUG - 2025-04-02 13:25:54 --> Total execution time: 0.8742
+DEBUG - 2025-04-02 13:25:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Router Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:54 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:25:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:25:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:25:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:25:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:25:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:14 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:14 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Router Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Output Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Security Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Input Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:26:14 --> Language Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:26:14 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Session Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:26:14 --> Session routines successfully run
+DEBUG - 2025-04-02 13:26:14 --> Model Class Initialized
+DEBUG - 2025-04-02 13:26:14 --> Model Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:26:15 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:26:15 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:26:15 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:26:15 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:26:15 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:26:15 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:26:15 --> Final output sent to browser
+DEBUG - 2025-04-02 13:26:15 --> Total execution time: 0.5733
+DEBUG - 2025-04-02 13:26:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:15 --> Router Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:15 --> Router Class Initialized
+ERROR - 2025-04-02 13:26:15 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:26:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:16 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:16 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> Router Class Initialized
+ERROR - 2025-04-02 13:26:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:16 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:16 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:16 --> Router Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> URI Class Initialized
+ERROR - 2025-04-02 13:26:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:16 --> Router Class Initialized
+ERROR - 2025-04-02 13:26:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:16 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:16 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:16 --> Router Class Initialized
+ERROR - 2025-04-02 13:26:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:28 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:28 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Router Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Output Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Security Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Input Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:26:28 --> Language Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:26:28 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Session Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:26:28 --> Session routines successfully run
+DEBUG - 2025-04-02 13:26:28 --> Model Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Model Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:26:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:26:28 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:26:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:26:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:26:28 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:26:29 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:26:29 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:26:29 --> Final output sent to browser
+DEBUG - 2025-04-02 13:26:29 --> Total execution time: 0.9676
+DEBUG - 2025-04-02 13:26:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:26:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:26:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:26:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:26:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Router Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Utf8 Class Initialized
+ERROR - 2025-04-02 13:26:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:26:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:26:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:26:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:26:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:27:28 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:28 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Router Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Output Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Security Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Input Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:27:28 --> Language Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:27:28 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Session Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:27:28 --> Session routines successfully run
+DEBUG - 2025-04-02 13:27:28 --> Model Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Model Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:27:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:27:28 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:27:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:27:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:27:28 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:27:28 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:27:28 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:27:28 --> Final output sent to browser
+DEBUG - 2025-04-02 13:27:28 --> Total execution time: 0.8946
+DEBUG - 2025-04-02 13:27:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:27:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:27:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Router Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:27:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:27:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:27:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:27:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:27:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:27:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Router Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:27:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:27:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:27:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:27:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:57 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Router Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Output Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Security Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Input Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:27:57 --> Language Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:27:57 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Session Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:27:57 --> Session routines successfully run
+DEBUG - 2025-04-02 13:27:57 --> Model Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Model Class Initialized
+DEBUG - 2025-04-02 13:27:57 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:27:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:27:58 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:27:58 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:27:58 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:27:58 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:27:58 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:27:58 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:27:58 --> Final output sent to browser
+DEBUG - 2025-04-02 13:27:58 --> Total execution time: 0.7913
+DEBUG - 2025-04-02 13:27:58 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:58 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:58 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:58 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:58 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:58 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:58 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:58 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:58 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:58 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:58 --> Router Class Initialized
+DEBUG - 2025-04-02 13:27:58 --> Router Class Initialized
+ERROR - 2025-04-02 13:27:58 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:27:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:27:59 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:59 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Router Class Initialized
+ERROR - 2025-04-02 13:27:59 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:27:59 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:59 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:59 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Router Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Router Class Initialized
+ERROR - 2025-04-02 13:27:59 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:27:59 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:27:59 --> Config Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:27:59 --> URI Class Initialized
+DEBUG - 2025-04-02 13:27:59 --> Router Class Initialized
+ERROR - 2025-04-02 13:27:59 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Output Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Security Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Input Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:28:05 --> Language Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:28:05 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Session Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:28:05 --> Session routines successfully run
+DEBUG - 2025-04-02 13:28:05 --> Model Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Model Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:28:05 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:28:05 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:28:05 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:28:05 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:28:05 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:28:06 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:28:06 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:28:06 --> Final output sent to browser
+DEBUG - 2025-04-02 13:28:06 --> Total execution time: 0.8968
+DEBUG - 2025-04-02 13:28:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:28:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:06 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:06 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:28:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:22 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:22 --> Output Class Initialized
+DEBUG - 2025-04-02 13:28:22 --> Security Class Initialized
+DEBUG - 2025-04-02 13:28:22 --> Input Class Initialized
+DEBUG - 2025-04-02 13:28:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:28:22 --> Language Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:28:23 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Session Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:28:23 --> Session routines successfully run
+DEBUG - 2025-04-02 13:28:23 --> Model Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Model Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:28:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:28:23 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:28:23 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:28:23 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:28:23 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:28:23 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:28:23 --> Final output sent to browser
+DEBUG - 2025-04-02 13:28:23 --> Total execution time: 0.4234
+DEBUG - 2025-04-02 13:28:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:23 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:28:23 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:23 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:23 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> URI Class Initialized
+ERROR - 2025-04-02 13:28:23 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:23 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:23 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:23 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:23 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:43 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:43 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Output Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Security Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Input Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:28:43 --> Language Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:28:43 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Session Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:28:43 --> Session routines successfully run
+DEBUG - 2025-04-02 13:28:43 --> Model Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Model Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:28:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:28:43 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:28:43 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:28:43 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:28:43 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:28:44 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:28:44 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:28:44 --> Final output sent to browser
+DEBUG - 2025-04-02 13:28:44 --> Total execution time: 0.9227
+DEBUG - 2025-04-02 13:28:44 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:44 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:28:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:44 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:44 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:44 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:44 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:44 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:44 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:44 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:44 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:44 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:44 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:28:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:52 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:52 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Output Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Security Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Input Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:28:52 --> Language Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:28:52 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Session Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:28:52 --> Session routines successfully run
+DEBUG - 2025-04-02 13:28:52 --> Model Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Model Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:28:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:28:52 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:28:52 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:28:52 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:28:52 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:28:53 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:28:53 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:28:53 --> Final output sent to browser
+DEBUG - 2025-04-02 13:28:53 --> Total execution time: 0.9193
+DEBUG - 2025-04-02 13:28:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Router Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:54 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:28:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:28:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:28:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:28:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:28:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Output Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Security Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Input Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:29:22 --> Language Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:29:22 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Session Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:29:22 --> Session routines successfully run
+DEBUG - 2025-04-02 13:29:22 --> Model Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Model Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:29:22 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:29:22 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:29:22 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:29:22 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:29:22 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:29:23 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:29:23 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:29:23 --> Final output sent to browser
+DEBUG - 2025-04-02 13:29:23 --> Total execution time: 0.6154
+DEBUG - 2025-04-02 13:29:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:23 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:23 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:29:23 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:23 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:23 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:23 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:29:23 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:28 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:28 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Output Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Security Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Input Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:29:28 --> Language Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:29:28 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Session Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:29:28 --> Session routines successfully run
+DEBUG - 2025-04-02 13:29:28 --> Model Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Model Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:29:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:29:28 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:29:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:29:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:29:28 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:29:29 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:29:29 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:29:29 --> Final output sent to browser
+DEBUG - 2025-04-02 13:29:29 --> Total execution time: 0.9148
+DEBUG - 2025-04-02 13:29:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:29 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:29:29 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:29:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:29:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:29 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:40 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:40 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Output Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Security Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Input Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:29:40 --> Language Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:29:40 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Session Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:29:40 --> Session routines successfully run
+DEBUG - 2025-04-02 13:29:40 --> Model Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Model Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:29:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:29:40 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:29:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:29:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:29:40 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:29:41 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:29:41 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:29:41 --> Final output sent to browser
+DEBUG - 2025-04-02 13:29:41 --> Total execution time: 0.9763
+DEBUG - 2025-04-02 13:29:41 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:41 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:41 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:41 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:29:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:41 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:41 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:41 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:41 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:29:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:41 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:41 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:29:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:41 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:41 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:56 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:56 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Output Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Security Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Input Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:29:56 --> Language Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:29:56 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Session Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:29:56 --> Session routines successfully run
+DEBUG - 2025-04-02 13:29:56 --> Model Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Model Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:29:56 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:29:56 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:29:56 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:29:56 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:29:56 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:29:57 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:29:57 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:29:57 --> Final output sent to browser
+DEBUG - 2025-04-02 13:29:57 --> Total execution time: 1.0484
+DEBUG - 2025-04-02 13:29:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:57 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:57 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:57 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:57 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:57 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> Config Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:58 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:58 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:29:58 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> Router Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> URI Class Initialized
+DEBUG - 2025-04-02 13:29:58 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:29:58 --> Router Class Initialized
+ERROR - 2025-04-02 13:29:58 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:29:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:30:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Router Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Output Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Security Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Input Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:30:21 --> Language Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:30:21 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Session Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:30:21 --> Session routines successfully run
+DEBUG - 2025-04-02 13:30:21 --> Model Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Model Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:30:21 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:30:21 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:30:21 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:30:21 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:30:21 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:30:22 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:30:22 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:30:22 --> Final output sent to browser
+DEBUG - 2025-04-02 13:30:22 --> Total execution time: 1.0116
+DEBUG - 2025-04-02 13:30:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Router Class Initialized
+ERROR - 2025-04-02 13:30:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:30:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Router Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Router Class Initialized
+ERROR - 2025-04-02 13:30:22 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:30:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:30:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Router Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Router Class Initialized
+ERROR - 2025-04-02 13:30:22 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:30:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:30:22 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:22 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:22 --> Router Class Initialized
+ERROR - 2025-04-02 13:30:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:30:47 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:47 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Router Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Output Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Security Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Input Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:30:47 --> Language Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:30:47 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Session Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:30:47 --> Session routines successfully run
+DEBUG - 2025-04-02 13:30:47 --> Model Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Model Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:30:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:30:47 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:30:47 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:30:47 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:30:48 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:30:48 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:30:48 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:30:48 --> Final output sent to browser
+DEBUG - 2025-04-02 13:30:48 --> Total execution time: 0.9536
+DEBUG - 2025-04-02 13:30:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Router Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Router Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 13:30:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:30:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Router Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Router Class Initialized
+ERROR - 2025-04-02 13:30:49 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:30:49 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:30:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:30:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Router Class Initialized
+ERROR - 2025-04-02 13:30:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:30:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:30:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:30:49 --> Router Class Initialized
+ERROR - 2025-04-02 13:30:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:31:12 --> Config Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:31:12 --> URI Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Router Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Output Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Security Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Input Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:31:12 --> Language Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:31:12 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Session Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:31:12 --> Session routines successfully run
+DEBUG - 2025-04-02 13:31:12 --> Model Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Model Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:31:12 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:31:12 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:31:12 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:31:13 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:31:13 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:31:13 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:31:13 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:31:13 --> Final output sent to browser
+DEBUG - 2025-04-02 13:31:13 --> Total execution time: 0.8952
+DEBUG - 2025-04-02 13:31:14 --> Config Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Config Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:31:14 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> URI Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:31:14 --> Router Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> URI Class Initialized
+ERROR - 2025-04-02 13:31:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:31:14 --> Router Class Initialized
+ERROR - 2025-04-02 13:31:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:31:14 --> Config Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:31:14 --> URI Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Router Class Initialized
+ERROR - 2025-04-02 13:31:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:31:14 --> Config Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:31:14 --> URI Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Router Class Initialized
+ERROR - 2025-04-02 13:31:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:31:14 --> Config Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Config Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:31:14 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:31:14 --> URI Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> URI Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Router Class Initialized
+DEBUG - 2025-04-02 13:31:14 --> Router Class Initialized
+ERROR - 2025-04-02 13:31:14 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:31:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:03 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:03 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Router Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Output Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Security Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Input Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:32:03 --> Language Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:32:03 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Session Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:32:03 --> Session routines successfully run
+DEBUG - 2025-04-02 13:32:03 --> Model Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Model Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:32:03 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:32:03 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:32:03 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:32:03 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:32:03 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:32:04 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:32:04 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:32:04 --> Final output sent to browser
+DEBUG - 2025-04-02 13:32:04 --> Total execution time: 1.1810
+DEBUG - 2025-04-02 13:32:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Router Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:32:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Router Class Initialized
+ERROR - 2025-04-02 13:32:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:05 --> Router Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Router Class Initialized
+ERROR - 2025-04-02 13:32:05 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:32:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Router Class Initialized
+ERROR - 2025-04-02 13:32:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:05 --> Router Class Initialized
+ERROR - 2025-04-02 13:32:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Router Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Output Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Security Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Input Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:32:23 --> Language Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:32:23 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Session Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:32:23 --> Session routines successfully run
+DEBUG - 2025-04-02 13:32:23 --> Model Class Initialized
+DEBUG - 2025-04-02 13:32:23 --> Model Class Initialized
+DEBUG - 2025-04-02 13:32:24 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:32:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:32:24 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:32:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:32:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:32:24 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:32:24 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:32:24 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:32:24 --> Final output sent to browser
+DEBUG - 2025-04-02 13:32:24 --> Total execution time: 0.9553
+DEBUG - 2025-04-02 13:32:25 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:25 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Router Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:25 --> URI Class Initialized
+ERROR - 2025-04-02 13:32:25 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:25 --> Router Class Initialized
+ERROR - 2025-04-02 13:32:25 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:25 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:25 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Router Class Initialized
+ERROR - 2025-04-02 13:32:25 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:25 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:25 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Router Class Initialized
+ERROR - 2025-04-02 13:32:25 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:25 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:25 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Router Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Config Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:32:25 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:32:25 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:32:25 --> URI Class Initialized
+DEBUG - 2025-04-02 13:32:25 --> Router Class Initialized
+ERROR - 2025-04-02 13:32:25 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:14 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:14 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Router Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Output Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Security Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Input Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:34:14 --> Language Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:34:14 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Session Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:34:14 --> Session routines successfully run
+DEBUG - 2025-04-02 13:34:14 --> Model Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Model Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:34:14 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:34:14 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:34:14 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:34:14 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:34:14 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:34:15 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:34:15 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:34:15 --> Final output sent to browser
+DEBUG - 2025-04-02 13:34:15 --> Total execution time: 0.9332
+DEBUG - 2025-04-02 13:34:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:15 --> Router Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> URI Class Initialized
+ERROR - 2025-04-02 13:34:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Router Class Initialized
+DEBUG - 2025-04-02 13:34:15 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:15 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:34:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:16 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:16 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:16 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:16 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:16 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:16 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:16 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:40 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:40 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Router Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Output Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Security Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Input Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:34:40 --> Language Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:34:40 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Session Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:34:40 --> Session routines successfully run
+DEBUG - 2025-04-02 13:34:40 --> Model Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Model Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:34:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:34:40 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:34:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:34:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:34:40 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:34:41 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:34:41 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:34:41 --> Final output sent to browser
+DEBUG - 2025-04-02 13:34:41 --> Total execution time: 0.8252
+DEBUG - 2025-04-02 13:34:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Router Class Initialized
+DEBUG - 2025-04-02 13:34:42 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:42 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Router Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Output Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Security Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Input Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:34:49 --> Language Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:34:49 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Session Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:34:49 --> Session routines successfully run
+DEBUG - 2025-04-02 13:34:49 --> Model Class Initialized
+DEBUG - 2025-04-02 13:34:49 --> Model Class Initialized
+DEBUG - 2025-04-02 13:34:50 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:34:50 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:34:50 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:34:50 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:34:50 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:34:50 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:34:50 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:34:50 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:34:50 --> Final output sent to browser
+DEBUG - 2025-04-02 13:34:50 --> Total execution time: 0.9707
+DEBUG - 2025-04-02 13:34:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:34:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:34:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:34:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:34:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:35:08 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:08 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Router Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Output Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Security Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Input Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:35:08 --> Language Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:35:08 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Session Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:35:08 --> Session routines successfully run
+DEBUG - 2025-04-02 13:35:08 --> Model Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Model Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:35:08 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:35:08 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:35:08 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:35:08 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:35:08 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:35:09 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:35:09 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:35:09 --> Final output sent to browser
+DEBUG - 2025-04-02 13:35:09 --> Total execution time: 0.9039
+DEBUG - 2025-04-02 13:35:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Router Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Router Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:35:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:35:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:09 --> Router Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Router Class Initialized
+ERROR - 2025-04-02 13:35:09 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:35:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:35:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Router Class Initialized
+ERROR - 2025-04-02 13:35:09 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:35:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:35:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:09 --> Router Class Initialized
+ERROR - 2025-04-02 13:35:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:35:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Router Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Output Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Security Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Input Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:35:51 --> Language Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:35:51 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Session Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:35:51 --> Session routines successfully run
+DEBUG - 2025-04-02 13:35:51 --> Model Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Model Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:35:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:35:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Router Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Output Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Security Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Input Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:35:51 --> Language Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:35:51 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Session Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:35:51 --> Session routines successfully run
+DEBUG - 2025-04-02 13:35:51 --> Model Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Model Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:35:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:35:51 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:35:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:35:51 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:35:51 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:35:51 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:35:51 --> Final output sent to browser
+DEBUG - 2025-04-02 13:35:51 --> Total execution time: 0.1960
+DEBUG - 2025-04-02 13:35:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Router Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:35:51 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:35:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:35:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:35:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:35:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Config Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Router Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Utf8 Class Initialized
+ERROR - 2025-04-02 13:35:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:35:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:35:51 --> URI Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Router Class Initialized
+DEBUG - 2025-04-02 13:35:51 --> Router Class Initialized
+ERROR - 2025-04-02 13:35:51 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:35:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:36:49 --> Config Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:36:49 --> URI Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Router Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Output Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Security Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Input Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:36:49 --> Language Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:36:49 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Session Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:36:49 --> Session routines successfully run
+DEBUG - 2025-04-02 13:36:49 --> Model Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Model Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:36:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:36:49 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:36:49 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:36:49 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:36:49 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:36:50 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:36:50 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:36:50 --> Final output sent to browser
+DEBUG - 2025-04-02 13:36:50 --> Total execution time: 1.1438
+DEBUG - 2025-04-02 13:36:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:36:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Router Class Initialized
+ERROR - 2025-04-02 13:36:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:36:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:36:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Router Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:36:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:36:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:36:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Router Class Initialized
+ERROR - 2025-04-02 13:36:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:36:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:36:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Router Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Utf8 Class Initialized
+ERROR - 2025-04-02 13:36:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:36:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:36:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Router Class Initialized
+ERROR - 2025-04-02 13:36:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:36:50 --> Config Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:36:50 --> URI Class Initialized
+DEBUG - 2025-04-02 13:36:50 --> Router Class Initialized
+ERROR - 2025-04-02 13:36:50 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:39:52 --> Config Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:39:52 --> URI Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Router Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Output Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Security Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Input Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:39:52 --> Language Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:39:52 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Session Class Initialized
+DEBUG - 2025-04-02 13:39:52 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:39:52 --> Session routines successfully run
+DEBUG - 2025-04-02 13:39:52 --> Model Class Initialized
+DEBUG - 2025-04-02 13:39:53 --> Model Class Initialized
+DEBUG - 2025-04-02 13:39:53 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:39:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:39:53 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:39:53 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:39:53 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:39:53 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:39:53 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:39:53 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:39:53 --> Final output sent to browser
+DEBUG - 2025-04-02 13:39:53 --> Total execution time: 0.8846
+DEBUG - 2025-04-02 13:39:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:39:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Router Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:39:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:39:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:39:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:39:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:39:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:39:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:39:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Router Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:39:54 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:39:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:39:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:39:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:39:54 --> Router Class Initialized
+DEBUG - 2025-04-02 13:39:54 --> URI Class Initialized
+ERROR - 2025-04-02 13:39:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:39:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:39:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:39:58 --> Config Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:39:58 --> URI Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> Router Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> Output Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> Security Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> Input Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:39:58 --> Language Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:39:58 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:39:58 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:39:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:39:58 --> Final output sent to browser
+DEBUG - 2025-04-02 13:39:58 --> Total execution time: 0.0742
+DEBUG - 2025-04-02 13:40:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:40:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> Router Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> Output Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> Security Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> Input Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:40:09 --> Language Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:40:09 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:40:09 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:40:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:40:09 --> Final output sent to browser
+DEBUG - 2025-04-02 13:40:09 --> Total execution time: 0.0427
+DEBUG - 2025-04-02 13:43:45 --> Config Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:43:45 --> URI Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Router Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Output Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Security Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Input Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:43:45 --> Language Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:43:45 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Session Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:43:45 --> Session routines successfully run
+DEBUG - 2025-04-02 13:43:45 --> Model Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Model Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:43:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:43:45 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:43:45 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:43:45 --> File loaded: application/views/admin/invitados.php
+DEBUG - 2025-04-02 13:43:45 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:43:45 --> Final output sent to browser
+DEBUG - 2025-04-02 13:43:45 --> Total execution time: 0.1040
+DEBUG - 2025-04-02 13:43:53 --> Config Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:43:53 --> URI Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Router Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Output Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Security Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Input Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:43:53 --> Language Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:43:53 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Session Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:43:53 --> Session routines successfully run
+DEBUG - 2025-04-02 13:43:53 --> Model Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Model Class Initialized
+DEBUG - 2025-04-02 13:43:53 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:43:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:43:53 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:43:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:43:54 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 13:43:54 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 13:43:54 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 13:43:54 --> Final output sent to browser
+DEBUG - 2025-04-02 13:43:54 --> Total execution time: 0.2121
+DEBUG - 2025-04-02 13:43:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:43:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:43:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Router Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Hooks Class Initialized
+ERROR - 2025-04-02 13:43:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:43:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Router Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:43:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:43:54 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 13:43:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:43:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:43:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:43:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:43:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:43:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:43:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:43:54 --> Config Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:43:54 --> URI Class Initialized
+DEBUG - 2025-04-02 13:43:54 --> Router Class Initialized
+ERROR - 2025-04-02 13:43:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 13:44:00 --> Config Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:44:00 --> URI Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Router Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Output Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Security Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Input Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:44:00 --> Language Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:44:00 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Session Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:44:00 --> Session routines successfully run
+DEBUG - 2025-04-02 13:44:00 --> Model Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Model Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:44:00 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:44:00 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Config Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:44:00 --> URI Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Router Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Output Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Security Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Input Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:44:00 --> Language Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:44:00 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Session Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:44:00 --> Session routines successfully run
+DEBUG - 2025-04-02 13:44:00 --> Model Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Model Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:44:00 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:44:00 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:44:00 --> File loaded: application/views/invitado/login.php
+DEBUG - 2025-04-02 13:44:00 --> Final output sent to browser
+DEBUG - 2025-04-02 13:44:00 --> Total execution time: 0.0903
+DEBUG - 2025-04-02 13:44:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:44:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Router Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Output Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Security Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Input Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:44:05 --> Language Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:44:05 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Session Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:44:05 --> Session routines successfully run
+DEBUG - 2025-04-02 13:44:05 --> Model Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Model Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:44:05 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:44:05 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:44:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:44:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Router Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Output Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Security Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Input Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:44:05 --> Language Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:44:05 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Session Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:44:05 --> Session routines successfully run
+DEBUG - 2025-04-02 13:44:05 --> Model Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Model Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:44:05 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:44:05 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:44:05 --> File loaded: application/views/invitado/header.php
+DEBUG - 2025-04-02 13:44:06 --> File loaded: application/views/invitado/home.php
+DEBUG - 2025-04-02 13:44:06 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:44:06 --> Final output sent to browser
+DEBUG - 2025-04-02 13:44:06 --> Total execution time: 0.0916
+DEBUG - 2025-04-02 13:44:11 --> Config Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:44:11 --> URI Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Router Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Output Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Security Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Input Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:44:11 --> Language Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:44:11 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Session Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:44:11 --> Session routines successfully run
+DEBUG - 2025-04-02 13:44:11 --> Model Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Model Class Initialized
+DEBUG - 2025-04-02 13:44:11 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:44:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:44:11 --> Encrypt Class Initialized
+ERROR - 2025-04-02 13:44:11 --> Severity: Warning  --> array_keys() expects parameter 1 to be array, null given C:\xampp\htdocs\intraboda\application\controllers\invitado.php 96
+ERROR - 2025-04-02 13:44:11 --> Severity: Warning  --> implode(): Invalid arguments passed C:\xampp\htdocs\intraboda\application\controllers\invitado.php 98
+DEBUG - 2025-04-02 13:44:11 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> array_sum() expects parameter 1 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 117
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> array_keys() expects parameter 1 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 118
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+ERROR - 2025-04-02 13:44:12 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 120
+DEBUG - 2025-04-02 13:44:12 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:44:12 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:44:12 --> Final output sent to browser
+DEBUG - 2025-04-02 13:44:12 --> Total execution time: 0.2846
+DEBUG - 2025-04-02 13:45:11 --> Config Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:45:11 --> URI Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Router Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Output Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Security Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Input Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:45:11 --> Language Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:45:11 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:45:11 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:45:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:45:11 --> Final output sent to browser
+DEBUG - 2025-04-02 13:45:11 --> Total execution time: 0.0483
+DEBUG - 2025-04-02 13:45:12 --> Config Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:45:12 --> URI Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Router Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Output Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Security Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Input Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:45:12 --> Language Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:45:12 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:45:12 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:45:12 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:45:12 --> Final output sent to browser
+DEBUG - 2025-04-02 13:45:12 --> Total execution time: 0.0469
+DEBUG - 2025-04-02 13:45:15 --> Config Class Initialized
+DEBUG - 2025-04-02 13:45:15 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:45:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:45:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:45:15 --> URI Class Initialized
+DEBUG - 2025-04-02 13:45:15 --> Router Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> Output Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> Security Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> Input Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:45:16 --> Language Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:45:16 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> Session Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:45:16 --> Session routines successfully run
+DEBUG - 2025-04-02 13:45:16 --> Model Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> Model Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:45:16 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:45:16 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:45:16 --> File loaded: application/views/invitado/login.php
+DEBUG - 2025-04-02 13:45:16 --> Final output sent to browser
+DEBUG - 2025-04-02 13:45:16 --> Total execution time: 0.0577
+DEBUG - 2025-04-02 13:45:18 --> Config Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:45:18 --> URI Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Router Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Output Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Security Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Input Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:45:18 --> Language Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:45:18 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Session Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:45:18 --> Session routines successfully run
+DEBUG - 2025-04-02 13:45:18 --> Model Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Model Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:45:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:45:18 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 13:45:18 --> Config Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:45:18 --> URI Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Router Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Output Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Security Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Input Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:45:18 --> Language Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:45:18 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Session Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:45:18 --> Session routines successfully run
+DEBUG - 2025-04-02 13:45:18 --> Model Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Model Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:45:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:45:18 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:45:18 --> File loaded: application/views/invitado/header.php
+DEBUG - 2025-04-02 13:45:18 --> File loaded: application/views/invitado/home.php
+DEBUG - 2025-04-02 13:45:18 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:45:18 --> Final output sent to browser
+DEBUG - 2025-04-02 13:45:18 --> Total execution time: 0.0708
+DEBUG - 2025-04-02 13:45:24 --> Config Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:45:24 --> URI Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Router Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Output Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Security Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Input Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:45:24 --> Language Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:45:24 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Session Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:45:24 --> Session routines successfully run
+DEBUG - 2025-04-02 13:45:24 --> Model Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Model Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:45:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:45:24 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:45:24 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:45:24 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:45:24 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:45:24 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:45:24 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:45:24 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+DEBUG - 2025-04-02 13:45:24 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:45:24 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:45:24 --> Final output sent to browser
+DEBUG - 2025-04-02 13:45:24 --> Total execution time: 0.0683
+DEBUG - 2025-04-02 13:49:07 --> Config Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:49:07 --> URI Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Router Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Output Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Security Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Input Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:49:07 --> Language Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:49:07 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Session Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:49:07 --> Session routines successfully run
+DEBUG - 2025-04-02 13:49:07 --> Model Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Model Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:49:07 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:49:07 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> DB Transaction Failure
+ERROR - 2025-04-02 13:49:07 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(fecha, '%d-%m-%Y %H:%i') as fecha FROM observaciones WHERE id_cliente = 1 ORDER' at line 1
+DEBUG - 2025-04-02 13:49:07 --> Language file loaded: language/spanish/db_lang.php
+DEBUG - 2025-04-02 13:49:07 --> Config Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:49:07 --> URI Class Initialized
+DEBUG - 2025-04-02 13:49:07 --> Router Class Initialized
+ERROR - 2025-04-02 13:49:07 --> 404 Page Not Found --> favicon.ico
+DEBUG - 2025-04-02 13:50:21 --> Config Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:50:21 --> URI Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Router Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Output Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Security Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Input Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:50:21 --> Language Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:50:21 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Session Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:50:21 --> Session routines successfully run
+DEBUG - 2025-04-02 13:50:21 --> Model Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Model Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:50:21 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:50:21 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:50:21 --> DB Transaction Failure
+ERROR - 2025-04-02 13:50:21 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(fecha, '%d-%m-%Y %H:%i') as fecha FROM observaciones WHERE id_cliente = 1 ORDER' at line 1
+DEBUG - 2025-04-02 13:50:21 --> Language file loaded: language/spanish/db_lang.php
+DEBUG - 2025-04-02 13:50:24 --> Config Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:50:24 --> URI Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Router Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Output Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Security Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Input Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:50:24 --> Language Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:50:24 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Session Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:50:24 --> Session routines successfully run
+DEBUG - 2025-04-02 13:50:24 --> Model Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Model Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:50:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:50:24 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:50:24 --> DB Transaction Failure
+ERROR - 2025-04-02 13:50:24 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(fecha, '%d-%m-%Y %H:%i') as fecha FROM observaciones WHERE id_cliente = 1 ORDER' at line 1
+DEBUG - 2025-04-02 13:50:24 --> Language file loaded: language/spanish/db_lang.php
+DEBUG - 2025-04-02 13:50:48 --> Config Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:50:48 --> URI Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Router Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Output Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Security Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Input Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:50:48 --> Language Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:50:48 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Session Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:50:48 --> Session routines successfully run
+DEBUG - 2025-04-02 13:50:48 --> Model Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Model Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:50:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:50:48 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:50:48 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:50:48 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:50:48 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:50:48 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:50:48 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:50:48 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:50:48 --> Severity: Notice  --> Undefined index: ocultar C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 144
+ERROR - 2025-04-02 13:50:48 --> Severity: Notice  --> Undefined index: ocultar C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 144
+DEBUG - 2025-04-02 13:50:48 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:50:48 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:50:48 --> Final output sent to browser
+DEBUG - 2025-04-02 13:50:48 --> Total execution time: 0.2962
+DEBUG - 2025-04-02 13:51:13 --> Config Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:51:13 --> URI Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Router Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Output Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Security Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Input Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:51:13 --> Language Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:51:13 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Session Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:51:13 --> Session routines successfully run
+DEBUG - 2025-04-02 13:51:13 --> Model Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Model Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:51:13 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:51:13 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:51:13 --> DB Transaction Failure
+ERROR - 2025-04-02 13:51:13 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(fecha, '%d-%m-%Y %H:%i') as fecha FROM observaciones WHERE id_cliente = 1 ORDER' at line 1
+DEBUG - 2025-04-02 13:51:13 --> Language file loaded: language/spanish/db_lang.php
+DEBUG - 2025-04-02 13:51:59 --> Config Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:51:59 --> URI Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Router Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Output Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Security Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Input Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:51:59 --> Language Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:51:59 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Session Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:51:59 --> Session routines successfully run
+DEBUG - 2025-04-02 13:51:59 --> Model Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Model Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:51:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:51:59 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:51:59 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:51:59 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:51:59 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:51:59 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:51:59 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:51:59 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+DEBUG - 2025-04-02 13:51:59 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:51:59 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:51:59 --> Final output sent to browser
+DEBUG - 2025-04-02 13:51:59 --> Total execution time: 0.1301
+DEBUG - 2025-04-02 13:52:12 --> Config Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:52:12 --> URI Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Router Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Output Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Security Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Input Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:52:12 --> Language Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:52:12 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Session Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:52:12 --> Session routines successfully run
+DEBUG - 2025-04-02 13:52:12 --> Model Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Model Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:52:12 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:52:12 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:52:12 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:52:12 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:52:12 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:52:12 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:52:12 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:52:12 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+DEBUG - 2025-04-02 13:52:12 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:52:12 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:52:12 --> Final output sent to browser
+DEBUG - 2025-04-02 13:52:12 --> Total execution time: 0.1332
+DEBUG - 2025-04-02 13:52:13 --> Config Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:52:13 --> URI Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Router Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Output Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Security Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Input Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:52:13 --> Language Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:52:13 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Session Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:52:13 --> Session routines successfully run
+DEBUG - 2025-04-02 13:52:13 --> Model Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Model Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:52:13 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:52:13 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:52:13 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:52:13 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:52:13 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:52:13 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:52:13 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:52:13 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+DEBUG - 2025-04-02 13:52:13 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:52:13 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:52:13 --> Final output sent to browser
+DEBUG - 2025-04-02 13:52:13 --> Total execution time: 0.0694
+DEBUG - 2025-04-02 13:53:20 --> Config Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:53:20 --> URI Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Router Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Output Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Security Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Input Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:53:20 --> Language Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:53:20 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Session Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:53:20 --> Session routines successfully run
+DEBUG - 2025-04-02 13:53:20 --> Model Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Model Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:53:20 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:53:20 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:53:20 --> File loaded: application/views/invitado/header.php
+DEBUG - 2025-04-02 13:54:05 --> Config Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:54:05 --> URI Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Router Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Output Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Security Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Input Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:54:05 --> Language Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:54:05 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Session Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:54:05 --> Session routines successfully run
+DEBUG - 2025-04-02 13:54:05 --> Model Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Model Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:54:05 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:54:05 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:54:05 --> File loaded: application/views/invitado/header.php
+DEBUG - 2025-04-02 13:54:06 --> Config Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:54:06 --> URI Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Router Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Output Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Security Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Input Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:54:06 --> Language Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:54:06 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Session Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:54:06 --> Session routines successfully run
+DEBUG - 2025-04-02 13:54:06 --> Model Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Model Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:54:06 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:54:06 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:54:06 --> File loaded: application/views/invitado/header.php
+DEBUG - 2025-04-02 13:54:23 --> Config Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:54:23 --> URI Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Router Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Output Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Security Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Input Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:54:23 --> Language Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:54:23 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Session Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:54:23 --> Session routines successfully run
+DEBUG - 2025-04-02 13:54:23 --> Model Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Model Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:54:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:54:23 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:54:23 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:54:23 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:54:23 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:54:23 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:54:23 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:54:23 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+DEBUG - 2025-04-02 13:54:23 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:54:23 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:54:23 --> Final output sent to browser
+DEBUG - 2025-04-02 13:54:23 --> Total execution time: 0.2803
+DEBUG - 2025-04-02 13:54:45 --> Config Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:54:45 --> URI Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Router Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Output Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Security Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Input Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:54:45 --> Language Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:54:45 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Session Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:54:45 --> Session routines successfully run
+DEBUG - 2025-04-02 13:54:45 --> Model Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Model Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:54:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:54:45 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:54:45 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:54:46 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:54:46 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:54:46 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:54:46 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:54:46 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+DEBUG - 2025-04-02 13:54:46 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:54:46 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:54:46 --> Final output sent to browser
+DEBUG - 2025-04-02 13:54:46 --> Total execution time: 0.2356
+DEBUG - 2025-04-02 13:55:13 --> Config Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:55:13 --> URI Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Router Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Output Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Security Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Input Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:55:13 --> Language Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:55:13 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Session Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:55:13 --> Session routines successfully run
+DEBUG - 2025-04-02 13:55:13 --> Model Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Model Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:55:13 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:55:13 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:55:13 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:55:14 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:55:14 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:55:14 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:55:14 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:55:14 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+DEBUG - 2025-04-02 13:55:14 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:55:14 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:55:14 --> Final output sent to browser
+DEBUG - 2025-04-02 13:55:14 --> Total execution time: 0.2982
+DEBUG - 2025-04-02 13:55:29 --> Config Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:55:29 --> URI Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Router Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Output Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Security Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Input Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:55:29 --> Language Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:55:29 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Session Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:55:29 --> Session routines successfully run
+DEBUG - 2025-04-02 13:55:29 --> Model Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Model Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:55:29 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:55:29 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:55:29 --> File loaded: application/views/invitado/header.php
+DEBUG - 2025-04-02 13:58:09 --> Config Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:58:09 --> URI Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Router Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Output Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Security Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Input Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:58:09 --> Language Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:58:09 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Session Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:58:09 --> Session routines successfully run
+DEBUG - 2025-04-02 13:58:09 --> Model Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Model Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:58:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:58:09 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:58:09 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:58:09 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:09 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:09 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:09 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:09 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+DEBUG - 2025-04-02 13:58:09 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:58:09 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:58:09 --> Final output sent to browser
+DEBUG - 2025-04-02 13:58:09 --> Total execution time: 0.2911
+DEBUG - 2025-04-02 13:58:24 --> Config Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:58:24 --> URI Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> Router Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> Output Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> Security Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> Input Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:58:24 --> Language Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:58:24 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:58:24 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:58:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:58:24 --> Final output sent to browser
+DEBUG - 2025-04-02 13:58:24 --> Total execution time: 0.0422
+DEBUG - 2025-04-02 13:58:26 --> Config Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:58:26 --> URI Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Router Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Output Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Security Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Input Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:58:26 --> Language Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:58:26 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Session Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:58:26 --> Session routines successfully run
+DEBUG - 2025-04-02 13:58:26 --> Model Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Model Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:58:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:58:26 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:58:26 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:58:26 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:26 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:26 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:26 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:26 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+DEBUG - 2025-04-02 13:58:26 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:58:26 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:58:26 --> Final output sent to browser
+DEBUG - 2025-04-02 13:58:26 --> Total execution time: 0.0731
+DEBUG - 2025-04-02 13:58:38 --> Config Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:58:38 --> URI Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> Router Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> Output Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> Security Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> Input Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:58:38 --> Language Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:58:38 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:58:38 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:58:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:58:38 --> Final output sent to browser
+DEBUG - 2025-04-02 13:58:38 --> Total execution time: 0.0437
+DEBUG - 2025-04-02 13:58:40 --> Config Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Hooks Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 13:58:40 --> URI Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Router Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Output Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Security Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Input Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 13:58:40 --> Language Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Loader Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 13:58:40 --> Controller Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Session Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 13:58:40 --> Session routines successfully run
+DEBUG - 2025-04-02 13:58:40 --> Model Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Model Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> Database Driver Class Initialized
+ERROR - 2025-04-02 13:58:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 13:58:40 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 13:58:40 --> File loaded: application/views/invitado/header.php
+ERROR - 2025-04-02 13:58:40 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:40 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:40 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:40 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+ERROR - 2025-04-02 13:58:40 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\invitado\cliente_viewdetails.php 127
+DEBUG - 2025-04-02 13:58:40 --> File loaded: application/views/invitado/cliente_viewdetails.php
+DEBUG - 2025-04-02 13:58:40 --> File loaded: application/views/invitado/footer.php
+DEBUG - 2025-04-02 13:58:40 --> Final output sent to browser
+DEBUG - 2025-04-02 13:58:40 --> Total execution time: 0.0752
+DEBUG - 2025-04-02 14:00:44 --> Config Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:00:44 --> URI Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Router Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Output Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Security Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Input Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:00:44 --> Language Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:00:44 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Session Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:00:44 --> Session routines successfully run
+DEBUG - 2025-04-02 14:00:44 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:00:44 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:00:44 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Config Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:00:44 --> URI Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Router Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Output Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Security Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Input Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:00:44 --> Language Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:00:44 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Session Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:00:44 --> Session routines successfully run
+DEBUG - 2025-04-02 14:00:44 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:00:44 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:00:44 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:00:44 --> File loaded: application/views/restaurante/login.php
+DEBUG - 2025-04-02 14:00:44 --> Final output sent to browser
+DEBUG - 2025-04-02 14:00:44 --> Total execution time: 0.0780
+DEBUG - 2025-04-02 14:00:49 --> Config Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:00:49 --> URI Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Router Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Output Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Security Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Input Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:00:49 --> Language Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:00:49 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Session Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:00:49 --> Session routines successfully run
+DEBUG - 2025-04-02 14:00:49 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:00:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:00:49 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 14:00:49 --> Config Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:00:49 --> URI Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Router Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Output Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Security Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Input Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:00:49 --> Language Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:00:49 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Session Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:00:49 --> Session routines successfully run
+DEBUG - 2025-04-02 14:00:49 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:00:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:00:49 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:00:49 --> File loaded: application/views/restaurante/header.php
+DEBUG - 2025-04-02 14:00:49 --> File loaded: application/views/restaurante/home.php
+DEBUG - 2025-04-02 14:00:49 --> File loaded: application/views/restaurante/footer.php
+DEBUG - 2025-04-02 14:00:49 --> Final output sent to browser
+DEBUG - 2025-04-02 14:00:49 --> Total execution time: 0.0849
+DEBUG - 2025-04-02 14:00:53 --> Config Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:00:53 --> URI Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Router Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Output Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Security Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Input Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:00:53 --> Language Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:00:53 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Session Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:00:53 --> Session routines successfully run
+DEBUG - 2025-04-02 14:00:53 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:00:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:00:53 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> File loaded: application/views/restaurante/header.php
+DEBUG - 2025-04-02 14:00:53 --> File loaded: application/views/restaurante/clientes_view.php
+DEBUG - 2025-04-02 14:00:53 --> File loaded: application/views/restaurante/footer.php
+DEBUG - 2025-04-02 14:00:53 --> Final output sent to browser
+DEBUG - 2025-04-02 14:00:53 --> Total execution time: 0.2145
+DEBUG - 2025-04-02 14:00:53 --> Config Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:00:53 --> URI Class Initialized
+DEBUG - 2025-04-02 14:00:53 --> Router Class Initialized
+ERROR - 2025-04-02 14:00:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:00:54 --> Config Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:00:54 --> URI Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Router Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Output Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Security Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Input Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:00:54 --> Language Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:00:54 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Session Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:00:54 --> Session routines successfully run
+DEBUG - 2025-04-02 14:00:54 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Model Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:00:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:00:54 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:00:54 --> File loaded: application/views/restaurante/header.php
+ERROR - 2025-04-02 14:00:55 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:00:55 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:00:55 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:00:55 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:00:55 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+DEBUG - 2025-04-02 14:00:55 --> File loaded: application/views/restaurante/clientes_viewdetails.php
+DEBUG - 2025-04-02 14:00:55 --> File loaded: application/views/restaurante/footer.php
+DEBUG - 2025-04-02 14:00:55 --> Final output sent to browser
+DEBUG - 2025-04-02 14:00:55 --> Total execution time: 0.2443
+DEBUG - 2025-04-02 14:02:07 --> Config Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:02:07 --> URI Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Router Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Output Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Security Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Input Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:02:07 --> Language Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:02:07 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Session Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:02:07 --> Session routines successfully run
+DEBUG - 2025-04-02 14:02:07 --> Model Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Model Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:02:07 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:02:07 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:02:07 --> File loaded: application/views/restaurante/header.php
+ERROR - 2025-04-02 14:02:07 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:02:07 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:02:07 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:02:07 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:02:07 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:02:07 --> Severity: Notice  --> Undefined index: ocultar C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 119
+ERROR - 2025-04-02 14:02:07 --> Severity: Notice  --> Undefined index: ocultar C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 119
+DEBUG - 2025-04-02 14:02:07 --> File loaded: application/views/restaurante/clientes_viewdetails.php
+DEBUG - 2025-04-02 14:02:07 --> File loaded: application/views/restaurante/footer.php
+DEBUG - 2025-04-02 14:02:07 --> Final output sent to browser
+DEBUG - 2025-04-02 14:02:07 --> Total execution time: 0.2463
+DEBUG - 2025-04-02 14:02:09 --> Config Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:02:09 --> URI Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Router Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Output Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Security Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Input Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:02:09 --> Language Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:02:09 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Session Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:02:09 --> Session routines successfully run
+DEBUG - 2025-04-02 14:02:09 --> Model Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Model Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:02:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:02:09 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:02:09 --> File loaded: application/views/restaurante/header.php
+ERROR - 2025-04-02 14:02:09 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:02:09 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:02:09 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:02:09 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:02:09 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:02:09 --> Severity: Notice  --> Undefined index: ocultar C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 119
+ERROR - 2025-04-02 14:02:09 --> Severity: Notice  --> Undefined index: ocultar C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 119
+DEBUG - 2025-04-02 14:02:09 --> File loaded: application/views/restaurante/clientes_viewdetails.php
+DEBUG - 2025-04-02 14:02:09 --> File loaded: application/views/restaurante/footer.php
+DEBUG - 2025-04-02 14:02:09 --> Final output sent to browser
+DEBUG - 2025-04-02 14:02:09 --> Total execution time: 0.0751
+DEBUG - 2025-04-02 14:03:11 --> Config Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:03:11 --> URI Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Router Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Output Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Security Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Input Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:03:11 --> Language Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:03:11 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Session Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:03:11 --> Session routines successfully run
+DEBUG - 2025-04-02 14:03:11 --> Model Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Model Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:03:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:03:11 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:03:11 --> File loaded: application/views/restaurante/header.php
+ERROR - 2025-04-02 14:03:11 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:03:11 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:03:11 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:03:11 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:03:11 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+DEBUG - 2025-04-02 14:03:11 --> File loaded: application/views/restaurante/clientes_viewdetails.php
+DEBUG - 2025-04-02 14:03:11 --> File loaded: application/views/restaurante/footer.php
+DEBUG - 2025-04-02 14:03:11 --> Final output sent to browser
+DEBUG - 2025-04-02 14:03:11 --> Total execution time: 0.1314
+DEBUG - 2025-04-02 14:03:16 --> Config Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:03:16 --> URI Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> Router Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> Output Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> Security Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> Input Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:03:16 --> Language Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:03:16 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:03:16 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:03:16 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:03:16 --> Final output sent to browser
+DEBUG - 2025-04-02 14:03:16 --> Total execution time: 0.0476
+DEBUG - 2025-04-02 14:03:19 --> Config Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:03:19 --> URI Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Router Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Output Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Security Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Input Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:03:19 --> Language Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:03:19 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Session Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:03:19 --> Session routines successfully run
+DEBUG - 2025-04-02 14:03:19 --> Model Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Model Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:03:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:03:19 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:03:19 --> File loaded: application/views/restaurante/header.php
+ERROR - 2025-04-02 14:03:19 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:03:19 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:03:19 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:03:19 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+ERROR - 2025-04-02 14:03:19 --> Severity: Notice  --> Array to string conversion C:\xampp\htdocs\intraboda\application\views\restaurante\clientes_viewdetails.php 104
+DEBUG - 2025-04-02 14:03:19 --> File loaded: application/views/restaurante/clientes_viewdetails.php
+DEBUG - 2025-04-02 14:03:19 --> File loaded: application/views/restaurante/footer.php
+DEBUG - 2025-04-02 14:03:19 --> Final output sent to browser
+DEBUG - 2025-04-02 14:03:19 --> Total execution time: 0.0716
+DEBUG - 2025-04-02 14:09:18 --> Config Class Initialized
+DEBUG - 2025-04-02 14:09:18 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:09:18 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:09:18 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:09:18 --> URI Class Initialized
+DEBUG - 2025-04-02 14:09:18 --> Router Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Output Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Security Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Input Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:09:19 --> Language Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:09:19 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Session Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:09:19 --> Session routines successfully run
+DEBUG - 2025-04-02 14:09:19 --> Model Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Model Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:09:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:09:19 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:09:19 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 14:09:19 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 14:09:19 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 14:09:19 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 14:09:19 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 14:09:19 --> Final output sent to browser
+DEBUG - 2025-04-02 14:09:19 --> Total execution time: 0.8850
+DEBUG - 2025-04-02 14:09:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:09:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Router Class Initialized
+ERROR - 2025-04-02 14:09:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:09:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:09:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Router Class Initialized
+ERROR - 2025-04-02 14:09:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:09:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:09:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Router Class Initialized
+ERROR - 2025-04-02 14:09:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:09:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:09:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Router Class Initialized
+ERROR - 2025-04-02 14:09:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:09:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:09:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Router Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Config Class Initialized
+ERROR - 2025-04-02 14:09:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:09:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:09:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:09:20 --> Router Class Initialized
+ERROR - 2025-04-02 14:09:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:10:18 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:18 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Router Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Output Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Security Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Input Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:10:18 --> Language Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:10:18 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Session Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:10:18 --> Session routines successfully run
+DEBUG - 2025-04-02 14:10:18 --> Model Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Model Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:10:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:10:18 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:10:18 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 14:10:18 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 14:10:19 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 14:10:19 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 14:10:19 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 14:10:19 --> Final output sent to browser
+DEBUG - 2025-04-02 14:10:19 --> Total execution time: 1.0747
+DEBUG - 2025-04-02 14:10:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Router Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Router Class Initialized
+ERROR - 2025-04-02 14:10:20 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 14:10:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:10:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Router Class Initialized
+ERROR - 2025-04-02 14:10:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:10:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Router Class Initialized
+ERROR - 2025-04-02 14:10:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:10:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Router Class Initialized
+ERROR - 2025-04-02 14:10:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:10:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:20 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:20 --> Router Class Initialized
+ERROR - 2025-04-02 14:10:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:10:51 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:51 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Router Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Output Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Security Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Input Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:10:51 --> Language Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:10:51 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Session Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:10:51 --> Session routines successfully run
+DEBUG - 2025-04-02 14:10:51 --> Model Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Model Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:10:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:10:51 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:10:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 14:10:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 14:10:51 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 14:10:52 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 14:10:52 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 14:10:52 --> Final output sent to browser
+DEBUG - 2025-04-02 14:10:52 --> Total execution time: 0.6789
+DEBUG - 2025-04-02 14:10:52 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:52 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Router Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Router Class Initialized
+ERROR - 2025-04-02 14:10:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:10:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> UTF-8 Support Enabled
+ERROR - 2025-04-02 14:10:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:10:52 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Router Class Initialized
+ERROR - 2025-04-02 14:10:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:10:52 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Router Class Initialized
+ERROR - 2025-04-02 14:10:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:10:52 --> Config Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:52 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:10:52 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> URI Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Router Class Initialized
+DEBUG - 2025-04-02 14:10:52 --> Router Class Initialized
+ERROR - 2025-04-02 14:10:52 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 14:10:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:11:01 --> Config Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:11:01 --> URI Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Router Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Output Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Security Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Input Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:11:01 --> Language Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:11:01 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Session Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Helper loaded: string_helper
+DEBUG - 2025-04-02 14:11:01 --> Session routines successfully run
+DEBUG - 2025-04-02 14:11:01 --> Model Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Model Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:11:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:11:01 --> Encrypt Class Initialized
+DEBUG - 2025-04-02 14:11:01 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 14:11:01 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-04-02 14:11:01 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-02 14:11:02 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-04-02 14:11:02 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-02 14:11:02 --> Final output sent to browser
+DEBUG - 2025-04-02 14:11:02 --> Total execution time: 1.0024
+DEBUG - 2025-04-02 14:11:02 --> Config Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:11:02 --> URI Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Router Class Initialized
+ERROR - 2025-04-02 14:11:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:11:02 --> Config Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:11:02 --> URI Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Router Class Initialized
+ERROR - 2025-04-02 14:11:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:11:02 --> Config Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Config Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:11:02 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:11:02 --> URI Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> URI Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Router Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Router Class Initialized
+ERROR - 2025-04-02 14:11:02 --> 404 Page Not Found --> uploads
+ERROR - 2025-04-02 14:11:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:11:02 --> Config Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:11:02 --> URI Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Router Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Config Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Hooks Class Initialized
+ERROR - 2025-04-02 14:11:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:11:02 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:11:02 --> URI Class Initialized
+DEBUG - 2025-04-02 14:11:02 --> Router Class Initialized
+ERROR - 2025-04-02 14:11:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-02 14:11:47 --> Config Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> Hooks Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> Utf8 Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> UTF-8 Support Enabled
+DEBUG - 2025-04-02 14:11:47 --> URI Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> Router Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> Output Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> Security Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> Input Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-02 14:11:47 --> Language Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> Loader Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> Helper loaded: url_helper
+DEBUG - 2025-04-02 14:11:47 --> Controller Class Initialized
+DEBUG - 2025-04-02 14:11:47 --> Database Driver Class Initialized
+ERROR - 2025-04-02 14:11:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-02 14:11:47 --> Final output sent to browser
+DEBUG - 2025-04-02 14:11:47 --> Total execution time: 0.0421

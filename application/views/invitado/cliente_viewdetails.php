@@ -136,16 +136,20 @@
         <fieldset class="datos">
             <legend>Observaciones</legend>
 
-            <?php if (!$observaciones_cliente): ?>
+            <?php
+            // Filtramos solo las observaciones que no están ocultas
+            $observaciones_visibles = array_filter($observaciones_cliente, function ($o) {
+                return $o['ocultar'] == 0;
+            });
+            ?>
+
+            <?php if (empty($observaciones_visibles)): ?>
                 <p style="text-align:center;padding:20px">Todavía no se han añadido observaciones</p>
             <?php else: ?>
                 <ul class="observaciones obs_admin" id="lista_observaciones">
-                    <?php foreach ($observaciones_cliente as $observacion): ?>
+                    <?php foreach ($observaciones_visibles as $observacion): ?>
                         <li id="o_<?php echo $observacion['id']; ?>"
-                            style="margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; 
-                    border-radius: 5px; background-color: #f9f9f9; 
-                    display: flex; justify-content: space-between; align-items: center;">
-
+                            style="margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; display: flex; justify-content: space-between; align-items: center;">
                             <div>
                                 <strong>Observación:</strong> <?php echo $observacion['comentario']; ?><br>
                                 <span>Link:</span>
@@ -155,8 +159,7 @@
                                     if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
                                         $url = "http://" . $url;
                                     }
-                                    echo '<a href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . '" target="_blank" 
-                            style="color: #007bff; text-decoration: none;">' . htmlspecialchars($observacion['link'], ENT_QUOTES, 'UTF-8') . '</a><br>';
+                                    echo '<a href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . '" target="_blank" style="color: #007bff; text-decoration: none;">' . htmlspecialchars($observacion['link'], ENT_QUOTES, 'UTF-8') . '</a><br>';
                                 }
                                 ?>
                                 <small style="color: #666;">Fecha: <?php echo date('d/m/Y', strtotime($observacion['fecha'])); ?></small>
@@ -165,7 +168,6 @@
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
-
 
             <div style="text-align:center; clear: left; margin-top:20px">
                 <?php if ($this->session->flashdata('msg')): ?>

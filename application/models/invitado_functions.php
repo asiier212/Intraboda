@@ -132,13 +132,14 @@ class Invitado_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, comentario, link, DATE_FORMAT(fecha, '%d-%m-%Y %H:%i') as fecha FROM observaciones WHERE id_cliente = {$id} ORDER BY id DESC");
+		$query = $this->db->query("SELECT id, comentario, link, ocultar, DATE_FORMAT(fecha, '%d-%m-%Y %H:%i') as fecha FROM observaciones WHERE id_cliente = {$id} ORDER BY id DESC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['comentario'] = $fila->comentario;
 				$data[$i]['link'] = $fila->link;
+				$data[$i]['ocultar'] = $fila->ocultar;
 				$data[$i]['fecha'] = $fila->fecha;
 				$i++;
 			}

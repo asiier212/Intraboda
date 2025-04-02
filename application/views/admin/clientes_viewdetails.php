@@ -732,7 +732,7 @@
 									<?php if (!$respuesta_encontrada && !empty($respuesta_cliente_actual)) { ?>
 										<!-- Mostrar input de número si la respuesta no coincide con ninguna opción -->
 										<label>
-										<input type="radio" disabled checked>
+											<input type="radio" disabled checked>
 											Número exacto:
 											<input type="number" value="<?php echo htmlspecialchars($respuesta_cliente_actual); ?>" disabled>
 										</label><br>
@@ -1003,31 +1003,44 @@
 			<?php else: ?>
 				<ul class="observaciones obs_admin" id="lista_observaciones">
 					<?php foreach ($observaciones_cliente as $observacion): ?>
-						<li id="o_<?php echo $observacion['id']; ?>"
-							style="margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; 
-                    border-radius: 5px; background-color: #f9f9f9; 
-                    display: flex; justify-content: space-between; align-items: center;">
+						<li id="o_<?php echo $observacion['id']; ?>" style="margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; display: flex; justify-content: space-between; align-items: flex-start;">
 
-							<div>
-								<strong>Observación:</strong> <?php echo $observacion['comentario']; ?><br>
-								<span>Link:</span>
+							<!-- Contenido de la observación -->
+							<div style="flex: 1;">
+								<p style="margin: 0 0 5px 0;"><strong>Observación:</strong> <?php echo nl2br($observacion['comentario']); ?></p>
+
 								<?php
 								$url = trim($observacion['link']);
 								if (!empty($url)) {
 									if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
 										$url = "http://" . $url;
 									}
-									echo '<a href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . '" target="_blank" 
-                            style="color: #007bff; text-decoration: none;">' . htmlspecialchars($observacion['link'], ENT_QUOTES, 'UTF-8') . '</a><br>';
+									echo '<p style="margin: 0 0 5px 0;"><span>Link:</span> <a href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . '" target="_blank" style="color: #007bff; text-decoration: none;">' . htmlspecialchars($observacion['link'], ENT_QUOTES, 'UTF-8') . '</a></p>';
 								}
 								?>
+
 								<small style="color: #666;">Fecha: <?php echo date('d/m/Y', strtotime($observacion['fecha'])); ?></small>
 							</div>
 
-							<a href="#" onclick="return deleteobservacion_admin(<?php echo $observacion['id']; ?>)">
-								<img src="<?php echo base_url(); ?>img/delete.gif" width="15" alt="Eliminar" style="margin-right: 10px" />
-							</a>
+							<!-- Acciones: eliminar y ocultar -->
+							<div style="display: flex; flex-direction: column; align-items: center; margin-top: auto; margin-bottom: auto;">
+								<a href="#" onclick="return deleteobservacion_admin(<?php echo $observacion['id']; ?>)" title="Eliminar">
+									<img style="margin: 0" src="<?php echo base_url(); ?>img/delete.gif" width="18" alt="Eliminar" />
+								</a>
+
+								<label title="Ocultar Observacion a Invitados y Restaurantes" style="text-align: center; margin-top: 6px; font-size: 12px; padding: 0;">
+									Ocultar<br>
+									<input type="checkbox"
+										name="ocultar"
+										id="ocultar_<?php echo $observacion['id']; ?>"
+										value="<?php echo $observacion['id']; ?>"
+										<?php echo $observacion['ocultar'] == 1 ? 'checked' : ''; ?>
+										style="margin-top: 2px;">
+								</label>
+							</div>
+
 						</li>
+
 					<?php endforeach; ?>
 				</ul>
 			<?php endif; ?>
@@ -1045,6 +1058,31 @@
 				<br>
 				<input type="submit" name="add_observ" value="Añadir">
 			</form>
+
+			<script>
+				$(document).ready(function() {
+					$('input[type=checkbox][name=ocultar]').change(function() {
+						var id = $(this).val();
+						var ocultar = $(this).is(':checked') ? 1 : 0;
+
+						$.ajax({
+							url: '<?php echo base_url() ?>index.php/ajax/update_observacion_ocultar',
+							type: 'POST',
+							data: {
+								id: id,
+								ocultar: ocultar
+							},
+							success: function(response) {
+								console.log("Estado actualizado: " + response);
+							},
+							error: function(xhr, status, error) {
+								alert("Error al actualizar el estado de ocultar.");
+							}
+						});
+					});
+				});
+			</script>
+
 
 			<!-- Cargar TinyMCE -->
 			<script src="<?php echo base_url() . "js/tinymce/tinymce.min.js" ?>"></script>

@@ -91,6 +91,20 @@ class Ajax extends CI_Controller
 		}
 	}
 
+	public function update_observacion_ocultar()
+	{
+		$this->load->database();
+
+		$id = intval($this->input->post('id'));
+		$ocultar = $this->input->post('ocultar') == '1' ? 1 : 0;
+
+		$this->db->where('id', $id);
+		$this->db->update('observaciones', array('ocultar' => $ocultar));
+
+		echo 'ok';
+	}
+
+
 	public function updateinvitado()
 	{
 		$this->load->library('encrypt');
