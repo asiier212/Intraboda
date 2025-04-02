@@ -962,18 +962,55 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function GetInvitados()
+	function GetInvitados($filtro_campo = null, $filtro_valor = null, $solo_activos = null)
 	{
 		$data = false;
 		$this->load->database();
 		$this->load->library('encrypt');
-		$query = $this->db->query("
+
+		// Construcción dinámica del WHERE
+		$where = "";
+		$params = [];
+
+		if (!empty($filtro_campo) && !empty($filtro_valor)) {
+			switch ($filtro_campo) {
+				case 'cliente':
+					$where .= " AND (clientes.nombre_novio LIKE ? OR clientes.nombre_novia LIKE ?)";
+					$params[] = "%$filtro_valor%";
+					$params[] = "%$filtro_valor%";
+					break;
+				case 'usuario':
+					$where .= " AND invitado.username LIKE ?";
+					$params[] = "%$filtro_valor%";
+					break;
+				case 'email':
+					$where .= " AND invitado.email LIKE ?";
+					$params[] = "%$filtro_valor%";
+					break;
+				case 'fecha':
+					$fecha = DateTime::createFromFormat('d/m/Y', $filtro_valor);
+					if ($fecha) {
+						$where .= " AND DATE(invitado.fecha_creacion) = ?";
+						$params[] = $fecha->format('Y-m-d');
+					}
+					break;
+			}
+		}
+
+		if (!empty($solo_activos)) {
+			$where .= " AND invitado.valido = 1";
+		}
+
+		$sql = "
 			SELECT invitado.id, invitado.id_cliente, clientes.nombre_novio, clientes.nombre_novia,
 				   invitado.username, invitado.clave, invitado.email, invitado.valido,
 				   invitado.fecha_creacion, invitado.fecha_expiracion
 			FROM invitado 
 			JOIN clientes ON invitado.id_cliente = clientes.id
-		");
+			WHERE 1=1 $where
+		";
+
+		$query = $this->db->query($sql, $params);
 
 		if ($query->num_rows() > 0) {
 			$i = 0;
@@ -991,8 +1028,10 @@ class Admin_functions extends CI_Model
 				$i++;
 			}
 		}
+
 		return $data;
 	}
+
 
 	function DeleteServicio($id)
 	{

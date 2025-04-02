@@ -26,6 +26,7 @@
     		<div style="background:white; width:400px; padding:20px; border-radius:10px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
     			<h3>Crear Cuenta Invitado</h3><br>
 
+				
     			<form method="post" action="">
     				<p><label>Usuario:</label><br>
     					<input type="text" name="nuevo_username" required />
@@ -34,7 +35,7 @@
     					<input type="text" name="nuevo_clave" required />
     				</p>
     				<p><label>Email:</label><br>
-    					<input type="email" name="nuevo_email" />
+    					<input type="email" name="nuevo_email" required/>
     				</p>
     				<p><label>Fecha de expiración:</label><br>
     					<input type="date" name="nuevo_expiracion" />
@@ -68,7 +69,7 @@
     		<fieldset class="datos">
     			<legend>Datos de contacto</legend>
     			<span style="font-size:11px">Para editar los datos haz click sobre el texto</span>
-    			<?php if ($this->session->userdata('user_id') == 1) {
+    			<?php if ($this->session->userdata('user_id') == 1 || $this->session->userdata('user_id') == 2123) {
 					echo '<p style="text-align:right"><a style="text-decoration:underline; cursor:pointer;" onclick="abrirPopupInvitado()">Crear Cuenta Invitado</a></p>';
 				}
 				?>

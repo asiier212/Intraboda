@@ -234,10 +234,18 @@ class Admin extends CI_Controller
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-
-		$data['invitados'] = $this->admin_functions->GetInvitados();
+	
+		// Capturar filtros desde GET
+		$filtro_campo = $this->input->get('filtro_campo');
+		$filtro_valor = $this->input->get('filtro_valor');
+		$solo_activos = $this->input->get('solo_activos');
+	
+		// Pasar filtros al modelo
+		$data['invitados'] = $this->admin_functions->GetInvitados($filtro_campo, $filtro_valor, $solo_activos);
+	
 		$this->_loadViews($data_header, $data, $data_footer, 'invitados');
 	}
+	
 
 	public function eliminar_invitado($id)
 	{

@@ -44,7 +44,7 @@
     <div id="header">
         <ul class="nav">
             <li class="logo">
-            <img src="<?php echo base_url() . $this->config->item('logo_header') ?>" width="25" height="25" />
+                <img src="<?php echo base_url() . $this->config->item('logo_header') ?>" width="25" height="25" />
             </li>
 
             <li><a href="<?php echo base_url() ?>restaurante/clientes/view">Listar Clientes</a></li>

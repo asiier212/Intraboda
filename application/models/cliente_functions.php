@@ -55,6 +55,83 @@
 		return $data;
 	}
 
+	function GetInvitados($filtro_campo = null, $filtro_valor = null, $solo_activos = null)
+{
+	$data = false;
+	$this->load->database();
+	$this->load->library('encrypt');
+
+	// Obtener id del cliente logueado
+	$id_cliente_logueado = $this->session->userdata('user_id');
+	if (!$id_cliente_logueado) {
+		return []; // No está logueado
+	}
+
+	// Construcción dinámica del WHERE
+	$where = " AND invitado.id_cliente = ?";
+	$params = [$id_cliente_logueado];
+
+	if (!empty($filtro_campo) && !empty($filtro_valor)) {
+		switch ($filtro_campo) {
+			case 'cliente':
+				$where .= " AND (clientes.nombre_novio LIKE ? OR clientes.nombre_novia LIKE ?)";
+				$params[] = "%$filtro_valor%";
+				$params[] = "%$filtro_valor%";
+				break;
+			case 'usuario':
+				$where .= " AND invitado.username LIKE ?";
+				$params[] = "%$filtro_valor%";
+				break;
+			case 'email':
+				$where .= " AND invitado.email LIKE ?";
+				$params[] = "%$filtro_valor%";
+				break;
+			case 'fecha':
+				$fecha = DateTime::createFromFormat('d/m/Y', $filtro_valor);
+				if ($fecha) {
+					$where .= " AND DATE(invitado.fecha_creacion) = ?";
+					$params[] = $fecha->format('Y-m-d');
+				}
+				break;
+		}
+	}
+
+	if (!empty($solo_activos)) {
+		$where .= " AND invitado.valido = 1";
+	}
+
+	$sql = "
+		SELECT invitado.id, invitado.id_cliente, clientes.nombre_novio, clientes.nombre_novia,
+			   invitado.username, invitado.clave, invitado.email, invitado.valido,
+			   invitado.fecha_creacion, invitado.fecha_expiracion
+		FROM invitado 
+		JOIN clientes ON invitado.id_cliente = clientes.id
+		WHERE 1=1 $where
+	";
+
+	$query = $this->db->query($sql, $params);
+
+	if ($query->num_rows() > 0) {
+		$i = 0;
+		foreach ($query->result() as $fila) {
+			$data[$i]['id'] = $fila->id;
+			$data[$i]['id_cliente'] = $fila->id_cliente;
+			$data[$i]['nombre_novio'] = $fila->nombre_novio;
+			$data[$i]['nombre_novia'] = $fila->nombre_novia;
+			$data[$i]['username'] = $fila->username;
+			$data[$i]['clave'] = $fila->clave;
+			$data[$i]['email'] = $fila->email;
+			$data[$i]['valido'] = $fila->valido;
+			$data[$i]['fecha_creacion'] = $fila->fecha_creacion;
+			$data[$i]['fecha_expiracion'] = $fila->fecha_expiracion;
+			$i++;
+		}
+	}
+
+	return $data;
+}
+
+
 	function GetPreguntasEncuestaDatosBoda()
 	{
 		$data = false;
@@ -73,7 +150,8 @@
 		return $data;
 	}
 
-	function GetOpcionesRespuestasEncuestaDatosBoda(){
+	function GetOpcionesRespuestasEncuestaDatosBoda()
+	{
 		$data = false;
 		$this->load->database();
 		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM opciones_respuesta_encuesta_datos_boda");
@@ -181,51 +259,52 @@
 		}
 		return $dato;
 	}*/
-	function getTopSongs($fechaDesde = null, $fechaHasta = null, $momento = null) {
+	function getTopSongs($fechaDesde = null, $fechaHasta = null, $momento = null)
+	{
 		$this->load->database();
-		
+
 		$sql = "SELECT * FROM ranking_canciones WHERE 1=1";
 		$params = [];
-	
+
 		// Filtro por fecha desde
 		if (!empty($fechaDesde)) {
 			$sql .= " AND DATE(fecha_alta) >= ?";
 			$params[] = $fechaDesde;
 		}
-	
+
 		// Filtro por fecha hasta
 		if (!empty($fechaHasta)) {
 			$sql .= " AND DATE(fecha_alta) <= ?";
 			$params[] = $fechaHasta;
 		}
-	
+
 		// Filtro por momento
 		if (!empty($momento)) {
 			$sql .= " AND momento = ?";
 			$params[] = $momento;
 		}
-	
+
 		// Ordenar y limitar
 		$sql .= " ORDER BY momento ASC, cuantas DESC";
-	
+
 		$data = [];
 		$result = $this->db->query($sql, $params);
-		
+
 		if ($result->num_rows() === 0) {
 			return $data;
 		}
-	
+
 		$orden = 1;
-	
+
 		foreach ($result->result() as $row) {
 			if (!array_key_exists($row->momento, $data)) {
 				$orden = 1;
 			}
-	
+
 			if ($orden > 10) {
 				continue;
 			}
-	
+
 			$data[$row->momento][] = [
 				'id_momento' => $row->id_momento,
 				'momento' => $row->momento,
@@ -237,16 +316,17 @@
 			];
 			$orden++;
 		}
-	
+
 		return $data;
 	}
-	
 
-	function getAllMomentos() {
+
+	function getAllMomentos()
+	{
 		$this->load->database();
 		$sql = "SELECT DISTINCT momento FROM ranking_canciones ORDER BY momento ASC";
 		$result = $this->db->query($sql);
-		
+
 		$momentos = [];
 		if ($result->num_rows() > 0) {
 			foreach ($result->result() as $row) {
@@ -255,7 +335,7 @@
 		}
 		return $momentos;
 	}
-	
+
 
 
 
@@ -579,24 +659,25 @@
 
 		return $data;
 	}
-	public function GetServicios($ids) {
+	public function GetServicios($ids)
+	{
 		if (empty($ids)) {
 			log_message('error', '⚠️ ERROR en GetServicios(): No se recibieron IDs.');
 			return [];
 		}
-	
+
 		log_message('debug', 'Ejecutando consulta: SELECT id, nombre FROM servicios WHERE id IN (' . $ids . ')');
-		
+
 		$query = $this->db->query("SELECT id, nombre FROM servicios WHERE id IN ($ids) Order by orden ASC");
-		
+
 		if ($query->num_rows() == 0) {
 			log_message('error', '⚠️ ERROR: La consulta a servicios no devolvió resultados.');
 			return [];
 		}
-	
+
 		return $query->result_array();
 	}
-	
+
 
 	function SendMailPersona($persona_id, $mail_desde, $asunto, $mensaje)
 	{
@@ -642,22 +723,22 @@
 	{
 		$data = [];
 		$this->load->database();
-	
+
 		// Evitar inyección SQL asegurando que user_id es un número
 		$query = $this->db->query("SELECT servicios FROM clientes WHERE id = ?", [$user_id]);
-	
+
 		if ($query->num_rows() > 0) {
 			$fila = $query->row();
-	
+
 			// Verificar si el campo 'servicios' está serializado antes de unserialize()
 			$arr_servicios = @unserialize($fila->servicios);
 			if ($arr_servicios === false && $fila->servicios !== 'b:0;') {
 				$arr_servicios = json_decode($fila->servicios, true);
 			}
-	
+
 			// Verificar que sea un array válido antes de usar array_keys()
 			$arr_serv_keys = is_array($arr_servicios) ? array_keys($arr_servicios) : [];
-	
+
 			// Construir la consulta evitando errores de SQL
 			if (!empty($arr_serv_keys)) {
 				$placeholders = implode(',', array_map('intval', $arr_serv_keys));
@@ -669,7 +750,7 @@
 		} else {
 			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios ORDER BY orden ASC");
 		}
-	
+
 		// Procesar resultados
 		if ($query->num_rows() > 0) {
 			foreach ($query->result() as $fila) {
@@ -682,10 +763,10 @@
 				];
 			}
 		}
-	
+
 		return $data;
 	}
-	
+
 	function GetPagos($cliente_id)
 	{
 		$data = array();

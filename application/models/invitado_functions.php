@@ -24,6 +24,10 @@ class Invitado_functions extends CI_Model
             if ($fila->valido != 1) {
                 return 'desactivado';
             }
+
+            if (!empty($fila->fecha_expiracion) && strtotime($fila->fecha_expiracion) < time()) {
+                return 'expirado';
+            }            
     
             // Comprobar clave
             $clave_sin_cifrar = $this->encrypt->decode($fila->clave);

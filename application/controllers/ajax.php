@@ -91,7 +91,83 @@ class Ajax extends CI_Controller
 		}
 	}
 
+	public function updateinvitado()
+{
+    $this->load->library('encrypt');
+    $this->load->database();
 
+    if (!isset($_POST['id']) || !isset($_POST['value'])) {
+        http_response_code(400);
+        echo "Datos incompletos.";
+        return;
+    }
+
+    $element_id = $_POST['id'];
+    $nuevo_valor = trim($_POST['value']);
+
+    if (strpos($element_id, "_") === false) {
+        http_response_code(400);
+        echo "Formato incorrecto de ID.";
+        return;
+    }
+
+    list($campo, $id) = explode("_", $element_id);
+
+    if (!is_numeric($id)) {
+        http_response_code(400);
+        echo "ID inválido.";
+        return;
+    }
+
+    // Mapeo de campos visibles a columnas reales en la base de datos
+    if ($campo === 'expira') {
+        $campo_db = 'fecha_expiracion';
+    } else {
+        $campo_db = $campo;
+    }
+
+    // Encriptar clave si corresponde
+    if ($campo === 'clave') {
+        if ($nuevo_valor === '') {
+            http_response_code(400);
+            echo "La clave no puede estar vacía.";
+            return;
+        }
+        $nuevo_valor = $this->encrypt->encode($nuevo_valor);
+    }
+
+    // Formatear fecha si es expira
+    if ($campo === 'expira') {
+        $fecha = DateTime::createFromFormat('d/m/Y', $nuevo_valor);
+        if (!$fecha || $fecha->format('d/m/Y') !== $nuevo_valor) {
+            http_response_code(400);
+            echo "Formato de fecha inválido. Usa dd/mm/yyyy.";
+            return;
+        }
+        $nuevo_valor = $fecha->format('Y-m-d');
+    }
+
+    // Actualización
+    $this->db->where('id', $id);
+    $exito = $this->db->update('invitado', array($campo_db => $nuevo_valor));
+
+    if (!$exito) {
+        http_response_code(500);
+        echo "Error al actualizar la base de datos.";
+        return;
+    }
+
+    // Devolver valor actualizado
+    if ($campo === 'clave') {
+        echo $this->encrypt->decode($nuevo_valor);
+    } elseif ($campo === 'expira') {
+        echo $fecha->format('d/m/Y');
+    } else {
+        echo $nuevo_valor;
+    }
+}
+
+	
 
 	function buscarartista($nombre)
 	{

@@ -195,6 +195,24 @@ class Cliente extends CI_Controller
 			}
 		}
 	}
+
+	public function invitados()
+	{
+		$data_header = false;
+		$data = false;
+		$data_footer = false;
+	
+		// Capturar filtros desde GET
+		$filtro_campo = $this->input->get('filtro_campo');
+		$filtro_valor = $this->input->get('filtro_valor');
+		$solo_activos = $this->input->get('solo_activos');
+	
+		// Pasar filtros al modelo
+		$data['invitados'] = $this->cliente_functions->GetInvitados($filtro_campo, $filtro_valor, $solo_activos);
+	
+		$this->_loadViews($data_header, $data, $data_footer, 'invitados');
+	}
+
 	public function topSongs()
 	{
 		$data_header = false;
@@ -403,9 +421,9 @@ class Cliente extends CI_Controller
 			$this->load->database();
 
 			// Verificar si ya existe el username
-			$existe = $this->db->get_where('invitado', array('username' => $username))->num_rows();
+			$existe = $this->db->get_where('invitado', array('email' => $email))->num_rows();
 			if ($existe > 0) {
-				$data['msg_invitado'] = "Ese nombre de usuario ya está en uso.";
+				$data['msg_invitado'] = "Ese email ya está en uso.";
 			} else {
 				$this->load->library('encrypt'); // Solo si usas encrypt
 				$clave_encriptada = $this->encrypt->encode($_POST['nuevo_clave']);
@@ -421,6 +439,7 @@ class Cliente extends CI_Controller
 
 				if ($this->db->insert('invitado', $data_insert)) {
 					$data['msg_invitado'] = "Invitado creado correctamente.";
+					redirect('cliente/invitados', 'location'); // Redirigir a la lista de invitados después de crear uno nuevo
 				} else {
 					$data['msg_invitado'] = "Error al guardar el invitado.";
 				}
