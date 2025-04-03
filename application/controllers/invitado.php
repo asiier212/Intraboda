@@ -8,11 +8,11 @@ class Invitado extends CI_Controller
         $this->load->library('session');
         $this->load->model('invitado_functions');
 
-        // Solo permite acceso si está logueado, excepto en login
+        $permitidos = ['login', 'logout', 'login_seleccion'];
+
         if (
             !$this->session->userdata('id') &&
-            $this->router->method != 'login' &&
-            $this->router->method != 'logout'
+            !in_array($this->router->method, $permitidos)
         ) {
             redirect('invitado/login');
         }
@@ -27,20 +27,27 @@ class Invitado extends CI_Controller
             $clave = $this->input->post('clave');
 
             $this->load->model('invitado_functions');
-            $invitado = $this->invitado_functions->login($email, $clave);
+            $coincidencias = $this->invitado_functions->buscarCoincidencias($email, $clave);
 
-            if ($invitado === 'desactivado') {
-                $data['msg'] = 'Cuenta desactivada.';
-            }
-            if ($invitado === 'expirado') {
-                $data['msg'] = 'Esta cuenta ha expirado.';
-            } elseif ($invitado) {
-                $session_data = [
-                    'id'       => $invitado->id,
-                    'username' => $invitado->username
-                ];
-                $this->session->set_userdata($session_data);
-                redirect('invitado', 'location');;
+            if (count($coincidencias) == 1) {
+                $invitado = $coincidencias[0];
+
+                if ($invitado->valido != 1) {
+                    $data['msg'] = 'Cuenta desactivada.';
+                } elseif (!empty($invitado->fecha_expiracion) && strtotime($invitado->fecha_expiracion) < time()) {
+                    $data['msg'] = 'Esta cuenta ha expirado.';
+                } else {
+                    $session_data = [
+                        'id'       => $invitado->id,
+                        'username' => $invitado->username
+                    ];
+                    $this->session->set_userdata($session_data);
+                    redirect('invitado', 'location');
+                }
+            } elseif (count($coincidencias) > 1) {
+                $data['opciones'] = $coincidencias;
+                $this->load->view('invitado/login_multiple', $data);
+                return;
             } else {
                 $data['msg'] = 'Login o contraseña incorrectos.';
             }
@@ -48,6 +55,29 @@ class Invitado extends CI_Controller
 
         $this->load->view('invitado/login', $data);
     }
+
+    public function login_seleccion()
+    {
+        $id_invitado = $this->input->post('id_invitado');
+
+        $this->load->model('invitado_functions');
+        $this->db->where('id', $id_invitado);
+        $query = $this->db->get('invitado');
+
+        if ($query->num_rows() > 0) {
+            $invitado = $query->row();
+
+            $session_data = [
+                'id'       => $invitado->id,
+                'username' => $invitado->username
+            ];
+            $this->session->set_userdata($session_data);
+            redirect('invitado', 'location');
+        } else {
+            redirect('invitado/login');
+        }
+    }
+
 
 
     public function logout()

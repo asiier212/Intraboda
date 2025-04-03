@@ -2,58 +2,80 @@
 
 class Invitado_functions extends CI_Model
 {
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->database();
-        $this->load->library('encrypt');
-    }
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->database();
+		$this->load->library('encrypt');
+	}
 
-    public function login($email, $clave)
-    {
-        $this->load->database();
-        $this->load->library('encrypt');
-    
-        $this->db->where('email', $email);
-        $query = $this->db->get('invitado');
-    
-        if ($query->num_rows() > 0) {
-            $fila = $query->row();
-    
-            // ¿Está desactivado?
-            if ($fila->valido != 1) {
-                return 'desactivado';
-            }
+	public function login($email, $clave)
+	{
+		$this->load->library('encrypt');
+		$this->db->where('email', $email);
+		$query = $this->db->get('invitado');
 
-            if (!empty($fila->fecha_expiracion) && strtotime($fila->fecha_expiracion) < time()) {
-                return 'expirado';
-            }            
-    
-            // Comprobar clave
-            $clave_sin_cifrar = $this->encrypt->decode($fila->clave);
-    
-            if ($clave_sin_cifrar === $clave && $clave_sin_cifrar != '') {
-                return $fila; // Login correcto
-            }
-        }
-    
-        return false; // Usuario no existe o clave incorrecta
-    }
+		$coincidencias = [];
 
-    function GetIdClienteForIdInvitado($id_invitado)
-    {
-        $data = false;
-        $this->load->database();
-        $query = $this->db->query("SELECT id_cliente FROM invitado WHERE id = {$id_invitado}");
-        if ($query->num_rows() > 0) {
-            foreach ($query->result() as $fila) {
-                $data = $fila->id_cliente;
-            }
-        }
-        return $data;
-    }
-    
-    function GetCliente($id)
+		foreach ($query->result() as $fila) {
+			$clave_sin_cifrar = $this->encrypt->decode($fila->clave);
+
+			if ($clave_sin_cifrar === $clave && $clave_sin_cifrar != '') {
+				// Verifica estado
+				if ($fila->valido != 1) continue;
+				if (!empty($fila->fecha_expiracion) && strtotime($fila->fecha_expiracion) < time()) continue;
+
+				$coincidencias[] = $fila;
+			}
+		}
+
+		if (count($coincidencias) == 1) {
+			return $coincidencias[0];
+		} elseif (count($coincidencias) > 1) {
+			return ['multiple' => $coincidencias];
+		}
+
+		return false;
+	}
+
+	public function buscarCoincidencias($email, $clave)
+	{
+		$this->load->database();
+		$this->load->library('encrypt');
+
+		$this->db->where('email', $email);
+		$query = $this->db->get('invitado');
+
+		$resultados = [];
+
+		if ($query->num_rows() > 0) {
+			foreach ($query->result() as $fila) {
+				$clave_desencriptada = $this->encrypt->decode($fila->clave);
+
+				if ($clave_desencriptada === $clave && $clave_desencriptada != '') {
+					$resultados[] = $fila;
+				}
+			}
+		}
+
+		return $resultados;
+	}
+
+
+	function GetIdClienteForIdInvitado($id_invitado)
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id_cliente FROM invitado WHERE id = {$id_invitado}");
+		if ($query->num_rows() > 0) {
+			foreach ($query->result() as $fila) {
+				$data = $fila->id_cliente;
+			}
+		}
+		return $data;
+	}
+
+	function GetCliente($id)
 	{
 		$data = false;
 		$this->load->database();
@@ -173,7 +195,7 @@ class Invitado_functions extends CI_Model
 		$data = false;
 		$this->load->database();
 		$query = $this->db->query("SELECT DISTINCT canciones.momento_id, momentos_espec.nombre, momentos_espec.orden, momentos_espec.hora FROM canciones INNER JOIN momentos_espec ON canciones.momento_id=momentos_espec.id WHERE canciones.client_id = {$id} ORDER BY momentos_espec.orden");
-	
+
 
 		if ($query->num_rows() > 0) {
 			$i = 0;
@@ -193,7 +215,7 @@ class Invitado_functions extends CI_Model
 		$data = false;
 		$this->load->database();
 		$query = $this->db->query("SELECT id, momento_id, id_bd_canciones, orden FROM canciones WHERE client_id = {$id} ORDER BY momento_id, orden");
-	
+
 
 
 		if ($query->num_rows() > 0) {
@@ -249,5 +271,4 @@ class Invitado_functions extends CI_Model
 		}
 		return $data;
 	}
-
 }
