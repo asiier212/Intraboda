@@ -234,18 +234,18 @@ class Admin extends CI_Controller
 		$data_header = false;
 		$data = false;
 		$data_footer = false;
-	
+
 		// Capturar filtros desde GET
 		$filtro_campo = $this->input->get('filtro_campo');
 		$filtro_valor = $this->input->get('filtro_valor');
 		$solo_activos = $this->input->get('solo_activos');
-	
+
 		// Pasar filtros al modelo
 		$data['invitados'] = $this->admin_functions->GetInvitados($filtro_campo, $filtro_valor, $solo_activos);
-	
+
 		$this->_loadViews($data_header, $data, $data_footer, 'invitados');
 	}
-	
+
 
 	public function eliminar_invitado($id)
 	{
@@ -1000,7 +1000,7 @@ class Admin extends CI_Controller
 						}
 					}
 					if (isset($_POST['add_factura'])) {
-						$config['upload_path'] = './uploads/facturas/';
+						$config['upload_path']   = './uploads/facturas/';
 						$config['allowed_types'] = 'pdf';
 
 						$this->load->library('upload', $config);
@@ -1008,21 +1008,24 @@ class Admin extends CI_Controller
 						if (!$this->upload->do_upload("factura")) {
 							$data['msg_pdf'] = $this->upload->display_errors();
 						} else {
-							$upload_data = $this->upload->data();
-							$nombre_archivo = $upload_data['file_name'];
-							$fecha_factura = $this->input->post('fecha_factura');
-							$n_factura = $this->input->post('n_factura');
+							$upload_data     = $this->upload->data();
+							$nombre_archivo  = $upload_data['file_name'];
+							$fecha_input     = $this->input->post('fecha_factura');
+							$n_factura       = $this->input->post('n_factura');
+
+							// Convertir fecha de dd/mm/yyyy a Y-m-d H:i:s
+							$fecha_factura_obj = DateTime::createFromFormat('d/m/Y', $fecha_input);
+							$fecha_mysql = $fecha_factura_obj ? $fecha_factura_obj->format('Y-m-d H:i:s') : null;
 
 							if (isset($id) && !empty($id)) {
 								$data_insert = array(
-									'id_cliente' => $id,
-									'fecha_factura' => $fecha_factura,
-									'n_factura' => $n_factura,
-									'factura_pdf' => $nombre_archivo
+									'id_cliente'     => $id,
+									'fecha_factura'  => $fecha_mysql,
+									'n_factura'      => $n_factura,
+									'factura_pdf'    => $nombre_archivo
 								);
 
 								$this->db->insert('facturas', $data_insert);
-
 								$data['msg_pdf'] = "Factura subida correctamente.";
 							} else {
 								$data['msg_pdf'] = "Error: ID del cliente no definido.";
@@ -1378,7 +1381,30 @@ class Admin extends CI_Controller
 					}
 
 					if (isset($_POST['eliminar_factura'])) {
-						$this->eliminar_factura();
+							$id_factura = $this->input->post('id_factura');
+				
+							// Verifica si existe la factura
+							$query = $this->db->get_where('facturas', ['id_factura' => $id_factura]);
+							$factura = $query->row();
+				
+							if ($factura) {
+								$ruta_archivo = './uploads/facturas/' . $factura->factura_pdf;
+				
+								// Eliminar el archivo del servidor si existe
+								if (file_exists($ruta_archivo)) {
+									unlink($ruta_archivo);
+								}
+				
+								// Eliminar la factura de la base de datos
+								$this->db->delete('facturas', ['id_factura' => $id_factura]);
+				
+								// Redirigir con mensaje de éxito
+								$this->session->set_flashdata('msg', 'Factura eliminada correctamente.');
+							} else {
+								$this->session->set_flashdata('msg', 'Error: La factura no existe.');
+							}
+				
+							redirect($_SERVER['HTTP_REFERER']);
 					}
 
 					if (isset($_POST['update_equipo_componentes'])) {
@@ -1569,37 +1595,6 @@ class Admin extends CI_Controller
 		$view = "events_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
-
-	public function eliminar_factura()
-	{
-		if ($this->input->post('eliminar_factura')) {
-			$id_factura = $this->input->post('id_factura');
-
-			// Verifica si existe la factura
-			$query = $this->db->get_where('facturas', ['id_factura' => $id_factura]);
-			$factura = $query->row();
-
-			if ($factura) {
-				$ruta_archivo = './uploads/facturas/' . $factura->factura_pdf;
-
-				// Eliminar el archivo del servidor si existe
-				if (file_exists($ruta_archivo)) {
-					unlink($ruta_archivo);
-				}
-
-				// Eliminar la factura de la base de datos
-				$this->db->delete('facturas', ['id_factura' => $id_factura]);
-
-				// Redirigir con mensaje de éxito
-				$this->session->set_flashdata('msg', 'Factura eliminada correctamente.');
-			} else {
-				$this->session->set_flashdata('msg', 'Error: La factura no existe.');
-			}
-
-			redirect($_SERVER['HTTP_REFERER']);
-		}
-	}
-
 
 
 	function servicios($acc = false, $id = false)

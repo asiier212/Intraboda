@@ -151,7 +151,9 @@
 <script>
 	$(function() {
 		$("#fecha_factura").datepicker({
-			dateFormat: 'dd-mm-yy'
+			dateFormat: 'dd/mm/yy',
+			changeMonth: true,
+			changeYear: true
 		});
 	});
 </script>
@@ -968,28 +970,44 @@
 
 		<fieldset class="datos">
 			<legend>Factura</legend>
-			<?php if ($factura) { ?>
-				<label>Factura:</label>
-				<a href="<?php echo base_url() . "uploads/facturas/" . urlencode($factura["factura_pdf"]); ?>" target="_blank">
-					<?php echo $factura["factura_pdf"]; ?>
-				</a>
-				<form method="POST" action="<?php echo base_url('admin/eliminar_factura'); ?>">
-					<input type="hidden" name="id_factura" value="<?php echo $factura["id_factura"]; ?>">
-					<input type="submit" name="eliminar_factura" value="Eliminar" onclick="return confirm('¿Estás seguro de que quieres eliminar esta factura?');">
-				</form>
 
+			<?php if ($factura) { ?>
+				<div style="display: flex; gap: 10px; align-items: center;">
+					<div>
+						Factura:
+						<a style="text-decoration: underline;" href="<?php echo base_url() . "uploads/facturas/" . urlencode($factura["factura_pdf"]); ?>" target="_blank">
+							<?php echo $factura["factura_pdf"]; ?>
+						</a>
+					</div>
+
+					<!-- Botón eliminar -->
+					<form method="POST" action="" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta factura?');">
+						<input type="hidden" name="id_factura" value="<?php echo $factura['id_factura']; ?>">
+						<input type="hidden" name="id_cliente" value="<?php echo $cliente['id']; ?>">
+						<button type="submit" name="eliminar_factura" style="border: none; background: none; cursor: pointer;">
+							<img src="<?php echo base_url() . 'img/delete.gif'; ?>" alt="Eliminar" title="Eliminar factura" width="18">
+						</button>
+					</form>
+				</div>
 			<?php } else { ?>
 				<form method="POST" enctype="multipart/form-data">
 					<input type="hidden" name="id_cliente" value="<?php echo $cliente['id_cliente']; ?>" />
 					<ul>
-						<li><label>Fecha de la factura</label><input type="text" name="fecha_factura" id="fecha_factura" /></li>
-						<li><label>Nº Factura</label><input type="text" name="n_factura" id="n_factura" /></li>
-						<li><label>Subir Factura:</label> <input type="file" name="factura" /></li>
+						<li><label>Fecha de la factura</label>
+							<input type="text" name="fecha_factura" id="fecha_factura" placeholder="dd/mm/yyyy" />
+						</li>
+						<li><label>Nº Factura</label>
+							<input type="text" name="n_factura" id="n_factura" />
+						</li>
+						<li><label>Subir Factura:</label>
+							<input type="file" name="factura" />
+						</li>
 						<li><input type="submit" name="add_factura" value="Guardar"></li>
 					</ul>
 				</form>
 			<?php } ?>
 		</fieldset>
+
 
 
 
