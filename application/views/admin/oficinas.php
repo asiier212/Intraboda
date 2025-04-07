@@ -119,7 +119,7 @@
 						<option value="">Selecciona una cuenta</option>
 						<?php foreach ($cuentas_bancarias as $cuenta): ?>
 							<option value="<?php echo $numero_completo ?>">
-							<?php
+								<?php
 								$numero_completo = $cuenta['entidad'] . " - " . $cuenta['iban'] . " " . $cuenta['codigo_entidad'] . " " . $cuenta['codigo_oficina'] . " " . $cuenta['codigo_control'] . " " . $cuenta['numero_cuenta'];
 								echo $numero_completo;
 								?>
@@ -167,7 +167,9 @@
 										<td>Web: <?php echo $ofi['web'] ?></td>
 									</tr>
 									<tr>
-										<td>Numero de Cuenta: <?php echo $ofi['numero_cuenta'] ?></td>
+										<td>Numero de Cuenta: <?php if ($ofi['numero_cuenta'] == ""): echo "Sin Asignar";
+																else: echo $ofi['numero_cuenta'];
+																endif; ?></td>
 									</tr>
 									<tr>
 										<td><input type="submit" value="Borrar" name="delete" onclick="return del(<?php echo $ofi['id_oficina'] ?>)" />
@@ -176,31 +178,72 @@
 									</tr>
 								</table>
 							</li>
-							<li style="display:none" id="edit<?php echo $ofi['id_oficina'] ?>">
-								<?php if ($ofi['logo_mail']): ?><img src="<?php echo base_url() ?>uploads/oficinas/<?php echo $ofi['logo_mail'] ?>" width="286" /><br /><br /><?php endif; ?>
-								<input type="text" id="nombre<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['nombre'] ?>" />
-								<input type="text" id="direccion<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['direccion'] ?>" />
-								<input type="text" id="poblacion<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['poblacion'] ?>" />
-								<input type="text" id="cp<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['cp'] ?>" />
-								<input type="text" id="telefono<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['telefono'] ?>" />
-								<input type="text" id="movil<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['movil'] ?>" />
-								<input type="text" id="fax<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['fax'] ?>" />
-								<input type="text" id="email<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['email'] ?>" />
-								<input type="text" id="web<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['web'] ?>" />
-								<select id="numero_cuenta<?php echo $ofi['id_oficina'] ?>" style="width:210px">
-									<option value="">Selecciona una cuenta</option>
-									<?php foreach ($cuentas_bancarias as $cuenta):
-										$numero_completo = $cuenta['entidad'] . " - " . $cuenta['iban'] . " " . $cuenta['codigo_entidad'] . " " . $cuenta['codigo_oficina'] . " " . $cuenta['codigo_control'] . " " . $cuenta['numero_cuenta']; ?>
-										<option value="<?php echo $numero_completo ?>" <?php if ($ofi['numero_cuenta'] == $numero_completo) echo 'selected' ?>>
-											<?php echo $numero_completo; ?>
-										</option>
-									<?php endforeach; ?>
-								</select>
+							<li style="width: 700px; display: none; padding: 20px; background-color: #f0fbe3; border: 3px solid #93ce37; border-radius: 8px; margin-bottom: 20px;" id="edit<?php echo $ofi['id_oficina'] ?>">
+	<?php if ($ofi['logo_mail']): ?>
+		<div style="text-align:center; margin-bottom: 15px;">
+			<img src="<?php echo base_url() ?>uploads/oficinas/<?php echo $ofi['logo_mail'] ?>" width="200" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(147, 206, 55, 0.3);" />
+		</div>
+	<?php endif; ?>
+
+	<table style="width: 100%; border-spacing: 10px;">
+		<tr>
+			<td><label>Nombre:</label></td>
+			<td><input type="text" id="nombre<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['nombre'] ?>" style="width: 100%;" /></td>
+
+			<td><label>Dirección:</label></td>
+			<td><input type="text" id="direccion<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['direccion'] ?>" style="width: 100%;" /></td>
+		</tr>
+
+		<tr>
+			<td><label>Población:</label></td>
+			<td><input type="text" id="poblacion<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['poblacion'] ?>" style="width: 100%;" /></td>
+
+			<td><label>CP:</label></td>
+			<td><input type="text" id="cp<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['cp'] ?>" style="width: 100%;" /></td>
+		</tr>
+
+		<tr>
+			<td><label>Teléfono:</label></td>
+			<td><input type="text" id="telefono<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['telefono'] ?>" style="width: 100%;" /></td>
+
+			<td><label>Móvil:</label></td>
+			<td><input type="text" id="movil<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['movil'] ?>" style="width: 100%;" /></td>
+		</tr>
+
+		<tr>
+			<td><label>Fax:</label></td>
+			<td><input type="text" id="fax<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['fax'] ?>" style="width: 100%;" /></td>
+
+			<td><label>Email:</label></td>
+			<td><input type="text" id="email<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['email'] ?>" style="width: 100%;" /></td>
+		</tr>
+
+		<tr>
+			<td><label>Web:</label></td>
+			<td><input type="text" id="web<?php echo $ofi['id_oficina'] ?>" value="<?php echo $ofi['web'] ?>" style="width: 100%;" /></td>
+
+			<td><label>Número de Cuenta:</label></td>
+			<td>
+				<select id="numero_cuenta<?php echo $ofi['id_oficina'] ?>" style="width: 100%;">
+					<option value="">Selecciona una cuenta</option>
+					<?php foreach ($cuentas_bancarias as $cuenta):
+						$numero_completo = $cuenta['entidad'] . " - " . $cuenta['iban'] . " " . $cuenta['codigo_entidad'] . " " . $cuenta['codigo_oficina'] . " " . $cuenta['codigo_control'] . " " . $cuenta['numero_cuenta']; ?>
+						<option value="<?php echo $numero_completo ?>">
+							<?php echo $numero_completo; ?>
+						</option>
+					<?php endforeach; ?>
+				</select>
+			</td>
+		</tr>
+	</table>
+
+	<div style="margin-top: 20px; text-align: center;">
+		<input type="button" value="Cancelar" onclick="cancel(<?php echo $ofi['id_oficina'] ?>)" style="padding: 6px 12px; background-color: #ccc; border: none; border-radius: 4px;" />
+		<input type="button" value="Guardar" onclick="save(<?php echo $ofi['id_oficina'] ?>)" style="padding: 6px 12px; background-color: #93ce37; color: white; border: none; border-radius: 4px; margin-left: 10px;" />
+	</div>
+</li>
 
 
-								<input type="button" value="Cancelar" onclick="cancel(<?php echo $ofi['id_oficina'] ?>)" />
-								<input type="button" value="Guardar" onclick="save(<?php echo $ofi['id_oficina'] ?>)" />
-							</li>
 						</fieldset>
 				<?php endforeach;
 				endif; ?>
