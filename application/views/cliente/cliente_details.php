@@ -81,10 +81,8 @@
     		<fieldset class="datos">
     			<legend>Datos de contacto</legend>
     			<span style="font-size:11px">Para editar los datos haz click sobre el texto</span>
-    			<?php if ($this->session->userdata('user_id') == 1) {
-					echo '<p style="text-align:right"><a style="text-decoration:underline; cursor:pointer;" onclick="abrirPopupInvitado()">Crear Cuenta Invitado</a></p>';
-				}
-				?>
+    			<p style="text-align:right"><a style="text-decoration:underline; cursor:pointer;" onclick="abrirPopupInvitado()">Crear Cuenta Invitado</a></p>
+
 
     			<br clear="left" />
     			<fieldset style="width:350px">
@@ -492,6 +490,16 @@
     							</td>
     						</tr>
     					</table>
+
+    					<br /><br />
+
+    					<div style="padding:10px; border:1px solid #ccc; background-color:#f9f9f9; border-radius:5px; width: 400px;">
+    						<li style="padding: 0"><strong>Hacer Un Pago</strong></li>
+    						<?php $fecha_boda_array = explode(' ', $cliente['fecha_boda']); ?>
+
+    						Numero de cuenta: <b><?php echo $numero_cuenta ?></b><br />
+    						Concepto: <b><?php echo $cliente['nombre_novio'] . " " . $cliente['apellidos_novio'] . " - " . $cliente['nombre_novia'] . " " . $cliente['apellidos_novia'] . " - " . $fecha_boda_array[0];  ?></b><br />
+    					</div>
     				<?php
 					}
 					?>

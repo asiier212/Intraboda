@@ -7,7 +7,7 @@
 <h2>Listar Servicios</h2>
 
 <div class="main form">
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <fieldset class="datos">
             <legend>Nuevo Servicio</legend>
             <ul>
@@ -15,6 +15,7 @@
                 <li><label>Precio:</label><input type="text" name="precio" /> </li>
                 <li><label>Precio Oferta:</label><input type="text" name="precio_oferta" /> </li>
                 <li><label>Servicio Adicional:</label><input type="checkbox" name="servicio_adicional" /> </li>
+                <li><label>Imagen:</label><input type="file" name="imagen" /> </li>
                 <li><label>&nbsp;</label><input type="submit" style="width:120px" value="A&ntilde;adir" /> </li>
             </ul>
         </fieldset>
@@ -29,6 +30,7 @@
                     <th>Oferta</th>
                     <th>Servicio adicional</th>
                     <th>Mostrar</th>
+                    <th>Imagen</th>
                     <th></th>
                 </tr>
                 <?php if (isset($servicios) && is_array($servicios)) { ?>
@@ -39,10 +41,23 @@
                             <td><?php echo htmlspecialchars($servicio['precio']); ?></td>
                             <td><?php echo htmlspecialchars($servicio['precio_oferta']); ?></td>
                             <td><?php echo htmlspecialchars($servicio['servicio_adicional']); ?></td>
-                            <td>
-                                <input type="checkbox" class="check_mostrar" data-id="<?php echo $servicio['id']; ?>"
+                            <td style="padding: 0px; text-align: center;">
+                                <input type="checkbox" style="width: 13px" class="check_mostrar" data-id="<?php echo $servicio['id']; ?>"
                                     <?php echo isset($servicio['mostrar']) && $servicio['mostrar'] == 1 ? 'checked' : ''; ?> />
                             </td>
+                            <td style="padding: 0px; text-align: center;">
+                                <?php
+                                $ruta = base_url() . 'uploads/servicios/' . $servicio['imagen'];
+                                $archivo_local = FCPATH . 'uploads/servicios/' . $servicio['imagen'];
+
+                                if (!empty($servicio['imagen']) && file_exists($archivo_local)) { ?>
+                                    <a href="<?php echo $ruta; ?>" style="font-weight:bold; font-size: 12px; padding: 10px" target="_blank">Ver imagen</a>
+
+                                <?php } else { ?>
+                                    <span style="color: #888; font-size: 12px; padding: 10px">Sin imagen</span>
+                                <?php } ?>
+                            </td>
+
                             <td><a href="<?php echo base_url() ?>admin/servicios/edit/<?php echo $servicio['id']; ?>">Editar</a></td>
                         </tr>
                     <?php } ?>

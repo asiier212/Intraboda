@@ -80,38 +80,39 @@ class Admin_functions extends CI_Model
 
 		if (!empty($arr_serv_keys)) {
 			if (in_array(4, $arr_serv_keys)) {
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Apertura del baile', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Apertura del baile', '$orden', '$id_cliente')");
 				$orden++;
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Fiesta', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Fiesta', '$orden', '$id_cliente')");
 				$orden++;
 			}
 			if (in_array(9, $arr_serv_keys)) {
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Música Cocktail', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Música Cocktail', '$orden', '$id_cliente')");
 				$orden++;
 			}
 			if (in_array(10, $arr_serv_keys)) {
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrada al banquete', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Entrada al banquete', '$orden', '$id_cliente')");
 				$orden++;
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Corte de tarta', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Corte de tarta', '$orden', '$id_cliente')");
 				$orden++;
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrega de muñecos tarta', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Entrega de muñecos tarta', '$orden', '$id_cliente')");
 				$orden++;
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrega del ramo', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Entrega del ramo', '$orden', '$id_cliente')");
 				$orden++;
 			}
 			if (in_array(11, $arr_serv_keys)) {
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrada del novio a la ceremonia', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Entrada del novio a la ceremonia', '$orden', '$id_cliente')");
 				$orden++;
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Entrada de la novia a la ceremonia', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Entrada de la novia a la ceremonia', '$orden', '$id_cliente')");
 				$orden++;
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Lectura 1', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Lectura 1', '$orden', '$id_cliente')");
 				$orden++;
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Lectura 2', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Lectura 2', '$orden', '$id_cliente')");
 				$orden++;
-				$this->db->query("INSERT INTO momentos_espec VALUES ('', 'Firma de acta y salida', '$orden', '$id_cliente')");
+				$this->db->query("INSERT INTO momentos_espec (nombre, orden, cliente_id) VALUES ('Firma de acta y salida', '$orden', '$id_cliente')");
 				$orden++;
 			}
 		}
+
 
 		// Email de bienvenida
 		if ($data['enviar_emails'] == 'S') {
@@ -582,12 +583,19 @@ class Admin_functions extends CI_Model
 
 	function InsertServicio($data)
 	{
-
 		$this->load->database();
-		$this->db->insert('servicios', $data);
-		//$query = $this->db->query("INSERT INTO servicios (nombre, descripcion, precio) VALUES ('".str_replace("'", "&#39;",$data['nombre'])."', '".stripslashes(str_replace("'", "&#39;",$data['descripcion']))."', '".$data['precio']."')");	
 
+		$data['servicio_adicional'] = isset($data['servicio_adicional']) ? 'S' : 'N';
+
+		$this->db->insert('servicios', array(
+			'nombre' => str_replace("'", "&#39;", $data['nombre']),
+			'precio' => $data['precio'],
+			'precio_oferta' => $data['precio_oferta'],
+			'servicio_adicional' => $data['servicio_adicional'],
+			'imagen' => $data['imagen']
+		));
 	}
+
 	function InsertEvent($nombre)
 	{
 
@@ -700,7 +708,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre, descripcion, precio, precio_oferta, servicio_adicional, mostrar FROM servicios ORDER BY orden ASC");
+		$query = $this->db->query("SELECT id, nombre, descripcion, precio, precio_oferta, servicio_adicional, mostrar, imagen FROM servicios ORDER BY orden ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -711,6 +719,7 @@ class Admin_functions extends CI_Model
 				$data[$i]['precio_oferta'] = $fila->precio_oferta;
 				$data[$i]['servicio_adicional'] = $fila->servicio_adicional;
 				$data[$i]['mostrar'] = $fila->mostrar;
+				$data[$i]['imagen'] = $fila->imagen;
 				$i++;
 			}
 		}
@@ -932,7 +941,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre, descripcion, precio, precio_oferta, servicio_adicional FROM servicios WHERE id = {$id}");
+		$query = $this->db->query("SELECT id, nombre, descripcion, precio, precio_oferta, servicio_adicional, imagen FROM servicios WHERE id = {$id}");
 		if ($query->num_rows() > 0) {
 			$fila = $query->row();
 			$data['id'] = $fila->id;
@@ -941,6 +950,7 @@ class Admin_functions extends CI_Model
 			$data['precio'] = $fila->precio;
 			$data['precio_oferta'] = $fila->precio_oferta;
 			$data['servicio_adicional'] = $fila->servicio_adicional;
+			$data['imagen'] = $fila->imagen;
 		}
 		return $data;
 	}
@@ -1041,14 +1051,14 @@ class Admin_functions extends CI_Model
 	}
 	function UpdateServicio($data, $id)
 	{
-		if (isset($data['servicio_adicional'])) {
-			$data['servicio_adicional'] = 'S';
-		} else {
-			$data['servicio_adicional'] = 'N';
-		}
 		$this->load->database();
-		$query = $this->db->query("UPDATE servicios SET nombre = '" . str_replace("'", "&#39;", $data['nombre']) . "', precio = '" . $data['precio'] . "', precio_oferta = '" . $data['precio_oferta'] . "', servicio_adicional = '" . $data['servicio_adicional'] . "' WHERE id = {$id}");
+	
+		$data['servicio_adicional'] = isset($data['servicio_adicional']) ? 'S' : 'N';
+	
+		$this->db->where('id', $id);
+		$this->db->update('servicios', $data);
 	}
+	
 	function InsertPerson($data)
 	{
 
@@ -1702,15 +1712,42 @@ class Admin_functions extends CI_Model
 	function InsertOficina($data)
 	{
 		$this->load->database();
-		$query = $this->db->query("INSERT INTO oficinas (nombre, direccion, poblacion, cp, telefono, movil, fax, email, web) VALUES ('" . str_replace("'", "&#39;", $data['nombre']) . "', '" . stripslashes(str_replace("'", "&#39;", $data['direccion'])) . "', '" . stripslashes(str_replace("'", "&#39;", $data['poblacion'])) . "', '" . stripslashes(str_replace("'", "&#39;", $data['cp'])) . "', '" . stripslashes(str_replace("'", "&#39;", $data['telefono'])) . "', '" . stripslashes(str_replace("'", "&#39;", $data['movil'])) . "', '" . stripslashes(str_replace("'", "&#39;", $data['fax'])) . "', '" . $data['email'] . "', '" . stripslashes(str_replace("'", "&#39;", $data['web'])) . "')");
+		$query = $this->db->query("
+			INSERT INTO oficinas 
+			(nombre, direccion, poblacion, cp, telefono, movil, fax, email, web, numero_cuenta) 
+			VALUES (
+				'" . str_replace("'", "&#39;", $data['nombre']) . "',
+				'" . stripslashes(str_replace("'", "&#39;", $data['direccion'])) . "',
+				'" . stripslashes(str_replace("'", "&#39;", $data['poblacion'])) . "',
+				'" . stripslashes(str_replace("'", "&#39;", $data['cp'])) . "',
+				'" . stripslashes(str_replace("'", "&#39;", $data['telefono'])) . "',
+				'" . stripslashes(str_replace("'", "&#39;", $data['movil'])) . "',
+				'" . stripslashes(str_replace("'", "&#39;", $data['fax'])) . "',
+				'" . $data['email'] . "',
+				'" . stripslashes(str_replace("'", "&#39;", $data['web'])) . "',
+				'" . $data['numero_cuenta'] . "'
+			)
+		");
 		return $this->db->insert_id();
 	}
-
+	
 	function UpdateOficina($data)
 	{
-
 		$this->load->database();
-		$query = $this->db->query("UPDATE oficinas SET nombre = '" . str_replace("'", "&#39;", $data['nombre']) . "', direccion = '" . str_replace("'", "&#39;", $data['direccion']) . "', poblacion = '" . str_replace("'", "&#39;", $data['poblacion']) . "', cp = '" . str_replace("'", "&#39;", $data['cp']) . "', telefono = '" . stripslashes(str_replace("'", "&#39;", $data['telefono'])) . "', movil = '" . str_replace("'", "&#39;", $data['movil']) . "', fax = '" . str_replace("'", "&#39;", $data['fax']) . "', email = '" . $data['email'] . "', web = '" . stripslashes(str_replace("'", "&#39;", $data['web'])) . "' WHERE id_oficina = " . $data['id_oficina'] . "");
+		$query = $this->db->query("
+			UPDATE oficinas SET 
+				nombre = '" . str_replace("'", "&#39;", $data['nombre']) . "',
+				direccion = '" . str_replace("'", "&#39;", $data['direccion']) . "',
+				poblacion = '" . str_replace("'", "&#39;", $data['poblacion']) . "',
+				cp = '" . str_replace("'", "&#39;", $data['cp']) . "',
+				telefono = '" . stripslashes(str_replace("'", "&#39;", $data['telefono'])) . "',
+				movil = '" . str_replace("'", "&#39;", $data['movil']) . "',
+				fax = '" . str_replace("'", "&#39;", $data['fax']) . "',
+				email = '" . $data['email'] . "',
+				web = '" . stripslashes(str_replace("'", "&#39;", $data['web'])) . "',
+				numero_cuenta = '" . $data['numero_cuenta'] . "'
+			WHERE id_oficina = " . $data['id_oficina']
+		);
 	}
 
 	function UpdateLogoMailOficina($id, $foto)
@@ -1750,7 +1787,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_oficina, nombre, direccion, poblacion, cp, telefono, movil, fax, email, web, logo_mail FROM oficinas");
+		$query = $this->db->query("SELECT id_oficina, nombre, direccion, poblacion, cp, telefono, movil, fax, email, web, logo_mail, numero_cuenta FROM oficinas");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -1765,6 +1802,7 @@ class Admin_functions extends CI_Model
 				$data[$i]['email'] = $fila->email;
 				$data[$i]['web'] = $fila->web;
 				$data[$i]['logo_mail'] = $fila->logo_mail;
+				$data[$i]['numero_cuenta'] = $fila->numero_cuenta;
 				$i++;
 			}
 		}

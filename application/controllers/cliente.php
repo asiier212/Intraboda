@@ -222,12 +222,12 @@ class Cliente extends CI_Controller
 			$this->db->where('email', $email);
 			$this->db->where('id_cliente', $id_cliente);
 			$existe = $this->db->get('invitado')->num_rows();
-			
+
 			if ($existe > 0) {
 				$this->session->set_flashdata('msg_invitado', 'Ese email ya está registrado por ti.');
 				redirect($_SERVER['HTTP_REFERER']);
 			}
-					
+
 
 			$this->load->library('encrypt'); // Solo si usas encrypt
 			$clave_encriptada = $this->encrypt->encode($_POST['nuevo_clave']);
@@ -469,6 +469,13 @@ class Cliente extends CI_Controller
 			$data['respuesta_cliente'] = $this->cliente_functions->GetRespuestasEncuestaDatosBoda($this->session->userdata('user_id'));
 			$data['pagos'] = $this->cliente_functions->GetPagos($this->session->userdata('user_id'));
 			$data['dj'] = $this->cliente_functions->GetDjAsignado($this->session->userdata('user_id'));
+			$cliente_id = $this->session->userdata('user_id');
+			$cliente = $this->cliente_functions->GetClientePorID($cliente_id);
+			$oficina = $this->cliente_functions->GetNumeroCuentaOficina($cliente['id_oficina']);
+			
+			$data['cliente'] = $cliente;
+			$data['numero_cuenta'] = $oficina ? $oficina['numero_cuenta'] : '';
+			
 		}
 
 		if (isset($_POST['crear_invitado'])) {
@@ -483,12 +490,12 @@ class Cliente extends CI_Controller
 			$this->db->where('email', $email);
 			$this->db->where('id_cliente', $id_cliente);
 			$existe = $this->db->get('invitado')->num_rows();
-			
+
 			if ($existe > 0) {
 				$this->session->set_flashdata('msg_invitado', 'Ese email ya está registrado por ti.');
 				redirect($_SERVER['HTTP_REFERER']);
 			}
-					
+
 
 			$this->load->library('encrypt'); // Solo si usas encrypt
 			$clave_encriptada = $this->encrypt->encode($_POST['nuevo_clave']);

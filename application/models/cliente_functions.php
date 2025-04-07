@@ -56,51 +56,51 @@
 	}
 
 	function GetInvitados($filtro_campo = null, $filtro_valor = null, $solo_activos = null)
-{
-	$data = false;
-	$this->load->database();
-	$this->load->library('encrypt');
+	{
+		$data = false;
+		$this->load->database();
+		$this->load->library('encrypt');
 
-	// Obtener id del cliente logueado
-	$id_cliente_logueado = $this->session->userdata('user_id');
-	if (!$id_cliente_logueado) {
-		return []; // No está logueado
-	}
-
-	// Construcción dinámica del WHERE
-	$where = " AND invitado.id_cliente = ?";
-	$params = [$id_cliente_logueado];
-
-	if (!empty($filtro_campo) && !empty($filtro_valor)) {
-		switch ($filtro_campo) {
-			case 'cliente':
-				$where .= " AND (clientes.nombre_novio LIKE ? OR clientes.nombre_novia LIKE ?)";
-				$params[] = "%$filtro_valor%";
-				$params[] = "%$filtro_valor%";
-				break;
-			case 'usuario':
-				$where .= " AND invitado.username LIKE ?";
-				$params[] = "%$filtro_valor%";
-				break;
-			case 'email':
-				$where .= " AND invitado.email LIKE ?";
-				$params[] = "%$filtro_valor%";
-				break;
-			case 'fecha':
-				$fecha = DateTime::createFromFormat('d/m/Y', $filtro_valor);
-				if ($fecha) {
-					$where .= " AND DATE(invitado.fecha_creacion) = ?";
-					$params[] = $fecha->format('Y-m-d');
-				}
-				break;
+		// Obtener id del cliente logueado
+		$id_cliente_logueado = $this->session->userdata('user_id');
+		if (!$id_cliente_logueado) {
+			return []; // No está logueado
 		}
-	}
 
-	if (!empty($solo_activos)) {
-		$where .= " AND invitado.valido = 1";
-	}
+		// Construcción dinámica del WHERE
+		$where = " AND invitado.id_cliente = ?";
+		$params = [$id_cliente_logueado];
 
-	$sql = "
+		if (!empty($filtro_campo) && !empty($filtro_valor)) {
+			switch ($filtro_campo) {
+				case 'cliente':
+					$where .= " AND (clientes.nombre_novio LIKE ? OR clientes.nombre_novia LIKE ?)";
+					$params[] = "%$filtro_valor%";
+					$params[] = "%$filtro_valor%";
+					break;
+				case 'usuario':
+					$where .= " AND invitado.username LIKE ?";
+					$params[] = "%$filtro_valor%";
+					break;
+				case 'email':
+					$where .= " AND invitado.email LIKE ?";
+					$params[] = "%$filtro_valor%";
+					break;
+				case 'fecha':
+					$fecha = DateTime::createFromFormat('d/m/Y', $filtro_valor);
+					if ($fecha) {
+						$where .= " AND DATE(invitado.fecha_creacion) = ?";
+						$params[] = $fecha->format('Y-m-d');
+					}
+					break;
+			}
+		}
+
+		if (!empty($solo_activos)) {
+			$where .= " AND invitado.valido = 1";
+		}
+
+		$sql = "
 		SELECT invitado.id, invitado.id_cliente, clientes.nombre_novio, clientes.nombre_novia,
 			   invitado.username, invitado.clave, invitado.email, invitado.valido,
 			   invitado.fecha_creacion, invitado.fecha_expiracion
@@ -109,27 +109,27 @@
 		WHERE 1=1 $where
 	";
 
-	$query = $this->db->query($sql, $params);
+		$query = $this->db->query($sql, $params);
 
-	if ($query->num_rows() > 0) {
-		$i = 0;
-		foreach ($query->result() as $fila) {
-			$data[$i]['id'] = $fila->id;
-			$data[$i]['id_cliente'] = $fila->id_cliente;
-			$data[$i]['nombre_novio'] = $fila->nombre_novio;
-			$data[$i]['nombre_novia'] = $fila->nombre_novia;
-			$data[$i]['username'] = $fila->username;
-			$data[$i]['clave'] = $fila->clave;
-			$data[$i]['email'] = $fila->email;
-			$data[$i]['valido'] = $fila->valido;
-			$data[$i]['fecha_creacion'] = $fila->fecha_creacion;
-			$data[$i]['fecha_expiracion'] = $fila->fecha_expiracion;
-			$i++;
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id'] = $fila->id;
+				$data[$i]['id_cliente'] = $fila->id_cliente;
+				$data[$i]['nombre_novio'] = $fila->nombre_novio;
+				$data[$i]['nombre_novia'] = $fila->nombre_novia;
+				$data[$i]['username'] = $fila->username;
+				$data[$i]['clave'] = $fila->clave;
+				$data[$i]['email'] = $fila->email;
+				$data[$i]['valido'] = $fila->valido;
+				$data[$i]['fecha_creacion'] = $fila->fecha_creacion;
+				$data[$i]['fecha_expiracion'] = $fila->fecha_expiracion;
+				$i++;
+			}
 		}
-	}
 
-	return $data;
-}
+		return $data;
+	}
 
 
 	function GetPreguntasEncuestaDatosBoda()
@@ -149,6 +149,41 @@
 		}
 		return $data;
 	}
+
+	function GetClientePorID($id_cliente)
+	{
+		$this->load->database();
+
+		$query = $this->db->query(
+			"
+			SELECT * 
+			FROM clientes 
+			WHERE id = " . intval($id_cliente)
+		);
+
+		if ($query->num_rows() > 0) {
+			return $query->row_array();
+		}
+		return false;
+	}
+
+	function GetNumeroCuentaOficina($id_oficina)
+	{
+		$this->load->database();
+
+		$query = $this->db->query(
+			"
+		SELECT nombre, numero_cuenta
+		FROM oficinas
+		WHERE id_oficina = " . intval($id_oficina)
+		);
+
+		if ($query->num_rows() > 0) {
+			return $query->row_array(); // ['nombre' => ..., 'numero_cuenta' => ...]
+		}
+		return false;
+	}
+
 
 	function GetOpcionesRespuestasEncuestaDatosBoda()
 	{
@@ -742,13 +777,13 @@
 			// Construir la consulta evitando errores de SQL
 			if (!empty($arr_serv_keys)) {
 				$placeholders = implode(',', array_map('intval', $arr_serv_keys));
-				$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios 
+				$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar, imagen FROM servicios 
 					WHERE id NOT IN ($placeholders) ORDER BY orden ASC");
 			} else {
-				$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios ORDER BY orden ASC");
+				$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar, imagen FROM servicios ORDER BY orden ASC");
 			}
 		} else {
-			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar FROM servicios ORDER BY orden ASC");
+			$query = $this->db->query("SELECT id, nombre, precio, precio_oferta, mostrar, imagen FROM servicios ORDER BY orden ASC");
 		}
 
 		// Procesar resultados
@@ -759,7 +794,8 @@
 					'nombre' => $fila->nombre,
 					'precio' => $fila->precio,
 					'precio_oferta' => $fila->precio_oferta,
-					'mostrar' => $fila->mostrar
+					'mostrar' => $fila->mostrar,
+					'imagen' => $fila->imagen
 				];
 			}
 		}

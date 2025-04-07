@@ -1598,30 +1598,113 @@ class Admin extends CI_Controller
 
 
 	function servicios($acc = false, $id = false)
-	{
-		$data_header = false;
-		$data = false;
-		$data_footer = false;
-		if ($acc == 'view' && $_POST) {
+{
+	$data_header = false;
+	$data = false;
+	$data_footer = false;
 
-			$this->admin_functions->InsertServicio($_POST);
+	if ($acc == 'view' && $_POST) {
+		$config['upload_path'] = './uploads/servicios/';
+		$config['allowed_types'] = 'jpg|jpeg|png|gif';
+		$config['max_size'] = 2048; // Máx 2MB
+		$config['encrypt_name'] = TRUE; // Nombre único
+	
+		$this->load->library('upload', $config);
+	
+		$imagen = '';
+		if (!empty($_FILES['imagen']['name']) && $this->upload->do_upload('imagen')) {
+			$upload_data = $this->upload->data();
+			$imagen = $upload_data['file_name'];
 		}
-		$data['servicios'] = $this->admin_functions->GetServicios();
-
-		if ($acc == 'edit') {
-
-			if ($_POST) {
-				if (isset($_POST['delete'])) {
-					$this->admin_functions->DeleteServicio($id);
-				} else {
-					$this->admin_functions->UpdateServicio($_POST, $id);
-				}
-				header('Location:' . base_url() . "admin/servicios/view");
-			}
-			$data['servicio'] = $this->admin_functions->GetServicio($id);
-		}
-		$this->_loadViews($data_header, $data, $data_footer,  "servicios_" . $acc);
+	
+		// Añadir el nombre de la imagen al array POST
+		$data = $_POST;
+		$data['imagen'] = $imagen;
+	
+		$this->admin_functions->InsertServicio($data);
+	
+		redirect(base_url() . "admin/servicios/view");
 	}
+	
+
+	$data['servicios'] = $this->admin_functions->GetServicios();
+
+	if ($acc == 'edit') {
+		if ($_POST) {
+	
+			// Eliminar imagen
+			if (isset($_POST['delete_imagen'])) {
+				$servicio = $this->admin_functions->GetServicio($id);
+				$imagen = $servicio['imagen'];
+	
+				// Borrar imagen física
+				if (!empty($imagen) && file_exists(FCPATH . 'uploads/servicios/' . $imagen)) {
+					unlink(FCPATH . 'uploads/servicios/' . $imagen);
+				}
+	
+				// Limpiar campo en la BD
+				$this->db->where('id', $id);
+				$this->db->update('servicios', ['imagen' => '']);
+	
+				// Volver a cargar el formulario edit sin imagen
+				$data['msg'] = 'Imagen eliminada correctamente.';
+				$data['servicio'] = $this->admin_functions->GetServicio($id);
+				$this->_loadViews($data_header, $data, $data_footer, "servicios_edit");
+				return;
+			}
+	
+			// Eliminar servicio
+			if (isset($_POST['delete'])) {
+				$this->admin_functions->DeleteServicio($id);
+				header('Location:' . base_url() . "admin/servicios/view");
+				exit;
+			}
+	
+			// Actualización normal
+			$data_post = [
+				'nombre' => $this->input->post('nombre'),
+				'precio' => $this->input->post('precio'),
+				'precio_oferta' => $this->input->post('precio_oferta'),
+				'servicio_adicional' => $this->input->post('servicio_adicional')
+			];
+	
+			$imagen_actual = $this->input->post('imagen_actual');
+	
+			if (!empty($_FILES['imagen']['name'])) {
+				$config['upload_path'] = './uploads/servicios/';
+				$config['allowed_types'] = 'jpg|jpeg|png|gif';
+				$config['max_size'] = 2048;
+				$config['encrypt_name'] = TRUE;
+	
+				$this->load->library('upload', $config);
+	
+				if ($this->upload->do_upload('imagen')) {
+					$upload_data = $this->upload->data();
+					$data_post['imagen'] = $upload_data['file_name'];
+				} else {
+					$data['msg'] = $this->upload->display_errors();
+					$data['servicio'] = $this->admin_functions->GetServicio($id);
+					$this->_loadViews($data_header, $data, $data_footer, "servicios_edit");
+					return;
+				}
+			} else {
+				$data_post['imagen'] = $imagen_actual;
+			}
+	
+			$this->admin_functions->UpdateServicio($data_post, $id);
+	
+			header('Location:' . base_url() . "admin/servicios/view");
+			exit;
+		}
+	
+		$data['servicio'] = $this->admin_functions->GetServicio($id);
+	}
+	
+	
+
+	$this->_loadViews($data_header, $data, $data_footer, "servicios_" . $acc);
+}
+
 	function persons($acc = false)
 	{
 		$data_header = false;
@@ -1982,7 +2065,8 @@ class Admin extends CI_Controller
 		$data = false;
 		$data_footer = false;
 		$data['oficinas'] = $this->admin_functions->GetOficinas();
-
+		$data['cuentas_bancarias'] = $this->admin_functions->GetCuentas_Bancarias();
+		
 		$view = "oficinas";
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
