@@ -129,7 +129,9 @@ class Invitado extends CI_Controller
         $data['cliente'] = $this->invitado_functions->GetCliente($id);
         $data['observaciones_cliente'] = $this->invitado_functions->GetObservaciones($id);
 
-
+        $data['preguntas_encuesta_datos_boda'] = $this->invitado_functions->GetPreguntasEncuestaDatosBoda();
+        $data['opciones_respuestas_encuesta_datos_boda'] = $this->invitado_functions->GetOpcionesRespuestasEncuestaDatosBoda();
+        $data['respuesta_cliente'] = $this->invitado_functions->GetRespuestasEncuestaDatosBoda($id);
         $view = "cliente_viewdetails";
         $this->_loadViews($data_header, $data, $data_footer, $view);
     }

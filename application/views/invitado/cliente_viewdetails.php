@@ -134,6 +134,120 @@
         </fieldset>
 
         <fieldset class="datos">
+            <legend>Encuesta</legend>
+            <?php if (!empty($preguntas_encuesta_datos_boda)) { ?>
+                <form>
+                    <?php foreach ($preguntas_encuesta_datos_boda as $pregunta) { ?>
+                        <span>
+                            <strong><?php echo htmlspecialchars($pregunta['pregunta']); ?></strong>
+                            <?php if (!empty($pregunta['descripcion'])) { ?>
+                                <span><?php echo $pregunta['descripcion']; ?></span>
+                            <?php } else { ?>
+                                <br><br>
+                            <?php } ?>
+
+                            <?php
+                            $respuestas = array();
+                            foreach ($opciones_respuestas_encuesta_datos_boda as $resp) {
+                                if (intval($resp['id_pregunta']) === intval($pregunta['id_pregunta'])) {
+                                    $respuestas[] = $resp;
+                                }
+                            }
+
+                            if (!is_array($respuesta_cliente)) {
+                                $respuesta_cliente = array();
+                            }
+
+                            $respuesta_cliente_actual = null;
+                            $respuestas_seleccionadas = array();
+
+                            foreach ($respuesta_cliente as $resp) {
+                                if ($resp['id_pregunta'] == $pregunta['id_pregunta']) {
+                                    if ($pregunta['tipo_pregunta'] == 'multiple') {
+                                        $respuestas_seleccionadas = array_merge($respuestas_seleccionadas, array_map('trim', explode(',', $resp['respuesta'])));
+                                    } else {
+                                        $respuesta_cliente_actual = $resp['respuesta'];
+                                    }
+                                }
+                            }
+
+                            $tipo = isset($pregunta['tipo_pregunta']) ? strtolower($pregunta['tipo_pregunta']) : '';
+                            ?>
+
+                            <?php if ($tipo == 'rango') { ?>
+                                <input type="range" min="0" max="10" value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 5); ?>" disabled>
+                                <span><?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?></span>
+
+                            <?php } elseif ($tipo == 'opciones' && !empty($respuestas)) { ?>
+                                <?php
+                                $respuesta_encontrada = false;
+                                foreach ($respuestas as $respuesta) {
+                                    if (!empty($respuesta_cliente_actual) && $respuesta_cliente_actual == $respuesta['respuesta']) {
+                                        $respuesta_encontrada = true;
+                                    }
+                                }
+                                ?>
+
+                                <?php foreach ($respuestas as $respuesta) { ?>
+                                    <label>
+                                        <input type="radio" disabled
+                                            <?php echo (!empty($respuesta_cliente_actual) && $respuesta_cliente_actual == $respuesta['respuesta']) ? 'checked' : ''; ?>>
+                                        <?php echo htmlspecialchars($respuesta['respuesta']); ?>
+                                    </label><br>
+                                <?php } ?>
+
+                                <?php if (!$respuesta_encontrada && !empty($respuesta_cliente_actual)) { ?>
+                                    <!-- Mostrar input de número si la respuesta no coincide con ninguna opción -->
+                                    <label>
+                                        <input type="radio" disabled checked>
+                                        Número exacto:
+                                        <input type="number" value="<?php echo htmlspecialchars($respuesta_cliente_actual); ?>" disabled>
+                                    </label><br>
+                                <?php } ?>
+
+                            <?php } elseif ($tipo == 'multiple' && !empty($respuestas)) { ?>
+                                <?php
+                                $respuestas_disponibles = array_map(function ($r) {
+                                    return trim($r['respuesta']);
+                                }, $respuestas);
+
+                                $respuestas_extra = array_filter($respuestas_seleccionadas, function ($r) use ($respuestas_disponibles) {
+                                    return !in_array($r, $respuestas_disponibles);
+                                });
+                                ?>
+
+                                <?php foreach ($respuestas as $respuesta) { ?>
+                                    <label>
+                                        <input type="checkbox" disabled
+                                            <?php echo (!empty($respuestas_seleccionadas) && in_array(trim($respuesta['respuesta']), $respuestas_seleccionadas)) ? 'checked' : ''; ?>>
+                                        <?php echo htmlspecialchars($respuesta['respuesta']); ?>
+                                    </label><br>
+                                <?php } ?>
+
+                                <?php foreach ($respuestas_extra as $respuesta_extra) { ?>
+                                    <label>
+                                        <input type="checkbox" disabled checked>
+                                        <?php echo htmlspecialchars($respuesta_extra); ?>
+                                    </label><br>
+                                <?php } ?>
+
+                            <?php } elseif ($tipo == 'texto') { ?>
+                                <input type="text" value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?>" disabled>
+
+                            <?php } else { ?>
+                                <p>El tipo de pregunta <strong><?php echo htmlspecialchars($tipo); ?></strong> no está soportado.</p>
+                            <?php } ?>
+                        </span>
+                        <br><br>
+                    <?php } ?>
+                </form>
+            <?php } else { ?>
+                <li>No se ha realizado la encuesta</li>
+            <?php } ?>
+        </fieldset>
+
+
+        <fieldset class="datos">
             <legend>Observaciones</legend>
 
             <?php

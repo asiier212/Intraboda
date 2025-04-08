@@ -89,7 +89,10 @@ class Restaurante extends CI_Controller
 		if ($acc == 'view') {
 			$this->load->database();
 			if ($id) {
-
+				$data['preguntas_encuesta_datos_boda'] = $this->restaurante_functions->GetPreguntasEncuestaDatosBoda();
+				$data['opciones_respuestas_encuesta_datos_boda'] = $this->restaurante_functions->GetOpcionesRespuestasEncuestaDatosBoda();
+				$data['respuesta_cliente'] = $this->restaurante_functions->GetRespuestasEncuestaDatosBoda($id);
+				
 				$data['cliente'] = $this->restaurante_functions->GetCliente($id);
 				$arr_servicios = unserialize($data['cliente']['servicios']);
 				$arr_serv_keys = array_keys($arr_servicios);

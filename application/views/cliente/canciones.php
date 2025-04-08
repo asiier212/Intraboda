@@ -21,7 +21,10 @@
 		cursor: n-resize;
 		border: #CCC 1px solid;
 		margin: 2px;
-		position: relative
+	}
+
+	.momentos li a {
+		position: static;
 	}
 </style>
 
@@ -254,7 +257,6 @@
 		display_c(<?php echo $tiempo_que_queda ?>);
 	</script>
 
-
 	<form method="post">
 		<?php
 		if ($ahora < $fecha_limite) { ?>
@@ -262,46 +264,66 @@
 			<center>
 				<font color="red"><strong>Tiempo disponible para añadir canciones y momentos: <span id='contador' style="width:100%; text-align:right"></span></strong></font>
 			</center><br>
-			<fieldset class="datos">
-				<legend>A&ntilde;adir Momento Especial <img src="<?php echo base_url() ?>/img/interrogacion.png" width="16" height="16" onMouseOver="Tip('<p>Si tu momento especial no aparece en el desplegable, escríbelo en la celda <b>Nombre del momento</b> y haz click en <b>Añadir</b>.</p>')" onMouseOut="UnTip()"></legend>
-				<ul>
-					<li><label>Nombre del momento:</label>
-						<input type="text" style="display:block; float:left" name="nombre_moment" />
-						<input type="submit" style="width:100px; margin-left:10px" name="add_moment" value="A&ntilde;adir" />
-					</li>
+			<!-- Añadir Momento Especial -->
+			<fieldset class="datos" style="margin: 0 auto 30px auto; border: 2px solid #93ce37; padding: 20px; border-radius: 10px; background-color: #f9fff4;">
+				<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;">
+					➕ Añadir Momento Especial
+					<img src="<?php echo base_url() ?>/img/interrogacion.png" width="16" height="16"
+						onMouseOver="Tip('<p>Si tu momento especial no aparece en el desplegable, escríbelo en la celda <b>Nombre del momento</b> y haz click en <b>Añadir</b>.</p>')"
+						onMouseOut="UnTip()" style="vertical-align: middle; margin-left: 5px;" />
+				</legend>
 
-				</ul>
+				<form method="post">
+					<div style="display: flex; gap: 10px; align-items: center; margin-top: 10px; width: 30%">
+						<label for="nombre_moment" style="width: 180px; color: #4a7c12; font-weight: bold;">Nombre del momento:</label>
+						<input type="text" name="nombre_moment" id="nombre_moment" style="flex: 1; padding: 6px; border-radius: 4px; border: 1px solid #ccc;" />
+						<input type="submit" name="add_moment" value="Añadir" style="padding: 6px 20px; background-color: #93ce37; color: white; border: none; border-radius: 4px; cursor: pointer;" />
+					</div>
+				</form>
 			</fieldset>
-			<fieldset class="datos">
-				<legend>A&ntilde;adir Canci&oacute;n <img src="<?php echo base_url() ?>/img/interrogacion.png" width="16" height="16" onMouseOver="Tip('<p>Para asignar una canción a su momento especial, rellena la celda de <b>Artista + Canción</b> y después selecciona el momento en el desplegable de la barra inferior.</p>')" onMouseOut="UnTip()"></legend>
-				<div>
-					<font color="red" size="-2px"><b>* Comienza a rellenar y el auto-completado indicará resultados a los pocos segundos</b></font>
-				</div><br>
-				<?php if ($events) { ?>
-					<ul>
-						<li><label style="width:150px">Artista:</label>
-							<input type="text" name="artista" id="artista" autocomplete="off" />
 
-						<li><label style="width:150px">Canci&oacute;n:</label>
-							<input type="text" style="display:block; float:left" name="nombre" id="nombre" autocomplete="off" />
-							<input value="<?php echo base_url() ?>" id="hiddenurl" type="hidden">
-							<br><br>
+			<!-- Añadir Canción -->
+			<fieldset class="datos" style="margin: 0 auto 30px auto; border: 2px solid #93ce37; padding: 20px; border-radius: 10px; background-color: #f9fff4;">
+				<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;">
+					🎵 Añadir Canción
+					<img src="<?php echo base_url() ?>/img/interrogacion.png" width="16" height="16"
+						onMouseOver="Tip('<p>Para asignar una canción a su momento especial, rellena la celda de <b>Artista + Canción</b> y después selecciona el momento en el desplegable de la barra inferior.</p>')"
+						onMouseOut="UnTip()" style="vertical-align: middle; margin-left: 5px;" />
+				</legend>
 
-							<label style="width:150px">Momento especial:</label>
-							<select style="display:block; float:left" name="momento_id">
-								<?php foreach ($events as $e) { ?>
+				<?php if ($events): ?>
+					<p style="color: red; font-size: 12px; margin-bottom: 15px;"><strong>* Comienza a escribir y se activará el autocompletado automáticamente</strong></p>
+
+					<form method="post">
+						<div style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center; width: 30%">
+							<label for="artista" style="width: 150px; font-weight: bold; color: #4a7c12;">Artista:</label>
+							<input type="text" name="artista" id="artista" autocomplete="off" style="flex: 1; padding: 6px; border-radius: 4px; border: 1px solid #ccc;" />
+						</div>
+
+						<div style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center; width: 30%">
+							<label for="nombre" style="width: 150px; font-weight: bold; color: #4a7c12;">Canción:</label>
+							<input type="text" name="nombre" id="nombre" autocomplete="off" style="flex: 1; padding: 6px; border-radius: 4px; border: 1px solid #ccc;" />
+							<input type="hidden" id="hiddenurl" value="<?php echo base_url() ?>">
+						</div>
+
+						<div style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center; width: 30%">
+							<label for="momento_id" style="width: 150px; font-weight: bold; color: #4a7c12;">Momento especial:</label>
+							<select name="momento_id" id="momento_id" style="flex: 1; padding: 6px; border-radius: 4px; border: 1px solid #ccc;">
+								<?php foreach ($events as $e): ?>
 									<option value="<?php echo $e['id'] ?>"><?php echo $e['nombre'] ?></option>
-								<?php } ?>
+								<?php endforeach; ?>
 							</select>
-							<br><br>
-							<input type="submit" style="width:100px; margin-left:10px; margin-left:150px;" name="add_song" value="A&ntilde;adir" />
-						</li>
+						</div>
 
-					</ul>
-				<?php } else {
-					echo "<p>Para poder a&ntilde;adir una canci&oacute;n  antes tienes que a&ntilde;adir un momento especial</p>";
-				} ?>
+						<div style="text-align: left;">
+							<input type="submit" name="add_song" value="Añadir" style="padding: 8px 24px; background-color: #93ce37; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;" />
+						</div>
+					</form>
+				<?php else: ?>
+					<p style="color: #999;">Para poder añadir una canción, antes tienes que añadir un momento especial.</p>
+				<?php endif; ?>
 			</fieldset>
+
 		<?php
 		} else {
 		?><br>
@@ -312,157 +334,203 @@
 						?>
 	</form>
 
-	<fieldset class="datos">
-		<legend>Ordena los momentos especiales
+	<fieldset class="datos" style="border: 2px solid #93ce37; padding: 20px; border-radius: 10px; background-color: #f9fff4;">
+		<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;">
+			🎯 Ordena los momentos especiales
 			<img src="<?php echo base_url() ?>/img/interrogacion.png" width="16" height="16"
 				onMouseOver="Tip('<p>Ordena los momentos arrastrándolos y haz click en <b>Actualizar el orden</b>.</p>')"
-				onMouseOut="UnTip()">
+				onMouseOut="UnTip()" style="vertical-align: middle; margin-left: 5px;" />
 		</legend>
-		<h4>* cambia el orden de los momentos especiales arrastrándolos</h4>
-		<h4>* elimina los momentos especiales que no vayas a utilizar</h4>
-		<br>
 
-		<ul class="momentos" id="l_<?php echo $this->session->userdata('user_id') ?>">
+		<p style="font-size: 13px; color: #666; margin-bottom: 15px;">
+			* Cambia el orden de los momentos especiales arrastrándolos<br>
+			* Elimina los momentos especiales que no vayas a utilizar
+		</p>
+
+		<ul class="momentos" id="l_<?php echo $this->session->userdata('user_id') ?>" style="list-style: none; padding-left: 0; margin: 0;">
 			<?php foreach ($events as $eu): ?>
 				<?php if ($eu['nombre'] !== 'Fiesta'): ?>
-					<li id="mom_<?php echo $eu['id'] ?>" style="display: flex; justify-content: space-between; align-items: center;">
-						<span>
-							<img src="<?php echo base_url() ?>img/<?php echo ($eu['num_canciones'] == 0) ? 'admiracion' : 'check' ?>.png" width="15"
+					<li id="mom_<?php echo $eu['id'] ?>"
+						style="background: #fff; border: 1px solid #c9e7a3; border-left: 5px solid #93ce37; border-radius: 6px;
+					box-shadow: 0 2px 4px rgba(0,0,0,0.04); padding: 10px 8px; margin-bottom: 10px;
+					display: flex; justify-content: space-between; align-items: center;">
+
+						<div style="display: flex; align-items: center; gap: 10px;">
+							<img src="<?php echo base_url() ?>img/<?php echo ($eu['num_canciones'] == 0) ? 'admiracion' : 'check' ?>.png" width="16"
 								onMouseOver="Tip('<?php echo ($eu['num_canciones'] == 0) ? 'No hay ninguna canción asignada para este momento especial' : 'Existen canciones asignadas para este momento especial' ?>')"
 								onMouseOut="UnTip()" />
+							<span style="font-size: 14px; font-weight: bold; color: #333;">
+								<?php echo $eu['orden'] . '.- ' . $eu['nombre'] ?>
+							</span>
+						</div>
 
-							<?php echo $eu['orden'] . '.- ' . $eu['nombre'] ?>
-						</span>
-
-						<span style="display: flex; align-items: center; gap: 8px;">
-							<input type="time" name="hora_<?php echo $eu['id'] ?>"
-								value="<?php echo substr($eu['hora'], 0, 5) ?>"
-								style="width:70px; margin-right:20px" />
-
-							<a href="#" onclick="return deletemomento(<?php echo $eu['id'] ?>)">
-								<img src="<?php echo base_url() ?>img/delete.gif" width="15" />
+						<div style="display: flex; align-items: center; gap: 10px; justify-content: space-between;">
+							<input type="time" name="hora_<?php echo $eu['id'] ?>" value="<?php echo substr($eu['hora'], 0, 5) ?>"
+								style="font-family:Arial, Helvetica, sans-serif; width: 75px; padding: 4px; border: 1px solid #ccc; border-radius: 4px;" />
+							<a href="#" onclick="return deletemomento(<?php echo $eu['id'] ?>)" title="Eliminar">
+								<img src="<?php echo base_url() ?>img/delete.gif" width="15" alt="Eliminar">
 							</a>
-						</span>
+						</div>
 					</li>
-
 				<?php endif; ?>
 			<?php endforeach; ?>
 		</ul>
 	</fieldset>
 
 
-	<fieldset class="datos">
-		<legend>Mis Listas de canciones</legend>
+
+	<fieldset style="border: 2px solid #93ce37; padding: 20px; border-radius: 10px; background-color: #f9fff4;">
+		<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;">🎶 Mis Listas de Canciones</legend>
 
 		<?php if ($events_user != false): ?>
-			<h4>* Cambia el orden de canciones arrastrándolas</h4>
-
+			<p style="font-size: 13px; color: #666; margin-bottom: 25px;">* Puedes cambiar el orden de las canciones arrastrándolas</p>
 			<?php foreach ($events_user as $eu): ?>
-				<div class="momentos" style="margin-bottom: 30px; border: 1px solid #ccc; padding: 10px; ">
-					<h3 style="margin-bottom: 10px;">
+				<div class="momentos" style="margin-bottom: 30px; margin-right: 40px; border: 1px solid #c9e7a3; border-left: 5px solid #93ce37; border-radius: 6px; background-color: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+
+					<h3 style="margin-bottom: 10px; font-size: 16px; font-weight: bold; color: #4a7c12; text-transform: uppercase;">
 						<?php echo $eu['orden'] . '.- ' . $eu['nombre']; ?>
 						<?php if (!empty($eu['hora'])): ?>
-							<small style="color: #777; font-size: 13px;">(<?php echo substr($eu['hora'], 0, 5); ?>)</small>
+							<small style="color: #888; font-size: 13px;">(<?php echo substr($eu['hora'], 0, 5); ?>)</small>
 						<?php endif; ?>
 					</h3>
 
-					<ul class="canciones" id="m_<?php echo $eu['momento_id'] ?>">
+					<ul class="canciones" id="m_<?php echo $eu['momento_id'] ?>" style="list-style: none; padding-left: 0; margin: 0;">
 						<?php foreach ($canciones_user as $c): ?>
 							<?php if ($eu['momento_id'] == $c['momento_id']): ?>
-								<li id="c_<?php echo $c['id'] ?>" style="margin-bottom: 8px;">
-									<?php echo $c['artista'] ?> - <?php echo $c['cancion'] ?>
-									<a href="#" onclick="return deletecancion(<?php echo $c['id'] ?>)">
-										<img src="<?php echo base_url() ?>img/delete.gif" width="15" style="margin-left: 10px;" />
+								<li id="c_<?php echo $c['id'] ?>" style="margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; background: #f9fff4; padding: 8px 12px; border-radius: 5px; border: 1px solid #e3f1cd;">
+									<span style="font-size: 14px; color: #333;">
+										<?php echo $c['artista'] ?> - <?php echo $c['cancion'] ?>
+									</span>
+									<a href="#" onclick="return deletecancion(<?php echo $c['id'] ?>)" title="Eliminar">
+										<img src="<?php echo base_url() ?>img/delete.gif" width="15" alt="Eliminar" />
 									</a>
 								</li>
 							<?php endif; ?>
 						<?php endforeach; ?>
 					</ul>
+
 				</div>
 			<?php endforeach; ?>
 
 		<?php else: ?>
-			<p>No hay canciones</p>
+			<p style="color: #888;">No hay canciones registradas.</p>
 		<?php endif; ?>
 	</fieldset>
 
-	<fieldset>
-		<legend>Observaciones</legend>
-		<form method="post">
 
-			Observaciones:<br />
-			<textarea name="comentario" style="width:400px; height:60px"></textarea>
-			<br /><br />
-			Crea una observaci&oacute;n eligiendo un momento de la siguiente lista desplegable:<br />
-			<select style="" name="momento_id">
+
+	<fieldset style="border: 2px solid #93ce37; padding: 20px; border-radius: 10px; background-color: #f9fff4;">
+		<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;">📝Observaciones</legend>
+
+		<form method="post">
+			<div style="margin-bottom: 15px;">
+				<label for="comentario" style="font-weight: bold; color: #4a7c12;">Escribe tu observación:</label><br>
+				<textarea name="comentario" id="comentario"></textarea>
+			</div>
+
+			<label for="momento_id" style="font-weight: bold; color: #4a7c12;">Selecciona el momento:</label><br>
+			<select name="momento_id" id="momento_id" style="padding: 6px 10px; width: 100%; max-width: 300px; border: 1px solid #ccc; border-radius: 4px;">
 				<option value="0">General</option>
 				<?php foreach ($events as $e) { ?>
 					<option value="<?php echo $e['id'] ?>"><?php echo $e['nombre'] ?></option>
 				<?php } ?>
 			</select>
-			<br /><br />
-			<input type="submit" name="add_comentario" value="Añadir" />
-			<br /><br /><br />
-
-			<fieldset>
-
-				<legend>Mis Observaciones</legend>
-				<span style="font-size:11px">Para editar los datos haz clic sobre el texto</span>
-				<br /><br />
-				<ul style="list-style:none">
-					<?php
-					if (!$canciones_observaciones_general && !$canciones_observaciones_momesp)
-						echo "No hay Observaciones";
-
-					if ($canciones_observaciones_general) {
-						foreach ($canciones_observaciones_general as $c) {
-					?>
-							<li style="border-bottom:#CCC 1px solid" id="obs_<?php echo $c['id'] ?>"><span style="font-size:16px" class="edit_box" id="<?php echo $c['id'] ?>"><?php echo $c['comentario'] ?></span> <span style="font-size:11px"><br>(escrito el <?php echo $c['fecha'] ?>)</span>
-								<a href="#" onclick="return deleteobservacion(<?php echo $c['id'] ?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a>
-							</li>
-					<?php
-						}
-					}
-					?>
-				</ul>
 
 
+			<input type="submit" name="add_comentario" value="Añadir" style="padding: 8px 24px; background-color: #93ce37; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;" />
+		</form>
+		<br><br><br>
+
+		<!-- TinyMCE Editor -->
+		<script src="<?php echo base_url() . "js/tinymce/tinymce.min.js" ?>"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				tinymce.init({
+					selector: 'textarea#comentario',
+					menubar: false,
+					toolbar: 'bold italic underline | bullist numlist',
+					statusbar: false,
+					branding: false,
+					width: '100%',
+					height: 140,
+					content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px; }"
+				});
+			});
+		</script>
+
+
+		<script src="<?php echo base_url() . "js/tinymce/tinymce.min.js" ?>"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				tinymce.init({
+					selector: 'textarea',
+					menubar: false,
+					toolbar: 'bold italic',
+					statusbar: false,
+					branding: false,
+					width: '100%',
+					height: 140
+				});
+			});
+		</script>
+
+
+		<fieldset style="border: 2px solid #93ce37; padding: 20px; border-radius: 10px; background-color: #f9fff4;">
+			<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;">📝 Mis Observaciones</legend>
+			<p style="font-size: 12px; color: #555;">Haz clic sobre el texto para editarlo</p>
+
+			<?php if (!$canciones_observaciones_general && !$canciones_observaciones_momesp): ?>
+				<div style="margin-top: 10px; color: #777;">No hay observaciones registradas.</div>
+			<?php endif; ?>
+
+			<!-- Observaciones Generales -->
+			<?php if ($canciones_observaciones_general): ?>
+				<div style="margin-top: 20px;">
+					<?php foreach ($canciones_observaciones_general as $c): ?>
+						<div style="background: #fff; border: 1px solid #c9e7a3; border-left: 5px solid #93ce37; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); padding: 12px 16px; margin-bottom: 12px;" id="obs_<?php echo $c['id'] ?>">
+							<span style="font-size: 15px;" class="edit_box" id="<?php echo $c['id'] ?>">
+								<?php echo nl2br($c['comentario']); ?>
+							</span>
+							<div style="margin-top: 5px; color: #888; font-size: 12px;">📅 Escrito el <?php echo $c['fecha'] ?></div>
+							<a href="#" onclick="return deleteobservacion(<?php echo $c['id'] ?>)" style="float: right; margin-top: -20px;" title="Eliminar">
+								<img src="<?php echo base_url() ?>img/delete.gif" width="15" alt="Eliminar" />
+							</a>
+						</div>
+					<?php endforeach; ?>
+				</div>
+			<?php endif; ?>
+
+			<!-- Observaciones por momento -->
+			<?php if ($canciones_observaciones_momesp): ?>
 				<?php
-
-				if ($canciones_observaciones_momesp) {
-
-					$momentos_ids = array();
-					foreach ($canciones_observaciones_momesp as $c) {
-						$momentos_ids[] = $c['momento_id'];
-					}
-
-					foreach ($events as $e) {
-
-						if (in_array($e['id'], $momentos_ids, true)) {
+				$momentos_ids = array_column($canciones_observaciones_momesp, 'momento_id');
+				foreach ($events as $e):
+					if (in_array($e['id'], $momentos_ids)):
 				?>
-							<div class="observaciones">
-								<h3><?php echo $e['nombre']; ?></h3>
-								<ul id="m_<?php echo $e['id'] ?>">
-									<?php
-								}
-								foreach ($canciones_observaciones_momesp as $c) {
-									if ($e['id'] == $c['momento_id']) {
-									?>
-										<li style="border-bottom:#CCC 1px solid" id="obs_<?php echo $c['id'] ?>"><span style="font-size:16px" class="edit_box" id="<?php echo $c['id'] ?>"><?php echo $c['comentario'] ?></span> <span style="font-size:11px"><br>(escrito el <?php echo $c['fecha'] ?>)</span>
-											<a href="#" onclick="return deleteobservacion(<?php echo $c['id'] ?>)"><img src="<?php echo base_url() ?>img/delete.gif" width="15" /></a>
-										</li>
+						<div style="margin-top: 30px;">
+							<h3 style="font-size: 16px; font-weight: bold; color: #4a7c12; padding-bottom: 5px;"><?php echo strtoupper($e['nombre']); ?></h3>
+							<?php foreach ($canciones_observaciones_momesp as $c): ?>
+								<?php if ($e['id'] == $c['momento_id']): ?>
+									<div style="background: #fff; border: 1px solid #c9e7a3; border-left: 5px solid #93ce37; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); padding: 12px 16px; margin-bottom: 12px; display: flex; gap: 20px; justify-content: space-between; align-items: center;" id="obs_<?php echo $c['id'] ?>">
+										<div>
+											<span style="font-size: 15px;" class="edit_box" id="<?php echo $c['id'] ?>">
+												<?php echo nl2br($c['comentario']); ?>
+											</span>
+											<div style="margin-top: 5px; color: #888; font-size: 12px;">📅 Escrito el <?php echo $c['fecha'] ?></div>
+										</div>
+										<a href="#" onclick="return deleteobservacion(<?php echo $c['id'] ?>)" title="Eliminar">
+											<img src="<?php echo base_url() ?>img/delete.gif" width="15" alt="Eliminar" />
+										</a>
+									</div>
+								<?php endif; ?>
+							<?php endforeach; ?>
+						</div>
+				<?php endif;
+				endforeach; ?>
+			<?php endif; ?>
+		</fieldset>
 
-								<?php
-									}
-								}
-
-								?>
-
-						<?php
-						if (in_array($e['id'], $momentos_ids, true)) echo "</ul></div>";
-					}
-				} ?>
-			</fieldset>
 
 		</form>
 	</fieldset>

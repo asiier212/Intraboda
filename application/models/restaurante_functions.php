@@ -281,4 +281,57 @@ class Restaurante_functions extends CI_Model
 		}
 		return $data;
 	}
+
+	
+	function GetPreguntasEncuestaDatosBoda()
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id_pregunta, pregunta, tipo_pregunta FROM preguntas_encuesta_datos_boda WHERE pregunta = '¿A qué hora sale el último autobús?'");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_pregunta'] = $fila->id_pregunta;
+				$data[$i]['pregunta'] = $fila->pregunta;
+				$data[$i]['descripcion'] = $fila->descripcion;
+				$data[$i]['tipo_pregunta'] = $fila->tipo_pregunta;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
+	function GetOpcionesRespuestasEncuestaDatosBoda()
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM opciones_respuesta_encuesta_datos_boda");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_respuesta'] = $fila->id_respuesta;
+				$data[$i]['id_pregunta'] = $fila->id_pregunta;
+				$data[$i]['respuesta'] = $fila->respuesta;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
+	function GetRespuestasEncuestaDatosBoda($id)
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id_respuesta, id_pregunta, respuesta FROM respuestas_encuesta_datos_boda WHERE id_cliente = {$id}");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_respuesta'] = $fila->id_respuesta;
+				$data[$i]['id_pregunta'] = $fila->id_pregunta;
+				$data[$i]['respuesta'] = $fila->respuesta;
+				$i++;
+			}
+		}
+		return $data;
+	}
 }
