@@ -402,6 +402,8 @@
 					$total = 0;
 					$totalDescuento = 0;
 
+					$cliente['servicios'] = unserialize($cliente['servicios']); // ← importante
+
 					if (!empty($cliente['servicios'])) {
 						foreach ($cliente['servicios'] as $id => $datos) {
 							// Buscar el nombre del servicio
@@ -435,12 +437,17 @@
     					<tr>
     						<td><b>Total del contrato</b></td>
     						<td style="text-align:right;">
+    							<?php
+								$descuento1 = $cliente['descuento'];
+								$descuento2 = $cliente['descuento2'];
+								$descuento_total = $descuento1 + $descuento2;
+								?>
     							<?php if ($cliente['descuento'] > 0) { ?>
     								<span style="text-decoration: line-through; color: red; font-weight: bold">
-    									<?php echo number_format($total - $totalDescuento, 2, ',', '.') . "€"; ?>
+    									<?php echo number_format($total, 2, ',', '.') . "€"; ?>
     								</span>
     							<?php } ?>
-    							<b><?php echo number_format(($total - $totalDescuento - $cliente['descuento']), 2, ',', '.') . "€"; ?></b>
+    							<b><?php echo number_format(($total - $descuento_total), 2, ',', '.') . "€"; ?></b>
     						</td>
     					</tr>
     				<?php } else { ?>
