@@ -13276,3 +13276,36 @@ DEBUG - 2025-04-08 13:41:18 --> File loaded: application/views/cliente/canciones
 DEBUG - 2025-04-08 13:41:18 --> File loaded: application/views/cliente/footer.php
 DEBUG - 2025-04-08 13:41:18 --> Final output sent to browser
 DEBUG - 2025-04-08 13:41:18 --> Total execution time: 0.3679
+DEBUG - 2025-04-08 14:15:20 --> Config Class Initialized
+DEBUG - 2025-04-08 14:15:20 --> Hooks Class Initialized
+DEBUG - 2025-04-08 14:15:20 --> Utf8 Class Initialized
+DEBUG - 2025-04-08 14:15:20 --> UTF-8 Support Enabled
+DEBUG - 2025-04-08 14:15:20 --> URI Class Initialized
+DEBUG - 2025-04-08 14:15:20 --> Router Class Initialized
+DEBUG - 2025-04-08 14:15:20 --> Output Class Initialized
+DEBUG - 2025-04-08 14:15:20 --> Security Class Initialized
+DEBUG - 2025-04-08 14:15:20 --> Input Class Initialized
+DEBUG - 2025-04-08 14:15:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-08 14:15:20 --> Language Class Initialized
+DEBUG - 2025-04-08 14:15:21 --> Loader Class Initialized
+DEBUG - 2025-04-08 14:15:21 --> Helper loaded: url_helper
+DEBUG - 2025-04-08 14:15:21 --> Controller Class Initialized
+DEBUG - 2025-04-08 14:15:21 --> Session Class Initialized
+DEBUG - 2025-04-08 14:15:21 --> Helper loaded: string_helper
+DEBUG - 2025-04-08 14:15:21 --> Session routines successfully run
+DEBUG - 2025-04-08 14:15:21 --> Model Class Initialized
+DEBUG - 2025-04-08 14:15:21 --> Model Class Initialized
+DEBUG - 2025-04-08 14:15:21 --> Database Driver Class Initialized
+ERROR - 2025-04-08 14:15:21 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-08 14:15:21 --> File loaded: application/views/admin/header.php
+ERROR - 2025-04-08 14:15:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\xampp\htdocs\intraboda\application\views\admin\mantenimiento_equipos.php 142
+ERROR - 2025-04-08 14:15:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\xampp\htdocs\intraboda\application\views\admin\mantenimiento_equipos.php 258
+ERROR - 2025-04-08 14:15:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\xampp\htdocs\intraboda\application\views\admin\mantenimiento_equipos.php 279
+ERROR - 2025-04-08 14:15:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\xampp\htdocs\intraboda\application\views\admin\mantenimiento_equipos.php 302
+ERROR - 2025-04-08 14:15:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\xampp\htdocs\intraboda\application\views\admin\mantenimiento_equipos.php 309
+ERROR - 2025-04-08 14:15:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\xampp\htdocs\intraboda\application\views\admin\mantenimiento_equipos.php 318
+ERROR - 2025-04-08 14:15:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\xampp\htdocs\intraboda\application\views\admin\mantenimiento_equipos.php 397
+DEBUG - 2025-04-08 14:15:21 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-08 14:15:21 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-08 14:15:21 --> Final output sent to browser
+DEBUG - 2025-04-08 14:15:21 --> Total execution time: 0.1007

@@ -804,7 +804,7 @@ class Admin_functions extends CI_Model
 
 	function GetEquipos()
 	{
-		$data = false;
+		$data = [];
 		$this->load->database();
 		$query = $this->db->query("SELECT * FROM grupos_equipos ORDER BY nombre_grupo ASC");
 		if ($query->num_rows() > 0) {
@@ -820,7 +820,7 @@ class Admin_functions extends CI_Model
 
 	function GetComponentes()
 	{
-		$data = false;
+		$data = [];
 		$this->load->database();
 		$query = $this->db->query("SELECT * FROM componentes ORDER BY n_registro ASC");
 		if ($query->num_rows() > 0) {
@@ -831,6 +831,7 @@ class Admin_functions extends CI_Model
 				$data[$i]['n_registro'] = $fila->n_registro;
 				$data[$i]['descripcion_componente'] = $fila->descripcion_componente;
 				$data[$i]['id_grupo'] = $fila->id_grupo;
+				$data[$i]['qr_path'] = $fila->qr_path; // AÑADIMOS esto si lo usas en la vista
 				$i++;
 			}
 		}
@@ -839,7 +840,7 @@ class Admin_functions extends CI_Model
 
 	function GetComponentesSinAsociar()
 	{
-		$data = false;
+		$data = [];
 		$this->load->database();
 		$query = $this->db->query("SELECT * FROM componentes WHERE id_grupo IS NULL ORDER BY n_registro ASC");
 		if ($query->num_rows() > 0) {
@@ -850,6 +851,7 @@ class Admin_functions extends CI_Model
 				$data[$i]['n_registro'] = $fila->n_registro;
 				$data[$i]['descripcion_componente'] = $fila->descripcion_componente;
 				$data[$i]['id_grupo'] = $fila->id_grupo;
+				$data[$i]['qr_path'] = $fila->qr_path;
 				$i++;
 			}
 		}
@@ -858,7 +860,7 @@ class Admin_functions extends CI_Model
 
 	function GetComponentesAsociados()
 	{
-		$data = false;
+		$data = [];
 		$this->load->database();
 		$query = $this->db->query("SELECT * FROM componentes WHERE id_grupo IS NOT NULL");
 		if ($query->num_rows() > 0) {
@@ -869,11 +871,13 @@ class Admin_functions extends CI_Model
 				$data[$i]['n_registro'] = $fila->n_registro;
 				$data[$i]['descripcion_componente'] = $fila->descripcion_componente;
 				$data[$i]['id_grupo'] = $fila->id_grupo;
+				$data[$i]['qr_path'] = $fila->qr_path;
 				$i++;
 			}
 		}
 		return $data;
 	}
+
 
 
 
@@ -1052,13 +1056,13 @@ class Admin_functions extends CI_Model
 	function UpdateServicio($data, $id)
 	{
 		$this->load->database();
-	
+
 		$data['servicio_adicional'] = isset($data['servicio_adicional']) ? 'S' : 'N';
-	
+
 		$this->db->where('id', $id);
 		$this->db->update('servicios', $data);
 	}
-	
+
 	function InsertPerson($data)
 	{
 
@@ -1730,11 +1734,12 @@ class Admin_functions extends CI_Model
 		");
 		return $this->db->insert_id();
 	}
-	
+
 	function UpdateOficina($data)
 	{
 		$this->load->database();
-		$query = $this->db->query("
+		$query = $this->db->query(
+			"
 			UPDATE oficinas SET 
 				nombre = '" . str_replace("'", "&#39;", $data['nombre']) . "',
 				direccion = '" . str_replace("'", "&#39;", $data['direccion']) . "',

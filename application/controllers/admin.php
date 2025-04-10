@@ -608,7 +608,6 @@ class Admin extends CI_Controller
 	{
 		$data = false;
 		$data_header = false;
-		$data = false;
 		$data_footer = false;
 
 		$data['tab1'] = true;
@@ -629,13 +628,41 @@ class Admin extends CI_Controller
 				foreach ($query->result() as $fila) {
 					$num = $fila->num;
 				}
-				//Si no hay ninguno, añadimos
+
 				if ($num == 0) {
 					$datos['n_registro'] = $_POST['n_registro'];
 					$datos['nombre_componente'] = $_POST['nombre_componente'];
 					$datos['descripcion_componente'] = $_POST['descripcion_componente'];
 					$this->db->insert('componentes', $datos);
+				
+					$id_componente = $this->db->insert_id();
+				
+					// Incluir la biblioteca PHP QR Code (debe estar en /application/libraries/phpqrcode/qrlib.php)
+					include(APPPATH . 'libraries/phpqrcode/qrlib.php');
+				
+					// Datos para el código QR
+					$url_qr = base_url() . "asignar_componente.php?componente_id=" . $id_componente;
+				
+					// Ruta donde se guardará el código QR
+					$ruta_qr = FCPATH . 'uploads/qr_componentes/';
+					if (!file_exists($ruta_qr)) {
+						mkdir($ruta_qr, 0755, true);
+					}
+				
+					// Nombre del archivo
+					$nombre_archivo = "componente_" . $id_componente . ".png";
+					$ruta_completa = $ruta_qr . $nombre_archivo;
+				
+					// Generar y guardar el código QR (corregido: array() en vez de [])
+					QRcode::png($url_qr, $ruta_completa, QR_ECLEVEL_L, 10);
+				
+					// Actualizar la base de datos con la ruta del código QR
+					$this->db->where('id_componente', $id_componente);
+					$this->db->update('componentes', array(
+						'qr_path' => 'uploads/qr_componentes/' . $nombre_archivo
+					));
 				}
+				
 			}
 
 			if (isset($_POST['modificar_equipo'])) {
@@ -650,7 +677,7 @@ class Admin extends CI_Controller
 
 			if (isset($_POST['asociar'])) {
 				$this->load->database();
-				$this->db->query("UPDATE componentes SET id_grupo = " . $_POST['grupo_equipos'] . " WHERE id_componente = " . $_POST['grupo_componentes'] . "");
+				$this->db->query("UPDATE componentes SET id_grupo = " . $_POST['grupo_equipos'] . ", fecha_asignacion = NOW() WHERE id_componente = " . $_POST['grupo_componentes'] . "");
 			}
 
 			if (isset($_POST['anadir_reparacion'])) {
@@ -661,17 +688,15 @@ class Admin extends CI_Controller
 			}
 		}
 
+		// DATOS PARA VISTA
 		$data['equipos'] = $this->admin_functions->GetEquipos();
 		$data['componentes'] = $this->admin_functions->GetComponentes();
 		$data['componentes_asociados'] = $this->admin_functions->GetComponentesAsociados();
 		$data['componentes_no_asociados'] = $this->admin_functions->GetComponentesSinAsociar();
-
 		$data['reparaciones_totales'] = $this->admin_functions->GetReparacionesTotales();
 
-
-
+		// FILTRO DE PESTAÑAS (REPARACIONES NO SE TOCA)
 		$str_where = "";
-
 
 		if (isset($_GET['p'])) {
 			$data['page'] = $_GET['p'];
@@ -713,6 +738,7 @@ class Admin extends CI_Controller
 		$view = "mantenimiento_equipos";
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
+
 
 
 	public function admin_eventos_view()
@@ -1381,30 +1407,30 @@ class Admin extends CI_Controller
 					}
 
 					if (isset($_POST['eliminar_factura'])) {
-							$id_factura = $this->input->post('id_factura');
-				
-							// Verifica si existe la factura
-							$query = $this->db->get_where('facturas', ['id_factura' => $id_factura]);
-							$factura = $query->row();
-				
-							if ($factura) {
-								$ruta_archivo = './uploads/facturas/' . $factura->factura_pdf;
-				
-								// Eliminar el archivo del servidor si existe
-								if (file_exists($ruta_archivo)) {
-									unlink($ruta_archivo);
-								}
-				
-								// Eliminar la factura de la base de datos
-								$this->db->delete('facturas', ['id_factura' => $id_factura]);
-				
-								// Redirigir con mensaje de éxito
-								$this->session->set_flashdata('msg', 'Factura eliminada correctamente.');
-							} else {
-								$this->session->set_flashdata('msg', 'Error: La factura no existe.');
+						$id_factura = $this->input->post('id_factura');
+
+						// Verifica si existe la factura
+						$query = $this->db->get_where('facturas', ['id_factura' => $id_factura]);
+						$factura = $query->row();
+
+						if ($factura) {
+							$ruta_archivo = './uploads/facturas/' . $factura->factura_pdf;
+
+							// Eliminar el archivo del servidor si existe
+							if (file_exists($ruta_archivo)) {
+								unlink($ruta_archivo);
 							}
-				
-							redirect($_SERVER['HTTP_REFERER']);
+
+							// Eliminar la factura de la base de datos
+							$this->db->delete('facturas', ['id_factura' => $id_factura]);
+
+							// Redirigir con mensaje de éxito
+							$this->session->set_flashdata('msg', 'Factura eliminada correctamente.');
+						} else {
+							$this->session->set_flashdata('msg', 'Error: La factura no existe.');
+						}
+
+						redirect($_SERVER['HTTP_REFERER']);
 					}
 
 					if (isset($_POST['update_equipo_componentes'])) {
@@ -1598,112 +1624,112 @@ class Admin extends CI_Controller
 
 
 	function servicios($acc = false, $id = false)
-{
-	$data_header = false;
-	$data = false;
-	$data_footer = false;
+	{
+		$data_header = false;
+		$data = false;
+		$data_footer = false;
 
-	if ($acc == 'view' && $_POST) {
-		$config['upload_path'] = './uploads/servicios/';
-		$config['allowed_types'] = 'jpg|jpeg|png|gif';
-		$config['max_size'] = 2048; // Máx 2MB
-		$config['encrypt_name'] = TRUE; // Nombre único
-	
-		$this->load->library('upload', $config);
-	
-		$imagen = '';
-		if (!empty($_FILES['imagen']['name']) && $this->upload->do_upload('imagen')) {
-			$upload_data = $this->upload->data();
-			$imagen = $upload_data['file_name'];
+		if ($acc == 'view' && $_POST) {
+			$config['upload_path'] = './uploads/servicios/';
+			$config['allowed_types'] = 'jpg|jpeg|png|gif';
+			$config['max_size'] = 2048; // Máx 2MB
+			$config['encrypt_name'] = TRUE; // Nombre único
+
+			$this->load->library('upload', $config);
+
+			$imagen = '';
+			if (!empty($_FILES['imagen']['name']) && $this->upload->do_upload('imagen')) {
+				$upload_data = $this->upload->data();
+				$imagen = $upload_data['file_name'];
+			}
+
+			// Añadir el nombre de la imagen al array POST
+			$data = $_POST;
+			$data['imagen'] = $imagen;
+
+			$this->admin_functions->InsertServicio($data);
+
+			redirect(base_url() . "admin/servicios/view");
 		}
-	
-		// Añadir el nombre de la imagen al array POST
-		$data = $_POST;
-		$data['imagen'] = $imagen;
-	
-		$this->admin_functions->InsertServicio($data);
-	
-		redirect(base_url() . "admin/servicios/view");
-	}
-	
 
-	$data['servicios'] = $this->admin_functions->GetServicios();
 
-	if ($acc == 'edit') {
-		if ($_POST) {
-	
-			// Eliminar imagen
-			if (isset($_POST['delete_imagen'])) {
-				$servicio = $this->admin_functions->GetServicio($id);
-				$imagen = $servicio['imagen'];
-	
-				// Borrar imagen física
-				if (!empty($imagen) && file_exists(FCPATH . 'uploads/servicios/' . $imagen)) {
-					unlink(FCPATH . 'uploads/servicios/' . $imagen);
-				}
-	
-				// Limpiar campo en la BD
-				$this->db->where('id', $id);
-				$this->db->update('servicios', ['imagen' => '']);
-	
-				// Volver a cargar el formulario edit sin imagen
-				$data['msg'] = 'Imagen eliminada correctamente.';
-				$data['servicio'] = $this->admin_functions->GetServicio($id);
-				$this->_loadViews($data_header, $data, $data_footer, "servicios_edit");
-				return;
-			}
-	
-			// Eliminar servicio
-			if (isset($_POST['delete'])) {
-				$this->admin_functions->DeleteServicio($id);
-				header('Location:' . base_url() . "admin/servicios/view");
-				exit;
-			}
-	
-			// Actualización normal
-			$data_post = [
-				'nombre' => $this->input->post('nombre'),
-				'precio' => $this->input->post('precio'),
-				'precio_oferta' => $this->input->post('precio_oferta'),
-				'servicio_adicional' => $this->input->post('servicio_adicional')
-			];
-	
-			$imagen_actual = $this->input->post('imagen_actual');
-	
-			if (!empty($_FILES['imagen']['name'])) {
-				$config['upload_path'] = './uploads/servicios/';
-				$config['allowed_types'] = 'jpg|jpeg|png|gif';
-				$config['max_size'] = 2048;
-				$config['encrypt_name'] = TRUE;
-	
-				$this->load->library('upload', $config);
-	
-				if ($this->upload->do_upload('imagen')) {
-					$upload_data = $this->upload->data();
-					$data_post['imagen'] = $upload_data['file_name'];
-				} else {
-					$data['msg'] = $this->upload->display_errors();
+		$data['servicios'] = $this->admin_functions->GetServicios();
+
+		if ($acc == 'edit') {
+			if ($_POST) {
+
+				// Eliminar imagen
+				if (isset($_POST['delete_imagen'])) {
+					$servicio = $this->admin_functions->GetServicio($id);
+					$imagen = $servicio['imagen'];
+
+					// Borrar imagen física
+					if (!empty($imagen) && file_exists(FCPATH . 'uploads/servicios/' . $imagen)) {
+						unlink(FCPATH . 'uploads/servicios/' . $imagen);
+					}
+
+					// Limpiar campo en la BD
+					$this->db->where('id', $id);
+					$this->db->update('servicios', ['imagen' => '']);
+
+					// Volver a cargar el formulario edit sin imagen
+					$data['msg'] = 'Imagen eliminada correctamente.';
 					$data['servicio'] = $this->admin_functions->GetServicio($id);
 					$this->_loadViews($data_header, $data, $data_footer, "servicios_edit");
 					return;
 				}
-			} else {
-				$data_post['imagen'] = $imagen_actual;
-			}
-	
-			$this->admin_functions->UpdateServicio($data_post, $id);
-	
-			header('Location:' . base_url() . "admin/servicios/view");
-			exit;
-		}
-	
-		$data['servicio'] = $this->admin_functions->GetServicio($id);
-	}
-	
-	
 
-	$this->_loadViews($data_header, $data, $data_footer, "servicios_" . $acc);
-}
+				// Eliminar servicio
+				if (isset($_POST['delete'])) {
+					$this->admin_functions->DeleteServicio($id);
+					header('Location:' . base_url() . "admin/servicios/view");
+					exit;
+				}
+
+				// Actualización normal
+				$data_post = [
+					'nombre' => $this->input->post('nombre'),
+					'precio' => $this->input->post('precio'),
+					'precio_oferta' => $this->input->post('precio_oferta'),
+					'servicio_adicional' => $this->input->post('servicio_adicional')
+				];
+
+				$imagen_actual = $this->input->post('imagen_actual');
+
+				if (!empty($_FILES['imagen']['name'])) {
+					$config['upload_path'] = './uploads/servicios/';
+					$config['allowed_types'] = 'jpg|jpeg|png|gif';
+					$config['max_size'] = 2048;
+					$config['encrypt_name'] = TRUE;
+
+					$this->load->library('upload', $config);
+
+					if ($this->upload->do_upload('imagen')) {
+						$upload_data = $this->upload->data();
+						$data_post['imagen'] = $upload_data['file_name'];
+					} else {
+						$data['msg'] = $this->upload->display_errors();
+						$data['servicio'] = $this->admin_functions->GetServicio($id);
+						$this->_loadViews($data_header, $data, $data_footer, "servicios_edit");
+						return;
+					}
+				} else {
+					$data_post['imagen'] = $imagen_actual;
+				}
+
+				$this->admin_functions->UpdateServicio($data_post, $id);
+
+				header('Location:' . base_url() . "admin/servicios/view");
+				exit;
+			}
+
+			$data['servicio'] = $this->admin_functions->GetServicio($id);
+		}
+
+
+
+		$this->_loadViews($data_header, $data, $data_footer, "servicios_" . $acc);
+	}
 
 	function persons($acc = false)
 	{
@@ -2066,7 +2092,7 @@ class Admin extends CI_Controller
 		$data_footer = false;
 		$data['oficinas'] = $this->admin_functions->GetOficinas();
 		$data['cuentas_bancarias'] = $this->admin_functions->GetCuentas_Bancarias();
-		
+
 		$view = "oficinas";
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
