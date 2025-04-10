@@ -203,21 +203,19 @@
 				}
 
 				?>
-				<textarea name="observaciones" style="width:600px; height:100px; float:left"></textarea>
+				<textarea name="observaciones" class="tinymce" style="width:600px; height:100px; float:left"></textarea>
 
 				<script src="<?php echo base_url() . "js/tinymce/tinymce.min.js" ?>"></script>
 
 				<script>
-					document.addEventListener("DOMContentLoaded", function() {
-						tinymce.init({
-							selector: 'textarea',
-							menubar: false,
-							toolbar: 'bold italic',
-							statusbar: false,
-							branding: false,
-							width: '100%',
-							height: 105
-						});
+					tinymce.init({
+						selector: 'textarea.tinymce',
+						menubar: false,
+						toolbar: 'bold italic',
+						statusbar: false,
+						branding: false,
+						width: '100%',
+						height: 105
 					});
 				</script>
 
@@ -283,8 +281,8 @@
 			if ($solicitud['estado_solicitud'] <> 2 && $solicitud['estado_solicitud'] <> 5 && $solicitud['estado_solicitud'] <> 8) {
 				?>
 				<ul>
-					<li><label>(*)Nueva llamada:</label>
-						<textarea name="observaciones_llamada" style="width:600px; height:100px;" required></textarea>
+					<li><label>(*)Nueva llamada:</label><br>
+						<textarea name="observaciones_llamada" style="width:600px; height:50px;" required></textarea>
 					</li>
 					<?php
 					$hoy = date('Y-m-d');
