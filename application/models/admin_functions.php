@@ -32,7 +32,7 @@ class Admin_functions extends CI_Model
 
 		// Serializar servicios aunque esté vacío
 		$data['servicios'] = !empty($servicios_final) ? serialize($servicios_final) : NULL;
-		$data['descuento'] = $totalDescuento;
+		$data['descuento2'] = $totalDescuento;
 
 		if (isset($data['personas_contacto']) && is_array($data['personas_contacto'])) {
 			$data['personas_contacto'] = implode(",", $data['personas_contacto']);
