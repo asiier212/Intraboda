@@ -3,29 +3,58 @@
 <script src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery-ui-1.10.4.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery.jeditable.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>js/tooltip.js"></script>
+<!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 
 
 
 <script language="javascript">
 	$(document).ready(function() {
-		$('.pestana').hide().eq(0).show();
+		$('.pestana').hide();
+
+		// ✅ Recuperar pestaña desde localStorage o default a #tab-1
+		var activeTab = localStorage.getItem('activeTab') || '#tab-1';
+		$(activeTab).show();
+		$('.tabs li').removeClass("selected");
+		$('.tabs li a[href="' + activeTab + '"]').parent().addClass("selected");
+
 		$('.tabs li').click(function(e) {
 			e.preventDefault();
+
+			var id = $(this).find("a").attr("href");
+
+			// ✅ Guardar en localStorage la pestaña seleccionada
+			localStorage.setItem('activeTab', id);
+
 			$('.pestana').hide();
 			$('.tabs li').removeClass("selected");
-			var id = $(this).find("a").attr("href");
 			$(id).fadeToggle();
 			$(this).addClass("selected");
 		});
-		//Con esto logramos que se si realiza un búsqueda en el tab2 se mantenga el foco en esa pestaña
-		<?php
-		if ($tab2 == true) {
-		?>
-			$('#tab-1').fadeOut(0);
-			$('#tab-2').fadeIn(0);
-		<?php
-		}
-		?>
+
+		// ✅ Si se fuerza la variable PHP $tab2, sobrescribimos lo anterior
+		<?php if ($tab2 == true) { ?>
+			localStorage.setItem('activeTab', '#tab-2');
+		<?php } ?>
+		// Activar buscador en el select de componentes para editar
+		$('#editar_grupo_componentes').select2({
+			width: '100%', // Asegura que el select se adapte al contenedor
+			placeholder: 'Selecciona Componente',
+			allowClear: true
+		});
+		// Aplica Select2 también al select de editar equipo
+		$('#editar_grupo_equipos').select2({
+			width: '100%',
+			placeholder: 'Selecciona Equipo',
+			allowClear: true
+		});
+	});
+	// Captura el envío del formulario y guarda la pestaña activa antes de enviar
+	$('#form_reparacion').submit(function() {
+		localStorage.setItem('activeTab', '#tab-2');
 	});
 
 	function deleteasociacioncomponenteequipo(id) {
@@ -248,13 +277,13 @@
 					<legend style="font-weight:bold; color:#333; font-size:16px;">✏️ Modificar Equipo</legend>
 					<form method="post" style="display: flex; flex-direction: column;">
 						<label style="display:block; margin-bottom:6px;">Equipos:</label>
-						<select name="editar_grupo_equipos" id="editar_grupo_equipos" required
-							style="padding:8px; border:1px solid #ccc; border-radius:6px; margin-bottom:8px;">
+						<select name="editar_grupo_equipos" id="editar_grupo_equipos" required>
 							<option value="">Selecciona Equipo</option>
 							<?php foreach ($equipos as $e) { ?>
 								<option value="<?php echo $e['id_grupo'] ?>"><?php echo $e['nombre_grupo'] ?></option>
 							<?php } ?>
 						</select>
+
 
 						<label style="display:block; margin-bottom:6px;">Nombre:</label>
 						<input type="text" name="editar_nombre_equipo" id="editar_nombre_equipo" required
@@ -269,11 +298,10 @@
 					<legend style="font-weight:bold; color:#333; font-size:16px;">✏️ Modificar Componente</legend>
 					<form method="post" style="display: flex; flex-direction: column;">
 						<label style="display:block; margin-bottom:6px;">Componentes:</label>
-						<select name="editar_grupo_componentes" id="editar_grupo_componentes" required
-							style="padding:8px; border:1px solid #ccc; border-radius:6px; margin-bottom:12px;">
+						<select name="editar_grupo_componentes" id="editar_grupo_componentes" required>
 							<option value="">Selecciona Componente</option>
 							<?php foreach ($componentes as $c) { ?>
-								<option value="<?php echo $c['id_componente'] ?>"><?php echo $c['n_registro'] ?></option>
+								<option value="<?php echo $c['id_componente'] ?>"><?php echo $c['nombre_componente'] ?></option>
 							<?php } ?>
 						</select>
 
@@ -318,7 +346,7 @@
 								<select name="grupo_componentes" required
 									style="width: 100%; padding: 8px; border:1px solid #ccc; border-radius:6px;">
 									<?php foreach ($componentes_no_asociados as $c) { ?>
-										<option value="<?php echo $c['id_componente'] ?>"><?php echo $c['n_registro'] ?></option>
+										<option value="<?php echo $c['id_componente'] ?>"><?php echo $c['nombre_componente'] ?></option>
 									<?php } ?>
 								</select>
 							</div>
@@ -356,10 +384,10 @@
 
 											<div style="display:flex; align-items:center; justify-content:space-between; border:1px solid #eee; border-radius:6px; padding:8px 12px; margin-bottom:8px; background:#fefefe;">
 												<span
-													onmouseover="Tip('Nombre: <?php echo $ca['nombre_componente'] ?><br>Descripción: <?php echo $ca['descripcion_componente'] ?><br><?php echo $reparaciones_realizadas ?>')"
+													onmouseover="Tip('Nº de Registro: <?php echo $ca['n_registro'] ?><br>Descripción: <?php echo $ca['descripcion_componente'] ?><br><?php echo $reparaciones_realizadas ?>')"
 													onmouseout="UnTip()"
 													style="cursor:help; color:#333;">
-													<?php echo $ca['n_registro'] ?>
+													<?php echo $ca['nombre_componente'] ?>
 												</span>
 												<a href="#" onclick="return deleteasociacioncomponenteequipo(<?php echo $ca['id_componente'] ?>)">
 													<img src="<?php echo base_url() ?>img/delete.gif" width="15" alt="Eliminar" title="Eliminar componente" />
@@ -393,13 +421,31 @@
 						<?php if ($equipos): ?>
 							<ul style="padding-left:0;">
 								<?php foreach ($equipos as $e): ?>
+									<?php
+									// Buscar si este equipo tiene algún componente
+									$tiene_componentes = false;
+									if ($componentes_asociados) {
+										foreach ($componentes_asociados as $ca) {
+											if ($ca['id_grupo'] == $e['id_grupo']) {
+												$tiene_componentes = true;
+												break;
+											}
+										}
+									}
+									?>
 									<li style="list-style:none; display:flex; justify-content:space-between; align-items:center; padding:6px 0; border-bottom:1px solid #eee;">
-										<span><?php echo $e['nombre_grupo'] ?></span>
+										<span>
+											<?php echo $e['nombre_grupo']; ?>
+											<?php if (!$tiene_componentes): ?>
+												<span style="color: #dc3545; font-size: 12px; margin-left: 8px; background: #f8d7da; padding: 2px 6px; border-radius: 6px;">Sin componentes</span>
+											<?php endif; ?>
+										</span>
 										<a href="#" onclick="return deleteequipo(<?php echo $e['id_grupo'] ?>)">
 											<img src="<?php echo base_url() ?>img/delete.gif" width="15" alt="Eliminar" title="Eliminar equipo" />
 										</a>
 									</li>
 								<?php endforeach; ?>
+
 							</ul>
 						<?php else: ?>
 							<p style="color: #999;">No hay equipos registrados.</p>
@@ -412,10 +458,22 @@
 						<?php if ($componentes): ?>
 							<ul style="padding-left:0;">
 								<?php foreach ($componentes as $c): ?>
+									<?php
+									$asignado = false;
+									if ($componentes_asociados) {
+										foreach ($componentes_asociados as $ca) {
+											if ($ca['id_componente'] == $c['id_componente']) {
+												$asignado = true;
+												break;
+											}
+										}
+									}
+									?>
 									<li style="list-style:none; margin-bottom: 14px;">
-										<div style="display: flex; align-items: center; justify-content: space-between; border:1px solid #eee; border-radius:8px; padding:12px 16px; background:#fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 12px;">
+										<div style="display: flex; align-items: center; justify-content: space-between; border:1px solid #eee; border-radius:8px; padding:12px 16px;
+		background: <?php echo $asignado ? '#fff' : '#f8f9fa'; ?>; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 12px;">
 
-											<!-- Parte izquierda: QR -->
+											<!-- Parte izquierda -->
 											<div style="display: flex; align-items: center; gap: 12px;">
 												<?php if (!empty($c['qr_path']) && file_exists(FCPATH . $c['qr_path'])): ?>
 													<img src="<?php echo base_url() . $c['qr_path'] ?>" alt="QR" width="60" style="border:1px solid #ccc; background:#fff; padding:3px; border-radius:6px;">
@@ -423,16 +481,19 @@
 													<em style="color: gray;">Sin QR</em>
 												<?php endif; ?>
 
-												<!-- Nombre del componente con tooltip -->
 												<a
-													onmouseover="Tip('Nombre: <?php echo $c['nombre_componente'] ?><br>Descripción: <?php echo $c['descripcion_componente'] ?>')"
+													onmouseover="Tip('Nº de Registro: <?php echo $c['n_registro'] ?><br>Descripción: <?php echo $c['descripcion_componente'] ?>')"
 													onmouseout="UnTip()"
 													style="cursor:help; color:#333; font-weight: 500; font-size: 15px; text-decoration: none;">
-													<?php echo $c['n_registro'] ?>
+													<?php echo $c['nombre_componente'] ?>
 												</a>
+
+												<?php if (!$asignado): ?>
+													<span style="color: #dc3545; font-size: 12px; background: #f8d7da; padding: 2px 6px; border-radius: 6px;">No asignado</span>
+												<?php endif; ?>
 											</div>
 
-											<!-- Parte derecha: acciones -->
+											<!-- Parte derecha -->
 											<div style="display: flex; align-items: center; gap: 14px;">
 												<?php if (!empty($c['qr_path']) && file_exists(FCPATH . $c['qr_path'])): ?>
 													<a href="<?php echo base_url() . $c['qr_path'] ?>" download title="Descargar QR" style="font-size: 20px; text-decoration: none;">📥</a>
@@ -442,11 +503,10 @@
 													<img src="<?php echo base_url() ?>img/delete.gif" width="16" alt="Eliminar" />
 												</a>
 											</div>
-
 										</div>
-
 									</li>
 								<?php endforeach; ?>
+
 							</ul>
 						<?php else: ?>
 							<p style="color: #999;">No hay componentes registrados.</p>
@@ -456,6 +516,7 @@
 				</div>
 			</fieldset>
 
+
 		</div>
 	</div>
 
@@ -464,19 +525,21 @@
 			<legend>A&ntilde;adir reparación</legend>
 
 			<div style="float:left">
-				<form method="post">
+				<form id="form_reparacion" method="post" action="<?php echo base_url() ?>admin/mantenimiento_equipos">
 					<label style="width:100px">Componente:</label>
 					<select style="display:block; float:left" name="reparacion_componente" id="reparacion_componente" required>
 						<option value="">Selecciona Componente</option>
-						<option value=""></option>
 						<?php foreach ($componentes as $c) { ?>
 							<option value="<?php echo $c['id_componente'] ?>"><?php echo $c['n_registro'] ?></option>
 						<?php } ?>
 					</select><br>
+
 					<label style="width:100px">Reparación:</label>
-					<textarea name="descripcion_reparacion" id="descripcion_reparacion" cols="30" rows="5" required /></textarea> <br><br>
-					<input type="submit" style="width:100px; margin-left:10px; margin-left:150px;" name="anadir_reparacion" id="anadir_reparacion" value="A&ntilde;adir" />
+					<textarea name="descripcion_reparacion" id="descripcion_reparacion" cols="30" rows="5" required></textarea><br><br>
+
+					<input type="submit" style="width:100px; margin-left:150px;" name="anadir_reparacion" id="anadir_reparacion" value="Añadir" />
 				</form>
+
 			</div>
 		</fieldset>
 
@@ -576,3 +639,31 @@
 </div>
 <div class="clear">
 </div>
+
+<style>
+	/* Ancho completo del contenedor */
+	.select2-container {
+		width: 100% !important;
+	}
+
+	/* Input visual del select */
+	.select2-selection {
+		padding: 3px;
+		border: 1px solid #ccc !important;
+		border-radius: 6px !important;
+		height: auto !important;
+		min-height: 38px;
+		margin-bottom: 12px;
+	}
+
+	/* Texto del placeholder o seleccionado */
+	.select2-selection__rendered {
+		color: black;
+		font-size: 14px;
+	}
+
+	/* Flecha desplegable */
+	.select2-selection__arrow {
+		margin-top: 5px;
+	}
+</style>

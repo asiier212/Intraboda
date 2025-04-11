@@ -1,55 +1,160 @@
 <?php
-// Configuración de base de datos en IONOS
-$host = 'db536033527.db.1and1.com';
-$user = 'dbo536033527';
-$pass = 'Deejay2012';
-$db   = 'db536033527';
+session_start();
+$mensaje = null;
 
-$conn = mysql_connect($host, $user, $pass);
-mysql_select_db($db, $conn);
-mysql_query("SET NAMES 'utf8'");
+// Conexión base de datos
+$mysqli = new mysqli("db536033527.db.1and1.com", "dbo536033527", "Deejay2012", "db536033527");
+$mysqli->set_charset("utf8");
 
-if (!isset($_GET['componente_id'])) {
-    die("Componente no especificado.");
+if ($mysqli->connect_error) {
+    die("Error de conexión: " . $mysqli->connect_error);
 }
 
-$id_componente = (int) $_GET['componente_id'];
-$mensaje = '';
+function base_url($path = '')
+{
+    return rtrim((isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']), '/') . '/' . $path;
+}
 
-// Acciones de formulario
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['id_grupo'])) {
-        $id_grupo = (int) $_POST['id_grupo'];
-        $fecha_asignacion = date('Y-m-d H:i:s');
-        $sql = "UPDATE componentes SET id_grupo = $id_grupo, fecha_asignacion = '$fecha_asignacion' WHERE id_componente = $id_componente";
-        $mensaje = mysql_query($sql) ? "✅ Componente asignado correctamente." : "❌ Error al asignar el componente.";
-    }
+function insertar_reparacion($id_componente, $descripcion)
+{
+    global $mysqli;
+    $stmt = $mysqli->prepare("INSERT INTO reparaciones_componentes (id_componente, reparacion, fecha_reparacion) VALUES (?, ?, NOW())");
+    $stmt->bind_param("is", $id_componente, $descripcion);
+    return $stmt->execute();
+}
+function modificar_componente($id_componente, $n_registro, $nombre, $descripcion)
+{
+    global $mysqli;
+    $stmt = $mysqli->prepare("UPDATE componentes SET n_registro = ?, nombre_componente = ?, descripcion_componente = ? WHERE id_componente = ?");
+    $stmt->bind_param("sssi", $n_registro, $nombre, $descripcion, $id_componente);
+    return $stmt->execute();
+}
 
 
-    if (isset($_POST['eliminar_asociacion'])) {
-        $sql = "UPDATE componentes SET id_grupo = NULL WHERE id_componente = $id_componente";
-        $mensaje = mysql_query($sql) ? "✅ Asociación eliminada." : "❌ Error al eliminar la asociación.";
+
+function get_componente($id)
+{
+    global $mysqli;
+    $stmt = $mysqli->prepare("SELECT * FROM componentes WHERE id_componente = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    return $stmt->get_result()->fetch_assoc();
+}
+
+function get_equipos()
+{
+    global $mysqli;
+    $result = $mysqli->query("SELECT * FROM grupos_equipos ORDER BY nombre_grupo ASC");
+    return $result->fetch_all(MYSQLI_ASSOC);
+}
+
+function get_equipo_nombre($id_grupo)
+{
+    global $mysqli;
+    $stmt = $mysqli->prepare("SELECT * FROM grupos_equipos WHERE id_grupo = ?");
+    $stmt->bind_param("i", $id_grupo);
+    $stmt->execute();
+    return $stmt->get_result()->fetch_assoc();
+}
+
+function asignar_componente($id_componente, $id_grupo)
+{
+    global $mysqli;
+    $stmt = $mysqli->prepare("UPDATE componentes SET id_grupo = ?, fecha_asignacion = NOW() WHERE id_componente = ?");
+    $stmt->bind_param("ii", $id_grupo, $id_componente);
+    return $stmt->execute();
+}
+
+function eliminar_asociacion($id_componente)
+{
+    global $mysqli;
+    $stmt = $mysqli->prepare("UPDATE componentes SET id_grupo = NULL, fecha_asignacion = NULL WHERE id_componente = ?");
+    $stmt->bind_param("i", $id_componente);
+    return $stmt->execute();
+}
+
+function formatear_fecha($fecha)
+{
+    $meses = ['01' => 'enero', '02' => 'febrero', '03' => 'marzo', '04' => 'abril', '05' => 'mayo', '06' => 'junio', '07' => 'julio', '08' => 'agosto', '09' => 'septiembre', '10' => 'octubre', '11' => 'noviembre', '12' => 'diciembre'];
+    $timestamp = strtotime($fecha);
+    return date('d', $timestamp) . " de " . $meses[date('m', $timestamp)] . " de " . date('Y', $timestamp) . " a las " . date('H:i', $timestamp);
+}
+
+// Validación de componente
+$id_componente = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+if (!$id_componente) die("❌ Componente no especificado.");
+
+$componente = get_componente($id_componente);
+if (!$componente) die("❌ Componente no encontrado.");
+
+$equipos = get_equipos();
+$equipo_actual = !empty($componente['id_grupo']) ? get_equipo_nombre($componente['id_grupo']) : null;
+
+// Login
+if (isset($_POST['componente_login'])) {
+    $usuario = $_POST['usuario'];
+    $clave = $_POST['clave'];
+    if ($usuario === 'admin' && $clave === '49999327Bdj%ExEv') {
+        $_SESSION['login_asignar_componente'] = true;
+        header("Location: " . $_SERVER['REQUEST_URI']);
+        exit;
+    } else {
+        $mensaje = "❌ Usuario o contraseña incorrectos.";
     }
 }
 
-// Cargar componente
-$res_com = mysql_query("SELECT * FROM componentes WHERE id_componente = $id_componente");
-$componente = mysql_fetch_assoc($res_com);
+if (isset($_SESSION['login_asignar_componente']) && $_SESSION['login_asignar_componente']) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset($_POST['id_grupo'])) {
+            $id_grupo = (int)$_POST['id_grupo'];
+            $ok = asignar_componente($id_componente, $id_grupo);
+            $mensaje = $ok ? "✅ Componente asignado correctamente." : "❌ Error al asignar.";
+        }
+        if (isset($_POST['eliminar_asociacion'])) {
+            $ok = eliminar_asociacion($id_componente);
+            $mensaje = $ok ? "✅ Asociación eliminada." : "❌ Error al eliminar.";
+        }
+        if (isset($_POST['anadir_reparacion'])) {
+            $descripcion = trim($_POST['descripcion_reparacion']);
+            if (!empty($descripcion)) {
+                $ok = insertar_reparacion($id_componente, $descripcion);
+                $_SESSION['mensaje'] = $ok ? "✅ Reparación añadida correctamente." : "❌ Error al guardar la reparación.";
+            } else {
+                $_SESSION['mensaje'] = "❌ La descripción de reparación está vacía.";
+            }
 
-// Cargar lista de equipos
-$equipos = array();
-$res_eq = mysql_query("SELECT * FROM grupos_equipos ORDER BY nombre_grupo ASC");
-while ($row = mysql_fetch_assoc($res_eq)) {
-    $equipos[] = $row;
+            echo "<script>window.location.href = '" . $_SERVER['REQUEST_URI'] . "';</script>";
+            exit;
+        }
+        if (isset($_POST['editar_n_registro'], $_POST['editar_nombre_componente'], $_POST['editar_descripcion_componente'])) {
+            $n_registro = trim($_POST['editar_n_registro']);
+            $nombre = trim($_POST['editar_nombre_componente']);
+            $descripcion = trim($_POST['editar_descripcion_componente']);
+
+            if ($n_registro && $nombre && $descripcion) {
+                $ok = modificar_componente($id_componente, $n_registro, $nombre, $descripcion);
+                $_SESSION['mensaje'] = $ok ? "✅ Componente modificado correctamente." : "❌ Error al modificar el componente.";
+            } else {
+                $_SESSION['mensaje'] = "❌ Todos los campos son obligatorios.";
+            }
+
+            echo "<script>window.location.href = '" . $_SERVER['REQUEST_URI'] . "';</script>";
+            exit;
+        }
+
+
+
+        echo "<script>window.location.href = '" . $_SERVER['REQUEST_URI'] . "';</script>";
+        exit;
+    }
 }
 
-// Obtener nombre del equipo actual
-$equipo_actual = null;
-if ($componente['id_grupo'] != '' && $componente['id_grupo'] != null) {
-    $res_eq_name = mysql_query("SELECT nombre_grupo FROM grupos_equipos WHERE id_grupo = " . (int)$componente['id_grupo']);
-    if ($res_eq_name && mysql_num_rows($res_eq_name) > 0) {
-        $equipo_actual = mysql_fetch_assoc($res_eq_name);
-    }
+$logueado = isset($_SESSION['login_asignar_componente']) && $_SESSION['login_asignar_componente'];
+
+
+if (isset($_SESSION['mensaje'])) {
+    $mensaje = $_SESSION['mensaje'];
+    unset($_SESSION['mensaje']);
 }
 ?>
 
@@ -59,144 +164,234 @@ if ($componente['id_grupo'] != '' && $componente['id_grupo'] != null) {
 <head>
     <meta charset="UTF-8">
     <title>Asignar componente</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="<?= base_url('img/favicon.png') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+    <script src="<?= base_url('js/jquery/js/jquery-1.7.2.min.js') ?>"></script>
     <style>
         body {
-            font-family: sans-serif;
-            padding: 20px;
+            font-family: 'Segoe UI', sans-serif;
             background: #f4f4f4;
+            padding: 20px;
+            margin: 0;
         }
 
         .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
             max-width: 500px;
             margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
             text-align: center;
+            color: #333;
+            font-size: 22px;
         }
 
+        label {
+            font-weight: bold;
+            margin-top: 14px;
+            display: block;
+        }
+
+        input,
         select,
+        textarea,
         button {
             width: 100%;
-            padding: 10px;
-            margin-top: 15px;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 6px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            font-size: 15px;
+            box-sizing: border-box;
         }
 
-        .mensaje {
-            margin-top: 15px;
-            padding: 10px;
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .success {
             background: #e6ffe6;
             border: 1px solid #b6ffb6;
             color: green;
-            text-align: center;
-        }
-
-        .advertencia {
-            padding: 10px;
-            background: #fff3cd;
-            border: 1px solid #ffeeba;
+            padding: 12px;
+            border-radius: 6px;
             margin-top: 15px;
             text-align: center;
         }
 
-        .acciones {
-            margin-top: 10px;
+        .error {
+            background: #ffeaea;
+            border: 1px solid #ffbbbb;
+            color: red;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 15px;
             text-align: center;
         }
 
-        .acciones form {
-            display: inline-block;
-            margin-top: 5px;
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-green {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-yellow {
+            background: #ffc107;
+            color: black;
+        }
+
+        .btn-orange {
+            background: #fd7e14;
+            color: white;
+        }
+
+        .acciones {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            justify-content: space-between;
         }
 
         .acciones button {
-            background-color: #dc3545;
-            color: white;
-            border: none;
+            flex: 1;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 16px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="card">
-        <h2>Asignar componente</h2>
-        <p><strong>Nº Registro:</strong> <?php echo $componente['n_registro']; ?></p>
-        <p><strong>Nombre:</strong> <?php echo $componente['nombre_componente']; ?></p>
 
-        <?php if ($mensaje): ?>
-            <div class="mensaje"><?php echo $mensaje; ?></div>
-        <?php endif; ?>
+    <?php if (!$logueado): ?>
+        <div class="card">
+            <h2><img src="<?= base_url('img/logo_intranet.png') ?>" alt="Logo" style="max-width: 120px; margin-bottom: 20px;"></h2>
+            <form method="post">
+                <h2>Login Administrador</h2>
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" required>
+                <label for="clave">Contraseña:</label>
+                <input type="password" name="clave" required>
+                <input type="hidden" name="componente_login" value="1" />
+                <button type="submit" class="btn-green" style="margin-top: 15px;">Entrar &raquo;</button>
+                <?php if ($mensaje): ?><div class="error"><?= $mensaje ?></div><?php endif; ?>
+            </form>
+        </div>
 
-        <?php if ($equipo_actual): ?>
-            <div class="advertencia">
-                Este componente ya está asignado al equipo: <strong><?php echo $equipo_actual['nombre_grupo']; ?></strong><br>
-
-                <?php
-                if (!empty($componente['fecha_asignacion'])) {
-                    // Convertir fecha a formato bonito
-                    $timestamp = strtotime($componente['fecha_asignacion']);
-                    $meses = array(
-                        '01' => 'enero',
-                        '02' => 'febrero',
-                        '03' => 'marzo',
-                        '04' => 'abril',
-                        '05' => 'mayo',
-                        '06' => 'junio',
-                        '07' => 'julio',
-                        '08' => 'agosto',
-                        '09' => 'septiembre',
-                        '10' => 'octubre',
-                        '11' => 'noviembre',
-                        '12' => 'diciembre'
-                    );
-
-                    $dia = date('d', $timestamp);
-                    $mes = $meses[date('m', $timestamp)];
-                    $anio = date('Y', $timestamp);
-                    $hora = date('H:i', $timestamp);
-
-                    echo "Este componente se asignó el <strong>$dia de $mes de $anio</strong> a las <strong>$hora</strong>";
-                }
-                ?>
+    <?php elseif (!isset($_GET['accion'])): ?>
+        <div class="card">
+            <h2>Gestión del Componente<?php echo " " . $componente['nombre_componente'] ?></h2>
+            <p><strong>Nº Registro:</strong> <?= $componente['n_registro'] ?></p>
+            <p><strong>Nombre:</strong> <?= $componente['nombre_componente'] ?></p>
+            <div class="btn-group">
+                <a href="?id=<?= $id_componente ?>&accion=asignar"><button class="btn-green">Asignar Componente</button></a>
+                <a href="?id=<?= $id_componente ?>&accion=modificar"><button class="btn-yellow">Modificar Componente</button></a>
+                <a href="?id=<?= $id_componente ?>&accion=reparacion"><button class="btn-orange">Añadir Reparación</button></a>
             </div>
-        <?php else: ?>
+        </div>
 
-            <div class="advertencia">
-                Este componente no está asignado a ningún equipo.
-            </div>
-        <?php endif; ?>
-
-        <!-- Formulario de asignación o cambio -->
-        <form method="post">
-            <label for="id_grupo">Selecciona un equipo:</label>
-            <select name="id_grupo" id="id_grupo" required>
-                <option value="">-- Selecciona equipo --</option>
-                <?php foreach ($equipos as $eq): ?>
-                    <option value="<?php echo $eq['id_grupo']; ?>">
-                        <?php echo htmlspecialchars($eq['nombre_grupo']); ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
-            <button type="submit"><?php echo $equipo_actual ? 'Cambiar equipo' : 'Asignar componente'; ?></button>
-        </form>
-
-        <!-- Opción de eliminar asociación si ya existe -->
-        <?php if ($equipo_actual): ?>
-            <div class="acciones">
-                <form method="post">
-                    <input type="hidden" name="eliminar_asociacion" value="1">
-                    <button type="submit">Eliminar asociación</button>
+    <?php elseif ($_GET['accion'] === 'asignar'): ?>
+        <div class="card">
+            <h2>Asignar componente</h2>
+            <p><strong>Nº Registro:</strong> <?= $componente['n_registro'] ?></p>
+            <p><strong>Nombre:</strong> <?= $componente['nombre_componente'] ?></p>
+            <?php if ($equipo_actual): ?>
+                <p><strong>Equipo asignado:</strong> <?= $equipo_actual['nombre_grupo'] ?></p>
+                <?php if (!empty($componente['fecha_asignacion'])): ?>
+                    <p><strong>Fecha de asignación:</strong> <?= formatear_fecha($componente['fecha_asignacion']) ?></p>
+                <?php endif; ?>
+            <?php else: ?>
+                <p><em>Este componente no está asignado a ningún equipo.</em></p>
+            <?php endif; ?>
+            <form method="post">
+                <label for="id_grupo">Selecciona un equipo</label>
+                <select name="id_grupo" required>
+                    <option value="">-- Selecciona equipo --</option>
+                    <?php foreach ($equipos as $eq): ?>
+                        <option value="<?= $eq['id_grupo'] ?>"><?= htmlspecialchars($eq['nombre_grupo']) ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <button type="submit" style="background:#28a745; color:white;">Asignar / Cambiar equipo</button>
+            </form>
+            <?php if ($equipo_actual): ?>
+                <form method="post" onsubmit="return confirm('¿Seguro que deseas eliminar esta asociación?')">
+                    <input type="hidden" name="eliminar_asociacion" value="1" />
+                    <button type="submit" style="background:#dc3545; color:white; margin-top:10px;">Eliminar asociación</button>
                 </form>
-            </div>
-        <?php endif; ?>
-    </div>
+            <?php endif; ?>
+            <a href="?id=<?= $id_componente ?>" style="display:block; text-align:center; margin-top:15px; color:#007bff; font-weight:bold;">⬅️ Volver al menú</a>
+        </div>
+
+    <?php elseif ($_GET['accion'] === 'modificar'): ?>
+        <div class="card">
+            <h2>Modificar Componente</h2>
+
+            <?php if ($mensaje): ?>
+                <div class="<?= strpos($mensaje, '✅') === 0 ? 'success' : 'error' ?>">
+                    <?= $mensaje ?>
+                </div>
+            <?php endif; ?>
+
+
+            <form method="post">
+                <label>Nº Registro:</label>
+                <input type="text" value="<?= $componente['n_registro'] ?>" name="editar_n_registro" required>
+                <label>Nombre:</label>
+                <input type="text" value="<?= $componente['nombre_componente'] ?>" name="editar_nombre_componente" required>
+                <label>Descripción:</label>
+                <textarea name="editar_descripcion_componente" rows="4" required><?= $componente['descripcion_componente'] ?></textarea>
+                <button class="btn-yellow" type="submit">Guardar Cambios</button>
+            </form>
+            <a href="?id=<?= $id_componente ?>" style="display:block; text-align:center; margin-top:15px; color:#007bff; font-weight:bold;">⬅️ Volver al menú</a>
+        </div>
+
+    <?php elseif ($_GET['accion'] === 'reparacion'): ?>
+        <div class="card">
+            <h2>Añadir Reparación</h2>
+
+            <?php if ($mensaje): ?>
+                <div class="<?= strpos($mensaje, '✅') === 0 ? 'success' : 'error' ?>">
+                    <?= $mensaje ?>
+                </div>
+            <?php endif; ?>
+
+            <form style="margin-top: 20px" method="post">
+                <p><strong>Nº Registro:</strong> <?= $componente['n_registro'] ?></p>
+                <p><strong>Nombre:</strong> <?= $componente['nombre_componente'] ?></p>
+                <input type="hidden" name="anadir_reparacion" value="1" />
+                <label for="descripcion_reparacion">Descripción Reparación:</label>
+                <textarea name="descripcion_reparacion" required rows="5"></textarea>
+                <button class="btn-orange" type="submit">Añadir Reparación</button>
+            </form>
+
+            <a href="?id=<?= $id_componente ?>" style="display:block; text-align:center; margin-top:15px; color:#007bff; font-weight:bold;">⬅️ Volver al menú</a>
+        </div>
+    <?php endif; ?>
+
+
 </body>
 
 </html>
