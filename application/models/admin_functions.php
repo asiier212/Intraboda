@@ -190,6 +190,48 @@ class Admin_functions extends CI_Model
 		return $id_cliente;
 	}
 
+	public function asignar_componente_a_equipo($id_componente, $id_grupo)
+	{
+		$this->load->database();
+		$sql = "UPDATE componentes SET id_grupo = ?, fecha_asignacion = ? WHERE id_componente = ?";
+		$result = $this->db->query($sql, [$id_grupo, date('Y-m-d H:i:s'), $id_componente]);
+		return $result;
+	}
+	
+	public function desasociar_componente($id_componente)
+	{
+		$this->load->database();
+		$sql = "UPDATE componentes SET id_grupo = NULL WHERE id_componente = ?";
+		$result = $this->db->query($sql, [$id_componente]);
+		return $result;
+	}
+	
+	public function get_componente_by_id($id)
+	{
+		$this->load->database();
+		$query = $this->db->query("SELECT * FROM componentes WHERE id_componente = ?", [$id]);
+		return $query->row_array();
+	}
+	
+	public function get_equipos()
+	{
+		$this->load->database();
+		$query = $this->db->query("SELECT * FROM grupos_equipos ORDER BY nombre_grupo ASC");
+		return $query->result_array();
+	}
+	
+	public function get_equipo_nombre($id_grupo)
+	{
+		if (!$id_grupo) return null;
+	
+		$this->load->database();
+		$query = $this->db->query("SELECT nombre_grupo FROM grupos_equipos WHERE id_grupo = ?", [$id_grupo]);
+		$row = $query->row_array();
+	
+		return $row ? ['nombre_grupo' => $row['nombre_grupo']] : null;
+	}
+	
+
 	function reenviar_clave($id_cliente, $destinatario)
 	{
 		$this->load->database();

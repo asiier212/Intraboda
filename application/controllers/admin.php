@@ -45,6 +45,72 @@ class Admin extends CI_Controller
 		$this->load->view('admin/login', $data);
 	}
 
+	public function asignar_componente($id_componente = null)
+	{
+		$data_header = false;
+		if (!$id_componente) {
+			show_error("❌ Componente no especificado.");
+		}
+
+		$this->load->model('admin_functions');
+		$mensaje = null;
+
+		// Procesar login técnico
+		if ($this->input->post('componente_login')) {
+			$user = $this->input->post('usuario');
+			$pass = $this->input->post('clave');
+
+			if ($user === 'admin' && $pass === '49999327Bdj%ExEv') {
+				$this->session->set_userdata('login_asignar_componente', true);
+			} else {
+				$mensaje = "❌ Usuario o contraseña incorrectos.";
+			}
+		}
+
+		// Obtener componente (¡antes de cualquier uso!)
+		$componente = $this->admin_functions->get_componente_by_id($id_componente);
+
+		if (!$componente) {
+			show_error("❌ Componente con ID $id_componente no encontrado en la base de datos.");
+		}
+
+		// Procesar acciones si ya está logueado
+		// Dentro del controlador
+		if ($this->session->userdata('login_asignar_componente')) {
+			if ($this->input->server('REQUEST_METHOD') === 'POST') {
+				if ($this->input->post('id_grupo')) {
+					$id_grupo = (int) $this->input->post('id_grupo');
+					$asignado = $this->admin_functions->asignar_componente_a_equipo($id_componente, $id_grupo);
+					$this->session->set_flashdata('mensaje', $asignado ? "✅ Componente asignado correctamente." : "❌ Error al asignar el componente.");
+					echo "<script>window.location.href = '" . current_url() . "';</script>";
+					exit;
+				}
+
+				if ($this->input->post('eliminar_asociacion')) {
+					$eliminado = $this->admin_functions->desasociar_componente($id_componente);
+					$this->session->set_flashdata('mensaje', $eliminado ? "✅ Asociación eliminada." : "❌ Error al eliminar la asociación.");
+					echo "<script>window.location.href = '" . current_url() . "';</script>";
+					exit;
+				}
+			}
+		}
+
+
+		$equipos = $this->admin_functions->get_equipos();
+
+		$equipo_actual = null;
+		if (!empty($componente['id_grupo'])) {
+			$equipo_actual = $this->admin_functions->get_equipo_nombre($componente['id_grupo']);
+		}
+
+		$data = compact('componente', 'equipos', 'equipo_actual', 'mensaje');
+		$data['logueado'] = $this->session->userdata('login_asignar_componente');
+
+		$this->load->view('admin/asignar_componente', $data);
+	}
+
+
+
 	public function apariencia()
 	{
 		$data_header = false;
@@ -634,35 +700,34 @@ class Admin extends CI_Controller
 					$datos['nombre_componente'] = $_POST['nombre_componente'];
 					$datos['descripcion_componente'] = $_POST['descripcion_componente'];
 					$this->db->insert('componentes', $datos);
-				
+
 					$id_componente = $this->db->insert_id();
-				
+
 					// Incluir la biblioteca PHP QR Code (debe estar en /application/libraries/phpqrcode/qrlib.php)
 					include(APPPATH . 'libraries/phpqrcode/qrlib.php');
-				
+
 					// Datos para el código QR
-					$url_qr = base_url() . "asignar_componente.php?componente_id=" . $id_componente;
-				
+					$url_qr = base_url() . "admin/asignar_componente/" . $id_componente;
+
 					// Ruta donde se guardará el código QR
 					$ruta_qr = FCPATH . 'uploads/qr_componentes/';
 					if (!file_exists($ruta_qr)) {
 						mkdir($ruta_qr, 0755, true);
 					}
-				
+
 					// Nombre del archivo
 					$nombre_archivo = "componente_" . $id_componente . ".png";
 					$ruta_completa = $ruta_qr . $nombre_archivo;
-				
+
 					// Generar y guardar el código QR (corregido: array() en vez de [])
 					QRcode::png($url_qr, $ruta_completa, QR_ECLEVEL_L, 10);
-				
+
 					// Actualizar la base de datos con la ruta del código QR
 					$this->db->where('id_componente', $id_componente);
 					$this->db->update('componentes', array(
 						'qr_path' => 'uploads/qr_componentes/' . $nombre_archivo
 					));
 				}
-				
 			}
 
 			if (isset($_POST['modificar_equipo'])) {
