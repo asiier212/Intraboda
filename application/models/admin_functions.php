@@ -197,7 +197,7 @@ class Admin_functions extends CI_Model
 		$result = $this->db->query($sql, [$id_grupo, date('Y-m-d H:i:s'), $id_componente]);
 		return $result;
 	}
-	
+
 	public function desasociar_componente($id_componente)
 	{
 		$this->load->database();
@@ -205,32 +205,32 @@ class Admin_functions extends CI_Model
 		$result = $this->db->query($sql, [$id_componente]);
 		return $result;
 	}
-	
+
 	public function get_componente_by_id($id)
 	{
 		$this->load->database();
 		$query = $this->db->query("SELECT * FROM componentes WHERE id_componente = ?", [$id]);
 		return $query->row_array();
 	}
-	
+
 	public function get_equipos()
 	{
 		$this->load->database();
 		$query = $this->db->query("SELECT * FROM grupos_equipos ORDER BY nombre_grupo ASC");
 		return $query->result_array();
 	}
-	
+
 	public function get_equipo_nombre($id_grupo)
 	{
 		if (!$id_grupo) return null;
-	
+
 		$this->load->database();
 		$query = $this->db->query("SELECT nombre_grupo FROM grupos_equipos WHERE id_grupo = ?", [$id_grupo]);
 		$row = $query->row_array();
-	
+
 		return $row ? ['nombre_grupo' => $row['nombre_grupo']] : null;
 	}
-	
+
 
 	function reenviar_clave($id_cliente, $destinatario)
 	{
@@ -1586,111 +1586,11 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function GetEquiposComponentesAsignado($id_cliente)
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT equipo_componentes FROM clientes WHERE id = {$id_cliente}");
-		$fila = $query->row();
-		$equipo_componentes = $fila->equipo_componentes;
-
-		if ($equipo_componentes <> "") {
-			$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE id_grupo = ({$equipo_componentes})");
-			if ($query->num_rows() > 0) {
-				$i = 0;
-				foreach ($query->result() as $fila) {
-					$data[$i]['id_grupo'] = $fila->id_grupo;
-					$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
-					$i++;
-				}
-			}
-		}
-		return $data;
-	}
-
-	function GetEquiposLucesAsignado($id_cliente)
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT equipo_luces FROM clientes WHERE id = {$id_cliente}");
-		$fila = $query->row();
-		$equipo_luces = $fila->equipo_luces;
-
-		if ($equipo_luces <> "") {
-			$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE id_grupo = ({$equipo_luces})");
-			if ($query->num_rows() > 0) {
-				$i = 0;
-				foreach ($query->result() as $fila) {
-					$data[$i]['id_grupo'] = $fila->id_grupo;
-					$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
-					$i++;
-				}
-			}
-		}
-		return $data;
-	}
-
-	function GetEquiposExtra1Asignado($id_cliente)
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT equipo_extra1 FROM clientes WHERE id = {$id_cliente}");
-		$fila = $query->row();
-		$equipo_extra1 = $fila->equipo_extra1;
-
-		if ($equipo_extra1 <> "") {
-			$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE id_grupo = ({$equipo_extra1})");
-			if ($query->num_rows() > 0) {
-				$i = 0;
-				foreach ($query->result() as $fila) {
-					$data[$i]['id_grupo'] = $fila->id_grupo;
-					$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
-					$i++;
-				}
-			}
-		}
-		return $data;
-	}
-
-	function GetEquiposExtra2Asignado($id_cliente)
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT equipo_extra2 FROM clientes WHERE id = {$id_cliente}");
-		$fila = $query->row();
-		$equipo_extra2 = $fila->equipo_extra2;
-
-		if ($equipo_extra2 <> "") {
-			$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE id_grupo = ({$equipo_extra2})");
-			if ($query->num_rows() > 0) {
-				$i = 0;
-				foreach ($query->result() as $fila) {
-					$data[$i]['id_grupo'] = $fila->id_grupo;
-					$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
-					$i++;
-				}
-			}
-		}
-		return $data;
-	}
-
 	function GetEquiposDisponibles($id_cliente)
 	{
-		$data = false;
+		$data = [];
 		$this->load->database();
-		$query = $this->db->query("SELECT DATE_FORMAT(fecha_boda, '%Y-%m-%d') as fecha_boda FROM clientes WHERE id = ({$id_cliente})");
-		if ($query->num_rows() > 0) {
-			$i = 0;
-			foreach ($query->result() as $fila) {
-				$fecha_boda = $fila->fecha_boda;
-				//$data[$i]['id_grupo'] = 1;
-				//$data[$i]['nombre_grupo'] = $fila->fecha_boda;
-				$i++;
-			}
-		}
-
-		//////EL PROBLEMA ES LA COMPARACIÓN CON LA HORA EN EL CAMPO FECHA BODA//////////
-		$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE id_grupo NOT IN (SELECT equipo_componentes FROM clientes WHERE DATE(fecha_boda)= '" . $fecha_boda . "' AND equipo_componentes IS NOT NULL) AND id_grupo NOT IN (SELECT equipo_luces FROM clientes WHERE DATE(fecha_boda)= '" . $fecha_boda . "' AND equipo_luces IS NOT NULL) AND id_grupo NOT IN (SELECT equipo_extra1 FROM clientes WHERE DATE(fecha_boda)= '" . $fecha_boda . "' AND equipo_extra1 IS NOT NULL) AND id_grupo NOT IN (SELECT equipo_extra2 FROM clientes WHERE DATE(fecha_boda)= '" . $fecha_boda . "' AND equipo_extra2 IS NOT NULL) ORDER BY nombre_grupo ASC");
+		$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos ORDER BY nombre_grupo ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -1699,9 +1599,69 @@ class Admin_functions extends CI_Model
 				$i++;
 			}
 		}
-
 		return $data;
 	}
+
+	function asignar_equipos_a_cliente($id_cliente, $equipos)
+	{
+		$this->db->trans_start();
+
+		foreach ($equipos as $index => $id_grupo) {
+			if (!empty($id_grupo)) {
+				$tipo_equipo = 'Equipo ' . ($index + 1);
+
+				// Reemplaza si ya existe una entrada para este cliente y tipo_equipo
+				$query = $this->db->get_where('clientes_equipos', array(
+					'id_cliente' => $id_cliente,
+					'tipo_equipo' => $tipo_equipo
+				));
+
+				if ($query->num_rows() > 0) {
+					// Actualiza
+					$this->db->where('id_cliente', $id_cliente);
+					$this->db->where('tipo_equipo', $tipo_equipo);
+					$this->db->update('clientes_equipos', array(
+						'id_grupo' => $id_grupo,
+						'fecha_asignacion' => date('Y-m-d H:i:s')
+					));
+				} else {
+					// Inserta
+					$this->db->insert('clientes_equipos', array(
+						'id_cliente' => $id_cliente,
+						'id_grupo' => $id_grupo,
+						'tipo_equipo' => $tipo_equipo
+					));
+				}
+			}
+		}
+
+		$this->db->trans_complete();
+	}
+
+	function get_equipos_aignados($id_cliente)
+	{
+		$data = false;
+		$this->load->database();
+		$query = $this->db->query("SELECT id_grupo, tipo_equipo FROM clientes_equipos WHERE id_cliente = {$id_cliente}");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_grupo'] = $fila->id_grupo;
+				$data[$i]['tipo_equipo'] = $fila->tipo_equipo;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
+	function eliminar_equipo_asignado_por_tipo($id_cliente, $tipo_equipo) {
+		$this->load->database();
+	
+		$this->db->where('id_cliente', $id_cliente);
+		$this->db->where('tipo_equipo', $tipo_equipo);
+		$this->db->delete('clientes_equipos');
+	}
+	
 
 	function GetPagos($cliente_id)
 	{

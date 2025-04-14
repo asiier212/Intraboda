@@ -45,7 +45,7 @@ class Admin extends CI_Controller
 		$this->load->view('admin/login', $data);
 	}
 
-	
+
 
 
 
@@ -1436,33 +1436,26 @@ class Admin extends CI_Controller
 						redirect($_SERVER['HTTP_REFERER']);
 					}
 
-					if (isset($_POST['update_equipo_componentes'])) {
-						if ($_POST['equipo_componentes'] == "") {
-							$_POST['equipo_componentes'] = NULL;
+					if (isset($_POST['guardar_equipos'])) {
+						$id_cliente = $_POST['id_cliente']; // ← ya lo tienes garantizado
+						$equipos = isset($_POST['equipos']) ? $_POST['equipos'] : [];
+
+						if (!empty($equipos)) {
+							$this->admin_functions->asignar_equipos_a_cliente($id_cliente, $equipos);
 						}
-						$this->db->query("UPDATE clientes SET equipo_componentes = '" . $_POST['equipo_componentes'] . "' WHERE id = {$id}");
+						redirect('admin/clientes/view/' . $id_cliente);
 					}
 
-					if (isset($_POST['update_equipo_luces'])) {
-						if ($_POST['equipo_luces'] == "") {
-							$_POST['equipo_luces'] = NULL;
-						}
-						$this->db->query("UPDATE clientes SET equipo_luces = '" . $_POST['equipo_luces'] . "' WHERE id = {$id}");
+					if (isset($_POST['accion']) && $_POST['accion'] === 'eliminar_equipo') {
+						$id_cliente = $_POST['id_cliente'];
+						$tipo_equipo = $_POST['tipo_equipo'];
+						$this->admin_functions->eliminar_equipo_asignado_por_tipo($id_cliente, $tipo_equipo);
+						echo 'ok';
+						exit;
 					}
+					
 
-					if (isset($_POST['update_equipo_extra1'])) {
-						if ($_POST['equipo_extra1'] == "") {
-							$_POST['equipo_extra1'] = NULL;
-						}
-						$this->db->query("UPDATE clientes SET equipo_extra1 = '" . $_POST['equipo_extra1'] . "' WHERE id = {$id}");
-					}
 
-					if (isset($_POST['update_equipo_extra2'])) {
-						if ($_POST['equipo_extra2'] == "") {
-							$_POST['equipo_extra2'] = NULL;
-						}
-						$this->db->query("UPDATE clientes SET equipo_extra2 = '" . $_POST['equipo_extra2'] . "' WHERE id = {$id}");
-					}
 
 					if (isset($_POST['generar_factura'])) {
 						session_start(); //Sesión para controlar que admin pueda acceder a todas las fichas de los clientes
@@ -1493,10 +1486,6 @@ class Admin extends CI_Controller
 				$data['horas_dj'] = $this->admin_functions->GetHorasDJ($id);
 				$data['equipos_disponibles'] = $this->admin_functions->GetEquiposDisponibles($id);
 				$data['componentes'] = $this->admin_functions->GetComponentes();
-				$data['equipo_componentes_asignado'] = $this->admin_functions->GetEquiposComponentesAsignado($id);
-				$data['equipo_luces_asignado'] = $this->admin_functions->GetEquiposLucesAsignado($id);
-				$data['equipo_extra1_asignado'] = $this->admin_functions->GetEquiposExtra1Asignado($id);
-				$data['equipo_extra2_asignado'] = $this->admin_functions->GetEquiposExtra2Asignado($id);
 				$data['reparaciones_totales'] = $this->admin_functions->GetReparacionesTotales();
 				$data['cliente'] = $this->admin_functions->GetCliente($id);
 				$data['pagos'] = $this->admin_functions->GetPagos($id);
@@ -1510,6 +1499,7 @@ class Admin extends CI_Controller
 				$data['preguntas_encuesta_datos_boda'] = $this->admin_functions->GetPreguntasEncuestaDatosBoda();
 				$data['opciones_respuestas_encuesta_datos_boda'] = $this->admin_functions->GetOpcionesRespuestasEncuestaDatosBoda();
 				$data['respuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda($id);
+				$data['equipos_asignados'] = $this->admin_functions->get_equipos_aignados($id);
 				$acc = "viewdetails";
 			} else {
 				if ($_POST) {
@@ -1604,7 +1594,7 @@ class Admin extends CI_Controller
 		}
 		$view = "clientes_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);
-	}
+	}	
 	function events($acc = false)
 	{
 

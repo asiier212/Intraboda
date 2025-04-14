@@ -467,187 +467,127 @@
 					</table>
 				</center>
 				<br><br>
-				Equipo componentes:
-				<?php
-				if ($equipo_componentes_asignado) {
-					$se_compone_de = "";
-					foreach ($equipo_componentes_asignado as $equipo) {
-						$se_compone_de = "<font size=\"+1\"><b>ESTE EQUIPO SE COMPONE DE: </b></font><br>(Haz click para ver las reparaciones de cada componente)<br>";
-						foreach ($componentes as $c) {
-							if ($equipo['id_grupo'] == $c['id_grupo']) {
-								$reparado = "";
-								$esta_reparado = "NO";
-								if ($reparaciones_totales) {
-									foreach ($reparaciones_totales as $r) {
-										if ($c['id_componente'] == $r['id_componente']) {
-											$reparado = $reparado . "\\n" . $r['fecha_reparacion'] . "\\n" . $r['reparacion'];
-											$esta_reparado = "SI";
-										}
-									}
-								}
-								if ($reparado == "") {
-									$reparado = "Este componente no tiene reparaciones";
-								}
-								if ($esta_reparado == "NO") {
-									$se_compone_de = $se_compone_de . '<br><b><a onclick="alert(\'' . $reparado . '\');">' . $c['n_registro'] . '///' . $c['nombre_componente'] . '</a></b>';
-								} else {
-									$se_compone_de = $se_compone_de . '<br><font color="red"><b><a onclick="alert(\'' . $reparado . '\');">' . $c['n_registro'] . '///' . $c['nombre_componente'] . '</a></b></font>';
-								}
+
+				<input type="hidden" name="id_cliente" value="<?php echo $cliente['id'] ?>">
+
+				<div id="equipos_container" style="display: flex; flex-direction: column; align-items: left;">
+
+					<?php
+					$etiquetas_fijas = ['Equipo 1', 'Equipo 2', 'Equipo 3'];
+					foreach ($etiquetas_fijas as $etiqueta) {
+						$equipo = null;
+						foreach ($equipos_asignados as $e) {
+							if ($e['tipo_equipo'] == $etiqueta) {
+								$equipo = $e;
+								break;
 							}
 						}
-				?>
-						<a href="#" onclick="muestra_componentes_equipo('<?php echo addslashes(htmlentities($se_compone_de)) ?>')"><b><?php echo $equipo['nombre_grupo'] ?></b></a><br><?php
-																																													}
-																																												} else {
-																																														?><b>No asignado</b><br><?php
-																																																			}
-																																																				?>
-				<select name="equipo_componentes">
-					<?php
-					foreach ($equipos_disponibles as $e1) { ?>
-						<option value="<?php echo $e1['id_grupo'] ?>"><?php echo $e1['nombre_grupo'] ?></option>
-					<?php
-					}
 					?>
-					<option value="">No asignar</option>
-				</select>
-				<input style="width:60px;" type="submit" name="update_equipo_componentes" value="Cambiar" />
-				<br><br>
-				Equipo Luces:
-				<?php
-				if ($equipo_luces_asignado) {
-					$se_compone_de = "";
-					foreach ($equipo_luces_asignado as $equipol) {
-						$se_compone_de = "<font size=\"+1\"><b>ESTE EQUIPO SE COMPONE DE: </b></font><br>(Haz click para ver las reparaciones de cada componente)<br>";
-						foreach ($componentes as $c) {
-							if ($equipol['id_grupo'] == $c['id_grupo']) {
-								$reparado = "";
-								$esta_reparado = "NO";
-								if ($reparaciones_totales) {
-									foreach ($reparaciones_totales as $r) {
-										if ($c['id_componente'] == $r['id_componente']) {
-											$reparado = $reparado . "\\n" . $r['fecha_reparacion'] . "\\n" . $r['reparacion'];
-											$esta_reparado = "SI";
-										}
-									}
-								}
-								if ($reparado == "") {
-									$reparado = "Este componente no tiene reparaciones";
-								}
-								if ($esta_reparado == "NO") {
-									$se_compone_de = $se_compone_de . '<br><b><a onclick="alert(\'' . $reparado . '\');">' . $c['n_registro'] . '///' . $c['nombre_componente'] . '</a></b>';
+						<?php echo $etiqueta ?>:
+						<div style="display: flex; align-items: center; gap: 5px;">
+							<select name="equipos[]" style="width: 170px;">
+								<option value="">Sin asignar</option>
+								<?php foreach ($equipos_disponibles as $disponible) { ?>
+									<option value="<?php echo $disponible['id_grupo'] ?>"
+										<?php echo ($equipo && $disponible['id_grupo'] == $equipo['id_grupo']) ? 'selected' : '' ?>>
+										<?php echo $disponible['nombre_grupo'] ?>
+									</option>
+								<?php } ?>
+							</select>
+
+							<?php if ($equipo) { ?>
+								<img src="<?php echo base_url() ?>img/delete.gif" width="15px" style="cursor: pointer;" title="Eliminar equipo"
+									onclick="eliminarEquipo('<?php echo $cliente['id'] ?>', '<?php echo $equipo['tipo_equipo'] ?>')">
+							<?php } else { ?>
+								<input style="width:60px;" type="submit" name="guardar_equipos" value="Asignar" />
+							<?php } ?>
+						</div>
+						<br>
+					<?php } ?>
+
+					<?php
+					$otros = array_filter($equipos_asignados, function ($e) {
+						return !in_array($e['tipo_equipo'], ['Equipo 1', 'Equipo 2', 'Equipo 3']);
+					});
+					$contador_dinamico = 4;
+					foreach ($otros as $otro) {
+					?>
+						<?php echo $otro['tipo_equipo'] ?>:
+						<div style="display: flex; align-items: center; gap: 5px;">
+							<select name="equipos[]" style="width: 170px;">
+								<option value="">Sin asignar</option>
+								<?php foreach ($equipos_disponibles as $disponible) { ?>
+									<option value="<?php echo $disponible['id_grupo'] ?>"
+										<?php echo ($disponible['id_grupo'] == $otro['id_grupo']) ? 'selected' : '' ?>>
+										<?php echo $disponible['nombre_grupo'] ?>
+									</option>
+								<?php } ?>
+							</select>
+							<img src="<?php echo base_url() ?>img/delete.gif" width="15px" style="cursor: pointer;" title="Eliminar equipo"
+								onclick="eliminarEquipo('<?php echo $cliente['id'] ?>', '<?php echo $otro['tipo_equipo'] ?>')">
+						</div>
+					<?php $contador_dinamico++;
+					} ?>
+				</div>
+				<br>
+				<button type="button" onclick="agregarEquipo()">Añadir otro equipo</button>
+
+				<script>
+					let contadorEquipos = <?php echo $contador_dinamico ?>;
+					const equiposContainer = document.getElementById("equipos_container");
+
+					function agregarEquipo() {
+						const div = document.createElement("div");
+						div.style.display = "flex";
+						div.style.alignItems = "center";
+						div.style.gap = "10px";
+						div.innerHTML = `
+							<div>
+								<br>
+								Equipo ${contadorEquipos}:<br>
+								<select name="equipos[]" style="width: 170px;">
+									<option value="">Sin asignar</option>
+									<?php foreach ($equipos_disponibles as $equipo) { ?>
+										<option value="<?php echo $equipo['id_grupo'] ?>"><?php echo $equipo['nombre_grupo'] ?></option>
+									<?php } ?>
+								</select>
+								<input style="width:60px;" type="submit" name="guardar_equipos" value="Asignar" />
+								<button type="button" style="cursor: pointer;" title="Cancelar" onclick="this.parentNode.parentNode.remove()">Cancelar</button>
+								<br>
+							</div>
+						`;
+
+						equiposContainer.appendChild(div);
+						contadorEquipos++;
+					}
+
+					function eliminarEquipo(idCliente, tipoEquipo) {
+						if (!confirm(`¿Seguro que quieres eliminar el ${tipoEquipo}?`)) return;
+
+						fetch('admin.php', {
+								method: 'POST',
+								headers: {
+									'Content-Type': 'application/x-www-form-urlencoded'
+								},
+								body: `accion=eliminar_equipo&id_cliente=${encodeURIComponent(idCliente)}&tipo_equipo=${encodeURIComponent(tipoEquipo)}`
+							})
+							.then(response => response.text())
+							.then(data => {
+								if (data.trim() === 'ok') {
+									location.reload(); // Recargar para ver los cambios reflejados
 								} else {
-									$se_compone_de = $se_compone_de . '<br><font color="red"><b><a onclick="alert(\'' . $reparado . '\');">' . $c['n_registro'] . '///' . $c['nombre_componente'] . '</a></b></font>';
+									alert('Error al eliminar equipo: ');
 								}
-							}
-						}
-				?>
-						<a href="#" onclick="muestra_componentes_equipo('<?php echo addslashes(htmlentities($se_compone_de)) ?>')"><b><?php echo $equipol['nombre_grupo'] ?></b></a><br><?php
-																																													}
-																																												} else {
-																																														?><b>No asignado</b><br><?php
-																																																			} ?>
-				<select name="equipo_luces">
-					<?php
-					foreach ($equipos_disponibles as $e2) { ?>
-						<option value="<?php echo $e2['id_grupo'] ?>"><?php echo $e2['nombre_grupo'] ?></option>
-					<?php
+							})
+							.catch(error => {
+								alert('Error en la solicitud: ' + error);
+							});
 					}
-					?>
-					<option value="">No asignar</option>
-				</select>
-				<input style="width:60px;" type="submit" name="update_equipo_luces" value="Cambiar" />
-				<br><br>
-				Equipo Extra1:
-				<?php
-				if ($equipo_extra1_asignado) {
-					$se_compone_de = "";
-					foreach ($equipo_extra1_asignado as $equipoe1) {
-						$se_compone_de = "<font size=\"+1\"><b>ESTE EQUIPO SE COMPONE DE: </b></font><br>(Haz click para ver las reparaciones de cada componente)<br>";
-						foreach ($componentes as $c) {
-							if ($equipoe1['id_grupo'] == $c['id_grupo']) {
-								$reparado = "";
-								$esta_reparado = "NO";
-								if ($reparaciones_totales) {
-									foreach ($reparaciones_totales as $r) {
-										if ($c['id_componente'] == $r['id_componente']) {
-											$reparado = $reparado . "\\n" . $r['fecha_reparacion'] . "\\n" . $r['reparacion'];
-											$esta_reparado = "SI";
-										}
-									}
-								}
-								if ($reparado == "") {
-									$reparado = "Este componente no tiene reparaciones";
-								}
-								if ($esta_reparado == "NO") {
-									$se_compone_de = $se_compone_de . '<br><b><a onclick="alert(\'' . $reparado . '\');">' . $c['n_registro'] . '///' . $c['nombre_componente'] . '</a></b>';
-								} else {
-									$se_compone_de = $se_compone_de . '<br><font color="red"><b><a onclick="alert(\'' . $reparado . '\');">' . $c['n_registro'] . '///' . $c['nombre_componente'] . '</a></b></font>';
-								}
-							}
-						}
-				?>
-						<a href="#" onclick="muestra_componentes_equipo('<?php echo addslashes(htmlentities($se_compone_de)) ?>')"><b><?php echo $equipoe1['nombre_grupo'] ?></b></a><br><?php
-																																														}
-																																													} else {
-																																															?><b>No asignado</b><br><?php
-																																																				} ?>
-				<select name="equipo_extra1">
-					<?php
-					foreach ($equipos_disponibles as $e2) { ?>
-						<option value="<?php echo $e2['id_grupo'] ?>"><?php echo $e2['nombre_grupo'] ?></option>
-					<?php
-					}
-					?>
-					<option value="">No asignar</option>
-				</select>
-				<input style="width:60px;" type="submit" name="update_equipo_extra1" value="Cambiar" />
-				<br><br>
-				Equipo Extra2:
-				<?php
-				if ($equipo_extra2_asignado) {
-					$se_compone_de = "";
-					foreach ($equipo_extra2_asignado as $equipoe2) {
-						$se_compone_de = "<font size=\"+1\"><b>ESTE EQUIPO SE COMPONE DE: </b></font><br>(Haz click para ver las reparaciones de cada componente)<br>";
-						foreach ($componentes as $c) {
-							if ($equipoe2['id_grupo'] == $c['id_grupo']) {
-								$reparado = "";
-								$esta_reparado = "NO";
-								if ($reparaciones_totales) {
-									foreach ($reparaciones_totales as $r) {
-										if ($c['id_componente'] == $r['id_componente']) {
-											$reparado = $reparado . "\\n" . $r['fecha_reparacion'] . "\\n" . $r['reparacion'];
-											$esta_reparado = "SI";
-										}
-									}
-								}
-								if ($reparado == "") {
-									$reparado = "Este componente no tiene reparaciones";
-								}
-								if ($esta_reparado == "NO") {
-									$se_compone_de = $se_compone_de . '<br><b><a onclick="alert(\'' . $reparado . '\');">' . $c['n_registro'] . '///' . $c['nombre_componente'] . '</a></b>';
-								} else {
-									$se_compone_de = $se_compone_de . '<br><font color="red"><b><a onclick="alert(\'' . $reparado . '\');">' . $c['n_registro'] . '///' . $c['nombre_componente'] . '</a></b></font>';
-								}
-							}
-						}
-				?>
-						<a href="#" onclick="muestra_componentes_equipo('<?php echo addslashes(htmlentities($se_compone_de)) ?>')"><b><?php echo $equipoe2['nombre_grupo'] ?></b></a><br><?php
-																																														}
-																																													} else {
-																																															?><b>No asignado</b><br><?php
-																																																				} ?>
-				<select name="equipo_extra2">
-					<?php
-					foreach ($equipos_disponibles as $e2) { ?>
-						<option value="<?php echo $e2['id_grupo'] ?>"><?php echo $e2['nombre_grupo'] ?></option>
-					<?php
-					}
-					?>
-					<option value="">No asignar</option>
-				</select>
-				<input style="width:60px;" type="submit" name="update_equipo_extra2" value="Cambiar" />
+				</script>
+
 			</fieldset>
+
+
 			<style>
 				fieldset.fieldsetencuesta label {
 					width: 100%;
