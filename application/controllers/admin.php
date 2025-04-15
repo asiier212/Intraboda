@@ -680,8 +680,20 @@ class Admin extends CI_Controller
 
 			if (isset($_POST['asociar'])) {
 				$this->load->database();
-				$this->db->query("UPDATE componentes SET id_grupo = " . $_POST['grupo_equipos'] . ", fecha_asignacion = NOW() WHERE id_componente = " . $_POST['grupo_componentes'] . "");
+			
+				$id_componente = intval($_POST['grupo_componentes']);
+				$id_grupo = intval($_POST['grupo_equipos']);
+			
+				// Cerrar historial anterior si lo hay
+				$this->db->query("UPDATE historial_componentes_grupos SET fecha_desasignacion = NOW() WHERE id_componente = $id_componente AND fecha_desasignacion IS NULL");
+			
+				// Actualizar estado actual
+				$this->db->query("UPDATE componentes SET id_grupo = $id_grupo WHERE id_componente = $id_componente");
+			
+				// Insertar nueva asignación
+				$this->db->query("INSERT INTO historial_componentes_grupos (id_componente, id_grupo, fecha_asignacion) VALUES ($id_componente, $id_grupo, NOW())");
 			}
+			
 
 			if (isset($_POST['anadir_reparacion'])) {
 				$this->load->database();

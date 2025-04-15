@@ -18229,3 +18229,521 @@ DEBUG - 2025-04-15 13:08:55 --> UTF-8 Support Enabled
 DEBUG - 2025-04-15 13:08:55 --> URI Class Initialized
 DEBUG - 2025-04-15 13:08:55 --> Router Class Initialized
 ERROR - 2025-04-15 13:08:55 --> 404 Page Not Found --> asignar_componente
+DEBUG - 2025-04-15 13:24:53 --> Config Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:24:53 --> URI Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Router Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Output Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Security Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Input Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:24:53 --> Language Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:24:53 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Session Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:24:53 --> Session routines successfully run
+DEBUG - 2025-04-15 13:24:53 --> Model Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Model Class Initialized
+DEBUG - 2025-04-15 13:24:53 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:24:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:24:53 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:24:53 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:24:53 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:24:53 --> Final output sent to browser
+DEBUG - 2025-04-15 13:24:53 --> Total execution time: 0.0743
+DEBUG - 2025-04-15 13:24:57 --> Config Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:24:57 --> URI Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Router Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Output Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Security Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Input Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:24:57 --> Language Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:24:57 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Session Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:24:57 --> Session routines successfully run
+DEBUG - 2025-04-15 13:24:57 --> Model Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Model Class Initialized
+DEBUG - 2025-04-15 13:24:57 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:24:57 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:24:57 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:24:57 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:24:57 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:24:57 --> Final output sent to browser
+DEBUG - 2025-04-15 13:24:57 --> Total execution time: 0.0865
+DEBUG - 2025-04-15 13:25:08 --> Config Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:25:08 --> URI Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Router Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Output Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Security Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Input Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:25:08 --> Language Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:25:08 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:25:08 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:25:08 --> Final output sent to browser
+DEBUG - 2025-04-15 13:25:08 --> Total execution time: 0.0557
+DEBUG - 2025-04-15 13:25:08 --> Config Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:25:08 --> URI Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Router Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Output Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Security Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Input Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:25:08 --> Language Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:25:08 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Session Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:25:08 --> Session routines successfully run
+DEBUG - 2025-04-15 13:25:08 --> Model Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Model Class Initialized
+DEBUG - 2025-04-15 13:25:08 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:25:08 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:25:08 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:25:08 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:25:08 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:25:08 --> Final output sent to browser
+DEBUG - 2025-04-15 13:25:08 --> Total execution time: 0.0798
+DEBUG - 2025-04-15 13:25:27 --> Config Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:25:27 --> URI Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Router Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Output Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Security Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Input Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:25:27 --> Language Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:25:27 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Session Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:25:27 --> Session routines successfully run
+DEBUG - 2025-04-15 13:25:27 --> Model Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Model Class Initialized
+DEBUG - 2025-04-15 13:25:27 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:25:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:25:27 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:25:27 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:25:27 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:25:27 --> Final output sent to browser
+DEBUG - 2025-04-15 13:25:27 --> Total execution time: 0.0826
+DEBUG - 2025-04-15 13:25:37 --> Config Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:25:37 --> URI Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> Router Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> Output Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> Security Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> Input Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:25:37 --> Language Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:25:37 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:25:37 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:25:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:25:38 --> Config Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:25:38 --> URI Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Router Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Output Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Security Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Input Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:25:38 --> Language Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:25:38 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Session Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:25:38 --> Session routines successfully run
+DEBUG - 2025-04-15 13:25:38 --> Model Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Model Class Initialized
+DEBUG - 2025-04-15 13:25:38 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:25:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:25:38 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:25:38 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:25:38 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:25:38 --> Final output sent to browser
+DEBUG - 2025-04-15 13:25:38 --> Total execution time: 0.0699
+DEBUG - 2025-04-15 13:26:25 --> Config Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:26:25 --> URI Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Router Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Output Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Security Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Input Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:26:25 --> Language Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:26:25 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Session Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:26:25 --> Session routines successfully run
+DEBUG - 2025-04-15 13:26:25 --> Model Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Model Class Initialized
+DEBUG - 2025-04-15 13:26:25 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:26:25 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:26:25 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:26:25 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:26:25 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:26:25 --> Final output sent to browser
+DEBUG - 2025-04-15 13:26:25 --> Total execution time: 0.0666
+DEBUG - 2025-04-15 13:26:32 --> Config Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:26:32 --> URI Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Router Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Output Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Security Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Input Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:26:32 --> Language Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:26:32 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Session Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:26:32 --> Session routines successfully run
+DEBUG - 2025-04-15 13:26:32 --> Model Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Model Class Initialized
+DEBUG - 2025-04-15 13:26:32 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:26:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:26:32 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:26:32 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:26:32 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:26:32 --> Final output sent to browser
+DEBUG - 2025-04-15 13:26:32 --> Total execution time: 0.0929
+DEBUG - 2025-04-15 13:28:59 --> Config Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:28:59 --> URI Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Router Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Output Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Security Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Input Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:28:59 --> Language Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:28:59 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:28:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:28:59 --> Final output sent to browser
+DEBUG - 2025-04-15 13:28:59 --> Total execution time: 0.0499
+DEBUG - 2025-04-15 13:28:59 --> Config Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:28:59 --> URI Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Router Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Output Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Security Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Input Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:28:59 --> Language Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:28:59 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Session Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:28:59 --> Session routines successfully run
+DEBUG - 2025-04-15 13:28:59 --> Model Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Model Class Initialized
+DEBUG - 2025-04-15 13:28:59 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:28:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:28:59 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:28:59 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:28:59 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:28:59 --> Final output sent to browser
+DEBUG - 2025-04-15 13:28:59 --> Total execution time: 0.0895
+DEBUG - 2025-04-15 13:29:13 --> Config Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:29:13 --> URI Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Router Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Output Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Security Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Input Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:29:13 --> Language Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:29:13 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Session Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:29:13 --> Session routines successfully run
+DEBUG - 2025-04-15 13:29:13 --> Model Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Model Class Initialized
+DEBUG - 2025-04-15 13:29:13 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:29:13 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:29:13 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:29:13 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:29:13 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:29:13 --> Final output sent to browser
+DEBUG - 2025-04-15 13:29:13 --> Total execution time: 0.0847
+DEBUG - 2025-04-15 13:29:21 --> Config Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:29:21 --> URI Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Router Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Output Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Security Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Input Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:29:21 --> Language Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:29:21 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:29:21 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:29:21 --> Final output sent to browser
+DEBUG - 2025-04-15 13:29:21 --> Total execution time: 0.0600
+DEBUG - 2025-04-15 13:29:21 --> Config Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:29:21 --> URI Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Router Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Output Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Security Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Input Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:29:21 --> Language Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:29:21 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Session Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:29:21 --> Session routines successfully run
+DEBUG - 2025-04-15 13:29:21 --> Model Class Initialized
+DEBUG - 2025-04-15 13:29:21 --> Model Class Initialized
+DEBUG - 2025-04-15 13:29:22 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:29:22 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:29:22 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:29:22 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:29:22 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:29:22 --> Final output sent to browser
+DEBUG - 2025-04-15 13:29:22 --> Total execution time: 0.0990
+DEBUG - 2025-04-15 13:29:36 --> Config Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:29:36 --> URI Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Router Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Output Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Security Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Input Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:29:36 --> Language Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:29:36 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Session Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:29:36 --> Session routines successfully run
+DEBUG - 2025-04-15 13:29:36 --> Model Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Model Class Initialized
+DEBUG - 2025-04-15 13:29:36 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:29:36 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:29:36 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:29:36 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:29:36 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:29:36 --> Final output sent to browser
+DEBUG - 2025-04-15 13:29:36 --> Total execution time: 0.0904
+DEBUG - 2025-04-15 13:31:24 --> Config Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:31:24 --> URI Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Router Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Output Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Security Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Input Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:31:24 --> Language Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:31:24 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:31:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:31:24 --> Config Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:31:24 --> URI Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Router Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Output Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Security Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Input Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:31:24 --> Language Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:31:24 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Session Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:31:24 --> Session routines successfully run
+DEBUG - 2025-04-15 13:31:24 --> Model Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Model Class Initialized
+DEBUG - 2025-04-15 13:31:24 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:31:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:31:24 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:31:24 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:31:24 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:31:24 --> Final output sent to browser
+DEBUG - 2025-04-15 13:31:24 --> Total execution time: 0.0924
+DEBUG - 2025-04-15 13:32:09 --> Config Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:32:09 --> URI Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Router Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Output Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Security Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Input Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:32:09 --> Language Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:32:09 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Session Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:32:09 --> Session routines successfully run
+DEBUG - 2025-04-15 13:32:09 --> Model Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Model Class Initialized
+DEBUG - 2025-04-15 13:32:09 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:32:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:32:09 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:32:09 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:32:09 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:32:09 --> Final output sent to browser
+DEBUG - 2025-04-15 13:32:09 --> Total execution time: 0.0713
+DEBUG - 2025-04-15 13:39:08 --> Config Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:39:08 --> URI Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Router Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Output Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Security Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Input Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:39:08 --> Language Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:39:08 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Session Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:39:08 --> Session routines successfully run
+DEBUG - 2025-04-15 13:39:08 --> Model Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Model Class Initialized
+DEBUG - 2025-04-15 13:39:08 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:39:08 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:39:08 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:39:08 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:39:08 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:39:08 --> Final output sent to browser
+DEBUG - 2025-04-15 13:39:08 --> Total execution time: 0.0774
+DEBUG - 2025-04-15 13:39:37 --> Config Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:39:37 --> URI Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Router Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Output Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Security Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Input Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:39:37 --> Language Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:39:37 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Session Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:39:37 --> Session routines successfully run
+DEBUG - 2025-04-15 13:39:37 --> Model Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Model Class Initialized
+DEBUG - 2025-04-15 13:39:37 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:39:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:39:37 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:39:37 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:39:37 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:39:37 --> Final output sent to browser
+DEBUG - 2025-04-15 13:39:37 --> Total execution time: 0.0899
+DEBUG - 2025-04-15 13:39:45 --> Config Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:39:45 --> URI Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Router Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Output Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Security Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Input Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:39:45 --> Language Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:39:45 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:39:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:39:45 --> Config Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:39:45 --> URI Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Router Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Output Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Security Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Input Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:39:45 --> Language Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:39:45 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Session Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:39:45 --> Session routines successfully run
+DEBUG - 2025-04-15 13:39:45 --> Model Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Model Class Initialized
+DEBUG - 2025-04-15 13:39:45 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:39:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:39:45 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:39:45 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:39:45 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:39:45 --> Final output sent to browser
+DEBUG - 2025-04-15 13:39:45 --> Total execution time: 0.0824

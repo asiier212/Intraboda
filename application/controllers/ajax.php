@@ -607,9 +607,16 @@ function buscarrestaurantearchivos($nombre)
 	{
 		if ($_POST) {
 			$this->load->database();
-			$this->db->query("UPDATE componentes SET id_grupo = NULL WHERE id_componente = " . $_POST['id'] . "");
+			$id_componente = intval($_POST['id']);
+	
+			// Eliminar asociación actual
+			$this->db->query("UPDATE componentes SET id_grupo = NULL WHERE id_componente = " . $id_componente);
+	
+			// Cerrar historial activo
+			$this->db->query("UPDATE historial_componentes_grupos SET fecha_desasignacion = NOW() WHERE id_componente = $id_componente AND fecha_desasignacion IS NULL");
 		}
 	}
+	
 	function deleteequipo()
 	{
 		if ($_POST) {
@@ -622,6 +629,9 @@ function buscarrestaurantearchivos($nombre)
 
 			// Marcar el equipo como borrado
 			$this->db->query("UPDATE grupos_equipos SET borrado = 1 WHERE id_grupo = " . $id_grupo);
+
+			// Cerrar historial activo
+			$this->db->query("UPDATE historial_componentes_grupos SET fecha_desasignacion = NOW() WHERE id_grupo = $id_grupo AND fecha_desasignacion IS NULL");
 
 			echo 'ok';
 			exit;
