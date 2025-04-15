@@ -1638,6 +1638,60 @@ class Admin_functions extends CI_Model
 		$this->db->trans_complete();
 	}
 
+	public function GetEquiposConComponentesYReparaciones($id_cliente)
+	{
+		$equipos = [];
+	
+		// Obtener los grupos de equipos asignados al cliente
+		$query = $this->db->query("
+			SELECT ce.tipo_equipo, ce.id_grupo, ge.nombre_grupo
+			FROM clientes_equipos ce
+			JOIN grupos_equipos ge ON ce.id_grupo = ge.id_grupo
+			WHERE ce.id_cliente = $id_cliente
+		");
+	
+		foreach ($query->result() as $equipo) {
+			$componentes = [];
+	
+			// Obtener los componentes de ese grupo
+			$q2 = $this->db->query("
+				SELECT c.id_componente, c.nombre_componente, c.n_registro, c.descripcion_componente
+				FROM componentes c
+				WHERE c.id_grupo = {$equipo->id_grupo}
+			");
+	
+			foreach ($q2->result() as $componente) {
+				// Obtener las reparaciones del componente
+				$q3 = $this->db->query("
+					SELECT reparacion AS reparacion, fecha_reparacion AS fecha
+					FROM reparaciones_componentes
+					WHERE id_componente = {$componente->id_componente}
+				");
+	
+				$componente_data = [
+					'id' => $componente->id_componente,
+					'nombre' => $componente->nombre_componente,
+					'n_registro' => $componente->n_registro,
+					'descripcion_componente' => $componente->descripcion_componente,
+					'reparaciones' => $q3->result_array()
+				];
+	
+				$componentes[] = $componente_data;
+			}
+	
+			$equipos[] = [
+				'tipo_equipo' => $equipo->tipo_equipo,
+				'id_grupo' => $equipo->id_grupo,
+				'nombre_grupo' => $equipo->nombre_grupo,
+				'componentes' => $componentes
+			];
+		}
+	
+		return $equipos;
+	}
+	
+
+
 	function get_equipos_aignados($id_cliente)
 	{
 		$data = false;
@@ -1654,14 +1708,15 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function eliminar_equipo_asignado_por_tipo($id_cliente, $tipo_equipo) {
+	function eliminar_equipo_asignado_por_tipo($id_cliente, $tipo_equipo)
+	{
 		$this->load->database();
-	
+
 		$this->db->where('id_cliente', $id_cliente);
 		$this->db->where('tipo_equipo', $tipo_equipo);
 		$this->db->delete('clientes_equipos');
 	}
-	
+
 
 	function GetPagos($cliente_id)
 	{

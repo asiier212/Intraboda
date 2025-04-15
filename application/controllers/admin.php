@@ -1500,6 +1500,8 @@ class Admin extends CI_Controller
 				$data['opciones_respuestas_encuesta_datos_boda'] = $this->admin_functions->GetOpcionesRespuestasEncuestaDatosBoda();
 				$data['respuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda($id);
 				$data['equipos_asignados'] = $this->admin_functions->get_equipos_aignados($id);
+				$data['equipos_completos'] = $this->admin_functions->GetEquiposConComponentesYReparaciones($id);
+
 				$acc = "viewdetails";
 			} else {
 				if ($_POST) {
