@@ -18182,3 +18182,50 @@ DEBUG - 2025-04-15 12:50:43 --> UTF-8 Support Enabled
 DEBUG - 2025-04-15 12:50:43 --> URI Class Initialized
 DEBUG - 2025-04-15 12:50:43 --> Router Class Initialized
 ERROR - 2025-04-15 12:50:43 --> 404 Page Not Found --> uploads
+DEBUG - 2025-04-15 13:07:40 --> Config Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:07:40 --> URI Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Router Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Output Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Security Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Input Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-15 13:07:40 --> Language Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Loader Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Helper loaded: url_helper
+DEBUG - 2025-04-15 13:07:40 --> Controller Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Session Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Helper loaded: string_helper
+DEBUG - 2025-04-15 13:07:40 --> Session routines successfully run
+DEBUG - 2025-04-15 13:07:40 --> Model Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Model Class Initialized
+DEBUG - 2025-04-15 13:07:40 --> Database Driver Class Initialized
+ERROR - 2025-04-15 13:07:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-15 13:07:40 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-04-15 13:07:40 --> File loaded: application/views/admin/mantenimiento_equipos.php
+DEBUG - 2025-04-15 13:07:40 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-04-15 13:07:40 --> Final output sent to browser
+DEBUG - 2025-04-15 13:07:40 --> Total execution time: 0.0868
+DEBUG - 2025-04-15 13:08:15 --> Config Class Initialized
+DEBUG - 2025-04-15 13:08:15 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:08:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:08:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:08:15 --> URI Class Initialized
+DEBUG - 2025-04-15 13:08:15 --> Router Class Initialized
+ERROR - 2025-04-15 13:08:15 --> 404 Page Not Found --> asignar_componente
+DEBUG - 2025-04-15 13:08:15 --> Config Class Initialized
+DEBUG - 2025-04-15 13:08:15 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:08:15 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:08:15 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:08:15 --> URI Class Initialized
+DEBUG - 2025-04-15 13:08:15 --> Router Class Initialized
+ERROR - 2025-04-15 13:08:15 --> 404 Page Not Found --> favicon.ico
+DEBUG - 2025-04-15 13:08:55 --> Config Class Initialized
+DEBUG - 2025-04-15 13:08:55 --> Hooks Class Initialized
+DEBUG - 2025-04-15 13:08:55 --> Utf8 Class Initialized
+DEBUG - 2025-04-15 13:08:55 --> UTF-8 Support Enabled
+DEBUG - 2025-04-15 13:08:55 --> URI Class Initialized
+DEBUG - 2025-04-15 13:08:55 --> Router Class Initialized
+ERROR - 2025-04-15 13:08:55 --> 404 Page Not Found --> asignar_componente

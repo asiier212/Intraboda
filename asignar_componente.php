@@ -60,18 +60,39 @@ function get_equipo_nombre($id_grupo)
 function asignar_componente($id_componente, $id_grupo)
 {
     global $mysqli;
-    $stmt = $mysqli->prepare("UPDATE componentes SET id_grupo = ?, fecha_asignacion = NOW() WHERE id_componente = ?");
+
+    // Primero desasociar el grupo anterior si existe (cerrar historial previo)
+    $stmt = $mysqli->prepare("UPDATE historial_componentes_grupos SET fecha_desasignacion = NOW() WHERE id_componente = ? AND fecha_desasignacion IS NULL");
+    $stmt->bind_param("i", $id_componente);
+    $stmt->execute();
+
+    // Actualizar la tabla componentes (estado actual)
+    $stmt = $mysqli->prepare("UPDATE componentes SET id_grupo = ? WHERE id_componente = ?");
     $stmt->bind_param("ii", $id_grupo, $id_componente);
+    $stmt->execute();
+
+    // Insertar nuevo registro de historial
+    $stmt = $mysqli->prepare("INSERT INTO historial_componentes_grupos (id_componente, id_grupo, fecha_asignacion) VALUES (?, ?, NOW())");
+    $stmt->bind_param("ii", $id_componente, $id_grupo);
     return $stmt->execute();
 }
+
 
 function eliminar_asociacion($id_componente)
 {
     global $mysqli;
-    $stmt = $mysqli->prepare("UPDATE componentes SET id_grupo = NULL, fecha_asignacion = NULL WHERE id_componente = ?");
+
+    // Desvincular en tabla principal
+    $stmt = $mysqli->prepare("UPDATE componentes SET id_grupo = NULL WHERE id_componente = ?");
+    $stmt->bind_param("i", $id_componente);
+    $stmt->execute();
+
+    // Cerrar último historial si existe
+    $stmt = $mysqli->prepare("UPDATE historial_componentes_grupos SET fecha_desasignacion = NOW() WHERE id_componente = ? AND fecha_desasignacion IS NULL");
     $stmt->bind_param("i", $id_componente);
     return $stmt->execute();
 }
+
 
 function formatear_fecha($fecha)
 {
@@ -321,9 +342,20 @@ if (isset($_SESSION['mensaje'])) {
             <p><strong>Nombre:</strong> <?= $componente['nombre_componente'] ?></p>
             <?php if ($equipo_actual): ?>
                 <p><strong>Equipo asignado:</strong> <?= $equipo_actual['nombre_grupo'] ?></p>
-                <?php if (!empty($componente['fecha_asignacion'])): ?>
-                    <p><strong>Fecha de asignación:</strong> <?= formatear_fecha($componente['fecha_asignacion']) ?></p>
+                <?php
+                // Obtener la última asignación activa desde el historial
+                $stmt = $mysqli->prepare("SELECT fecha_asignacion FROM historial_componentes_grupos WHERE id_componente = ? AND fecha_desasignacion IS NULL ORDER BY fecha_asignacion DESC LIMIT 1");
+                $stmt->bind_param("i", $componente['id_componente']);
+                $stmt->execute();
+                $stmt->bind_result($fecha_asignacion_actual);
+                $stmt->fetch();
+                $stmt->close();
+
+                if (!empty($fecha_asignacion_actual)):
+                ?>
+                    <p><strong>Fecha de asignación:</strong> <?= formatear_fecha($fecha_asignacion_actual) ?></p>
                 <?php endif; ?>
+
             <?php else: ?>
                 <p><em>Este componente no está asignado a ningún equipo.</em></p>
             <?php endif; ?>

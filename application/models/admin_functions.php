@@ -843,6 +843,24 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
+	function GetHistorialComponentes()	{
+		$data = [];
+		$this->load->database();
+		$query = $this->db->query("SELECT * FROM historial_componentes_grupos");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id'] = $fila->id;
+				$data[$i]['id_componente'] = $fila->id_componente;
+				$data[$i]['id_grupo'] = $fila->id_grupo;
+				$data[$i]['fecha_asignacion'] = $fila->fecha_asignacion;
+				$data[$i]['fecha_desasignacion'] = $fila->fecha_desasignacion;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
 
 	function GetEquipos()
 	{

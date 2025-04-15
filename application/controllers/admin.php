@@ -698,6 +698,8 @@ class Admin extends CI_Controller
 		$data['componentes_no_asociados'] = $this->admin_functions->GetComponentesSinAsociar();
 		$data['reparaciones_totales'] = $this->admin_functions->GetReparacionesTotales();
 
+		$data['historial_componentes'] = $this->admin_functions->GetHistorialComponentes();
+
 		// FILTRO DE PESTAÑAS (REPARACIONES NO SE TOCA)
 		$str_where = "";
 
