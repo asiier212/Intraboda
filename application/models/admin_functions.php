@@ -848,7 +848,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = [];
 		$this->load->database();
-		$query = $this->db->query("SELECT * FROM grupos_equipos ORDER BY nombre_grupo ASC");
+		$query = $this->db->query("SELECT * FROM grupos_equipos WHERE borrado = 0 ORDER BY nombre_grupo ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -860,11 +860,28 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
+	function GetEquiposIncluidoBORRADOS()
+	{
+		$data = [];
+		$this->load->database();
+		$query = $this->db->query("SELECT * FROM grupos_equipos ORDER BY nombre_grupo ASC");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_grupo'] = $fila->id_grupo;
+				$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
+				$data[$i]['borrado'] = $fila->borrado;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
 	function GetComponentes()
 	{
 		$data = [];
 		$this->load->database();
-		$query = $this->db->query("SELECT * FROM componentes ORDER BY n_registro ASC");
+		$query = $this->db->query("SELECT * FROM componentes ORDER BY id_componente DESC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -1590,7 +1607,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = [];
 		$this->load->database();
-		$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos ORDER BY nombre_grupo ASC");
+		$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE borrado = 0 ORDER BY nombre_grupo ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {

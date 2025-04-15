@@ -1484,7 +1484,7 @@ class Admin extends CI_Controller
 				$data['dj'] = $this->admin_functions->GetDjAsignado($id);
 				$data['djs'] = $this->admin_functions->GetDjs($id);
 				$data['horas_dj'] = $this->admin_functions->GetHorasDJ($id);
-				$data['equipos_disponibles'] = $this->admin_functions->GetEquiposDisponibles($id);
+
 				$data['componentes'] = $this->admin_functions->GetComponentes();
 				$data['reparaciones_totales'] = $this->admin_functions->GetReparacionesTotales();
 				$data['cliente'] = $this->admin_functions->GetCliente($id);
@@ -1501,6 +1501,9 @@ class Admin extends CI_Controller
 				$data['respuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda($id);
 				$data['equipos_asignados'] = $this->admin_functions->get_equipos_aignados($id);
 				$data['equipos_completos'] = $this->admin_functions->GetEquiposConComponentesYReparaciones($id);
+				$data['equipos_disponibles'] = $this->admin_functions->GetEquiposDisponibles($id);
+
+				$data['equipos_disponiblesIncluidoBORRADOS'] = $this->admin_functions->GetEquiposIncluidoBORRADOS($id);
 
 				$acc = "viewdetails";
 			} else {

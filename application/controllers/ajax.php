@@ -614,13 +614,20 @@ function buscarrestaurantearchivos($nombre)
 	{
 		if ($_POST) {
 			$this->load->database();
-			$this->db->query("UPDATE componentes SET id_grupo = NULL WHERE id_grupo = " . $_POST['id'] . "");
-			$this->db->query("DELETE FROM grupos_equipos WHERE id_grupo = " . $_POST['id'] . "");
-			//Actualizamos las asignaciones
-			$this->db->query("UPDATE clientes SET equipo_componentes = NULL WHERE equipo_componentes = " . $_POST['id'] . "");
-			$this->db->query("UPDATE clientes SET equipo_luces = NULL WHERE equipo_luces = " . $_POST['id'] . "");
+
+			$id_grupo = intval($_POST['id']);
+
+			// Desasociar componentes
+			$this->db->query("UPDATE componentes SET id_grupo = NULL WHERE id_grupo = " . $id_grupo);
+
+			// Marcar el equipo como borrado
+			$this->db->query("UPDATE grupos_equipos SET borrado = 1 WHERE id_grupo = " . $id_grupo);
+
+			echo 'ok';
+			exit;
 		}
 	}
+
 	function deletecomponente()
 	{
 		if ($_POST) {

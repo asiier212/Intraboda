@@ -306,6 +306,7 @@ if (isset($_SESSION['mensaje'])) {
             <h2>Gestión del Componente<?php echo " " . $componente['nombre_componente'] ?></h2>
             <p><strong>Nº Registro:</strong> <?= $componente['n_registro'] ?></p>
             <p><strong>Nombre:</strong> <?= $componente['nombre_componente'] ?></p>
+            <p><strong>Descripción:</strong> <?= $componente['descripcion_componente'] ?></p>
             <div class="btn-group">
                 <a href="?id=<?= $id_componente ?>&accion=asignar"><button class="btn-green">Asignar Componente</button></a>
                 <a href="?id=<?= $id_componente ?>&accion=modificar"><button class="btn-yellow">Modificar Componente</button></a>

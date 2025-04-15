@@ -76,22 +76,34 @@
 	}
 
 	function deleteequipo(id) {
-		if (confirm("\u00BFSeguro que desea borrar el equipo y todas las asociaciones\u003F")) {
-			//$("#result").html("Actualizando...");
-			$.ajax({
-				type: 'POST',
-				url: '<?php echo base_url() ?>index.php/ajax/deleteequipo',
-				data: 'id=' + id,
-				success: function(data) {
-					//$("#can_" + id).css("display", "none");
-					//$("#result").html("");
-					//location.reload();
-					location.href = '<?php echo base_url() ?>admin/mantenimiento_equipos';
+	if (confirm("¿Seguro que desea borrar el equipo y todas las asociaciones?")) {
+		console.log("Enviando petición para ocultar equipo ID:", id);
+
+		$.ajax({
+			type: 'POST',
+			url: '<?php echo base_url() ?>index.php/ajax/deleteequipo',
+			data: 'id=' + id,
+			success: function (data) {
+				console.log("Respuesta del servidor:", data);
+
+				// Forzar recarga incluso si Ajax caching interfiere
+				if (data.trim() === '' || data.trim().toLowerCase() === 'ok') {
+					window.location = window.location.href;
+				} else {
+					alert("El servidor respondió pero no se pudo recargar automáticamente.");
+					location.reload(); // backup recarga
 				}
-			});
-		}
-		return false
+			},
+			error: function (xhr, status, error) {
+				console.error("Error en la petición AJAX:", error);
+				alert("Error al intentar eliminar el equipo.");
+			}
+		});
 	}
+	return false;
+}
+
+
 
 	function deletecomponente(id) {
 		if (confirm("\u00BFSeguro que desea borrar el componente\u003F")) {

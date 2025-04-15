@@ -487,17 +487,23 @@
 							<?php if ($equipo) { ?>
 								<?php
 								$nombre_grupo = '';
-								foreach ($equipos_disponibles as $disponible) {
+								$equipo_borrado = 0;
+								foreach ($equipos_disponiblesIncluidoBORRADOS as $disponible) {
 									if ($disponible['id_grupo'] == $equipo['id_grupo']) {
 										$nombre_grupo = $disponible['nombre_grupo'];
+										$equipo_borrado = $disponible['borrado'];
 										break;
 									}
 								}
+								$style = ($equipo_borrado == 1) ? "style='color: red'" : "";
 								?>
 								<span>
 									<?php echo $etiqueta; ?> Asignado:
-									<b><a href="#" onclick="mostrarPopupReparaciones(<?php echo $equipo['id_grupo']; ?>); return false;"><?php echo $nombre_grupo; ?></a></b>
+									<b><a href="#" onclick="mostrarPopupReparaciones(<?php echo $equipo['id_grupo']; ?>); return false;" <?php echo $style; ?>>
+											<?php echo $nombre_grupo; ?>
+										</a></b>
 								</span>
+
 							<?php } else { ?>
 								<?php echo $etiqueta ?>:
 								<select name="equipos[]" style="width: 170px;">
@@ -527,20 +533,26 @@
 					foreach ($otros as $otro) {
 					?>
 						<?php
-						// Obtener nombre del grupo desde el id
+						// Obtener nombre del grupo y si está borrado
 						$nombre_grupo = '';
-						foreach ($equipos_disponibles as $disponible) {
+						$equipo_borrado = 0;
+						foreach ($equipos_disponiblesIncluidoBORRADOS as $disponible) {
 							if ($disponible['id_grupo'] == $otro['id_grupo']) {
 								$nombre_grupo = $disponible['nombre_grupo'];
+								$equipo_borrado = $disponible['borrado'];
 								break;
 							}
 						}
+						$style = ($equipo_borrado == 1) ? "style='color: red'" : "";
 						?>
 						<div style="display: flex; align-items: center; gap: 5px;">
 							<span>
 								<?php echo $otro['tipo_equipo']; ?> Asignado:
-								<b><a href="#" onclick="mostrarPopupReparaciones(<?php echo $equipo['id_grupo']; ?>); return false;"><?php echo $nombre_grupo; ?></a></b>
+								<b><a href="#" onclick="mostrarPopupReparaciones(<?php echo $otro['id_grupo']; ?>); return false;" <?php echo $style; ?>>
+										<?php echo $nombre_grupo; ?>
+									</a></b>
 							</span>
+
 
 							<img src="<?php echo base_url() ?>img/delete.gif" width="15px" style="cursor: pointer;" title="Eliminar equipo"
 								onclick="eliminarEquipo('<?php echo $cliente['id'] ?>', '<?php echo $otro['tipo_equipo'] ?>')">
