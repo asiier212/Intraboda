@@ -42,13 +42,15 @@
 		// Activar buscador en el select de componentes para editar
 		$('#editar_grupo_componentes').select2({
 			width: '100%', // Asegura que el select se adapte al contenedor
-			placeholder: 'Selecciona Componente',
-			allowClear: true
+			placeholder: 'Selecciona Componente'
 		});
 		// Aplica Select2 también al select de editar equipo
 		$('#editar_grupo_equipos').select2({
 			width: '100%',
-			placeholder: 'Selecciona Equipo',
+			placeholder: 'Selecciona Equipo'
+		});
+		$('#reparacion_componente').select2({
+			placeholder: 'Selecciona Componente',
 			allowClear: true
 		});
 	});
@@ -495,11 +497,11 @@
 												<?php endif; ?>
 
 												<a
-													onmouseover="Tip('Nº de Registro: <?php echo $c['n_registro'] ?><br>Descripción: <?php echo $c['descripcion_componente'] ?>')"
-													onmouseout="UnTip()"
+													title="Nº de Registro: <?php echo $c['n_registro'] ?>&#10;Descripción: <?php echo trim(str_replace(array("\r", "\n"), array('', '&#10;'), $c['descripcion_componente'])) ?>"
 													style="cursor:help; color:#333; font-weight: 500; font-size: 15px; text-decoration: none;">
-													<?php echo $c['nombre_componente'] ?>
+													<?php echo htmlspecialchars($c['nombre_componente']) ?>
 												</a>
+
 
 												<?php if (!$asignado): ?>
 													<span style="color: #dc3545; font-size: 12px; background: #f8d7da; padding: 2px 6px; border-radius: 6px;">No asignado</span>
@@ -601,10 +603,10 @@
 			<div style="float:left">
 				<form id="form_reparacion" method="post" action="<?php echo base_url() ?>admin/mantenimiento_equipos">
 					<label style="width:100px">Componente:</label>
-					<select style="display:block; float:left" name="reparacion_componente" id="reparacion_componente" required>
+					<select style="display:block; float:left;" name="reparacion_componente" id="reparacion_componente" required>
 						<option value="">Selecciona Componente</option>
 						<?php foreach ($componentes as $c) { ?>
-							<option value="<?php echo $c['id_componente'] ?>"><?php echo $c['n_registro'] ?></option>
+							<option value="<?php echo $c['id_componente'] ?>"><?php echo $c['n_registro'] . " - " . $c['nombre_componente'] ?></option>
 						<?php } ?>
 					</select><br>
 
@@ -715,26 +717,15 @@
 </div>
 
 <style>
-	/* Ancho completo del contenedor */
-	.select2-container {
-		width: 100% !important;
-	}
-
 	/* Input visual del select */
 	.select2-selection {
 		padding: 3px;
 		border: 1px solid #ccc !important;
 		border-radius: 6px !important;
 		height: auto !important;
-		min-height: 38px;
 		margin-bottom: 12px;
 	}
 
-	/* Texto del placeholder o seleccionado */
-	.select2-selection__rendered {
-		color: black;
-		font-size: 14px;
-	}
 
 	/* Flecha desplegable */
 	.select2-selection__arrow {
