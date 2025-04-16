@@ -190,21 +190,6 @@ class Admin_functions extends CI_Model
 		return $id_cliente;
 	}
 
-	public function asignar_componente_a_equipo($id_componente, $id_grupo)
-	{
-		$this->load->database();
-		$sql = "UPDATE componentes SET id_grupo = ?, fecha_asignacion = ? WHERE id_componente = ?";
-		$result = $this->db->query($sql, [$id_grupo, date('Y-m-d H:i:s'), $id_componente]);
-		return $result;
-	}
-
-	public function desasociar_componente($id_componente)
-	{
-		$this->load->database();
-		$sql = "UPDATE componentes SET id_grupo = NULL WHERE id_componente = ?";
-		$result = $this->db->query($sql, [$id_componente]);
-		return $result;
-	}
 
 	public function get_componente_by_id($id)
 	{
@@ -847,14 +832,14 @@ class Admin_functions extends CI_Model
 	{
 		$data = array();
 		$this->load->database();
-	
+
 		$query = $this->db->query("
 			SELECT h.id, h.id_componente, h.id_grupo, h.fecha_asignacion, h.fecha_desasignacion, g.nombre_grupo
 			FROM historial_componentes_grupos h
 			LEFT JOIN grupos_equipos g ON g.id_grupo = h.id_grupo
 			ORDER BY h.fecha_asignacion DESC
 		");
-	
+
 		if ($query->num_rows() > 0) {
 			foreach ($query->result() as $fila) {
 				$id = $fila->id_componente;
@@ -871,10 +856,10 @@ class Admin_functions extends CI_Model
 				);
 			}
 		}
-	
+
 		return $data;
 	}
-	
+
 
 
 	function GetEquipos()
@@ -1636,6 +1621,84 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
+	function GetEquipoAsignado($id_cliente, $tipo_equipo)
+	{
+		$this->load->database();
+
+		$query = $this->db->query("
+		SELECT ce.id_grupo, g.nombre_grupo, g.borrado 
+		FROM clientes_equipos ce
+		JOIN grupos_equipos g ON ce.id_grupo = g.id_grupo
+		WHERE ce.id_cliente = ? AND ce.tipo_equipo = ?
+		LIMIT 1
+		", array($id_cliente, $tipo_equipo));
+
+		if ($query->num_rows() > 0) {
+			return $query->row_array(); // devuelve ['id_grupo' => ..., 'nombre_grupo' => ...]
+		}
+
+		return null;
+	}
+
+	function GetDetallesEquipoAsignado($id_cliente, $tipo_equipo)
+	{
+		$this->load->database();
+	
+		// Obtener info del grupo asignado
+		$query = $this->db->query("
+			SELECT ce.id_grupo, g.nombre_grupo, ce.fecha_asignacion
+			FROM clientes_equipos ce
+			JOIN grupos_equipos g ON ce.id_grupo = g.id_grupo
+			WHERE ce.id_cliente = ? AND ce.tipo_equipo = ?
+			LIMIT 1
+		", array($id_cliente, $tipo_equipo));
+	
+		if ($query->num_rows() == 0) {
+			return null;
+		}
+	
+		$grupo = $query->row_array();
+	
+		// Obtener componentes
+		$componentes_query = $this->db->query("
+			SELECT c.id_componente, c.nombre_componente, c.n_registro, c.descripcion_componente,
+				(SELECT COUNT(*) FROM reparaciones_componentes r WHERE r.id_componente = c.id_componente) AS num_reparaciones
+			FROM componentes c
+			WHERE c.id_grupo = ?
+		", array($grupo['id_grupo']));
+	
+		$componentes = array();
+		foreach ($componentes_query->result_array() as $comp) {
+	
+			// Obtener reparaciones para este componente
+			$rep_query = $this->db->query("
+				SELECT reparacion, fecha_reparacion
+				FROM reparaciones_componentes
+				WHERE id_componente = ?
+				ORDER BY fecha_reparacion DESC
+			", array($comp['id_componente']));
+	
+			$comp['reparaciones'] = $rep_query->result_array();
+			$componentes[] = $comp;
+		}
+	
+		$grupo['componentes'] = $componentes;
+	
+		return $grupo;
+	}
+	
+	
+
+
+
+
+
+
+
+
+
+
+
 	function GetEquiposDisponibles($id_cliente)
 	{
 		$data = [];
@@ -1650,121 +1713,6 @@ class Admin_functions extends CI_Model
 			}
 		}
 		return $data;
-	}
-
-	function asignar_equipos_a_cliente($id_cliente, $equipos)
-	{
-		$this->db->trans_start();
-
-		foreach ($equipos as $index => $id_grupo) {
-			if (!empty($id_grupo)) {
-				$tipo_equipo = 'Equipo ' . ($index + 1);
-
-				// Reemplaza si ya existe una entrada para este cliente y tipo_equipo
-				$query = $this->db->get_where('clientes_equipos', array(
-					'id_cliente' => $id_cliente,
-					'tipo_equipo' => $tipo_equipo
-				));
-
-				if ($query->num_rows() > 0) {
-					// Actualiza
-					$this->db->where('id_cliente', $id_cliente);
-					$this->db->where('tipo_equipo', $tipo_equipo);
-					$this->db->update('clientes_equipos', array(
-						'id_grupo' => $id_grupo,
-						'fecha_asignacion' => date('Y-m-d H:i:s')
-					));
-				} else {
-					// Inserta
-					$this->db->insert('clientes_equipos', array(
-						'id_cliente' => $id_cliente,
-						'id_grupo' => $id_grupo,
-						'tipo_equipo' => $tipo_equipo
-					));
-				}
-			}
-		}
-
-		$this->db->trans_complete();
-	}
-
-	public function GetEquiposConComponentesYReparaciones($id_cliente)
-	{
-		$equipos = [];
-	
-		// Obtener los grupos de equipos asignados al cliente
-		$query = $this->db->query("
-			SELECT ce.tipo_equipo, ce.id_grupo, ge.nombre_grupo
-			FROM clientes_equipos ce
-			JOIN grupos_equipos ge ON ce.id_grupo = ge.id_grupo
-			WHERE ce.id_cliente = $id_cliente
-		");
-	
-		foreach ($query->result() as $equipo) {
-			$componentes = [];
-	
-			// Obtener los componentes de ese grupo
-			$q2 = $this->db->query("
-				SELECT c.id_componente, c.nombre_componente, c.n_registro, c.descripcion_componente
-				FROM componentes c
-				WHERE c.id_grupo = {$equipo->id_grupo}
-			");
-	
-			foreach ($q2->result() as $componente) {
-				// Obtener las reparaciones del componente
-				$q3 = $this->db->query("
-					SELECT reparacion AS reparacion, fecha_reparacion AS fecha
-					FROM reparaciones_componentes
-					WHERE id_componente = {$componente->id_componente}
-				");
-	
-				$componente_data = [
-					'id' => $componente->id_componente,
-					'nombre' => $componente->nombre_componente,
-					'n_registro' => $componente->n_registro,
-					'descripcion_componente' => $componente->descripcion_componente,
-					'reparaciones' => $q3->result_array()
-				];
-	
-				$componentes[] = $componente_data;
-			}
-	
-			$equipos[] = [
-				'tipo_equipo' => $equipo->tipo_equipo,
-				'id_grupo' => $equipo->id_grupo,
-				'nombre_grupo' => $equipo->nombre_grupo,
-				'componentes' => $componentes
-			];
-		}
-	
-		return $equipos;
-	}
-	
-
-
-	function get_equipos_aignados($id_cliente)
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT id_grupo, tipo_equipo FROM clientes_equipos WHERE id_cliente = {$id_cliente}");
-		if ($query->num_rows() > 0) {
-			$i = 0;
-			foreach ($query->result() as $fila) {
-				$data[$i]['id_grupo'] = $fila->id_grupo;
-				$data[$i]['tipo_equipo'] = $fila->tipo_equipo;
-				$i++;
-			}
-		}
-		return $data;
-	}
-
-	function eliminar_equipo_asignado_por_tipo($id_cliente, $tipo_equipo)
-	{
-		$this->load->database();
-
-		$this->db->where('id_cliente', $id_cliente);
-		$this->db->where('tipo_equipo', $tipo_equipo);
-		$this->db->delete('clientes_equipos');
 	}
 
 

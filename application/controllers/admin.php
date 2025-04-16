@@ -680,20 +680,20 @@ class Admin extends CI_Controller
 
 			if (isset($_POST['asociar'])) {
 				$this->load->database();
-			
+
 				$id_componente = intval($_POST['grupo_componentes']);
 				$id_grupo = intval($_POST['grupo_equipos']);
-			
+
 				// Cerrar historial anterior si lo hay
 				$this->db->query("UPDATE historial_componentes_grupos SET fecha_desasignacion = NOW() WHERE id_componente = $id_componente AND fecha_desasignacion IS NULL");
-			
+
 				// Actualizar estado actual
 				$this->db->query("UPDATE componentes SET id_grupo = $id_grupo WHERE id_componente = $id_componente");
-			
+
 				// Insertar nueva asignación
 				$this->db->query("INSERT INTO historial_componentes_grupos (id_componente, id_grupo, fecha_asignacion) VALUES ($id_componente, $id_grupo, NOW())");
 			}
-			
+
 
 			if (isset($_POST['anadir_reparacion'])) {
 				$this->load->database();
@@ -1450,24 +1450,47 @@ class Admin extends CI_Controller
 						redirect($_SERVER['HTTP_REFERER']);
 					}
 
-					if (isset($_POST['guardar_equipos'])) {
-						$id_cliente = $_POST['id_cliente']; // ← ya lo tienes garantizado
-						$equipos = isset($_POST['equipos']) ? $_POST['equipos'] : [];
+					if (isset($_POST['asignar'])) {
+						$tipo_equipo = $_POST['tipo_equipo']; // por ejemplo: "Equipo 1", "Equipo 2", ...
+						$id_grupo = $_POST['id_grupo'];       // valor del <select>
 
-						if (!empty($equipos)) {
-							$this->admin_functions->asignar_equipos_a_cliente($id_cliente, $equipos);
+						// Verifica si ya existe una asignación previa
+						$query = $this->db->query("
+							SELECT * FROM clientes_equipos 
+							WHERE id_cliente = ? AND tipo_equipo = ?
+							LIMIT 1
+						", array($id, $tipo_equipo));
+
+						if ($query->num_rows() > 0) {
+							// Actualizar grupo existente
+							$this->db->query("
+								UPDATE clientes_equipos 
+								SET id_grupo = ? 
+								WHERE id_cliente = ? AND tipo_equipo = ?
+							", array($id_grupo, $id, $tipo_equipo));
+						} else {
+							// Insertar nueva asignación
+							$this->db->query("
+								INSERT INTO clientes_equipos (id_cliente, id_grupo, tipo_equipo) 
+								VALUES (?, ?, ?)
+							", array($id, $id_grupo, $tipo_equipo));
 						}
-						redirect('admin/clientes/view/' . $id_cliente);
+
+						$this->session->set_flashdata('msg', "Asignación guardada correctamente.");
+						redirect("admin/clientes/view/{$id}");
 					}
 
-					if (isset($_POST['accion']) && $_POST['accion'] === 'eliminar_equipo') {
-						$id_cliente = $_POST['id_cliente'];
+					if (isset($_POST['eliminar_equipo'])) {
 						$tipo_equipo = $_POST['tipo_equipo'];
-						$this->admin_functions->eliminar_equipo_asignado_por_tipo($id_cliente, $tipo_equipo);
-						echo 'ok';
-						exit;
+
+						$this->db->query("
+							DELETE FROM clientes_equipos 
+							WHERE id_cliente = ? AND tipo_equipo = ?
+						", array($id, $tipo_equipo));
+
+						$this->session->set_flashdata('msg', "Asignación de {$tipo_equipo} eliminada correctamente.");
+						redirect("admin/clientes/view/{$id}");
 					}
-					
 
 
 
@@ -1513,10 +1536,20 @@ class Admin extends CI_Controller
 				$data['preguntas_encuesta_datos_boda'] = $this->admin_functions->GetPreguntasEncuestaDatosBoda();
 				$data['opciones_respuestas_encuesta_datos_boda'] = $this->admin_functions->GetOpcionesRespuestasEncuestaDatosBoda();
 				$data['respuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda($id);
-				$data['equipos_asignados'] = $this->admin_functions->get_equipos_aignados($id);
-				$data['equipos_completos'] = $this->admin_functions->GetEquiposConComponentesYReparaciones($id);
-				$data['equipos_disponibles'] = $this->admin_functions->GetEquiposDisponibles($id);
 
+				$data['equipo1_asignado'] = $this->admin_functions->GetEquipoAsignado($id, 'Equipo 1');
+				$data['equipo2_asignado'] = $this->admin_functions->GetEquipoAsignado($id, 'Equipo 2');
+				$data['equipo3_asignado'] = $this->admin_functions->GetEquipoAsignado($id, 'Equipo 3');
+				$data['equipos_detalles'] = array(
+					'Equipo 1' => $this->admin_functions->GetDetallesEquipoAsignado($id, 'Equipo 1'),
+					'Equipo 2' => $this->admin_functions->GetDetallesEquipoAsignado($id, 'Equipo 2'),
+					'Equipo 3' => $this->admin_functions->GetDetallesEquipoAsignado($id, 'Equipo 3')
+				);
+				
+
+
+
+				$data['equipos_disponibles'] = $this->admin_functions->GetEquiposDisponibles($id);
 				$data['equipos_disponiblesIncluidoBORRADOS'] = $this->admin_functions->GetEquiposIncluidoBORRADOS($id);
 
 				$acc = "viewdetails";
@@ -1613,7 +1646,7 @@ class Admin extends CI_Controller
 		}
 		$view = "clientes_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);
-	}	
+	}
 	function events($acc = false)
 	{
 

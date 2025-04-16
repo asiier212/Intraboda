@@ -468,254 +468,173 @@
 				</center>
 				<br><br>
 
-				<input type="hidden" name="id_cliente" value="<?php echo $cliente['id'] ?>">
+				<?php
+				function renderBloqueEquipo($tipo_equipo, $equipo_asignado, $equipos_disponibles, $detalles_equipo)
+				{
+					$asignado = isset($equipo_asignado) && $equipo_asignado != null;
+					$nombre_grupo = $asignado ? $equipo_asignado['nombre_grupo'] : '';
 
-				<div id="equipos_container" style="display: flex; flex-direction: column; align-items: left;">
-
-					<?php
-					$etiquetas_fijas = ['Equipo 1', 'Equipo 2', 'Equipo 3'];
-					foreach ($etiquetas_fijas as $etiqueta) {
-						$equipo = null;
-						foreach ($equipos_asignados as $e) {
-							if ($e['tipo_equipo'] == $etiqueta) {
-								$equipo = $e;
-								break;
-							}
-						}
-					?>
-						<div style="display: flex; align-items: center; gap: 5px;">
-							<?php if ($equipo) { ?>
-								<?php
-								$nombre_grupo = '';
-								$equipo_borrado = 0;
-								foreach ($equipos_disponiblesIncluidoBORRADOS as $disponible) {
-									if ($disponible['id_grupo'] == $equipo['id_grupo']) {
-										$nombre_grupo = $disponible['nombre_grupo'];
-										$equipo_borrado = $disponible['borrado'];
-										break;
-									}
+					// Si hay detalles, preparar string JSON manual (solo lo que necesitamos)
+					$componentes_string = '';
+					if (!empty($detalles_equipo['componentes']) && is_array($detalles_equipo['componentes'])) {
+						foreach ($detalles_equipo['componentes'] as $c) {
+							$reps = '';
+							if (!empty($c['reparaciones'])) {
+								foreach ($c['reparaciones'] as $r) {
+									$reps .= $r['reparacion'] . '%%' . $r['fecha_reparacion'] . '||'; // Reparacion%%Fecha||...
 								}
-								$style = ($equipo_borrado == 1) ? "style='color: red'" : "";
-								?>
-								<span>
-									<?php echo $etiqueta; ?> Asignado:
-									<b><a href="#" onclick="mostrarPopupReparaciones(<?php echo $equipo['id_grupo']; ?>); return false;" <?php echo $style; ?>>
-											<?php echo $nombre_grupo; ?>
-										</a></b>
-								</span>
-
-							<?php } else { ?>
-								<?php echo $etiqueta ?>:
-								<select name="equipos[]" style="width: 170px;">
-									<option value="">Sin asignar</option>
-									<?php foreach ($equipos_disponibles as $disponible) { ?>
-										<option value="<?php echo $disponible['id_grupo'] ?>"><?php echo $disponible['nombre_grupo'] ?></option>
-									<?php } ?>
-								</select>
-							<?php } ?>
-
-
-							<?php if ($equipo) { ?>
-								<img src="<?php echo base_url() ?>img/delete.gif" width="15px" style="cursor: pointer;" title="Eliminar equipo"
-									onclick="eliminarEquipo('<?php echo $cliente['id'] ?>', '<?php echo $equipo['tipo_equipo'] ?>')">
-							<?php } else { ?>
-								<input style="width:60px;" type="submit" name="guardar_equipos" value="Asignar" />
-							<?php } ?>
-						</div>
-						<br>
-					<?php } ?>
-
-					<?php
-					$otros = array_filter($equipos_asignados, function ($e) {
-						return !in_array($e['tipo_equipo'], ['Equipo 1', 'Equipo 2', 'Equipo 3']);
-					});
-					$contador_dinamico = 4;
-					foreach ($otros as $otro) {
-					?>
-						<?php
-						// Obtener nombre del grupo y si está borrado
-						$nombre_grupo = '';
-						$equipo_borrado = 0;
-						foreach ($equipos_disponiblesIncluidoBORRADOS as $disponible) {
-							if ($disponible['id_grupo'] == $otro['id_grupo']) {
-								$nombre_grupo = $disponible['nombre_grupo'];
-								$equipo_borrado = $disponible['borrado'];
-								break;
 							}
+							$componentes_string .= htmlspecialchars(
+								$c['nombre_componente'] . '||' .
+									$c['n_registro'] . '||' .
+									$c['descripcion_componente'] . '||' .
+									$c['num_reparaciones'] . '||' .
+									$reps
+							) . '##';
 						}
-						$style = ($equipo_borrado == 1) ? "style='color: red'" : "";
-						?>
+					}
+				?>
+					<?php if ($asignado): ?>
 						<div style="display: flex; align-items: center; gap: 5px;">
 							<span>
-								<?php echo $otro['tipo_equipo']; ?> Asignado:
-								<b><a href="#" onclick="mostrarPopupReparaciones(<?php echo $otro['id_grupo']; ?>); return false;" <?php echo $style; ?>>
+								<?php echo $tipo_equipo; ?> Asignado:
+								<?php
+								$style_borrado = (isset($equipo_asignado['borrado']) && $equipo_asignado['borrado'] == 1)
+									? 'color:red; font-weight:bold;'
+									: '';
+								?>
+								<b>
+									<a href="#"
+										class="mostrar-popup"
+										style="<?php echo $style_borrado; ?>"
+										data-nombre="<?php echo htmlspecialchars($detalles_equipo['nombre_grupo']); ?>"
+										data-fecha="<?php echo isset($detalles_equipo['fecha_asignacion']) ? date('d/m/Y', strtotime($detalles_equipo['fecha_asignacion'])) : ''; ?>"
+										data-componentes="<?php echo $componentes_string; ?>">
 										<?php echo $nombre_grupo; ?>
-									</a></b>
+									</a>
+								</b>
 							</span>
-
-
-							<img src="<?php echo base_url() ?>img/delete.gif" width="15px" style="cursor: pointer;" title="Eliminar equipo"
-								onclick="eliminarEquipo('<?php echo $cliente['id'] ?>', '<?php echo $otro['tipo_equipo'] ?>')">
+							<form method="POST" style="margin: 0;">
+								<input type="hidden" name="tipo_equipo" value="<?php echo $tipo_equipo; ?>">
+								<button type="submit" name="eliminar_equipo" style="background: none; border: none; padding: 0; cursor: pointer;">
+									<img src="<?php echo base_url() ?>img/delete.gif" alt="Eliminar" style="width:15px; vertical-align: middle;" />
+								</button>
+							</form>
 						</div>
-						<br>
+					<?php else: ?>
+						<div>
+							<form method="POST" style="display:inline;">
+								<?php echo $tipo_equipo; ?>:
+								<select style="width:200px" name="id_grupo">
+									<option value="">Sin Asignar</option>
+									<?php foreach ($equipos_disponibles as $equipo): ?>
+										<option value="<?php echo $equipo['id_grupo']; ?>"><?php echo $equipo['nombre_grupo']; ?></option>
+									<?php endforeach; ?>
+								</select>
+								<input type="hidden" name="tipo_equipo" value="<?php echo $tipo_equipo; ?>">
+								<input type="submit" name="asignar" value="Asignar" style="width: 70px;" />
+							</form>
+						</div>
+				<?php endif;
+				}
+				renderBloqueEquipo('Equipo 1', $equipo1_asignado, $equipos_disponibles, $equipos_detalles['Equipo 1']);
+				renderBloqueEquipo('Equipo 2', $equipo2_asignado, $equipos_disponibles, $equipos_detalles['Equipo 2']);
+				renderBloqueEquipo('Equipo 3', $equipo3_asignado, $equipos_disponibles, $equipos_detalles['Equipo 3']);
 
-					<?php $contador_dinamico++;
-					} ?>
-				</div>
-				<br>
-				<button type="button" onclick="agregarEquipo()">Añadir otro equipo</button>
+				?>
 
-				<div id="popupFondo" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0, 0, 0, 0.5); z-index:999;"></div>
+				<div id="popup_equipo" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:9999;">
+					<div id="popup_content" style="background:#fff; margin:80px auto; padding:30px; width:600px; border-radius:10px; position:relative; box-shadow:0 0 20px rgba(0,0,0,0.3); font-family:'Segoe UI', Tahoma, sans-serif;">
 
-				<div id="popupReparaciones" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; border-radius:12px; padding:30px; box-shadow:0 15px 30px rgba(0, 0, 0, 0.3); z-index:1000; width:90%; max-width:600px; font-family:'Segoe UI', sans-serif; color:#333;">
-					<h4 style="margin-top:0; font-size:20px; color:#2c3e50; border-bottom:1px solid #e0e0e0; padding-bottom:10px;">Este equipo se compone de:</h4>
-
-					<div class="contenidoReparaciones">
-						<?php if (!empty($equipos_completos)): ?>
-							<?php foreach ($equipos_completos as $equipo): ?>
-								<div id="reparacionesGrupo_<?= $equipo['id_grupo'] ?>" style="display:none;">
-									<h5 style="margin:20px 0 10px; font-size:18px; color:#34495e;"><?= $equipo['nombre_grupo'] ?></h5>
-									<ul style="padding-left:20px; margin:0;">
-										<?php foreach ($equipo['componentes'] as $componente): ?>
-											<?php $tieneReparaciones = !empty($componente['reparaciones']); ?>
-											<li style="margin-bottom:15px; line-height:1.4; background:<?= $tieneReparaciones ? '#ffe6e6' : '#f9f9f9' ?>; border-left:5px solid <?= $tieneReparaciones ? '#e74c3c' : '#3498db' ?>; padding:10px; border-radius:6px;">
-												<strong style="font-size:16px; color:<?= $tieneReparaciones ? '#e74c3c' : '#2c3e50' ?>;">
-													<?= $componente['nombre'] ?>
-												</strong><br>
-												<small style="color:#666;">Nº Registro: <strong><?= $componente['n_registro'] ?></strong></small><br>
-												<small style="color:#888;">Descripción: <?= $componente['descripcion_componente'] ?></small>
-
-												<?php if ($tieneReparaciones): ?>
-													<ul style="padding-left:20px; margin-top:8px;">
-														<?php foreach ($componente['reparaciones'] as $reparacion): ?>
-															<li style="color:#c0392b; font-size:14px;">🛠️ <?= $reparacion['reparacion'] ?> <small>(<?= $reparacion['fecha'] ?>)</small></li>
-														<?php endforeach; ?>
-													</ul>
-												<?php endif; ?>
-											</li>
-										<?php endforeach; ?>
-									</ul>
+						<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+							<div>
+								<div style="font-size: 20px; font-weight: bold; color: #222; margin-bottom: 5px;" id="popup_nombre">Nombre del equipo</div>
+								<div style="font-size: 13px; color: #666;">
+									📅 Fecha de asignación: <span id="popup_fecha" style="color: #000;"></span>
 								</div>
-							<?php endforeach; ?>
-						<?php else: ?>
-							<p style="color:#777;">No hay información de equipos para este cliente.</p>
-						<?php endif; ?>
+							</div>
+
+							<span onclick="document.getElementById('popup_equipo').style.display='none'"
+								style="cursor:pointer; font-size:22px; padding: 5px;">❌</span>
+						</div>
+
+						<h3 style="margin: 0 0 20px 0; color: #333; font-size: 22px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;">
+							Componentes:
+						</h3>
+
+
+						<ul id="popup_componentes" style="list-style:none; padding:0; margin:0;max-height:60vh; overflow-y:auto;"></ul>
 					</div>
-
-					<button onclick="cerrarPopup()" style="background:#3498db; color:white; border:none; padding:10px 20px; font-size:14px; border-radius:6px; cursor:pointer; margin-top:20px; transition:background 0.3s;" onmouseover="this.style.background='#2980b9'" onmouseout="this.style.background='#3498db'">
-						Cerrar
-					</button>
 				</div>
-
-
-
-
 
 				<script>
-					function mostrarPopupReparaciones(idGrupo) {
-						const grupoDiv = document.getElementById(`reparacionesGrupo_${idGrupo}`);
-						const contenedor = document.querySelector(".contenidoReparaciones");
+					window.onload = function() {
+						var enlaces = document.getElementsByClassName('mostrar-popup');
+						for (var i = 0; i < enlaces.length; i++) {
+							enlaces[i].onclick = function(e) {
+								e.preventDefault();
 
-						if (grupoDiv) {
-							contenedor.innerHTML = grupoDiv.innerHTML;
-						} else {
-							contenedor.innerHTML = "<p>No hay información disponible para este grupo.</p>";
-						}
+								var nombre = this.getAttribute('data-nombre');
+								var fecha = this.getAttribute('data-fecha');
+								var componentes = this.getAttribute('data-componentes').split('##');
 
-						document.getElementById("popupReparaciones").style.display = "block";
-						document.getElementById("popupFondo").style.display = "block"; // si usas fondo
-					}
+								document.getElementById('popup_nombre').innerHTML = nombre;
+								document.getElementById('popup_fecha').innerHTML = fecha;
 
-					function cerrarPopup() {
-						document.getElementById("popupReparaciones").style.display = "none";
-						document.getElementById("popupFondo").style.display = "none"; // si usas fondo
-					}
+								var ul = document.getElementById('popup_componentes');
+								ul.innerHTML = '';
 
+								for (var j = 0; j < componentes.length; j++) {
+									if (componentes[j].length == 0) continue;
+									var datos = componentes[j].split('||');
 
+									var li = document.createElement('li');
+									var tieneReparaciones = parseInt(datos[3]) > 0;
 
-
-					function cerrarPopup() {
-						document.getElementById("popupReparaciones").style.display = "none";
-						document.getElementById("popupFondo").style.display = "none";
-					}
-
-					let contadorEquipos = <?php echo $contador_dinamico ?>;
-					const equiposContainer = document.getElementById("equipos_container");
-
-					function agregarEquipo() {
-						const wrapper = document.createElement("div");
-						wrapper.style.display = "flex";
-						wrapper.style.alignItems = "center";
-						wrapper.style.gap = "5px";
-						wrapper.style.marginBottom = "10px";
-
-						// Etiqueta
-						const label = document.createElement("span");
-						label.innerHTML = `Equipo ${contadorEquipos}:`;
-						wrapper.appendChild(label);
-
-						// Select
-						const select = document.createElement("select");
-						select.name = "equipos[]";
-						select.style.width = "170px";
-						select.innerHTML = `
-							<option value="">Sin asignar</option>
-						<?php foreach ($equipos_disponibles as $equipo) { ?>
-							<option value="<?php echo $equipo['id_grupo'] ?>"><?php echo $equipo['nombre_grupo'] ?></option>
-						<?php } ?>
-						`;
-						wrapper.appendChild(select);
-
-						// Botón asignar
-						const asignarBtn = document.createElement("input");
-						asignarBtn.type = "submit";
-						asignarBtn.name = "guardar_equipos";
-						asignarBtn.value = "Asignar";
-						asignarBtn.style.width = "60px";
-						wrapper.appendChild(asignarBtn);
-
-						// Botón cancelar
-						const cancelarBtn = document.createElement("button");
-						cancelarBtn.type = "button";
-						cancelarBtn.textContent = "Cancelar";
-						cancelarBtn.style.cursor = "pointer";
-						cancelarBtn.title = "Cancelar";
-						cancelarBtn.onclick = function() {
-							equiposContainer.removeChild(wrapper);
-						};
-						wrapper.appendChild(cancelarBtn);
-
-						// Añadir al contenedor principal
-						equiposContainer.appendChild(wrapper);
-
-						// Aumentar contador
-						contadorEquipos++;
-					}
+									// Estilo del bloque del componente
+									li.style.marginBottom = "20px";
+									li.style.padding = "10px";
+									li.style.paddingLeft = "18px";
+									li.style.borderRadius = "6px";
+									li.style.backgroundColor = "#fff";
+									li.style.border = "1px solid #ddd";
+									li.style.borderLeft = tieneReparaciones ? "8px solid #e63737" : "8px solid #4a90e2";
+									li.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.08)";
+									li.style.boxSizing = "border-box";
 
 
-					function eliminarEquipo(idCliente, tipoEquipo) {
-						if (!confirm(`¿Seguro que quieres eliminar el ${tipoEquipo}?`)) return;
+									// Reparaciones detalladas
+									var reparaciones_detalle = "";
+									if (tieneReparaciones && typeof datos[4] !== 'undefined') {
+										var rep_items = datos[4].split('||');
+										for (var r = 0; r < rep_items.length; r++) {
+											if (rep_items[r].length == 0) continue;
+											var partes = rep_items[r].split('%%');
+											var texto = partes[0] || "";
+											var fecha_rep = partes[1] || "";
 
-						fetch('admin.php', {
-								method: 'POST',
-								headers: {
-									'Content-Type': 'application/x-www-form-urlencoded'
-								},
-								body: `accion=eliminar_equipo&id_cliente=${encodeURIComponent(idCliente)}&tipo_equipo=${encodeURIComponent(tipoEquipo)}`
-							})
-							.then(response => response.text())
-							.then(data => {
-								if (data.trim() === 'ok') {
-									location.reload(); // Recargar para ver los cambios reflejados
-								} else {
-									alert('Error al eliminar equipo: ');
+											reparaciones_detalle += '<div style="margin-top:10px; font-size:13px; color:#b30000;">' +
+												'✖ ' + texto +
+												(fecha_rep ? ' <span style="color:#888;">(' + fecha_rep + ')</span>' : '') +
+												'</div>';
+										}
+									}
+
+									li.innerHTML = '' +
+										'<div style="font-weight:bold; font-size:15px; margin-bottom:6px;">' + datos[0] + '</div>' +
+										'<div style="color:#444; margin-bottom:6px;">Nº Registro: <b>' + datos[1] + '</b></div>' +
+										'<div style="margin-bottom:6px; line-height:1.4; color:#333;">Descripción: ' + datos[2] + '</div>' +
+										reparaciones_detalle;
+
+									ul.appendChild(li);
 								}
-							})
-							.catch(error => {
-								alert('Error en la solicitud: ' + error);
-							});
-					}
+
+								document.getElementById('popup_equipo').style.display = 'block';
+							};
+						};
+					};
 				</script>
+
 
 			</fieldset>
 
