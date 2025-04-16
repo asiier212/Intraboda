@@ -843,23 +843,38 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function GetHistorialComponentes()	{
-		$data = [];
+	function GetHistorialComponentes()
+	{
+		$data = array();
 		$this->load->database();
-		$query = $this->db->query("SELECT * FROM historial_componentes_grupos");
+	
+		$query = $this->db->query("
+			SELECT h.id, h.id_componente, h.id_grupo, h.fecha_asignacion, h.fecha_desasignacion, g.nombre_grupo
+			FROM historial_componentes_grupos h
+			LEFT JOIN grupos_equipos g ON g.id_grupo = h.id_grupo
+			ORDER BY h.fecha_asignacion DESC
+		");
+	
 		if ($query->num_rows() > 0) {
-			$i = 0;
 			foreach ($query->result() as $fila) {
-				$data[$i]['id'] = $fila->id;
-				$data[$i]['id_componente'] = $fila->id_componente;
-				$data[$i]['id_grupo'] = $fila->id_grupo;
-				$data[$i]['fecha_asignacion'] = $fila->fecha_asignacion;
-				$data[$i]['fecha_desasignacion'] = $fila->fecha_desasignacion;
-				$i++;
+				$id = $fila->id_componente;
+				if (!isset($data[$id])) {
+					$data[$id] = array();
+				}
+				$data[$id][] = array(
+					'id' => $fila->id,
+					'id_componente' => $fila->id_componente,
+					'id_grupo' => $fila->id_grupo,
+					'nombre_grupo' => $fila->nombre_grupo,
+					'fecha_asignacion' => $fila->fecha_asignacion,
+					'fecha_desasignacion' => $fila->fecha_desasignacion
+				);
 			}
 		}
+	
 		return $data;
 	}
+	
 
 
 	function GetEquipos()

@@ -76,32 +76,32 @@
 	}
 
 	function deleteequipo(id) {
-	if (confirm("¿Seguro que desea borrar el equipo y todas las asociaciones?")) {
-		console.log("Enviando petición para ocultar equipo ID:", id);
+		if (confirm("¿Seguro que desea borrar el equipo y todas las asociaciones?")) {
+			console.log("Enviando petición para ocultar equipo ID:", id);
 
-		$.ajax({
-			type: 'POST',
-			url: '<?php echo base_url() ?>index.php/ajax/deleteequipo',
-			data: 'id=' + id,
-			success: function (data) {
-				console.log("Respuesta del servidor:", data);
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo base_url() ?>index.php/ajax/deleteequipo',
+				data: 'id=' + id,
+				success: function(data) {
+					console.log("Respuesta del servidor:", data);
 
-				// Forzar recarga incluso si Ajax caching interfiere
-				if (data.trim() === '' || data.trim().toLowerCase() === 'ok') {
-					window.location = window.location.href;
-				} else {
-					alert("El servidor respondió pero no se pudo recargar automáticamente.");
-					location.reload(); // backup recarga
+					// Forzar recarga incluso si Ajax caching interfiere
+					if (data.trim() === '' || data.trim().toLowerCase() === 'ok') {
+						window.location = window.location.href;
+					} else {
+						alert("El servidor respondió pero no se pudo recargar automáticamente.");
+						location.reload(); // backup recarga
+					}
+				},
+				error: function(xhr, status, error) {
+					console.error("Error en la petición AJAX:", error);
+					alert("Error al intentar eliminar el equipo.");
 				}
-			},
-			error: function (xhr, status, error) {
-				console.error("Error en la petición AJAX:", error);
-				alert("Error al intentar eliminar el equipo.");
-			}
-		});
+			});
+		}
+		return false;
 	}
-	return false;
-}
 
 
 
@@ -481,7 +481,8 @@
 										}
 									}
 									?>
-									<li style="list-style:none; margin-bottom: 14px;">
+									<li style="list-style:none; margin-bottom: 14px; cursor: pointer;"
+										onclick="mostrarHistorial(<?php echo $c['id_componente'] ?>)">
 										<div style="display: flex; align-items: center; justify-content: space-between; border:1px solid #eee; border-radius:8px; padding:12px 16px;
 		background: <?php echo $asignado ? '#fff' : '#f8f9fa'; ?>; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 12px;">
 
@@ -508,12 +509,14 @@
 											<!-- Parte derecha -->
 											<div style="display: flex; align-items: center; gap: 14px;">
 												<?php if (!empty($c['qr_path']) && file_exists(FCPATH . $c['qr_path'])): ?>
-													<a href="<?php echo base_url() . $c['qr_path'] ?>" download title="Descargar QR" style="font-size: 20px; text-decoration: none;">📥</a>
+													<a href="<?php echo base_url() . $c['qr_path'] ?>" download title="Descargar QR"
+														style="font-size: 20px; text-decoration: none;" onclick="event.stopPropagation();">📥</a>
 												<?php endif; ?>
 
-												<a href="#" onclick="return deletecomponente(<?php echo $c['id_componente'] ?>)" title="Eliminar componente">
+												<a href="#" onclick="event.stopPropagation(); return deletecomponente(<?php echo $c['id_componente'] ?>)" title="Eliminar componente">
 													<img src="<?php echo base_url() ?>img/delete.gif" width="16" alt="Eliminar" />
 												</a>
+
 											</div>
 										</div>
 									</li>
@@ -530,6 +533,65 @@
 
 
 		</div>
+
+		<!-- Fondo oscuro -->
+		<div id="fondoHistorial" onclick="cerrarHistorial()" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:999;"></div>
+
+		<!-- Contenedor del popup -->
+		<div id="popupHistorial" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fefefe; padding:25px 30px; border-radius:14px; box-shadow:0 20px 40px rgba(0,0,0,0.25); max-width:550px; width:90%; z-index:1000; font-family:'Segoe UI', sans-serif; color:#333;">
+
+			<!-- Título -->
+			<h3 style="margin-top:0; font-size:20px; color:#2c3e50; padding-bottom:10px;">
+				📜 Historial de asignaciones
+			</h3>
+
+			<!-- Contenido dinámico -->
+			<div id="contenidoHistorial" style="max-height:500px; overflow-y:auto; padding-right:5px; font-size:14px; line-height:1.6;"></div>
+
+			<!-- Botón cerrar -->
+			<div style="text-align:right; margin-top:20px;">
+				<button onclick="cerrarHistorial()" style="background:#3498db; color:white; border:none; padding:10px 18px; font-size:14px; border-radius:6px; cursor:pointer; transition:background 0.3s;" onmouseover="this.style.background='#2980b9'" onmouseout="this.style.background='#3498db'">
+					Cerrar
+				</button>
+			</div>
+		</div>
+
+
+
+		<script>
+			const historialDatos = <?php echo json_encode($historial_componentes); ?>;
+
+			function mostrarHistorial(idComponente) {
+				const contenedor = document.getElementById('contenidoHistorial');
+				const historial = historialDatos[idComponente];
+
+				if (!historial || historial.length === 0) {
+					contenedor.innerHTML = '<p style="color:gray; height: 30px">No hay historial registrado.</p>';
+				} else {
+					let html = '<ul style="padding-left:20px;">';
+					historial.forEach(function(item) {
+						html += `<li style="background:#f8f9fa; border:1px solid #ddd; border-radius:8px; padding:10px 14px; margin-bottom:10px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+									<strong>Asignado a:</strong> ${item.nombre_grupo || '<em>Equipo eliminado</em>'}<br>
+									<strong>Desde:</strong> ${item.fecha_asignacion}<br>
+									<strong>Hasta:</strong> ${item.fecha_desasignacion || '<em>Actual</em>'}
+								</li>`;
+
+					});
+					html += '</ul>';
+					contenedor.innerHTML = html;
+				}
+
+				document.getElementById('popupHistorial').style.display = 'block';
+				document.getElementById('fondoHistorial').style.display = 'block';
+			}
+
+			function cerrarHistorial() {
+				document.getElementById('popupHistorial').style.display = 'none';
+				document.getElementById('fondoHistorial').style.display = 'none';
+			}
+		</script>
+
+
 	</div>
 
 	<div class="pestana" id="tab-2">
