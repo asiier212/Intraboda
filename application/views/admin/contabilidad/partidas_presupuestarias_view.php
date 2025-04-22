@@ -80,7 +80,7 @@
 								if ($porcentaje_consumo >= 0 && $porcentaje_consumo <= 40) {
 									$color = "#00b050";
 									$color_letra = "#000000";
-								} elseif ($porcentaje_consumo >= 41 && $porcentaje_consumo <= 70) {
+								} elseif ($porcentaje_consumo >= 40.01 && $porcentaje_consumo <= 70) {
 									$color = "#ffff00";
 									$color_letra = "#000000";
 								} else {
