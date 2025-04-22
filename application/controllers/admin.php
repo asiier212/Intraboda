@@ -1537,16 +1537,23 @@ class Admin extends CI_Controller
 				$data['opciones_respuestas_encuesta_datos_boda'] = $this->admin_functions->GetOpcionesRespuestasEncuestaDatosBoda();
 				$data['respuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda($id);
 
-				$data['equipo1_asignado'] = $this->admin_functions->GetEquipoAsignado($id, 'Equipo 1');
-				$data['equipo2_asignado'] = $this->admin_functions->GetEquipoAsignado($id, 'Equipo 2');
-				$data['equipo3_asignado'] = $this->admin_functions->GetEquipoAsignado($id, 'Equipo 3');
-				$data['equipos_detalles'] = array(
-					'Equipo 1' => $this->admin_functions->GetDetallesEquipoAsignado($id, 'Equipo 1'),
-					'Equipo 2' => $this->admin_functions->GetDetallesEquipoAsignado($id, 'Equipo 2'),
-					'Equipo 3' => $this->admin_functions->GetDetallesEquipoAsignado($id, 'Equipo 3')
-				);
-				
+				$data['equipos_asignados'] = $this->admin_functions->GetEquiposAsignados($id);
 
+				$data['equipos_detalles'] = [];
+				foreach ($data['equipos_asignados'] as $tipo => $info) {
+					if ($info !== null) {
+						$data['equipos_detalles'][$tipo] = $this->admin_functions->GetDetallesEquipoAsignado($id, $tipo);
+					}
+				}			
+
+				// Calcular siguiente número para JS dinámico
+				$max_equipo = 3;
+				foreach (array_keys($data['equipos_asignados']) as $tipo) {
+					if (preg_match('/Equipo (\d+)/', $tipo, $m)) {
+						$max_equipo = max($max_equipo, intval($m[1]));
+					}
+				}
+				$data['proximo_equipo_num'] = $max_equipo + 1;
 
 
 				$data['equipos_disponibles'] = $this->admin_functions->GetEquiposDisponibles($id);

@@ -878,23 +878,6 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function GetEquiposIncluidoBORRADOS()
-	{
-		$data = [];
-		$this->load->database();
-		$query = $this->db->query("SELECT * FROM grupos_equipos ORDER BY nombre_grupo ASC");
-		if ($query->num_rows() > 0) {
-			$i = 0;
-			foreach ($query->result() as $fila) {
-				$data[$i]['id_grupo'] = $fila->id_grupo;
-				$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
-				$data[$i]['borrado'] = $fila->borrado;
-				$i++;
-			}
-		}
-		return $data;
-	}
-
 	function GetComponentes()
 	{
 		$data = [];
@@ -1643,7 +1626,7 @@ class Admin_functions extends CI_Model
 	function GetDetallesEquipoAsignado($id_cliente, $tipo_equipo)
 	{
 		$this->load->database();
-	
+
 		// Obtener info del grupo asignado
 		$query = $this->db->query("
 			SELECT ce.id_grupo, g.nombre_grupo, ce.fecha_asignacion
@@ -1652,13 +1635,13 @@ class Admin_functions extends CI_Model
 			WHERE ce.id_cliente = ? AND ce.tipo_equipo = ?
 			LIMIT 1
 		", array($id_cliente, $tipo_equipo));
-	
+
 		if ($query->num_rows() == 0) {
 			return null;
 		}
-	
+
 		$grupo = $query->row_array();
-	
+
 		// Obtener componentes
 		$componentes_query = $this->db->query("
 			SELECT c.id_componente, c.nombre_componente, c.n_registro, c.descripcion_componente,
@@ -1666,10 +1649,10 @@ class Admin_functions extends CI_Model
 			FROM componentes c
 			WHERE c.id_grupo = ?
 		", array($grupo['id_grupo']));
-	
+
 		$componentes = array();
 		foreach ($componentes_query->result_array() as $comp) {
-	
+
 			// Obtener reparaciones para este componente
 			$rep_query = $this->db->query("
 				SELECT reparacion, fecha_reparacion
@@ -1677,25 +1660,60 @@ class Admin_functions extends CI_Model
 				WHERE id_componente = ?
 				ORDER BY fecha_reparacion DESC
 			", array($comp['id_componente']));
-	
+
 			$comp['reparaciones'] = $rep_query->result_array();
 			$componentes[] = $comp;
 		}
-	
+
 		$grupo['componentes'] = $componentes;
-	
+
 		return $grupo;
 	}
-	
-	
+
+	function GetEquiposAsignados($id_cliente)
+	{
+		$this->load->database();
+
+		// Obtener los equipos asignados
+		$query = $this->db->query("
+		SELECT ce.tipo_equipo, ce.id_grupo, g.nombre_grupo, g.borrado
+		FROM clientes_equipos ce
+		JOIN grupos_equipos g ON ce.id_grupo = g.id_grupo
+		WHERE ce.id_cliente = ?
+	", array($id_cliente));
+
+		$asignados_raw = array();
+		$max_num_equipo = 0;
+
+		foreach ($query->result_array() as $row) {
+			$tipo = $row['tipo_equipo'];
+			$asignados_raw[$tipo] = $row;
+
+			// Detectar el número de equipo (Ej: Equipo 5)
+			if (preg_match('/Equipo (\d+)/', $tipo, $m)) {
+				$max_num_equipo = max($max_num_equipo, intval($m[1]));
+			}
+		}
+
+		// Construimos array completo incluyendo los vacíos
+		$completo = array();
+		$max_num_equipo = max($max_num_equipo, 3); // al menos 3
+
+		for ($i = 1; $i <= $max_num_equipo; $i++) {
+			$key = 'Equipo ' . $i;
+
+			if ($i <= 3) {
+				// Mostrar siempre Equipo 1, 2, 3
+				$completo[$key] = isset($asignados_raw[$key]) ? $asignados_raw[$key] : null;
+			} elseif (isset($asignados_raw[$key])) {
+				// Solo mostrar Equipo 4+ si están asignados
+				$completo[$key] = $asignados_raw[$key];
+			}
+		}
 
 
-
-
-
-
-
-
+		return $completo;
+	}
 
 
 
@@ -1709,6 +1727,23 @@ class Admin_functions extends CI_Model
 			foreach ($query->result() as $fila) {
 				$data[$i]['id_grupo'] = $fila->id_grupo;
 				$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
+	function GetEquiposIncluidoBORRADOS()
+	{
+		$data = [];
+		$this->load->database();
+		$query = $this->db->query("SELECT * FROM grupos_equipos ORDER BY nombre_grupo ASC");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_grupo'] = $fila->id_grupo;
+				$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
+				$data[$i]['borrado'] = $fila->borrado;
 				$i++;
 			}
 		}

@@ -495,7 +495,7 @@
 					}
 				?>
 					<?php if ($asignado): ?>
-						<div style="display: flex; align-items: center; gap: 5px;">
+						<div style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px;">
 							<span>
 								<?php echo $tipo_equipo; ?> Asignado:
 								<?php
@@ -509,7 +509,8 @@
 										style="<?php echo $style_borrado; ?>"
 										data-nombre="<?php echo htmlspecialchars($detalles_equipo['nombre_grupo']); ?>"
 										data-fecha="<?php echo isset($detalles_equipo['fecha_asignacion']) ? date('d/m/Y', strtotime($detalles_equipo['fecha_asignacion'])) : ''; ?>"
-										data-componentes="<?php echo $componentes_string; ?>">
+										data-componentes="<?php echo $componentes_string; ?>"
+										data-borrado="<?php echo isset($equipo_asignado['borrado']) ? $equipo_asignado['borrado'] : 0; ?>">
 										<?php echo $nombre_grupo; ?>
 									</a>
 								</b>
@@ -522,7 +523,7 @@
 							</form>
 						</div>
 					<?php else: ?>
-						<div>
+						<div style="margin-bottom: 10px;">
 							<form method="POST" style="display:inline;">
 								<?php echo $tipo_equipo; ?>:
 								<select style="width:200px" name="id_grupo">
@@ -537,11 +538,15 @@
 						</div>
 				<?php endif;
 				}
-				renderBloqueEquipo('Equipo 1', $equipo1_asignado, $equipos_disponibles, $equipos_detalles['Equipo 1']);
-				renderBloqueEquipo('Equipo 2', $equipo2_asignado, $equipos_disponibles, $equipos_detalles['Equipo 2']);
-				renderBloqueEquipo('Equipo 3', $equipo3_asignado, $equipos_disponibles, $equipos_detalles['Equipo 3']);
-
-				?>
+				foreach ($equipos_asignados as $tipo_equipo => $equipo_asignado): ?>
+					<?php renderBloqueEquipo(
+						$tipo_equipo,
+						$equipo_asignado,
+						$equipos_disponibles,
+						isset($equipos_detalles[$tipo_equipo]) ? $equipos_detalles[$tipo_equipo] : []
+					); ?>
+				<?php endforeach; ?>
+				
 
 				<div id="popup_equipo" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:9999;">
 					<div id="popup_content" style="background:#fff; margin:80px auto; padding:30px; width:600px; border-radius:10px; position:relative; box-shadow:0 0 20px rgba(0,0,0,0.3); font-family:'Segoe UI', Tahoma, sans-serif;">
@@ -558,7 +563,14 @@
 								style="cursor:pointer; font-size:22px; padding: 5px;">❌</span>
 						</div>
 
-						<h3 style="margin: 0 0 20px 0; color: #333; font-size: 22px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;">
+						<!-- NUEVO: AVISO DE EQUIPO BORRADO -->
+						<div id="popup_aviso_borrado" style="display:none; margin-bottom:15px; padding:10px; background-color:#ffe5e5; color:#b30000; border:1px solid #e63737; border-radius:5px; font-size:13px;">
+							⚠️ Este equipo ha sido borrado.
+						</div>
+
+
+
+						<h3 id="popup_componentes_titulo" style="margin: 0 0 20px 0; color: #333; font-size: 22px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;">
 							Componentes:
 						</h3>
 
@@ -580,6 +592,23 @@
 
 								document.getElementById('popup_nombre').innerHTML = nombre;
 								document.getElementById('popup_fecha').innerHTML = fecha;
+								var borrado = this.getAttribute('data-borrado');
+								var avisoBorrado = document.getElementById('popup_aviso_borrado');
+								avisoBorrado.style.display = (borrado == '1') ? 'block' : 'none';
+								var tituloComponentes = document.getElementById('popup_componentes_titulo');
+								var listaComponentes = document.getElementById('popup_componentes');
+
+								if (borrado == '1') {
+									tituloComponentes.style.display = 'none';
+									listaComponentes.style.display = 'none';
+									document.getElementById('popup_equipo').style.display = 'block';
+									return;
+								} else {
+									tituloComponentes.style.display = 'block';
+									listaComponentes.style.display = 'block';
+								}
+
+
 
 								var ul = document.getElementById('popup_componentes');
 								ul.innerHTML = '';
@@ -634,6 +663,53 @@
 						};
 					};
 				</script>
+
+				<div id="equipos_dinamicos_container"></div>
+
+				<button type="button" onclick="agregarEquipoDinamico()">
+					Añadir Otro Equipo
+				</button>
+				<div id="bloque_equipo_template" style="display:none;">
+					<div class="bloque_equipo_dinamico" data-equipo-num="X" style="margin-bottom: 10px;">
+						<form method="POST" style="display:inline;">
+							<span class="etiqueta_tipo_equipo">Equipo X:</span>
+							<select style="width:200px" name="id_grupo">
+								<option value="">Sin Asignar</option>
+								<?php foreach ($equipos_disponibles as $equipo): ?>
+									<option value="<?php echo $equipo['id_grupo']; ?>"><?php echo $equipo['nombre_grupo']; ?></option>
+								<?php endforeach; ?>
+							</select>
+							<input type="hidden" name="tipo_equipo" value="Equipo X">
+							<input type="submit" name="asignar" value="Asignar" style="width: 70px;" />
+						</form>
+					</div>
+				</div>
+
+
+				<script>
+					let equipoCounter = <?php echo isset($proximo_equipo_num) ? $proximo_equipo_num : 4; ?>;
+
+
+					function agregarEquipoDinamico() {
+						const container = document.getElementById('equipos_dinamicos_container');
+						const template = document.getElementById('bloque_equipo_template');
+
+						// Clonar
+						const nuevoBloque = template.firstElementChild.cloneNode(true);
+
+						// Reemplazar “X” por el número real del equipo
+						nuevoBloque.setAttribute('data-equipo-num', equipoCounter);
+						const html = nuevoBloque.innerHTML.replace(/Equipo X/g, 'Equipo ' + equipoCounter);
+						nuevoBloque.innerHTML = html;
+
+						// Añadir al contenedor
+						container.appendChild(nuevoBloque);
+
+						// Aumentar contador
+						equipoCounter++;
+					}
+				</script>
+
 
 
 			</fieldset>
