@@ -573,9 +573,10 @@
 					let html = '<ul style="padding-left:20px;">';
 					historial.forEach(function(item) {
 						html += `<li style="background:#f8f9fa; border:1px solid #ddd; border-radius:8px; padding:10px 14px; margin-bottom:10px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
-									<strong>Asignado a:</strong> ${item.nombre_grupo || '<em>Equipo eliminado</em>'}<br>
-									<strong>Desde:</strong> ${item.fecha_asignacion}<br>
-									<strong>Hasta:</strong> ${item.fecha_desasignacion || '<em>Actual</em>'}
+						<strong>Asignado a:</strong> ${item.nombre_grupo || '<em>Equipo eliminado</em>'}<br>
+						<strong>Cliente:</strong> ${item.id_cliente ? `<a href="/admin/clientes/view/${item.id_cliente}" target="_blank" style="color:#3498db; text-decoration:none;">#${item.id_cliente}</a>` : '<em>No asignado</em>'}<br>
+						<strong>Desde:</strong> ${item.fecha_asignacion}<br>
+						<strong>Hasta:</strong> ${item.fecha_desasignacion || '<em>Actual</em>'}
 								</li>`;
 
 					});

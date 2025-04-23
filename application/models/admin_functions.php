@@ -832,14 +832,27 @@ class Admin_functions extends CI_Model
 	{
 		$data = array();
 		$this->load->database();
-
+	
 		$query = $this->db->query("
-			SELECT h.id, h.id_componente, h.id_grupo, h.fecha_asignacion, h.fecha_desasignacion, g.nombre_grupo
+			SELECT 
+				h.id,
+				h.id_componente,
+				h.id_grupo,
+				h.fecha_asignacion,
+				h.fecha_desasignacion,
+				g.nombre_grupo,
+				ce.id_cliente
 			FROM historial_componentes_grupos h
 			LEFT JOIN grupos_equipos g ON g.id_grupo = h.id_grupo
+			LEFT JOIN (
+				SELECT id_grupo, MAX(id) AS ultimo_id
+				FROM clientes_equipos
+				GROUP BY id_grupo
+			) ult_ce ON h.id_grupo = ult_ce.id_grupo
+			LEFT JOIN clientes_equipos ce ON ce.id = ult_ce.ultimo_id
 			ORDER BY h.fecha_asignacion DESC
 		");
-
+	
 		if ($query->num_rows() > 0) {
 			foreach ($query->result() as $fila) {
 				$id = $fila->id_componente;
@@ -852,13 +865,15 @@ class Admin_functions extends CI_Model
 					'id_grupo' => $fila->id_grupo,
 					'nombre_grupo' => $fila->nombre_grupo,
 					'fecha_asignacion' => $fila->fecha_asignacion,
-					'fecha_desasignacion' => $fila->fecha_desasignacion
+					'fecha_desasignacion' => $fila->fecha_desasignacion,
+					'id_cliente' => $fila->id_cliente
 				);
 			}
 		}
-
+	
 		return $data;
 	}
+	
 
 
 

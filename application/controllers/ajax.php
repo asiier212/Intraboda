@@ -642,9 +642,19 @@ function buscarrestaurantearchivos($nombre)
 	{
 		if ($_POST) {
 			$this->load->database();
-			$this->db->query("DELETE FROM componentes WHERE id_componente = " . $_POST['id'] . "");
+	
+			$id_componente = intval($_POST['id']); // Sanitiza por seguridad
+	
+			// 1. Borrar historial primero
+			$this->db->where('id_componente', $id_componente);
+			$this->db->delete('historial_componentes_grupos');
+	
+			// 2. Borrar componente
+			$this->db->where('id_componente', $id_componente);
+			$this->db->delete('componentes');
 		}
 	}
+	
 	function deletereparacioncomponente()
 	{
 		if ($_POST) {
