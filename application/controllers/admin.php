@@ -1512,6 +1512,18 @@ class Admin extends CI_Controller
 						}
 						$this->db->query("INSERT INTO horas_djs (id_cliente,id_dj,concepto,horas_dj) VALUES ({$id}, {$id_dj}, '" . str_replace("'", "''", $_POST['horas_concepto']) . "', '" . str_replace(",", ".'", $_POST['horas_dj']) . "')");
 					}
+					if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['guardar_revisiones'])) {
+
+						$revision_salida = isset($_POST['revision_salida']) ? array_keys($_POST['revision_salida']) : array();
+						$revision_fin = isset($_POST['revision_fin']) ? array_keys($_POST['revision_fin']) : array();
+						$tipo_equipo = $_POST['tipo_equipo_revision']; // Debes enviar este hidden desde el formulario del popup
+						$id_cliente = $id; // Ya lo deberías tener
+
+						$this->admin_functions->GuardarRevisionesEquipo($id_cliente, $tipo_equipo, $revision_salida, $revision_fin);
+
+						// Redirigir para evitar reenvío
+						redirect(current_url());
+					}
 				}
 				$data['captacion'] = $this->admin_functions->GetCaptacion();
 				$data['oficinas'] = $this->admin_functions->GetOficinas();
@@ -1536,6 +1548,7 @@ class Admin extends CI_Controller
 				$data['preguntas_encuesta_datos_boda'] = $this->admin_functions->GetPreguntasEncuestaDatosBoda();
 				$data['opciones_respuestas_encuesta_datos_boda'] = $this->admin_functions->GetOpcionesRespuestasEncuestaDatosBoda();
 				$data['respuesta_cliente'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda($id);
+				$data['revisiones_guardadas'] = $this->admin_functions->GetRevisionesGuardadas($id);
 
 				$data['equipos_asignados'] = $this->admin_functions->GetEquiposAsignados($id);
 
@@ -1544,7 +1557,7 @@ class Admin extends CI_Controller
 					if ($info !== null) {
 						$data['equipos_detalles'][$tipo] = $this->admin_functions->GetDetallesEquipoAsignado($id, $tipo);
 					}
-				}			
+				}
 
 				// Calcular siguiente número para JS dinámico
 				$max_equipo = 3;

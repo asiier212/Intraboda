@@ -1750,6 +1750,42 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
+	function GuardarRevisionesEquipo($id_cliente, $tipo_equipo, $revision_salida, $revision_fin)
+	{
+		$this->load->database();
+
+		$revision_salida_json = json_encode(array_values($revision_salida));
+		$revision_fin_json = json_encode(array_values($revision_fin));
+
+		$this->db->where('id_cliente', $id_cliente);
+		$this->db->where('tipo_equipo', $tipo_equipo);
+		$this->db->update('clientes_equipos', array(
+			'revision_salida' => $revision_salida_json,
+			'revision_findevento' => $revision_fin_json
+		));
+	}
+
+	function GetRevisionesGuardadas($id_cliente)
+	{
+		$this->load->database();
+		$query = $this->db->query("
+			SELECT tipo_equipo, revision_salida, revision_findevento
+			FROM clientes_equipos
+			WHERE id_cliente = ?
+		", array($id_cliente));
+
+		$revisiones = [];
+
+		foreach ($query->result_array() as $row) {
+			$tipo = $row['tipo_equipo'];
+			$revisiones[$tipo] = [
+				'revision_salida' => json_decode($row['revision_salida'], true) ?: [],
+				'revision_fin' => json_decode($row['revision_findevento'], true) ?: [],
+			];
+		}
+
+		return $revisiones;
+	}
 
 	function GetPagos($cliente_id)
 	{
