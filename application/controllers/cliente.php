@@ -212,13 +212,20 @@ class Cliente extends CI_Controller
 
 		if (isset($_POST['crear_invitado'])) {
 			$username = trim($_POST['nuevo_username']);
-			$clave = $_POST['nuevo_clave'];
+			$clave = $_POST['nuevo_clave']; // Se usará para enviar por email
 			$email = trim($_POST['nuevo_email']);
 			$expiracion = !empty($_POST['nuevo_expiracion']) ? $_POST['nuevo_expiracion'] : null;
+
+			if ($expiracion && strtotime($expiracion) < strtotime(date('Y-m-d'))) {
+				$this->session->set_flashdata('msg_invitado', 'La fecha de expiración no puede ser anterior a hoy.');
+				redirect($_SERVER['HTTP_REFERER']);
+			}
+
 			$id_cliente = $this->session->userdata('user_id');
-
 			$this->load->database();
+			$this->load->library('encrypt');
 
+			// Verificar duplicado
 			$this->db->where('email', $email);
 			$this->db->where('id_cliente', $id_cliente);
 			$existe = $this->db->get('invitado')->num_rows();
@@ -228,9 +235,8 @@ class Cliente extends CI_Controller
 				redirect($_SERVER['HTTP_REFERER']);
 			}
 
-
-			$this->load->library('encrypt'); // Solo si usas encrypt
-			$clave_encriptada = $this->encrypt->encode($_POST['nuevo_clave']);
+			// Cifrar para almacenar de forma reversible
+			$clave_encriptada = $this->encrypt->encode($clave);
 
 			$data_insert = array(
 				'id_cliente' => $id_cliente,
@@ -242,12 +248,56 @@ class Cliente extends CI_Controller
 			);
 
 			if ($this->db->insert('invitado', $data_insert)) {
-				$data['msg_invitado'] = "Invitado creado correctamente.";
-				redirect('cliente/invitados', 'location'); // Redirigir a la lista de invitados después de crear uno nuevo
+
+				// Si se pidió enviar email
+				if (isset($_POST['enviar_email'])) {
+					$from = 'noreply@exeleventos.com';
+					$to = [$email];
+					$subject = 'Tu acceso como invitado a Exel Eventos';
+					$clave_plana = $this->encrypt->decode($clave_encriptada); // Recuperamos
+
+					$message = "
+					<div style='font-family:Segoe UI, sans-serif; background-color:#f9f9f9; padding:20px; border-radius:10px; max-width:600px; margin:auto; color:#333;'>
+						<div style='background-color:#93CE37; padding:15px 20px; border-radius:8px 8px 0 0; color:white; font-size:18px; font-weight:bold;'>
+							¡Bienvenido a Exel Eventos!
+						</div>
+				
+						<div style='padding:20px; background:white; border-radius:0 0 8px 8px; box-shadow:0 2px 8px rgba(0,0,0,0.05);'>
+							<p style='font-size:16px; margin-bottom:20px;'>Han creado una cuenta de <strong>invitado</strong> para que puedas acceder al sistema de gestión de eventos.</p>
+				
+							<table style='width:100%; font-size:15px; margin-bottom:20px;'>
+								<tr>
+									<td style='padding:8px 0;'><strong>Usuario:</strong></td>
+									<td style='padding:8px 0;'>$username</td>
+								</tr>
+								<tr>
+									<td style='padding:8px 0;'><strong>Contraseña:</strong></td>
+									<td style='padding:8px 0;'>$clave</td>
+								</tr>
+							</table>
+				
+							<p style='font-size:15px; margin-bottom:20px;'>
+								Entra ya a tu perfil de invitado de 
+								<a href='https://intranet.exeleventos.com/invitado/login' target='_blank' style='color:#93CE37; text-decoration:none; font-weight:bold;'>INTRABODA</a>
+							</p>
+				
+							<p style='font-size:13px; color:#777;'>
+								Este acceso podría tener una fecha de expiración establecida. Si tienes dudas, contacta con el organizador del evento.
+							</p>
+						</div>
+					</div>
+				";
+
+					$this->sendEmail($from, $to, $subject, $message);
+				}
+
+				redirect('cliente/invitados', 'location');
 			} else {
-				$data['msg_invitado'] = "Error al guardar el invitado.";
+				$this->session->set_flashdata('msg_invitado', "Error al guardar el invitado.");
+				redirect($_SERVER['HTTP_REFERER']);
 			}
 		}
+
 
 		$this->_loadViews($data_header, $data, $data_footer, 'invitados');
 	}
@@ -472,21 +522,27 @@ class Cliente extends CI_Controller
 			$cliente_id = $this->session->userdata('user_id');
 			$cliente = $this->cliente_functions->GetClientePorID($cliente_id);
 			$oficina = $this->cliente_functions->GetNumeroCuentaOficina($cliente['id_oficina']);
-			
+
 			$data['cliente'] = $cliente;
 			$data['numero_cuenta'] = $oficina ? $oficina['numero_cuenta'] : '';
-			
 		}
 
 		if (isset($_POST['crear_invitado'])) {
 			$username = trim($_POST['nuevo_username']);
-			$clave = $_POST['nuevo_clave'];
+			$clave = $_POST['nuevo_clave']; // Se usará para enviar por email
 			$email = trim($_POST['nuevo_email']);
 			$expiracion = !empty($_POST['nuevo_expiracion']) ? $_POST['nuevo_expiracion'] : null;
+
+			if ($expiracion && strtotime($expiracion) < strtotime(date('Y-m-d'))) {
+				$this->session->set_flashdata('msg_invitado', 'La fecha de expiración no puede ser anterior a hoy.');
+				redirect($_SERVER['HTTP_REFERER']);
+			}
+
 			$id_cliente = $this->session->userdata('user_id');
-
 			$this->load->database();
+			$this->load->library('encrypt');
 
+			// Verificar duplicado
 			$this->db->where('email', $email);
 			$this->db->where('id_cliente', $id_cliente);
 			$existe = $this->db->get('invitado')->num_rows();
@@ -496,9 +552,8 @@ class Cliente extends CI_Controller
 				redirect($_SERVER['HTTP_REFERER']);
 			}
 
-
-			$this->load->library('encrypt'); // Solo si usas encrypt
-			$clave_encriptada = $this->encrypt->encode($_POST['nuevo_clave']);
+			// Cifrar para almacenar de forma reversible
+			$clave_encriptada = $this->encrypt->encode($clave);
 
 			$data_insert = array(
 				'id_cliente' => $id_cliente,
@@ -510,12 +565,57 @@ class Cliente extends CI_Controller
 			);
 
 			if ($this->db->insert('invitado', $data_insert)) {
-				$data['msg_invitado'] = "Invitado creado correctamente.";
-				redirect('cliente/invitados', 'location'); // Redirigir a la lista de invitados después de crear uno nuevo
+
+				// Si se pidió enviar email
+				if (isset($_POST['enviar_email'])) {
+					$from = 'noreply@exeleventos.com';
+					$to = [$email];
+					$subject = 'Tu acceso como invitado a Exel Eventos';
+					$clave_plana = $this->encrypt->decode($clave_encriptada); // Recuperamos
+
+					$message = "
+					<div style='font-family:Segoe UI, sans-serif; background-color:#f9f9f9; padding:20px; border-radius:10px; max-width:600px; margin:auto; color:#333;'>
+						<div style='background-color:#93CE37; padding:15px 20px; border-radius:8px 8px 0 0; color:white; font-size:18px; font-weight:bold;'>
+							¡Bienvenido a Exel Eventos!
+						</div>
+				
+						<div style='padding:20px; background:white; border-radius:0 0 8px 8px; box-shadow:0 2px 8px rgba(0,0,0,0.05);'>
+							<p style='font-size:16px; margin-bottom:20px;'>Han creado una cuenta de <strong>invitado</strong> para que puedas acceder al sistema de gestión de eventos.</p>
+				
+							<table style='width:100%; font-size:15px; margin-bottom:20px;'>
+								<tr>
+									<td style='padding:8px 0;'><strong>Usuario:</strong></td>
+									<td style='padding:8px 0;'>$username</td>
+								</tr>
+								<tr>
+									<td style='padding:8px 0;'><strong>Contraseña:</strong></td>
+									<td style='padding:8px 0;'>$clave</td>
+								</tr>
+							</table>
+				
+							<p style='font-size:15px; margin-bottom:20px;'>
+								Entra ya a tu perfil de invitado de 
+								<a href='https://intranet.exeleventos.com/invitado/login' target='_blank' style='color:#93CE37; text-decoration:none; font-weight:bold;'>INTRABODA</a>
+							</p>
+				
+							<p style='font-size:13px; color:#777;'>
+								Este acceso podría tener una fecha de expiración establecida. Si tienes dudas, contacta con el organizador del evento.
+							</p>
+						</div>
+					</div>
+				";
+
+					$this->sendEmail($from, $to, $subject, $message);
+				}
+
+				redirect('cliente/invitados', 'location');
 			} else {
-				$data['msg_invitado'] = "Error al guardar el invitado.";
+				$this->session->set_flashdata('msg_invitado', "Error al guardar el invitado.");
+				redirect($_SERVER['HTTP_REFERER']);
 			}
 		}
+
+
 
 
 		// Cargar la vista con los datos

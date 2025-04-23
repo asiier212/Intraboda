@@ -3,47 +3,89 @@
     <legend>Usuarios Invitados</legend>
     <div id="popupInvitado" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:1000;">
 
-        <div style="background:white; width:400px; padding:20px; border-radius:10px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
-            <h3>Crear Cuenta Invitado</h3><br>
+        <div style="box-sizing:border-box; background:white; width:400px; padding:25px 30px; border-radius:12px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); box-shadow: 0 10px 25px rgba(0,0,0,0.1); font-family:'Segoe UI', sans-serif;">
+            <a onclick="cerrarPopupInvitado()" style="position:absolute; top:17px; right:20px; cursor:pointer; font-size:22px; color:red; font-weight:bold;">✖</a>
+
+            <h2 style="margin-top:0; font-size:20px; color:#333;">Crear Cuenta de Invitado</h2>
 
             <form method="post" action="">
-                <p><label>Usuario:</label><br>
-                    <input type="text" name="nuevo_username" required />
-                </p>
-                <p><label>Contraseña:</label><br>
-                    <input type="text" name="nuevo_clave" required />
-                </p>
-                <p><label>Email:</label><br>
-                    <input type="email" name="nuevo_email" required />
-                </p>
-                <p><label>Fecha de expiración:</label><br>
-                    <input type="date" name="nuevo_expiracion" />
-                </p>
+                <label style="font-weight:bold; font-size:14px;">Usuario:</label><br>
+                <input type="text" name="nuevo_username" required style="width:100%; padding:10px; margin:8px 0 15px 0; border:1px solid #ccc; border-radius:6px; box-sizing:border-box;" />
+
+                <label style="font-weight:bold; font-size:14px;">Contraseña:</label><br>
+                <input type="text" name="nuevo_clave" required style="width:100%; padding:10px; margin:8px 0 15px 0; border:1px solid #ccc; border-radius:6px; box-sizing:border-box;" />
+
+                <label style="font-weight:bold; font-size:14px;">Email:</label><br>
+                <input type="email" name="nuevo_email" required style="width:100%; padding:10px; margin:8px 0 15px 0; border:1px solid #ccc; border-radius:6px; box-sizing:border-box;" />
+
+                <label style="font-weight:bold; font-size:14px;">Fecha de expiración:</label><br>
+                <input type="date" name="nuevo_expiracion" style="width:100%; padding:10px; margin:8px 0 20px 0; border:1px solid #ccc; border-radius:6px; box-sizing:border-box;" />
+
+                <div style="margin-bottom: 20px;">
+                    <label for="enviar_email" style="font-weight:bold; font-size:14px;">¿Enviar un email de acceso al invitado?</label><br>
+                    <label class="toggle-label" style="display: inline-flex; align-items: center; gap: 12px; margin-top: 10px;">
+                        <input type="checkbox" id="enviar_email" name="enviar_email" checked style="display:none;">
+                        <span class="toggle-slider"></span>
+                        <span style="font-size:13px; color:#333;"></span>
+                    </label>
+                </div>
+
                 <?php
                 $msg_invitado = $this->session->flashdata('msg_invitado');
                 if (!empty($msg_invitado)) {
-                    echo '<div style="color:red; font-weight:bold; margin-bottom:10px; text-align:center;">' . $msg_invitado . '</div>';
+                    echo '<div style="color:#b30000; background:#ffe5e5; padding:10px; border:1px solid #e63737; border-radius:5px; font-weight:bold; text-align:center; margin-bottom:15px;">' . $msg_invitado . '</div>';
                 }
                 ?>
-                <p style="text-align:center">
-                    <input type="submit" name="crear_invitado" value="Crear Invitado" />
-                </p>
+
+                <div style="text-align:center;">
+                    <input type="submit" name="crear_invitado" value="CREAR INVITADO" style="padding:10px 20px; background:#93CE37; color:#fff; border:none; border-radius:6px; font-weight:bold; cursor:pointer; font-size:14px;" />
+                </div>
             </form>
-
-            <?php if (!empty($msg_invitado)): ?>
-                <script type="text/javascript">
-                    window.onload = function() {
-                        document.getElementById('popupInvitado').style.display = 'block';
-                    };
-                </script>
-            <?php endif; ?>
-
-
-            <a onclick="cerrarPopupInvitado()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:16px; color:#999">✖</a>
         </div>
+
+        <style>
+            .toggle-slider {
+                width: 40px;
+                height: 20px;
+                background: grey;
+                border-radius: 20px;
+                position: relative;
+                transition: background 0.3s;
+                cursor: pointer;
+            }
+
+            .toggle-slider::before {
+                content: "";
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                background: white;
+                border-radius: 50%;
+                top: 1px;
+                left: 2px;
+                transition: transform 0.3s;
+            }
+
+            .toggle-label input:checked+.toggle-slider {
+                background: #4CAF50;
+            }
+
+            .toggle-label input:checked+.toggle-slider::before {
+                transform: translateX(20px);
+            }
+        </style>
+
     </div>
 
-    <script type="text/javascript">
+    <?php if (!empty($msg_invitado)): ?>
+        <script>
+            window.onload = function() {
+                document.getElementById('popupInvitado').style.display = 'block';
+            };
+        </script>
+    <?php endif; ?>
+
+    <script>
         function abrirPopupInvitado() {
             document.getElementById('popupInvitado').style.display = 'block';
         }
@@ -52,6 +94,7 @@
             document.getElementById('popupInvitado').style.display = 'none';
         }
     </script>
+
 
     <p style="text-align:right;"><a style="text-decoration:underline; cursor:pointer;" onclick="abrirPopupInvitado()">Crear Cuenta Invitado</a></p>
 
