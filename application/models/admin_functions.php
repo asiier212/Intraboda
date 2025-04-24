@@ -205,6 +205,21 @@ class Admin_functions extends CI_Model
 		return $query->result_array();
 	}
 
+	public function ActualizarOrdenEquipo($id_grupo, $orden)
+	{
+		log_message('debug', "→ ActualizarOrdenEquipo: ID=$id_grupo, orden=$orden");
+		$this->db->where('id_grupo', $id_grupo);
+		$this->db->where('borrado', 0);
+		$this->db->update('grupos_equipos', ['orden' => $orden]);
+	
+		if ($this->db->affected_rows() == 0) {
+			log_message('error', "❌ No se pudo actualizar el orden del equipo $id_grupo");
+		}
+	}
+	
+	
+
+
 	public function get_equipo_nombre($id_grupo)
 	{
 		if (!$id_grupo) return null;
@@ -881,7 +896,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = [];
 		$this->load->database();
-		$query = $this->db->query("SELECT * FROM grupos_equipos WHERE borrado = 0 ORDER BY nombre_grupo ASC");
+		$query = $this->db->query("SELECT * FROM grupos_equipos WHERE borrado = 0 ORDER BY orden ASC");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {

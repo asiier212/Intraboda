@@ -3,6 +3,27 @@ if (! defined('BASEPATH')) exit('No direct script access allowed');
 class Ajax extends CI_Controller
 {
 
+	public function ordenarEquipos()
+	{
+		$this->load->database();
+		$this->load->model('admin_functions');
+	
+		$orden = $this->input->post('orden');
+	
+		if (is_array($orden)) {
+			foreach ($orden as $pos => $id_grupo) {
+				$this->admin_functions->ActualizarOrdenEquipo($id_grupo, $pos + 1);
+			}
+			echo "ok";
+		} else {
+			http_response_code(400);
+			echo "Parámetro 'orden' inválido";
+		}
+	}
+	
+	
+	
+
 	function updateordencanciones()
 	{
 		if ($_POST) {

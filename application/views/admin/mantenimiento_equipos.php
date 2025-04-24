@@ -542,9 +542,9 @@
 
 					<!-- Listado Equipos -->
 					<div style="flex: 1; min-width: 250px; background:#fff; border:1px solid #ccc; border-radius:12px; padding:20px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
-						<h4 style="margin-top:0; color:#007BFF; font-family: Arial, Helvetica, sans-serif; font-size: 18px">🛠️ Equipos</h4>
+						<h4 style="margin-top:0; color:#007BFF; font-family: Arial, Helvetica, sans-serif; font-size: 18px; margin-bottom:10px">🛠️ Equipos</h4>
 						<?php if ($equipos): ?>
-							<ul style="padding-left:0;">
+							<ul id="sortable_equipos" style="padding-left:0;">
 								<?php foreach ($equipos as $e): ?>
 									<?php
 									// Buscar si este equipo tiene algún componente
@@ -558,7 +558,7 @@
 										}
 									}
 									?>
-									<li style="list-style:none; display:flex; justify-content:space-between; align-items:center; padding:6px 0; border-bottom:1px solid #eee;">
+									<li data-id-equipo="<?php echo $e['id_grupo']; ?>" style="list-style:none; display:flex; justify-content:space-between; align-items:center; padding:6px 0; cursor:move; font-size: 13px; border:1px solid #eee; border-radius:6px; padding:8px 12px; margin-bottom:8px; background:#fefefe;">
 										<span>
 											<?php echo $e['nombre_grupo']; ?>
 											<?php if (!$tiene_componentes): ?>
@@ -577,9 +577,37 @@
 						<?php endif; ?>
 					</div>
 
+					<script>
+						$(function() {
+							$("#sortable_equipos").sortable({
+								update: function(event, ui) {
+									const orden = [];
+									$('#sortable_equipos li').each(function() {
+										orden.push($(this).data('id-equipo'));
+									});
+
+									$.ajax({
+										type: 'POST',
+										url: '<?php echo base_url() ?>index.php/ajax/ordenarEquipos',
+										data: {
+											orden: orden
+										},
+										success: function(res) {
+										},
+										error: function(xhr) {
+											alert("Error al guardar el nuevo orden");
+											console.error("Error AJAX:", xhr.responseText);
+										}
+									});
+
+								}
+							});
+						});
+					</script>
+
 					<!-- Listado Componentes -->
 					<div style="flex: 2; min-width: 350px; background:#fff; border:1px solid #ccc; border-radius:12px; padding:20px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
-						<h4 style="margin-top:0; color:#007BFF; font-family: Arial, Helvetica, sans-serif; font-size: 18px">🔩 Componentes</h4>
+						<h4 style="margin-top:0; color:#007BFF; font-family: Arial, Helvetica, sans-serif; font-size: 18px; margin-bottom:10px">🔩 Componentes</h4>
 						<?php if ($componentes): ?>
 							<ul style="padding-left:0;">
 								<?php foreach ($componentes as $c): ?>
