@@ -637,6 +637,7 @@ class Admin extends CI_Controller
 					$datos['n_registro'] = $_POST['n_registro'];
 					$datos['nombre_componente'] = $_POST['nombre_componente'];
 					$datos['descripcion_componente'] = $_POST['descripcion_componente'];
+					$datos['nombre_url'] = isset($_POST['nombre_url']) ? $_POST['nombre_url'] : '';
 					$datos['urls'] = isset($_POST['urls']) ? json_encode(array_filter($_POST['urls'])) : json_encode(array());
 					$this->db->insert('componentes', $datos);
 
@@ -693,6 +694,7 @@ class Admin extends CI_Controller
 					SET nombre_componente = '" . $_POST['editar_nombre_componente'] . "', 
 						descripcion_componente = '" . $_POST['editar_descripcion_componente'] . "', 
 						n_registro = '" . $_POST['editar_n_registro'] . "', 
+						nombre_url = '" . $_POST['editar_nombre_url'] . "',
 						urls = '" . $urls_json . "' 
 					WHERE id_componente = " . (int)$_POST['editar_grupo_componentes']);
 			}

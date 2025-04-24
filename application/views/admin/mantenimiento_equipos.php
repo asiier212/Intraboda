@@ -205,6 +205,7 @@
 					$('#editar_n_registro').val(val.n_registro);
 					$('#editar_nombre_componente').val(val.nombre_componente);
 					$('#editar_descripcion_componente').val(val.descripcion_componente);
+					$('#editar_nombre_url').val(val.nombre_url);
 				});
 
 			});
@@ -278,7 +279,13 @@
 						<textarea name="descripcion_componente" id="descripcion_componente" rows="4" required
 							style="padding:8px; border:1px solid #ccc; border-radius:6px; margin-bottom:20px;"></textarea>
 
-						<label style="display:block; margin-bottom:6px;">URLs:</label>
+						<label style="display:block; margin-bottom:6px;">➕ Añadir URL relacionada:</label>
+						<span>
+							Nombre de la URL:
+							<input type="text" name="nombre_url" id="nombre_url" required
+								style="padding:8px; border:1px solid #ccc; border-radius:6px; margin-bottom:12px;" />
+						</span>
+						Ruta:
 						<div id="urls_container_nuevo">
 							<div class="url-item">
 								<input type="url" name="urls[]" placeholder="https://ejemplo.com" style="width:90%; padding:8px;" />
@@ -346,7 +353,13 @@
 						<textarea name="editar_descripcion_componente" id="editar_descripcion_componente" rows="4" required
 							style="padding:8px; border:1px solid #ccc; border-radius:6px; margin-bottom:20px;"></textarea>
 
-						<label style="display:block; margin-bottom:6px;">URLs:</label>
+						<label style="display:block; margin-bottom:6px;">➕ Modificar URL relacionada:</label>
+						<span>
+							Nombre de la URL:
+							<input type="text" name="editar_nombre_url" id="editar_nombre_url" required
+								style="padding:8px; border:1px solid #ccc; border-radius:6px; margin-bottom:12px;" />
+						</span>
+						<label style="display:block; margin-bottom:6px;">Ruta:</label>
 						<input type="url" name="urls[]" id="url_placeholder" style="padding:8px; border:1px solid #ccc; border-radius:6px; margin-bottom:12px;" />
 						<div id="urls_container_editar">
 							<!-- Aquí se agregarán las URLs dinámicamente -->
@@ -363,6 +376,7 @@
 							onmouseout="this.style.backgroundColor='#f1f1f1'">
 							➕ Añadir URL
 						</button>
+
 
 						<input type="submit" name="modificar_componente" id="modificar_componente" value="Modificar"
 							style="padding: 10px 20px; background-color:#28a745; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer; width: 200px" />
@@ -592,8 +606,7 @@
 										data: {
 											orden: orden
 										},
-										success: function(res) {
-										},
+										success: function(res) {},
 										error: function(xhr) {
 											alert("Error al guardar el nuevo orden");
 											console.error("Error AJAX:", xhr.responseText);
