@@ -1,34 +1,33 @@
 <?php
-Class Dj_functions extends CI_Model{
-	
+class Dj_functions extends CI_Model
+{
+
 	function DjLogin($mail, $clave)
 	{
 		//$clave = md5($clave);
 		$data = false;
 		$this->load->database();
 		$this->load->library('encrypt');
-		$clave_sin_cifrar="";
+		$clave_sin_cifrar = "";
 		//Busco la clave cifrada del dj
 		$query2 = $this->db->query("SELECT clave FROM djs WHERE email  = '{$mail}'");
-		if($query2->num_rows() > 0){
+		if ($query2->num_rows() > 0) {
 			$fila2 = $query2->row();
 			$clave_cifrada = $fila2->clave;
-			
+
 			//Desencripto la clave cifrada para compararla con la que introduce el dj
-			$clave_sin_cifrar=$this->encrypt->decode($clave_cifrada);
+			$clave_sin_cifrar = $this->encrypt->decode($clave_cifrada);
 		}
 		//Comparo las clave descifrada con la que introduce el dj
-		if($clave_sin_cifrar<>$clave)
-		{
+		if ($clave_sin_cifrar <> $clave) {
 			//Si no coinciden me invento una clave error
-			$clave="ERROR";
+			$clave = "ERROR";
 		}
-		
+
 		//Sólo busco en la BD si la clave que ha introducido el dj es igual a la que hay en descifrada en la BD	
-		if($clave<>"ERROR")
-		{	
-			$query = $this->db->query("SELECT id, email, nombre, foto FROM djs WHERE email  = '".$mail."'");	
-			if($query->num_rows() > 0){
+		if ($clave <> "ERROR") {
+			$query = $this->db->query("SELECT id, email, nombre, foto FROM djs WHERE email  = '" . $mail . "'");
+			if ($query->num_rows() > 0) {
 				$fila = $query->row();
 				$data['id'] = $fila->id;
 				$data['nombre'] = $fila->nombre;
@@ -36,32 +35,30 @@ Class Dj_functions extends CI_Model{
 				$data['email'] = $mail;
 			}
 		}
-		
+
 		return $data;
 	}
 	function InsertCliente($data)
 	{
-		
+
 		$this->load->database();
 		$data['servicios'] = implode(",", $data['servicios']);
 		$data['personas_contacto'] = implode(",", $data['personas_contacto']);
-		$data['fecha_boda'] = $data['fecha_boda'] . " " .$data['hora_boda']; 
+		$data['fecha_boda'] = $data['fecha_boda'] . " " . $data['hora_boda'];
 		unset($data['hora_boda']);
-		$this->db->insert('clientes', $data); 
-		
+		$this->db->insert('clientes', $data);
+
 		return $this->db->insert_id();
-	
-		
 	}
 	function GetClientes($str_where, $ord, $limit)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT clientes.id, clientes.foto, clientes.nombre_novio, clientes.nombre_novia, restaurantes.nombre AS restaurante, DATE_FORMAT(clientes.fecha_boda, '%d-%m-%Y %H:%i') as fecha_boda_formateado, DATE_FORMAT(clientes.fecha, '%d-%m-%Y') as fecha_alta FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante {$str_where} ORDER BY {$ord}   {$limit}");	
-		
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT clientes.id, clientes.foto, clientes.nombre_novio, clientes.nombre_novia, restaurantes.nombre AS restaurante, DATE_FORMAT(clientes.fecha_boda, '%d-%m-%Y %H:%i') as fecha_boda_formateado, DATE_FORMAT(clientes.fecha, '%d-%m-%Y') as fecha_alta FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante {$str_where} ORDER BY {$ord}   {$limit}");
+
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['foto'] = $fila->foto;
 				$data[$i]['nombre_novio'] = $fila->nombre_novio;
@@ -79,9 +76,9 @@ Class Dj_functions extends CI_Model{
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT clientes.email_novio, clientes.email_novia, clientes.clave, clientes.nombre_novio, clientes.apellidos_novio, clientes.direccion_novio, clientes.cp_novio, clientes.poblacion_novio, clientes.telefono_novio, clientes.nombre_novia, clientes.apellidos_novia, clientes.direccion_novia, clientes.cp_novia, clientes.poblacion_novia, clientes.telefono_novia, clientes.foto, clientes.fecha_boda, restaurantes.id_restaurante, restaurantes.nombre AS restaurante, restaurantes.direccion AS direccion_restaurante, restaurantes.telefono AS telefono_restaurante, clientes.servicios, clientes.personas_contacto, DATE_FORMAT(clientes.fecha_boda, '%d-%m-%Y') as fecha_boda, DATE_FORMAT(clientes.fecha_boda, '%H:%i') as hora_boda, restaurantes.maitre, restaurantes.telefono_maitre, clientes.contrato_pdf, clientes.presupuesto_pdf, clientes.descuento, clientes.observaciones, clientes.dj FROM clientes INNER JOIN restaurantes ON clientes.id_Restaurante=restaurantes.id_restaurante WHERE id = {$id}");	
-		
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT clientes.email_novio, clientes.email_novia, clientes.clave, clientes.nombre_novio, clientes.apellidos_novio, clientes.direccion_novio, clientes.cp_novio, clientes.poblacion_novio, clientes.telefono_novio, clientes.nombre_novia, clientes.apellidos_novia, clientes.direccion_novia, clientes.cp_novia, clientes.poblacion_novia, clientes.telefono_novia, clientes.foto, clientes.fecha_boda, restaurantes.id_restaurante, restaurantes.nombre AS restaurante, restaurantes.direccion AS direccion_restaurante, restaurantes.telefono AS telefono_restaurante, clientes.servicios, clientes.personas_contacto, DATE_FORMAT(clientes.fecha_boda, '%d-%m-%Y') as fecha_boda, DATE_FORMAT(clientes.fecha_boda, '%H:%i') as hora_boda, restaurantes.maitre, restaurantes.telefono_maitre, clientes.contrato_pdf, clientes.presupuesto_pdf, clientes.descuento, clientes.observaciones, clientes.dj FROM clientes INNER JOIN restaurantes ON clientes.id_Restaurante=restaurantes.id_restaurante WHERE id = {$id}");
+
+		if ($query->num_rows() > 0) {
 			$fila = $query->row();
 			$data['id'] = $id;
 			$data['email_novio'] = $fila->email_novio;
@@ -115,32 +112,31 @@ Class Dj_functions extends CI_Model{
 			$data['descuento'] = $fila->descuento;
 			$data['observaciones'] = $fila->observaciones;
 			$data['dj'] = $fila->dj;
-			
-			$query2 = $this->db->query("SELECT archivo, descripcion FROM restaurantes_archivos WHERE id_restaurante = {$fila->id_restaurante}");	
-			if($query2->num_rows() > 0){
+
+			$query2 = $this->db->query("SELECT archivo, descripcion FROM restaurantes_archivos WHERE id_restaurante = {$fila->id_restaurante}");
+			if ($query2->num_rows() > 0) {
 				$i = 0;
-				foreach($query2->result() as $fila2){
+				foreach ($query2->result() as $fila2) {
 					$data['restaurante_archivos'][$i]['archivo'] = $fila2->archivo;
 					$data['restaurante_archivos'][$i]['descripcion'] = $fila2->descripcion;
 					$i++;
 				}
 			}
-
 		}
-		
-	
+
+
 		return $data;
 	}
-	
+
 	function GetHorasCliente($id)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_hora_dj, id_cliente, concepto, horas_dj FROM horas_djs WHERE id_cliente = {$id}");	
-		
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id_hora_dj, id_cliente, concepto, horas_dj FROM horas_djs WHERE id_cliente = {$id}");
+
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id_hora_dj'] = $fila->id_hora_dj;
 				$data[$i]['id_cliente'] = $fila->id_cliente;
 				$data[$i]['concepto'] = $fila->concepto;
@@ -148,56 +144,53 @@ Class Dj_functions extends CI_Model{
 				$i++;
 			}
 		}
-		
-	
+
+
 		return $data;
 	}
-	
+
 	function UpdatefotoCliente($id, $foto)
 	{
-		
+
 		$this->load->database();
-		$this->db->query("UPDATE clientes SET foto = '".$foto."' WHERE id = {$id}");	
-		
+		$this->db->query("UPDATE clientes SET foto = '" . $foto . "' WHERE id = {$id}");
 	}
-	
+
 	function InsertServicio($data)
 	{
-		
+
 		$this->load->database();
-		$this->db->insert('servicios', $data); 
+		$this->db->insert('servicios', $data);
 		//$query = $this->db->query("INSERT INTO servicios (nombre, descripcion, precio) VALUES ('".str_replace("'", "&#39;",$data['nombre'])."', '".stripslashes(str_replace("'", "&#39;",$data['descripcion']))."', '".$data['precio']."')");	
-		
+
 	}
 	function InsertEvent($nombre)
 	{
-		
+
 		$this->load->database();
-		$query = $this->db->query("INSERT INTO momentos_espec (nombre) VALUES ('".str_replace("'", "&#39;",$nombre)."')");	
-		
+		$query = $this->db->query("INSERT INTO momentos_espec (nombre) VALUES ('" . str_replace("'", "&#39;", $nombre) . "')");
 	}
 	function DeleteEvent($id)
 	{
-		
+
 		$this->load->database();
-		$query = $this->db->query("DELETE FROM momentos_espec WHERE id = {$id}");	
-		
+		$query = $this->db->query("DELETE FROM momentos_espec WHERE id = {$id}");
 	}
-	
+
 	function GetDJ($id)
 	{
 		$data = false;
 		$this->load->database();
 		$this->load->library('encrypt');
-		$query = $this->db->query("SELECT id, nombre, telefono, email, clave, foto FROM djs WHERE id = {$id}");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id, nombre, telefono, email, clave, foto FROM djs WHERE id = {$id}");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['telefono'] = $fila->telefono;
 				$data[$i]['email'] = $fila->email;
-				$data[$i]['clave']=$this->encrypt->decode($fila->clave);
+				$data[$i]['clave'] = $this->encrypt->decode($fila->clave);
 				//$data[$i]['clave'] = $fila->clave;
 				$data[$i]['foto'] = $fila->foto;
 				$i++;
@@ -205,17 +198,17 @@ Class Dj_functions extends CI_Model{
 		}
 		return $data;
 	}
-	
+
 	function GetDJContratos($id, $ano_contrato)
 	{
 		$data = false;
 		$this->load->database();
 
-		$query = $this->db->query("SELECT id_contrato, nombre_contrato, fecha_contrato, contrato_pdf FROM contratos_djs WHERE id_dj = {$id} AND fecha_contrato>='".$ano_contrato."-01-01' AND fecha_contrato<='".$ano_contrato."-12-31'");
-			
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id_contrato, nombre_contrato, fecha_contrato, contrato_pdf FROM contratos_djs WHERE id_dj = {$id} AND fecha_contrato>='" . $ano_contrato . "-01-01' AND fecha_contrato<='" . $ano_contrato . "-12-31'");
+
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id_contrato'] = $fila->id_contrato;
 				$data[$i]['nombre_contrato'] = $fila->nombre_contrato;
 				$data[$i]['fecha_contrato'] = $fila->fecha_contrato;
@@ -223,22 +216,20 @@ Class Dj_functions extends CI_Model{
 				$data[$i]['ano_contrato'] = $ano_contrato;
 				$i++;
 			}
-		}
-		else
-		{
+		} else {
 			$data[0]['ano_contrato'] = $ano_contrato;
 		}
 		return $data;
 	}
-	
+
 	function GetDJNominas($id, $ano_nomina)
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_nomina, nombre_nomina, fecha_nomina, nomina_pdf FROM nominas_djs WHERE id_dj = {$id} AND fecha_nomina>='".$ano_nomina."-01-01' AND fecha_nomina<='".$ano_nomina."-12-31'");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id_nomina, nombre_nomina, fecha_nomina, nomina_pdf FROM nominas_djs WHERE id_dj = {$id} AND fecha_nomina>='" . $ano_nomina . "-01-01' AND fecha_nomina<='" . $ano_nomina . "-12-31'");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id_nomina'] = $fila->id_nomina;
 				$data[$i]['nombre_nomina'] = $fila->nombre_nomina;
 				$data[$i]['fecha_nomina'] = $fila->fecha_nomina;
@@ -246,115 +237,170 @@ Class Dj_functions extends CI_Model{
 				$data[$i]['ano_nomina'] = $ano_nomina;
 				$i++;
 			}
-		}
-		else
-		{
+		} else {
 			$data[0]['ano_nomina'] = $ano_nomina;
 		}
 		return $data;
 	}
-	
-	
-	function GetEquiposComponentesAsignado($id_cliente)
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT equipo_componentes FROM clientes WHERE id = {$id_cliente}");	
-		$fila = $query->row();
-		$equipo_componentes = $fila->equipo_componentes;
 
-		if($equipo_componentes <> "" )
-		{
-			$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE id_grupo = ({$equipo_componentes})");	
-			if($query->num_rows() > 0){
-				$i = 0;
-				foreach($query->result() as $fila){
-					$data[$i]['id_grupo'] = $fila->id_grupo;
-					$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
-					$i++;
-				}
+	function GuardarRevisionesEquipo($id_cliente, $tipo_equipo, $revision_salida, $revision_fin, $revision_pabellon)
+	{
+		$this->load->database();
+
+		$revision_salida_json = json_encode(array_values($revision_salida));
+		$revision_fin_json = json_encode(array_values($revision_fin));
+		$revision_pabellon_json = json_encode(array_values($revision_pabellon));
+
+
+		$this->db->where('id_cliente', $id_cliente);
+		$this->db->where('tipo_equipo', $tipo_equipo);
+		$this->db->update('clientes_equipos', array(
+			'revision_salida' => $revision_salida_json,
+			'revision_findevento' => $revision_fin_json,
+			'revision_pabellon' => $revision_pabellon_json,
+		));
+	}
+
+	function GetRevisionesGuardadas($id_cliente)
+	{
+		$this->load->database();
+		$query = $this->db->query("
+			SELECT tipo_equipo, revision_salida, revision_findevento, revision_pabellon
+			FROM clientes_equipos
+			WHERE id_cliente = ?
+		", array($id_cliente));
+
+		$revisiones = [];
+
+		foreach ($query->result_array() as $row) {
+			$tipo = $row['tipo_equipo'];
+			$revisiones[$tipo] = [
+				'revision_salida' => json_decode($row['revision_salida'], true) ?: [],
+				'revision_fin' => json_decode($row['revision_findevento'], true) ?: [],
+				'revision_pabellon' => json_decode($row['revision_pabellon'], true) ?: [],
+			];
+		}
+
+		return $revisiones;
+	}
+
+	function GetDetallesEquipoAsignado($id_cliente, $tipo_equipo)
+	{
+		$this->load->database();
+
+		// Obtener info del grupo asignado
+		$query = $this->db->query("
+			SELECT ce.id_grupo, g.nombre_grupo, ce.fecha_asignacion
+			FROM clientes_equipos ce
+			JOIN grupos_equipos g ON ce.id_grupo = g.id_grupo
+			WHERE ce.id_cliente = ? AND ce.tipo_equipo = ?
+			LIMIT 1
+		", array($id_cliente, $tipo_equipo));
+
+		if ($query->num_rows() == 0) {
+			return null;
+		}
+
+		$grupo = $query->row_array();
+
+		// Obtener componentes
+		$componentes_query = $this->db->query("
+			SELECT c.id_componente, c.nombre_componente, c.n_registro, c.descripcion_componente, c.urls,
+			(SELECT COUNT(*) FROM reparaciones_componentes r WHERE r.id_componente = c.id_componente) AS num_reparaciones
+			FROM componentes c
+			WHERE c.id_grupo = ?
+		", array($grupo['id_grupo']));
+
+		$componentes = array();
+		foreach ($componentes_query->result_array() as $comp) {
+
+			// Obtener reparaciones para este componente
+			$rep_query = $this->db->query("
+				SELECT reparacion, fecha_reparacion
+				FROM reparaciones_componentes
+				WHERE id_componente = ?
+				ORDER BY fecha_reparacion DESC
+			", array($comp['id_componente']));
+
+			$comp['reparaciones'] = $rep_query->result_array();
+			$componentes[] = $comp;
+		}
+
+		$grupo['componentes'] = $componentes;
+
+		return $grupo;
+	}
+
+	function GetEquiposAsignados($id_cliente)
+	{
+		$this->load->database();
+
+		// Obtener los equipos asignados
+		$query = $this->db->query("
+		SELECT ce.tipo_equipo, ce.id_grupo, g.nombre_grupo, g.borrado
+		FROM clientes_equipos ce
+		JOIN grupos_equipos g ON ce.id_grupo = g.id_grupo
+		WHERE ce.id_cliente = ?
+	", array($id_cliente));
+
+		$asignados_raw = array();
+		$max_num_equipo = 0;
+
+		foreach ($query->result_array() as $row) {
+			$tipo = $row['tipo_equipo'];
+			$asignados_raw[$tipo] = $row;
+
+			// Detectar el número de equipo (Ej: Equipo 5)
+			if (preg_match('/Equipo (\d+)/', $tipo, $m)) {
+				$max_num_equipo = max($max_num_equipo, intval($m[1]));
+			}
+		}
+
+		// Construimos array completo incluyendo los vacíos
+		$completo = array();
+		$max_num_equipo = max($max_num_equipo, 3); // al menos 3
+
+		for ($i = 1; $i <= $max_num_equipo; $i++) {
+			$key = 'Equipo ' . $i;
+
+			if ($i <= 3) {
+				// Mostrar siempre Equipo 1, 2, 3
+				$completo[$key] = isset($asignados_raw[$key]) ? $asignados_raw[$key] : null;
+			} elseif (isset($asignados_raw[$key])) {
+				// Solo mostrar Equipo 4+ si están asignados
+				$completo[$key] = $asignados_raw[$key];
+			}
+		}
+
+
+		return $completo;
+	}
+
+	function GetEquiposDisponibles($id_cliente)
+	{
+		$data = [];
+		$this->load->database();
+		$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE borrado = 0 ORDER BY nombre_grupo ASC");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+				$data[$i]['id_grupo'] = $fila->id_grupo;
+				$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
+				$i++;
 			}
 		}
 		return $data;
 	}
-	
-	function GetEquiposLucesAsignado($id_cliente)
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT equipo_luces FROM clientes WHERE id = {$id_cliente}");	
-		$fila = $query->row();
-		$equipo_luces = $fila->equipo_luces;
 
-		if($equipo_luces <> "" )
-		{
-			$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE id_grupo = ({$equipo_luces})");	
-			if($query->num_rows() > 0){
-				$i = 0;
-				foreach($query->result() as $fila){
-					$data[$i]['id_grupo'] = $fila->id_grupo;
-					$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
-					$i++;
-				}
-			}
-		}
-		return $data;
-	}
-	
-	function GetEquiposExtra1Asignado($id_cliente)
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT equipo_extra1 FROM clientes WHERE id = {$id_cliente}");	
-		$fila = $query->row();
-		$equipo_extra1 = $fila->equipo_extra1;
 
-		if($equipo_extra1 <> "" )
-		{
-			$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE id_grupo = ({$equipo_extra1})");	
-			if($query->num_rows() > 0){
-				$i = 0;
-				foreach($query->result() as $fila){
-					$data[$i]['id_grupo'] = $fila->id_grupo;
-					$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
-					$i++;
-				}
-			}
-		}
-		return $data;
-	}
-	
-	function GetEquiposExtra2Asignado($id_cliente)
-	{
-		$data = false;
-		$this->load->database();
-		$query = $this->db->query("SELECT equipo_extra2 FROM clientes WHERE id = {$id_cliente}");	
-		$fila = $query->row();
-		$equipo_extra2 = $fila->equipo_extra2;
-
-		if($equipo_extra2 <> "" )
-		{
-			$query = $this->db->query("SELECT id_grupo, nombre_grupo FROM grupos_equipos WHERE id_grupo = ({$equipo_extra2})");	
-			if($query->num_rows() > 0){
-				$i = 0;
-				foreach($query->result() as $fila){
-					$data[$i]['id_grupo'] = $fila->id_grupo;
-					$data[$i]['nombre_grupo'] = $fila->nombre_grupo;
-					$i++;
-				}
-			}
-		}
-		return $data;
-	}
-	
 	function GetComponentes()
 	{
 		$data = false;
 		$this->load->database();
 		$query = $this->db->query("SELECT * FROM componentes ORDER BY n_registro ASC");
-		if($query->num_rows() > 0){
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id_componente'] = $fila->id_componente;
 				$data[$i]['nombre_componente'] = $fila->nombre_componente;
 				$data[$i]['n_registro'] = $fila->n_registro;
@@ -365,16 +411,16 @@ Class Dj_functions extends CI_Model{
 		}
 		return $data;
 	}
-	
+
 	function GetReparacionesTotales()
 	{
 		$data = false;
 		$this->load->database();
-		
+
 		$query = $this->db->query("SELECT reparaciones_componentes.id_reparacion, componentes.id_componente, componentes.n_registro, componentes.nombre_componente, reparaciones_componentes.fecha_reparacion, reparaciones_componentes.reparacion FROM componentes inner join reparaciones_componentes on componentes.id_componente=reparaciones_componentes.id_componente");
-		if($query->num_rows() > 0){
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id_reparacion'] = $fila->id_reparacion;
 				$data[$i]['id_componente'] = $fila->id_componente;
 				$data[$i]['n_registro'] = $fila->n_registro;
@@ -386,8 +432,8 @@ Class Dj_functions extends CI_Model{
 		}
 		return $data;
 	}
-	
-	
+
+
 	function GetPreguntasEncuestaDatosBoda()
 	{
 		$data = false;
@@ -439,16 +485,16 @@ Class Dj_functions extends CI_Model{
 		}
 		return $data;
 	}
-	
-	
+
+
 	function GetServicios()
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre, descripcion, precio, precio_oferta FROM servicios");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id, nombre, descripcion, precio, precio_oferta FROM servicios");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['descripcion'] = $fila->descripcion;
@@ -459,19 +505,19 @@ Class Dj_functions extends CI_Model{
 		}
 		return $data;
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 	function GetEvents()
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre FROM momentos_espec");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id, nombre FROM momentos_espec");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$i++;
@@ -483,9 +529,9 @@ Class Dj_functions extends CI_Model{
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre, descripcion, precio, precio_oferta FROM servicios WHERE id = {$id}");	
-		if($query->num_rows() > 0){
-			$fila = $query->row();	
+		$query = $this->db->query("SELECT id, nombre, descripcion, precio, precio_oferta FROM servicios WHERE id = {$id}");
+		if ($query->num_rows() > 0) {
+			$fila = $query->row();
 			$data['id'] = $fila->id;
 			$data['nombre'] = $fila->nombre;
 			$data['descripcion'] = $fila->descripcion;
@@ -514,56 +560,56 @@ Class Dj_functions extends CI_Model{
 	function DeleteServicio($id)
 	{
 		$this->load->database();
-		$query = $this->db->query("DELETE FROM servicios WHERE id = {$id}");	
-	 }
+		$query = $this->db->query("DELETE FROM servicios WHERE id = {$id}");
+	}
 	function UpdateServicio($data, $id)
 	{
 		$this->load->database();
-		$query = $this->db->query("UPDATE servicios SET nombre = '".str_replace("'", "&#39;",$data['nombre'])."', precio = '".$data['precio']."', precio_oferta = '".$data['precio_oferta']."' WHERE id = {$id}");	
-	 }
-	 function InsertPerson($data)
+		$query = $this->db->query("UPDATE servicios SET nombre = '" . str_replace("'", "&#39;", $data['nombre']) . "', precio = '" . $data['precio'] . "', precio_oferta = '" . $data['precio_oferta'] . "' WHERE id = {$id}");
+	}
+	function InsertPerson($data)
 	{
-		
+
 		$this->load->database();
-		$query = $this->db->query("INSERT INTO personas_contacto (nombre, telefono, email, tipo) VALUES ('".str_replace("'", "&#39;",$data['nombre'])."', '".stripslashes(str_replace("'", "&#39;",$data['telefono']))."', '".$data['email']."', '".str_replace("'", "&#39;",$data['tipo'])."')");	
+		$query = $this->db->query("INSERT INTO personas_contacto (nombre, telefono, email, tipo) VALUES ('" . str_replace("'", "&#39;", $data['nombre']) . "', '" . stripslashes(str_replace("'", "&#39;", $data['telefono'])) . "', '" . $data['email'] . "', '" . str_replace("'", "&#39;", $data['tipo']) . "')");
 		return $this->db->insert_id();
 	}
 	function UpdatePerson($data)
 	{
-		
+
 		$this->load->database();
-		$query = $this->db->query("UPDATE personas_contacto SET nombre = '".str_replace("'", "&#39;",$data['nombre'])."', telefono = '".stripslashes(str_replace("'", "&#39;",$data['telefono']))."', email = '".$data['email']."', tipo = '".str_replace("'", "&#39;",$data['tipo'])."' WHERE id = ".$data['id']."");	
-		
+		$query = $this->db->query("UPDATE personas_contacto SET nombre = '" . str_replace("'", "&#39;", $data['nombre']) . "', telefono = '" . stripslashes(str_replace("'", "&#39;", $data['telefono'])) . "', email = '" . $data['email'] . "', tipo = '" . str_replace("'", "&#39;", $data['tipo']) . "' WHERE id = " . $data['id'] . "");
 	}
 	function UpdatefotoPerson($id, $foto)
 	{
-		
+
 		$this->load->database();
-		$this->db->query("UPDATE personas_contacto SET foto = '".$foto."' WHERE id = {$id}");	
-		
+		$this->db->query("UPDATE personas_contacto SET foto = '" . $foto . "' WHERE id = {$id}");
 	}
 	function DeletePerson($id)
 	{
-		
+
 		$this->load->database();
-		$query = $this->db->query("SELECT foto FROM personas_contacto WHERE id = {$id}");	
-		$fila = $query->row();	
-		if($fila->foto != ""){
-			$foto = './uploads/personas_contacto/'.$fila->foto;
-			echo $foto ;
-			if (file_exists($foto)) { unlink ($foto); }
+		$query = $this->db->query("SELECT foto FROM personas_contacto WHERE id = {$id}");
+		$fila = $query->row();
+		if ($fila->foto != "") {
+			$foto = './uploads/personas_contacto/' . $fila->foto;
+			echo $foto;
+			if (file_exists($foto)) {
+				unlink($foto);
+			}
 		}
-		
-		$this->db->query("DELETE FROM personas_contacto WHERE id = {$id}");	
-	 }
+
+		$this->db->query("DELETE FROM personas_contacto WHERE id = {$id}");
+	}
 	function GetPersonasContacto()
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id, nombre, telefono, email, tipo, foto FROM personas_contacto");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT id, nombre, telefono, email, tipo, foto FROM personas_contacto");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['id'] = $fila->id;
 				$data[$i]['nombre'] = $fila->nombre;
 				$data[$i]['telefono'] = $fila->telefono;
@@ -579,10 +625,10 @@ Class Dj_functions extends CI_Model{
 	{
 		$data = array();
 		$this->load->database();
-		$query = $this->db->query("SELECT valor, DATE_FORMAT(fecha, '%d-%m-%Y') as fecha FROM pagos WHERE cliente_id = {$cliente_id } ");	
-		if($query->num_rows() > 0){
+		$query = $this->db->query("SELECT valor, DATE_FORMAT(fecha, '%d-%m-%Y') as fecha FROM pagos WHERE cliente_id = {$cliente_id} ");
+		if ($query->num_rows() > 0) {
 			$i = 0;
-			foreach($query->result() as $fila){
+			foreach ($query->result() as $fila) {
 				$data[$i]['valor'] = $fila->valor;
 				$data[$i]['fecha'] = $fila->fecha;
 				$i++;
@@ -590,6 +636,4 @@ Class Dj_functions extends CI_Model{
 		}
 		return $data;
 	}
-	
 }
-?>
