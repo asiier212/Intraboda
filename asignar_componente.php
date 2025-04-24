@@ -28,13 +28,14 @@ function insertar_reparacion($id_componente, $descripcion)
     $stmt->bind_param("is", $id_componente, $descripcion);
     return $stmt->execute();
 }
-function modificar_componente($id_componente, $n_registro, $nombre, $descripcion)
+function modificar_componente($id_componente, $n_registro, $nombre, $descripcion, $urls_json)
 {
     global $mysqli;
-    $stmt = $mysqli->prepare("UPDATE componentes SET n_registro = ?, nombre_componente = ?, descripcion_componente = ? WHERE id_componente = ?");
-    $stmt->bind_param("sssi", $n_registro, $nombre, $descripcion, $id_componente);
+    $stmt = $mysqli->prepare("UPDATE componentes SET n_registro = ?, nombre_componente = ?, descripcion_componente = ?, urls = ? WHERE id_componente = ?");
+    $stmt->bind_param("ssssi", $n_registro, $nombre, $descripcion, $urls_json, $id_componente);
     return $stmt->execute();
 }
+
 
 
 
@@ -182,9 +183,12 @@ if (isset($_SESSION['login_asignar_componente']) && $_SESSION['login_asignar_com
             $n_registro = trim($_POST['editar_n_registro']);
             $nombre = trim($_POST['editar_nombre_componente']);
             $descripcion = trim($_POST['editar_descripcion_componente']);
+            $urls_array = isset($_POST['urls']) && is_array($_POST['urls']) ? array_filter($_POST['urls']) : [];
+            $urls_json = json_encode(array_values($urls_array));
+
 
             if ($n_registro && $nombre && $descripcion) {
-                $ok = modificar_componente($id_componente, $n_registro, $nombre, $descripcion);
+                $ok = modificar_componente($id_componente, $n_registro, $nombre, $descripcion, $urls_json);
                 $_SESSION['mensaje'] = $ok ? "✅ Componente modificado correctamente." : "❌ Error al modificar el componente.";
             } else {
                 $_SESSION['mensaje'] = "❌ Todos los campos son obligatorios.";
@@ -442,6 +446,21 @@ if (isset($_SESSION['mensaje'])) {
             <p><strong>Nº Registro:</strong> <?= $componente['n_registro'] ?></p>
             <p><strong>Nombre:</strong> <?= $componente['nombre_componente'] ?></p>
             <p><strong>Descripción:</strong> <?= $componente['descripcion_componente'] ?></p>
+            <?php
+            $urls = json_decode($componente['urls'], true);
+
+            if (!empty($urls) && is_array($urls)):
+            ?>
+                <div style="margin-top: 12px;">
+                    <strong>Enlaces relacionados:</strong>
+                    <ul>
+                        <?php foreach ($urls as $url): ?>
+                            <li><a href="<?= htmlspecialchars($url) ?>" target="_blank"><?= htmlspecialchars($url) ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+
             <div class="btn-group">
                 <a href="?id=<?= $id_componente ?>&accion=asignar"><button class="btn-green">Asignar Componente</button></a>
                 <a href="?id=<?= $id_componente ?>&accion=modificar"><button class="btn-yellow">Modificar Componente</button></a>
@@ -454,9 +473,24 @@ if (isset($_SESSION['mensaje'])) {
             <h2>Gestionar componente</h2>
             <p><strong>Nº Registro:</strong> <?= $componente['n_registro'] ?></p>
             <p><strong>Nombre:</strong> <?= $componente['nombre_componente'] ?></p>
+            <p><strong>Descripción:</strong> <?= $componente['descripcion_componente'] ?></p>
+                <?php
+                $urls = json_decode($componente['urls'], true);
+
+                if (!empty($urls) && is_array($urls)):
+                ?>
+                    <p style="margin-top: 12px;">
+                    <ul>
+                        <strong>Enlaces relacionados:</strong>
+                        <?php foreach ($urls as $url): ?>
+                            <li><a href="<?= htmlspecialchars($url) ?>" target="_blank"><?= htmlspecialchars($url) ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                    </p>
+                <?php endif; ?>
+
             <?php if ($equipo_actual): ?>
                 <p><strong>Equipo asignado:</strong> <?= $equipo_actual['nombre_grupo'] ?></p>
-                <p><strong>Descripción:</strong> <?= $componente['descripcion_componente'] ?></p>
                 <?php
                 // Obtener la última asignación activa desde el historial
                 $stmt = $mysqli->prepare("SELECT fecha_asignacion FROM historial_componentes_grupos WHERE id_componente = ? AND fecha_desasignacion IS NULL ORDER BY fecha_asignacion DESC LIMIT 1");
@@ -472,7 +506,7 @@ if (isset($_SESSION['mensaje'])) {
                 <?php endif; ?>
 
             <?php else: ?>
-                <p><em>Este componente no está asignado a ningún equipo.</em></p>
+                <p style="color: red"><em>Este componente no está asignado a ningún equipo.</em></p>
             <?php endif; ?>
             <form method="post" id="asignarForm">
                 <label for="id_grupo">Selecciona un equipo</label>
@@ -493,7 +527,7 @@ if (isset($_SESSION['mensaje'])) {
 
             <?php endif; ?>
             <?php if (empty($componente['id_grupo'])): ?>
-                <a href="?id=<?= $id_componente ?>" style="display:block; text-align:center; margin-top:15px; color:#007bff; font-weight:bold;">⬅️ Volver al menú</a>
+                <a href="?id=<?= $id_componente ?>" style="display:block; text-align:center; margin-top:15px; color:#007bff; font-weight:bold; font-size: 16px">⬅️ Volver al menú</a>
             <?php endif; ?>
         </div>
 
@@ -515,9 +549,26 @@ if (isset($_SESSION['mensaje'])) {
                 <input type="text" value="<?= $componente['nombre_componente'] ?>" name="editar_nombre_componente" required>
                 <label>Descripción:</label>
                 <textarea name="editar_descripcion_componente" rows="4" required><?= $componente['descripcion_componente'] ?></textarea>
+                <?php
+                $urls = json_decode($componente['urls'], true);
+
+                if (!empty($urls) && is_array($urls)):
+                ?>
+                    <div id="url-list" style="margin-top: 12px;">
+                        <strong>Enlaces relacionados:</strong>
+                        <?php foreach ($urls as $url): ?>
+                            <span style="display:flex; gap:2%;">
+                                <input type="url" name="urls[]" value="<?= htmlspecialchars($url) ?>" style="width: 90%; padding:8px; border-radius: 6px;" />
+                                <button type="button" onclick="this.parentNode.remove()" style="width: 8%; text-align: center;background-color: #ccc; boder: none; boder-radius: 6px; padding: 5px 5px; cursor: pointer;">❌</button>
+                            </span>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+                <button type="button" class="btn-orange" style="margin-top:10px;" onclick="addUrlField()">➕ Añadir URL</button>
+
                 <button class="btn-yellow" type="button" onclick="solicitarLogin('modificar','modificarForm')">Guardar Cambios</button>
             </form>
-            <a href="?id=<?= $id_componente ?>" style="display:block; text-align:center; margin-top:15px; color:#007bff; font-weight:bold;">⬅️ Volver al menú</a>
+            <a href="?id=<?= $id_componente ?>" style="display:block; text-align:center; margin-top:15px; color:#007bff; font-weight:bold; font-size: 16px">⬅️ Volver al menú</a>
         </div>
 
     <?php elseif ($_GET['accion'] === 'reparacion'): ?>
@@ -539,9 +590,25 @@ if (isset($_SESSION['mensaje'])) {
                 <button class="btn-orange" type="button" onclick="solicitarLogin('reparacion','reparacionForm')">Añadir Reparación</button>
             </form>
 
-            <a href="?id=<?= $id_componente ?>" style="display:block; text-align:center; margin-top:15px; color:#007bff; font-weight:bold;">⬅️ Volver al menú</a>
+            <a href="?id=<?= $id_componente ?>" style="display:block; text-align:center; margin-top:15px; color:#007bff; font-weight:bold; font-size: 16px">⬅️ Volver al menú</a>
         </div>
     <?php endif; ?>
+
+    <script>
+        function addUrlField() {
+            const container = document.getElementById('url-list');
+            const div = document.createElement('div');
+            div.className = 'url-item';
+            div.innerHTML = `
+                            <span style="display:flex; gap:2%;">
+                                <input type="url" name="urls[]" placeholder="https://ejemplo.com" style="width: 90%; padding:8px; border-radius: 6px;"/>
+                                <button type="button" onclick="this.parentNode.remove()" style="width: 8%; text-align: center;background-color: #ccc; boder: none; boder-radius: 6px; padding: 5px 5px; cursor: pointer;">❌</button>
+                            </span>
+    `;
+            container.appendChild(div);
+        }
+    </script>
+
 
 
 </body>

@@ -637,6 +637,7 @@ class Admin extends CI_Controller
 					$datos['n_registro'] = $_POST['n_registro'];
 					$datos['nombre_componente'] = $_POST['nombre_componente'];
 					$datos['descripcion_componente'] = $_POST['descripcion_componente'];
+					$datos['urls'] = isset($_POST['urls']) ? json_encode(array_filter($_POST['urls'])) : json_encode(array());
 					$this->db->insert('componentes', $datos);
 
 					$id_componente = $this->db->insert_id();
@@ -675,8 +676,27 @@ class Admin extends CI_Controller
 
 			if (isset($_POST['modificar_componente'])) {
 				$this->load->database();
-				$this->db->query("UPDATE componentes SET nombre_componente = '" . $_POST['editar_nombre_componente'] . "', descripcion_componente = '" . $_POST['editar_descripcion_componente'] . "', n_registro = '" . $_POST['editar_n_registro'] . "' WHERE id_componente = " . $_POST['editar_grupo_componentes'] . "");
+			
+				$urls_limpias = array();
+				if (isset($_POST['urls']) && is_array($_POST['urls'])) {
+					foreach ($_POST['urls'] as $url) {
+						$url = trim($url);
+						if ($url !== '') {
+							$urls_limpias[] = $url; // <-- así forzamos índice numérico
+						}
+					}
+				}
+			
+				$urls_json = json_encode($urls_limpias);
+			
+				$this->db->query("UPDATE componentes 
+					SET nombre_componente = '" . $_POST['editar_nombre_componente'] . "', 
+						descripcion_componente = '" . $_POST['editar_descripcion_componente'] . "', 
+						n_registro = '" . $_POST['editar_n_registro'] . "', 
+						urls = '" . $urls_json . "' 
+					WHERE id_componente = " . (int)$_POST['editar_grupo_componentes']);
 			}
+			
 
 			if (isset($_POST['asociar'])) {
 				$this->load->database();
@@ -1516,10 +1536,11 @@ class Admin extends CI_Controller
 
 						$revision_salida = isset($_POST['revision_salida']) ? array_keys($_POST['revision_salida']) : array();
 						$revision_fin = isset($_POST['revision_fin']) ? array_keys($_POST['revision_fin']) : array();
+						$revision_pabellon = isset($_POST['revision_pabellon']) ? array_keys($_POST['revision_pabellon']) : array();
 						$tipo_equipo = $_POST['tipo_equipo_revision']; // Debes enviar este hidden desde el formulario del popup
 						$id_cliente = $id; // Ya lo deberías tener
 
-						$this->admin_functions->GuardarRevisionesEquipo($id_cliente, $tipo_equipo, $revision_salida, $revision_fin);
+						$this->admin_functions->GuardarRevisionesEquipo($id_cliente, $tipo_equipo, $revision_salida, $revision_fin, $revision_pabellon);
 
 						// Redirigir para evitar reenvío
 						redirect(current_url());

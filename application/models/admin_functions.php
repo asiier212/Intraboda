@@ -832,7 +832,7 @@ class Admin_functions extends CI_Model
 	{
 		$data = array();
 		$this->load->database();
-	
+
 		$query = $this->db->query("
 			SELECT 
 				h.id,
@@ -852,7 +852,7 @@ class Admin_functions extends CI_Model
 			LEFT JOIN clientes_equipos ce ON ce.id = ult_ce.ultimo_id
 			ORDER BY h.fecha_asignacion DESC
 		");
-	
+
 		if ($query->num_rows() > 0) {
 			foreach ($query->result() as $fila) {
 				$id = $fila->id_componente;
@@ -870,10 +870,10 @@ class Admin_functions extends CI_Model
 				);
 			}
 		}
-	
+
 		return $data;
 	}
-	
+
 
 
 
@@ -907,6 +907,7 @@ class Admin_functions extends CI_Model
 				$data[$i]['descripcion_componente'] = $fila->descripcion_componente;
 				$data[$i]['id_grupo'] = $fila->id_grupo;
 				$data[$i]['qr_path'] = $fila->qr_path; // AÑADIMOS esto si lo usas en la vista
+				$data[$i]['urls'] = $fila->urls; // AÑADIMOS esto si lo usas en la vista
 				$i++;
 			}
 		}
@@ -1659,8 +1660,8 @@ class Admin_functions extends CI_Model
 
 		// Obtener componentes
 		$componentes_query = $this->db->query("
-			SELECT c.id_componente, c.nombre_componente, c.n_registro, c.descripcion_componente,
-				(SELECT COUNT(*) FROM reparaciones_componentes r WHERE r.id_componente = c.id_componente) AS num_reparaciones
+			SELECT c.id_componente, c.nombre_componente, c.n_registro, c.descripcion_componente, c.urls,
+			(SELECT COUNT(*) FROM reparaciones_componentes r WHERE r.id_componente = c.id_componente) AS num_reparaciones
 			FROM componentes c
 			WHERE c.id_grupo = ?
 		", array($grupo['id_grupo']));
@@ -1765,18 +1766,21 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function GuardarRevisionesEquipo($id_cliente, $tipo_equipo, $revision_salida, $revision_fin)
+	function GuardarRevisionesEquipo($id_cliente, $tipo_equipo, $revision_salida, $revision_fin, $revision_pabellon)
 	{
 		$this->load->database();
 
 		$revision_salida_json = json_encode(array_values($revision_salida));
 		$revision_fin_json = json_encode(array_values($revision_fin));
+		$revision_pabellon_json = json_encode(array_values($revision_pabellon));
+
 
 		$this->db->where('id_cliente', $id_cliente);
 		$this->db->where('tipo_equipo', $tipo_equipo);
 		$this->db->update('clientes_equipos', array(
 			'revision_salida' => $revision_salida_json,
-			'revision_findevento' => $revision_fin_json
+			'revision_findevento' => $revision_fin_json,
+			'revision_pabellon' => $revision_pabellon_json,
 		));
 	}
 
@@ -1784,7 +1788,7 @@ class Admin_functions extends CI_Model
 	{
 		$this->load->database();
 		$query = $this->db->query("
-			SELECT tipo_equipo, revision_salida, revision_findevento
+			SELECT tipo_equipo, revision_salida, revision_findevento, revision_pabellon
 			FROM clientes_equipos
 			WHERE id_cliente = ?
 		", array($id_cliente));
@@ -1796,6 +1800,7 @@ class Admin_functions extends CI_Model
 			$revisiones[$tipo] = [
 				'revision_salida' => json_decode($row['revision_salida'], true) ?: [],
 				'revision_fin' => json_decode($row['revision_findevento'], true) ?: [],
+				'revision_pabellon' => json_decode($row['revision_pabellon'], true) ?: [],
 			];
 		}
 

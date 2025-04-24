@@ -278,6 +278,14 @@
 						<textarea name="descripcion_componente" id="descripcion_componente" rows="4" required
 							style="padding:8px; border:1px solid #ccc; border-radius:6px; margin-bottom:20px;"></textarea>
 
+						<label style="display:block; margin-bottom:6px;">URLs:</label>
+						<div id="urls_container_nuevo">
+							<div class="url-item">
+								<input type="url" name="urls[]" placeholder="https://ejemplo.com" style="width:90%; padding:8px;" />
+								<button type="button" onclick="agregarUrl('urls_container_nuevo')">➕</button>
+							</div>
+						</div>
+
 						<input type="submit" name="anadir_componente" id="anadir_componente" value="Añadir"
 							style="padding: 10px 20px; background-color:#007BFF; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer; width: 200px" />
 					</form>
@@ -315,7 +323,14 @@
 						<select name="editar_grupo_componentes" id="editar_grupo_componentes" required>
 							<option value="">Selecciona Componente</option>
 							<?php foreach ($componentes as $c) { ?>
-								<option value="<?php echo $c['id_componente'] ?>"><?php echo $c['nombre_componente'] ?></option>
+								<option
+									value="<?php echo $c['id_componente'] ?>"
+									data-n_registro="<?php echo htmlspecialchars($c['n_registro']) ?>"
+									data-nombre="<?php echo htmlspecialchars($c['nombre_componente']) ?>"
+									data-descripcion="<?php echo htmlspecialchars($c['descripcion_componente']) ?>"
+									data-urls='<?php echo htmlspecialchars($c['urls']) ?>'>
+									<?php echo $c['nombre_componente'] ?>
+								</option>
 							<?php } ?>
 						</select>
 
@@ -331,10 +346,106 @@
 						<textarea name="editar_descripcion_componente" id="editar_descripcion_componente" rows="4" required
 							style="padding:8px; border:1px solid #ccc; border-radius:6px; margin-bottom:20px;"></textarea>
 
+						<label style="display:block; margin-bottom:6px;">URLs:</label>
+						<input type="url" name="urls[]" id="url_placeholder" style="padding:8px; border:1px solid #ccc; border-radius:6px; margin-bottom:12px;" />
+						<div id="urls_container_editar">
+							<!-- Aquí se agregarán las URLs dinámicamente -->
+						</div>
+						<div id="mensaje_sin_urls" style="color: #999; font-style: italic; font-size: 13px; margin-top: 5px; display: none;">
+							Este componente no tiene URLs registradas.
+						</div>
+
+						<button type="button"
+							id="btn_agregar_url_editar"
+							onclick="agregarUrl('urls_container_editar')"
+							style="display: none; padding: 8px 16px; background-color: #f1f1f1; color: #333; border: 1px solid #ccc; border-radius: 6px; font-weight: bold; cursor: pointer; width: 200px;transition: background-color 0.2s;margin-top: 10px; margin-bottom: 20px;"
+							onmouseover="this.style.backgroundColor='#e0e0e0'"
+							onmouseout="this.style.backgroundColor='#f1f1f1'">
+							➕ Añadir URL
+						</button>
+
 						<input type="submit" name="modificar_componente" id="modificar_componente" value="Modificar"
 							style="padding: 10px 20px; background-color:#28a745; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer; width: 200px" />
 					</form>
 				</fieldset>
+
+				<script>
+					function agregarUrl(containerId) {
+						const div = document.createElement('div');
+						div.className = 'url-item';
+						div.innerHTML = `
+							<input type="url" name="urls[]" placeholder="https://ejemplo.com" style="width:90%; padding:8px;" />
+							<button type="button" onclick="this.parentNode.remove()">❌</button>`;
+						document.getElementById(containerId).appendChild(div);
+					}
+
+					document.getElementById('editar_grupo_componentes').onchange = function() {
+						const selected = this.options[this.selectedIndex];
+
+						// Rellenar campos
+						document.getElementById('editar_n_registro').value = selected.getAttribute('data-n_registro');
+						document.getElementById('editar_nombre_componente').value = selected.getAttribute('data-nombre');
+						document.getElementById('editar_descripcion_componente').value = selected.getAttribute('data-descripcion');
+
+						// Limpiar y cargar URLs
+						const urlsContainer = document.getElementById('urls_container_editar');
+						urlsContainer.innerHTML = '';
+						let urlsJson = selected.getAttribute('data-urls');
+						let urls = [];
+						try {
+							urls = JSON.parse(urlsJson);
+						} catch (e) {
+							console.error("Error al parsear URLs:", e, urlsJson);
+						}
+
+						if (Array.isArray(urls)) {
+							urls.forEach(function(url) {
+								const div = document.createElement('div');
+								div.className = 'url-item';
+								div.innerHTML = `
+				<input type="url" name="urls[]" value="${url}" style="width:90%; padding:8px;" />
+				<button type="button" onclick="this.parentNode.remove()">❌</button>`;
+								urlsContainer.appendChild(div);
+							});
+						}
+
+						// Mostrar botón ➕
+						document.getElementById('btn_agregar_url_editar').style.display = 'inline-block';
+
+						const mensaje = document.getElementById('mensaje_sin_urls');
+						const placeholder = document.getElementById('url_placeholder');
+
+						if (!Array.isArray(urls) || urls.length === 0) {
+							mensaje.style.display = 'block';
+							placeholder.style.display = 'none';
+						} else {
+							mensaje.style.display = 'none';
+							placeholder.style.display = 'none';
+						}
+
+
+
+					};
+				</script>
+
+				<style>
+					.url-item input {
+						padding: 8px;
+						border: 1px solid #ccc;
+						border-radius: 6px;
+						margin-bottom: 12px;
+					}
+
+					.url-item button {
+						background-color: #ccc;
+						border: none;
+						border-radius: 6px;
+						padding: 5px 5px;
+						cursor: pointer;
+					}
+				</style>
+
+
 			</div>
 		</div>
 
