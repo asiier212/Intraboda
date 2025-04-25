@@ -637,8 +637,20 @@ class Admin extends CI_Controller
 					$datos['n_registro'] = $_POST['n_registro'];
 					$datos['nombre_componente'] = $_POST['nombre_componente'];
 					$datos['descripcion_componente'] = $_POST['descripcion_componente'];
-					$datos['nombre_url'] = isset($_POST['nombre_url']) ? $_POST['nombre_url'] : '';
-					$datos['urls'] = isset($_POST['urls']) ? json_encode(array_filter($_POST['urls'])) : json_encode(array());
+					$url_final = array();
+					if (isset($_POST['url_nombres']) && isset($_POST['url_links'])) {
+						for ($i = 0; $i < count($_POST['url_nombres']); $i++) {
+							$nombre = trim($_POST['url_nombres'][$i]);
+							$link = isset($_POST['url_links'][$i]) ? trim($_POST['url_links'][$i]) : '';
+							if ($nombre != '' && $link != '') {
+								$url_final[] = array(
+									'nombre' => $nombre,
+									'link' => $link
+								);
+							}
+						}
+					}
+					$datos['urls'] = json_encode($url_final);
 					$this->db->insert('componentes', $datos);
 
 					$id_componente = $this->db->insert_id();
@@ -677,28 +689,32 @@ class Admin extends CI_Controller
 
 			if (isset($_POST['modificar_componente'])) {
 				$this->load->database();
-			
-				$urls_limpias = array();
-				if (isset($_POST['urls']) && is_array($_POST['urls'])) {
-					foreach ($_POST['urls'] as $url) {
-						$url = trim($url);
-						if ($url !== '') {
-							$urls_limpias[] = $url; // <-- así forzamos índice numérico
+
+				$url_final = array();
+				if (isset($_POST['url_nombres']) && isset($_POST['url_links'])) {
+					for ($i = 0; $i < count($_POST['url_nombres']); $i++) {
+						$nombre = trim($_POST['url_nombres'][$i]);
+						$link = isset($_POST['url_links'][$i]) ? trim($_POST['url_links'][$i]) : '';
+						if ($nombre != '' && $link != '') {
+							$url_final[] = array(
+								'nombre' => $nombre,
+								'link' => $link
+							);
 						}
 					}
 				}
-			
-				$urls_json = json_encode($urls_limpias);
-			
+				$urls_json = json_encode($url_final);
+				
+
 				$this->db->query("UPDATE componentes 
-					SET nombre_componente = '" . $_POST['editar_nombre_componente'] . "', 
-						descripcion_componente = '" . $_POST['editar_descripcion_componente'] . "', 
-						n_registro = '" . $_POST['editar_n_registro'] . "', 
-						nombre_url = '" . $_POST['editar_nombre_url'] . "',
-						urls = '" . $urls_json . "' 
-					WHERE id_componente = " . (int)$_POST['editar_grupo_componentes']);
-			}
+				SET nombre_componente = '" . $_POST['editar_nombre_componente'] . "', 
+					descripcion_componente = '" . $_POST['editar_descripcion_componente'] . "', 
+					n_registro = '" . $_POST['editar_n_registro'] . "', 
+					urls = '" . $this->db->escape_str($urls_json) . "' 
+				WHERE id_componente = " . (int)$_POST['editar_grupo_componentes']);
 			
+			}
+
 
 			if (isset($_POST['asociar'])) {
 				$this->load->database();

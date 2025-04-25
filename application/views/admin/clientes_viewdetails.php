@@ -603,7 +603,7 @@
 														<span style="color:#444; margin-bottom:6px; font-size: 12px">(Nº Registro: <b><?php echo $c['n_registro'] . ")"; ?></b></span>
 													</div>
 													<div style="margin-bottom:6px; line-height:1.4; color:#333;">Descripción: <?php echo $c['descripcion_componente']; ?></div>
-													<div style="margin-bottom:6px; line-height:1.4; color:#333;">URLs:
+													<div style="margin-bottom:6px; line-height:1.4; color:#333;">
 														<?php
 														$urls = array();
 														if (isset($c['urls']) && !empty($c['urls'])) {
@@ -614,20 +614,25 @@
 														}
 														?>
 														<?php if (!empty($urls)): ?>
-															<ul>
-																<?php foreach ($urls as $url): ?>
-																	<li style="padding:0">
-																		<a href="<?php echo htmlspecialchars($url); ?>" target="_blank" style="color:#007bff;">
-																			<?php echo htmlspecialchars($url); ?>
+															URLs:
+															<ul style="padding-left: 10px; margin: 6px 0;">
+																<?php foreach ($urls as $item): ?>
+																	<?php
+																	$nombre = isset($item['nombre']) ? $item['nombre'] : 'Enlace';
+																	$link = isset($item['link']) ? $item['link'] : '#';
+																	?>
+																	<li style="padding: 0;">
+																		<strong><?php echo htmlspecialchars($nombre); ?>:</strong>
+																		<a href="<?php echo htmlspecialchars($link); ?>" target="_blank" style="color:#007bff;">
+																			<?php echo parse_url($link, PHP_URL_HOST); ?>
 																		</a>
 																	</li>
 																<?php endforeach; ?>
 															</ul>
-														<?php else: ?>
-															<span style="color:#999;"><em>Sin enlaces.</em></span>
-														<?php endif; ?>
-
+														<?php endif ?>
 													</div>
+
+
 
 													<?php if (!empty($c['reparaciones'])): ?>
 														<?php foreach ($c['reparaciones'] as $r): ?>
@@ -673,39 +678,41 @@
 									<input type="hidden" name="guardar_revisiones" value="1">
 									<input type="hidden" name="tipo_equipo_revision" value="<?php echo $tipo_equipo_loop; ?>">
 
-									<table style="width:100%; border-collapse: collapse; font-size:14px;">
-										<thead>
-											<tr style="background:#f2f2f2;">
-												<th style="text-align:left; padding:10px; border-bottom:1px solid #ddd; font-size: 16px">Componente</th>
-												<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Salida</th>
-												<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Fin Evento</th>
-												<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Pabellón</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php if (!empty($detalle['componentes'])): ?>
-												<?php foreach ($detalle['componentes'] as $c): ?>
-													<tr>
-														<td style="padding:10px; border-bottom:1px solid #eee; font-size: 17px">
-															<?php echo $c['nombre_componente']; ?>
-														</td>
-														<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
-															<input type="checkbox" style="transform: scale(1.5)" name="revision_salida[<?php echo $c['id_componente']; ?>]"
-																<?php echo in_array($c['id_componente'], $rev_salida) ? 'checked' : ''; ?>>
-														</td>
-														<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
-															<input type="checkbox" style="transform: scale(1.5)" name="revision_fin[<?php echo $c['id_componente']; ?>]"
-																<?php echo in_array($c['id_componente'], $rev_fin) ? 'checked' : ''; ?>>
-														</td>
-														<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
-															<input type="checkbox" style="transform: scale(1.5)" name="revision_pabellon[<?php echo $c['id_componente']; ?>]"
-																<?php echo in_array($c['id_componente'], $rev_pabellon) ? 'checked' : ''; ?>>
-														</td>
-													</tr>
-												<?php endforeach; ?>
-											<?php endif; ?>
-										</tbody>
-									</table>
+									<div style="max-height:55vh; overflow-y:auto;">
+										<table style="width:100%; border-collapse: collapse; font-size:14px; ">
+											<thead>
+												<tr style="background:#f2f2f2;">
+													<th style="text-align:left; padding:10px; border-bottom:1px solid #ddd; font-size: 16px">Componente</th>
+													<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Salida</th>
+													<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Fin Evento</th>
+													<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Pabellón</th>
+												</tr>
+											</thead>
+											<tbody>
+												<?php if (!empty($detalle['componentes'])): ?>
+													<?php foreach ($detalle['componentes'] as $c): ?>
+														<tr>
+															<td style="padding:10px; border-bottom:1px solid #eee; font-size: 17px">
+																<?php echo $c['nombre_componente']; ?>
+															</td>
+															<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
+																<input type="checkbox" style="transform: scale(1.5)" name="revision_salida[<?php echo $c['id_componente']; ?>]"
+																	<?php echo in_array($c['id_componente'], $rev_salida) ? 'checked' : ''; ?>>
+															</td>
+															<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
+																<input type="checkbox" style="transform: scale(1.5)" name="revision_fin[<?php echo $c['id_componente']; ?>]"
+																	<?php echo in_array($c['id_componente'], $rev_fin) ? 'checked' : ''; ?>>
+															</td>
+															<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
+																<input type="checkbox" style="transform: scale(1.5)" name="revision_pabellon[<?php echo $c['id_componente']; ?>]"
+																	<?php echo in_array($c['id_componente'], $rev_pabellon) ? 'checked' : ''; ?>>
+															</td>
+														</tr>
+													<?php endforeach; ?>
+												<?php endif; ?>
+											</tbody>
+										</table>
+									</div>
 
 									<div style="text-align:center; margin-top:20px;">
 										<button type="submit" style="padding:10px 20px; background:#93CE37; color:#fff; border:none; border-radius:4px; font-weight:bold; cursor:pointer; font-size:16px;">

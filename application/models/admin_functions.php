@@ -922,7 +922,6 @@ class Admin_functions extends CI_Model
 				$data[$i]['descripcion_componente'] = $fila->descripcion_componente;
 				$data[$i]['id_grupo'] = $fila->id_grupo;
 				$data[$i]['qr_path'] = $fila->qr_path; 
-				$data[$i]['nombre_url'] = $fila->nombre_url;
 				$data[$i]['urls'] = $fila->urls;
 				$i++;
 			}

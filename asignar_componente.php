@@ -183,8 +183,21 @@ if (isset($_SESSION['login_asignar_componente']) && $_SESSION['login_asignar_com
             $n_registro = trim($_POST['editar_n_registro']);
             $nombre = trim($_POST['editar_nombre_componente']);
             $descripcion = trim($_POST['editar_descripcion_componente']);
-            $urls_array = isset($_POST['urls']) && is_array($_POST['urls']) ? array_filter($_POST['urls']) : [];
-            $urls_json = json_encode(array_values($urls_array));
+            $urls = [];
+            if (!empty($_POST['url_nombre']) && !empty($_POST['url_link'])) {
+                for ($i = 0; $i < count($_POST['url_nombre']); $i++) {
+                    $nombre = trim($_POST['url_nombre'][$i]);
+                    $link = trim($_POST['url_link'][$i]);
+                    if ($nombre && $link) {
+                        $urls[] = [
+                            'nombre' => $nombre,
+                            'link' => $link
+                        ];
+                    }
+                }
+            }
+            $urls_json = json_encode($urls);
+
 
 
             if ($n_registro && $nombre && $descripcion) {
@@ -453,12 +466,23 @@ if (isset($_SESSION['mensaje'])) {
             ?>
                 <div style="margin-top: 12px;">
                     <strong>Enlaces relacionados:</strong>
-                    <ul>
-                        <?php foreach ($urls as $url): ?>
-                            <li><a href="<?= htmlspecialchars($url) ?>" target="_blank"><?= htmlspecialchars($url) ?></a></li>
+                    <ul style="padding-left: 18px; margin: 6px 0;">
+                        <?php foreach ($urls as $item): ?>
+                            <?php
+                            $nombre = isset($item['nombre']) ? $item['nombre'] : 'Enlace';
+                            $link = isset($item['link']) ? $item['link'] : '#';
+                            ?>
+                            <li>
+                                <strong><?= htmlspecialchars($nombre) ?>:</strong>
+                                <a href="<?= htmlspecialchars($link) ?>" target="_blank" style="color:#007bff;">
+                                <?= htmlspecialchars($link) ?>
+                                </a>
+                            </li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
+            <?php else: ?>
+                <p><strong>Enlaces relacionados:</strong> No hay enlaces relacionados.</p>
             <?php endif; ?>
 
             <div class="btn-group">
@@ -474,20 +498,32 @@ if (isset($_SESSION['mensaje'])) {
             <p><strong>Nº Registro:</strong> <?= $componente['n_registro'] ?></p>
             <p><strong>Nombre:</strong> <?= $componente['nombre_componente'] ?></p>
             <p><strong>Descripción:</strong> <?= $componente['descripcion_componente'] ?></p>
-                <?php
-                $urls = json_decode($componente['urls'], true);
+            <?php
+            $urls = json_decode($componente['urls'], true);
 
-                if (!empty($urls) && is_array($urls)):
-                ?>
-                    <p style="margin-top: 12px;">
-                    <ul>
-                        <strong>Enlaces relacionados:</strong>
-                        <?php foreach ($urls as $url): ?>
-                            <li><a href="<?= htmlspecialchars($url) ?>" target="_blank"><?= htmlspecialchars($url) ?></a></li>
+            if (!empty($urls) && is_array($urls)):
+            ?>
+                <div style="margin-top: 12px;">
+                    <strong>Enlaces relacionados:</strong>
+                    <ul style="padding-left: 18px; margin: 6px 0;">
+                        <?php foreach ($urls as $item): ?>
+                            <?php
+                            $nombre = isset($item['nombre']) ? $item['nombre'] : 'Enlace';
+                            $link = isset($item['link']) ? $item['link'] : '#';
+                            ?>
+                            <li>
+                                <strong><?= htmlspecialchars($nombre) ?>:</strong>
+                                <a href="<?= htmlspecialchars($link) ?>" target="_blank" style="color:#007bff;">
+                                <?= htmlspecialchars($link) ?>
+                                </a>
+                            </li>
                         <?php endforeach; ?>
                     </ul>
-                    </p>
-                <?php endif; ?>
+                </div>
+            <?php else: ?>
+                <p><strong>Enlaces relacionados:</strong> No hay enlaces relacionados.</p>
+            <?php endif; ?>
+
 
             <?php if ($equipo_actual): ?>
                 <p><strong>Equipo asignado:</strong> <?= $equipo_actual['nombre_grupo'] ?></p>
@@ -544,26 +580,41 @@ if (isset($_SESSION['mensaje'])) {
 
             <form method="post" id="modificarForm">
                 <label>Nº Registro:</label>
-                <input type="text" value="<?= $componente['n_registro'] ?>" name="editar_n_registro" required>
+                <input type="text" value="<?= $componente['n_registro'] ?>" name="editar_n_registro" required style="padding:6px 8px">
                 <label>Nombre:</label>
-                <input type="text" value="<?= $componente['nombre_componente'] ?>" name="editar_nombre_componente" required>
+                <input type="text" value="<?= $componente['nombre_componente'] ?>" name="editar_nombre_componente" required style="padding:6px 8px">
                 <label>Descripción:</label>
                 <textarea name="editar_descripcion_componente" rows="4" required><?= $componente['descripcion_componente'] ?></textarea>
                 <?php
                 $urls = json_decode($componente['urls'], true);
-
-                if (!empty($urls) && is_array($urls)):
+                if (!is_array($urls)) $urls = [];
                 ?>
-                    <div id="url-list" style="margin-top: 12px;">
-                        <strong>Enlaces relacionados:</strong>
-                        <?php foreach ($urls as $url): ?>
-                            <span style="display:flex; gap:2%;">
-                                <input type="url" name="urls[]" value="<?= htmlspecialchars($url) ?>" style="width: 90%; padding:8px; border-radius: 6px;" />
-                                <button type="button" onclick="this.parentNode.remove()" style="width: 8%; text-align: center;background-color: #ccc; boder: none; boder-radius: 6px; padding: 5px 5px; cursor: pointer;">❌</button>
-                            </span>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
+
+                <div id="url-list" style="margin-top: 12px;">
+                    <strong>Enlaces relacionados:</strong>
+                    <?php if (empty($urls)): ?>
+                        <p> No hay enlaces relacionados.</p>
+                    <?php endif; ?>
+                    <?php foreach ($urls as $item): ?>
+                        <div style="display: flex; gap: 2%; align-items: center;">
+                            <div class="url-item" style="display:flex; flex-direction: column;gap:2%; margin-bottom:8px; width: 93%;">
+                                <span style="display: flex; gap: 5px; align-items: center;">
+                                    Nombre:
+                                    <input type="text" name="url_nombre[]" value="<?= htmlspecialchars($item['nombre']) ?>" placeholder="Nombre del enlace"
+                                        style="padding:6px 8px; border-radius:6px; border:1px solid #ccc;" />
+                                </span>
+                                <span style="display: flex; gap: 5px ; align-items: center;">
+                                    Enlace:
+                                    <input type="url" name="url_link[]" value="<?= htmlspecialchars($item['link']) ?>" placeholder="https://..."
+                                        style="padding:6px 8px; border-radius:6px; border:1px solid #ccc;" />
+                                </span>
+                            </div>
+                            <button type="button" onclick="this.parentNode.remove()"
+                                style="background: none; border:none; cursor:pointer; width: 5%; margin:0; padding: 0; font-size: 16px">❌</button>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
                 <button type="button" class="btn-orange" style="margin-top:10px;" onclick="addUrlField()">➕ Añadir URL</button>
 
                 <button class="btn-yellow" type="button" onclick="solicitarLogin('modificar','modificarForm')">Guardar Cambios</button>
@@ -599,17 +650,26 @@ if (isset($_SESSION['mensaje'])) {
             const container = document.getElementById('url-list');
             const div = document.createElement('div');
             div.className = 'url-item';
+            div.style = 'display: flex; gap: 2%; align-items: center; border-top: 2px solid #696969; padding-top: 10px;';
             div.innerHTML = `
-                            <span style="display:flex; gap:2%;">
-                                <input type="url" name="urls[]" placeholder="https://ejemplo.com" style="width: 90%; padding:8px; border-radius: 6px;"/>
-                                <button type="button" onclick="this.parentNode.remove()" style="width: 8%; text-align: center;background-color: #ccc; boder: none; boder-radius: 6px; padding: 5px 5px; cursor: pointer;">❌</button>
-                            </span>
+        <div class="url-item" style="display:flex; flex-direction: column;gap:2%; margin-bottom:8px; width: 93%;">
+                                <span style="display: flex; gap: 5px; align-items: center;">
+                                    Nombre:
+                                    <input type="text" name="url_nombre[]" placeholder="Nombre del enlace"
+                                        style="padding:6px 8px; border-radius:6px; border:1px solid #ccc;" />
+                                </span>
+                                <span style="display: flex; gap: 5px ; align-items: center;">
+                                    Enlace:
+                                    <input type="url" name="url_link[]" placeholder="https://..."
+                                        style="padding:6px 8px; border-radius:6px; border:1px solid #ccc;" />
+                                </span>
+                            </div>
+                            <button type="button" onclick="this.parentNode.remove()"
+                                style="background: none; border:none; cursor:pointer; width: 5%; margin:0; padding: 0; font-size: 16px">❌</button>
     `;
             container.appendChild(div);
         }
     </script>
-
-
 
 </body>
 
