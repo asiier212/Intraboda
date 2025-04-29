@@ -131,6 +131,31 @@ class Invitado_functions extends CI_Model
 
 		return $data;
 	}
+
+	function GetDJsAsignados($id_cliente)
+	{
+		$this->load->database();
+	
+		$cliente = $this->db->query("
+			SELECT dj 
+			FROM clientes 
+			WHERE id = ?
+		", array($id_cliente))->row();
+	
+		if ($cliente && $cliente->dj) {
+			$query = $this->db->query("
+				SELECT id, nombre, telefono, email, foto 
+				FROM djs 
+				WHERE id = ?
+			", array($cliente->dj));
+	
+			return $query->result_array();
+		}
+	
+		return array(); // Devuelve array vacío si no hay DJ
+	}
+	
+
 	function GetServicios()
 	{
 		$data = false;

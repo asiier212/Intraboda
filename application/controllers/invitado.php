@@ -114,27 +114,37 @@ class Invitado extends CI_Controller
     }
 
     function cliente_viewdetails()
-    {
-        $data_header = false;
-        $data = false;
-        $data_footer = false;
+{
+    $data_header = false;
+    $data = false;
+    $data_footer = false;
 
-        $id = $this->invitado_functions->GetIdClienteForIdInvitado($this->session->userdata('id'));
+    $id = $this->invitado_functions->GetIdClienteForIdInvitado($this->session->userdata('id'));
 
-        $data['cliente'] = $this->invitado_functions->GetCliente($id);
-        $arr_servicios = unserialize($data['cliente']['servicios']);
-        $arr_serv_keys = array_keys($arr_servicios);
+    $data['cliente'] = $this->invitado_functions->GetCliente($id);
 
-        $data['servicios'] = $this->invitado_functions->GetServicios(implode(",", $arr_serv_keys));
-        $data['cliente'] = $this->invitado_functions->GetCliente($id);
-        $data['observaciones_cliente'] = $this->invitado_functions->GetObservaciones($id);
+    $arr_servicios = unserialize($data['cliente']['servicios']);
+    $arr_serv_keys = array_keys($arr_servicios);
 
-        $data['preguntas_encuesta_datos_boda'] = $this->invitado_functions->GetPreguntasEncuestaDatosBoda();
-        $data['opciones_respuestas_encuesta_datos_boda'] = $this->invitado_functions->GetOpcionesRespuestasEncuestaDatosBoda();
-        $data['respuesta_cliente'] = $this->invitado_functions->GetRespuestasEncuestaDatosBoda($id);
-        $view = "cliente_viewdetails";
-        $this->_loadViews($data_header, $data, $data_footer, $view);
+    $data['servicios'] = $this->invitado_functions->GetServicios(implode(",", $arr_serv_keys));
+    $data['observaciones_cliente'] = $this->invitado_functions->GetObservaciones($id);
+    $data['preguntas_encuesta_datos_boda'] = $this->invitado_functions->GetPreguntasEncuestaDatosBoda();
+    $data['opciones_respuestas_encuesta_datos_boda'] = $this->invitado_functions->GetOpcionesRespuestasEncuestaDatosBoda();
+    $data['respuesta_cliente'] = $this->invitado_functions->GetRespuestasEncuestaDatosBoda($id);
+
+    // 🔹 NUEVO: obtener DJ asignado
+    $cliente = $this->db->query("SELECT dj FROM clientes WHERE id = ?", array($id))->row();
+    if ($cliente && $cliente->dj) {
+        $dj = $this->db->query("SELECT id, nombre, telefono, email, foto FROM djs WHERE id = ?", array($cliente->dj))->result_array();
+        $data['djs'] = $dj;
+    } else {
+        $data['djs'] = array(); // vacío si no hay DJ
     }
+
+    $view = "cliente_viewdetails";
+    $this->_loadViews($data_header, $data, $data_footer, $view);
+}
+
 
     public function listado_canciones()
     {

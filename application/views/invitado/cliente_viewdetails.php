@@ -108,6 +108,42 @@
 
         </fieldset>
 
+        <fieldset>
+            <legend>DJ asignado</legend>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <?php if (isset($djs) && is_array($djs) && count($djs) > 0): ?>
+                    <?php foreach ($djs as $dj): ?>
+                        <li style="display: block; float:left; text-align: center;">
+                            <label style="float: none; margin: 0 auto; width: auto;">
+                                <table>
+                                    <tr>
+                                        <td align="center">
+                                            <?php if (isset($dj['foto']) && $dj['foto'] != ''): ?>
+                                                <img src="<?php echo base_url() . 'uploads/djs/' . $dj['foto']; ?>" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%;">
+                                            <?php endif; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <?php echo $dj['nombre']; ?><br>
+                                            Tel: <a href="https://wa.me/<?php echo preg_replace('/[^0-9]/', '', $dj['telefono']); ?>" target="_blank">
+                                                <?php echo $dj['telefono']; ?>
+                                            </a><br>
+                                            E-mail: <?php echo $dj['email']; ?>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </label>
+                        </li>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <li>No hay DJ asignado.</li>
+                <?php endif; ?>
+            </ul>
+        </fieldset>
+
+
 
         <fieldset class="datos">
             <legend>Servicios</legend>

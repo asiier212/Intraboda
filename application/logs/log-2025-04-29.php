@@ -694,3 +694,142 @@ DEBUG - 2025-04-29 10:16:15 --> File loaded: application/views/dj/clientes_viewd
 DEBUG - 2025-04-29 10:16:15 --> File loaded: application/views/dj/footer.php
 DEBUG - 2025-04-29 10:16:15 --> Final output sent to browser
 DEBUG - 2025-04-29 10:16:15 --> Total execution time: 0.1540
+DEBUG - 2025-04-29 11:07:28 --> Config Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Hooks Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Utf8 Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> UTF-8 Support Enabled
+DEBUG - 2025-04-29 11:07:28 --> URI Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Router Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Output Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Security Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Input Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-29 11:07:28 --> Language Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Loader Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Helper loaded: url_helper
+DEBUG - 2025-04-29 11:07:28 --> Controller Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Session Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Helper loaded: string_helper
+DEBUG - 2025-04-29 11:07:28 --> Session routines successfully run
+DEBUG - 2025-04-29 11:07:28 --> Model Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Model Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> Database Driver Class Initialized
+ERROR - 2025-04-29 11:07:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-29 11:07:28 --> Encrypt Class Initialized
+DEBUG - 2025-04-29 11:07:28 --> DB Transaction Failure
+ERROR - 2025-04-29 11:07:28 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+DEBUG - 2025-04-29 11:07:28 --> Language file loaded: language/spanish/db_lang.php
+DEBUG - 2025-04-29 11:07:51 --> Config Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Hooks Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-29 11:07:51 --> URI Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Router Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Output Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Security Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Input Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-29 11:07:51 --> Language Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Loader Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Helper loaded: url_helper
+DEBUG - 2025-04-29 11:07:51 --> Controller Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Session Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Helper loaded: string_helper
+DEBUG - 2025-04-29 11:07:51 --> Session routines successfully run
+DEBUG - 2025-04-29 11:07:51 --> Model Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Model Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Database Driver Class Initialized
+ERROR - 2025-04-29 11:07:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-29 11:07:51 --> Encrypt Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> DB Transaction Failure
+ERROR - 2025-04-29 11:07:51 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+DEBUG - 2025-04-29 11:07:51 --> Language file loaded: language/spanish/db_lang.php
+DEBUG - 2025-04-29 11:07:51 --> Config Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Hooks Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Utf8 Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> UTF-8 Support Enabled
+DEBUG - 2025-04-29 11:07:51 --> URI Class Initialized
+DEBUG - 2025-04-29 11:07:51 --> Router Class Initialized
+ERROR - 2025-04-29 11:07:51 --> 404 Page Not Found --> favicon.ico
+DEBUG - 2025-04-29 11:07:52 --> Config Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Hooks Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> UTF-8 Support Enabled
+DEBUG - 2025-04-29 11:07:52 --> URI Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Router Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Output Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Security Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Input Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-29 11:07:52 --> Language Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Loader Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Helper loaded: url_helper
+DEBUG - 2025-04-29 11:07:52 --> Controller Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Session Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Helper loaded: string_helper
+DEBUG - 2025-04-29 11:07:52 --> Session routines successfully run
+DEBUG - 2025-04-29 11:07:52 --> Model Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Model Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Database Driver Class Initialized
+ERROR - 2025-04-29 11:07:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-29 11:07:52 --> Encrypt Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> DB Transaction Failure
+ERROR - 2025-04-29 11:07:52 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+DEBUG - 2025-04-29 11:07:52 --> Language file loaded: language/spanish/db_lang.php
+DEBUG - 2025-04-29 11:07:52 --> Config Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Hooks Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Utf8 Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> UTF-8 Support Enabled
+DEBUG - 2025-04-29 11:07:52 --> URI Class Initialized
+DEBUG - 2025-04-29 11:07:52 --> Router Class Initialized
+ERROR - 2025-04-29 11:07:52 --> 404 Page Not Found --> favicon.ico
+DEBUG - 2025-04-29 11:11:54 --> Config Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Hooks Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Utf8 Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> UTF-8 Support Enabled
+DEBUG - 2025-04-29 11:11:54 --> URI Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Router Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Output Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Security Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Input Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-29 11:11:54 --> Language Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Loader Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Helper loaded: url_helper
+DEBUG - 2025-04-29 11:11:54 --> Controller Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Session Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Helper loaded: string_helper
+DEBUG - 2025-04-29 11:11:54 --> Session routines successfully run
+DEBUG - 2025-04-29 11:11:54 --> Model Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Model Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> Database Driver Class Initialized
+ERROR - 2025-04-29 11:11:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-29 11:11:54 --> Encrypt Class Initialized
+DEBUG - 2025-04-29 11:11:54 --> DB Transaction Failure
+ERROR - 2025-04-29 11:11:54 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+DEBUG - 2025-04-29 11:11:54 --> Language file loaded: language/spanish/db_lang.php
+DEBUG - 2025-04-29 11:11:55 --> Config Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Hooks Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Utf8 Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> UTF-8 Support Enabled
+DEBUG - 2025-04-29 11:11:55 --> URI Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Router Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Output Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Security Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Input Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-04-29 11:11:55 --> Language Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Loader Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Helper loaded: url_helper
+DEBUG - 2025-04-29 11:11:55 --> Controller Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Session Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Helper loaded: string_helper
+DEBUG - 2025-04-29 11:11:55 --> Session routines successfully run
+DEBUG - 2025-04-29 11:11:55 --> Model Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Model Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> Database Driver Class Initialized
+ERROR - 2025-04-29 11:11:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-04-29 11:11:55 --> Encrypt Class Initialized
+DEBUG - 2025-04-29 11:11:55 --> DB Transaction Failure
+ERROR - 2025-04-29 11:11:55 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+DEBUG - 2025-04-29 11:11:55 --> Language file loaded: language/spanish/db_lang.php
