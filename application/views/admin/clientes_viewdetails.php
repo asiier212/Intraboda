@@ -164,9 +164,31 @@
 		float: right
 	}
 </style>
-<h2>
-	Detalles del cliente
-</h2>
+<span class="spantitulo" style="display: flex; justify-content: space-between; align-items: center">
+	<h2>
+		Detalles del cliente
+	</h2>
+	<button onclick="window.open('<?php echo base_url() ?>admin/admin_chat/<?php echo $cliente['id'] ?>', '_blank')">Chatear con <?php echo $cliente['nombre_novio'] . " y " . $cliente['nombre_novia'] ?></button>
+</span>
+
+<style>
+	.spantitulo button {
+		margin-bottom: 20px;
+		padding: 8px 20px;
+		background-color: #93CE37;
+		border: 2px solid rgb(90, 119, 43);
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: bold;
+		color: rgb(38, 46, 25);
+		cursor: pointer;
+	}
+
+	.spantitulo button:hover {
+		transform: scale(1.02);
+		transition: transform 0.3s ease;
+	}
+</style>
 <div class="main form">
 
 	<?php

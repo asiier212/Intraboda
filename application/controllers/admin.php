@@ -704,7 +704,7 @@ class Admin extends CI_Controller
 					}
 				}
 				$urls_json = json_encode($url_final);
-				
+
 
 				$this->db->query("UPDATE componentes 
 				SET nombre_componente = '" . $_POST['editar_nombre_componente'] . "', 
@@ -712,7 +712,6 @@ class Admin extends CI_Controller
 					n_registro = '" . $_POST['editar_n_registro'] . "', 
 					urls = '" . $this->db->escape_str($urls_json) . "' 
 				WHERE id_componente = " . (int)$_POST['editar_grupo_componentes']);
-			
 			}
 
 
@@ -993,6 +992,104 @@ class Admin extends CI_Controller
 		$view = "restaurantes_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
+
+	public function admin_chat($id_cliente)
+	{
+		$data_header = false;
+		$data_footer = false;
+		$data = false;
+
+		$this->load->database();
+
+		// Procesar envío de mensaje
+		if ($_POST && isset($_POST['mensaje']) && trim($_POST['mensaje']) != '') {
+			$mensaje = $this->input->post('mensaje');
+
+			// Insertar en la base de datos
+			$this->db->query("
+            INSERT INTO contacto (id_cliente, usuario, id_usuario, mensaje, fecha)
+            VALUES (?, 'administrador', ?, ?, NOW())
+        ", [$id_cliente, $this->session->userdata('user_id'), $mensaje]);
+
+			// Recuperar emails de los novios
+			$cliente = $this->db->query("SELECT email_novio, email_novia FROM clientes WHERE id = ?", [$id_cliente])->row();
+
+			if ($cliente) {
+				$from = 'info@exeleventos.com';
+				$subject = "Nuevo mensaje de vuestro Coordinador en el chat de coordinación";
+				$mensaje_usuario = $mensaje; // El contenido del mensaje
+				$url_chat_cliente = "https://intranet.exeleventos.com/cliente/chat";
+
+				$mensaje_email = "
+<div style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto;'>
+    <h2 style='color: #0b5394;'>¡Nuevo mensaje del Coordinador!</h2>
+    <p>Hola pareja,</p>
+    <p>El Coordinador de vuestra boda os ha enviado el siguiente mensaje:</p>
+    <blockquote style='background: #d2e3ff; padding: 15px; border-left: 5px solid #0b5394; margin: 20px 0; font-style: italic;'>
+        {$mensaje_usuario}
+    </blockquote>
+    <p>Podéis responder accediendo al área privada de vuestra boda haciendo clic en el siguiente botón:</p>
+    <div style='text-align: center; margin: 30px 0;'>
+        <a href='{$url_chat_cliente}' style='background-color: #0b5394; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold;'>Ir al chat</a>
+    </div>
+    <p>Un saludo,<br><strong>Equipo de Exel Eventos</strong></p>
+</div>
+";
+
+				// ✅ Enviar email por separado a cada uno
+
+				// Email al novio
+				if (!empty($cliente->email_novio)) {
+					$this->sendEmail($from, [$cliente->email_novio], $subject, $mensaje_email);
+				}
+
+				// Email a la novia
+				if (!empty($cliente->email_novia)) {
+					$this->sendEmail($from, [$cliente->email_novia], $subject, $mensaje_email);
+				}
+			}
+
+			// 🔥 Redireccionar después de enviar
+			redirect("admin/admin_chat/$id_cliente");
+		}
+
+		// Cargar datos para la vista
+		$data['mensajes_contacto'] = $this->admin_functions->GetMensajesContacto($id_cliente);
+		$data['nombre_chat'] = $this->admin_functions->GetTituloChat($id_cliente);
+		$data['id_cliente'] = $id_cliente;
+
+		// Obtener datos del cliente
+		$cliente = $this->db->query("SELECT foto, dj FROM clientes WHERE id = ?", [$id_cliente])->row();
+
+		// Foto del cliente
+		if ($cliente && !empty($cliente->foto)) {
+			$data['foto_cliente'] = base_url() . 'uploads/foto_perfil/' . $cliente->foto;
+		} else {
+			$data['foto_cliente'] = base_url() . 'uploads/desconocido.jpg';
+		}
+
+		// Obtener datos del DJ
+		$dj = null;
+		if ($cliente && $cliente->dj) {
+			$dj = $this->db->query("SELECT nombre, foto FROM djs WHERE id = ?", [$cliente->dj])->row();
+		}
+
+		// Foto del DJ
+		if ($dj && !empty($dj->foto)) {
+			$data['foto_dj'] = base_url() . 'uploads/djs/' . $dj->foto;
+		} else {
+			$data['foto_dj'] = base_url() . 'uploads/desconocido.jpg';
+		}
+
+		// Foto del coordinador
+		$data['foto_coordinador'] = base_url() . 'img/logo.jpg'; // Puedes cambiarlo a 'uploads/desconocido.jpg' si quieres
+
+
+
+
+		$this->_loadViews($data_header, $data, $data_footer, "admin_chat");
+	}
+
 
 
 
@@ -2514,8 +2611,6 @@ class Admin extends CI_Controller
 					$mail->addCC($to[$i]);
 				}
 			}
-
-			/* $mail->addBCC('bcc@example.com'); */
 
 			// Email subject
 			$mail->Subject = $subject;

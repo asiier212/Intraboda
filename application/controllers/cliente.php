@@ -622,152 +622,123 @@ class Cliente extends CI_Controller
 		$this->_loadViews($data_header, $data, $data_footer, "cliente_details");
 	}
 
-
 	public function chat()
 	{
 		$data_header = false;
 		$data_footer = false;
-		$data['email_novia'] = $this->session->userdata('email_novia');
-		$data['email_novio'] = $this->session->userdata('email_novio');
-		/*$data['personas_contacto'] = $this->cliente_functions->GetPersonasContacto($this->session->userdata('user_id'));
-		
-		if($_POST){
-			$this->load->database();
-			$query = $this->db->query("SELECT email FROM personas_contacto WHERE id = ".$_POST['personas_contacto']."");	
-			$fila = $query->row();
-			$email_to = $fila->email;
-			
-			$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-			$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-			//$cabeceras .= 'From: '.$_POST['mail_desde'];
-			$cabeceras .= 'From: '.$_POST['mail_desde'];
-		
-			$query = $this->db->query("SELECT DATE_FORMAT(fecha_boda, '%d-%m-%Y %H:%i') as fecha_boda FROM clientes WHERE id = ".$this->session->userdata('user_id')."");	
-			$fila = $query->row();
-			$fecha_boda = $fila->fecha_boda;
-			
-			$mensaje = "Mensaje de la pagina de contacto desde: ". $this->session->userdata('nombre_novia') . "(".$this->session->userdata('email_novia').") & ". $this->session->userdata('nombre_novio') . "(".$this->session->userdata('email_novio').")<br/>Fecha del evento: {$fecha_boda}<br/><br/>" . $_POST['mensaje'];
-			$data['send'] = mail($email_to, "IntraBoda - Mensaje del usuario: ".$_POST['asunto'], $mensaje, $cabeceras);
-			
-		
-			//$data['msg'] = $this->cliente_functions->SendMailPersona($_POST['personas_contacto'],$_POST['mail_desde'],$_POST['asunto'],$_POST['mensaje']); 
-			
-			
-		}*/
-
-		$data['mensajes_contacto'] = $this->cliente_functions->GetMensajesContacto($this->session->userdata('user_id'));
-		if ($_POST) {
-			$this->load->database();
-			$email_dj = "";
-
-			//Datos para los emails
-			$query = $this->db->query("SELECT djs.email as email_dj FROM djs JOIN clientes WHERE djs.id=clientes.dj AND clientes.id = " . $this->session->userdata('user_id') . "");
-			if ($query->num_rows() > 0) {
-				$fila = $query->row();
-				$email_dj = $fila->email_dj;
+		$data = false;
+	
+		$this->load->database();
+	
+		$id_cliente = $this->session->userdata('user_id');
+	
+		if ($_POST && isset($_POST['mensaje']) && trim($_POST['mensaje']) != '') {
+			$mensaje = $this->input->post('mensaje');
+	
+			// Insertar mensaje en base de datos
+			$this->db->query("
+				INSERT INTO contacto (id_cliente, usuario, id_usuario, mensaje, fecha)
+				VALUES (?, 'cliente', ?, ?, NOW())
+			", [$id_cliente, $id_cliente, $mensaje]);
+	
+			// Recuperar emails de oficina y DJ
+			$cliente = $this->db->query("
+				SELECT dj, id_oficina 
+				FROM clientes 
+				WHERE id = ?
+			", [$id_cliente])->row();
+	
+			if ($cliente) {
+				$from = 'info@exeleventos.com';
+				$subject = "Nuevo mensaje del cliente en el chat de coordinación";
+				$mensaje_usuario = $mensaje;
+	
+				// Enviar email al DJ
+				if ($cliente->dj) {
+					$dj = $this->db->query("SELECT email FROM djs WHERE id = ?", [$cliente->dj])->row();
+					if ($dj && !empty($dj->email)) {
+						$boton_url_dj = "https://intranet.exeleventos.com/dj/dj_chat/" . $id_cliente;
+	
+						$mensaje_email_dj = "
+	<div style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto;'>
+		<h2 style='color: #25d366;'>¡Nuevo mensaje de un cliente!</h2>
+		<p>Hola,</p>
+		<p>Un cliente ha enviado el siguiente mensaje a través del chat de coordinación:</p>
+		<blockquote style='background: #d4edda; padding: 15px; border-left: 5px solid #25d366; margin: 20px 0; font-style: italic;'>
+			{$mensaje_usuario}
+		</blockquote>
+		<p>Podéis responder accediendo a la intranet haciendo clic en el siguiente botón:</p>
+		<div style='text-align: center; margin: 30px 0;'>
+			<a href='{$boton_url_dj}' style='background-color: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold;'>Ir al chat</a>
+		</div>
+		<p>Un saludo,<br><strong>Equipo de Exel Eventos</strong></p>
+	</div>
+	";
+						$this->sendEmail($from, [$dj->email], $subject, $mensaje_email_dj);
+					}
+				}
+	
+				// Enviar email al Coordinador
+				if ($cliente->id_oficina) {
+					$oficina = $this->db->query("SELECT email FROM oficinas WHERE id_oficina = ?", [$cliente->id_oficina])->row();
+					if ($oficina && !empty($oficina->email)) {
+						$boton_url_admin = "https://intranet.exeleventos.com/admin/admin_chat/" . $id_cliente;
+	
+						$mensaje_email_admin = "
+	<div style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto;'>
+		<h2 style='color: #25d366;'>¡Nuevo mensaje de un cliente!</h2>
+		<p>Hola,</p>
+		<p>Un cliente ha enviado el siguiente mensaje a través del chat de coordinación:</p>
+		<blockquote style='background: #d4edda; padding: 15px; border-left: 5px solid #25d366; margin: 20px 0; font-style: italic;'>
+			{$mensaje_usuario}
+		</blockquote>
+		<p>Podéis responder accediendo a la intranet haciendo clic en el siguiente botón:</p>
+		<div style='text-align: center; margin: 30px 0;'>
+			<a href='{$boton_url_admin}' style='background-color: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold;'>Ir al chat</a>
+		</div>
+		<p>Un saludo,<br><strong>Equipo de Exel Eventos</strong></p>
+	</div>
+	";
+						$this->sendEmail($from, [$oficina->email], $subject, $mensaje_email_admin);
+					}
+				}
 			}
-
-			$query = $this->db->query("SELECT oficinas.email as email_oficina FROM oficinas JOIN clientes WHERE oficinas.id_oficina=clientes.id_oficina AND clientes.id = " . $this->session->userdata('user_id') . "");
-			$fila = $query->row();
-			$email_oficina = $fila->email_oficina;
-
-			$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-			$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-			$cabeceras .= 'From: ' . $data['email_novio'];
-			$header_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_header');
-			$footer_mail = 'http://www.bilbodj.com/intranetv3/' . $this->config->item('email_footer');
-
-			$local = 'http://' . $_SERVER['HTTP_HOST'] . base_url();
-
-			$mensaje = '<html>
-						<head>
-						</head>
-						
-						<body>
-						<table width="100%">
-						<tr>
-						  <td>
-								<img src="' . $header_mail . '" width="100%">
-						  </td>
-						</tr>';
-
-
-			if ($this->session->userdata('admin')) {
-				//Mandamos email a los dos novios
-				$usuario = 'administrador';
-				$id_usuario = "";
-				$id_cliente = $this->session->userdata('user_id');
-
-				$asunto = 'BilboDJ ha contactado contigo';
-				$mensaje_cliente = $mensaje . '<tr><td>
-                                        <tr><td align="justify">
-                                              <div style="padding:50px;">
-                                        ' . utf8_decode('BilboDJ ha contactado contigo, por favor accede a la sección <strong>chat</strong> de tu panel de cliente <a href="http://www.bilbodj.com/intranetv3/cliente" target="_blank">AQUÍ</a>.') . '
-                                        </div>
-                                      </td></tr>
-                                      <tr>
-                                        <td>'
-					. $_POST["mensaje"] .
-					'</td>
-                                      </tr>
-                                            <tr>
-                                                    <td align="center"><img src="' . $footer_mail . '" width="100%"></td>
-                                            </tr>
-						  </table>
-						  </body>
-						  </html>';
-				$mensaje = $mensaje_cliente;
-				$hay_email_novio = strpos($this->session->userdata('email_novio'), '@');
-				$hay_email_novia = strpos($this->session->userdata('email_novia'), '@');
-				$destino = [];
-				if ($hay_email_novio !== false) {
-					//mail($this->session->userdata('email_novio'), $asunto, $mensaje_cliente, $cabeceras);
-					$destino[] = $this->session->userdata('email_novio');
-				}
-				if ($hay_email_novia !== false) {
-					//mail($this->session->userdata('email_novia'), $asunto, $mensaje_cliente, $cabeceras);
-					$destino[] = $this->session->userdata('email_novia');
-				}
-				if (count($destino) > 0) {
-					$this->sendEmail('info@exeleventos.com', $destino, $asunto, $mensaje);
-				}
-			} else {
-				//Mandamos email al dj y a la oficina
-				$usuario = 'cliente';
-				$id_usuario = $this->session->userdata('user_id');
-				$id_cliente = $this->session->userdata('user_id');
-
-				$asunto = 'Un cliente ha contactado contigo';
-				$mensaje_oficina_y_dj = $mensaje . '
-                                                        <tr><td align="justify">
-                                                              <div style="padding:50px;">' .
-					utf8_decode('El cliente <strong>' . $this->session->userdata('nombre_novio') . ' ' . $this->session->userdata('apellidos_novio') . '</strong> (' . $this->session->userdata('email_novio') . ') y <strong>' . $this->session->userdata('nombre_novia') . ' ' . $this->session->userdata('apellidos_novia') . '</strong> (' . $this->session->userdata('email_novia') . ') te ha escrito: ' . $_POST['mensaje'] . 'Accede a tu panel para ver la conversación completa.
-                                                              </div>
-                                                      </td></tr>
-										
-										 
-							<tr>
-									<td align="center"><img src="http://www.bilbodj.com/intranetv3/img/img_mail/pie.jpg" width="100%"></td>
-								</tr>
-						  </table>
-						  </body>
-						  </html>');
-				//mail($email_oficina, $asunto, $mensaje_oficina_y_dj, $cabeceras);
-				$destino[] = $email_oficina;
-				if ($email_dj != "") {
-					//mail($email_dj, $asunto, $mensaje_oficina_y_dj, $cabeceras);
-					$destino[] = $email_dj;
-				}
-				$this->sendEmail('info@exeleventos.com', $destino, $asunto, $mensaje_oficina_y_dj);
-			}
-
-			$this->db->query("INSERT INTO contacto (id_cliente, usuario, id_usuario, mensaje) VALUES ('" . $id_cliente . "','" . $usuario . "','" . $id_usuario . "','" . str_replace("'", "''", $_POST['mensaje']) . "')");
-
+	
+			// Redirigir después de enviar
 			redirect('cliente/chat');
 		}
-
+	
+		// Obtener mensajes
+		$data['mensajes_contacto'] = $this->cliente_functions->GetMensajesContacto($id_cliente);
+		$data['nombre_chat'] = $this->cliente_functions->GetTituloChat($id_cliente);
+	
+		// Obtener fotos
+		$cliente = $this->db->query("SELECT foto, dj FROM clientes WHERE id = ?", [$id_cliente])->row();
+	
+		if ($cliente && !empty($cliente->foto)) {
+			$data['foto_cliente'] = base_url() . 'uploads/foto_perfil/' . $cliente->foto;
+		} else {
+			$data['foto_cliente'] = base_url() . 'uploads/desconocido.jpg';
+		}
+	
+		$dj = null;
+		if ($cliente && $cliente->dj) {
+			$dj = $this->db->query("SELECT nombre, foto FROM djs WHERE id = ?", [$cliente->dj])->row();
+		}
+	
+		if ($dj && !empty($dj->foto)) {
+			$data['foto_dj'] = base_url() . 'uploads/djs/' . $dj->foto;
+		} else {
+			$data['foto_dj'] = base_url() . 'uploads/desconocido.jpg';
+		}
+	
+		$data['foto_coordinador'] = base_url() . 'img/logo.jpg'; // o 'uploads/desconocido.jpg'
+	
+		// Cargar la vista
 		$this->_loadViews($data_header, $data, $data_footer, "chat");
 	}
+	
+
 
 	public function canciones()
 	{

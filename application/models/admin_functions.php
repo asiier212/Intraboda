@@ -211,13 +211,13 @@ class Admin_functions extends CI_Model
 		$this->db->where('id_grupo', $id_grupo);
 		$this->db->where('borrado', 0);
 		$this->db->update('grupos_equipos', ['orden' => $orden]);
-	
+
 		if ($this->db->affected_rows() == 0) {
 			log_message('error', "❌ No se pudo actualizar el orden del equipo $id_grupo");
 		}
 	}
-	
-	
+
+
 
 
 	public function get_equipo_nombre($id_grupo)
@@ -908,6 +908,84 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
+	public function GetMensajesContacto($id_cliente)
+	{
+		$this->load->database();
+		$data = [];
+
+		// Obtener info del cliente y DJ asociado
+		$cliente = $this->db->query("
+		SELECT CONCAT(nombre_novio, ' ', apellidos_novio, ' y ', nombre_novia, ' ', apellidos_novia) AS nombre_completo, foto, dj FROM clientes WHERE id = $id_cliente")->row();
+		$dj = $cliente && $cliente->dj ? $this->db->query("SELECT nombre, foto FROM djs WHERE id = $cliente->dj")->row() : null;
+
+		// Obtener mensajes
+		$query = $this->db->query("
+		SELECT c.*, 
+			  CONCAT(nombre_novio, ' ', apellidos_novio, ' y ', nombre_novia, ' ', apellidos_novia) AS nombre_completo, cl.foto, cl.dj 
+		FROM contacto c 
+		JOIN clientes cl ON cl.id = c.id_cliente 
+		WHERE c.id_cliente = $id_cliente 
+		ORDER BY c.fecha ASC
+	");
+
+		foreach ($query->result() as $m) {
+			$item = [
+				'id_mensaje' => $m->id_mensaje,
+				'id_cliente' => $m->id_cliente,
+				'fecha' => $m->fecha,
+				'usuario' => $m->usuario,
+				'id_usuario' => $m->id_usuario,
+				'mensaje' => $m->mensaje,
+				'foto' => $m->foto_cliente,
+				'dj' => $m->dj,
+				'nombre_completo' => $m->nombre_completo,
+
+			];
+
+			if ($m->usuario === 'cliente') {
+				$item['nombre'] = $cliente->nombre;
+				$item['foto'] = $cliente->foto;
+			} elseif ($m->usuario === 'dj' && $dj) {
+				$item['nombre_dj'] = $dj->nombre;
+				$item['foto'] = $dj->foto;
+			} elseif ($m->usuario === 'administrador') {
+				$item['nombre'] = 'Admin';
+				$item['foto'] = 'logo.jpg';
+			}
+
+			$data[] = $item;
+		}
+		return $data;
+	}
+
+	public function GetTituloChat($id_cliente)
+	{
+		$this->load->database();
+	
+		$cliente = $this->db->query("
+			SELECT nombre_novio, apellidos_novio, nombre_novia, apellidos_novia, dj
+			FROM clientes
+			WHERE id = $id_cliente
+		")->row();
+	
+		$titulo = '';
+	
+		if ($cliente) {
+			$titulo = $cliente->nombre_novio . ', ' .
+					  $cliente->nombre_novia;
+	
+			if ($cliente->dj) {
+				$dj = $this->db->query("SELECT nombre FROM djs WHERE id = {$cliente->dj}")->row();
+				if ($dj) {
+					$titulo .= ' y DJ ' . $dj->nombre;
+				}
+			}
+		}
+	
+		return $titulo;
+	}
+
+	
 	function GetComponentes()
 	{
 		$data = [];
@@ -921,7 +999,7 @@ class Admin_functions extends CI_Model
 				$data[$i]['n_registro'] = $fila->n_registro;
 				$data[$i]['descripcion_componente'] = $fila->descripcion_componente;
 				$data[$i]['id_grupo'] = $fila->id_grupo;
-				$data[$i]['qr_path'] = $fila->qr_path; 
+				$data[$i]['qr_path'] = $fila->qr_path;
 				$data[$i]['urls'] = $fila->urls;
 				$i++;
 			}

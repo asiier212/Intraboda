@@ -377,6 +377,123 @@ class Dj extends CI_Controller
 		$this->_loadViews($data_header, $data, $data_footer,  "servicios_" . $acc);
 	}
 
+	public function dj_chat($id)
+	{
+		$data_header = false;
+		$data_footer = false;
+		$data = false;
+
+		$this->load->database();
+
+		if ($_POST && isset($_POST['mensaje']) && trim($_POST['mensaje']) != '') {
+			$mensaje = $this->input->post('mensaje');
+
+			// Insertar mensaje en la base de datos
+			$this->db->query("
+				INSERT INTO contacto (id_cliente, usuario, id_usuario, mensaje, fecha)
+				VALUES (?, 'dj', ?, ?, NOW())
+			", [$id, $this->session->userdata('user_id'), $mensaje]);
+
+			// --- Recuperar emails necesarios ---
+			$cliente = $this->db->query("
+				SELECT email_novio, email_novia, id_oficina 
+				FROM clientes 
+				WHERE id = ?
+			", [$id])->row();
+
+			$oficina = $cliente ? $this->db->query("SELECT email FROM oficinas WHERE id_oficina = ?", [$cliente->id_oficina])->row() : null;
+
+			if ($cliente) {
+				$from = 'info@exeleventos.com';
+				$subject = "Nuevo mensaje de vuestro DJ en el chat de coordinación";
+				$mensaje_usuario = $mensaje;
+
+				// --- Enviar a Novio ---
+				if (!empty($cliente->email_novio)) {
+					$boton_url_cliente = "https://intranet.exeleventos.com/cliente/chat";
+					$mensaje_email_novio = "
+					<div style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto;'>
+						<h2 style='color: #6a1b9a;'>¡Nuevo mensaje del DJ!</h2>
+						<p>Hola pareja,</p>
+						<p>El DJ que os acompañará en vuestro gran día os ha enviado el siguiente mensaje:</p>
+						<blockquote style='background: #e6ccff; padding: 15px; border-left: 5px solid #6a1b9a; margin: 20px 0; font-style: italic;'>
+							{$mensaje_usuario}
+						</blockquote>
+						<p>Podéis responder accediendo al área privada de vuestra boda haciendo clic en el siguiente botón:</p>
+						<div style='text-align: center; margin: 30px 0;'>
+							<a href='{$boton_url_cliente}' style='background-color: #6a1b9a; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold;'>Ir al chat</a>
+						</div>
+						<p>Un saludo,<br><strong>Equipo de Exel Eventos</strong></p>
+					</div>
+					";
+					$this->sendEmail($from, [$cliente->email_novio], $subject, $mensaje_email_novio);
+				}
+
+				// --- Enviar a Novia ---
+				if (!empty($cliente->email_novia)) {
+					$boton_url_cliente = "https://intranet.exeleventos.com/cliente/chat";
+					$mensaje_email_novia = "
+					<div style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto;'>
+						<h2 style='color: #6a1b9a;'>¡Nuevo mensaje del DJ!</h2>
+						<p>Hola pareja,</p>
+						<p>El DJ que os acompañará en vuestro gran día os ha enviado el siguiente mensaje:</p>
+						<blockquote style='background: #e6ccff; padding: 15px; border-left: 5px solid #6a1b9a; margin: 20px 0; font-style: italic;'>
+							{$mensaje_usuario}
+						</blockquote>
+						<p>Podéis responder accediendo al área privada de vuestra boda haciendo clic en el siguiente botón:</p>
+						<div style='text-align: center; margin: 30px 0;'>
+							<a href='{$boton_url_cliente}' style='background-color: #6a1b9a; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold;'>Ir al chat</a>
+						</div>
+						<p>Un saludo,<br><strong>Equipo de Exel Eventos</strong></p>
+					</div>
+					";
+					$this->sendEmail($from, [$cliente->email_novia], $subject, $mensaje_email_novia);
+				}
+
+				// --- Enviar a Coordinador (oficina) ---
+				if ($oficina && !empty($oficina->email)) {
+					$boton_url_oficina = "https://intranet.exeleventos.com/admin/admin_chat/" . $id;
+					$mensaje_email_oficina = "
+					<div style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto;'>
+						<h2 style='color: #6a1b9a;'>¡Nuevo mensaje del DJ!</h2>
+						<p>Hola,</p>
+						<p>Un DJ ha enviado el siguiente mensaje en el chat de coordinación:</p>
+						<blockquote style='background: #e6ccff; padding: 15px; border-left: 5px solid #6a1b9a; margin: 20px 0; font-style: italic;'>
+							{$mensaje_usuario}
+						</blockquote>
+						<p>Podéis ver y responder al mensaje accediendo al área privada de coordinación haciendo clic en el siguiente botón:</p>
+						<div style='text-align: center; margin: 30px 0;'>
+							<a href='{$boton_url_oficina}' style='background-color: #6a1b9a; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold;'>Ir al chat</a>
+						</div>
+						<p>Un saludo,<br><strong>Equipo de Exel Eventos</strong></p>
+					</div>
+					";
+					$this->sendEmail($from, [$oficina->email], $subject, $mensaje_email_oficina);
+				}
+			}
+
+			// 🔥 Ahora sí haces el redirect, después de insertar + enviar correo
+			redirect("dj/dj_chat/$id");
+		}
+
+		// Si no es un post, o después del post, carga la vista
+		$data['mensajes_contacto'] = $this->dj_functions->GetMensajesContacto($id);
+		$data['nombre_chat'] = $this->dj_functions->GetTituloChat($id);
+		$data['id_cliente'] = $id;
+
+		$cliente = $this->db->query("SELECT foto, dj FROM clientes WHERE id = ?", [$id])->row();
+
+		$dj = $cliente && $cliente->dj ? $this->db->query("SELECT nombre, foto FROM djs WHERE id = ?", [$cliente->dj])->row() : null;
+
+		$data['foto_cliente'] = base_url().'uploads/foto_perfil/' . $cliente->foto;
+		$data['foto_dj'] = base_url().'uploads/djs/' . $dj->foto;
+		$data['foto_coordinador'] = base_url() . 'img/logo.jpg';
+
+
+		$this->_loadViews($data_header, $data, $data_footer, "dj_chat");
+	}
+
+
 
 
 	function persons($acc = false)
@@ -490,5 +607,53 @@ class Dj extends CI_Controller
 		$this->load->view('dj/home', $data);
 
 		$this->load->view('dj/footer', $data_footer);
+	}
+
+	private function sendEmail($from, $to, $subject, $message)
+	{
+		try {
+
+			$this->config->load('mailconfig');
+			$this->load->library('PHPMailer_Lib');
+			$mail = $this->phpmailer_lib->load();
+			$mail->isSMTP();
+			$mail->Host = $this->config->item('host');
+			$mail->SMTPAuth = $this->config->item('smtpauth');
+			$mail->Username = $this->config->item('username');
+			$mail->Password = $this->config->item('password');
+			$mail->SMTPSecure = $this->config->item('smtpsecure');
+			$mail->Port = $this->config->item('port');
+			$mail->isHTML(true);
+			$mail->CharSet = 'UTF-8';
+			$mail->setFrom($from, 'Exel Eventos');
+			$mail->addReplyTo($from, 'Exel Eventos');
+			// Add a recipient
+			if (filter_var($to[0], FILTER_VALIDATE_EMAIL)) {
+				$mail->addAddress($to[0]);
+			} else {
+				error_log("Email invalido " . var_export($to, 1), 3, "./r");
+			}
+			// Add cc or bcc
+			for ($i = 1; $i < count($to) - 1; $i++) {
+				if (filter_var($to[$i], FILTER_VALIDATE_EMAIL)) {
+					$mail->addCC($to[$i]);
+				}
+			}
+
+			// Email subject
+			$mail->Subject = $subject;
+			// Set email format to HTML
+			$mail->isHTML(true);
+			// Email body content
+
+			$mail->Body = $message;
+			error_log("Vamos a enviar correo a " . var_export($to, 1), 3, "./r");
+			// Send email
+			if (!$mail->send()) {
+				error_log("\r\n Message could not be sent.'Mailer Error: " . $mail->ErrorInfo . "\r\n", 3, "./r");
+			}
+		} catch (Exception $e) {
+			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
+		}
 	}
 }

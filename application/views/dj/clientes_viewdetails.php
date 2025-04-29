@@ -37,9 +37,31 @@
 		float: right
 	}
 </style>
-<h2>
-	Detalles del cliente
-</h2>
+<span class="spantitulo" style="display: flex; justify-content: space-between; align-items: center">
+	<h2>
+		Detalles del cliente
+	</h2>
+	<button onclick="window.open('<?php echo base_url() ?>admin/admin_chat/<?php echo $cliente['id'] ?>', '_blank')">Chatear con <?php echo $cliente['nombre_novio'] . " y " . $cliente['nombre_novia'] ?></button>
+</span>
+
+<style>
+	.spantitulo button {
+		margin-bottom: 20px;
+		padding: 8px 20px;
+		background-color: #93CE37;
+		border: 2px solid rgb(90, 119, 43);
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: bold;
+		color: rgb(38, 46, 25);
+		cursor: pointer;
+	}
+
+	.spantitulo button:hover {
+		transform: scale(1.02);
+		transition: transform 0.3s ease;
+	}
+</style>
 <div class="main form">
 	<?php
 	session_start(); //Sesión para controlar que no puedan acceder DJ a fichas de clientes que NO son suyos
@@ -145,382 +167,382 @@
 			<legend>Equipamiento destinado a la boda</legend>
 
 			<?php
-				function renderBloqueEquipo($tipo_equipo, $equipo_asignado, $equipos_disponibles, $detalles_equipo)
-				{
-					$asignado = isset($equipo_asignado) && $equipo_asignado != null;
-					$nombre_grupo = $asignado ? $equipo_asignado['nombre_grupo'] : '';
+			function renderBloqueEquipo($tipo_equipo, $equipo_asignado, $equipos_disponibles, $detalles_equipo)
+			{
+				$asignado = isset($equipo_asignado) && $equipo_asignado != null;
+				$nombre_grupo = $asignado ? $equipo_asignado['nombre_grupo'] : '';
 
-					// Si hay detalles, preparar string JSON manual (solo lo que necesitamos)
-					$componentes_string = '';
-					if (!empty($detalles_equipo['componentes']) && is_array($detalles_equipo['componentes'])) {
-						foreach ($detalles_equipo['componentes'] as $c) {
-							$reps = '';
-							if (!empty($c['reparaciones'])) {
-								foreach ($c['reparaciones'] as $r) {
-									$reps .= $r['reparacion'] . '%%' . $r['fecha_reparacion'] . '||'; // Reparacion%%Fecha||...
-								}
+				// Si hay detalles, preparar string JSON manual (solo lo que necesitamos)
+				$componentes_string = '';
+				if (!empty($detalles_equipo['componentes']) && is_array($detalles_equipo['componentes'])) {
+					foreach ($detalles_equipo['componentes'] as $c) {
+						$reps = '';
+						if (!empty($c['reparaciones'])) {
+							foreach ($c['reparaciones'] as $r) {
+								$reps .= $r['reparacion'] . '%%' . $r['fecha_reparacion'] . '||'; // Reparacion%%Fecha||...
 							}
-							$componentes_string .= htmlspecialchars(
-								$c['nombre_componente'] . '||' .
-									$c['n_registro'] . '||' .
-									$c['descripcion_componente'] . '||' .
-									$c['num_reparaciones'] . '||' .
-									$reps
-							) . '##';
 						}
+						$componentes_string .= htmlspecialchars(
+							$c['nombre_componente'] . '||' .
+								$c['n_registro'] . '||' .
+								$c['descripcion_componente'] . '||' .
+								$c['num_reparaciones'] . '||' .
+								$reps
+						) . '##';
 					}
-				?>
-					<?php if ($asignado): ?>
-						<div style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px;">
-							<span>
-								<?php echo $tipo_equipo; ?> Asignado:
-								<?php
-								$style_borrado = (isset($equipo_asignado['borrado']) && $equipo_asignado['borrado'] == 1)
-									? 'color:red; font-weight:bold;'
-									: '';
-								?>
-								<b>
-									<a href="#"
-										class="mostrar-popup"
-										style="<?php echo $style_borrado; ?>"
-										data-nombre="<?php echo htmlspecialchars($detalles_equipo['nombre_grupo']); ?>"
-										data-fecha="<?php echo isset($detalles_equipo['fecha_asignacion']) ? date('d/m/Y', strtotime($detalles_equipo['fecha_asignacion'])) : ''; ?>"
-										data-componentes-html="<?php echo htmlspecialchars($html_componentes); ?>"
-										data-borrado="<?php echo isset($equipo_asignado['borrado']) ? $equipo_asignado['borrado'] : 0; ?>"
-										data-tipo="<?php echo $tipo_equipo; ?>">
-										<?php echo $nombre_grupo; ?>
-									</a>
-								</b>
-							</span>
-							<form method="POST" style="margin: 0;">
-								<input type="hidden" name="tipo_equipo" value="<?php echo $tipo_equipo; ?>">
-								<button type="submit" name="eliminar_equipo" style="background: none; border: none; padding: 0; cursor: pointer;">
-									<img src="<?php echo base_url() ?>img/delete.gif" alt="Eliminar" style="width:15px; vertical-align: middle;" />
-								</button>
-							</form>
-						</div>
-					<?php else: ?>
-						<div style="margin-bottom: 10px;">
-							<form method="POST" style="display:inline;">
-								<?php echo $tipo_equipo; ?>:
-								<select style="width:200px" name="id_grupo">
-									<option value="">Sin Asignar</option>
-									<?php foreach ($equipos_disponibles as $equipo): ?>
-										<option value="<?php echo $equipo['id_grupo']; ?>"><?php echo $equipo['nombre_grupo']; ?></option>
-									<?php endforeach; ?>
-								</select>
-								<input type="hidden" name="tipo_equipo" value="<?php echo $tipo_equipo; ?>">
-								<input type="submit" name="asignar" value="Asignar" style="width: 70px;" />
-							</form>
-						</div>
-					<?php endif;
 				}
-				foreach ($equipos_asignados as $tipo_equipo => $equipo_asignado): ?>
-					<?php renderBloqueEquipo(
-						$tipo_equipo,
-						$equipo_asignado,
-						$equipos_disponibles,
-						isset($equipos_detalles[$tipo_equipo]) ? $equipos_detalles[$tipo_equipo] : []
-					); ?>
-				<?php endforeach; ?>
-
-
-				<div id="popup_equipo" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:9999;">
-					<div id="popup_content" style="background:#fff; margin:80px auto; padding:30px; max-width:700px; border-radius:10px; position:relative; box-shadow:0 0 20px rgba(0,0,0,0.3); font-family:'Segoe UI', Tahoma, sans-serif;">
-
-						<!-- Header -->
-						<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-							<div>
-								<div style="font-size: 20px; font-weight: bold; color: #222; margin-bottom: 5px;" id="popup_nombre">Nombre del equipo</div>
-								<div style="font-size: 13px; color: #666;">
-									📅 Fecha de asignación: <span id="popup_fecha" style="color: #000;"></span>
-								</div>
-							</div>
-							<span onclick="document.getElementById('popup_equipo').style.display='none'" style="cursor:pointer; font-size:22px; padding: 5px;">❌</span>
-						</div>
-
-						<!-- Aviso de borrado -->
-						<div id="popup_aviso_borrado" style="display:none; margin-bottom:15px; padding:10px; background-color:#ffe5e5; color:#b30000; border:1px solid #e63737; border-radius:5px; font-size:13px;">
-							⚠️ Este equipo ha sido borrado.
-						</div>
-
-						<!-- Tabs -->
-						<div id="popup_tabs" style="display: flex; border-bottom: 1px solid #ddd; margin-bottom: 20px;">
-							<button type="button" onclick="mostrarTabEquipo('componentes')" id="tab_componentes"
-								style="flex: 1; padding: 12px 0; border: none; cursor: pointer; font-size: 15px; font-weight: bold; border-top-left-radius: 10px; border-top-right-radius: 10px; background: #f2f2f2; border-bottom: 2px solid #93CE37;">
-								Componentes
+			?>
+				<?php if ($asignado): ?>
+					<div style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px;">
+						<span>
+							<?php echo $tipo_equipo; ?> Asignado:
+							<?php
+							$style_borrado = (isset($equipo_asignado['borrado']) && $equipo_asignado['borrado'] == 1)
+								? 'color:red; font-weight:bold;'
+								: '';
+							?>
+							<b>
+								<a href="#"
+									class="mostrar-popup"
+									style="<?php echo $style_borrado; ?>"
+									data-nombre="<?php echo htmlspecialchars($detalles_equipo['nombre_grupo']); ?>"
+									data-fecha="<?php echo isset($detalles_equipo['fecha_asignacion']) ? date('d/m/Y', strtotime($detalles_equipo['fecha_asignacion'])) : ''; ?>"
+									data-componentes-html="<?php echo htmlspecialchars($html_componentes); ?>"
+									data-borrado="<?php echo isset($equipo_asignado['borrado']) ? $equipo_asignado['borrado'] : 0; ?>"
+									data-tipo="<?php echo $tipo_equipo; ?>">
+									<?php echo $nombre_grupo; ?>
+								</a>
+							</b>
+						</span>
+						<form method="POST" style="margin: 0;">
+							<input type="hidden" name="tipo_equipo" value="<?php echo $tipo_equipo; ?>">
+							<button type="submit" name="eliminar_equipo" style="background: none; border: none; padding: 0; cursor: pointer;">
+								<img src="<?php echo base_url() ?>img/delete.gif" alt="Eliminar" style="width:15px; vertical-align: middle;" />
 							</button>
-							<button type="button" onclick="mostrarTabEquipo('revision')" id="tab_revision"
-								style="flex: 1; padding: 12px 0; border: none; cursor: pointer; font-size: 15px; font-weight: bold; border-top-left-radius: 10px; border-top-right-radius: 10px; background: #ffffff; border-bottom: 2px solid transparent;">
-								Revisión
-							</button>
-
-						</div>
-
-						<!-- CONTENIDO: Componentes -->
-						<div id="tab_content_componentes">
-							<?php foreach ($equipos_detalles as $tipo_equipo_loop => $detalle): ?>
-								<div class="bloque_componentes" data-tipo-equipo="<?php echo $tipo_equipo_loop; ?>" style="display: none;">
-									<h3 style="margin: 0 0 20px 0; color: #333; font-size: 22px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;">
-										Componentes:
-									</h3>
-
-									<ul style="list-style:none; padding:0; margin:0; max-height:60vh; overflow-y:auto;">
-										<?php if (!empty($detalle['componentes'])): ?>
-											<?php foreach ($detalle['componentes'] as $c): ?>
-												<?php
-												$tieneReparaciones = intval($c['num_reparaciones']) > 0;
-												$colorBorde = $tieneReparaciones ? '#e63737' : '#4a90e2';
-												?>
-												<li style="margin-bottom:20px; padding:10px; padding-left:18px; border-radius:6px; background:#fff; border:1px solid #ddd; border-left:8px solid <?php echo $colorBorde; ?>; box-shadow:0 1px 3px rgba(0,0,0,0.08); box-sizing:border-box;">
-													<div style="display:flex; gap: 10px; align-items:center;">
-														<span style="font-weight:bold; font-size:16px; margin-bottom:6px;"><?php echo $c['nombre_componente']; ?></span>
-														<span style="color:#444; margin-bottom:6px; font-size: 12px">(Nº Registro: <b><?php echo $c['n_registro'] . ")"; ?></b></span>
-													</div>
-													<div style="margin-bottom:6px; line-height:1.4; color:#333;">Descripción: <?php echo $c['descripcion_componente']; ?></div>
-													<div style="margin-bottom:6px; line-height:1.4; color:#333;">URLs:
-														<?php
-														$urls = array();
-														if (isset($c['urls']) && !empty($c['urls'])) {
-															$urls_decoded = json_decode($c['urls'], true);
-															if (is_array($urls_decoded)) {
-																$urls = $urls_decoded;
-															}
-														}
-														?>
-														<?php if (!empty($urls)): ?>
-															<ul>
-																<?php foreach ($urls as $url): ?>
-																	<li style="padding:0">
-																		<a href="<?php echo htmlspecialchars($url); ?>" target="_blank" style="color:#007bff;">
-																			<?php echo htmlspecialchars($url); ?>
-																		</a>
-																	</li>
-																<?php endforeach; ?>
-															</ul>
-														<?php else: ?>
-															<span style="color:#999;"><em>Sin enlaces.</em></span>
-														<?php endif; ?>
-
-													</div>
-
-													<?php if (!empty($c['reparaciones'])): ?>
-														<?php foreach ($c['reparaciones'] as $r): ?>
-															<div style="margin-top:10px; font-size:13px; color:#b30000;">
-																✖ <?php echo $r['reparacion']; ?>
-																<?php if (!empty($r['fecha_reparacion'])): ?>
-																	<span style="color:#888;">(<?php echo $r['fecha_reparacion']; ?>)</span>
-																<?php endif; ?>
-															</div>
-														<?php endforeach; ?>
-													<?php endif; ?>
-												</li>
-											<?php endforeach; ?>
-										<?php else: ?>
-											<li style="color:#666;">No hay componentes asignados.</li>
-										<?php endif; ?>
-									</ul>
-								</div>
-							<?php endforeach; ?>
-						</div>
-
-
-
-						<!-- CONTENIDO: Revisión -->
-						<div id="tab_content_revision" style="display:none;">
-							<?php foreach ($equipos_detalles as $tipo_equipo_loop => $detalle): ?>
-								<?php
-								$rev_salida = isset($revisiones_guardadas[$tipo_equipo_loop]['revision_salida'])
-									? $revisiones_guardadas[$tipo_equipo_loop]['revision_salida']
-									: [];
-
-								$rev_fin = isset($revisiones_guardadas[$tipo_equipo_loop]['revision_fin'])
-									? $revisiones_guardadas[$tipo_equipo_loop]['revision_fin']
-									: [];
-
-								$rev_pabellon = isset($revisiones_guardadas[$tipo_equipo_loop]['revision_pabellon'])
-									? $revisiones_guardadas[$tipo_equipo_loop]['revision_pabellon']
-									: [];
-								?>
-
-
-								<form method="POST" class="formulario_revision" data-tipo-equipo="<?php echo $tipo_equipo_loop; ?>" style="display:none; margin:0;">
-									<input type="hidden" name="guardar_revisiones" value="1">
-									<input type="hidden" name="tipo_equipo_revision" value="<?php echo $tipo_equipo_loop; ?>">
-
-									<table style="width:100%; border-collapse: collapse; font-size:14px;">
-										<thead>
-											<tr style="background:#f2f2f2;">
-												<th style="text-align:left; padding:10px; border-bottom:1px solid #ddd; font-size: 16px">Componente</th>
-												<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Salida</th>
-												<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Fin Evento</th>
-												<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Pabellón</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php if (!empty($detalle['componentes'])): ?>
-												<?php foreach ($detalle['componentes'] as $c): ?>
-													<tr>
-														<td style="padding:10px; border-bottom:1px solid #eee; font-size: 17px">
-															<?php echo $c['nombre_componente']; ?>
-														</td>
-														<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
-															<input type="checkbox" style="transform: scale(1.5)" name="revision_salida[<?php echo $c['id_componente']; ?>]"
-																<?php echo in_array($c['id_componente'], $rev_salida) ? 'checked' : ''; ?>>
-														</td>
-														<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
-															<input type="checkbox" style="transform: scale(1.5)" name="revision_fin[<?php echo $c['id_componente']; ?>]"
-																<?php echo in_array($c['id_componente'], $rev_fin) ? 'checked' : ''; ?>>
-														</td>
-														<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
-															<input type="checkbox" style="transform: scale(1.5)" name="revision_pabellon[<?php echo $c['id_componente']; ?>]"
-																<?php echo in_array($c['id_componente'], $rev_pabellon) ? 'checked' : ''; ?>>
-														</td>
-													</tr>
-												<?php endforeach; ?>
-											<?php endif; ?>
-										</tbody>
-									</table>
-
-									<div style="text-align:center; margin-top:20px;">
-										<button type="submit" style="padding:10px 20px; background:#93CE37; color:#fff; border:none; border-radius:4px; font-weight:bold; cursor:pointer; font-size:16px;">
-											GUARDAR
-										</button>
-									</div>
-								</form>
-							<?php endforeach; ?>
-						</div>
-
-
+						</form>
 					</div>
-				</div>
-
-
-				<script>
-					function mostrarTabEquipo(tab) {
-						var tabComp = document.getElementById('tab_componentes');
-						var tabRev = document.getElementById('tab_revision');
-
-						if (tab === 'componentes') {
-							tabComp.style.background = '#f2f2f2';
-							tabComp.style.borderBottom = '2px solid #93CE37';
-
-							tabRev.style.background = '#ffffff';
-							tabRev.style.borderBottom = '2px solid transparent';
-						} else {
-							tabRev.style.background = '#f2f2f2';
-							tabRev.style.borderBottom = '2px solid #93CE37';
-
-							tabComp.style.background = '#ffffff';
-							tabComp.style.borderBottom = '2px solid transparent';
-						}
-
-						document.getElementById('tab_content_componentes').style.display = tab === 'componentes' ? 'block' : 'none';
-						document.getElementById('tab_content_revision').style.display = tab === 'revision' ? 'block' : 'none';
-					}
-				</script>
-
-
-				<script>
-					window.onload = function() {
-						var enlaces = document.getElementsByClassName('mostrar-popup');
-						for (var i = 0; i < enlaces.length; i++) {
-							enlaces[i].onclick = function(e) {
-								e.preventDefault();
-
-								var nombre = this.getAttribute('data-nombre');
-								var fecha = this.getAttribute('data-fecha');
-								var borrado = this.getAttribute('data-borrado');
-								var tipo_equipo = this.getAttribute('data-tipo');
-
-								document.getElementById('popup_nombre').innerHTML = nombre;
-								document.getElementById('popup_fecha').innerHTML = fecha;
-
-								var avisoBorrado = document.getElementById('popup_aviso_borrado');
-								var tabs = document.getElementById('popup_tabs');
-
-								if (borrado == '1') {
-									avisoBorrado.style.display = 'block';
-									tabs.style.display = 'none';
-									document.getElementById('tab_content_componentes').style.display = 'none';
-									document.getElementById('tab_content_revision').style.display = 'none';
-								} else {
-									avisoBorrado.style.display = 'none';
-									tabs.style.display = 'flex';
-
-									// Mostrar la pestaña por defecto
-									mostrarTabEquipo('componentes');
-
-									// Ocultar todos los formularios de revisión
-									const formularios = document.querySelectorAll('.formulario_revision');
-									formularios.forEach(f => f.style.display = 'none');
-
-									// Mostrar el formulario correspondiente
-									const formVisible = document.querySelector(`.formulario_revision[data-tipo-equipo="${tipo_equipo}"]`);
-									if (formVisible) formVisible.style.display = 'block';
-
-									// Ocultar todos los bloques de componentes
-									const bloques = document.querySelectorAll('.bloque_componentes');
-									bloques.forEach(b => b.style.display = 'none');
-
-									// Mostrar el bloque correspondiente de componentes
-									const bloqueVisible = document.querySelector(`.bloque_componentes[data-tipo-equipo="${tipo_equipo}"]`);
-									if (bloqueVisible) bloqueVisible.style.display = 'block';
-								}
-
-								document.getElementById('popup_equipo').style.display = 'block';
-							};
-						}
-					};
-				</script>
-
-
-
-				<div id="equipos_dinamicos_container"></div>
-
-				<button type="button" onclick="agregarEquipoDinamico()">
-					Añadir Otro Equipo
-				</button>
-				<div id="bloque_equipo_template" style="display:none;">
-					<div class="bloque_equipo_dinamico" data-equipo-num="X" style="margin-bottom: 10px;">
+				<?php else: ?>
+					<div style="margin-bottom: 10px;">
 						<form method="POST" style="display:inline;">
-							<span class="etiqueta_tipo_equipo">Equipo X:</span>
+							<?php echo $tipo_equipo; ?>:
 							<select style="width:200px" name="id_grupo">
 								<option value="">Sin Asignar</option>
 								<?php foreach ($equipos_disponibles as $equipo): ?>
 									<option value="<?php echo $equipo['id_grupo']; ?>"><?php echo $equipo['nombre_grupo']; ?></option>
 								<?php endforeach; ?>
 							</select>
-							<input type="hidden" name="tipo_equipo" value="Equipo X">
+							<input type="hidden" name="tipo_equipo" value="<?php echo $tipo_equipo; ?>">
 							<input type="submit" name="asignar" value="Asignar" style="width: 70px;" />
 						</form>
 					</div>
+				<?php endif;
+			}
+			foreach ($equipos_asignados as $tipo_equipo => $equipo_asignado): ?>
+				<?php renderBloqueEquipo(
+					$tipo_equipo,
+					$equipo_asignado,
+					$equipos_disponibles,
+					isset($equipos_detalles[$tipo_equipo]) ? $equipos_detalles[$tipo_equipo] : []
+				); ?>
+			<?php endforeach; ?>
+
+
+			<div id="popup_equipo" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:9999;">
+				<div id="popup_content" style="background:#fff; margin:80px auto; padding:30px; max-width:700px; border-radius:10px; position:relative; box-shadow:0 0 20px rgba(0,0,0,0.3); font-family:'Segoe UI', Tahoma, sans-serif;">
+
+					<!-- Header -->
+					<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+						<div>
+							<div style="font-size: 20px; font-weight: bold; color: #222; margin-bottom: 5px;" id="popup_nombre">Nombre del equipo</div>
+							<div style="font-size: 13px; color: #666;">
+								📅 Fecha de asignación: <span id="popup_fecha" style="color: #000;"></span>
+							</div>
+						</div>
+						<span onclick="document.getElementById('popup_equipo').style.display='none'" style="cursor:pointer; font-size:22px; padding: 5px;">❌</span>
+					</div>
+
+					<!-- Aviso de borrado -->
+					<div id="popup_aviso_borrado" style="display:none; margin-bottom:15px; padding:10px; background-color:#ffe5e5; color:#b30000; border:1px solid #e63737; border-radius:5px; font-size:13px;">
+						⚠️ Este equipo ha sido borrado.
+					</div>
+
+					<!-- Tabs -->
+					<div id="popup_tabs" style="display: flex; border-bottom: 1px solid #ddd; margin-bottom: 20px;">
+						<button type="button" onclick="mostrarTabEquipo('componentes')" id="tab_componentes"
+							style="flex: 1; padding: 12px 0; border: none; cursor: pointer; font-size: 15px; font-weight: bold; border-top-left-radius: 10px; border-top-right-radius: 10px; background: #f2f2f2; border-bottom: 2px solid #93CE37;">
+							Componentes
+						</button>
+						<button type="button" onclick="mostrarTabEquipo('revision')" id="tab_revision"
+							style="flex: 1; padding: 12px 0; border: none; cursor: pointer; font-size: 15px; font-weight: bold; border-top-left-radius: 10px; border-top-right-radius: 10px; background: #ffffff; border-bottom: 2px solid transparent;">
+							Revisión
+						</button>
+
+					</div>
+
+					<!-- CONTENIDO: Componentes -->
+					<div id="tab_content_componentes">
+						<?php foreach ($equipos_detalles as $tipo_equipo_loop => $detalle): ?>
+							<div class="bloque_componentes" data-tipo-equipo="<?php echo $tipo_equipo_loop; ?>" style="display: none;">
+								<h3 style="margin: 0 0 20px 0; color: #333; font-size: 22px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;">
+									Componentes:
+								</h3>
+
+								<ul style="list-style:none; padding:0; margin:0; max-height:60vh; overflow-y:auto;">
+									<?php if (!empty($detalle['componentes'])): ?>
+										<?php foreach ($detalle['componentes'] as $c): ?>
+											<?php
+											$tieneReparaciones = intval($c['num_reparaciones']) > 0;
+											$colorBorde = $tieneReparaciones ? '#e63737' : '#4a90e2';
+											?>
+											<li style="margin-bottom:20px; padding:10px; padding-left:18px; border-radius:6px; background:#fff; border:1px solid #ddd; border-left:8px solid <?php echo $colorBorde; ?>; box-shadow:0 1px 3px rgba(0,0,0,0.08); box-sizing:border-box;">
+												<div style="display:flex; gap: 10px; align-items:center;">
+													<span style="font-weight:bold; font-size:16px; margin-bottom:6px;"><?php echo $c['nombre_componente']; ?></span>
+													<span style="color:#444; margin-bottom:6px; font-size: 12px">(Nº Registro: <b><?php echo $c['n_registro'] . ")"; ?></b></span>
+												</div>
+												<div style="margin-bottom:6px; line-height:1.4; color:#333;">Descripción: <?php echo $c['descripcion_componente']; ?></div>
+												<div style="margin-bottom:6px; line-height:1.4; color:#333;">URLs:
+													<?php
+													$urls = array();
+													if (isset($c['urls']) && !empty($c['urls'])) {
+														$urls_decoded = json_decode($c['urls'], true);
+														if (is_array($urls_decoded)) {
+															$urls = $urls_decoded;
+														}
+													}
+													?>
+													<?php if (!empty($urls)): ?>
+														<ul>
+															<?php foreach ($urls as $url): ?>
+																<li style="padding:0">
+																	<a href="<?php echo htmlspecialchars($url); ?>" target="_blank" style="color:#007bff;">
+																		<?php echo htmlspecialchars($url); ?>
+																	</a>
+																</li>
+															<?php endforeach; ?>
+														</ul>
+													<?php else: ?>
+														<span style="color:#999;"><em>Sin enlaces.</em></span>
+													<?php endif; ?>
+
+												</div>
+
+												<?php if (!empty($c['reparaciones'])): ?>
+													<?php foreach ($c['reparaciones'] as $r): ?>
+														<div style="margin-top:10px; font-size:13px; color:#b30000;">
+															✖ <?php echo $r['reparacion']; ?>
+															<?php if (!empty($r['fecha_reparacion'])): ?>
+																<span style="color:#888;">(<?php echo $r['fecha_reparacion']; ?>)</span>
+															<?php endif; ?>
+														</div>
+													<?php endforeach; ?>
+												<?php endif; ?>
+											</li>
+										<?php endforeach; ?>
+									<?php else: ?>
+										<li style="color:#666;">No hay componentes asignados.</li>
+									<?php endif; ?>
+								</ul>
+							</div>
+						<?php endforeach; ?>
+					</div>
+
+
+
+					<!-- CONTENIDO: Revisión -->
+					<div id="tab_content_revision" style="display:none;">
+						<?php foreach ($equipos_detalles as $tipo_equipo_loop => $detalle): ?>
+							<?php
+							$rev_salida = isset($revisiones_guardadas[$tipo_equipo_loop]['revision_salida'])
+								? $revisiones_guardadas[$tipo_equipo_loop]['revision_salida']
+								: [];
+
+							$rev_fin = isset($revisiones_guardadas[$tipo_equipo_loop]['revision_fin'])
+								? $revisiones_guardadas[$tipo_equipo_loop]['revision_fin']
+								: [];
+
+							$rev_pabellon = isset($revisiones_guardadas[$tipo_equipo_loop]['revision_pabellon'])
+								? $revisiones_guardadas[$tipo_equipo_loop]['revision_pabellon']
+								: [];
+							?>
+
+
+							<form method="POST" class="formulario_revision" data-tipo-equipo="<?php echo $tipo_equipo_loop; ?>" style="display:none; margin:0;">
+								<input type="hidden" name="guardar_revisiones" value="1">
+								<input type="hidden" name="tipo_equipo_revision" value="<?php echo $tipo_equipo_loop; ?>">
+
+								<table style="width:100%; border-collapse: collapse; font-size:14px;">
+									<thead>
+										<tr style="background:#f2f2f2;">
+											<th style="text-align:left; padding:10px; border-bottom:1px solid #ddd; font-size: 16px">Componente</th>
+											<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Salida</th>
+											<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Fin Evento</th>
+											<th style="text-align:center; padding:10px; border-bottom:1px solid #ddd; font-size: 16px; width: 120px">Pabellón</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php if (!empty($detalle['componentes'])): ?>
+											<?php foreach ($detalle['componentes'] as $c): ?>
+												<tr>
+													<td style="padding:10px; border-bottom:1px solid #eee; font-size: 17px">
+														<?php echo $c['nombre_componente']; ?>
+													</td>
+													<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
+														<input type="checkbox" style="transform: scale(1.5)" name="revision_salida[<?php echo $c['id_componente']; ?>]"
+															<?php echo in_array($c['id_componente'], $rev_salida) ? 'checked' : ''; ?>>
+													</td>
+													<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
+														<input type="checkbox" style="transform: scale(1.5)" name="revision_fin[<?php echo $c['id_componente']; ?>]"
+															<?php echo in_array($c['id_componente'], $rev_fin) ? 'checked' : ''; ?>>
+													</td>
+													<td style="text-align:center; border-bottom:1px solid #eee; font-size: 17px">
+														<input type="checkbox" style="transform: scale(1.5)" name="revision_pabellon[<?php echo $c['id_componente']; ?>]"
+															<?php echo in_array($c['id_componente'], $rev_pabellon) ? 'checked' : ''; ?>>
+													</td>
+												</tr>
+											<?php endforeach; ?>
+										<?php endif; ?>
+									</tbody>
+								</table>
+
+								<div style="text-align:center; margin-top:20px;">
+									<button type="submit" style="padding:10px 20px; background:#93CE37; color:#fff; border:none; border-radius:4px; font-weight:bold; cursor:pointer; font-size:16px;">
+										GUARDAR
+									</button>
+								</div>
+							</form>
+						<?php endforeach; ?>
+					</div>
+
+
 				</div>
+			</div>
 
 
-				<script>
-					let equipoCounter = <?php echo isset($proximo_equipo_num) ? $proximo_equipo_num : 4; ?>;
+			<script>
+				function mostrarTabEquipo(tab) {
+					var tabComp = document.getElementById('tab_componentes');
+					var tabRev = document.getElementById('tab_revision');
 
+					if (tab === 'componentes') {
+						tabComp.style.background = '#f2f2f2';
+						tabComp.style.borderBottom = '2px solid #93CE37';
 
-					function agregarEquipoDinamico() {
-						const container = document.getElementById('equipos_dinamicos_container');
-						const template = document.getElementById('bloque_equipo_template');
+						tabRev.style.background = '#ffffff';
+						tabRev.style.borderBottom = '2px solid transparent';
+					} else {
+						tabRev.style.background = '#f2f2f2';
+						tabRev.style.borderBottom = '2px solid #93CE37';
 
-						// Clonar
-						const nuevoBloque = template.firstElementChild.cloneNode(true);
-
-						// Reemplazar “X” por el número real del equipo
-						nuevoBloque.setAttribute('data-equipo-num', equipoCounter);
-						const html = nuevoBloque.innerHTML.replace(/Equipo X/g, 'Equipo ' + equipoCounter);
-						nuevoBloque.innerHTML = html;
-
-						// Añadir al contenedor
-						container.appendChild(nuevoBloque);
-
-						// Aumentar contador
-						equipoCounter++;
+						tabComp.style.background = '#ffffff';
+						tabComp.style.borderBottom = '2px solid transparent';
 					}
-				</script>
+
+					document.getElementById('tab_content_componentes').style.display = tab === 'componentes' ? 'block' : 'none';
+					document.getElementById('tab_content_revision').style.display = tab === 'revision' ? 'block' : 'none';
+				}
+			</script>
+
+
+			<script>
+				window.onload = function() {
+					var enlaces = document.getElementsByClassName('mostrar-popup');
+					for (var i = 0; i < enlaces.length; i++) {
+						enlaces[i].onclick = function(e) {
+							e.preventDefault();
+
+							var nombre = this.getAttribute('data-nombre');
+							var fecha = this.getAttribute('data-fecha');
+							var borrado = this.getAttribute('data-borrado');
+							var tipo_equipo = this.getAttribute('data-tipo');
+
+							document.getElementById('popup_nombre').innerHTML = nombre;
+							document.getElementById('popup_fecha').innerHTML = fecha;
+
+							var avisoBorrado = document.getElementById('popup_aviso_borrado');
+							var tabs = document.getElementById('popup_tabs');
+
+							if (borrado == '1') {
+								avisoBorrado.style.display = 'block';
+								tabs.style.display = 'none';
+								document.getElementById('tab_content_componentes').style.display = 'none';
+								document.getElementById('tab_content_revision').style.display = 'none';
+							} else {
+								avisoBorrado.style.display = 'none';
+								tabs.style.display = 'flex';
+
+								// Mostrar la pestaña por defecto
+								mostrarTabEquipo('componentes');
+
+								// Ocultar todos los formularios de revisión
+								const formularios = document.querySelectorAll('.formulario_revision');
+								formularios.forEach(f => f.style.display = 'none');
+
+								// Mostrar el formulario correspondiente
+								const formVisible = document.querySelector(`.formulario_revision[data-tipo-equipo="${tipo_equipo}"]`);
+								if (formVisible) formVisible.style.display = 'block';
+
+								// Ocultar todos los bloques de componentes
+								const bloques = document.querySelectorAll('.bloque_componentes');
+								bloques.forEach(b => b.style.display = 'none');
+
+								// Mostrar el bloque correspondiente de componentes
+								const bloqueVisible = document.querySelector(`.bloque_componentes[data-tipo-equipo="${tipo_equipo}"]`);
+								if (bloqueVisible) bloqueVisible.style.display = 'block';
+							}
+
+							document.getElementById('popup_equipo').style.display = 'block';
+						};
+					}
+				};
+			</script>
+
+
+
+			<div id="equipos_dinamicos_container"></div>
+
+			<button type="button" onclick="agregarEquipoDinamico()">
+				Añadir Otro Equipo
+			</button>
+			<div id="bloque_equipo_template" style="display:none;">
+				<div class="bloque_equipo_dinamico" data-equipo-num="X" style="margin-bottom: 10px;">
+					<form method="POST" style="display:inline;">
+						<span class="etiqueta_tipo_equipo">Equipo X:</span>
+						<select style="width:200px" name="id_grupo">
+							<option value="">Sin Asignar</option>
+							<?php foreach ($equipos_disponibles as $equipo): ?>
+								<option value="<?php echo $equipo['id_grupo']; ?>"><?php echo $equipo['nombre_grupo']; ?></option>
+							<?php endforeach; ?>
+						</select>
+						<input type="hidden" name="tipo_equipo" value="Equipo X">
+						<input type="submit" name="asignar" value="Asignar" style="width: 70px;" />
+					</form>
+				</div>
+			</div>
+
+
+			<script>
+				let equipoCounter = <?php echo isset($proximo_equipo_num) ? $proximo_equipo_num : 4; ?>;
+
+
+				function agregarEquipoDinamico() {
+					const container = document.getElementById('equipos_dinamicos_container');
+					const template = document.getElementById('bloque_equipo_template');
+
+					// Clonar
+					const nuevoBloque = template.firstElementChild.cloneNode(true);
+
+					// Reemplazar “X” por el número real del equipo
+					nuevoBloque.setAttribute('data-equipo-num', equipoCounter);
+					const html = nuevoBloque.innerHTML.replace(/Equipo X/g, 'Equipo ' + equipoCounter);
+					nuevoBloque.innerHTML = html;
+
+					// Añadir al contenedor
+					container.appendChild(nuevoBloque);
+
+					// Aumentar contador
+					equipoCounter++;
+				}
+			</script>
 		</fieldset>
 
 		<fieldset class="fieldsetencuesta">

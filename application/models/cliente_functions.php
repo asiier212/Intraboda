@@ -597,27 +597,88 @@
 	{
 		$data = false;
 		$this->load->database();
-		$query = $this->db->query("SELECT id_mensaje, id_cliente, fecha, usuario, id_usuario, mensaje FROM contacto WHERE id_cliente={$user_id}");
+	
+		// 1. Obtener ID del DJ asignado al cliente
+		$nombre_dj = '';
+		$foto_dj = '';
+		$query_dj = $this->db->query("
+			SELECT djs.nombre, djs.foto 
+			FROM clientes 
+			JOIN djs ON djs.id = clientes.dj 
+			WHERE clientes.id = {$user_id}
+		");
+	
+		if ($query_dj->num_rows() > 0) {
+			$row_dj = $query_dj->row();
+			$nombre_dj = $row_dj->nombre;
+			$foto_dj = $row_dj->foto;
+		}
+	
+		// 2. Obtener los mensajes del cliente
+		$query = $this->db->query("
+			SELECT id_mensaje, id_cliente, fecha, usuario, id_usuario, mensaje 
+			FROM contacto 
+			WHERE id_cliente = {$user_id}
+			ORDER BY fecha ASC
+		");
+	
 		if ($query->num_rows() > 0) {
-			$i = 0;
+			$data = [];
 			foreach ($query->result() as $fila) {
-				$data[$i]['id_mensaje'] = $fila->id_mensaje;
-				$data[$i]['id_cliente'] = $fila->id_cliente;
-				$data[$i]['fecha'] = $fila->fecha;
-				$data[$i]['usuario'] = $fila->usuario;
-				$data[$i]['id_usuario'] = $fila->id_usuario;
-				$data[$i]['mensaje'] = $fila->mensaje;
-				if ($fila->usuario == 'dj') {
-					$query2 = $this->db->query("SELECT nombre FROM djs WHERE id={$fila->id_usuario}");
-					foreach ($query2->result() as $fila2) {
-						$data[$i]['nombre_dj'] = $fila2->nombre;
-					}
+				$item = [
+					'id_mensaje' => $fila->id_mensaje,
+					'id_cliente' => $fila->id_cliente,
+					'fecha' => $fila->fecha,
+					'usuario' => $fila->usuario,
+					'id_usuario' => $fila->id_usuario,
+					'mensaje' => $fila->mensaje
+				];
+	
+				// 3. Asignar nombre del DJ si aplica
+				if ($fila->usuario === 'dj') {
+					$item['nombre_dj'] = $nombre_dj;
+					$item['foto'] = $foto_dj;
 				}
-				$i++;
+				// 4. Añadir foto según tipo de usuario
+				elseif ($fila->usuario === 'cliente') {
+					$q_foto = $this->db->query("SELECT foto FROM clientes WHERE id = {$fila->id_usuario}");
+					$item['foto'] = $q_foto->num_rows() > 0 ? $q_foto->row()->foto : 'default_cliente.jpg';
+				}
+				elseif ($fila->usuario === 'administrador') {
+					$item['foto'] = 'logo.jpg';
+				}
+	
+				$data[] = $item;
 			}
 		}
+	
 		return $data;
 	}
+
+	public function GetTituloChat($id_cliente)
+	{
+		$this->load->database();
+	
+		$cliente = $this->db->query("
+			SELECT dj
+			FROM clientes
+			WHERE id = $id_cliente
+		")->row();
+	
+		$titulo = 'el Coordinador';
+	
+		if ($cliente) {	
+			if ($cliente->dj) {
+				$dj = $this->db->query("SELECT nombre FROM djs WHERE id = {$cliente->dj}")->row();
+				if ($dj) {
+					$titulo .= ' y DJ ' . $dj->nombre;
+				}
+			}
+		}
+	
+		return $titulo;
+	}
+	
 
 	function GetDjAsignado($user_id)
 	{

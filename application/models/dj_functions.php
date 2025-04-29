@@ -486,6 +486,84 @@ class Dj_functions extends CI_Model
 		return $data;
 	}
 
+	public function GetMensajesContacto($id)
+{
+    $this->load->database();
+    $data = [];
+
+    $cliente = $this->db->query("
+        SELECT CONCAT(nombre_novio, ' ', apellidos_novio, ' y ', nombre_novia, ' ', apellidos_novia) AS nombre_completo, foto, dj 
+        FROM clientes 
+        WHERE id = $id
+    ")->row();
+    $dj = $cliente && $cliente->dj ? $this->db->query("SELECT nombre, foto FROM djs WHERE id = $cliente->dj")->row() : null;
+
+    $query = $this->db->query("
+        SELECT c.*, 
+            CONCAT(nombre_novio, ' ', apellidos_novio, ' y ', nombre_novia, ' ', apellidos_novia) AS nombre_completo, cl.foto, cl.dj 
+        FROM contacto c 
+        JOIN clientes cl ON cl.id = c.id_cliente 
+        WHERE c.id_cliente = $id 
+        ORDER BY c.fecha ASC
+    ");
+
+    foreach ($query->result() as $m) {
+        $item = [
+            'id_mensaje' => $m->id_mensaje,
+            'id_cliente' => $m->id,
+            'fecha' => $m->fecha,
+            'usuario' => $m->usuario,
+            'id_usuario' => $m->id_usuario,
+            'mensaje' => $m->mensaje,
+            'foto' => $m->foto_cliente,
+            'dj' => $m->dj,
+            'nombre_completo' => $m->nombre_completo,
+        ];
+
+        if ($m->usuario === 'cliente') {
+            $item['nombre'] = $cliente->nombre;
+            $item['foto'] = $cliente->foto;
+        } elseif ($m->usuario === 'dj' && $dj) {
+            $item['nombre_dj'] = $dj->nombre;
+            $item['foto'] = $dj->foto;
+        } elseif ($m->usuario === 'administrador') {
+            $item['nombre'] = 'Coordinador';
+            $item['foto'] = 'logo.jpg';
+        }
+
+        $data[] = $item;
+    }
+
+    return $data;
+}
+
+public function GetTituloChat($id)
+{
+    $this->load->database();
+
+    $cliente = $this->db->query("
+        SELECT nombre_novio, apellidos_novio, nombre_novia, apellidos_novia, dj
+        FROM clientes
+        WHERE id = $id
+    ")->row();
+
+    $titulo = '';
+
+    if ($cliente) {
+        $titulo = $cliente->nombre_novio . ', ' . $cliente->nombre_novia;
+
+        if ($cliente->dj) {
+            $dj = $this->db->query("SELECT nombre FROM djs WHERE id = {$cliente->dj}")->row();
+            if ($dj) {
+                $titulo .= ' y Coordinador';
+            }
+        }
+    }
+
+    return $titulo;
+}
+
+
 
 	function GetServicios()
 	{
