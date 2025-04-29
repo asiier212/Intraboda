@@ -2300,7 +2300,7 @@ class Admin extends CI_Controller
 
 	public function encuesta()
 	{
-
+		$id = $this->session->userdata('user_id');
 		if (isset($_POST['pregunta']) && $_POST['pregunta'] <> "") {
 			$this->load->database();
 			$data['pregunta'] = $_POST['pregunta'];
@@ -2323,7 +2323,7 @@ class Admin extends CI_Controller
 		$data['preguntas_encuesta'] = $this->admin_functions->GetPreguntasEncuesta();
 		$data['respuestas_preguntas'] = $this->admin_functions->GetRespuestasPreguntas();
 		$data['preguntas_encuesta_cliente'] = $this->admin_functions->GetPreguntasEncuestaDatosBoda();
-		$data['respuestas_preguntasClientes'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda();
+		$data['respuestas_preguntasClientes'] = $this->admin_functions->GetRespuestasEncuestaDatosBoda($id);
 		$view = "encuesta";
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
