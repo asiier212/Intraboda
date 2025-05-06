@@ -89,11 +89,14 @@
 					<?php
 					foreach ($canales_captacion as $canales) {
 					?>
+
+						<?php if($canales['numero'] > 0){ ?>
 						<tr>
 							<td><?php echo $canales['canal'] ?></td>
-							<td><?php echo $canales['numero'] ?></td>
+							<td><?php echo $canales['numero'];  ?></td>
 						</tr>
 					<?php
+						}
 					}
 					?>
 				</table>
@@ -104,48 +107,48 @@
 			<fieldset>
 				<legend>Comerciales</legend>
 				<table class="tabledata">
-    <!--Le añadimos 2 th que el nombre del comercial y número de presupuestos-->
-    <tr>
-        <th colspan="<?php echo $comerciales[0]['num_estados'] + 2 ?>">
-            Comerciales entre <?php echo $fecha_desde ?> y <?php echo $fecha_hasta ?>
-        </th>
-    </tr>
-    <th>Comercial</th>
-    <th>Nº Presup.</th>
-    <?php foreach ($estados_solicitudes as $estado) { ?>
-        <th><?php echo $estado['nombre_estado'] ?></th>
-    <?php } ?>
+					<!--Le añadimos 2 th que el nombre del comercial y número de presupuestos-->
+					<tr>
+						<th colspan="<?php echo $comerciales[0]['num_estados'] + 2 ?>">
+							Comerciales entre <?php echo $fecha_desde ?> y <?php echo $fecha_hasta ?>
+						</th>
+					</tr>
+					<th>Comercial</th>
+					<th>Nº Presup.</th>
+					<?php foreach ($estados_solicitudes as $estado) { ?>
+						<th><?php echo $estado['nombre_estado'] ?></th>
+					<?php } ?>
 
-    <?php
-    foreach ($comerciales as $com) {
-        // Filtrar comerciales que tengan presupuestos
-        if ($com['num_presupuestos'] > 0) {
-    ?>
-        <tr>
-            <td><?php echo $com['comercial'] ?></td>
-            <td><?php echo $com['num_presupuestos'] ?></td>
-            <?php
-            foreach ($estados_solicitudes as $estado) {
-                if ($estado['id_estado'] == '2') {
-                    if ($com[$estado['nombre_estado'] . 'p'] < 25) {
-            ?>
-                        <td class="rojo">
-                    <?php }
-                    if ($com[$estado['nombre_estado'] . 'p'] >= 25 && $com[$estado['nombre_estado'] . 'p'] < 33) { ?>
-                        <td class="amarillo">
-                    <?php }
-                    if ($com[$estado['nombre_estado'] . 'p'] >= 33) { ?>
-                        <td class="verde">
-                    <?php }
-                } else { ?>
-                        <td>
-                <?php }
-                echo $com[$estado['nombre_estado'] . 'p'] ?>%</td>
-            <?php } ?>
-        </tr>
-    <?php } // Fin del if para filtrar comerciales con presupuestos
-    } ?>
-</table>
+					<?php
+					foreach ($comerciales as $com) {
+						// Filtrar comerciales que tengan presupuestos
+						if ($com['num_presupuestos'] > 0) {
+					?>
+							<tr>
+								<td><?php echo $com['comercial'] ?></td>
+								<td><?php echo $com['num_presupuestos'] ?></td>
+								<?php
+								foreach ($estados_solicitudes as $estado) {
+									if ($estado['id_estado'] == '2') {
+										if ($com[$estado['nombre_estado'] . 'p'] < 25) {
+								?>
+											<td class="rojo">
+											<?php }
+										if ($com[$estado['nombre_estado'] . 'p'] >= 25 && $com[$estado['nombre_estado'] . 'p'] < 33) { ?>
+											<td class="amarillo">
+											<?php }
+										if ($com[$estado['nombre_estado'] . 'p'] >= 33) { ?>
+											<td class="verde">
+											<?php }
+									} else { ?>
+											<td>
+												<?php }
+											echo $com[$estado['nombre_estado'] . 'p'] ?>%</td>
+										<?php } ?>
+							</tr>
+					<?php } // Fin del if para filtrar comerciales con presupuestos
+					} ?>
+				</table>
 
 			</fieldset>
 			</p>
