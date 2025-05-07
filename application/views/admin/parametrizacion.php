@@ -98,8 +98,6 @@
 	.editable img {
 		float: right
 	}
-
-
 </style>
 <h2>
 	Parametrizaci&oacute;n
@@ -154,9 +152,9 @@
 									<td><?= $cuenta['codigo_control'] ?></td>
 									<td><?= $cuenta['numero_cuenta'] ?></td>
 									<td>
-									<a href="#" onclick="return deletecuenta_bancaria(<?= $cuenta['id_cuenta'] ?>)">
-										<img src="<?= base_url() ?>img/delete.gif" width="15" />
-									</a>
+										<a href="#" onclick="return deletecuenta_bancaria(<?= $cuenta['id_cuenta'] ?>)">
+											<img src="<?= base_url() ?>img/delete.gif" width="15" />
+										</a>
 									</td>
 								</tr>
 							<?php endforeach; ?>
@@ -327,12 +325,14 @@
 		<form method="post" name="tipos_cliente_form">
 			<fieldset class="datos">
 				<legend>Añadir Tipo de Cliente</legend>
-				<ul>
-					<li>
-						<label>Nuevo Tipo de Cliente:</label><input type="text" name="tipo_cliente" required />
+				<ul style="display: flex; align-items: center; gap: 10px; list-style: none; padding-left: 0;">
+					<li style="display: flex; align-items: center; gap: 5px;">
+						<label>Nuevo Tipo de Cliente:</label>
+						<input type="text" name="tipo_cliente" required />
 					</li>
-					<li>
-						<label>Color:</label><input type="text" id="color" name="color" style="width:50px;" required />
+					<li style="display: flex; align-items: center; gap: 5px;">
+						<label>Color:</label>
+						<input type="text" id="color" name="color" style="width:50px;" required />
 					</li>
 					<li>
 						<input type="submit" value="Añadir" />
@@ -507,7 +507,6 @@
 			}
 		}).disableSelection();
 	});
-
 </script>
 
 
