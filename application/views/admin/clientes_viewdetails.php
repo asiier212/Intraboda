@@ -53,10 +53,21 @@
 
 				alertify.prompt("Añade el número de horas:", function(e2, ho) {
 					if (e2) {
-						$("#horas_dj").val(ho);
+						// Reemplazar la coma por un punto si el usuario escribe con coma
+						ho = ho.replace(',', '.');
 
-						if ($("#horas_concepto").val() != "" && $("#horas_dj").val() != "") {
-							$("#form_cliente").submit();
+						// Eliminar el punto al final (si lo hay) y asegurarse de que es un número
+						ho = ho.replace(/\.$/, '').trim();
+
+						// Verificar que el valor de horas es válido (número)
+						if (!isNaN(ho)) {
+							$("#horas_dj").val(ho);
+
+							if ($("#horas_concepto").val() != "" && $("#horas_dj").val() != "") {
+								$("#form_cliente").submit();
+							}
+						} else {
+							alert("Por favor, ingresa un número válido de horas.");
 						}
 					}
 				});
@@ -66,6 +77,7 @@
 		});
 
 	}
+
 
 	function elimina_horas_dj(id, id_cliente) {
 		if (confirm("\u00BFSeguro que desea borrar el trabajo?")) {
