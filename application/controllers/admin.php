@@ -600,11 +600,30 @@ class Admin extends CI_Controller
 			}
 		}
 
-		$data['bd_canciones'] = $this->admin_functions->GetCancionesBD($fecha_desde, $fecha_hasta, $validada);
+		$bd_canciones = $this->admin_functions->GetCancionesBD($fecha_desde, $fecha_hasta, $validada);
+
+		$unique_canciones = [];
+$ya_vistas = [];
+
+foreach ($bd_canciones as $cancion) {
+    $clave = strtolower(trim($cancion['cancion'])) . '|' . strtolower(trim($cancion['artista'])); // Opcionalmente puedes incluir artista
+    if (!in_array($clave, $ya_vistas)) {
+        $unique_canciones[] = $cancion;
+        $ya_vistas[] = $clave;
+    }
+}
+
+$data['bd_canciones'] = $unique_canciones;
+
+
+
+
 		$data['validada'] = $validada;
 		$data['fecha_desde'] = $fecha_desde;
 		$data['fecha_hasta'] = $fecha_hasta;
 		$view = "mantenimiento_bd_canciones";
+
+
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
 

@@ -1129,6 +1129,16 @@
 			}
 		</script>
 
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				document.querySelectorAll('input[type="text"]').forEach(input => {
+					input.addEventListener('change', function() {
+						this.value = this.value.replace(',', '.');
+					});
+				});
+			});
+		</script>
+
 		<form method="post" action="" enctype="multipart/form-data">
 			<fieldset>
 				<legend>Pagos, Presupuesto &amp; Contrato</legend>
