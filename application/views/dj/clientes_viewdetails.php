@@ -41,7 +41,7 @@
 	<h2>
 		Detalles del cliente
 	</h2>
-	<button onclick="window.open('<?php echo base_url() ?>admin/admin_chat/<?php echo $cliente['id'] ?>', '_blank')">Chatear con <?php echo $cliente['nombre_novio'] . " y " . $cliente['nombre_novia'] ?></button>
+	<button onclick="window.open('<?php echo base_url() ?>dj/dj_chat/<?php echo $cliente['id'] ?>', '_blank')">Chatear con <?php echo $cliente['nombre_novio'] . " y " . $cliente['nombre_novia'] ?></button>
 </span>
 
 <style>
