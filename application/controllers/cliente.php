@@ -759,11 +759,32 @@ class Cliente extends CI_Controller
 	
 			if (isset($_POST['add_comentario']))
 				$this->cliente_functions->InsertCancionComentario($_POST['momento_id'], $_POST['comentario'], $this->session->userdata('user_id'));
-	
+
 			// 🚀 Manejar formulario de Spotify
-			if (isset($_POST['playlist_id']) && $_POST['playlist_id'] != '') {
-				$data['canciones_spotify'] = $this->Spotify_model->obtener_canciones_playlist($_POST['playlist_id']);
-				$data['playlist_id'] = $_POST['playlist_id']; // para rellenar input si quieres
+			if (!empty($_POST['playlist_id'])) {
+				$url = $_POST['playlist_id'];
+				$url_sin_params = strtok($url, '?'); // Elimina ?si=...
+				
+				if (preg_match('/playlist\/([a-zA-Z0-9]+)/', $url_sin_params, $matches)) {
+					$playlist_id = $matches[1];
+			
+					$this->load->model('Spotify_model');
+					$data['canciones_spotify'] = $this->Spotify_model->obtener_canciones_playlist($playlist_id);
+					$data['playlist_id'] = $url; // Para mostrar en el input si quieres
+				} else {
+					$data['error_playlist'] = "Enlace de Spotify no válido.";
+				}
+			}
+
+			if (isset($_POST['accion'])) {
+				if ($_POST['accion'] == 'sumar') {
+
+					$this->load->model('Spotify_model');
+					$data['sumar'] = $this->Spotify_model->sumar_playList();
+
+				} elseif ($_POST['accion'] == 'restar'){
+
+				}
 			}
 		}
 	

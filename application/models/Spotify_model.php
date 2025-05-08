@@ -81,4 +81,12 @@ class Spotify_model extends CI_Model {
 
         return $canciones;
     }
+
+    function sumar_playList(){
+
+		$this->load->database();
+		$this->db->query("INSERT INTO playlistspotify (playlist) VALUES (?)", array('prueba2'));
+		return $this->db->insert_id();
+
+    }
 }

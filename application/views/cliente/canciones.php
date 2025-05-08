@@ -420,18 +420,40 @@
 	</fieldset>
 
 	<!-- API SPOTIFY -->
+	<?php
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+		if (empty($canciones_spotify)) {
+			$playlist = true;
+		} else {
+			$playlist = false;
+		}
+	}
+	?>
+
 	<fieldset style="border: 2px solid #93ce37; padding: 20px; border-radius: 10px; background-color: #f9fff4;">
-		<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;">🎼 Añade tu PlayList</legend>
+
+		<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;">🎼 Añade tu PlayList de Spotify</legend>
+
+		<?php if ($playlist == true): ?>
+			<p style="color: red; margin: 10px 10px;">El enlace no es correcto</p>
+		<?php endif ?>
 
 		<form method="post">
-			<input type="text" name="playlist_id" placeholder="ID de playlist de Spotify" value="<?= isset($playlist_id) ? $playlist_id : '' ?>">
-			<button type="submit">Cargar canciones</button>
+			<input type="text" name="playlist_id" placeholder="Link de una playlist de Spotify" value="<?= isset($playlist_id) ? $playlist_id : '' ?>" style="padding: 6px 10px; width: 100%; max-width: 300px; border: 1px solid #ccc; border-radius: 4px;">
+			<button type="submit" style="padding: 8px 24px; background-color: #93ce37; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Cargar canciones</button>
 		</form>
 
 
 		<?php if (isset($canciones_spotify) && count($canciones_spotify) > 0): ?>
-			<h3>Canciones de la playlist</h3>
-			<table border="1">
+
+			<form method="post" class="formElegir">
+				<label style="font-size: 15px;">Quieres añadir esta PlayList?</label>
+				<br></br>
+				<button value="sumar" name="accion" type="submit" style="padding: 8px 24px; background-color:rgb(51, 255, 0); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">✔</button>
+				<button value="restar" name="accion" type="submit" style="padding: 8px 24px; background-color:rgb(255, 0, 0); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">✖</button>
+			</form>
+
+			<table class="tabledata">
 				<thead>
 					<tr>
 						<th>Portada</th>
@@ -450,11 +472,12 @@
 							<td><?= $c['artista'] ?></td>
 							<td><?= $c['album'] ?></td>
 							<td><?= $c['duracion'] ?></td>
-							<td><a href="<?= $c['enlace_spotify'] ?>" target="_blank">Ver</a></td>
+							<td><a href="<?= $c['enlace_spotify'] ?>" target="_blank">Ir</a></td>
 						</tr>
 					<?php endforeach; ?>
 				</tbody>
 			</table>
+
 		<?php endif; ?>
 	</fieldset>
 	<!-- -->
@@ -579,3 +602,33 @@
 
 </div>
 <div class="clear"></div>
+
+<style>
+	.formElegir {
+		margin-top: 20px;
+	}
+
+	.drag-handle {
+		cursor: move;
+	}
+
+	.tabledata {
+		width: 100%;
+		border-collapse: collapse;
+		margin-top: 40px;
+	}
+
+	.tabledata th,
+	.tabledata td {
+		border: 1px solid #ccc;
+		padding: 5px;
+		text-align: center;
+	}
+
+	#total_cuentas_bancarias .sortable-item,
+	#total_canales_captacion .sortable-item,
+	#total_momentos_especiales .sortable-item,
+	#total_estados_solicitudes .sortable-item,
+	#total_tipos_clientes .sortable-item {
+		cursor: move;
+	}

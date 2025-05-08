@@ -53,7 +53,6 @@
             <li><a href="<?php echo base_url() ?>cliente/ofertas">Ofertas destacadas</a></li>
             <li><a href="<?php echo base_url() ?>cliente/galerias">Galeria de foto</a></li>
             <li><a href="<?php echo base_url() ?>cliente/invitados">Usuarios Invitado</a></li>
-            <li><a href="<?php echo base_url() ?>Spotify/obtener_playlist">Spotify</a></li>
             <div class="loginDisplay">
                 Intranet de <?php echo $this->session->userdata('nombre_novia') . ' & ' . $this->session->userdata('nombre_novio') ?> | <a id="" href="<?php echo base_url() ?>cliente/logout">Cerrar sesión</a>
             </div>
