@@ -4,6 +4,8 @@
 <script src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery.ui.touch-punch.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>js/tooltip.js"></script>
 
+<?php print_r($data['canciones_spotify']); ?>
+
 <script type="text/javascript" src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery.jeditable.js"></script>
 <style>
 	.canciones li {
@@ -416,6 +418,46 @@
 			<p style="color: #888;">No hay canciones registradas.</p>
 		<?php endif; ?>
 	</fieldset>
+
+	<!-- API SPOTIFY -->
+	<fieldset style="border: 2px solid #93ce37; padding: 20px; border-radius: 10px; background-color: #f9fff4;">
+		<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;">🎼 Añade tu PlayList</legend>
+
+		<form method="post">
+			<input type="text" name="playlist_id" placeholder="ID de playlist de Spotify" value="<?= isset($playlist_id) ? $playlist_id : '' ?>">
+			<button type="submit">Cargar canciones</button>
+		</form>
+
+
+		<?php if (isset($canciones_spotify) && count($canciones_spotify) > 0): ?>
+			<h3>Canciones de la playlist</h3>
+			<table border="1">
+				<thead>
+					<tr>
+						<th>Portada</th>
+						<th>Nombre</th>
+						<th>Artista</th>
+						<th>Álbum</th>
+						<th>Duración</th>
+						<th>Spotify</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ($canciones_spotify as $c): ?>
+						<tr>
+							<td><img src="<?= $c['portada'] ?>" width="50" /></td>
+							<td><?= $c['nombre'] ?></td>
+							<td><?= $c['artista'] ?></td>
+							<td><?= $c['album'] ?></td>
+							<td><?= $c['duracion'] ?></td>
+							<td><a href="<?= $c['enlace_spotify'] ?>" target="_blank">Ver</a></td>
+						</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		<?php endif; ?>
+	</fieldset>
+	<!-- -->
 
 
 

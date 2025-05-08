@@ -941,4 +941,84 @@
 			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
 		}
 	}
+	private $client_id = '302d6d43dfb94ee6b305be0049e8e33a';
+    private $client_secret = '18c0a19582dd40e08491e0a37f502c13';
+
+    function __construct() {
+        parent::__construct();
+    }
+	function get_token() {
+		$auth = base64_encode($this->client_id . ':' . $this->client_secret);
+	
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, "https://accounts.spotify.com/api/token");
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, "grant_type=client_credentials");
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+			"Authorization: Basic $auth",
+			"Content-Type: application/x-www-form-urlencoded"
+		));
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$res = curl_exec($ch);
+	
+		// Log de errores cURL
+		if(curl_errno($ch)) {
+			log_message('error', 'Error cURL al obtener el token: ' . curl_error($ch));
+		}
+	
+		curl_close($ch);
+	
+		// Verificamos la respuesta
+		if (!$res) {
+			log_message('error', 'No se recibió respuesta al obtener el token.');
+			return null;
+		}
+	
+		// Decodificamos la respuesta
+		$data = json_decode($res, true);
+	
+		// Log de la respuesta completa para ver qué se recibe
+		log_message('debug', 'Respuesta al obtener el token: ' . print_r($data, true));
+	
+		if (isset($data['access_token'])) {
+			return $data['access_token']; // Token obtenido correctamente
+		} else {
+			log_message('error', 'No se pudo obtener el access_token de Spotify.');
+			return null;
+		}
+	}
+	public function obtener_canciones()
+{
+    $data_header = false;
+    $data_footer = false;
+
+    // Verifica si el formulario fue enviado
+    if ($this->input->post()) {
+        $playlist_id = $this->input->post('playlist_id');
+        
+        if (!empty($playlist_id)) {
+            // Llamamos a la función del modelo para obtener las canciones
+            $this->load->model('Cliente_functions');
+            $canciones = $this->Cliente_functions->obtener_canciones_playlist($playlist_id);
+
+            // Verificamos si obtuvimos canciones
+            if (!empty($canciones)) {
+                // Si hay canciones, las pasamos a la vista
+                $data['canciones'] = $canciones;
+            } else {
+                // Si no hay canciones, mostramos un mensaje
+                $data['msg'] = "No se encontraron canciones para esta playlist.";
+            }
+        } else {
+            $data['msg'] = "Por favor ingresa un ID de playlist válido.";
+        }
+    }
+
+    // Cargamos la vista con los datos
+    $this->load->view('cliente/header_en_blanco', $data_header);
+    $this->load->view('cliente/playlist', $data);
+    $this->load->view('cliente/footer', $data_footer);
+}
+	
+
 }

@@ -2,16 +2,19 @@
 class Cliente extends CI_Controller
 {
 
+	
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->library('session');
 		$this->load->model('cliente_functions');
+        $this->load->model('Spotify_model');
 
 		if (!$this->session->userdata('user_id') && $this->router->method != 'login' && $this->router->method != 'recordar_pass' && $this->router->method != 'generar_pass') {
 			redirect('cliente/login');
 		}
 	}
+
 
 	public function login()
 	{
@@ -746,19 +749,24 @@ class Cliente extends CI_Controller
 	{
 		$data_header = false;
 		$data_footer = false;
-
-
+	
 		if ($_POST) {
-
 			if (isset($_POST['add_moment']))
 				$this->cliente_functions->InsertEvent($_POST['nombre_moment'], $this->session->userdata('user_id'));
-
+	
 			if (isset($_POST['add_song']))
 				$this->cliente_functions->InsertCancion($_POST, $this->session->userdata('user_id'));
-
+	
 			if (isset($_POST['add_comentario']))
 				$this->cliente_functions->InsertCancionComentario($_POST['momento_id'], $_POST['comentario'], $this->session->userdata('user_id'));
+	
+			// 🚀 Manejar formulario de Spotify
+			if (isset($_POST['playlist_id']) && $_POST['playlist_id'] != '') {
+				$data['canciones_spotify'] = $this->Spotify_model->obtener_canciones_playlist($_POST['playlist_id']);
+				$data['playlist_id'] = $_POST['playlist_id']; // para rellenar input si quieres
+			}
 		}
+	
 		$data['cliente'] = $this->cliente_functions->GetCliente($this->session->userdata('user_id'));
 		$data['events'] = $this->cliente_functions->GetEvents($this->session->userdata('user_id'));
 		$data['events_user'] = $this->cliente_functions->GetmomentosUser($this->session->userdata('user_id'));
@@ -831,6 +839,7 @@ class Cliente extends CI_Controller
 
 		$this->_loadViews($data_header, $data, $data_footer, "canciones");
 	}
+
 	public function galerias()
 	{
 		$data_header = false;
@@ -1071,4 +1080,6 @@ class Cliente extends CI_Controller
 			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
 		}
 	}
+
+
 }
