@@ -2,13 +2,13 @@
 class Cliente extends CI_Controller
 {
 
-	
+
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->library('session');
 		$this->load->model('cliente_functions');
-        $this->load->model('Spotify_model');
+		$this->load->model('Spotify_model');
 
 		if (!$this->session->userdata('user_id') && $this->router->method != 'login' && $this->router->method != 'recordar_pass' && $this->router->method != 'generar_pass') {
 			redirect('cliente/login');
@@ -630,39 +630,39 @@ class Cliente extends CI_Controller
 		$data_header = false;
 		$data_footer = false;
 		$data = false;
-	
+
 		$this->load->database();
-	
+
 		$id_cliente = $this->session->userdata('user_id');
-	
+
 		if ($_POST && isset($_POST['mensaje']) && trim($_POST['mensaje']) != '') {
 			$mensaje = $this->input->post('mensaje');
-	
+
 			// Insertar mensaje en base de datos
 			$this->db->query("
 				INSERT INTO contacto (id_cliente, usuario, id_usuario, mensaje, fecha)
 				VALUES (?, 'cliente', ?, ?, NOW())
 			", [$id_cliente, $id_cliente, $mensaje]);
-	
+
 			// Recuperar emails de oficina y DJ
 			$cliente = $this->db->query("
 				SELECT dj, id_oficina 
 				FROM clientes 
 				WHERE id = ?
 			", [$id_cliente])->row();
-	
+
 			if ($cliente) {
 				$from = 'info@exeleventos.com';
 				$subject = "Nuevo mensaje del cliente en el chat de coordinación";
 				$mensaje_usuario = $mensaje;
-	
+
 				// Enviar email al DJ
 				if ($cliente->dj) {
 					$dj = $this->db->query("SELECT email FROM djs WHERE id = ?", [$cliente->dj])->row();
 					if ($dj && !empty($dj->email)) {
 						$boton_url_dj = "https://intranet.exeleventos.com/dj/dj_chat/" . $id_cliente;
 						$boton_url_admin = "https://intranet.exeleventos.com/admin/admin_chat/" . $id_cliente;
-	
+
 						$mensaje_email_dj = "
 	<div style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto;'>
 		<h2 style='color: #25d366;'>¡Nuevo mensaje de un cliente!</h2>
@@ -682,13 +682,13 @@ class Cliente extends CI_Controller
 						$this->sendEmail($from, [$dj->email], $subject, $mensaje_email_dj);
 					}
 				}
-	
+
 				// Enviar email al Coordinador
 				if ($cliente->id_oficina) {
 					$oficina = $this->db->query("SELECT email FROM oficinas WHERE id_oficina = ?", [$cliente->id_oficina])->row();
 					if ($oficina && !empty($oficina->email)) {
 						$boton_url_admin = "https://intranet.exeleventos.com/admin/admin_chat/" . $id_cliente;
-	
+
 						$mensaje_email_admin = "
 	<div style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto;'>
 		<h2 style='color: #25d366;'>¡Nuevo mensaje de un cliente!</h2>
@@ -708,86 +708,119 @@ class Cliente extends CI_Controller
 					}
 				}
 			}
-	
+
 			// Redirigir después de enviar
 			redirect('cliente/chat');
 		}
-	
+
 		// Obtener mensajes
 		$data['mensajes_contacto'] = $this->cliente_functions->GetMensajesContacto($id_cliente);
 		$data['nombre_chat'] = $this->cliente_functions->GetTituloChat($id_cliente);
-	
+
 		// Obtener fotos
 		$cliente = $this->db->query("SELECT foto, dj FROM clientes WHERE id = ?", [$id_cliente])->row();
-	
+
 		if ($cliente && !empty($cliente->foto)) {
 			$data['foto_cliente'] = base_url() . 'uploads/foto_perfil/' . $cliente->foto;
 		} else {
 			$data['foto_cliente'] = base_url() . 'uploads/desconocido.jpg';
 		}
-	
+
 		$dj = null;
 		if ($cliente && $cliente->dj) {
 			$dj = $this->db->query("SELECT nombre, foto FROM djs WHERE id = ?", [$cliente->dj])->row();
 		}
-	
+
 		if ($dj && !empty($dj->foto)) {
 			$data['foto_dj'] = base_url() . 'uploads/djs/' . $dj->foto;
 		} else {
 			$data['foto_dj'] = base_url() . 'uploads/desconocido.jpg';
 		}
-	
+
 		$data['foto_coordinador'] = base_url() . 'img/logo.jpg'; // o 'uploads/desconocido.jpg'
-	
+
 		// Cargar la vista
 		$this->_loadViews($data_header, $data, $data_footer, "chat");
 	}
-	
+
 
 
 	public function canciones()
 	{
 		$data_header = false;
 		$data_footer = false;
-	
-		if ($_POST) {
-			if (isset($_POST['add_moment']))
-				$this->cliente_functions->InsertEvent($_POST['nombre_moment'], $this->session->userdata('user_id'));
-	
-			if (isset($_POST['add_song']))
-				$this->cliente_functions->InsertCancion($_POST, $this->session->userdata('user_id'));
-	
-			if (isset($_POST['add_comentario']))
-				$this->cliente_functions->InsertCancionComentario($_POST['momento_id'], $_POST['comentario'], $this->session->userdata('user_id'));
 
-			// 🚀 Manejar formulario de Spotify
+		if ($_POST) {
+			$cliente_id = $this->session->userdata('user_id');
+
+			// Primero procesar datos de la playlist si hay playlist_id
 			if (!empty($_POST['playlist_id'])) {
 				$url = $_POST['playlist_id'];
-				$url_sin_params = strtok($url, '?'); // Elimina ?si=...
-				
+				$data['enlacePlaylist'] = $url;
+				$url_sin_params = strtok($url, '?');
+
 				if (preg_match('/playlist\/([a-zA-Z0-9]+)/', $url_sin_params, $matches)) {
 					$playlist_id = $matches[1];
-			
+
 					$this->load->model('Spotify_model');
-					$data['canciones_spotify'] = $this->Spotify_model->obtener_canciones_playlist($playlist_id);
-					$data['playlist_id'] = $url; // Para mostrar en el input si quieres
+					$spotify_data = $this->Spotify_model->obtener_canciones_playlist($playlist_id);
+
+					if (!empty($spotify_data)) {
+						$data['playlist_title'] = $spotify_data['playlist_title'];
+						$data['playlist_cover'] = $spotify_data['playlist_cover'];
+						$data['canciones_spotify'] = $spotify_data['canciones'];
+						$data['playlist_id'] = $url;
+					} else {
+						$data['error_playlist'] = 'Error al obtener datos de la playlist';
+					}
 				} else {
-					$data['error_playlist'] = "Enlace de Spotify no válido.";
+					$data['error_playlist'] = 'URL de playlist no válida';
 				}
 			}
 
-			if (isset($_POST['accion'])) {
-				if ($_POST['accion'] == 'sumar') {
+			// Luego manejar la acción "sumar"
+			if ($this->input->post('accion') === 'sumar') {
+				$this->load->model('Spotify_model');
 
-					$this->load->model('Spotify_model');
-					$data['sumar'] = $this->Spotify_model->sumar_playList();
+				$enlace = $this->input->post('enlace_playlist');
+				$cliente_id = $this->session->userdata('user_id');
 
-				} elseif ($_POST['accion'] == 'restar'){
+				// Extraer ID desde el enlace
+				$url_sin_params = strtok($enlace, '?');
+				if (preg_match('/playlist\/([a-zA-Z0-9]+)/', $url_sin_params, $matches)) {
+					$playlist_id = $matches[1];
 
+					// Llamar al modelo para obtener info de la playlist
+					$spotify_data = $this->Spotify_model->obtener_canciones_playlist($playlist_id);
+
+					if (!empty($spotify_data)) {
+						$title = $spotify_data['playlist_title'];
+						$portada = $spotify_data['playlist_cover'];
+
+						$this->Spotify_model->sumar_playlist($title, $enlace, $portada, $cliente_id);
+						$data['mensaje'] = 'guardada';
+					} else {
+						$data['mensaje'] = 'error al obtener datos de la playlist';
+					}
+				} else {
+					$data['mensaje'] = 'enlace de playlist no válido';
 				}
+			} elseif ($this->input->post('accion') === 'restar') {
+				$data['mensaje'] = 'borrada';
 			}
 		}
-	
+
+		// Lógica para manejar las playlists
+		if ($this->input->post('accion') === 'ver_playlists') {
+
+			$this->load->model('Spotify_model');
+			$enlaces = $this->Spotify_model->getPlayLists($this->session->userdata('user_id'));
+
+			// Cargar la vista parcial de las playlists
+			$this->load->view('cliente/playlists', ['enlaces' => $enlaces]); // Asegúrate de que la vista `playlists.php` esté bien definida.
+			return; // Termina la ejecución para no cargar más vistas
+		}
+
 		$data['cliente'] = $this->cliente_functions->GetCliente($this->session->userdata('user_id'));
 		$data['events'] = $this->cliente_functions->GetEvents($this->session->userdata('user_id'));
 		$data['events_user'] = $this->cliente_functions->GetmomentosUser($this->session->userdata('user_id'));
@@ -1101,6 +1134,4 @@ class Cliente extends CI_Controller
 			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
 		}
 	}
-
-
 }

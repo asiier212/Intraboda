@@ -432,17 +432,46 @@
 
 	<fieldset style="border: 2px solid #93ce37; padding: 20px; border-radius: 10px; background-color: #f9fff4;">
 
-		<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;">🎼 Añade tu PlayList de Spotify</legend>
+		<legend style="font-weight: bold; font-size: 18px; color: #4a7c12;"><img src="<?php echo base_url() ?>/img/Spotify_Logo.png" width="23" height="23"></img> Añade tu PlayList de Spotify</legend>
 
-		<?php if ($playlist == true): ?>
+		<?php if (isset($error_playlist) && $error_playlist): ?>
 			<p style="color: red; margin: 10px 10px;">El enlace no es correcto</p>
-		<?php endif ?>
+		<?php endif; ?>
 
-		<form method="post">
-			<input type="text" name="playlist_id" placeholder="Link de una playlist de Spotify" value="<?= isset($playlist_id) ? $playlist_id : '' ?>" style="padding: 6px 10px; width: 100%; max-width: 300px; border: 1px solid #ccc; border-radius: 4px;">
-			<button type="submit" style="padding: 8px 24px; background-color: #93ce37; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Cargar canciones</button>
-		</form>
+		<?php if (isset($mensaje) && $mensaje === 'guardada'): ?>
+			<p style="color: green; margin: 10px 10px;">PlayList Guardada ✔</p>
+		<?php elseif (isset($mensaje) && $mensaje === 'borrada'): ?>
+			<p style="color: red; margin: 10px 10px;">PlayList No Guardada ✖</p>
+		<?php endif; ?>
 
+
+
+
+		<div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+			<form method="post" style="display: flex; align-items: center; gap: 10px;">
+				<!-- Imagen con margen a la derecha para separar del input -->
+				<img src="<?php echo base_url() ?>/img/interrogacion.png" width="20" height="20"
+					onMouseOver="Tip('<p>La playlist que compartas debe estar <b>Pública</b>. Para conseguir el enlace de la PlayList: <br> <b>Entra en la playlist, Pulsa en los tres puntos, Compartir y Copiar enlace en la lista</b>.</p>')"
+					onMouseOut="UnTip()" style="vertical-align: middle; margin-right: 1px;" />
+
+				<!-- Campo de texto con margen a la derecha para separar del botón -->
+				<input type="text" name="playlist_id" placeholder="Link de una playlist de Spotify" value="<?= isset($playlist_id) ? $playlist_id : '' ?>"
+					style="padding: 6px 10px; width: 100%; max-width: 300px; border: 1px solid #ccc; border-radius: 4px;">
+
+				<!-- Botón con un tamaño adecuado para evitar que se divida el texto en varias líneas -->
+				<button type="submit" style="padding: 8px 24px; background-color: #93ce37; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; white-space: nowrap;">
+					Cargar canciones
+				</button>
+			</form>
+
+			<!-- Botón para ver playlists, fuera del formulario pero en el mismo contenedor -->
+			<button id="togglePlaylists" type="button" onclick="verPlaylists()" style="padding: 8px 24px; background-color: rgb(116, 165, 38); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; white-space: nowrap;">
+				<span id="flecha">⭡ </span> Mis PlayList
+			</button>
+		</div>
+
+
+		<div id="resultado-playlists" style="display: none;"></div>
 
 		<?php if (isset($canciones_spotify) && count($canciones_spotify) > 0): ?>
 
@@ -451,6 +480,7 @@
 				<br></br>
 				<button value="sumar" name="accion" type="submit" style="padding: 8px 24px; background-color:rgb(51, 255, 0); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">✔</button>
 				<button value="restar" name="accion" type="submit" style="padding: 8px 24px; background-color:rgb(255, 0, 0); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">✖</button>
+				<input type="hidden" name="enlace_playlist" value="<?= htmlspecialchars($enlacePlaylist) ?>" />
 			</form>
 
 			<table class="tabledata">
@@ -479,6 +509,7 @@
 			</table>
 
 		<?php endif; ?>
+
 	</fieldset>
 	<!-- -->
 
@@ -632,3 +663,32 @@
 	#total_tipos_clientes .sortable-item {
 		cursor: move;
 	}
+</style>
+
+<script>
+	function verPlaylists() {
+		// Obtén el div que contiene las playlists
+		var playlistsDiv = document.getElementById('resultado-playlists');
+		// Toggle visibility of the playlists
+		if (playlistsDiv.style.display === "none" || playlistsDiv.style.display === "") {
+			playlistsDiv.style.display = "block";
+			document.getElementById('flecha').textContent = "⭣"; // Cambia la flecha hacia abajo
+		} else {
+			playlistsDiv.style.display = "none";
+			document.getElementById('flecha').textContent = "⭡"; // Cambia la flecha hacia arriba
+		}
+
+		// Aquí puedes hacer tu fetch para obtener las playlists si es necesario
+		fetch('<?= base_url() . "cliente/canciones" ?>', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded'
+				},
+				body: 'accion=ver_playlists'
+			})
+			.then(response => response.text()) // Se espera una respuesta HTML
+			.then(html => {
+				document.getElementById('resultado-playlists').innerHTML = html;
+			});
+	}
+</script>
