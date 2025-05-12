@@ -4,8 +4,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Spotify_model extends CI_Model
 {
 
-    private $client_id = '302d6d43dfb94ee6b305be0049e8e33a';
-    private $client_secret = '18c0a19582dd40e08491e0a37f502c13';
+    private $client_id = '42d153b86e9e4289a7cbfa8c08488411';
+    private $client_secret = 'abd295c88c4244fab112370294d8c191';
 
     // Obtener token de acceso
     function getSpotifyToken()

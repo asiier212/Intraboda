@@ -7,9 +7,9 @@ class Ajax extends CI_Controller
 	{
 		$this->load->database();
 		$this->load->model('admin_functions');
-	
+
 		$orden = $this->input->post('orden');
-	
+
 		if (is_array($orden)) {
 			foreach ($orden as $pos => $id_grupo) {
 				$this->admin_functions->ActualizarOrdenEquipo($id_grupo, $pos + 1);
@@ -20,9 +20,9 @@ class Ajax extends CI_Controller
 			echo "Parámetro 'orden' inválido";
 		}
 	}
-	
-	
-	
+
+
+
 
 	function updateordencanciones()
 	{
@@ -553,6 +553,16 @@ function buscarrestaurantearchivos($nombre)
 		}
 	}
 
+	function deletePlayList()
+	{
+		if ($_POST) {
+			$this->load->database();
+			$id = (int) $_POST['id'];
+			$this->db->query("DELETE FROM playlistspotify WHERE id = {$id}");
+			echo 'ok';
+		}
+	}
+
 	function deletecanalcaptacion()
 	{
 		if ($_POST) {
@@ -560,6 +570,7 @@ function buscarrestaurantearchivos($nombre)
 			$this->db->query("DELETE FROM canales_captacion WHERE id = " . $_POST['id'] . "");
 		}
 	}
+
 	function deletemomentoespecial()
 	{
 		if ($_POST) {
@@ -629,15 +640,15 @@ function buscarrestaurantearchivos($nombre)
 		if ($_POST) {
 			$this->load->database();
 			$id_componente = intval($_POST['id']);
-	
+
 			// Eliminar asociación actual
 			$this->db->query("UPDATE componentes SET id_grupo = NULL WHERE id_componente = " . $id_componente);
-	
+
 			// Cerrar historial activo
 			$this->db->query("UPDATE historial_componentes_grupos SET fecha_desasignacion = NOW() WHERE id_componente = $id_componente AND fecha_desasignacion IS NULL");
 		}
 	}
-	
+
 	function deleteequipo()
 	{
 		if ($_POST) {
@@ -663,19 +674,19 @@ function buscarrestaurantearchivos($nombre)
 	{
 		if ($_POST) {
 			$this->load->database();
-	
+
 			$id_componente = intval($_POST['id']); // Sanitiza por seguridad
-	
+
 			// 1. Borrar historial primero
 			$this->db->where('id_componente', $id_componente);
 			$this->db->delete('historial_componentes_grupos');
-	
+
 			// 2. Borrar componente
 			$this->db->where('id_componente', $id_componente);
 			$this->db->delete('componentes');
 		}
 	}
-	
+
 	function deletereparacioncomponente()
 	{
 		if ($_POST) {

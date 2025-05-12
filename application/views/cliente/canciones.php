@@ -3,10 +3,12 @@
 <script src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery-ui-1.10.4.js"></script>
 <script src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery.ui.touch-punch.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>js/tooltip.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <?php print_r($data['canciones_spotify']); ?>
 
 <script type="text/javascript" src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery.jeditable.js"></script>
+
 <style>
 	.canciones li {
 		padding-left: 10px !important;
@@ -491,7 +493,7 @@
 						<th>Artista</th>
 						<th>Álbum</th>
 						<th>Duración</th>
-						<th>Spotify</th>
+						<th>Escuchar en Spotify</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -502,7 +504,7 @@
 							<td><?= $c['artista'] ?></td>
 							<td><?= $c['album'] ?></td>
 							<td><?= $c['duracion'] ?></td>
-							<td><a href="<?= $c['enlace_spotify'] ?>" target="_blank">Ir</a></td>
+							<td><a href="<?= $c['enlace_spotify'] ?>" target="_blank"><img src="<?php echo base_url() ?>/img/Spotify_Logo.png" width="23" height="23"></img> </a></td>
 						</tr>
 					<?php endforeach; ?>
 				</tbody>
@@ -669,26 +671,50 @@
 	function verPlaylists() {
 		// Obtén el div que contiene las playlists
 		var playlistsDiv = document.getElementById('resultado-playlists');
-		// Toggle visibility of the playlists
+
+		// Solo alternar la visibilidad cuando se haga clic en el botón de mostrar/ocultar
 		if (playlistsDiv.style.display === "none" || playlistsDiv.style.display === "") {
-			playlistsDiv.style.display = "block";
-			document.getElementById('flecha').textContent = "⭣"; // Cambia la flecha hacia abajo
+			playlistsDiv.style.display = "block"; // Mostrar el div
+			document.getElementById('flecha').textContent = "⭣"; // Cambiar la flecha hacia abajo
 		} else {
-			playlistsDiv.style.display = "none";
-			document.getElementById('flecha').textContent = "⭡"; // Cambia la flecha hacia arriba
+			playlistsDiv.style.display = "none"; // Ocultar el div
+			document.getElementById('flecha').textContent = "⭡"; // Cambiar la flecha hacia arriba
 		}
 
-		// Aquí puedes hacer tu fetch para obtener las playlists si es necesario
-		fetch('<?= base_url() . "cliente/canciones" ?>', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/x-www-form-urlencoded'
+		// Hacer la llamada solo si el div está visible (esto es lo que garantiza que la tabla se recargue solo si está abierta)
+		if (playlistsDiv.style.display === "block") {
+			fetch('<?= base_url() . "cliente/canciones" ?>', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded'
+					},
+					body: 'accion=ver_playlists' // Acción para obtener las playlists
+				})
+				.then(response => response.text()) // Esperar una respuesta en formato HTML
+				.then(html => {
+					document.getElementById('resultado-playlists').innerHTML = html; // Actualizar el contenido
+				});
+		}
+	}
+
+	function delete_playlist(el) {
+		var id = el.dataset.id; // Obtener el ID de la playlist
+		if (confirm("¿Seguro que desea borrar la playlist?")) {
+			$.ajax({
+				type: 'POST',
+				url: '<?= base_url() . 'index.php/ajax/deletePlayList' ?>',
+				data: {
+					id: id
 				},
-				body: 'accion=ver_playlists'
-			})
-			.then(response => response.text()) // Se espera una respuesta HTML
-			.then(html => {
-				document.getElementById('resultado-playlists').innerHTML = html;
+				success: function(data) {
+					if (data.trim() === 'ok') {
+						// Después de eliminar la playlist, recargamos las playlists
+						verPlaylists(); // Recargar las playlists y mantener el div visible
+						verPlaylists();
+					}
+				}
 			});
+		}
+		return false;
 	}
 </script>

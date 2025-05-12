@@ -37,22 +37,28 @@
         text-decoration: underline;
     }
 </style>
-
+<div id="result"></div>
 <table class="tabledata">
     <thead>
         <tr>
-            <th colspan="3">Mis PlayLists</th>
+            <th colspan="3" style="font-size: 15px">Mis PlayLists</th>
         </tr>
     </thead>
     <tbody>
         <?php if (!empty($enlaces)): ?>
             <?php foreach ($enlaces as $playlist): ?>
-                <tr>
-                    <td><img src="<?= htmlspecialchars($playlist->portada) ?>"></td>
+                <tr id="playlist_<?= $playlist->id ?>">
+                    <td><a href="<?= htmlspecialchars($playlist->enlace) ?>" target="_blank"><img src="<?= htmlspecialchars($playlist->portada) ?>"></a></td>
                     <td><a href="<?= htmlspecialchars($playlist->enlace) ?>" target="_blank"><?= htmlspecialchars($playlist->titulo) ?></a></td>
-                    <td>x</td>
+                    <td>
+                        <a href="#"
+                            data-id="<?= $playlist->id ?>"
+                            onclick="return delete_playlist(this)"
+                            style="color:red; text-decoration: none; font-size: 20px">✖</a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
+
         <?php else: ?>
             <tr>
                 <td colspan="6">No tienes playlists guardadas.</td>
