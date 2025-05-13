@@ -202,6 +202,9 @@ mb_internal_encoding('UTF-8');
 
 							echo "</tr>";
 						}
+						echo "<tr>";
+						echo "<td colspan='11' style='background-color: #93CE37;'></td>";
+						echo "</tr>";
 					}
 					?>
 				</table>
