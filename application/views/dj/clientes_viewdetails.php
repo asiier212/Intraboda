@@ -349,7 +349,7 @@
 
 
 					<!-- CONTENIDO: Revisión -->
-					<div id="tab_content_revision" style="display:none;">
+					<div id="tab_content_revision" style="display:none; max-height:600px; overflow-y:auto;">
 						<?php foreach ($equipos_detalles as $tipo_equipo_loop => $detalle): ?>
 							<?php
 							$rev_salida = isset($revisiones_guardadas[$tipo_equipo_loop]['revision_salida'])

@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>js/alertify/themes/alertify.core.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>js/alertify/themes/alertify.default.css" />
 
-
 <script language="javascript">
 	$(document).ready(function() {
 		$('.edit_box').editable('<?php echo base_url() ?>index.php/ajax/updatedatocliente/<?php echo $cliente['id'] ?>', {
@@ -707,7 +706,6 @@
 									: [];
 								?>
 
-
 								<form method="POST" class="formulario_revision" data-tipo-equipo="<?php echo $tipo_equipo_loop; ?>" style="display:none; margin:0;">
 									<input type="hidden" name="guardar_revisiones" value="1">
 									<input type="hidden" name="tipo_equipo_revision" value="<?php echo $tipo_equipo_loop; ?>">
@@ -1010,7 +1008,7 @@
 									<?php } ?>
 
 								<?php } elseif ($tipo == 'texto') { ?>
-									<input type="text" value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?>" disabled>
+									<input type="text" value="<?php echo "hola".htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?>" disabled>
 
 								<?php } else { ?>
 									<p>El tipo de pregunta <strong><?php echo htmlspecialchars($tipo); ?></strong> no está soportado.</p>
