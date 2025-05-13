@@ -961,19 +961,19 @@ class Admin_functions extends CI_Model
 	public function GetTituloChat($id_cliente)
 	{
 		$this->load->database();
-	
+
 		$cliente = $this->db->query("
 			SELECT nombre_novio, apellidos_novio, nombre_novia, apellidos_novia, dj
 			FROM clientes
 			WHERE id = $id_cliente
 		")->row();
-	
+
 		$titulo = '';
-	
+
 		if ($cliente) {
 			$titulo = $cliente->nombre_novio . ', ' .
-					  $cliente->nombre_novia;
-	
+				$cliente->nombre_novia;
+
 			if ($cliente->dj) {
 				$dj = $this->db->query("SELECT nombre FROM djs WHERE id = {$cliente->dj}")->row();
 				if ($dj) {
@@ -981,11 +981,11 @@ class Admin_functions extends CI_Model
 				}
 			}
 		}
-	
+
 		return $titulo;
 	}
 
-	
+
 	function GetComponentes()
 	{
 		$data = [];
@@ -2233,10 +2233,16 @@ class Admin_functions extends CI_Model
 
 	function GetEventosView($fecha_desde, $fecha_hasta, $oficina)
 	{
+
 		$data = false;
 		$this->load->database();
 
-		$query = $this->db->query("SELECT id, DATE_FORMAT(fecha_boda, '%d-%m-%Y') as fecha_bodaa, fecha_boda, nombre_novio, nombre_novia, id_tipo_cliente, restaurantes.nombre AS restaurante, restaurantes.direccion AS direccion_restaurante, DATE_FORMAT(fecha_boda, '%H:%i') as hora_boda, servicios, dj FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante WHERE fecha_boda>='" . $fecha_desde . " 00:00:00' and fecha_boda<='" . $fecha_hasta . " 23:59:59' and id_oficina='" . $oficina . "' order by fecha_boda ASC");
+		if ($oficina != 'todos') {
+			$query = $this->db->query("SELECT id, DATE_FORMAT(fecha_boda, '%d-%m-%Y') as fecha_bodaa, fecha_boda, nombre_novio, nombre_novia, id_tipo_cliente, restaurantes.nombre AS restaurante, restaurantes.direccion AS direccion_restaurante, DATE_FORMAT(fecha_boda, '%H:%i') as hora_boda, servicios, dj FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante WHERE fecha_boda>='" . $fecha_desde . " 00:00:00' and fecha_boda<='" . $fecha_hasta . " 23:59:59' and id_oficina='" . $oficina . "' order by fecha_boda ASC");
+		} else {
+			$query = $this->db->query("SELECT id, DATE_FORMAT(fecha_boda, '%d-%m-%Y') as fecha_bodaa, fecha_boda, nombre_novio, nombre_novia, id_tipo_cliente, restaurantes.nombre AS restaurante, restaurantes.direccion AS direccion_restaurante, DATE_FORMAT(fecha_boda, '%H:%i') as hora_boda, servicios, dj FROM clientes INNER JOIN restaurantes ON clientes.id_restaurante=restaurantes.id_restaurante WHERE fecha_boda>='" . $fecha_desde . " 00:00:00' and fecha_boda<='" . $fecha_hasta . " 23:59:59' order by fecha_boda ASC");
+		}
+
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {
@@ -2268,8 +2274,12 @@ class Admin_functions extends CI_Model
 		foreach ($query->result() as $fila) {
 			$data[0]['eventos_totales'] = $fila->eventos_totales;
 		}
+		if ($oficina != 'todos') {
+			$query = $this->db->query("SELECT COUNT(id) as eventos FROM clientes WHERE fecha_boda>='" . $fecha_desde . " 00:00:00' and fecha_boda<='" . $fecha_hasta . " 23:59:59' and id_oficina='" . $oficina . "'");
+		} else {
+			$query = $this->db->query("SELECT COUNT(id) as eventos FROM clientes WHERE fecha_boda>='" . $fecha_desde . " 00:00:00' and fecha_boda<='" . $fecha_hasta . " 23:59:59'");
+		}
 
-		$query = $this->db->query("SELECT COUNT(id) as eventos FROM clientes WHERE fecha_boda>='" . $fecha_desde . " 00:00:00' and fecha_boda<='" . $fecha_hasta . " 23:59:59' and id_oficina='" . $oficina . "'");
 		foreach ($query->result() as $fila) {
 			$data[0]['eventos'] = $fila->eventos;
 			$data[0]['id_oficina'] = $oficina;

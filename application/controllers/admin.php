@@ -603,17 +603,17 @@ class Admin extends CI_Controller
 		$bd_canciones = $this->admin_functions->GetCancionesBD($fecha_desde, $fecha_hasta, $validada);
 
 		$unique_canciones = [];
-$ya_vistas = [];
+		$ya_vistas = [];
 
-foreach ($bd_canciones as $cancion) {
-    $clave = strtolower(trim($cancion['cancion'])) . '|' . strtolower(trim($cancion['artista'])); // Opcionalmente puedes incluir artista
-    if (!in_array($clave, $ya_vistas)) {
-        $unique_canciones[] = $cancion;
-        $ya_vistas[] = $clave;
-    }
-}
+		foreach ($bd_canciones as $cancion) {
+			$clave = strtolower(trim($cancion['cancion'])) . '|' . strtolower(trim($cancion['artista'])); // Opcionalmente puedes incluir artista
+			if (!in_array($clave, $ya_vistas)) {
+				$unique_canciones[] = $cancion;
+				$ya_vistas[] = $clave;
+			}
+		}
 
-$data['bd_canciones'] = $unique_canciones;
+		$data['bd_canciones'] = $unique_canciones;
 
 
 
@@ -850,6 +850,7 @@ $data['bd_canciones'] = $unique_canciones;
 		$data['djs'] = $this->admin_functions->GetDJs();
 		$data['eventos_view'] = $this->admin_functions->GetEventosView($fecha_desde, $fecha_hasta, $oficina);
 		$data['eventos_totales'] = $this->admin_functions->GetEventosTotalesView($fecha_desde, $fecha_hasta, $oficina);
+
 		$view = "admin_eventos_view";
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
