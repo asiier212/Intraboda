@@ -348,13 +348,28 @@
     							<?php } elseif ($tipo == 'texto') { ?>
     								<input type="text" name="respuesta[<?php echo $pregunta['id_pregunta']; ?>]"
     									value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : ''); ?>">
-
+    							<?php } elseif ($tipo == 'textol') { ?>
+    								<textarea id="observaciones"><?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?></textarea>
     							<?php } else { ?>
     								<p>El tipo de pregunta <strong><?php echo htmlspecialchars($tipo); ?></strong> no está soportado.</p>
     							<?php } ?>
     						</div>
     						<br>
     					<?php } ?>
+
+    					<style>
+    						#observaciones {
+    							resize: none;
+    							width: 100%;
+    							height: 150px;
+    							padding: 10px;
+    							border: 1px solid #ccc;
+    							border-radius: 5px;
+    							box-sizing: border-box;
+    							font-size: 14px;
+    							font-family: Arial, sans-serif;
+    						}
+    					</style>
 
     					<center><input type="submit" name="actualizar_encuesta" value="Actualizar Encuesta"></center>
     				</form>
@@ -590,3 +605,44 @@
     </div>
     <div class="clear">
     </div>
+
+
+
+    <!-- Cargar TinyMCE -->
+    <script src="<?php echo base_url() . "js/tinymce/tinymce.min.js" ?>"></script>
+
+    <script>
+    	// Inicialización de TinyMCE
+    	document.addEventListener("DOMContentLoaded", function() {
+    		tinymce.init({
+    			selector: 'textarea',
+    			toolbar: 'bold italic fontsizeselect',
+    			font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+    			content_style: 'body { font-size: 14px; }',
+    			branding: false,
+    			menubar: false,
+    			height: 200,
+    		});
+    	});
+
+    	document.addEventListener("DOMContentLoaded", function() {
+    		var form = document.getElementById("form_observacion");
+    		var textarea = document.getElementById("observaciones");
+
+    		// Eliminar required porque el campo está oculto
+    		textarea.removeAttribute("required");
+
+    		// Agregar validación en el submit
+    		form.addEventListener("submit", function(event) {
+    			var editor = tinymce.get("observaciones"); // Obtener instancia de TinyMCE
+    			var content = editor ? editor.getContent().trim() : textarea.value.trim(); // Obtener contenido
+
+    			if (!content) {
+    				alert("El campo de observación no puede estar vacío.");
+    				event.preventDefault(); // Evita el envío del formulario
+    			}
+    		});
+    	});
+    </script>
+
+	

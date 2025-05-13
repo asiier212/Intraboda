@@ -1008,8 +1008,9 @@
 									<?php } ?>
 
 								<?php } elseif ($tipo == 'texto') { ?>
-									<input type="text" value="<?php echo "hola".htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?>" disabled>
-
+									<input type="text" value="<?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?>" disabled>
+								<?php } elseif ($tipo == 'textol') { ?>
+									<textarea disabled><?php echo htmlspecialchars(!empty($respuesta_cliente_actual) ? $respuesta_cliente_actual : 'No respondido'); ?></textarea>
 								<?php } else { ?>
 									<p>El tipo de pregunta <strong><?php echo htmlspecialchars($tipo); ?></strong> no está soportado.</p>
 								<?php } ?>

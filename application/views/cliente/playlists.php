@@ -3,45 +3,45 @@
         margin-top: 20px;
     }
 
-    .tabledata {
+    .tabledata_spoty {
         width: 100%;
         border-collapse: collapse;
         margin-top: 40px;
     }
 
-    .tabledata th,
-    .tabledata td {
+    .tabledata_spoty th,
+    .tabledata_spoty td {
         border: 1px solid #ccc;
         padding: 8px;
         text-align: center;
     }
 
-    .tabledata th {
+    .tabledata_spoty th {
         background-color: rgb(104, 216, 60);
         font-weight: bold;
     }
 
-    .tabledata img {
-        width: 80px;
+    .tabledata_spoty img {
+        width: 60px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .tabledata a {
+    .tabledata_spoty a {
         color: #1DB954;
         text-decoration: none;
         font-weight: bold;
     }
 
-    .tabledata a:hover {
+    .tabledata_spoty a:hover {
         text-decoration: underline;
     }
 </style>
 <div id="result"></div>
-<table class="tabledata">
+<table class="tabledata_spoty">
     <thead>
         <tr>
-            <th colspan="3" style="font-size: 15px">Mis PlayLists</th>
+            <th colspan="3" style="font-size: 15px; color: white;">Mis PlayLists</th>
         </tr>
     </thead>
     <tbody>
