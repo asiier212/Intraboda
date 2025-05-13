@@ -117,14 +117,24 @@ mb_internal_encoding('UTF-8');
 				<table class="tabledata">
 					<tr>
 						<th>Fecha</th>
-						<th>DJ</th>
+						<th style="vertical-align: middle;">
+							<span id="textoDJ" style="margin-right: 5px;">DJ</span>
+							<span id="toggleDJ" class="columna-toggle" style="cursor:pointer; display:inline-block; vertical-align: middle;">
+								<img src="<?php echo base_url() ?>/img/ojoc.png" style="width:20px;" />
+							</span>
+						</th>
 						<th style="vertical-align: middle;">
 							<span id="textoNombre" style="margin-right: 5px;">Nombre</span>
 							<span id="toggleNombre" class="columna-toggle" style="cursor:pointer; display:inline-block; vertical-align: middle;">
 								<img src="<?php echo base_url() ?>/img/ojoc.png" style="width:20px; vertical-align: middle;" />
 							</span>
 						</th>
-						<th>Lugar</th>
+						<th style="vertical-align: middle;">
+							<span id="textoLugar" style="margin-right: 5px;">Lugar</span>
+							<span id="toggleLugar" class="columna-toggle" style="cursor:pointer; display:inline-block; vertical-align: middle;">
+								<img src="<?php echo base_url() ?>/img/ojoc.png" style="width:20px;" />
+							</span>
+						</th>
 						<th>Localidad</th>
 						<th>Horario</th>
 						<th>Servicios</th>
@@ -148,25 +158,42 @@ mb_internal_encoding('UTF-8');
 								$primero = false;
 							}
 
-							// Renderizar las otras columnas para cada evento
-							echo "<td style='background-color:" . $color . "'>";
+							// DJ completo
+							$dj_nombre = ''; // <-- Línea clave
+							echo "<td class='col-dj oculto' style='background-color:" . $color . "'>";
 							foreach ($djs as $dj) {
 								if ($dj['id'] == $ev['dj']) {
 									echo $dj['nombre'];
+									$dj_nombre = $dj['nombre'];
 								}
 							}
 							echo "</td>";
 
-							echo "<td class='col-nombre' style='background-color:" . $color . "'>";
+							// DJ iniciales
+							echo "<td class='col-dj-iniciales' style='background-color:" . $color . "' title='" . $dj_nombre . "'>";
+							if ($dj_nombre != '') {
+								$partes = explode(' ', $dj_nombre);
+								echo strtoupper(mb_substr($partes[0], 0, 1)) . "." . (isset($partes[1]) ? strtoupper(mb_substr($partes[1], 0, 1)) : '');
+							} else {
+								echo '-';
+							}
+							echo "</td>";
+
+							echo "<td class='col-nombre oculto' style='background-color:" . $color . "'>";
 							echo $ev['nombre_novio'] . " y " . $ev['nombre_novia'];
 							echo "</td>";
 
-							echo "<td class='col-iniciales oculto' style='background-color:" . $color . "' title='" . $ev['nombre_novio'] . ' y ' . $ev['nombre_novia'] . "'>";
+							echo "<td class='col-iniciales' style='background-color:" . $color . "' title='" . $ev['nombre_novio'] . ' y ' . $ev['nombre_novia'] . "'>";
 							echo strtoupper(mb_substr($ev['nombre_novio'], 0, 1)) . "&" . strtoupper(mb_substr($ev['nombre_novia'], 0, 1));
 							echo "</td>";
 
-							// Resto de columnas
-							echo "<td style='background-color:" . $color . "'>" . $ev['restaurante'] . "</td>";
+							echo "<td class='col-lugar oculto' style='background-color:" . $color . "'>" . $ev['restaurante'] . "</td>";
+
+							echo "<td class='col-lugar-iniciales' style='background-color:" . $color . "' title='" . $ev['restaurante'] . "'>";
+							$partes = explode(' ', $ev['restaurante']);
+							echo strtoupper(mb_substr($partes[0], 0, 1)) . "." . (isset($partes[1]) ? strtoupper(mb_substr($partes[1], 0, 1)) : '');
+							echo "</td>";
+
 							echo "<td style='background-color:" . $color . "'>" . $ev['direccion_restaurante'] . "</td>";
 							echo "<td style='background-color:" . $color . "'>" . $ev['hora_boda'] . "</td>";
 							echo "<td style='background-color:" . $color . "' onMouseOver=\"Tip('" . htmlspecialchars($tooltip, ENT_QUOTES, 'UTF-8') . "')\" onMouseOut=\"UnTip()\">" . $serv . "</td>";
@@ -191,7 +218,7 @@ mb_internal_encoding('UTF-8');
 
 <script>
 	$(document).ready(function() {
-		let oculto = false;
+		let oculto = true;
 		$('#toggleNombre').click(function() {
 			$('.col-nombre').toggleClass('oculto');
 			$('.col-iniciales').toggleClass('oculto');
@@ -202,5 +229,32 @@ mb_internal_encoding('UTF-8');
 			const img = $(this).find('img');
 			img.attr('src', oculto ? '<?php echo base_url() ?>/img/ojo.png' : '<?php echo base_url() ?>/img/ojoc.png');
 		});
+	});
+
+	$(document).ready(function() {
+		let ocultoDJ = true;
+		let ocultoLugar = true;
+
+		$('#toggleDJ').click(function() {
+			$('.col-dj').toggleClass('oculto');
+			$('.col-dj-iniciales').toggleClass('oculto');
+			ocultoDJ = !ocultoDJ;
+			$('#textoDJ').text(ocultoDJ ? 'DJ' : 'DJ');
+			$(this).find('img').attr('src', ocultoDJ ? '<?php echo base_url() ?>/img/ojo.png' : '<?php echo base_url() ?>/img/ojoc.png');
+		});
+
+		$('#toggleLugar').click(function() {
+			$('.col-lugar').toggleClass('oculto');
+			$('.col-lugar-iniciales').toggleClass('oculto');
+			ocultoLugar = !ocultoLugar;
+			$('#textoLugar').text(ocultoLugar ? 'Lug.' : 'Lugar');
+			$(this).find('img').attr('src', ocultoLugar ? '<?php echo base_url() ?>/img/ojo.png' : '<?php echo base_url() ?>/img/ojoc.png');
+		});
+
+		$('#textoNombre').text('Nom.');
+		$('#textoLugar').text('Lug.');
+		$('#toggleNombre img').attr('src', '<?php echo base_url() ?>/img/ojo.png');
+		$('#toggleDJ img').attr('src', '<?php echo base_url() ?>/img/ojo.png');
+		$('#toggleLugar img').attr('src', '<?php echo base_url() ?>/img/ojo.png');
 	});
 </script>
