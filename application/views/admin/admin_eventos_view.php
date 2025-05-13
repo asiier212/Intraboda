@@ -106,6 +106,14 @@ mb_internal_encoding('UTF-8');
 
 				<br><br>
 
+				<?php
+				// Agrupamos los eventos por fecha
+				$eventos_por_fecha = [];
+				foreach ($eventos_view as $evento) {
+					$eventos_por_fecha[$evento['fecha_boda']][] = $evento;
+				}
+				?>
+
 				<table class="tabledata">
 					<tr>
 						<th>Fecha</th>
@@ -123,65 +131,54 @@ mb_internal_encoding('UTF-8');
 						<th>S. Adicionales</th>
 						<th>Acceso</th>
 					</tr>
+
 					<?php
-					if ($eventos_view[0] != "") {
-						foreach ($eventos_view as $ev) {
-							foreach ($tipos_clientes as $tipo) {
-								if ($tipo['id_tipo_cliente'] == $ev['id_tipo_cliente']) {
-									$color = $tipo['color'];
+					// Recorremos cada grupo de eventos por fecha
+					foreach ($eventos_por_fecha as $fecha => $eventos_del_dia) {
+						$primero = true;
+						$rowspan = count($eventos_del_dia); // El número de eventos en esta fecha
+
+						// Recorremos los eventos de una misma fecha
+						foreach ($eventos_del_dia as $ev) {
+							// Solo en la primera fila de cada fecha mostramos la fecha con rowspan
+							echo "<tr>";
+
+							if ($primero) {
+								echo '<td rowspan="' . $rowspan . '" style="background-color:' . $color . '">' . $fecha . '</td>';
+								$primero = false;
+							}
+
+							// Renderizar las otras columnas para cada evento
+							echo "<td style='background-color:" . $color . "'>";
+							foreach ($djs as $dj) {
+								if ($dj['id'] == $ev['dj']) {
+									echo $dj['nombre'];
 								}
 							}
-							$serv = "";
-							$tooltip = "";
-							$serv_ad = "";
-							$tooltip_ad = "";
-							$arr_servicios = unserialize($ev['servicios']);
-							$arr_serv_keys = array_keys($arr_servicios);
-							foreach ($servicios as $servicio) {
-								if (in_array($servicio['id'], $arr_serv_keys)) {
-									$nombre = $servicio['nombre'];
-									$short = mb_substr($nombre, 0, 4, 'UTF-8');
-									$tooltipText = "- " . str_replace("'", "", str_replace("&#39;", "", $nombre));
-									if ($servicio['servicio_adicional'] == 'N') {
-										$serv .= ($serv != "" ? "-" : "") . $short;
-										$tooltip .= ($tooltip != "" ? "<br>" : "") . $tooltipText;
-									} else {
-										$serv_ad .= ($serv_ad != "" ? "-" : "") . $short;
-										$tooltip_ad .= ($tooltip_ad != "" ? "<br>" : "") . $tooltipText;
-									}
-								}
-							}
+							echo "</td>";
+
+							echo "<td class='col-nombre' style='background-color:" . $color . "'>";
+							echo $ev['nombre_novio'] . " y " . $ev['nombre_novia'];
+							echo "</td>";
+
+							echo "<td class='col-iniciales oculto' style='background-color:" . $color . "' title='" . $ev['nombre_novio'] . ' y ' . $ev['nombre_novia'] . "'>";
+							echo strtoupper(mb_substr($ev['nombre_novio'], 0, 1)) . "&" . strtoupper(mb_substr($ev['nombre_novia'], 0, 1));
+							echo "</td>";
+
+							// Resto de columnas
+							echo "<td style='background-color:" . $color . "'>" . $ev['restaurante'] . "</td>";
+							echo "<td style='background-color:" . $color . "'>" . $ev['direccion_restaurante'] . "</td>";
+							echo "<td style='background-color:" . $color . "'>" . $ev['hora_boda'] . "</td>";
+							echo "<td style='background-color:" . $color . "' onMouseOver=\"Tip('" . htmlspecialchars($tooltip, ENT_QUOTES, 'UTF-8') . "')\" onMouseOut=\"UnTip()\">" . $serv . "</td>";
+							echo "<td style='background-color:" . $color . "' onMouseOver=\"Tip('" . htmlspecialchars($tooltip_ad, ENT_QUOTES, 'UTF-8') . "')\" onMouseOut=\"UnTip()\">" . $serv_ad . "</td>";
+							echo "<td style='background-color:" . $color . "'><a href='" . base_url() . "admin/clientes/view/" . $ev['id'] . "' target='_blank'>Ver ficha</a></td>";
+
+							echo "</tr>";
+						}
+					}
 					?>
-							<tr>
-								<td style="background-color:<?php echo $color ?>"><?php echo $ev['fecha_boda'] ?></td>
-
-								<td style="background-color:<?php echo $color ?>">
-									<?php foreach ($djs as $dj) {
-										if ($dj['id'] == $ev['dj']) {
-											echo ($dj['nombre']);
-										}
-									} ?>
-								</td>
-
-								<td class="col-nombre" style="background-color:<?php echo $color ?>">
-									<?php echo ($ev['nombre_novio']) ?> y <?php echo ($ev['nombre_novia']) ?>
-								</td>
-								<td class="col-iniciales oculto" style="background-color:<?php echo $color ?>" title="<?php echo ($ev['nombre_novio']) . ' y ' . $ev['nombre_novia'] ?>">
-									<?php echo strtoupper(mb_substr($ev['nombre_novio'], 0, 1)) . "&" . strtoupper(mb_substr($ev['nombre_novia'], 0, 1)) ?>
-								</td>
-
-								<td style="background-color:<?php echo $color ?>"><?php echo ($ev['restaurante']) ?></td>
-								<td style="background-color:<?php echo $color ?>"><?php echo ($ev['direccion_restaurante']) ?></td>
-								<td style="background-color:<?php echo $color ?>"><?php echo $ev['hora_boda'] ?></td>
-								<td style="background-color:<?php echo $color ?>" onMouseOver="Tip('<?php echo htmlspecialchars($tooltip, ENT_QUOTES, 'UTF-8') ?>')" onMouseOut="UnTip()"><?php echo $serv ?></td>
-								<td style="background-color:<?php echo $color ?>" onMouseOver="Tip('<?php echo htmlspecialchars($tooltip_ad, ENT_QUOTES, 'UTF-8') ?>')" onMouseOut="UnTip()"><?php echo $serv_ad ?></td>
-								<td style="background-color:<?php echo $color ?>">
-									<a href="<?php echo base_url() ?>admin/clientes/view/<?php echo $ev['id'] ?>" target="_blank">Ver ficha</a>
-								</td>
-							</tr>
-					<?php }
-					} ?>
 				</table>
+
 			</fieldset>
 			</p>
 
