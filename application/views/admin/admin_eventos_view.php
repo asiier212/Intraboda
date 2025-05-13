@@ -38,6 +38,20 @@ mb_internal_encoding('UTF-8');
 	.editable img {
 		float: right
 	}
+
+	.oculto {
+		display: none;
+	}
+
+	.columna-toggle {
+		cursor: pointer;
+		color: #007bff;
+		text-decoration: underline;
+	}
+
+	.iniciales {
+		font-weight: bold;
+	}
 </style>
 
 <h2>Eventos</h2>
@@ -95,13 +109,18 @@ mb_internal_encoding('UTF-8');
 				<table class="tabledata">
 					<tr>
 						<th>Fecha</th>
-						<th>Nombre</th>
+						<th>DJ</th>
+						<th style="vertical-align: middle;">
+							<span id="textoNombre" style="margin-right: 5px;">Nombre</span>
+							<span id="toggleNombre" class="columna-toggle" style="cursor:pointer; display:inline-block; vertical-align: middle;">
+								<img src="<?php echo base_url() ?>/img/ojoc.png" style="width:20px; vertical-align: middle;" />
+							</span>
+						</th>
 						<th>Lugar</th>
 						<th>Localidad</th>
 						<th>Horario</th>
 						<th>Servicios</th>
 						<th>S. Adicionales</th>
-						<th>DJ</th>
 						<th>Acceso</th>
 					</tr>
 					<?php
@@ -135,12 +154,7 @@ mb_internal_encoding('UTF-8');
 					?>
 							<tr>
 								<td style="background-color:<?php echo $color ?>"><?php echo $ev['fecha_boda'] ?></td>
-								<td style="background-color:<?php echo $color ?>"><?php echo ($ev['nombre_novio']) ?> y <?php echo ($ev['nombre_novia']) ?></td>
-								<td style="background-color:<?php echo $color ?>"><?php echo ($ev['restaurante']) ?></td>
-								<td style="background-color:<?php echo $color ?>"><?php echo ($ev['direccion_restaurante']) ?></td>
-								<td style="background-color:<?php echo $color ?>"><?php echo $ev['hora_boda'] ?></td>
-								<td style="background-color:<?php echo $color ?>" onMouseOver="Tip('<?php echo htmlspecialchars($tooltip, ENT_QUOTES, 'UTF-8') ?>')" onMouseOut="UnTip()"><?php echo $serv ?></td>
-								<td style="background-color:<?php echo $color ?>" onMouseOver="Tip('<?php echo htmlspecialchars($tooltip_ad, ENT_QUOTES, 'UTF-8') ?>')" onMouseOut="UnTip()"><?php echo $serv_ad ?></td>
+
 								<td style="background-color:<?php echo $color ?>">
 									<?php foreach ($djs as $dj) {
 										if ($dj['id'] == $ev['dj']) {
@@ -148,6 +162,19 @@ mb_internal_encoding('UTF-8');
 										}
 									} ?>
 								</td>
+
+								<td class="col-nombre" style="background-color:<?php echo $color ?>">
+									<?php echo ($ev['nombre_novio']) ?> y <?php echo ($ev['nombre_novia']) ?>
+								</td>
+								<td class="col-iniciales oculto" style="background-color:<?php echo $color ?>" title="<?php echo ($ev['nombre_novio']) . ' y ' . $ev['nombre_novia'] ?>">
+									<?php echo strtoupper(mb_substr($ev['nombre_novio'], 0, 1)) . "&" . strtoupper(mb_substr($ev['nombre_novia'], 0, 1)) ?>
+								</td>
+
+								<td style="background-color:<?php echo $color ?>"><?php echo ($ev['restaurante']) ?></td>
+								<td style="background-color:<?php echo $color ?>"><?php echo ($ev['direccion_restaurante']) ?></td>
+								<td style="background-color:<?php echo $color ?>"><?php echo $ev['hora_boda'] ?></td>
+								<td style="background-color:<?php echo $color ?>" onMouseOver="Tip('<?php echo htmlspecialchars($tooltip, ENT_QUOTES, 'UTF-8') ?>')" onMouseOut="UnTip()"><?php echo $serv ?></td>
+								<td style="background-color:<?php echo $color ?>" onMouseOver="Tip('<?php echo htmlspecialchars($tooltip_ad, ENT_QUOTES, 'UTF-8') ?>')" onMouseOut="UnTip()"><?php echo $serv_ad ?></td>
 								<td style="background-color:<?php echo $color ?>">
 									<a href="<?php echo base_url() ?>admin/clientes/view/<?php echo $ev['id'] ?>" target="_blank">Ver ficha</a>
 								</td>
@@ -164,3 +191,19 @@ mb_internal_encoding('UTF-8');
 	</form>
 </div>
 <div class="clear"></div>
+
+<script>
+	$(document).ready(function() {
+		let oculto = false;
+		$('#toggleNombre').click(function() {
+			$('.col-nombre').toggleClass('oculto');
+			$('.col-iniciales').toggleClass('oculto');
+			oculto = !oculto;
+			$('#textoNombre').text(oculto ? 'Nom.' : 'Nombre');
+
+			// Cambia imagen según el estado
+			const img = $(this).find('img');
+			img.attr('src', oculto ? '<?php echo base_url() ?>/img/ojo.png' : '<?php echo base_url() ?>/img/ojoc.png');
+		});
+	});
+</script>
