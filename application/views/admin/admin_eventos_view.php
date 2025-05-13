@@ -69,7 +69,7 @@ mb_internal_encoding('UTF-8');
 						<th colspan="2">TOTAL EVENTOS</th>
 					</tr>
 					<tr>
-						<?php if ($oficina != 'todos') { ?>
+						<?php if ($oficina != 'todos' || $oficina = null) { ?>
 							<?php foreach ($oficinas as $ofi) {
 								if ($ofi['id_oficina'] == $oficina) { ?>
 									<th><?php echo ($ofi['nombre']) ?></th>

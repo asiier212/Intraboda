@@ -826,7 +826,7 @@ class Admin extends CI_Controller
 		$fecha_desde = date('Y-m-d', $fecha_desde);
 		$fecha_hasta = date("Y-m-d");
 
-		$oficina = 1; //MOSTRAMOS PREDETERMINADAMENTE BILBODJ
+		$oficina = 'todos'; //MOSTRAMOS PREDETERMINADAMENTE BILBODJ
 
 		if ($_POST) {
 			if ($_POST["fecha_desde"] <> "") {
