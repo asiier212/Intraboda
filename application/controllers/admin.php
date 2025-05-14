@@ -1031,6 +1031,12 @@ class Admin extends CI_Controller
             VALUES (?, 'administrador', ?, ?, NOW())
         ", [$id_cliente, $this->session->userdata('user_id'), $mensaje]);
 
+			// Insertar en la tabla de notificaciones (si tienes una tabla 'notificaciones')
+			$this->db->query("
+            INSERT INTO notificaciones (id_cliente, mensaje, fecha, leido)
+            VALUES (?, ?, NOW(), 0)
+        ", [$id_cliente, "Nuevo mensaje del Coordinador: " . $mensaje]);
+
 			// Recuperar emails de los novios
 			$cliente = $this->db->query("SELECT email_novio, email_novia FROM clientes WHERE id = ?", [$id_cliente])->row();
 
@@ -2382,6 +2388,56 @@ class Admin extends CI_Controller
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
 
+	public function notificaciones_ajax()
+	{
+		$notificaciones = $this->admin_functions->getNotificacionesNuevas();
+		echo json_encode($notificaciones);
+	}
+
+	public function notificaciones()
+	{
+		// Cargar el modelo y la base de datos
+		$this->load->database();
+		$this->load->model('admin_functions');
+
+		try {
+			$notificaciones = $this->admin_functions->getNotificacionesNuevas();
+			$data['notificaciones'] = $notificaciones;
+			$data['data_header'] = false;
+			$data['data_footer'] = false;
+
+			$this->_loadViews($data['data_header'], $data, $data['data_footer'], "notifica");
+		} catch (Exception $e) {
+			echo "Error al obtener notificaciones. Consulta el log.";
+		}
+	}
+
+
+	public function borrar_notificacion()
+	{
+		$this->load->database();
+
+
+		// Obtener el ID de la notificación desde el POST
+		$id_notificacion = $this->input->post('id_notificacion');
+
+		// Validar que el ID no esté vacío
+		if (empty($id_notificacion)) {
+			echo json_encode(['success' => false, 'message' => 'ID de notificación inválido']);
+			return;
+		}
+
+		// Intentar borrar la notificación
+		$this->db->where('id', $id_notificacion);
+		$this->db->delete('notificaciones');
+
+		// Verificar si la eliminación fue exitosa
+		if ($this->db->affected_rows() > 0) {
+			echo json_encode(['success' => true]);
+		} else {
+			echo json_encode(['success' => false, 'message' => 'No se pudo eliminar la notificación']);
+		}
+	}
 
 
 
@@ -2602,6 +2658,8 @@ class Admin extends CI_Controller
 		$view = "contabilidad/retenciones_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
+
+
 
 	public function tarifas1()
 	{

@@ -96,9 +96,17 @@
                     <li class="ocultar"><a href="<?php echo base_url() ?>admin/retenciones/view">Listar Retenciones</a></li>
                 </ul>
             </li>
-            <div class="loginDisplay">
-                Panel de gesti&oacute;n del Administrador | <a href="<?php echo base_url() ?>admin/logout">Cerrar sesión</a>
+            <div class="loginDisplay" style="display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 6px; font-family: Arial, sans-serif; font-size: 14px; margin-left: auto; width: fit-content;">
+                <a href="<?= base_url() ?>admin/notificaciones/view" style="display: flex; align-items: center;">
+                    <img src="<?= base_url() ?>img/notificacion.png" class="notif" alt="Notificación" />
+                </a>
+                <span>|</span>
+                <span>Panel de gestión del Administrador</span>
+                <span>|</span>
+                <a href="<?= base_url() ?>admin/logout" class="cerrar_sesion">Cerrar sesión</a>
             </div>
+
+
         </ul>
 
     </div>
@@ -109,5 +117,34 @@
         <style>
             .ocultar {
                 display: none;
+            }
+
+            .cerrar_sesion {
+                color: white !important;
+                text-decoration: none;
+                background-color: rgb(255, 39, 39);
+                border: 1px solid red;
+                border-radius: 2px;
+                padding: 8px;
+                transition: 300ms;
+            }
+
+            .cerrar_sesion:hover {
+                background-color: rgb(255, 108, 108);
+                transition: 300ms;
+            }
+
+            .notif {
+                width: 25px;
+                height: 25px;
+                transition: 300ms;
+                padding: 10px;
+            }
+
+            .notif:hover {
+                border-radius: 100px;
+                background-color: #93CE37;
+                transition: 300ms;
+                content: url('<?= base_url() ?>img/notificacion2.png');
             }
         </style>

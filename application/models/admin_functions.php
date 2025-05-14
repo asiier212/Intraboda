@@ -958,6 +958,17 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
+	public function getNotificacionesNuevas()
+	{
+		return $this->db->query("
+		SELECT id, id_cliente, mensaje, fecha 
+		FROM notificaciones 
+		WHERE leido = 0
+		ORDER BY fecha DESC
+		LIMIT 10
+	")->result();
+	}
+
 	public function GetTituloChat($id_cliente)
 	{
 		$this->load->database();
