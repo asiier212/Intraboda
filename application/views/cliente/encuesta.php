@@ -120,7 +120,7 @@ if($cliente['foto']==""){
     <?php	
 		foreach($preguntas_encuesta_datos_boda as $preguntas) {
 			?><li>- <strong><?php echo $preguntas['pregunta']?></strong></li><br><?php
-			if($preguntas['id_pregunta']==1){
+			if($preguntas['id_pregunta']==10){
 				?><p><select name="participativo_dj" id="participacion1">
                   <?php
 						for($i=1;$i<=10;$i++){
@@ -130,7 +130,7 @@ if($cliente['foto']==""){
                      </select></p>
 			<?php
 			}
-			if($preguntas['id_pregunta']==2){
+			if($preguntas['id_pregunta']==12){
 				?><p><select name="participativos_invitados" id="participacion2">
                   <?php
 						for($i=1;$i<=10;$i++){
@@ -140,21 +140,21 @@ if($cliente['foto']==""){
                   </select></p>
 			<?php
 			}
-			if($preguntas['id_pregunta']==3){
+			if($preguntas['id_pregunta']==13){
 				?><li>Invitados: <input type="text" id="num_invitados" name="num_invitados"></li><br><?php
 			}
-			if($preguntas['id_pregunta']==4){
+			if($preguntas['id_pregunta']==14){
 				?><li><input type="radio" name="ampliar_fiesta" value="Si"> Sí</li>
                 <li><input type="radio" id="ampliar_fiesta" name="ampliar_fiesta" value="No"> No</li><br><?php
 			}
-			if($preguntas['id_pregunta']==5){
+			if($preguntas['id_pregunta']==41){
 				?><li><input type="radio" id="flexibilidad_restaurante" name="flexibilidad_restaurante" value="Si"> Sí</li>
                 <li><input type="radio" id="flexibilidad_restaurante" name="flexibilidad_restaurante" value="No"> No</li><br><?php
 			}
-			if($preguntas['id_pregunta']==6){
+			if($preguntas['id_pregunta']==42){
 				?><li>Hora: <input type="text" id="hora_ultimo_autobus" name="hora_ultimo_autobus"></li><br><?php
 			}	
-			if($preguntas['id_pregunta']==7){
+			if($preguntas['id_pregunta']==43){
 				?>
                     <li><input type="checkbox" name="mas_importancia[]" value="Rock"> Rock</li>
                     <li><input type="checkbox" name="mas_importancia[]" value="Años70"> Años70</li>

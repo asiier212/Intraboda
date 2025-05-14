@@ -1419,12 +1419,13 @@ class Admin extends CI_Controller
 					}
 
 
-
+					// LEER
 
 					if (isset($_POST['update_dj'])) {
 						//ACTUALIZAMOS LA TABLA DE HORAS CON EL NUEVO DJ O EN BLANCO SI EL DJ LO DEJAMOS SIN ASIGNAR//
 						$this->db->query("UPDATE horas_djs SET id_dj = '" . $_POST['dj_id'] . "' WHERE id_cliente = {$id}");
 
+						/*
 						//MANDAMOS MAIL AL CLIENTE CON LA ASIGNACION DEL DJ//
 						$query = $this->db->query("SELECT email_novio, email_novia, dj, enviar_emails FROM clientes WHERE id = {$id}");
 						foreach ($query->result() as $fila) {
@@ -1442,7 +1443,7 @@ class Admin extends CI_Controller
 								}
 							}
 						}
-
+*/
 						if ($_POST['dj_id'] <> "") {
 							$query = $this->db->query("SELECT nombre, email FROM djs WHERE id = {$_POST['dj_id']}");
 							if ($query->num_rows() > 0) {
@@ -1451,7 +1452,8 @@ class Admin extends CI_Controller
 									$email_dj_nuevo = $fila->email;
 								}
 							}
-
+						}
+						/*
 							if ($enviar_emails == "S" && $_POST['dj_id'] <> "") {
 								$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 								$cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
@@ -1528,12 +1530,27 @@ class Admin extends CI_Controller
 
 								$asunto = html_entity_decode($asunto);
 								$mensaje = html_entity_decode($mensaje);
-
-								/* mail($email_novio, $asunto, $mensaje, $cabeceras);
+								*/
+						/* mail($email_novio, $asunto, $mensaje, $cabeceras);
                                   mail($email_novia, $asunto, $mensaje, $cabeceras); */
-								$this->sendEmail('info@exeleventos.com', [$email_novio, $email_novia], $asunto, $mensaje);
-							}
-						}
+
+
+
+						// $this->sendEmail('info@exeleventos.com', [$email_novio, $email_novia], $asunto, $mensaje);
+						//}
+
+						// Obtener datos
+						$id_cliente = $id; // este es el cliente del evento
+						$id_usuario = $this->session->userdata('user_id'); // ID del coordinador/admin logueado
+						$mensaje = "¡Hola! Ya tenéis asignado el DJ para vuestro evento: <strong>{$nombre_dj_nuevo}</strong>!!!";
+
+						// Insertar en la tabla de contacto (chat)
+						$this->db->query("INSERT INTO contacto (id_cliente, usuario, id_usuario, mensaje, fecha) VALUES (?, 'administrador', ?, ?, NOW())", [
+							$id_cliente,
+							$id_usuario,
+							$mensaje
+						]);
+
 
 						//MANDAMOS MAIL AL DJ  COMENTANDO LA ASIGNACION DE UN CLIENTE// 
 						if ($_POST['dj_id'] <> "") {
@@ -1569,10 +1586,9 @@ class Admin extends CI_Controller
 							$asunto = html_entity_decode($asunto);
 							$mensaje = html_entity_decode($mensaje);
 
-							//mail($email_dj_nuevo, $asunto, $mensaje, $cabeceras);
+							mail($email_dj_nuevo, $asunto, $mensaje, $cabeceras);
 							$this->sendEmail('info@exeleventos.com', [$email_dj_nuevo], $asunto, $mensaje);
 						}
-
 
 
 						$this->db->query("UPDATE clientes SET dj = '" . $_POST['dj_id'] . "' WHERE id = {$id}");
