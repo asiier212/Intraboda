@@ -3,7 +3,6 @@
 <script src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery-ui-1.10.4.js"></script>
 <script src="<?php echo base_url() ?>js/jquery1.10.4/js/jquery.ui.touch-punch.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>js/tooltip.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <?php print_r($data['canciones_spotify']); ?>
 

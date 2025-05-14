@@ -753,6 +753,16 @@ class Cliente extends CI_Controller
 		if ($_POST) {
 			$cliente_id = $this->session->userdata('user_id');
 
+			if (isset($_POST['add_moment'])) {
+				$this->cliente_functions->InsertEvent($_POST['nombre_moment'], $this->session->userdata('user_id'));
+			}
+			if (isset($_POST['add_song'])) {
+				$this->cliente_functions->InsertCancion($_POST, $this->session->userdata('user_id'));
+			}
+			if (isset($_POST['add_comentario'])) {
+				$this->cliente_functions->InsertCancionComentario($_POST['momento_id'], $_POST['comentario'], $this->session->userdata('user_id'));
+			}
+
 			// Primero procesar datos de la playlist si hay playlist_id
 			if (!empty($_POST['playlist_id'])) {
 				$url = $_POST['playlist_id'];
