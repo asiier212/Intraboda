@@ -1232,7 +1232,18 @@ class Admin extends CI_Controller
 					}
 
 
+					if (isset($_POST['guardar_preasignados'])) {
+						$preasignados = isset($_POST['preasignados']) ? $_POST['preasignados'] : array();
 
+
+						// Borrar preasignaciones actuales
+						$this->db->query("DELETE FROM clientes_djs_preasignados WHERE id_cliente = ?", [$id]);
+
+						// Insertar nuevas
+						foreach ($preasignados as $dj_id) {
+							$this->db->query("INSERT INTO clientes_djs_preasignados (id_cliente, id_dj) VALUES (?, ?)", [$id, $dj_id]);
+						}
+					}
 
 					if (isset($_POST['add_contrato'])) {
 
@@ -1697,6 +1708,12 @@ class Admin extends CI_Controller
 						redirect(current_url());
 					}
 				}
+
+				$djs = $this->db->query("SELECT id, nombre, email FROM djs")->result_array();
+				$djs_preasignados_ids = $this->admin_functions->get_preasignados_por_cliente($id);
+
+				$data['djs_preasignados_ids'] = $djs_preasignados_ids;
+
 				$data['captacion'] = $this->admin_functions->GetCaptacion();
 				$data['oficinas'] = $this->admin_functions->GetOficinas();
 				$data['tipos_clientes'] = $this->admin_functions->GetTiposClientes();
@@ -1704,6 +1721,7 @@ class Admin extends CI_Controller
 				$data['personas']  = $this->admin_functions->GetPersonasContacto();
 				$data['dj'] = $this->admin_functions->GetDjAsignado($id);
 				$data['djs'] = $this->admin_functions->GetDjs($id);
+				$data['djs_preasignados'] = $this->admin_functions->GetDjsPreAsignados($id);
 				$data['horas_dj'] = $this->admin_functions->GetHorasDJ($id);
 
 				$data['componentes'] = $this->admin_functions->GetComponentes();

@@ -5,6 +5,54 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>js/alertify/themes/alertify.core.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>js/alertify/themes/alertify.default.css" />
 
+<style>
+	/* Estilo básico del checkbox */
+	input[type="checkbox"] {
+		accent-color: #93CE37;
+		/* Cambia el color del checkbox cuando está marcado */
+		width: 20px;
+		/* Tamaño del checkbox */
+		height: 20px;
+		/* Tamaño del checkbox */
+		cursor: pointer;
+		position: relative;
+		appearance: none;
+		/* Desactiva el estilo predeterminado del checkbox */
+		border: 2px solid #93CE37;
+		/* Color de borde verde cuando no está marcado */
+		border-radius: 2px;
+		/* Bordes cuadrados */
+		/* Eliminar redondeo de los bordes */
+		background-color: #fff;
+		/* Fondo blanco */
+		transition: all 0.2s ease;
+		/* Transición suave */
+	}
+
+	/* Estilo cuando el checkbox está marcado */
+	input[type="checkbox"]:checked {
+		background-color: #93CE37;
+		/* Fondo verde cuando está marcado */
+		border-color: #93CE37;
+		/* Borde verde cuando está marcado */
+	}
+
+	/* Estilo del checkmark en el estado marcado */
+	input[type="checkbox"]:checked::before {
+		content: '✔';
+		/* Símbolo del checkmark */
+		color: white;
+		/* El checkmark será blanco */
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		/* Centra el checkmark */
+		font-size: 10px;
+		/* Ajusta el tamaño del checkmark */
+	}
+</style>
+
 <script language="javascript">
 	$(document).ready(function() {
 		$('.edit_box').editable('<?php echo base_url() ?>index.php/ajax/updatedatocliente/<?php echo $cliente['id'] ?>', {
@@ -424,6 +472,36 @@
 					</ul>
 				</ul>
 			</fieldset>
+			<fieldset style="max-width:700px; border:1px solid #ccc; padding:15px;">
+				<legend>
+					<img src="<?php echo base_url() ?>/img/interrogacion.png" width="20" height="20"
+						onMouseOver="Tip('<p>Solo podrás <b>Asignar Djs</b> anteriormente <b>PreAsignados</b></p>')"
+						onMouseOut="UnTip()" style="vertical-align: middle; margin-right: 1px;" /> Preasignar DJs
+				</legend>
+				<form method="post">
+					<div style="max-height:500px; overflow:auto; margin-bottom:15px;">
+						<div style="display:flex; flex-wrap:wrap; gap:10px;">
+							<?php foreach ($djs as $p): ?>
+								<div style="width:45%; background:#f9f9f9; padding:10px; border:1px solid #ddd; border-radius:5px; display: flex; align-items: center; justify-content: flex-start; cursor: pointer;">
+									<!-- Contenedor del label para poder hacer clic en todo el div -->
+									<label for="checkbox_<?php echo $p['id'] ?>" style="display: flex; align-items: center; width: 100%; ">
+										<!-- El checkbox alineado a la izquierda -->
+										<input type="checkbox" id="checkbox_<?php echo $p['id'] ?>" name="preasignados[]" value="<?= $p['id'] ?>"
+											<?= in_array($p['id'], $djs_preasignados_ids) ? 'checked' : '' ?> style="margin-right: 10px;" />
+										<strong><?= $p['nombre'] ?></strong>
+
+									</label>
+								</div>
+							<?php endforeach; ?>
+						</div>
+					</div>
+					<div style="text-align:right;">
+						<input type="submit" name="guardar_preasignados" value="Guardar preasignación" style="padding:8px 16px; border:none; background:#93CE37; color:white; border-radius:4px; cursor:pointer;" />
+					</div>
+				</form>
+			</fieldset>
+
+
 			<fieldset style="width:370px">
 				<legend>DJ asignado</legend>
 				<ul>
@@ -456,8 +534,8 @@
 				Cambiar/Asignar DJ:
 				<select name="dj_id">
 					<?php
-					foreach ($djs as $p) { ?>
-						<option value="<?php echo $p['id'] ?>"><?php echo $p['nombre'] ?></option>
+					foreach ($djs_preasignados as $p) { ?>
+						<option value="<?php echo $p['id_dj'] ?>"><?php echo $p['nombre'] ?></option>
 					<?php
 					}
 					?>

@@ -10354,3 +10354,8143 @@ DEBUG - 2025-05-14 12:52:38 --> File loaded: application/views/admin/admin_event
 DEBUG - 2025-05-14 12:52:38 --> File loaded: application/views/admin/footer.php
 DEBUG - 2025-05-14 12:52:38 --> Final output sent to browser
 DEBUG - 2025-05-14 12:52:38 --> Total execution time: 0.2623
+DEBUG - 2025-05-14 12:54:26 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:26 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Router Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Output Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Security Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Input Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 12:54:26 --> Language Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Loader Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 12:54:26 --> Controller Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Session Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 12:54:26 --> Session routines successfully run
+DEBUG - 2025-05-14 12:54:26 --> Model Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Model Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Database Driver Class Initialized
+ERROR - 2025-05-14 12:54:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 12:54:26 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-05-14 12:54:26 --> File loaded: application/views/admin/clientes_view.php
+DEBUG - 2025-05-14 12:54:26 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 12:54:26 --> Final output sent to browser
+DEBUG - 2025-05-14 12:54:26 --> Total execution time: 0.0811
+DEBUG - 2025-05-14 12:54:26 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:26 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:26 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:26 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Router Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Router Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Config Class Initialized
+ERROR - 2025-05-14 12:54:26 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 12:54:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:26 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:26 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:26 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:26 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:28 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:28 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Router Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Output Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Security Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Input Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 12:54:28 --> Language Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Loader Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 12:54:28 --> Controller Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Session Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 12:54:28 --> Session routines successfully run
+DEBUG - 2025-05-14 12:54:28 --> Model Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Model Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Database Driver Class Initialized
+ERROR - 2025-05-14 12:54:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 12:54:28 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 12:54:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 12:54:28 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 12:54:28 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 546
+ERROR - 2025-05-14 12:54:28 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 546
+DEBUG - 2025-05-14 12:54:28 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 12:54:28 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 12:54:28 --> Final output sent to browser
+DEBUG - 2025-05-14 12:54:28 --> Total execution time: 0.1862
+DEBUG - 2025-05-14 12:54:28 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:28 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Router Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:28 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:28 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 12:54:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:28 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:28 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:28 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Router Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:28 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 12:54:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:28 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:28 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:28 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:35 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:35 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Router Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Output Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Security Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Input Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 12:54:35 --> Language Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Loader Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 12:54:35 --> Controller Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Session Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 12:54:35 --> Session routines successfully run
+DEBUG - 2025-05-14 12:54:35 --> Model Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Model Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Database Driver Class Initialized
+ERROR - 2025-05-14 12:54:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 12:54:35 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:35 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Router Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Output Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Security Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Input Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 12:54:35 --> Language Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Loader Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 12:54:35 --> Controller Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Session Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 12:54:35 --> Session routines successfully run
+DEBUG - 2025-05-14 12:54:35 --> Model Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Model Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Database Driver Class Initialized
+ERROR - 2025-05-14 12:54:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 12:54:35 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 12:54:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 12:54:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 12:54:35 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 12:54:35 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 546
+ERROR - 2025-05-14 12:54:35 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 546
+ERROR - 2025-05-14 12:54:35 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 546
+DEBUG - 2025-05-14 12:54:35 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 12:54:35 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 12:54:35 --> Final output sent to browser
+DEBUG - 2025-05-14 12:54:35 --> Total execution time: 0.1594
+DEBUG - 2025-05-14 12:54:36 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:36 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:36 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:36 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:36 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:36 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Router Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 12:54:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:36 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:36 --> Router Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Config Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Hooks Class Initialized
+ERROR - 2025-05-14 12:54:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:54:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:54:36 --> URI Class Initialized
+DEBUG - 2025-05-14 12:54:36 --> Router Class Initialized
+ERROR - 2025-05-14 12:54:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:58:30 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:30 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Router Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Output Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Security Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Input Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 12:58:30 --> Language Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Loader Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 12:58:30 --> Controller Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Session Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 12:58:30 --> Session routines successfully run
+DEBUG - 2025-05-14 12:58:30 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:30 --> File loaded: application/views/dj/login.php
+DEBUG - 2025-05-14 12:58:30 --> Final output sent to browser
+DEBUG - 2025-05-14 12:58:30 --> Total execution time: 0.0631
+DEBUG - 2025-05-14 12:58:36 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:36 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Router Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Output Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Security Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Input Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 12:58:36 --> Language Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Loader Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 12:58:36 --> Controller Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Session Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 12:58:36 --> Session routines successfully run
+DEBUG - 2025-05-14 12:58:36 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:36 --> File loaded: application/views/admin/login.php
+DEBUG - 2025-05-14 12:58:36 --> Final output sent to browser
+DEBUG - 2025-05-14 12:58:36 --> Total execution time: 0.0735
+DEBUG - 2025-05-14 12:58:48 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:48 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Router Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Output Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Security Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Input Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 12:58:48 --> Language Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Loader Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 12:58:48 --> Controller Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Session Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 12:58:48 --> Session routines successfully run
+DEBUG - 2025-05-14 12:58:48 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:48 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Router Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Output Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Security Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Input Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 12:58:48 --> Language Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Loader Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 12:58:48 --> Controller Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Session Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 12:58:48 --> Session routines successfully run
+DEBUG - 2025-05-14 12:58:48 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:48 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-05-14 12:58:48 --> File loaded: application/views/admin/home.php
+DEBUG - 2025-05-14 12:58:48 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 12:58:48 --> Final output sent to browser
+DEBUG - 2025-05-14 12:58:48 --> Total execution time: 0.0453
+DEBUG - 2025-05-14 12:58:52 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:52 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Router Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Output Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Security Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Input Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 12:58:52 --> Language Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Loader Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 12:58:52 --> Controller Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Session Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 12:58:52 --> Session routines successfully run
+DEBUG - 2025-05-14 12:58:52 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Database Driver Class Initialized
+ERROR - 2025-05-14 12:58:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 12:58:52 --> File loaded: application/views/admin/header.php
+DEBUG - 2025-05-14 12:58:52 --> File loaded: application/views/admin/clientes_view.php
+DEBUG - 2025-05-14 12:58:52 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 12:58:52 --> Final output sent to browser
+DEBUG - 2025-05-14 12:58:52 --> Total execution time: 0.0750
+DEBUG - 2025-05-14 12:58:52 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:52 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Router Class Initialized
+ERROR - 2025-05-14 12:58:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:58:52 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:52 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Router Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:52 --> URI Class Initialized
+ERROR - 2025-05-14 12:58:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:58:52 --> Router Class Initialized
+ERROR - 2025-05-14 12:58:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:58:52 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:52 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Router Class Initialized
+DEBUG - 2025-05-14 12:58:52 --> Router Class Initialized
+ERROR - 2025-05-14 12:58:52 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 12:58:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:58:54 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:54 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Router Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Output Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Security Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Input Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 12:58:54 --> Language Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Loader Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 12:58:54 --> Controller Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Session Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 12:58:54 --> Session routines successfully run
+DEBUG - 2025-05-14 12:58:54 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Model Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Database Driver Class Initialized
+ERROR - 2025-05-14 12:58:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 12:58:54 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 12:58:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 12:58:54 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 12:58:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 546
+ERROR - 2025-05-14 12:58:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 546
+ERROR - 2025-05-14 12:58:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 546
+DEBUG - 2025-05-14 12:58:54 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 12:58:54 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 12:58:54 --> Final output sent to browser
+DEBUG - 2025-05-14 12:58:54 --> Total execution time: 0.1845
+DEBUG - 2025-05-14 12:58:54 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:54 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Router Class Initialized
+ERROR - 2025-05-14 12:58:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:58:54 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:54 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Router Class Initialized
+ERROR - 2025-05-14 12:58:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:58:54 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:54 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Router Class Initialized
+ERROR - 2025-05-14 12:58:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:58:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:54 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Router Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Hooks Class Initialized
+ERROR - 2025-05-14 12:58:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:58:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:54 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Router Class Initialized
+ERROR - 2025-05-14 12:58:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 12:58:54 --> Config Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 12:58:54 --> URI Class Initialized
+DEBUG - 2025-05-14 12:58:54 --> Router Class Initialized
+ERROR - 2025-05-14 12:58:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:36 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:36 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Router Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Output Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Security Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Input Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:05:36 --> Language Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:05:36 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Session Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:05:36 --> Session routines successfully run
+DEBUG - 2025-05-14 13:05:36 --> Model Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Model Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:05:36 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:05:36 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:05:36 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:05:37 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:05:37 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:05:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:05:37 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:05:37 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:05:37 --> Final output sent to browser
+DEBUG - 2025-05-14 13:05:37 --> Total execution time: 0.3381
+DEBUG - 2025-05-14 13:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Router Class Initialized
+ERROR - 2025-05-14 13:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Router Class Initialized
+ERROR - 2025-05-14 13:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Router Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> URI Class Initialized
+ERROR - 2025-05-14 13:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:37 --> Router Class Initialized
+ERROR - 2025-05-14 13:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Router Class Initialized
+ERROR - 2025-05-14 13:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:37 --> Router Class Initialized
+ERROR - 2025-05-14 13:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:51 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:51 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Router Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Output Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Security Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Input Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:05:51 --> Language Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:05:51 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Session Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:05:51 --> Session routines successfully run
+DEBUG - 2025-05-14 13:05:51 --> Model Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Model Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:05:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:05:51 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:05:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:05:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:05:51 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:05:51 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:05:51 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:05:51 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:05:51 --> Final output sent to browser
+DEBUG - 2025-05-14 13:05:51 --> Total execution time: 0.2676
+DEBUG - 2025-05-14 13:05:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Router Class Initialized
+ERROR - 2025-05-14 13:05:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Router Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Router Class Initialized
+ERROR - 2025-05-14 13:05:52 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:05:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Router Class Initialized
+ERROR - 2025-05-14 13:05:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Router Class Initialized
+ERROR - 2025-05-14 13:05:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:05:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:05:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:05:52 --> Router Class Initialized
+ERROR - 2025-05-14 13:05:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:16:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:16:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Router Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Output Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Security Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Input Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:16:26 --> Language Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:16:26 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Session Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:16:26 --> Session routines successfully run
+DEBUG - 2025-05-14 13:16:26 --> Model Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Model Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:16:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:16:26 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:16:26 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:16:26 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:16:26 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 477
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 477
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 477
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:16:26 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:16:26 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:16:26 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:16:26 --> Final output sent to browser
+DEBUG - 2025-05-14 13:16:26 --> Total execution time: 0.3155
+DEBUG - 2025-05-14 13:16:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:16:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:16:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Router Class Initialized
+ERROR - 2025-05-14 13:16:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:16:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Router Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 13:16:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:16:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Router Class Initialized
+ERROR - 2025-05-14 13:16:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:16:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:16:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Router Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Hooks Class Initialized
+ERROR - 2025-05-14 13:16:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:16:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:16:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Router Class Initialized
+ERROR - 2025-05-14 13:16:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:16:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:16:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:16:26 --> Router Class Initialized
+ERROR - 2025-05-14 13:16:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:17:10 --> Config Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:17:10 --> URI Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Router Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Output Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Security Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Input Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:17:10 --> Language Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:17:10 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Session Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:17:10 --> Session routines successfully run
+DEBUG - 2025-05-14 13:17:10 --> Model Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Model Class Initialized
+DEBUG - 2025-05-14 13:17:10 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:17:10 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:17:11 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:17:11 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:17:11 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:17:11 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:17:11 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:17:11 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:17:11 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:17:11 --> Final output sent to browser
+DEBUG - 2025-05-14 13:17:11 --> Total execution time: 0.2858
+DEBUG - 2025-05-14 13:17:11 --> Config Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:17:11 --> URI Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Router Class Initialized
+ERROR - 2025-05-14 13:17:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:17:11 --> Config Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Config Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:17:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:17:11 --> URI Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> URI Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Router Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Router Class Initialized
+ERROR - 2025-05-14 13:17:11 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:17:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:17:11 --> Config Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:17:11 --> URI Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Config Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Router Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Hooks Class Initialized
+ERROR - 2025-05-14 13:17:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:17:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:17:11 --> URI Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Router Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Config Class Initialized
+ERROR - 2025-05-14 13:17:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:17:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:17:11 --> URI Class Initialized
+DEBUG - 2025-05-14 13:17:11 --> Router Class Initialized
+ERROR - 2025-05-14 13:17:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:20:30 --> Config Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:20:30 --> URI Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Router Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Output Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Security Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Input Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:20:30 --> Language Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:20:30 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Session Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:20:30 --> Session routines successfully run
+DEBUG - 2025-05-14 13:20:30 --> Model Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Model Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:20:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:20:30 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:20:30 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:20:30 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:20:30 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined index: id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 477
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 477
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined index: id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 477
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 477
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined index: id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 477
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 477
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:20:30 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:20:30 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:20:30 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:20:30 --> Final output sent to browser
+DEBUG - 2025-05-14 13:20:30 --> Total execution time: 0.2939
+DEBUG - 2025-05-14 13:20:30 --> Config Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:20:30 --> URI Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Router Class Initialized
+ERROR - 2025-05-14 13:20:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:20:30 --> Config Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Config Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Config Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:20:30 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:20:30 --> URI Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Config Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Router Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> URI Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Router Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 13:20:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:20:30 --> URI Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Router Class Initialized
+ERROR - 2025-05-14 13:20:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:20:30 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:20:30 --> URI Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Router Class Initialized
+ERROR - 2025-05-14 13:20:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:20:30 --> Config Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:20:30 --> URI Class Initialized
+DEBUG - 2025-05-14 13:20:30 --> Router Class Initialized
+ERROR - 2025-05-14 13:20:30 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:20:30 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:22:23 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:23 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Router Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Output Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Security Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Input Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:22:23 --> Language Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:22:23 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Session Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:22:23 --> Session routines successfully run
+DEBUG - 2025-05-14 13:22:23 --> Model Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Model Class Initialized
+DEBUG - 2025-05-14 13:22:23 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:22:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:22:23 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:22:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:22:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:22:24 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:22:24 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:22:24 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:22:24 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:22:24 --> Final output sent to browser
+DEBUG - 2025-05-14 13:22:24 --> Total execution time: 0.3054
+DEBUG - 2025-05-14 13:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Router Class Initialized
+ERROR - 2025-05-14 13:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Router Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Router Class Initialized
+ERROR - 2025-05-14 13:22:24 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Router Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:24 --> URI Class Initialized
+ERROR - 2025-05-14 13:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:22:24 --> Router Class Initialized
+ERROR - 2025-05-14 13:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:24 --> Router Class Initialized
+ERROR - 2025-05-14 13:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:22:51 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:51 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Router Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Output Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Security Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Input Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:22:51 --> Language Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:22:51 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Session Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:22:51 --> Session routines successfully run
+DEBUG - 2025-05-14 13:22:51 --> Model Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Model Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:22:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:22:51 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:22:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:22:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:22:51 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: djs_preasignados_ids C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:22:51 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:22:51 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:22:51 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:22:51 --> Final output sent to browser
+DEBUG - 2025-05-14 13:22:51 --> Total execution time: 0.3008
+DEBUG - 2025-05-14 13:22:51 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:51 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Router Class Initialized
+ERROR - 2025-05-14 13:22:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:22:51 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:51 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Router Class Initialized
+ERROR - 2025-05-14 13:22:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:22:51 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:51 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Router Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:51 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 13:22:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:22:51 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Router Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Router Class Initialized
+ERROR - 2025-05-14 13:22:51 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:22:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:22:51 --> Config Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:22:51 --> URI Class Initialized
+DEBUG - 2025-05-14 13:22:51 --> Router Class Initialized
+ERROR - 2025-05-14 13:22:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:28:15 --> Config Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:28:15 --> URI Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Router Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Output Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Security Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Input Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:28:15 --> Language Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:28:15 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Session Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:28:15 --> Session routines successfully run
+DEBUG - 2025-05-14 13:28:15 --> Model Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Model Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:28:15 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:28:15 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:28:15 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:28:15 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:28:15 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined index: id_dj C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:28:15 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:28:15 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:28:15 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:28:15 --> Final output sent to browser
+DEBUG - 2025-05-14 13:28:15 --> Total execution time: 0.2834
+DEBUG - 2025-05-14 13:28:15 --> Config Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:28:15 --> URI Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Router Class Initialized
+ERROR - 2025-05-14 13:28:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:28:15 --> Config Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:28:15 --> URI Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Router Class Initialized
+ERROR - 2025-05-14 13:28:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:28:15 --> Config Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:28:15 --> Config Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> URI Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Router Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:28:15 --> URI Class Initialized
+ERROR - 2025-05-14 13:28:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:28:15 --> Router Class Initialized
+ERROR - 2025-05-14 13:28:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:28:15 --> Config Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:28:15 --> URI Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Router Class Initialized
+ERROR - 2025-05-14 13:28:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:28:15 --> Config Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:28:15 --> URI Class Initialized
+DEBUG - 2025-05-14 13:28:15 --> Router Class Initialized
+ERROR - 2025-05-14 13:28:15 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:00 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:00 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Router Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Output Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Security Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Input Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:32:00 --> Language Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:32:00 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Session Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:32:00 --> Session routines successfully run
+DEBUG - 2025-05-14 13:32:00 --> Model Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Model Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:32:00 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:32:00 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:32:00 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:32:00 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:32:00 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined index: nombre C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:32:00 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:32:00 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:32:00 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:32:00 --> Final output sent to browser
+DEBUG - 2025-05-14 13:32:00 --> Total execution time: 0.3226
+DEBUG - 2025-05-14 13:32:00 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:00 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Router Class Initialized
+ERROR - 2025-05-14 13:32:00 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:00 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:00 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Router Class Initialized
+ERROR - 2025-05-14 13:32:00 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:00 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:00 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:00 --> Router Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> URI Class Initialized
+ERROR - 2025-05-14 13:32:00 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:00 --> Router Class Initialized
+ERROR - 2025-05-14 13:32:00 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:00 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:00 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Router Class Initialized
+ERROR - 2025-05-14 13:32:00 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:00 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:00 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:00 --> Router Class Initialized
+ERROR - 2025-05-14 13:32:00 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Router Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Output Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Security Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Input Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:32:26 --> Language Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:32:26 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Session Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:32:26 --> Session routines successfully run
+DEBUG - 2025-05-14 13:32:26 --> Model Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Model Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:32:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:32:26 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:32:26 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:32:26 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:32:26 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined index: dj_id C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Warning  --> in_array() expects parameter 2 to be array, null given C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 435
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:32:26 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:32:26 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:32:26 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:32:26 --> Final output sent to browser
+DEBUG - 2025-05-14 13:32:26 --> Total execution time: 0.3115
+DEBUG - 2025-05-14 13:32:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Router Class Initialized
+ERROR - 2025-05-14 13:32:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:26 --> Router Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Router Class Initialized
+ERROR - 2025-05-14 13:32:26 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:32:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Router Class Initialized
+ERROR - 2025-05-14 13:32:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:26 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Router Class Initialized
+ERROR - 2025-05-14 13:32:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:32:26 --> Config Class Initialized
+DEBUG - 2025-05-14 13:32:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:32:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:32:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:32:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:32:27 --> Router Class Initialized
+ERROR - 2025-05-14 13:32:27 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:33:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:33:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Router Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Output Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Security Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Input Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:33:48 --> Language Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:33:48 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Session Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:33:48 --> Session routines successfully run
+DEBUG - 2025-05-14 13:33:48 --> Model Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Model Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:33:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+ERROR - 2025-05-14 13:33:48 --> Severity: Notice  --> Undefined variable: djs_preasignados C:\xampp\htdocs\intraboda\application\controllers\admin.php 1712
+ERROR - 2025-05-14 13:33:48 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\xampp\htdocs\intraboda\application\controllers\admin.php 1712
+DEBUG - 2025-05-14 13:33:48 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:33:48 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:33:48 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:33:48 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:33:48 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:33:48 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:33:48 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:33:48 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:33:48 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:33:48 --> Final output sent to browser
+DEBUG - 2025-05-14 13:33:48 --> Total execution time: 0.2371
+DEBUG - 2025-05-14 13:33:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:33:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Router Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 13:33:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:33:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Router Class Initialized
+ERROR - 2025-05-14 13:33:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:33:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:33:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Router Class Initialized
+ERROR - 2025-05-14 13:33:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:33:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:33:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:33:48 --> Router Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> URI Class Initialized
+ERROR - 2025-05-14 13:33:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:33:48 --> Router Class Initialized
+ERROR - 2025-05-14 13:33:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:33:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:33:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:33:48 --> Router Class Initialized
+ERROR - 2025-05-14 13:33:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:38:30 --> Config Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:38:30 --> URI Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Router Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Output Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Security Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Input Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:38:30 --> Language Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:38:30 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Session Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:38:30 --> Session routines successfully run
+DEBUG - 2025-05-14 13:38:30 --> Model Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Model Class Initialized
+DEBUG - 2025-05-14 13:38:30 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:38:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+ERROR - 2025-05-14 13:38:30 --> Severity: Notice  --> Undefined property: Admin::$Djs_model C:\xampp\htdocs\intraboda\application\controllers\admin.php 1713
+DEBUG - 2025-05-14 13:39:04 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:04 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Router Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Output Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Security Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Input Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:39:04 --> Language Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:39:04 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Session Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:39:04 --> Session routines successfully run
+DEBUG - 2025-05-14 13:39:04 --> Model Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Model Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:39:04 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:39:04 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:39:04 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:39:04 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:39:05 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:39:05 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:39:05 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:39:05 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:39:05 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:39:05 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:39:05 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:39:05 --> Final output sent to browser
+DEBUG - 2025-05-14 13:39:05 --> Total execution time: 0.2394
+DEBUG - 2025-05-14 13:39:05 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:05 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Router Class Initialized
+ERROR - 2025-05-14 13:39:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:39:05 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:05 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Router Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 13:39:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:39:05 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Router Class Initialized
+ERROR - 2025-05-14 13:39:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:39:05 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:05 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Router Class Initialized
+ERROR - 2025-05-14 13:39:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:39:05 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:05 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:05 --> Router Class Initialized
+DEBUG - 2025-05-14 13:39:05 --> URI Class Initialized
+ERROR - 2025-05-14 13:39:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:39:05 --> Router Class Initialized
+ERROR - 2025-05-14 13:39:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:39:23 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:23 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> Router Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> Output Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> Security Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> Input Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:39:23 --> Language Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:39:23 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:39:23 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:39:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:39:23 --> Final output sent to browser
+DEBUG - 2025-05-14 13:39:23 --> Total execution time: 0.0445
+DEBUG - 2025-05-14 13:39:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> Router Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> Output Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> Security Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> Input Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:39:27 --> Language Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:39:27 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:39:27 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:39:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:39:27 --> Final output sent to browser
+DEBUG - 2025-05-14 13:39:27 --> Total execution time: 0.0372
+DEBUG - 2025-05-14 13:39:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Router Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Output Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Security Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Input Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:39:37 --> Language Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:39:37 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Session Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:39:37 --> Session routines successfully run
+DEBUG - 2025-05-14 13:39:37 --> Model Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Model Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:39:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:39:37 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:39:37 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:39:37 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:39:37 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:39:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:39:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:39:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:39:37 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:39:37 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:39:37 --> Final output sent to browser
+DEBUG - 2025-05-14 13:39:37 --> Total execution time: 0.2013
+DEBUG - 2025-05-14 13:39:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Router Class Initialized
+ERROR - 2025-05-14 13:39:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:39:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Router Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Router Class Initialized
+ERROR - 2025-05-14 13:39:37 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:39:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:39:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Router Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Hooks Class Initialized
+ERROR - 2025-05-14 13:39:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:39:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Router Class Initialized
+ERROR - 2025-05-14 13:39:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:39:37 --> Config Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:39:37 --> URI Class Initialized
+DEBUG - 2025-05-14 13:39:37 --> Router Class Initialized
+ERROR - 2025-05-14 13:39:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:40:57 --> Config Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:40:57 --> URI Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Router Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Output Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Security Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Input Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:40:57 --> Language Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:40:57 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Session Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:40:57 --> Session routines successfully run
+DEBUG - 2025-05-14 13:40:57 --> Model Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Model Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:40:57 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:40:57 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:40:57 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:40:57 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:40:57 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:40:57 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:40:57 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+ERROR - 2025-05-14 13:40:57 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 563
+DEBUG - 2025-05-14 13:40:57 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:40:57 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:40:57 --> Final output sent to browser
+DEBUG - 2025-05-14 13:40:57 --> Total execution time: 0.2325
+DEBUG - 2025-05-14 13:40:57 --> Config Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:40:57 --> URI Class Initialized
+DEBUG - 2025-05-14 13:40:57 --> Router Class Initialized
+ERROR - 2025-05-14 13:40:57 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:40:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:40:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:40:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:40:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:40:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:40:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Router Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:40:58 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:40:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:40:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:40:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:40:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:40:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:40:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:40:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:40:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:42:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:42:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Router Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Output Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Security Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Input Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:42:27 --> Language Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:42:27 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Session Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:42:27 --> Session routines successfully run
+DEBUG - 2025-05-14 13:42:27 --> Model Class Initialized
+DEBUG - 2025-05-14 13:42:27 --> Model Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:42:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:42:28 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:42:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:42:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:42:28 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:42:28 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+ERROR - 2025-05-14 13:42:28 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+ERROR - 2025-05-14 13:42:28 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+DEBUG - 2025-05-14 13:42:28 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:42:28 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:42:28 --> Final output sent to browser
+DEBUG - 2025-05-14 13:42:28 --> Total execution time: 0.2504
+DEBUG - 2025-05-14 13:42:28 --> Config Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Config Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:42:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:42:28 --> Config Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> URI Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> URI Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:42:28 --> Router Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Router Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> URI Class Initialized
+ERROR - 2025-05-14 13:42:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:42:28 --> Router Class Initialized
+ERROR - 2025-05-14 13:42:28 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:42:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:42:28 --> Config Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:42:28 --> URI Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Router Class Initialized
+ERROR - 2025-05-14 13:42:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:42:28 --> Config Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:42:28 --> URI Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Router Class Initialized
+ERROR - 2025-05-14 13:42:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:42:28 --> Config Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:42:28 --> URI Class Initialized
+DEBUG - 2025-05-14 13:42:28 --> Router Class Initialized
+ERROR - 2025-05-14 13:42:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:47:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:47:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Router Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Output Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Security Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Input Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:47:31 --> Language Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:47:31 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Session Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:47:31 --> Session routines successfully run
+DEBUG - 2025-05-14 13:47:31 --> Model Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Model Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:47:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:47:31 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:47:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:47:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:47:31 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:47:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+ERROR - 2025-05-14 13:47:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+ERROR - 2025-05-14 13:47:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+DEBUG - 2025-05-14 13:47:31 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:47:31 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:47:31 --> Final output sent to browser
+DEBUG - 2025-05-14 13:47:31 --> Total execution time: 0.2228
+DEBUG - 2025-05-14 13:47:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:47:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Router Class Initialized
+ERROR - 2025-05-14 13:47:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:47:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:47:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Router Class Initialized
+ERROR - 2025-05-14 13:47:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:47:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:47:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Router Class Initialized
+ERROR - 2025-05-14 13:47:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:47:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:47:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Router Class Initialized
+ERROR - 2025-05-14 13:47:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:47:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:47:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:47:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:47:31 --> Router Class Initialized
+ERROR - 2025-05-14 13:47:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:47:31 --> Router Class Initialized
+ERROR - 2025-05-14 13:47:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:07 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:07 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Router Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Output Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Security Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Input Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:48:07 --> Language Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:48:07 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Session Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:48:07 --> Session routines successfully run
+DEBUG - 2025-05-14 13:48:07 --> Model Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Model Class Initialized
+DEBUG - 2025-05-14 13:48:07 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:48:07 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:48:07 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:48:08 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:48:08 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:48:08 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:48:08 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+ERROR - 2025-05-14 13:48:08 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+ERROR - 2025-05-14 13:48:08 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+DEBUG - 2025-05-14 13:48:08 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:48:08 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:48:08 --> Final output sent to browser
+DEBUG - 2025-05-14 13:48:08 --> Total execution time: 0.2173
+DEBUG - 2025-05-14 13:48:08 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:08 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:08 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:08 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:08 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:08 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:08 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:08 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Router Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:08 --> URI Class Initialized
+ERROR - 2025-05-14 13:48:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:08 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:08 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:08 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:16 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:16 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Router Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Output Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Security Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Input Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:48:16 --> Language Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:48:16 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Session Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:48:16 --> Session routines successfully run
+DEBUG - 2025-05-14 13:48:16 --> Model Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Model Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:48:16 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:48:16 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:48:16 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:48:16 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:48:16 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:48:16 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+ERROR - 2025-05-14 13:48:16 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+ERROR - 2025-05-14 13:48:16 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+DEBUG - 2025-05-14 13:48:16 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:48:16 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:48:16 --> Final output sent to browser
+DEBUG - 2025-05-14 13:48:16 --> Total execution time: 0.2175
+DEBUG - 2025-05-14 13:48:16 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:16 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:16 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Router Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:16 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:48:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:16 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:16 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:16 --> Router Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:16 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:16 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:48:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:17 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:17 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:17 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:17 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:17 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:17 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:35 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:35 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Router Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Output Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Security Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Input Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:48:35 --> Language Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:48:35 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Session Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:48:35 --> Session routines successfully run
+DEBUG - 2025-05-14 13:48:35 --> Model Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Model Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:48:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:48:35 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:48:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:48:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:48:35 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:48:35 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:48:35 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+ERROR - 2025-05-14 13:48:35 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+ERROR - 2025-05-14 13:48:35 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 567
+DEBUG - 2025-05-14 13:48:35 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:48:35 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:48:35 --> Final output sent to browser
+DEBUG - 2025-05-14 13:48:35 --> Total execution time: 0.2318
+DEBUG - 2025-05-14 13:48:36 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:36 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:36 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:36 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:36 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:36 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Router Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:36 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:48:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:36 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:36 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:48:36 --> Config Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:48:36 --> URI Class Initialized
+DEBUG - 2025-05-14 13:48:36 --> Router Class Initialized
+ERROR - 2025-05-14 13:48:36 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:49:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:49:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Router Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Output Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Security Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Input Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:49:27 --> Language Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:49:27 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Session Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:49:27 --> Session routines successfully run
+DEBUG - 2025-05-14 13:49:27 --> Model Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Model Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:49:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:49:27 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:49:27 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:49:27 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:49:27 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:49:27 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:49:27 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:49:27 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:49:27 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:49:27 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:49:27 --> Final output sent to browser
+DEBUG - 2025-05-14 13:49:27 --> Total execution time: 0.2048
+DEBUG - 2025-05-14 13:49:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:49:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Router Class Initialized
+ERROR - 2025-05-14 13:49:27 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:49:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:49:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:49:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Router Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Router Class Initialized
+ERROR - 2025-05-14 13:49:27 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:49:27 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:49:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:49:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:49:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Router Class Initialized
+ERROR - 2025-05-14 13:49:27 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:49:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Router Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 13:49:27 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:49:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:49:27 --> Router Class Initialized
+ERROR - 2025-05-14 13:49:27 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Router Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Output Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Security Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Input Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:50:31 --> Language Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:50:31 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Session Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:50:31 --> Session routines successfully run
+DEBUG - 2025-05-14 13:50:31 --> Model Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Model Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:50:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:50:31 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:50:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:50:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:50:31 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:50:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:50:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:50:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:50:31 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:50:31 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:50:31 --> Final output sent to browser
+DEBUG - 2025-05-14 13:50:31 --> Total execution time: 0.2213
+DEBUG - 2025-05-14 13:50:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Router Class Initialized
+ERROR - 2025-05-14 13:50:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Router Class Initialized
+ERROR - 2025-05-14 13:50:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Router Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Router Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> Config Class Initialized
+ERROR - 2025-05-14 13:50:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:31 --> Hooks Class Initialized
+ERROR - 2025-05-14 13:50:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:32 --> Router Class Initialized
+ERROR - 2025-05-14 13:50:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:32 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:32 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:32 --> Router Class Initialized
+ERROR - 2025-05-14 13:50:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:47 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:47 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Router Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Output Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Security Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Input Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:50:47 --> Language Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:50:47 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Session Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:50:47 --> Session routines successfully run
+DEBUG - 2025-05-14 13:50:47 --> Model Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Model Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:50:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:50:47 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:50:47 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:50:47 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:50:47 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:50:47 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:50:47 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:50:47 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:50:47 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:50:47 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:50:47 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:50:47 --> Final output sent to browser
+DEBUG - 2025-05-14 13:50:47 --> Total execution time: 0.2660
+DEBUG - 2025-05-14 13:50:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Router Class Initialized
+ERROR - 2025-05-14 13:50:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Router Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Hooks Class Initialized
+ERROR - 2025-05-14 13:50:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Router Class Initialized
+ERROR - 2025-05-14 13:50:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Router Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Hooks Class Initialized
+ERROR - 2025-05-14 13:50:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Router Class Initialized
+ERROR - 2025-05-14 13:50:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:50:48 --> Config Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:50:48 --> URI Class Initialized
+DEBUG - 2025-05-14 13:50:48 --> Router Class Initialized
+ERROR - 2025-05-14 13:50:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:51:03 --> Config Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:51:03 --> URI Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Router Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Output Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Security Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Input Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:51:03 --> Language Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:51:03 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Session Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:51:03 --> Session routines successfully run
+DEBUG - 2025-05-14 13:51:03 --> Model Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Model Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:51:03 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:51:03 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:51:03 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:51:03 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:51:03 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:51:03 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:51:03 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:51:03 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:51:03 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:51:03 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:51:03 --> Final output sent to browser
+DEBUG - 2025-05-14 13:51:03 --> Total execution time: 0.2595
+DEBUG - 2025-05-14 13:51:03 --> Config Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:51:03 --> URI Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Router Class Initialized
+ERROR - 2025-05-14 13:51:03 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:51:03 --> Config Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:51:03 --> URI Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Router Class Initialized
+ERROR - 2025-05-14 13:51:03 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:51:03 --> Config Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:51:03 --> Config Class Initialized
+DEBUG - 2025-05-14 13:51:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> Config Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> URI Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:51:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> Router Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:51:04 --> URI Class Initialized
+ERROR - 2025-05-14 13:51:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:51:04 --> URI Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> Router Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> Router Class Initialized
+ERROR - 2025-05-14 13:51:04 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:51:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:51:04 --> Config Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:51:04 --> URI Class Initialized
+DEBUG - 2025-05-14 13:51:04 --> Router Class Initialized
+ERROR - 2025-05-14 13:51:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:52:31 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:31 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Router Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Output Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Security Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Input Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:52:31 --> Language Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:52:31 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Session Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:52:31 --> Session routines successfully run
+DEBUG - 2025-05-14 13:52:31 --> Model Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Model Class Initialized
+DEBUG - 2025-05-14 13:52:31 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:52:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:52:31 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:52:32 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:52:32 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:52:32 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:52:32 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:52:32 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:52:32 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:52:32 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:52:32 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:52:32 --> Final output sent to browser
+DEBUG - 2025-05-14 13:52:32 --> Total execution time: 0.2188
+DEBUG - 2025-05-14 13:52:32 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:32 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Router Class Initialized
+ERROR - 2025-05-14 13:52:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:52:32 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:32 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Router Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Router Class Initialized
+ERROR - 2025-05-14 13:52:32 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:52:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:52:32 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:32 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Router Class Initialized
+ERROR - 2025-05-14 13:52:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:52:32 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:32 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Router Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Utf8 Class Initialized
+ERROR - 2025-05-14 13:52:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:52:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:32 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:32 --> Router Class Initialized
+ERROR - 2025-05-14 13:52:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:52:57 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:57 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Router Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Output Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Security Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Input Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:52:57 --> Language Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:52:57 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Session Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:52:57 --> Session routines successfully run
+DEBUG - 2025-05-14 13:52:57 --> Model Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Model Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:52:57 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:52:57 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:52:57 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:52:57 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:52:57 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:52:57 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:52:57 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:52:57 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:52:57 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:52:57 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:52:57 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:52:57 --> Final output sent to browser
+DEBUG - 2025-05-14 13:52:57 --> Total execution time: 0.2239
+DEBUG - 2025-05-14 13:52:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Router Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:52:58 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:52:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:52:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:52:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:52:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Router Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Config Class Initialized
+ERROR - 2025-05-14 13:52:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:52:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:52:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:52:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:52:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:52:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:52:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:06 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:06 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Router Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Output Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Security Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Input Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:55:06 --> Language Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:55:06 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Session Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:55:06 --> Session routines successfully run
+DEBUG - 2025-05-14 13:55:06 --> Model Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Model Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:55:06 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:55:06 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:55:06 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:55:06 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:55:06 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:55:06 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:55:06 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:55:06 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:55:06 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:55:06 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:55:06 --> Final output sent to browser
+DEBUG - 2025-05-14 13:55:06 --> Total execution time: 0.2551
+DEBUG - 2025-05-14 13:55:06 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:06 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Router Class Initialized
+ERROR - 2025-05-14 13:55:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:06 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:06 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Router Class Initialized
+ERROR - 2025-05-14 13:55:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:06 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:06 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Router Class Initialized
+ERROR - 2025-05-14 13:55:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:06 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:06 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Router Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Hooks Class Initialized
+ERROR - 2025-05-14 13:55:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:06 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Router Class Initialized
+ERROR - 2025-05-14 13:55:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:06 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:06 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:06 --> Router Class Initialized
+ERROR - 2025-05-14 13:55:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Router Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Output Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Security Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Input Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:55:58 --> Language Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:55:58 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Session Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:55:58 --> Session routines successfully run
+DEBUG - 2025-05-14 13:55:58 --> Model Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Model Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:55:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:55:58 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:55:58 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:55:58 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:55:58 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:55:58 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:55:58 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:55:58 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:55:58 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:55:58 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:55:58 --> Final output sent to browser
+DEBUG - 2025-05-14 13:55:58 --> Total execution time: 0.2442
+DEBUG - 2025-05-14 13:55:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:55:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Router Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:55:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:55:58 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:55:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:58 --> Config Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Router Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Config Class Initialized
+ERROR - 2025-05-14 13:55:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:55:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:55:58 --> URI Class Initialized
+DEBUG - 2025-05-14 13:55:58 --> Router Class Initialized
+ERROR - 2025-05-14 13:55:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:56:39 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:39 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Router Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Output Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Security Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Input Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:56:39 --> Language Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:56:39 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Session Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:56:39 --> Session routines successfully run
+DEBUG - 2025-05-14 13:56:39 --> Model Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Model Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:56:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:56:39 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:56:39 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:56:39 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:56:39 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:56:39 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:56:39 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:56:39 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:56:39 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:56:39 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:56:39 --> Final output sent to browser
+DEBUG - 2025-05-14 13:56:39 --> Total execution time: 0.2267
+DEBUG - 2025-05-14 13:56:39 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:39 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:39 --> Router Class Initialized
+ERROR - 2025-05-14 13:56:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:56:40 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:40 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Router Class Initialized
+ERROR - 2025-05-14 13:56:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:56:40 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:40 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Router Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 13:56:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:56:40 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Router Class Initialized
+ERROR - 2025-05-14 13:56:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:56:40 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:40 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Router Class Initialized
+ERROR - 2025-05-14 13:56:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:56:40 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:40 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:40 --> Router Class Initialized
+ERROR - 2025-05-14 13:56:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:56:55 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:55 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:55 --> Router Class Initialized
+DEBUG - 2025-05-14 13:56:55 --> Output Class Initialized
+DEBUG - 2025-05-14 13:56:55 --> Security Class Initialized
+DEBUG - 2025-05-14 13:56:55 --> Input Class Initialized
+DEBUG - 2025-05-14 13:56:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:56:55 --> Language Class Initialized
+DEBUG - 2025-05-14 13:56:55 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:56:56 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Session Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:56:56 --> Session routines successfully run
+DEBUG - 2025-05-14 13:56:56 --> Model Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Model Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:56:56 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:56:56 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:56:56 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:56:56 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:56:56 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:56:56 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:56:56 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:56:56 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:56:56 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:56:56 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:56:56 --> Final output sent to browser
+DEBUG - 2025-05-14 13:56:56 --> Total execution time: 0.2297
+DEBUG - 2025-05-14 13:56:56 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:56 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Router Class Initialized
+ERROR - 2025-05-14 13:56:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:56:56 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:56 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Router Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Router Class Initialized
+ERROR - 2025-05-14 13:56:56 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:56:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:56:56 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:56 --> Router Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Router Class Initialized
+ERROR - 2025-05-14 13:56:56 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 13:56:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:56:56 --> Config Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:56:56 --> URI Class Initialized
+DEBUG - 2025-05-14 13:56:56 --> Router Class Initialized
+ERROR - 2025-05-14 13:56:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:17 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:18 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Router Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Output Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Security Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Input Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:57:18 --> Language Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:57:18 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Session Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:57:18 --> Session routines successfully run
+DEBUG - 2025-05-14 13:57:18 --> Model Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Model Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:57:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:57:18 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:57:18 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:57:18 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:57:18 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:57:18 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:57:18 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:57:18 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:57:18 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:57:18 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:57:18 --> Final output sent to browser
+DEBUG - 2025-05-14 13:57:18 --> Total execution time: 0.2013
+DEBUG - 2025-05-14 13:57:18 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:18 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Router Class Initialized
+ERROR - 2025-05-14 13:57:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:18 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:18 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Router Class Initialized
+ERROR - 2025-05-14 13:57:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:18 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Router Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 13:57:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:18 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Router Class Initialized
+ERROR - 2025-05-14 13:57:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:18 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:18 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Router Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Utf8 Class Initialized
+ERROR - 2025-05-14 13:57:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:18 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:18 --> Router Class Initialized
+ERROR - 2025-05-14 13:57:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:51 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Router Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Output Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Security Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Input Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:57:52 --> Language Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:57:52 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Session Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:57:52 --> Session routines successfully run
+DEBUG - 2025-05-14 13:57:52 --> Model Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Model Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:57:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:57:52 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:57:52 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:57:52 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 13:57:52 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 13:57:52 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:57:52 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+ERROR - 2025-05-14 13:57:52 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 570
+DEBUG - 2025-05-14 13:57:52 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 13:57:52 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 13:57:52 --> Final output sent to browser
+DEBUG - 2025-05-14 13:57:52 --> Total execution time: 0.2591
+DEBUG - 2025-05-14 13:57:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Router Class Initialized
+ERROR - 2025-05-14 13:57:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Router Class Initialized
+ERROR - 2025-05-14 13:57:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Router Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 13:57:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Router Class Initialized
+ERROR - 2025-05-14 13:57:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Config Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Router Class Initialized
+ERROR - 2025-05-14 13:57:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:57:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:57:52 --> URI Class Initialized
+DEBUG - 2025-05-14 13:57:52 --> Router Class Initialized
+ERROR - 2025-05-14 13:57:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:59:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:59:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Router Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Output Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Security Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Input Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:59:27 --> Language Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:59:27 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Session Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:59:27 --> Session routines successfully run
+DEBUG - 2025-05-14 13:59:27 --> Model Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Model Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:59:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:59:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:59:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Router Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Output Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Security Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Input Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:59:27 --> Language Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:59:27 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Session Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:59:27 --> Session routines successfully run
+DEBUG - 2025-05-14 13:59:27 --> Model Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Model Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Model Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:59:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:59:27 --> Ejecutando consulta: SELECT id, nombre FROM servicios WHERE id IN (80,81,82,83,84)
+DEBUG - 2025-05-14 13:59:27 --> File loaded: application/views/cliente/header.php
+ERROR - 2025-05-14 13:59:27 --> Severity: Notice  --> Undefined index: hora_boda C:\xampp\htdocs\intraboda\application\views\cliente\cliente_details.php 176
+ERROR - 2025-05-14 13:59:27 --> Severity: Notice  --> Undefined index: restaurante C:\xampp\htdocs\intraboda\application\views\cliente\cliente_details.php 180
+ERROR - 2025-05-14 13:59:27 --> Severity: Notice  --> Undefined index: direccion_restaurante C:\xampp\htdocs\intraboda\application\views\cliente\cliente_details.php 181
+ERROR - 2025-05-14 13:59:27 --> Severity: Notice  --> Undefined index: telefono_restaurante C:\xampp\htdocs\intraboda\application\views\cliente\cliente_details.php 182
+ERROR - 2025-05-14 13:59:27 --> Severity: Notice  --> Undefined index: maitre C:\xampp\htdocs\intraboda\application\views\cliente\cliente_details.php 183
+ERROR - 2025-05-14 13:59:27 --> Severity: Notice  --> Undefined index: telefono_maitre C:\xampp\htdocs\intraboda\application\views\cliente\cliente_details.php 184
+ERROR - 2025-05-14 13:59:27 --> Severity: Notice  --> Undefined index: factura_pdf C:\xampp\htdocs\intraboda\application\views\cliente\cliente_details.php 581
+DEBUG - 2025-05-14 13:59:27 --> File loaded: application/views/cliente/cliente_details.php
+DEBUG - 2025-05-14 13:59:27 --> File loaded: application/views/cliente/footer.php
+DEBUG - 2025-05-14 13:59:27 --> Final output sent to browser
+DEBUG - 2025-05-14 13:59:27 --> Total execution time: 0.1288
+DEBUG - 2025-05-14 13:59:27 --> Config Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:59:27 --> URI Class Initialized
+DEBUG - 2025-05-14 13:59:27 --> Router Class Initialized
+ERROR - 2025-05-14 13:59:27 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 13:59:30 --> Config Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Hooks Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 13:59:30 --> URI Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Router Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Output Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Security Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Input Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 13:59:30 --> Language Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Loader Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 13:59:30 --> Controller Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Session Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 13:59:30 --> Session routines successfully run
+DEBUG - 2025-05-14 13:59:30 --> Model Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Model Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Model Class Initialized
+DEBUG - 2025-05-14 13:59:30 --> Database Driver Class Initialized
+ERROR - 2025-05-14 13:59:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 13:59:30 --> File loaded: application/views/cliente/header.php
+ERROR - 2025-05-14 13:59:30 --> Severity: Notice  --> Undefined variable: data C:\xampp\htdocs\intraboda\application\views\cliente\canciones.php 7
+DEBUG - 2025-05-14 13:59:30 --> File loaded: application/views/cliente/canciones.php
+DEBUG - 2025-05-14 13:59:30 --> File loaded: application/views/cliente/footer.php
+DEBUG - 2025-05-14 13:59:30 --> Final output sent to browser
+DEBUG - 2025-05-14 13:59:30 --> Total execution time: 0.4255
+DEBUG - 2025-05-14 14:00:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:00:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Router Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Output Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Security Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Input Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:00:40 --> Language Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:00:40 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Session Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:00:40 --> Session routines successfully run
+DEBUG - 2025-05-14 14:00:40 --> Model Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Model Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:00:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:00:40 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:00:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:00:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:00:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:00:40 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:00:40 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 572
+ERROR - 2025-05-14 14:00:40 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 572
+ERROR - 2025-05-14 14:00:40 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 572
+DEBUG - 2025-05-14 14:00:40 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:00:40 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:00:40 --> Final output sent to browser
+DEBUG - 2025-05-14 14:00:40 --> Total execution time: 0.2701
+DEBUG - 2025-05-14 14:00:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:00:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:00:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:00:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:00:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:00:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> URI Class Initialized
+ERROR - 2025-05-14 14:00:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:00:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:00:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:00:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:00:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:00:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> URI Class Initialized
+ERROR - 2025-05-14 14:00:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:00:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:00:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:00:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:00:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:00:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:29 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:29 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Router Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Output Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Security Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Input Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:02:29 --> Language Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:02:29 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Session Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:02:29 --> Session routines successfully run
+DEBUG - 2025-05-14 14:02:29 --> Model Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Model Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:02:29 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:02:29 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:02:29 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:02:29 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:02:29 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:02:29 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 572
+ERROR - 2025-05-14 14:02:29 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 572
+ERROR - 2025-05-14 14:02:29 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 572
+DEBUG - 2025-05-14 14:02:29 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:02:29 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:02:29 --> Final output sent to browser
+DEBUG - 2025-05-14 14:02:29 --> Total execution time: 0.2321
+DEBUG - 2025-05-14 14:02:29 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:29 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Router Class Initialized
+ERROR - 2025-05-14 14:02:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:29 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:29 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Router Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:02:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:29 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Router Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Config Class Initialized
+ERROR - 2025-05-14 14:02:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:29 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:29 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Router Class Initialized
+ERROR - 2025-05-14 14:02:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:29 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:29 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Router Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Config Class Initialized
+ERROR - 2025-05-14 14:02:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:29 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:29 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:29 --> Router Class Initialized
+ERROR - 2025-05-14 14:02:29 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:49 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:49 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Router Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Output Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Security Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Input Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:02:49 --> Language Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:02:49 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Session Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:02:49 --> Session routines successfully run
+DEBUG - 2025-05-14 14:02:49 --> Model Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Model Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:02:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:02:49 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:02:49 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:02:49 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:02:49 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:02:49 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 572
+ERROR - 2025-05-14 14:02:49 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 572
+ERROR - 2025-05-14 14:02:49 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 572
+DEBUG - 2025-05-14 14:02:49 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:02:49 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:02:49 --> Final output sent to browser
+DEBUG - 2025-05-14 14:02:49 --> Total execution time: 0.2304
+DEBUG - 2025-05-14 14:02:49 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:49 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Router Class Initialized
+ERROR - 2025-05-14 14:02:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:49 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:49 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Router Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:02:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:49 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:49 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Router Class Initialized
+ERROR - 2025-05-14 14:02:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:49 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:49 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Router Class Initialized
+ERROR - 2025-05-14 14:02:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:02:49 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Config Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:49 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:02:49 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> URI Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Router Class Initialized
+DEBUG - 2025-05-14 14:02:49 --> Router Class Initialized
+ERROR - 2025-05-14 14:02:49 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:02:49 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:04:10 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:10 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Router Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Output Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Security Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Input Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:04:10 --> Language Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:04:10 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Session Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:04:10 --> Session routines successfully run
+DEBUG - 2025-05-14 14:04:10 --> Model Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Model Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:04:10 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:04:10 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:04:10 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:04:10 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:04:10 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:04:10 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 574
+ERROR - 2025-05-14 14:04:10 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 574
+ERROR - 2025-05-14 14:04:10 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 574
+DEBUG - 2025-05-14 14:04:10 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:04:10 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:04:10 --> Final output sent to browser
+DEBUG - 2025-05-14 14:04:10 --> Total execution time: 0.2251
+DEBUG - 2025-05-14 14:04:10 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:10 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:10 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Router Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Router Class Initialized
+ERROR - 2025-05-14 14:04:10 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:04:10 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:04:10 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:04:10 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:10 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Router Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:10 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:10 --> Router Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> URI Class Initialized
+ERROR - 2025-05-14 14:04:10 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:04:10 --> Router Class Initialized
+ERROR - 2025-05-14 14:04:10 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:04:10 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:04:10 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:10 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:10 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:11 --> Router Class Initialized
+ERROR - 2025-05-14 14:04:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:04:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Router Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Output Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Security Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Input Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:04:54 --> Language Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:04:54 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Session Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:04:54 --> Session routines successfully run
+DEBUG - 2025-05-14 14:04:54 --> Model Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Model Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:04:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:04:54 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:04:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:04:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:04:54 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:04:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 617
+ERROR - 2025-05-14 14:04:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 617
+ERROR - 2025-05-14 14:04:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 617
+DEBUG - 2025-05-14 14:04:54 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:04:54 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:04:54 --> Final output sent to browser
+DEBUG - 2025-05-14 14:04:54 --> Total execution time: 0.2278
+DEBUG - 2025-05-14 14:04:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Router Class Initialized
+ERROR - 2025-05-14 14:04:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:04:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:54 --> Router Class Initialized
+ERROR - 2025-05-14 14:04:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:04:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Router Class Initialized
+ERROR - 2025-05-14 14:04:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:04:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Router Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Router Class Initialized
+ERROR - 2025-05-14 14:04:55 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:04:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:04:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:04:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:04:55 --> Router Class Initialized
+ERROR - 2025-05-14 14:04:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:05:36 --> Config Class Initialized
+DEBUG - 2025-05-14 14:05:36 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:05:36 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:05:36 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:05:36 --> URI Class Initialized
+DEBUG - 2025-05-14 14:05:36 --> Router Class Initialized
+DEBUG - 2025-05-14 14:05:36 --> Output Class Initialized
+DEBUG - 2025-05-14 14:05:36 --> Security Class Initialized
+DEBUG - 2025-05-14 14:05:36 --> Input Class Initialized
+DEBUG - 2025-05-14 14:05:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:05:36 --> Language Class Initialized
+DEBUG - 2025-05-14 14:05:36 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:05:37 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Session Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:05:37 --> Session routines successfully run
+DEBUG - 2025-05-14 14:05:37 --> Model Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Model Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:05:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:05:37 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:05:37 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:05:37 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:05:37 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:05:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 618
+ERROR - 2025-05-14 14:05:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 618
+ERROR - 2025-05-14 14:05:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 618
+DEBUG - 2025-05-14 14:05:37 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:05:37 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:05:37 --> Final output sent to browser
+DEBUG - 2025-05-14 14:05:37 --> Total execution time: 0.2388
+DEBUG - 2025-05-14 14:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Router Class Initialized
+ERROR - 2025-05-14 14:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Router Class Initialized
+ERROR - 2025-05-14 14:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:05:37 --> Router Class Initialized
+ERROR - 2025-05-14 14:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Router Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Router Class Initialized
+ERROR - 2025-05-14 14:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:05:37 --> Config Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:05:37 --> URI Class Initialized
+DEBUG - 2025-05-14 14:05:37 --> Router Class Initialized
+ERROR - 2025-05-14 14:05:37 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:06:37 --> Config Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:06:37 --> URI Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Router Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Output Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Security Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Input Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:06:37 --> Language Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:06:37 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Session Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:06:37 --> Session routines successfully run
+DEBUG - 2025-05-14 14:06:37 --> Model Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Model Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:06:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:06:37 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:06:37 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:06:37 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:06:37 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:06:37 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:06:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+ERROR - 2025-05-14 14:06:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+ERROR - 2025-05-14 14:06:37 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+DEBUG - 2025-05-14 14:06:37 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:06:37 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:06:37 --> Final output sent to browser
+DEBUG - 2025-05-14 14:06:37 --> Total execution time: 0.2249
+DEBUG - 2025-05-14 14:06:38 --> Config Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:06:38 --> URI Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Router Class Initialized
+ERROR - 2025-05-14 14:06:38 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:06:38 --> Config Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Config Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:06:38 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:06:38 --> URI Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> URI Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Router Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Router Class Initialized
+ERROR - 2025-05-14 14:06:38 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:06:38 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:06:38 --> Config Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:06:38 --> URI Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Router Class Initialized
+ERROR - 2025-05-14 14:06:38 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:06:38 --> Config Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Config Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:06:38 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:06:38 --> URI Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> URI Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Router Class Initialized
+DEBUG - 2025-05-14 14:06:38 --> Router Class Initialized
+ERROR - 2025-05-14 14:06:38 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:06:38 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:04 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:04 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Output Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Security Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Input Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:07:04 --> Language Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:07:04 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Session Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:07:04 --> Session routines successfully run
+DEBUG - 2025-05-14 14:07:04 --> Model Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Model Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:07:04 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:07:04 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:04 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:04 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:04 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:07:04 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+ERROR - 2025-05-14 14:07:04 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+ERROR - 2025-05-14 14:07:04 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+DEBUG - 2025-05-14 14:07:04 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:07:04 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:07:04 --> Final output sent to browser
+DEBUG - 2025-05-14 14:07:04 --> Total execution time: 0.2179
+DEBUG - 2025-05-14 14:07:04 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:04 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:04 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:04 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:07:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:04 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:04 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:04 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:04 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:04 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:04 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:05 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:05 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:05 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:16 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:16 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Output Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Security Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Input Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:07:16 --> Language Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:07:16 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Session Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:07:16 --> Session routines successfully run
+DEBUG - 2025-05-14 14:07:16 --> Model Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Model Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:07:16 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:07:16 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:16 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:16 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:16 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:07:16 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+ERROR - 2025-05-14 14:07:16 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+ERROR - 2025-05-14 14:07:16 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+DEBUG - 2025-05-14 14:07:16 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:07:16 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:07:16 --> Final output sent to browser
+DEBUG - 2025-05-14 14:07:16 --> Total execution time: 0.2404
+DEBUG - 2025-05-14 14:07:16 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:16 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:07:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:16 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:16 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:07:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:16 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:16 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:16 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:16 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:16 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:17 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:17 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:17 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:17 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:17 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:17 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:28 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:28 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Output Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Security Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Input Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:07:28 --> Language Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:07:28 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Session Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:07:28 --> Session routines successfully run
+DEBUG - 2025-05-14 14:07:28 --> Model Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Model Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:07:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:07:28 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:28 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:28 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:07:28 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+ERROR - 2025-05-14 14:07:28 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+ERROR - 2025-05-14 14:07:28 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+DEBUG - 2025-05-14 14:07:28 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:07:28 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:07:28 --> Final output sent to browser
+DEBUG - 2025-05-14 14:07:28 --> Total execution time: 0.2466
+DEBUG - 2025-05-14 14:07:28 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:28 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:28 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:28 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:28 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:07:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:28 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:28 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:28 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:28 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:28 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:28 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:28 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:28 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Output Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Security Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Input Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:07:41 --> Language Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:07:41 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Session Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:07:41 --> Session routines successfully run
+DEBUG - 2025-05-14 14:07:41 --> Model Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Model Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:07:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:07:41 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:41 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:41 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:07:41 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:07:41 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+ERROR - 2025-05-14 14:07:41 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+ERROR - 2025-05-14 14:07:41 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 595
+DEBUG - 2025-05-14 14:07:41 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:07:41 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:07:41 --> Final output sent to browser
+DEBUG - 2025-05-14 14:07:41 --> Total execution time: 0.2352
+DEBUG - 2025-05-14 14:07:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:07:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Config Class Initialized
+ERROR - 2025-05-14 14:07:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:07:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:07:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:07:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:07:41 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:07:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:25 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:25 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Router Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Output Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Security Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Input Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:08:25 --> Language Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:08:25 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Session Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:08:25 --> Session routines successfully run
+DEBUG - 2025-05-14 14:08:25 --> Model Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Model Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:08:25 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:08:25 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:08:25 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:08:25 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:08:25 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:08:25 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 611
+ERROR - 2025-05-14 14:08:25 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 611
+ERROR - 2025-05-14 14:08:25 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 611
+DEBUG - 2025-05-14 14:08:25 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:08:25 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:08:25 --> Final output sent to browser
+DEBUG - 2025-05-14 14:08:25 --> Total execution time: 0.2223
+DEBUG - 2025-05-14 14:08:25 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:25 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Router Class Initialized
+ERROR - 2025-05-14 14:08:25 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:25 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:25 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Router Class Initialized
+ERROR - 2025-05-14 14:08:25 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:25 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:25 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Router Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:25 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:08:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:26 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:26 --> Router Class Initialized
+ERROR - 2025-05-14 14:08:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:26 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:26 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:26 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:26 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:26 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:26 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:26 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:26 --> Router Class Initialized
+ERROR - 2025-05-14 14:08:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:26 --> Router Class Initialized
+ERROR - 2025-05-14 14:08:26 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Router Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Output Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Security Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Input Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:08:46 --> Language Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:08:46 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Session Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:08:46 --> Session routines successfully run
+DEBUG - 2025-05-14 14:08:46 --> Model Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Model Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:08:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:08:46 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:08:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:08:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:08:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:08:46 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:08:46 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 611
+ERROR - 2025-05-14 14:08:46 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 611
+ERROR - 2025-05-14 14:08:46 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 611
+DEBUG - 2025-05-14 14:08:46 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:08:46 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:08:46 --> Final output sent to browser
+DEBUG - 2025-05-14 14:08:46 --> Total execution time: 0.2521
+DEBUG - 2025-05-14 14:08:47 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:47 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Router Class Initialized
+ERROR - 2025-05-14 14:08:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:47 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:47 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:47 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Router Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Router Class Initialized
+ERROR - 2025-05-14 14:08:47 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:08:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:47 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:47 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Router Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:08:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:47 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:47 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Router Class Initialized
+ERROR - 2025-05-14 14:08:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:08:47 --> Config Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:08:47 --> URI Class Initialized
+DEBUG - 2025-05-14 14:08:47 --> Router Class Initialized
+ERROR - 2025-05-14 14:08:47 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:09:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Router Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Output Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Security Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Input Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:09:24 --> Language Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:09:24 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Session Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:09:24 --> Session routines successfully run
+DEBUG - 2025-05-14 14:09:24 --> Model Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Model Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:09:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:09:24 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:09:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:09:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:09:24 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:09:24 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+ERROR - 2025-05-14 14:09:24 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+ERROR - 2025-05-14 14:09:24 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+DEBUG - 2025-05-14 14:09:24 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:09:24 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:09:24 --> Final output sent to browser
+DEBUG - 2025-05-14 14:09:24 --> Total execution time: 0.2250
+DEBUG - 2025-05-14 14:09:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:09:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:09:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:09:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:09:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Router Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Router Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:09:24 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:09:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:09:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:09:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:09:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:09:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:09:39 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:39 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Router Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Output Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Security Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Input Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:09:39 --> Language Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:09:39 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Session Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:09:39 --> Session routines successfully run
+DEBUG - 2025-05-14 14:09:39 --> Model Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Model Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:09:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:09:39 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:09:39 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:09:39 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:09:39 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:09:40 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:09:40 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+ERROR - 2025-05-14 14:09:40 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+ERROR - 2025-05-14 14:09:40 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+DEBUG - 2025-05-14 14:09:40 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:09:40 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:09:40 --> Final output sent to browser
+DEBUG - 2025-05-14 14:09:40 --> Total execution time: 0.2310
+DEBUG - 2025-05-14 14:09:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Router Class Initialized
+ERROR - 2025-05-14 14:09:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:09:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Router Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> URI Class Initialized
+ERROR - 2025-05-14 14:09:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:09:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Router Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:40 --> URI Class Initialized
+ERROR - 2025-05-14 14:09:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:09:40 --> Router Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Config Class Initialized
+ERROR - 2025-05-14 14:09:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:09:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:09:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Router Class Initialized
+DEBUG - 2025-05-14 14:09:40 --> Router Class Initialized
+ERROR - 2025-05-14 14:09:40 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:09:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:10:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Router Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Output Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Security Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Input Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:10:06 --> Language Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:10:06 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Session Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:10:06 --> Session routines successfully run
+DEBUG - 2025-05-14 14:10:06 --> Model Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Model Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:10:06 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:10:06 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:10:06 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:10:06 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:10:06 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:10:06 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+ERROR - 2025-05-14 14:10:06 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+ERROR - 2025-05-14 14:10:06 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+DEBUG - 2025-05-14 14:10:06 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:10:06 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:10:06 --> Final output sent to browser
+DEBUG - 2025-05-14 14:10:06 --> Total execution time: 0.2342
+DEBUG - 2025-05-14 14:10:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Router Class Initialized
+ERROR - 2025-05-14 14:10:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:10:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Router Class Initialized
+ERROR - 2025-05-14 14:10:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:10:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Router Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Router Class Initialized
+ERROR - 2025-05-14 14:10:06 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:10:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:10:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Router Class Initialized
+ERROR - 2025-05-14 14:10:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:10:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:06 --> Router Class Initialized
+ERROR - 2025-05-14 14:10:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:10:47 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:47 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Router Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Output Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Security Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Input Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:10:47 --> Language Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:10:47 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Session Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:10:47 --> Session routines successfully run
+DEBUG - 2025-05-14 14:10:47 --> Model Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Model Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:10:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:10:47 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:10:47 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:10:47 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:10:47 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:10:47 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:10:47 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:10:47 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:10:47 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+DEBUG - 2025-05-14 14:10:47 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:10:47 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:10:47 --> Final output sent to browser
+DEBUG - 2025-05-14 14:10:47 --> Total execution time: 0.2642
+DEBUG - 2025-05-14 14:10:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Router Class Initialized
+ERROR - 2025-05-14 14:10:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:10:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:48 --> Router Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Router Class Initialized
+ERROR - 2025-05-14 14:10:48 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:10:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:10:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Router Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:10:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:10:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Router Class Initialized
+ERROR - 2025-05-14 14:10:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:10:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:10:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:10:48 --> Router Class Initialized
+ERROR - 2025-05-14 14:10:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:33 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:33 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Router Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Output Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Security Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Input Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:11:33 --> Language Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:11:33 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Session Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:11:33 --> Session routines successfully run
+DEBUG - 2025-05-14 14:11:33 --> Model Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Model Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:11:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:11:33 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:11:33 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:11:33 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:11:33 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:11:33 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:11:33 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:11:33 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+DEBUG - 2025-05-14 14:11:33 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:11:33 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:11:33 --> Final output sent to browser
+DEBUG - 2025-05-14 14:11:33 --> Total execution time: 0.2228
+DEBUG - 2025-05-14 14:11:33 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:33 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:33 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:33 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:33 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:33 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Router Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:33 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:33 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:33 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:33 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Router Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:33 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:11:33 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:11:33 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:33 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:33 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:33 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:33 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Router Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Output Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Security Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Input Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:11:48 --> Language Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:11:48 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Session Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:11:48 --> Session routines successfully run
+DEBUG - 2025-05-14 14:11:48 --> Model Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Model Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:11:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:11:48 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:11:48 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:11:48 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:11:48 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:11:48 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:11:48 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:11:48 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+DEBUG - 2025-05-14 14:11:48 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:11:48 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:11:48 --> Final output sent to browser
+DEBUG - 2025-05-14 14:11:48 --> Total execution time: 0.2251
+DEBUG - 2025-05-14 14:11:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Router Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:48 --> URI Class Initialized
+ERROR - 2025-05-14 14:11:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:48 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:48 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:48 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:48 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> Router Class Initialized
+DEBUG - 2025-05-14 14:11:48 --> URI Class Initialized
+ERROR - 2025-05-14 14:11:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:48 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:48 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:57 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:57 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Router Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Output Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Security Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Input Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:11:57 --> Language Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:11:57 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Session Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:11:57 --> Session routines successfully run
+DEBUG - 2025-05-14 14:11:57 --> Model Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Model Class Initialized
+DEBUG - 2025-05-14 14:11:57 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:11:57 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:11:58 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:11:58 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:11:58 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:11:58 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:11:58 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:11:58 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:11:58 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+DEBUG - 2025-05-14 14:11:58 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:11:58 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:11:58 --> Final output sent to browser
+DEBUG - 2025-05-14 14:11:58 --> Total execution time: 0.2156
+DEBUG - 2025-05-14 14:11:58 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:58 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Router Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:58 --> URI Class Initialized
+ERROR - 2025-05-14 14:11:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:58 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:58 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:58 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Router Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:58 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:11:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:11:58 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:58 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Router Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Config Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:11:58 --> URI Class Initialized
+DEBUG - 2025-05-14 14:11:58 --> Router Class Initialized
+ERROR - 2025-05-14 14:11:58 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:11:58 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:11 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:11 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Router Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Output Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Security Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Input Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:12:11 --> Language Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:12:11 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Session Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:12:11 --> Session routines successfully run
+DEBUG - 2025-05-14 14:12:11 --> Model Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Model Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:12:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:12:11 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:12:11 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:12:11 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:12:11 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:12:11 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:12:11 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:12:11 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+DEBUG - 2025-05-14 14:12:11 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:12:11 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:12:11 --> Final output sent to browser
+DEBUG - 2025-05-14 14:12:11 --> Total execution time: 0.2263
+DEBUG - 2025-05-14 14:12:11 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:11 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:11 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:11 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:11 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:11 --> Router Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> URI Class Initialized
+ERROR - 2025-05-14 14:12:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:11 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:11 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:11 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Router Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:12:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:11 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:11 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:11 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:19 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:19 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Router Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Output Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Security Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Input Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:12:19 --> Language Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:12:19 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Session Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:12:19 --> Session routines successfully run
+DEBUG - 2025-05-14 14:12:19 --> Model Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Model Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:12:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:12:19 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:12:19 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:12:19 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:12:19 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:12:20 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:12:20 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:12:20 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:12:20 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+DEBUG - 2025-05-14 14:12:20 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:12:20 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:12:20 --> Final output sent to browser
+DEBUG - 2025-05-14 14:12:20 --> Total execution time: 0.2290
+DEBUG - 2025-05-14 14:12:20 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:20 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:20 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:20 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:20 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:20 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:20 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Router Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:20 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:12:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:20 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:20 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:20 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:20 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:20 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:20 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:53 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:53 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Router Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Output Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Security Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Input Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:12:53 --> Language Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:12:53 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Session Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:12:53 --> Session routines successfully run
+DEBUG - 2025-05-14 14:12:53 --> Model Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Model Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:12:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:12:53 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:12:53 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:12:53 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:12:53 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:12:53 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:12:53 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:12:53 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+DEBUG - 2025-05-14 14:12:53 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:12:53 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:12:53 --> Final output sent to browser
+DEBUG - 2025-05-14 14:12:53 --> Total execution time: 0.2544
+DEBUG - 2025-05-14 14:12:53 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:53 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:53 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:53 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:53 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:53 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:53 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:53 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:53 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:53 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:12:53 --> Config Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:12:53 --> URI Class Initialized
+DEBUG - 2025-05-14 14:12:53 --> Router Class Initialized
+ERROR - 2025-05-14 14:12:53 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Router Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Output Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Security Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Input Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:13:43 --> Language Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:13:43 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Session Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:13:43 --> Session routines successfully run
+DEBUG - 2025-05-14 14:13:43 --> Model Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Model Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:13:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:13:43 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:13:43 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:13:43 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:13:43 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:13:43 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+ERROR - 2025-05-14 14:13:43 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+ERROR - 2025-05-14 14:13:43 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+DEBUG - 2025-05-14 14:13:43 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:13:43 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:13:43 --> Final output sent to browser
+DEBUG - 2025-05-14 14:13:43 --> Total execution time: 0.2316
+DEBUG - 2025-05-14 14:13:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Router Class Initialized
+ERROR - 2025-05-14 14:13:43 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:43 --> Router Class Initialized
+ERROR - 2025-05-14 14:13:43 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Router Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:43 --> URI Class Initialized
+ERROR - 2025-05-14 14:13:43 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:43 --> Router Class Initialized
+ERROR - 2025-05-14 14:13:43 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:44 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:44 --> Router Class Initialized
+DEBUG - 2025-05-14 14:13:44 --> URI Class Initialized
+ERROR - 2025-05-14 14:13:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:44 --> Router Class Initialized
+ERROR - 2025-05-14 14:13:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Router Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Output Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Security Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Input Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:13:55 --> Language Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:13:55 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Session Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:13:55 --> Session routines successfully run
+DEBUG - 2025-05-14 14:13:55 --> Model Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Model Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:13:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:13:55 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:13:55 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:13:55 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:13:55 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:13:55 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+ERROR - 2025-05-14 14:13:55 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+ERROR - 2025-05-14 14:13:55 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 621
+DEBUG - 2025-05-14 14:13:55 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:13:55 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:13:55 --> Final output sent to browser
+DEBUG - 2025-05-14 14:13:55 --> Total execution time: 0.2185
+DEBUG - 2025-05-14 14:13:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Router Class Initialized
+ERROR - 2025-05-14 14:13:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Router Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Router Class Initialized
+ERROR - 2025-05-14 14:13:55 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:13:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Router Class Initialized
+ERROR - 2025-05-14 14:13:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Router Class Initialized
+ERROR - 2025-05-14 14:13:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:13:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:13:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:13:55 --> Router Class Initialized
+ERROR - 2025-05-14 14:13:55 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:03 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:03 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Output Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Security Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Input Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:14:03 --> Language Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:14:03 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Session Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:14:03 --> Session routines successfully run
+DEBUG - 2025-05-14 14:14:03 --> Model Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Model Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:14:03 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:14:03 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:03 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:03 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:03 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:14:03 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 619
+ERROR - 2025-05-14 14:14:03 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 619
+ERROR - 2025-05-14 14:14:03 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 619
+DEBUG - 2025-05-14 14:14:03 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:14:03 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:14:03 --> Final output sent to browser
+DEBUG - 2025-05-14 14:14:03 --> Total execution time: 0.2192
+DEBUG - 2025-05-14 14:14:03 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:03 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:03 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:03 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:03 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:03 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:03 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:03 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:03 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> URI Class Initialized
+ERROR - 2025-05-14 14:14:03 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:03 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:03 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:03 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:03 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:03 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:03 --> URI Class Initialized
+ERROR - 2025-05-14 14:14:03 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:03 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:03 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:18 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:18 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Output Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Security Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Input Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:14:18 --> Language Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:14:18 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Session Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:14:18 --> Session routines successfully run
+DEBUG - 2025-05-14 14:14:18 --> Model Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Model Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:14:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:14:18 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:18 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:18 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:18 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:14:18 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:14:18 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:14:18 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+DEBUG - 2025-05-14 14:14:18 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:14:18 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:14:18 --> Final output sent to browser
+DEBUG - 2025-05-14 14:14:18 --> Total execution time: 0.2292
+DEBUG - 2025-05-14 14:14:18 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:18 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:18 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:18 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:18 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:14:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:18 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:18 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:18 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:18 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:18 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:18 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:18 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:14:18 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Output Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Security Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Input Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:14:41 --> Language Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:14:41 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Session Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:14:41 --> Session routines successfully run
+DEBUG - 2025-05-14 14:14:41 --> Model Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Model Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:14:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:14:41 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:41 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:41 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:41 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:14:41 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 614
+ERROR - 2025-05-14 14:14:41 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 614
+ERROR - 2025-05-14 14:14:41 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 614
+DEBUG - 2025-05-14 14:14:41 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:14:41 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:14:41 --> Final output sent to browser
+DEBUG - 2025-05-14 14:14:41 --> Total execution time: 0.2314
+DEBUG - 2025-05-14 14:14:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:14:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:14:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:51 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:51 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Output Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Security Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Input Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:14:51 --> Language Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:14:51 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Session Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:14:51 --> Session routines successfully run
+DEBUG - 2025-05-14 14:14:51 --> Model Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Model Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:14:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:14:51 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:51 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:14:51 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:14:51 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:14:51 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:14:51 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+DEBUG - 2025-05-14 14:14:51 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:14:51 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:14:51 --> Final output sent to browser
+DEBUG - 2025-05-14 14:14:51 --> Total execution time: 0.2283
+DEBUG - 2025-05-14 14:14:51 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:51 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:51 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:51 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> URI Class Initialized
+ERROR - 2025-05-14 14:14:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:51 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:51 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:51 --> Router Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:51 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:14:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:14:51 --> Config Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:14:51 --> URI Class Initialized
+DEBUG - 2025-05-14 14:14:51 --> Router Class Initialized
+ERROR - 2025-05-14 14:14:51 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:18:07 --> Config Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:18:07 --> URI Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Router Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Output Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Security Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Input Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:18:07 --> Language Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:18:07 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Session Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:18:07 --> Session routines successfully run
+DEBUG - 2025-05-14 14:18:07 --> Model Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Model Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:18:07 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:18:07 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:18:07 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:18:07 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:18:07 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:18:07 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:18:07 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+ERROR - 2025-05-14 14:18:07 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 622
+DEBUG - 2025-05-14 14:18:07 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:18:07 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:18:07 --> Final output sent to browser
+DEBUG - 2025-05-14 14:18:07 --> Total execution time: 0.2292
+DEBUG - 2025-05-14 14:18:07 --> Config Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:18:07 --> URI Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Router Class Initialized
+ERROR - 2025-05-14 14:18:07 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:18:07 --> Config Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:18:07 --> URI Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Router Class Initialized
+ERROR - 2025-05-14 14:18:07 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:18:07 --> Config Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Config Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Config Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:18:07 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:18:07 --> URI Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:18:07 --> URI Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Router Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Router Class Initialized
+ERROR - 2025-05-14 14:18:07 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:18:07 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:18:07 --> URI Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Config Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Router Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:18:07 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:18:07 --> URI Class Initialized
+DEBUG - 2025-05-14 14:18:07 --> Router Class Initialized
+ERROR - 2025-05-14 14:18:07 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:20:34 --> Config Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:20:34 --> URI Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Router Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Output Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Security Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Input Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:20:34 --> Language Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:20:34 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Session Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:20:34 --> Session routines successfully run
+DEBUG - 2025-05-14 14:20:34 --> Model Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Model Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:20:34 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:20:34 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:20:34 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:20:34 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:20:34 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:20:34 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:20:34 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:20:34 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:20:34 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:20:34 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:20:34 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:20:34 --> Final output sent to browser
+DEBUG - 2025-05-14 14:20:34 --> Total execution time: 0.2218
+DEBUG - 2025-05-14 14:20:35 --> Config Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:20:35 --> URI Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Router Class Initialized
+ERROR - 2025-05-14 14:20:35 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:20:35 --> Config Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:20:35 --> URI Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Router Class Initialized
+ERROR - 2025-05-14 14:20:35 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:20:35 --> Config Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:20:35 --> URI Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Router Class Initialized
+ERROR - 2025-05-14 14:20:35 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:20:35 --> Config Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:20:35 --> Config Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> URI Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Router Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:20:35 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:20:35 --> URI Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Router Class Initialized
+ERROR - 2025-05-14 14:20:35 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:20:35 --> Config Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:20:35 --> URI Class Initialized
+DEBUG - 2025-05-14 14:20:35 --> Router Class Initialized
+ERROR - 2025-05-14 14:20:35 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:09 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:09 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Router Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Output Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Security Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Input Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:21:09 --> Language Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:21:09 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Session Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:21:09 --> Session routines successfully run
+DEBUG - 2025-05-14 14:21:09 --> Model Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Model Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:21:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:21:09 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:21:09 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:21:09 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:21:09 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:21:09 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:21:09 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:21:09 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:21:09 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:21:09 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:21:09 --> Final output sent to browser
+DEBUG - 2025-05-14 14:21:09 --> Total execution time: 0.2380
+DEBUG - 2025-05-14 14:21:09 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:09 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:09 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:09 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:09 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:09 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:09 --> Router Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> URI Class Initialized
+ERROR - 2025-05-14 14:21:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:09 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:09 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:09 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:09 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:09 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:09 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:09 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:31 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:31 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Router Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Output Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Security Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Input Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:21:31 --> Language Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:21:31 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Session Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:21:31 --> Session routines successfully run
+DEBUG - 2025-05-14 14:21:31 --> Model Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Model Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:21:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:21:31 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:21:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:21:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:21:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:21:31 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:21:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:21:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:21:32 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:21:32 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:21:32 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:21:32 --> Final output sent to browser
+DEBUG - 2025-05-14 14:21:32 --> Total execution time: 0.2340
+DEBUG - 2025-05-14 14:21:32 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:32 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Router Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:21:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:32 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:32 --> Router Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> URI Class Initialized
+ERROR - 2025-05-14 14:21:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:32 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:32 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:32 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Router Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:32 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:21:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:32 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:32 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:32 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:32 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Router Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Output Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Security Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Input Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:21:54 --> Language Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:21:54 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Session Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:21:54 --> Session routines successfully run
+DEBUG - 2025-05-14 14:21:54 --> Model Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Model Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:21:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:21:54 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:21:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:21:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:21:54 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:21:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:21:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:21:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:21:54 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:21:54 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:21:54 --> Final output sent to browser
+DEBUG - 2025-05-14 14:21:54 --> Total execution time: 0.2330
+DEBUG - 2025-05-14 14:21:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Router Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:54 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:21:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Router Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:54 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:21:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:21:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:21:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:21:54 --> Router Class Initialized
+ERROR - 2025-05-14 14:21:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:11 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:11 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Output Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Security Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Input Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:22:11 --> Language Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:22:11 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Session Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:22:11 --> Session routines successfully run
+DEBUG - 2025-05-14 14:22:11 --> Model Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Model Class Initialized
+DEBUG - 2025-05-14 14:22:11 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:22:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:22:12 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:22:12 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:22:12 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:22:12 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:22:12 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:22:12 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:22:12 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:22:12 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:22:12 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:22:12 --> Final output sent to browser
+DEBUG - 2025-05-14 14:22:12 --> Total execution time: 0.2276
+DEBUG - 2025-05-14 14:22:12 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:12 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:12 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:12 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Router Class Initialized
+ERROR - 2025-05-14 14:22:12 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:22:12 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:12 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:12 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:12 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:22:12 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:12 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:22:12 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:12 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:12 --> Router Class Initialized
+ERROR - 2025-05-14 14:22:12 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:22:12 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Output Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Security Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Input Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:22:24 --> Language Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:22:24 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Session Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:22:24 --> Session routines successfully run
+DEBUG - 2025-05-14 14:22:24 --> Model Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Model Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:22:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:22:24 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:22:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:22:24 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:22:24 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:22:24 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+ERROR - 2025-05-14 14:22:24 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+ERROR - 2025-05-14 14:22:24 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+DEBUG - 2025-05-14 14:22:24 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:22:24 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:22:24 --> Final output sent to browser
+DEBUG - 2025-05-14 14:22:24 --> Total execution time: 0.2676
+DEBUG - 2025-05-14 14:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:24 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> URI Class Initialized
+ERROR - 2025-05-14 14:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:22:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:52 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:52 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Output Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Security Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Input Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:22:52 --> Language Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:22:52 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Session Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:22:52 --> Session routines successfully run
+DEBUG - 2025-05-14 14:22:52 --> Model Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Model Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:22:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:22:52 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:22:52 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:22:52 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:22:52 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:22:52 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+ERROR - 2025-05-14 14:22:52 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+ERROR - 2025-05-14 14:22:52 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+DEBUG - 2025-05-14 14:22:52 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:22:52 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:22:52 --> Final output sent to browser
+DEBUG - 2025-05-14 14:22:52 --> Total execution time: 0.2323
+DEBUG - 2025-05-14 14:22:52 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:52 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Router Class Initialized
+ERROR - 2025-05-14 14:22:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:52 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:52 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Router Class Initialized
+ERROR - 2025-05-14 14:22:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:52 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:52 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:22:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:52 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Router Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Router Class Initialized
+ERROR - 2025-05-14 14:22:52 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:22:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:22:52 --> Config Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:22:52 --> URI Class Initialized
+DEBUG - 2025-05-14 14:22:52 --> Router Class Initialized
+ERROR - 2025-05-14 14:22:52 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:13 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:13 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Router Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Output Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Security Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Input Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:23:13 --> Language Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:23:13 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Session Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:23:13 --> Session routines successfully run
+DEBUG - 2025-05-14 14:23:13 --> Model Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Model Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:23:13 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:23:13 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:23:13 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:23:13 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:23:14 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:23:14 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:23:14 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+ERROR - 2025-05-14 14:23:14 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+ERROR - 2025-05-14 14:23:14 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+DEBUG - 2025-05-14 14:23:14 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:23:14 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:23:14 --> Final output sent to browser
+DEBUG - 2025-05-14 14:23:14 --> Total execution time: 0.2373
+DEBUG - 2025-05-14 14:23:14 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:14 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:14 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:14 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:14 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:14 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Router Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:23:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:14 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:14 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:14 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:14 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:14 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:14 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:14 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:14 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Router Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Output Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Security Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Input Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:23:40 --> Language Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:23:40 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Session Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:23:40 --> Session routines successfully run
+DEBUG - 2025-05-14 14:23:40 --> Model Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Model Class Initialized
+DEBUG - 2025-05-14 14:23:40 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:23:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:23:41 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:23:41 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:23:41 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:23:41 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:23:41 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+ERROR - 2025-05-14 14:23:41 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+ERROR - 2025-05-14 14:23:41 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+DEBUG - 2025-05-14 14:23:41 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:23:41 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:23:41 --> Final output sent to browser
+DEBUG - 2025-05-14 14:23:41 --> Total execution time: 0.2069
+DEBUG - 2025-05-14 14:23:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Config Class Initialized
+ERROR - 2025-05-14 14:23:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:23:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Router Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:23:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:41 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:41 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:41 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:41 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Router Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Output Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Security Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Input Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:23:54 --> Language Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:23:54 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Session Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:23:54 --> Session routines successfully run
+DEBUG - 2025-05-14 14:23:54 --> Model Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Model Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:23:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:23:54 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:23:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:23:54 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:23:54 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:23:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+ERROR - 2025-05-14 14:23:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+ERROR - 2025-05-14 14:23:54 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 623
+DEBUG - 2025-05-14 14:23:54 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:23:54 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:23:54 --> Final output sent to browser
+DEBUG - 2025-05-14 14:23:54 --> Total execution time: 0.2149
+DEBUG - 2025-05-14 14:23:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:54 --> Router Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:54 --> Config Class Initialized
+ERROR - 2025-05-14 14:23:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:23:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Config Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:23:54 --> URI Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Router Class Initialized
+DEBUG - 2025-05-14 14:23:54 --> Router Class Initialized
+ERROR - 2025-05-14 14:23:54 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:23:54 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:25:08 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:08 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Router Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Output Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Security Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Input Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:25:08 --> Language Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:25:08 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Session Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:25:08 --> Session routines successfully run
+DEBUG - 2025-05-14 14:25:08 --> Model Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Model Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:25:08 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:25:08 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:25:08 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:25:08 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:25:08 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:25:08 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:25:08 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:25:08 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:25:08 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:25:08 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:25:08 --> Final output sent to browser
+DEBUG - 2025-05-14 14:25:08 --> Total execution time: 0.2178
+DEBUG - 2025-05-14 14:25:08 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:08 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Router Class Initialized
+ERROR - 2025-05-14 14:25:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:25:08 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:08 --> Router Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> URI Class Initialized
+ERROR - 2025-05-14 14:25:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:25:08 --> Router Class Initialized
+ERROR - 2025-05-14 14:25:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:25:08 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:08 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Router Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> URI Class Initialized
+ERROR - 2025-05-14 14:25:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:25:08 --> Router Class Initialized
+ERROR - 2025-05-14 14:25:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:25:08 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:08 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:08 --> Router Class Initialized
+ERROR - 2025-05-14 14:25:08 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:25:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Router Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Output Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Security Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Input Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:25:43 --> Language Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:25:43 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Session Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:25:43 --> Session routines successfully run
+DEBUG - 2025-05-14 14:25:43 --> Model Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Model Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:25:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:25:43 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:25:43 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:25:43 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:25:43 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:25:43 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:25:43 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:25:43 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:25:43 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:25:43 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:25:43 --> Final output sent to browser
+DEBUG - 2025-05-14 14:25:43 --> Total execution time: 0.2216
+DEBUG - 2025-05-14 14:25:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Router Class Initialized
+ERROR - 2025-05-14 14:25:43 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:25:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Router Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Router Class Initialized
+ERROR - 2025-05-14 14:25:43 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:25:43 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:25:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Router Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Router Class Initialized
+ERROR - 2025-05-14 14:25:43 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:25:43 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:25:43 --> Config Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:25:43 --> URI Class Initialized
+DEBUG - 2025-05-14 14:25:43 --> Router Class Initialized
+ERROR - 2025-05-14 14:25:43 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:26:23 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:23 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Router Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Output Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Security Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Input Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:26:23 --> Language Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:26:23 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Session Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:26:23 --> Session routines successfully run
+DEBUG - 2025-05-14 14:26:23 --> Model Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Model Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:26:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:26:23 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:26:23 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:26:23 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:26:23 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:26:23 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:26:23 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 625
+ERROR - 2025-05-14 14:26:23 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 625
+ERROR - 2025-05-14 14:26:23 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 625
+DEBUG - 2025-05-14 14:26:23 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:26:23 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:26:23 --> Final output sent to browser
+DEBUG - 2025-05-14 14:26:23 --> Total execution time: 0.2642
+DEBUG - 2025-05-14 14:26:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:26:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:26:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Router Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:26:24 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:26:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:26:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:26:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:26:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:24 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Router Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:26:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:26:24 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:24 --> Router Class Initialized
+ERROR - 2025-05-14 14:26:24 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:26:55 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:55 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Router Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Output Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Security Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Input Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:26:55 --> Language Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:26:55 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Session Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:26:55 --> Session routines successfully run
+DEBUG - 2025-05-14 14:26:55 --> Model Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Model Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:26:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:26:55 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:26:55 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:26:55 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:26:56 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:26:56 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:26:56 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:26:56 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:26:56 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:26:56 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:26:56 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:26:56 --> Final output sent to browser
+DEBUG - 2025-05-14 14:26:56 --> Total execution time: 0.2327
+DEBUG - 2025-05-14 14:26:56 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:56 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Router Class Initialized
+ERROR - 2025-05-14 14:26:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:26:56 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:56 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Router Class Initialized
+ERROR - 2025-05-14 14:26:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:26:56 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:56 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Router Class Initialized
+ERROR - 2025-05-14 14:26:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:26:56 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:56 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Router Class Initialized
+ERROR - 2025-05-14 14:26:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:26:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Config Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:56 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:26:56 --> Router Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> URI Class Initialized
+DEBUG - 2025-05-14 14:26:56 --> Router Class Initialized
+ERROR - 2025-05-14 14:26:56 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:26:56 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:31 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:31 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Router Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Output Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Security Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Input Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:28:31 --> Language Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:28:31 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Session Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:28:31 --> Session routines successfully run
+DEBUG - 2025-05-14 14:28:31 --> Model Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Model Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:28:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:28:31 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:28:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:28:31 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:28:31 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:28:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:28:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:28:31 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:28:31 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:28:31 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:28:31 --> Final output sent to browser
+DEBUG - 2025-05-14 14:28:31 --> Total execution time: 0.2299
+DEBUG - 2025-05-14 14:28:31 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:31 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Router Class Initialized
+ERROR - 2025-05-14 14:28:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:31 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:31 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Router Class Initialized
+ERROR - 2025-05-14 14:28:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:31 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:31 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Router Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:28:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:31 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Router Class Initialized
+ERROR - 2025-05-14 14:28:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:31 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:31 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Router Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:28:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:31 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:31 --> Router Class Initialized
+ERROR - 2025-05-14 14:28:31 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Router Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Output Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Security Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Input Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:28:46 --> Language Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:28:46 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Session Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:28:46 --> Session routines successfully run
+DEBUG - 2025-05-14 14:28:46 --> Model Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Model Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:28:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:28:46 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:28:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:28:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:28:46 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:28:46 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:28:46 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:28:46 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:28:46 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:28:46 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:28:46 --> Final output sent to browser
+DEBUG - 2025-05-14 14:28:46 --> Total execution time: 0.2095
+DEBUG - 2025-05-14 14:28:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Router Class Initialized
+ERROR - 2025-05-14 14:28:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Router Class Initialized
+ERROR - 2025-05-14 14:28:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Router Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Config Class Initialized
+ERROR - 2025-05-14 14:28:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:46 --> Router Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Router Class Initialized
+ERROR - 2025-05-14 14:28:46 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:28:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:28:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:28:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:28:46 --> Router Class Initialized
+ERROR - 2025-05-14 14:28:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:21 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:21 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Router Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Output Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Security Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Input Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:29:21 --> Language Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:29:21 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Session Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:29:21 --> Session routines successfully run
+DEBUG - 2025-05-14 14:29:21 --> Model Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Model Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:29:21 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:29:21 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:29:21 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:29:21 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:29:21 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:29:21 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:29:21 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:29:21 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:29:21 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:29:21 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:29:21 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:29:21 --> Final output sent to browser
+DEBUG - 2025-05-14 14:29:21 --> Total execution time: 0.2167
+DEBUG - 2025-05-14 14:29:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:29:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:29:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Router Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:29:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:29:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:29:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:29:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Router Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Output Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Security Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Input Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:29:46 --> Language Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:29:46 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Session Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:29:46 --> Session routines successfully run
+DEBUG - 2025-05-14 14:29:46 --> Model Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Model Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:29:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:29:46 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:29:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:29:46 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:29:46 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:29:46 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:29:46 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:29:46 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:29:46 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:29:46 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:29:46 --> Final output sent to browser
+DEBUG - 2025-05-14 14:29:46 --> Total execution time: 0.2195
+DEBUG - 2025-05-14 14:29:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Router Class Initialized
+ERROR - 2025-05-14 14:29:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Router Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:29:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Router Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Router Class Initialized
+ERROR - 2025-05-14 14:29:46 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:29:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:46 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:46 --> Config Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Router Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:29:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:29:46 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:29:46 --> URI Class Initialized
+DEBUG - 2025-05-14 14:29:46 --> Router Class Initialized
+ERROR - 2025-05-14 14:29:46 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Router Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Output Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Security Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Input Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:30:22 --> Language Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:30:22 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Session Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:30:22 --> Session routines successfully run
+DEBUG - 2025-05-14 14:30:22 --> Model Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Model Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:30:22 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:30:22 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:30:22 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:30:22 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:30:22 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:30:22 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:30:22 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:30:22 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:30:22 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:30:22 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:30:22 --> Final output sent to browser
+DEBUG - 2025-05-14 14:30:22 --> Total execution time: 0.2399
+DEBUG - 2025-05-14 14:30:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Router Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:22 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:30:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Router Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:22 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:30:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:44 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:44 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Router Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Output Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Security Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Input Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:30:44 --> Language Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:30:44 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Session Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:30:44 --> Session routines successfully run
+DEBUG - 2025-05-14 14:30:44 --> Model Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Model Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:30:44 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:30:44 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:30:44 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:30:44 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:30:44 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:30:44 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:30:44 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:30:44 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:30:44 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:30:44 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:30:44 --> Final output sent to browser
+DEBUG - 2025-05-14 14:30:44 --> Total execution time: 0.2199
+DEBUG - 2025-05-14 14:30:44 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:44 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:44 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:44 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:44 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:44 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:44 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:44 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:44 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:44 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:44 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Router Class Initialized
+DEBUG - 2025-05-14 14:30:44 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:44 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:30:44 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:59 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:59 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Router Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Output Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Security Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Input Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:30:59 --> Language Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:30:59 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Session Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:30:59 --> Session routines successfully run
+DEBUG - 2025-05-14 14:30:59 --> Model Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Model Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:30:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:30:59 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:30:59 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:30:59 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:30:59 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:30:59 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:30:59 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:30:59 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:30:59 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:30:59 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:30:59 --> Final output sent to browser
+DEBUG - 2025-05-14 14:30:59 --> Total execution time: 0.2030
+DEBUG - 2025-05-14 14:30:59 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:59 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:59 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:59 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:59 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:59 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:59 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:59 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Router Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:30:59 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:59 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Router Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:30:59 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:59 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Config Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Router Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Utf8 Class Initialized
+ERROR - 2025-05-14 14:30:59 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:30:59 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:30:59 --> URI Class Initialized
+DEBUG - 2025-05-14 14:30:59 --> Router Class Initialized
+ERROR - 2025-05-14 14:30:59 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:17 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:17 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Router Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Output Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Security Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Input Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:31:17 --> Language Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:31:17 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Session Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:31:17 --> Session routines successfully run
+DEBUG - 2025-05-14 14:31:17 --> Model Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Model Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:31:17 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:31:17 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:31:17 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:31:17 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:31:17 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:31:17 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:31:17 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:31:17 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:31:17 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:31:17 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:31:17 --> Final output sent to browser
+DEBUG - 2025-05-14 14:31:17 --> Total execution time: 0.2995
+DEBUG - 2025-05-14 14:31:17 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:17 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:17 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:17 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:17 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:17 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:17 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:17 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:17 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:17 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:17 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:17 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:17 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:17 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:39 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:39 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Router Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Output Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Security Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Input Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:31:39 --> Language Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:31:39 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Session Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:31:39 --> Session routines successfully run
+DEBUG - 2025-05-14 14:31:39 --> Model Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Model Class Initialized
+DEBUG - 2025-05-14 14:31:39 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:31:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:31:39 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:31:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:31:40 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:31:40 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:31:40 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:31:40 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:31:40 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:31:40 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:31:40 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:31:40 --> Final output sent to browser
+DEBUG - 2025-05-14 14:31:40 --> Total execution time: 0.2336
+DEBUG - 2025-05-14 14:31:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Router Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:40 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:31:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Config Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:40 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:31:40 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:31:40 --> URI Class Initialized
+DEBUG - 2025-05-14 14:31:40 --> Router Class Initialized
+ERROR - 2025-05-14 14:31:40 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:33:01 --> Config Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:33:01 --> URI Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Router Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Output Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Security Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Input Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:33:01 --> Language Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:33:01 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Session Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:33:01 --> Session routines successfully run
+DEBUG - 2025-05-14 14:33:01 --> Model Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Model Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:33:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:33:01 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:33:01 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:33:01 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:33:01 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:33:01 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:33:01 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:33:01 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:33:01 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:33:01 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:33:01 --> Final output sent to browser
+DEBUG - 2025-05-14 14:33:01 --> Total execution time: 0.2228
+DEBUG - 2025-05-14 14:33:01 --> Config Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:33:01 --> URI Class Initialized
+DEBUG - 2025-05-14 14:33:01 --> Router Class Initialized
+ERROR - 2025-05-14 14:33:01 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:33:02 --> Config Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:33:02 --> URI Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Router Class Initialized
+ERROR - 2025-05-14 14:33:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:33:02 --> Config Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:33:02 --> Config Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Config Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> URI Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Router Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> UTF-8 Support Enabled
+ERROR - 2025-05-14 14:33:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:33:02 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:33:02 --> URI Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Router Class Initialized
+ERROR - 2025-05-14 14:33:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:33:02 --> URI Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Config Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Router Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:33:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:33:02 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:33:02 --> URI Class Initialized
+DEBUG - 2025-05-14 14:33:02 --> Router Class Initialized
+ERROR - 2025-05-14 14:33:02 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Router Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Output Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Security Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Input Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:34:22 --> Language Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:34:22 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Session Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:34:22 --> Session routines successfully run
+DEBUG - 2025-05-14 14:34:22 --> Model Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Model Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:34:22 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:34:22 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:34:22 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:34:22 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:34:22 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:34:22 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:34:22 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:34:22 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:34:22 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:34:22 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:34:22 --> Final output sent to browser
+DEBUG - 2025-05-14 14:34:22 --> Total execution time: 0.2193
+DEBUG - 2025-05-14 14:34:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:34:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Router Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Router Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:34:22 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:34:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:34:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:22 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:34:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:22 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:22 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:22 --> Router Class Initialized
+ERROR - 2025-05-14 14:34:22 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:42 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:42 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Router Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Output Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Security Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Input Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:34:42 --> Language Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:34:42 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Session Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:34:42 --> Session routines successfully run
+DEBUG - 2025-05-14 14:34:42 --> Model Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Model Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:34:42 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:34:42 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:34:42 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:34:42 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:34:42 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:34:42 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:34:42 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:34:42 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:34:42 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:34:42 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:34:42 --> Final output sent to browser
+DEBUG - 2025-05-14 14:34:42 --> Total execution time: 0.2118
+DEBUG - 2025-05-14 14:34:42 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:42 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Router Class Initialized
+ERROR - 2025-05-14 14:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:42 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Router Class Initialized
+ERROR - 2025-05-14 14:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:42 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:42 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Router Class Initialized
+ERROR - 2025-05-14 14:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:42 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:42 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Router Class Initialized
+ERROR - 2025-05-14 14:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:42 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Config Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:42 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Router Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Hooks Class Initialized
+ERROR - 2025-05-14 14:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:34:42 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:34:42 --> URI Class Initialized
+DEBUG - 2025-05-14 14:34:42 --> Router Class Initialized
+ERROR - 2025-05-14 14:34:42 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:35:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:35:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Router Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Output Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Security Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Input Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Global POST and COOKIE data sanitized
+DEBUG - 2025-05-14 14:35:06 --> Language Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Loader Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Helper loaded: url_helper
+DEBUG - 2025-05-14 14:35:06 --> Controller Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Session Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Helper loaded: string_helper
+DEBUG - 2025-05-14 14:35:06 --> Session routines successfully run
+DEBUG - 2025-05-14 14:35:06 --> Model Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Model Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Database Driver Class Initialized
+ERROR - 2025-05-14 14:35:06 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\intraboda\system\database\drivers\mysql\mysql_driver.php 88
+DEBUG - 2025-05-14 14:35:06 --> Encrypt Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:35:06 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:35:06 --> Encrypt class already loaded. Second attempt ignored.
+DEBUG - 2025-05-14 14:35:06 --> File loaded: application/views/admin/header.php
+ERROR - 2025-05-14 14:35:06 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:35:06 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+ERROR - 2025-05-14 14:35:06 --> Severity: Notice  --> Undefined variable: html_componentes C:\xampp\htdocs\intraboda\application\views\admin\clientes_viewdetails.php 624
+DEBUG - 2025-05-14 14:35:06 --> File loaded: application/views/admin/clientes_viewdetails.php
+DEBUG - 2025-05-14 14:35:06 --> File loaded: application/views/admin/footer.php
+DEBUG - 2025-05-14 14:35:06 --> Final output sent to browser
+DEBUG - 2025-05-14 14:35:06 --> Total execution time: 0.2391
+DEBUG - 2025-05-14 14:35:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:35:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Router Class Initialized
+ERROR - 2025-05-14 14:35:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:35:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:35:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:35:06 --> Router Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> URI Class Initialized
+ERROR - 2025-05-14 14:35:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:35:06 --> Router Class Initialized
+ERROR - 2025-05-14 14:35:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:35:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:35:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:35:06 --> Router Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Config Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> URI Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Hooks Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Router Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> Utf8 Class Initialized
+DEBUG - 2025-05-14 14:35:06 --> UTF-8 Support Enabled
+DEBUG - 2025-05-14 14:35:06 --> URI Class Initialized
+ERROR - 2025-05-14 14:35:06 --> 404 Page Not Found --> uploads
+DEBUG - 2025-05-14 14:35:06 --> Router Class Initialized
+ERROR - 2025-05-14 14:35:06 --> 404 Page Not Found --> uploads
+ERROR - 2025-05-14 14:35:06 --> 404 Page Not Found --> uploads
