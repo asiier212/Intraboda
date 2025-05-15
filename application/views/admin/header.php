@@ -13,25 +13,6 @@
     <?php if (isset($scripts)) echo $scripts; ?>
 
     <script language="javascript">
-        posicionarMenu();
-
-        $(window).scroll(function() {
-            posicionarMenu();
-        });
-
-        function posicionarMenu() {
-            var altura_del_header = $('.header').outerHeight(true);
-            var altura_del_menu = $('.nav').outerHeight(true);
-
-            if ($(window).scrollTop() >= altura_del_header) {
-                $('.nav').addClass('fixed');
-                $('.wrapper').css('margin-top', (altura_del_menu) + 10 + 'px');
-            } else {
-                $('.nav').removeClass('fixed');
-                $('.wrapper').css('margin-top', '0');
-            }
-        }
-
         function actualizarContadorNotificaciones() {
             fetch("<?= base_url() . 'admin/notificaciones_ajax' ?>")
                 .then(res => res.json())
@@ -107,7 +88,7 @@
             <li><a href="">Contabilidad Empresa</a>
                 <ul>
                     <li class="ocultar">
-                        <ahref="<?php echo base_url() ?>admin /facturas/add">Añadir Factura</a>
+                        <a href="<?php echo base_url() ?>admin/facturas/add">Añadir Factura</a>
                     </li>
                     <li><a href="<?php echo base_url() ?>admin/facturas/view">Listar Facturas e IVAs</a></li>
                     <li><a href="<?php echo base_url() ?>admin/partidas_presupuestarias/add">Añadir Partida Presupuestaria</a></li>
@@ -136,9 +117,21 @@
     </div>
 
     <div>&nbsp;</div>
+    <div id="header-placeholder"></div>
     <div class="page">
 
         <style>
+            .page {
+                margin-top: 50px;
+                /* o lo que necesites */
+            }
+
+            #header-placeholder {
+                display: none;
+                height: 50px;
+                /* igual altura que tu header */
+            }
+
             .ocultar {
                 display: none;
             }
@@ -212,4 +205,62 @@
                 border-radius: 12px;
                 display: none;
             }
+
+            /* Por defecto ocultamos menú para móvil */
+            .nav>li:not(.menu-toggle) {
+                display: inline-block;
+                /* menú normal */
+            }
+
+            .menu-toggle {
+                display: none;
+                cursor: pointer;
+                font-size: 28px;
+                padding: 0 10px;
+                user-select: none;
+            }
+
+            /* Para móviles */
+            @media screen and (max-width: 768px) {
+
+                .page {
+                    margin-top: 100px;
+                    /* o lo que necesites */
+                }
+
+                #header-placeholder {
+                    display: none;
+                    height: 100px;
+                    /* igual altura que tu header */
+                }
+            }
         </style>
+
+        <script>
+            window.addEventListener('scroll', function() {
+                var header = document.querySelector('.header');
+                var placeholder = document.getElementById('header-placeholder');
+                if (window.scrollY > 0) {
+                    header.classList.add('fixed');
+                    placeholder.style.display = 'block';
+                } else {
+                    header.classList.remove('fixed');
+                    placeholder.style.display = 'none';
+                }
+            });
+
+            $(document).ready(function() {
+                posicionarMenu(); // Esto asegura que al cargar la página con scroll abajo se ajuste bien
+                $(window).scroll(posicionarMenu);
+            });
+
+            $(window).on('load', function() {
+                posicionarMenu();
+            });
+
+            $(document).ready(function() {
+                $('.menu-toggle a').click(function() {
+                    $('.nav').toggleClass('open');
+                });
+            });
+        </script>

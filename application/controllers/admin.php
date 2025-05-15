@@ -1553,10 +1553,17 @@ class Admin extends CI_Controller
 						// Obtener datos
 						$id_cliente = $id; // este es el cliente del evento
 						$id_usuario = $this->session->userdata('user_id'); // ID del coordinador/admin logueado
-						$mensaje = "¡Hola! Ya tenéis asignado el DJ para vuestro evento: <strong>{$nombre_dj_nuevo}</strong>!!!";
+						$mensaje = "¡Hola pareja! </br>
+							¡Voy a ser el DJ de vuestra boda, mi nombre es <strong>$nombre_dj_nuevo</strong>! Un placer =) </br>
+							Desde este momento podéis hablar también conmigo por aquí. Puedo leer lo que habéis comentado hasta la fecha en este chat y así ponerme al día. </br>
+							No dudéis en escribirme para cualquier duda o cosa con la que pueda o podamos ayudaros. </br>
+							También podemos cuadrar agendas para quedar en persona (o videollamada si os encaja mejor) la semana de la boda y así hacer el repaso final. </br>
+							Me vais diciendo. 
+							<br></br>
+							$nombre_dj_nuevo";
 
 						// Insertar en la tabla de contacto (chat)
-						$this->db->query("INSERT INTO contacto (id_cliente, usuario, id_usuario, mensaje, fecha) VALUES (?, 'administrador', ?, ?, NOW())", [
+						$this->db->query("INSERT INTO contacto (id_cliente, usuario, id_usuario, mensaje, fecha) VALUES (?, 'dj', ?, ?, NOW())", [
 							$id_cliente,
 							$id_usuario,
 							$mensaje
