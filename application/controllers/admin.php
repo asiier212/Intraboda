@@ -2388,20 +2388,43 @@ class Admin extends CI_Controller
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}
 
-	public function notificaciones_ajax()
+	public function notificaciones_ajax($tipo = 'no_leidas')
 	{
-		$notificaciones = $this->admin_functions->getNotificacionesNuevas();
+		$this->load->database();
+		header('Content-Type: application/json');
+
+		switch ($tipo) {
+			case 'leidas':
+				$notificaciones = $this->admin_functions->getNotificacionesPorEstado(1);
+				break;
+			case 'todas':
+				$notificaciones = $this->admin_functions->getNotificacionesPorEstado(null);
+				break;
+			case 'no_leidas':
+			default:
+				$notificaciones = $this->admin_functions->getNotificacionesPorEstado(0);
+				break;
+		}
+
 		echo json_encode($notificaciones);
+	}
+
+	public function borrar_todas_notificaciones()
+	{
+
+		$this->load->database();
+		// Aquí deberías filtrar por usuario si aplica
+		$this->db->empty_table('notificaciones'); // o usa delete() si necesitas condiciones
+		echo json_encode(['success' => true]);
 	}
 
 	public function notificaciones()
 	{
-		// Cargar el modelo y la base de datos
 		$this->load->database();
 		$this->load->model('admin_functions');
 
 		try {
-			$notificaciones = $this->admin_functions->getNotificacionesNuevas();
+			$notificaciones = $this->admin_functions->getNotificaciones();
 			$data['notificaciones'] = $notificaciones;
 			$data['data_header'] = false;
 			$data['data_footer'] = false;
@@ -2437,6 +2460,14 @@ class Admin extends CI_Controller
 		} else {
 			echo json_encode(['success' => false, 'message' => 'No se pudo eliminar la notificación']);
 		}
+	}
+
+	public function marcar_leida()
+	{
+		$id = $this->input->post('id');
+		$this->load->model('admin_functions'); // cambia 'TuModelo' por el nombre real
+		$success = $this->admin_functions->marcarNotificacionLeida($id);
+		echo json_encode(['success' => $success]);
 	}
 
 

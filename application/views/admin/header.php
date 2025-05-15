@@ -31,6 +31,28 @@
                 $('.wrapper').css('margin-top', '0');
             }
         }
+
+        function actualizarContadorNotificaciones() {
+            fetch("<?= base_url() . 'admin/notificaciones_ajax' ?>")
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Notificaciones:", data); // debug
+                    const total = data.length;
+                    const contador = document.getElementById('contador-notif');
+
+                    if (total > 0) {
+                        contador.style.display = 'inline-block';
+                        contador.innerText = total > 9 ? '9+' : total;
+                    } else {
+                        contador.style.display = 'inline-block';
+                        contador.innerText = total > 9 ? '9+' : total;
+                    }
+                })
+                .catch(err => console.error("Error al cargar notificaciones:", err));
+        }
+
+        actualizarContadorNotificaciones();
+        setInterval(actualizarContadorNotificaciones, 30000); // Actualiza cada 30s
     </script>
 </head>
 
@@ -97,12 +119,14 @@
                 </ul>
             </li>
             <div class="loginDisplay" style="display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 6px; font-family: Arial, sans-serif; font-size: 14px; margin-left: auto; width: fit-content;">
-                <a href="<?= base_url() ?>admin/notificaciones/view" style="display: flex; align-items: center;">
+                <a href="<?= base_url() ?>admin/notificaciones/view" class="notif-wrapper" style="display: flex; align-items: center; position: relative;">
                     <img src="<?= base_url() ?>img/notificacion.png" class="notif" alt="Notificación" />
+                    <span id="contador-notif"></span>
                 </a>
-                <span>|</span>
-                <span>Panel de gestión del Administrador</span>
-                <span>|</span>
+
+                <span style="color: #93CE37">|</span>
+                <span style="color: #93CE37">Panel de gestión del Administrador</span>
+                <span style="color: #93CE37">|</span>
                 <a href="<?= base_url() ?>admin/logout" class="cerrar_sesion">Cerrar sesión</a>
             </div>
 
@@ -141,10 +165,51 @@
                 padding: 10px;
             }
 
+            .notif {
+                width: 25px;
+                height: 25px;
+                transition: 300ms;
+                padding: 10px;
+            }
+
+            #contador-notif {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                background-color: red;
+                color: white;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 2px 6px;
+                border-radius: 12px;
+                display: none;
+                pointer-events: none;
+                /* <- Esto hace que no bloquee el hover */
+            }
+
+            .notif-wrapper:hover .notif {
+                border-radius: 100px;
+                background-color: #93CE37;
+                content: url('<?= base_url() ?>img/notificacion2.png');
+            }
+
             .notif:hover {
                 border-radius: 100px;
                 background-color: #93CE37;
                 transition: 300ms;
                 content: url('<?= base_url() ?>img/notificacion2.png');
+            }
+
+            #contador-notif {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                background-color: red;
+                color: white;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 2px 6px;
+                border-radius: 12px;
+                display: none;
             }
         </style>

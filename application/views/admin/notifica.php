@@ -1,151 +1,319 @@
-<h2>Notificaciones</h2>
+<div id="filtros-notificaciones">
+    <div class="contenedor-filtros-wrapper">
+        <div id="botones-filtro">
+            <button data-filtro="todas" class="btn-filtro active">Todos</button>
+            <button data-filtro="no_leidas" class="btn-filtro">No leídos</button>
+            <button data-filtro="leidas" class="btn-filtro">Leídos</button>
+        </div>
+        <button id="btn-borrar-todo" title="Borrar todas las notificaciones" aria-label="Borrar todas las notificaciones">
+            <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2" viewBox="0 0 24 24">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
+                <path d="M10 11v6"></path>
+                <path d="M14 11v6"></path>
+                <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path>
+            </svg>
+            <span style="margin-left:6px;">Borrar todo</span>
+        </button>
+    </div>
+</div>
 
-<!-- Aquí mostramos las notificaciones -->
+
 <div id="notificaciones-lista">
-    <?php if (isset($notificaciones) && !empty($notificaciones)): ?>
-        <ul>
-            <?php foreach ($notificaciones as $notificacion): ?>
-                <li class="notificacion">
-                    <div class="notificacion-content">
-                        <p class="mensaje"><strong><?= $notificacion->mensaje ?></strong></p>
-                        <p class="fecha"><small><?= date('d-m-Y H:i', strtotime($notificacion->fecha)) ?></small></p>
-                    </div>
-                    <!-- Enlace para borrar la notificación -->
-                    <a href="javascript:void(0);" class="borrar-notificacion" data-id="<?= $notificacion->id ?>">Borrar</a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    <?php else: ?>
-        <p>No tienes nuevas notificaciones.</p>
-    <?php endif; ?>
+    <ul id="lista-notificaciones"></ul>
 </div>
 
 <script>
-    let ultimoId = 0;
+    let filtroActual = 'todas';
 
-    // Función para verificar las notificaciones nuevas
-    function verificarNotificaciones() {
-        fetch(`<?= base_url('admin/notificaciones_ajax') ?>`)
+    function cargarNotificaciones(filtro) {
+        fetch(`<?= base_url() . 'admin/notificaciones_ajax' ?>/${filtro}`)
             .then(res => res.json())
             .then(data => {
-                if (data.length > 0) {
-                    data.reverse().forEach(notif => {
-                        if (notif.id > ultimoId) ultimoId = notif.id;
-                        const lista = document.getElementById("notificaciones-lista");
-                        const nuevoElemento = document.createElement("li");
-                        nuevoElemento.innerHTML = `
-						<p><strong>${notif.mensaje}</strong></p>
-						<p><small>${notif.fecha}</small></p>
-					`;
-                        lista.insertBefore(nuevoElemento, lista.firstChild);
-                    });
-                    alert("Tienes una nueva notificación.");
+                const lista = document.getElementById('lista-notificaciones');
+                lista.innerHTML = '';
+
+                const btnBorrarTodo = document.getElementById('btn-borrar-todo');
+
+                // Mostrar u ocultar botón borrar todo según filtro (no mover botones filtro)
+                btnBorrarTodo.style.display = (filtro === 'todas') ? 'flex' : 'none';
+
+                if (data.length === 0) {
+                    lista.innerHTML = `
+            <li class="no-notificaciones">
+                <div>
+                    <p class="mensaje-vacia">📭 No hay notificaciones para mostrar</p>
+                </div>
+            </li>`;
+                    return;
                 }
+
+                data.forEach(notif => {
+                    const li = document.createElement('li');
+                    li.className = 'notificacion' + (notif.leido == 1 ? ' leido' : '');
+                    li.setAttribute('data-id', notif.id);
+                    li.innerHTML = `
+            <div class="notificacion-content">
+                <p class="mensaje">${notif.mensaje}</p>
+                <p class="fecha">${notif.fecha}</p>
+            </div>
+            <a href="javascript:void(0);" class="borrar-notificacion" data-id="${notif.id}">
+                <img class="papelera" src="<?= base_url() ?>/img/papelera.png" />
+            </a>
+        `;
+                    lista.appendChild(li);
+                });
             });
     }
 
-    // Verificar nuevas notificaciones cada 30 segundos
-    setInterval(verificarNotificaciones, 30000); // cada 30 segundos
 
-    document.querySelectorAll('.borrar-notificacion').forEach((element) => {
-        element.addEventListener('click', function() {
-            const idNotificacion = this.getAttribute('data-id');
 
-            // Hacer la solicitud AJAX para eliminar la notificación
+    cargarNotificaciones(filtroActual);
+
+    setInterval(() => {
+        cargarNotificaciones(filtroActual);
+    }, 15000);
+
+    document.querySelectorAll('.btn-filtro').forEach(btn => {
+        btn.addEventListener('click', () => {
+            filtroActual = btn.getAttribute('data-filtro');
+
+            document.querySelectorAll('.btn-filtro').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            cargarNotificaciones(filtroActual);
+        });
+    });
+
+    // Delegación para marcar leída y borrar
+    document.getElementById('lista-notificaciones').addEventListener('click', function(e) {
+        let target = e.target;
+        let li = target.closest('li.notificacion');
+        if (!li) return;
+
+        if (!target.classList.contains('papelera') && !target.closest('.borrar-notificacion')) {
+            let id = li.getAttribute('data-id');
+            fetch(`<?= base_url() ?>admin/marcar_leida`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams({
+                        'id': id
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        li.classList.add('leido');
+                    }
+                });
+        }
+
+        if (target.classList.contains('papelera') || target.closest('.borrar-notificacion')) {
+            const idNotificacion = target.closest('a.borrar-notificacion').getAttribute('data-id');
             fetch(`<?= base_url() . 'admin/borrar_notificacion' ?>`, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'Content-Type': 'application/x-www-form-urlencoded'
                     },
                     body: new URLSearchParams({
-                        'id_notificacion': idNotificacion, // Pasar el ID como parámetro
+                        'id_notificacion': idNotificacion
                     }),
                 })
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
-                        // Eliminar el elemento de la lista en el frontend
-                        this.closest('li').remove();
+                        li.classList.add('anim-borrar');
+                        setTimeout(() => li.remove(), 400);
                     } else {
                         alert('Error al borrar la notificación.');
                     }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Hubo un problema al borrar la notificación.');
                 });
-        })
+        }
+    });
+
+    document.getElementById('btn-borrar-todo').addEventListener('click', () => {
+        if (!confirm("¿Estás seguro de que quieres borrar todas las notificaciones?")) return;
+
+        fetch(`<?= base_url() ?>admin/borrar_todas_notificaciones`, {
+                method: 'POST'
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    const lista = document.getElementById('lista-notificaciones');
+                    lista.querySelectorAll('li.notificacion').forEach(li => {
+                        li.classList.add('anim-borrar');
+                        setTimeout(() => li.remove(), 400);
+                    });
+                } else {
+                    alert('Error al borrar todas las notificaciones.');
+                }
+            });
     });
 </script>
 
 <style>
-    /* Estilo para la lista de notificaciones */
-    #notificaciones-lista {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        background-color: #f0f0f0;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    #filtros-notificaciones {
+        margin-bottom: 25px;
+        text-align: center;
     }
 
-    #notificaciones-lista ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+    .btn-filtro {
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 10px 24px;
+        margin: 0 6px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 15px;
+        color: #333;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        transition: all 0.25s ease-in-out;
     }
 
-    #notificaciones-lista li.notificacion {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        margin-bottom: 10px;
-        padding: 15px;
+    .btn-filtro:hover {
+        background-color: #e0e0e0;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-filtro.active {
+        background-color: #93CE37;
+        color: white;
+        border-color: #93CE37;
+    }
+
+    #lista-notificaciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .notificacion {
+        width: 90%;
+        max-width: 800px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        transition: all 0.3s ease-in-out;
-    }
-
-    #notificaciones-lista li.notificacion:hover {
-        transform: translateX(5px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .notificacion-content {
-        max-width: 80%;
-    }
-
-    .mensaje {
-        font-size: 16px;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 5px;
-    }
-
-    .fecha {
-        font-size: 12px;
-        color: #777;
-    }
-
-    .borrar-notificacion {
-        font-size: 12px;
-        color: #e74c3c;
-        text-decoration: none;
-        background-color: transparent;
-        border: none;
+        background: #ffffff;
+        padding: 16px;
+        margin-bottom: 12px;
+        border-left: 5px solid #93CE37;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        transition: background 0.3s ease, border-left-color 0.3s ease, opacity 0.3s ease;
         cursor: pointer;
-        transition: color 0.2s ease-in-out;
     }
 
-    .borrar-notificacion:hover {
-        color: #c0392b;
+    .notificacion.leido {
+        background: #f5f5f5;
+        border-left-color: #ccc;
+        font-style: italic;
+        opacity: 0.6;
     }
 
-    /* Estilo para el mensaje vacío de no notificaciones */
-    #notificaciones-lista p {
-        font-size: 14px;
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    .anim-borrar {
+        animation: fadeOut 0.4s forwards;
+    }
+
+    .borrar-notificacion img.papelera {
+        width: 20px;
+        height: auto;
+        transition: 350ms;
+    }
+
+    .borrar-notificacion img.papelera:hover {
+        content: url('<?= base_url() ?>img/papeleraH.png');
+        width: 25px;
+        height: auto;
+        transition: 350ms;
+    }
+
+    .no-notificaciones {
+        width: 90%;
+        max-width: 600px;
+        background: #f9f9f9;
         color: #666;
         text-align: center;
+        padding: 40px 20px;
+        border-radius: 8px;
+        font-style: italic;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .mensaje-vacia {
+        font-size: 1.1em;
+        margin: 0;
+    }
+
+    .contenedor-filtros-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+
+    #btn-borrar-todo {
+        background-color: rgb(238, 46, 32);
+        /* rojo Google material */
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 300ms;
+    }
+
+    #botones-filtro {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex: 1;
+    }
+
+    #btn-borrar-todo:hover {
+        background-color: rgb(216, 35, 25);
+        box-shadow: 0 2px 4px rgba(179, 36, 29, 0.5);
+        transform: translateY(-50%) scale(1.03);
+        transition: 300ms;
+    }
+
+    #btn-borrar-todo:active {
+        background-color: rgb(185, 35, 27);
+        box-shadow: none;
+        transform: translateY(-50%) scale(0.97);
+    }
+
+
+
+    #notificaciones-lista {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 0px 6px rgba(0, 0, 0, 0.06);
     }
 </style>

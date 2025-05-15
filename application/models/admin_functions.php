@@ -958,16 +958,35 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	public function getNotificacionesNuevas()
+	public function getNotificaciones()
 	{
 		return $this->db->query("
-		SELECT id, id_cliente, mensaje, fecha 
-		FROM notificaciones 
-		WHERE leido = 0
-		ORDER BY fecha DESC
-		LIMIT 10
-	")->result();
+        SELECT id, id_cliente, mensaje, fecha, leido
+        FROM notificaciones
+        ORDER BY fecha DESC
+        LIMIT 10
+    ")->result();
 	}
+
+	public function getNotificacionesPorEstado($leido = null)
+	{
+		$this->load->database();
+
+		if ($leido === null) {
+			// Todas las notificaciones
+			return $this->db->query("SELECT id, id_cliente, mensaje, fecha, leido FROM notificaciones ORDER BY fecha DESC LIMIT 50")->result();
+		} else {
+			// Filtrar por leído o no leído
+			return $this->db->query("SELECT id, id_cliente, mensaje, fecha, leido FROM notificaciones WHERE leido = ? ORDER BY fecha DESC LIMIT 50", array($leido))->result();
+		}
+	}
+
+	public function marcarNotificacionLeida($id)
+	{
+		$this->load->database();
+		return $this->db->query("UPDATE notificaciones SET leido = 1 WHERE id = ?", array($id));
+	}
+
 
 	public function GetTituloChat($id_cliente)
 	{
