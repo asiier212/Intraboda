@@ -690,7 +690,6 @@ class Cliente extends CI_Controller
 		<p>Podéis responder accediendo a la intranet haciendo clic en el siguiente botón:</p>
 		<div style='text-align: center; margin: 30px 0;'>
 			<a href='{$boton_url_dj}' style='background-color: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold;'>Ir al chat como DJ</a>
-			<a href='{$boton_url_admin}' style='background-color:rgb(0, 146, 54); color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold;'>Ir al chat como ADMIN</a>
 			</div>
 		<p>Un saludo,<br><strong>Equipo de Exel Eventos</strong></p>
 	</div>
@@ -716,6 +715,7 @@ class Cliente extends CI_Controller
 		<p>Podéis responder accediendo a la intranet haciendo clic en el siguiente botón:</p>
 		<div style='text-align: center; margin: 30px 0;'>
 			<a href='{$boton_url_admin}' style='background-color: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold;'>Ir al chat</a>
+			<a href='{$boton_url_dj}' style='background-color: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold;'>Ir al chat como DJ</a>
 		</div>
 		<p>Un saludo,<br><strong>Equipo de Exel Eventos</strong></p>
 	</div>
