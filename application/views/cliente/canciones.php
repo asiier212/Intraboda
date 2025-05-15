@@ -352,30 +352,28 @@
 
 		<ul class="momentos" id="l_<?php echo $this->session->userdata('user_id') ?>" style="list-style: none; padding-left: 0; margin: 0;">
 			<?php foreach ($events as $eu): ?>
-				<?php if ($eu['nombre'] !== 'Fiesta'): ?>
-					<li id="mom_<?php echo $eu['id'] ?>"
-						style="background: #fff; border: 1px solid #c9e7a3; border-left: 5px solid #93ce37; border-radius: 6px;
+				<li id="mom_<?php echo $eu['id'] ?>"
+					style="background: #fff; border: 1px solid #c9e7a3; border-left: 5px solid #93ce37; border-radius: 6px;
 					box-shadow: 0 2px 4px rgba(0,0,0,0.04); padding: 10px 8px; margin-bottom: 10px;
 					display: flex; justify-content: space-between; align-items: center;">
 
-						<div style="display: flex; align-items: center; gap: 10px;">
-							<img src="<?php echo base_url() ?>img/<?php echo ($eu['num_canciones'] == 0) ? 'admiracion' : 'check' ?>.png" width="16"
-								onMouseOver="Tip('<?php echo ($eu['num_canciones'] == 0) ? 'No hay ninguna canción asignada para este momento especial' : 'Existen canciones asignadas para este momento especial' ?>')"
-								onMouseOut="UnTip()" />
-							<span style="font-size: 14px; font-weight: bold; color: #333;">
-								<?php echo $eu['orden'] . '.- ' . $eu['nombre'] ?>
-							</span>
-						</div>
+					<div style="display: flex; align-items: center; gap: 10px;">
+						<img src="<?php echo base_url() ?>img/<?php echo ($eu['num_canciones'] == 0) ? 'admiracion' : 'check' ?>.png" width="16"
+							onMouseOver="Tip('<?php echo ($eu['num_canciones'] == 0) ? 'No hay ninguna canción asignada para este momento especial' : 'Existen canciones asignadas para este momento especial' ?>')"
+							onMouseOut="UnTip()" />
+						<span style="font-size: 14px; font-weight: bold; color: #333;">
+							<?php echo $eu['orden'] . '.- ' . $eu['nombre'] ?>
+						</span>
+					</div>
 
-						<div style="display: flex; align-items: center; gap: 10px; justify-content: space-between;">
-							<input type="time" name="hora_<?php echo $eu['id'] ?>" value="<?php echo substr($eu['hora'], 0, 5) ?>"
-								style="font-family:Arial, Helvetica, sans-serif; width: 75px; padding: 4px; border: 1px solid #ccc; border-radius: 4px;" />
-							<a href="#" onclick="return deletemomento(<?php echo $eu['id'] ?>)" title="Eliminar">
-								<img src="<?php echo base_url() ?>img/delete.gif" width="15" alt="Eliminar">
-							</a>
-						</div>
-					</li>
-				<?php endif; ?>
+					<div style="display: flex; align-items: center; gap: 10px; justify-content: space-between;">
+						<input type="time" name="hora_<?php echo $eu['id'] ?>" value="<?php echo substr($eu['hora'], 0, 5) ?>"
+							style="font-family:Arial, Helvetica, sans-serif; width: 75px; padding: 4px; border: 1px solid #ccc; border-radius: 4px;" />
+						<a href="#" onclick="return deletemomento(<?php echo $eu['id'] ?>)" title="Eliminar">
+							<img src="<?php echo base_url() ?>img/delete.gif" width="15" alt="Eliminar">
+						</a>
+					</div>
+				</li>
 			<?php endforeach; ?>
 		</ul>
 	</fieldset>
