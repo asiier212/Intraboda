@@ -962,7 +962,7 @@ class Admin_functions extends CI_Model
 	{
 		return $this->db->query("
         SELECT id, id_cliente, mensaje, fecha, leido
-        FROM notificaciones
+        FROM notificaciones_admin
         ORDER BY fecha DESC
         LIMIT 10
     ")->result();
@@ -974,17 +974,35 @@ class Admin_functions extends CI_Model
 
 		if ($leido === null) {
 			// Todas las notificaciones
-			return $this->db->query("SELECT id, id_cliente, mensaje, fecha, leido FROM notificaciones ORDER BY fecha DESC LIMIT 50")->result();
+			return $this->db->query("SELECT id, id_cliente, mensaje, fecha, leido FROM notificaciones_admin ORDER BY fecha DESC LIMIT 50")->result();
 		} else {
 			// Filtrar por leído o no leído
-			return $this->db->query("SELECT id, id_cliente, mensaje, fecha, leido FROM notificaciones WHERE leido = ? ORDER BY fecha DESC LIMIT 50", array($leido))->result();
+			return $this->db->query("SELECT id, id_cliente, mensaje, fecha, leido FROM notificaciones_admin WHERE leido = ? ORDER BY fecha DESC LIMIT 50", array($leido))->result();
 		}
 	}
 
 	public function marcarNotificacionLeida($id)
 	{
 		$this->load->database();
-		return $this->db->query("UPDATE notificaciones SET leido = 1 WHERE id = ?", array($id));
+		return $this->db->query("UPDATE notificaciones_admin SET leido = 1 WHERE id = ?", array($id));
+	}
+
+	public function contar_todas()
+	{
+		$this->load->database();
+		return $this->db->count_all('notificaciones_admin');
+	}
+
+	public function contar_leidas()
+	{
+		$this->load->database();
+		return $this->db->where('leido', 1)->count_all_results('notificaciones_admin');
+	}
+
+	public function contar_no_leidas()
+	{
+		$this->load->database();
+		return $this->db->where('leido', 0)->count_all_results('notificaciones_admin');
 	}
 
 
@@ -1413,12 +1431,12 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
-	function GetDjsPreAsignados()
+	function GetDjsPreAsignados($id)
 	{
 		$data = false;
 		$this->load->database();
 		$this->load->library('encrypt');
-		$query = $this->db->query("SELECT cdp.id, cdp.id_cliente, cdp.id_dj, d.nombre FROM clientes_djs_preasignados cdp INNER JOIN djs d ON cdp.id_dj = d.id");
+		$query = $this->db->query("SELECT cdp.id, cdp.id_cliente, cdp.id_dj, d.nombre FROM clientes_djs_preasignados cdp INNER JOIN djs d ON cdp.id_dj = d.id WHERE cdp.id_cliente = $id");
 		if ($query->num_rows() > 0) {
 			$i = 0;
 			foreach ($query->result() as $fila) {

@@ -52,7 +52,7 @@
         }
 
         actualizarContadorNotificaciones();
-        setInterval(actualizarContadorNotificaciones, 30000); // Actualiza cada 30s
+        setInterval(actualizarContadorNotificaciones, 5000); // Actualiza cada 30s
     </script>
 </head>
 

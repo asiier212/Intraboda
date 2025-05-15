@@ -1031,12 +1031,6 @@ class Admin extends CI_Controller
             VALUES (?, 'administrador', ?, ?, NOW())
         ", [$id_cliente, $this->session->userdata('user_id'), $mensaje]);
 
-			// Insertar en la tabla de notificaciones (si tienes una tabla 'notificaciones')
-			$this->db->query("
-            INSERT INTO notificaciones (id_cliente, mensaje, fecha, leido)
-            VALUES (?, ?, NOW(), 0)
-        ", [$id_cliente, "Nuevo mensaje del Coordinador: " . $mensaje]);
-
 			// Recuperar emails de los novios
 			$cliente = $this->db->query("SELECT email_novio, email_novia FROM clientes WHERE id = ?", [$id_cliente])->row();
 
@@ -2414,8 +2408,19 @@ class Admin extends CI_Controller
 
 		$this->load->database();
 		// Aquí deberías filtrar por usuario si aplica
-		$this->db->empty_table('notificaciones'); // o usa delete() si necesitas condiciones
+		$this->db->empty_table('notificaciones_admin'); // o usa delete() si necesitas condiciones
 		echo json_encode(['success' => true]);
+	}
+
+	public function contadores_notificaciones()
+	{
+		$this->load->model('admin_functions');
+		$data = [
+			'todas' => $this->admin_functions->contar_todas(),
+			'leidas' => $this->admin_functions->contar_leidas(),
+			'no_leidas' => $this->admin_functions->contar_no_leidas()
+		];
+		echo json_encode($data);
 	}
 
 	public function notificaciones()
@@ -2452,7 +2457,7 @@ class Admin extends CI_Controller
 
 		// Intentar borrar la notificación
 		$this->db->where('id', $id_notificacion);
-		$this->db->delete('notificaciones');
+		$this->db->delete('notificaciones_admin');
 
 		// Verificar si la eliminación fue exitosa
 		if ($this->db->affected_rows() > 0) {

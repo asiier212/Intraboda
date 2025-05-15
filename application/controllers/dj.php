@@ -394,6 +394,21 @@ class Dj extends CI_Controller
 				VALUES (?, 'dj', ?, ?, NOW())
 			", [$id, $this->session->userdata('user_id'), $mensaje]);
 
+			// NOTIFICACIONES PARA ADMIN
+			$clienteNombres = $this->db->query("
+				SELECT nombre_novio, nombre_novia 
+				FROM clientes 
+				WHERE id = ?
+			", [$id])->row();
+
+			$nombreCompleto = $clienteNombres->nombre_novio . " & " . $clienteNombres->nombre_novia;
+
+			$this->db->query("
+				INSERT INTO notificaciones_admin (id_cliente, mensaje, fecha, leido)
+				VALUES (?, ?, NOW(), 0)
+				", [$id, "Nuevo mensaje de <strong>DJ</strong> de $nombreCompleto: " . $mensaje]);
+			//--------------
+
 			// --- Recuperar emails necesarios ---
 			$cliente = $this->db->query("
 				SELECT email_novio, email_novia, id_oficina 
@@ -485,8 +500,8 @@ class Dj extends CI_Controller
 
 		$dj = $cliente && $cliente->dj ? $this->db->query("SELECT nombre, foto FROM djs WHERE id = ?", [$cliente->dj])->row() : null;
 
-		$data['foto_cliente'] = base_url().'uploads/foto_perfil/' . $cliente->foto;
-		$data['foto_dj'] = base_url().'uploads/djs/' . $dj->foto;
+		$data['foto_cliente'] = base_url() . 'uploads/foto_perfil/' . $cliente->foto;
+		$data['foto_dj'] = base_url() . 'uploads/djs/' . $dj->foto;
 		$data['foto_coordinador'] = base_url() . 'img/logo.jpg';
 
 

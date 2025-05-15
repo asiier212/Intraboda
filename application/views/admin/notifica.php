@@ -1,9 +1,10 @@
 <div id="filtros-notificaciones">
     <div class="contenedor-filtros-wrapper">
         <div id="botones-filtro">
-            <button data-filtro="todas" class="btn-filtro active">Todos</button>
-            <button data-filtro="no_leidas" class="btn-filtro">No leídos</button>
-            <button data-filtro="leidas" class="btn-filtro">Leídos</button>
+            <button data-filtro="todas" class="btn-filtro active">Todos <span class="contador">0</span></button>
+            <button data-filtro="no_leidas" class="btn-filtro">No leídos <span class="contador">0</span></button>
+            <button data-filtro="leidas" class="btn-filtro">Leídos <span class="contador">0</span></button>
+
         </div>
         <button id="btn-borrar-todo" title="Borrar todas las notificaciones" aria-label="Borrar todas las notificaciones">
             <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2" viewBox="0 0 24 24">
@@ -34,53 +35,55 @@
                 lista.innerHTML = '';
 
                 const btnBorrarTodo = document.getElementById('btn-borrar-todo');
-
-                // Mostrar u ocultar botón borrar todo según filtro (no mover botones filtro)
-                btnBorrarTodo.style.display = (filtro === 'todas') ? 'flex' : 'none';
+                btnBorrarTodo.style.display = (filtro === 'todas' && data.length > 0) ? 'flex' : 'none';
 
                 if (data.length === 0) {
                     lista.innerHTML = `
-            <li class="no-notificaciones">
-                <div>
-                    <p class="mensaje-vacia">📭 No hay notificaciones para mostrar</p>
-                </div>
-            </li>`;
-                    return;
+                    <li class="no-notificaciones">
+                        <div>
+                            <p class="mensaje-vacia">📭 No hay notificaciones para mostrar</p>
+                        </div>
+                    </li>`;
+                } else {
+                    data.forEach(notif => {
+                        const li = document.createElement('li');
+                        li.className = 'notificacion' + (notif.leido == 1 ? ' leido' : '');
+                        li.setAttribute('data-id', notif.id);
+                        li.innerHTML = `
+                        <div class="notificacion-content">
+                            <p class="mensaje">${notif.mensaje}</p>
+                            <p class="fecha">${notif.fecha}</p>
+                        </div>
+                        <a href="javascript:void(0);" class="borrar-notificacion" data-id="${notif.id}">
+                            <img class="papelera" src="<?= base_url() ?>/img/papelera.png" />
+                        </a>
+                    `;
+                        lista.appendChild(li);
+                    });
                 }
 
-                data.forEach(notif => {
-                    const li = document.createElement('li');
-                    li.className = 'notificacion' + (notif.leido == 1 ? ' leido' : '');
-                    li.setAttribute('data-id', notif.id);
-                    li.innerHTML = `
-            <div class="notificacion-content">
-                <p class="mensaje">${notif.mensaje}</p>
-                <p class="fecha">${notif.fecha}</p>
-            </div>
-            <a href="javascript:void(0);" class="borrar-notificacion" data-id="${notif.id}">
-                <img class="papelera" src="<?= base_url() ?>/img/papelera.png" />
-            </a>
-        `;
-                    lista.appendChild(li);
-                });
+                // Siempre actualizar contadores después
+                fetch('<?= base_url() ?>admin/contadores_notificaciones')
+                    .then(res => res.json())
+                    .then(contadores => {
+                        document.querySelector('[data-filtro="todas"] .contador').textContent = contadores.todas;
+                        document.querySelector('[data-filtro="no_leidas"] .contador').textContent = contadores.no_leidas;
+                        document.querySelector('[data-filtro="leidas"] .contador').textContent = contadores.leidas;
+                    });
             });
     }
-
-
 
     cargarNotificaciones(filtroActual);
 
     setInterval(() => {
         cargarNotificaciones(filtroActual);
-    }, 15000);
+    }, 5000);
 
     document.querySelectorAll('.btn-filtro').forEach(btn => {
         btn.addEventListener('click', () => {
             filtroActual = btn.getAttribute('data-filtro');
-
             document.querySelectorAll('.btn-filtro').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
             cargarNotificaciones(filtroActual);
         });
     });
@@ -91,6 +94,7 @@
         let li = target.closest('li.notificacion');
         if (!li) return;
 
+        // Marcar como leída
         if (!target.classList.contains('papelera') && !target.closest('.borrar-notificacion')) {
             let id = li.getAttribute('data-id');
             fetch(`<?= base_url() ?>admin/marcar_leida`, {
@@ -106,10 +110,12 @@
                 .then(data => {
                     if (data.success) {
                         li.classList.add('leido');
+                        cargarNotificaciones(filtroActual); // Actualizar contadores
                     }
                 });
         }
 
+        // Borrar una notificación
         if (target.classList.contains('papelera') || target.closest('.borrar-notificacion')) {
             const idNotificacion = target.closest('a.borrar-notificacion').getAttribute('data-id');
             fetch(`<?= base_url() . 'admin/borrar_notificacion' ?>`, {
@@ -125,7 +131,10 @@
                 .then(data => {
                     if (data.success) {
                         li.classList.add('anim-borrar');
-                        setTimeout(() => li.remove(), 400);
+                        setTimeout(() => {
+                            li.remove();
+                            cargarNotificaciones(filtroActual); // Actualizar contadores
+                        }, 400);
                     } else {
                         alert('Error al borrar la notificación.');
                     }
@@ -133,6 +142,7 @@
         }
     });
 
+    // Borrar todas
     document.getElementById('btn-borrar-todo').addEventListener('click', () => {
         if (!confirm("¿Estás seguro de que quieres borrar todas las notificaciones?")) return;
 
@@ -147,6 +157,7 @@
                         li.classList.add('anim-borrar');
                         setTimeout(() => li.remove(), 400);
                     });
+                    cargarNotificaciones(filtroActual); // Actualizar contadores
                 } else {
                     alert('Error al borrar todas las notificaciones.');
                 }
@@ -154,10 +165,12 @@
     });
 </script>
 
+
 <style>
     #filtros-notificaciones {
         margin-bottom: 25px;
         text-align: center;
+        margin-top: 50px;
     }
 
     .btn-filtro {
