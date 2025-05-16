@@ -597,7 +597,7 @@
 	{
 		$data = false;
 		$this->load->database();
-	
+
 		// 1. Obtener ID del DJ asignado al cliente
 		$nombre_dj = '';
 		$foto_dj = '';
@@ -607,13 +607,13 @@
 			JOIN djs ON djs.id = clientes.dj 
 			WHERE clientes.id = {$user_id}
 		");
-	
+
 		if ($query_dj->num_rows() > 0) {
 			$row_dj = $query_dj->row();
 			$nombre_dj = $row_dj->nombre;
 			$foto_dj = $row_dj->foto;
 		}
-	
+
 		// 2. Obtener los mensajes del cliente
 		$query = $this->db->query("
 			SELECT id_mensaje, id_cliente, fecha, usuario, id_usuario, mensaje 
@@ -621,7 +621,7 @@
 			WHERE id_cliente = {$user_id}
 			ORDER BY fecha ASC
 		");
-	
+
 		if ($query->num_rows() > 0) {
 			$data = [];
 			foreach ($query->result() as $fila) {
@@ -633,7 +633,7 @@
 					'id_usuario' => $fila->id_usuario,
 					'mensaje' => $fila->mensaje
 				];
-	
+
 				// 3. Asignar nombre del DJ si aplica
 				if ($fila->usuario === 'dj') {
 					$item['nombre_dj'] = $nombre_dj;
@@ -643,31 +643,30 @@
 				elseif ($fila->usuario === 'cliente') {
 					$q_foto = $this->db->query("SELECT foto FROM clientes WHERE id = {$fila->id_usuario}");
 					$item['foto'] = $q_foto->num_rows() > 0 ? $q_foto->row()->foto : 'default_cliente.jpg';
-				}
-				elseif ($fila->usuario === 'administrador') {
+				} elseif ($fila->usuario === 'administrador') {
 					$item['foto'] = 'logo.jpg';
 				}
-	
+
 				$data[] = $item;
 			}
 		}
-	
+
 		return $data;
 	}
 
 	public function GetTituloChat($id_cliente)
 	{
 		$this->load->database();
-	
+
 		$cliente = $this->db->query("
 			SELECT dj
 			FROM clientes
 			WHERE id = $id_cliente
 		")->row();
-	
+
 		$titulo = 'el Coordinador';
-	
-		if ($cliente) {	
+
+		if ($cliente) {
 			if ($cliente->dj) {
 				$dj = $this->db->query("SELECT nombre FROM djs WHERE id = {$cliente->dj}")->row();
 				if ($dj) {
@@ -675,10 +674,10 @@
 				}
 			}
 		}
-	
+
 		return $titulo;
 	}
-	
+
 
 	function GetDjAsignado($user_id)
 	{
@@ -942,14 +941,16 @@
 		}
 	}
 	private $client_id = '302d6d43dfb94ee6b305be0049e8e33a';
-    private $client_secret = '18c0a19582dd40e08491e0a37f502c13';
+	private $client_secret = '18c0a19582dd40e08491e0a37f502c13';
 
-    function __construct() {
-        parent::__construct();
-    }
-	function get_token() {
+	function __construct()
+	{
+		parent::__construct();
+	}
+	function get_token()
+	{
 		$auth = base64_encode($this->client_id . ':' . $this->client_secret);
-	
+
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, "https://accounts.spotify.com/api/token");
 		curl_setopt($ch, CURLOPT_POST, 1);
@@ -960,26 +961,26 @@
 		));
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		$res = curl_exec($ch);
-	
+
 		// Log de errores cURL
-		if(curl_errno($ch)) {
+		if (curl_errno($ch)) {
 			log_message('error', 'Error cURL al obtener el token: ' . curl_error($ch));
 		}
-	
+
 		curl_close($ch);
-	
+
 		// Verificamos la respuesta
 		if (!$res) {
 			log_message('error', 'No se recibió respuesta al obtener el token.');
 			return null;
 		}
-	
+
 		// Decodificamos la respuesta
 		$data = json_decode($res, true);
-	
+
 		// Log de la respuesta completa para ver qué se recibe
 		log_message('debug', 'Respuesta al obtener el token: ' . print_r($data, true));
-	
+
 		if (isset($data['access_token'])) {
 			return $data['access_token']; // Token obtenido correctamente
 		} else {
@@ -988,37 +989,91 @@
 		}
 	}
 	public function obtener_canciones()
-{
-    $data_header = false;
-    $data_footer = false;
+	{
+		$data_header = false;
+		$data_footer = false;
 
-    // Verifica si el formulario fue enviado
-    if ($this->input->post()) {
-        $playlist_id = $this->input->post('playlist_id');
-        
-        if (!empty($playlist_id)) {
-            // Llamamos a la función del modelo para obtener las canciones
-            $this->load->model('Cliente_functions');
-            $canciones = $this->Cliente_functions->obtener_canciones_playlist($playlist_id);
+		// Verifica si el formulario fue enviado
+		if ($this->input->post()) {
+			$playlist_id = $this->input->post('playlist_id');
 
-            // Verificamos si obtuvimos canciones
-            if (!empty($canciones)) {
-                // Si hay canciones, las pasamos a la vista
-                $data['canciones'] = $canciones;
-            } else {
-                // Si no hay canciones, mostramos un mensaje
-                $data['msg'] = "No se encontraron canciones para esta playlist.";
-            }
-        } else {
-            $data['msg'] = "Por favor ingresa un ID de playlist válido.";
-        }
-    }
+			if (!empty($playlist_id)) {
+				// Llamamos a la función del modelo para obtener las canciones
+				$this->load->model('Cliente_functions');
+				$canciones = $this->Cliente_functions->obtener_canciones_playlist($playlist_id);
 
-    // Cargamos la vista con los datos
-    $this->load->view('cliente/header_en_blanco', $data_header);
-    $this->load->view('cliente/playlist', $data);
-    $this->load->view('cliente/footer', $data_footer);
-}
-	
+				// Verificamos si obtuvimos canciones
+				if (!empty($canciones)) {
+					// Si hay canciones, las pasamos a la vista
+					$data['canciones'] = $canciones;
+				} else {
+					// Si no hay canciones, mostramos un mensaje
+					$data['msg'] = "No se encontraron canciones para esta playlist.";
+				}
+			} else {
+				$data['msg'] = "Por favor ingresa un ID de playlist válido.";
+			}
+		}
 
+		// Cargamos la vista con los datos
+		$this->load->view('cliente/header_en_blanco', $data_header);
+		$this->load->view('cliente/playlist', $data);
+		$this->load->view('cliente/footer', $data_footer);
+	}
+
+
+	public function getNotificaciones($cliente)
+	{
+		return $this->db->query("
+        SELECT id, id_cliente, mensaje, fecha, leido
+        FROM notificaciones_cliente
+		WHERE id_cliente = ?
+        ORDER BY fecha DESC
+    ", [$cliente])->result();
+	}
+
+	public function getNotificacionesPorEstado($leido = null, $cliente)
+	{
+		$this->load->database();
+
+		if ($leido === null) {
+			// Todas las notificaciones
+			return $this->db->query("SELECT id, id_cliente, mensaje, fecha, leido FROM notificaciones_cliente WHERE id_cliente = ? ORDER BY fecha DESC", [$cliente])->result();
+		} else {
+			// Filtrar por leído o no leído
+			return $this->db->query("SELECT id, id_cliente, mensaje, fecha, leido FROM notificaciones_cliente WHERE id_cliente = ? AND leido = ? ORDER BY fecha DESC", [$cliente, $leido])->result();
+		}
+	}
+
+	public function marcarNotificacionLeida($id)
+	{
+		$this->load->database();
+		return $this->db->query("UPDATE notificaciones_cliente SET leido = 1 WHERE id = ?", array($id));
+	}
+
+	public function contar_todas($cliente)
+	{
+		$this->load->database();
+		$this->db->from('notificaciones_cliente');
+		$this->db->where('id_cliente', $cliente);
+		return $this->db->count_all_results();
+	}
+
+	public function contar_leidas($cliente)
+	{
+		$this->load->database();
+		$this->db->from('notificaciones_cliente');
+		$this->db->where('id_cliente', $cliente);
+		$this->db->where('leido', 1);
+		return $this->db->count_all_results();
+	}
+
+	public function contar_no_leidas($cliente)
+	{
+		$this->load->database();
+		$this->db->from('notificaciones_cliente');
+		$this->db->where('id_cliente', $cliente);
+		$this->db->where('leido', 0);
+		return $this->db->count_all_results();
+	}
 }

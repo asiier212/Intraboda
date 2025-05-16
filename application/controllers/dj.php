@@ -409,6 +409,21 @@ class Dj extends CI_Controller
 				", [$id, "Nuevo mensaje de <strong>DJ</strong> de $nombreCompleto: " . $mensaje]);
 			//--------------
 
+			// NOTIFICACIONES PARA CLIENTE
+			$djNombre = $this->db->query("
+				SELECT d.nombre 
+				FROM djs d
+				INNER JOIN clientes c ON c.dj = d.id
+				WHERE c.id = ?
+			", [$id])->row();
+
+			$this->db->query("
+				INSERT INTO notificaciones_cliente (id_cliente, mensaje, fecha, leido)
+				VALUES (?, ?, NOW(), 0)
+				", [$id, "Nuevo mensaje de DJ $djNombre->nombre: " . $mensaje]);
+
+			//--------------
+
 			// --- Recuperar emails necesarios ---
 			$cliente = $this->db->query("
 				SELECT email_novio, email_novia, id_oficina 

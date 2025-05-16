@@ -1047,7 +1047,14 @@ class Admin extends CI_Controller
 				", [$id_cliente, "Nuevo mensaje de Coordinador para $nombreCompleto: " . $mensaje]);
 			//--------------
 
+			// NOTIFICACIONES PARA CLIENTE
 
+			$this->db->query("
+				INSERT INTO notificaciones_cliente (id_cliente, mensaje, fecha, leido)
+				VALUES (?, ?, NOW(), 0)
+				", [$id_cliente, "Nuevo mensaje de Coordinador: " . $mensaje]);
+
+			//--------------
 
 			// Recuperar emails de los novios
 			$cliente = $this->db->query("SELECT email_novio, email_novia FROM clientes WHERE id = ?", [$id_cliente])->row();

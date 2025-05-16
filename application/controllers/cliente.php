@@ -1176,4 +1176,102 @@ class Cliente extends CI_Controller
 			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
 		}
 	}
+
+
+	public function notificaciones_ajax($tipo = 'no_leidas')
+	{
+		$this->load->database();
+		header('Content-Type: application/json');
+		$cliente = $this->session->userdata('user_id');
+
+		switch ($tipo) {
+			case 'leidas':
+				$notificaciones = $this->cliente_functions->getNotificacionesPorEstado(1, $cliente);
+				break;
+			case 'todas':
+				$notificaciones = $this->cliente_functions->getNotificacionesPorEstado(null, $cliente);
+				break;
+			case 'no_leidas':
+			default:
+				$notificaciones = $this->cliente_functions->getNotificacionesPorEstado(0, $cliente);
+				break;
+		}
+
+		echo json_encode($notificaciones);
+	}
+
+	public function borrar_todas_notificaciones()
+	{
+
+		$this->load->database();
+		// Aquí deberías filtrar por usuario si aplica
+		$this->db->empty_table('notificaciones_cliente'); // o usa delete() si necesitas condiciones
+		echo json_encode(['success' => true]);
+	}
+
+	public function contadores_notificaciones()
+	{
+		$this->load->model('cliente_functions');
+		$cliente = $this->session->userdata('user_id');
+
+		$data = [
+			'todas' => $this->cliente_functions->contar_todas($cliente),
+			'leidas' => $this->cliente_functions->contar_leidas($cliente),
+			'no_leidas' => $this->cliente_functions->contar_no_leidas($cliente)
+		];
+		echo json_encode($data);
+	}
+
+	public function notificaciones()
+	{
+		$this->load->database();
+		$this->load->model('cliente_functions');
+		$cliente = $this->session->userdata('user_id');
+
+		try {
+			$notificaciones = $this->cliente_functions->getNotificaciones($cliente);
+			$data['notificaciones'] = $notificaciones;
+			$data['data_header'] = false;
+			$data['data_footer'] = false;
+
+			$this->_loadViews($data['data_header'], $data, $data['data_footer'], "notifica_cliente");
+		} catch (Exception $e) {
+			echo "Error al obtener notificaciones. Consulta el log.";
+		}
+	}
+
+
+	public function borrar_notificacion()
+	{
+		$this->load->database();
+
+
+		// Obtener el ID de la notificación desde el POST
+		$id_notificacion = $this->input->post('id_notificacion');
+
+		// Validar que el ID no esté vacío
+		if (empty($id_notificacion)) {
+			echo json_encode(['success' => false, 'message' => 'ID de notificación inválido']);
+			return;
+		}
+
+		// Intentar borrar la notificación
+		$this->db->where('id', $id_notificacion);
+		$this->db->delete('notificaciones_cliente');
+
+		// Verificar si la eliminación fue exitosa
+		if ($this->db->affected_rows() > 0) {
+			echo json_encode(['success' => true]);
+		} else {
+			echo json_encode(['success' => false, 'message' => 'No se pudo eliminar la notificación']);
+		}
+	}
+
+	public function marcar_leida()
+	{
+		$id = $this->input->post('id');
+		$this->load->model('cliente_functions'); // cambia 'TuModelo' por el nombre real
+		$success = $this->cliente_functions->marcarNotificacionLeida($id);
+		echo json_encode(['success' => $success]);
+	}
 }
