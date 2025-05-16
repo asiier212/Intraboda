@@ -487,18 +487,18 @@ class Dj_functions extends CI_Model
 	}
 
 	public function GetMensajesContacto($id)
-{
-    $this->load->database();
-    $data = [];
+	{
+		$this->load->database();
+		$data = [];
 
-    $cliente = $this->db->query("
+		$cliente = $this->db->query("
         SELECT CONCAT(nombre_novio, ' ', apellidos_novio, ' y ', nombre_novia, ' ', apellidos_novia) AS nombre_completo, foto, dj 
         FROM clientes 
         WHERE id = $id
     ")->row();
-    $dj = $cliente && $cliente->dj ? $this->db->query("SELECT nombre, foto FROM djs WHERE id = $cliente->dj")->row() : null;
+		$dj = $cliente && $cliente->dj ? $this->db->query("SELECT nombre, foto FROM djs WHERE id = $cliente->dj")->row() : null;
 
-    $query = $this->db->query("
+		$query = $this->db->query("
         SELECT c.*, 
             CONCAT(nombre_novio, ' ', apellidos_novio, ' y ', nombre_novia, ' ', apellidos_novia) AS nombre_completo, cl.foto, cl.dj 
         FROM contacto c 
@@ -507,61 +507,61 @@ class Dj_functions extends CI_Model
         ORDER BY c.fecha ASC
     ");
 
-    foreach ($query->result() as $m) {
-        $item = [
-            'id_mensaje' => $m->id_mensaje,
-            'id_cliente' => $m->id,
-            'fecha' => $m->fecha,
-            'usuario' => $m->usuario,
-            'id_usuario' => $m->id_usuario,
-            'mensaje' => $m->mensaje,
-            'foto' => $m->foto_cliente,
-            'dj' => $m->dj,
-            'nombre_completo' => $m->nombre_completo,
-        ];
+		foreach ($query->result() as $m) {
+			$item = [
+				'id_mensaje' => $m->id_mensaje,
+				'id_cliente' => $m->id,
+				'fecha' => $m->fecha,
+				'usuario' => $m->usuario,
+				'id_usuario' => $m->id_usuario,
+				'mensaje' => $m->mensaje,
+				'foto' => $m->foto_cliente,
+				'dj' => $m->dj,
+				'nombre_completo' => $m->nombre_completo,
+			];
 
-        if ($m->usuario === 'cliente') {
-            $item['nombre'] = $cliente->nombre;
-            $item['foto'] = $cliente->foto;
-        } elseif ($m->usuario === 'dj' && $dj) {
-            $item['nombre_dj'] = $dj->nombre;
-            $item['foto'] = $dj->foto;
-        } elseif ($m->usuario === 'administrador') {
-            $item['nombre'] = 'Coordinador';
-            $item['foto'] = 'logo.jpg';
-        }
+			if ($m->usuario === 'cliente') {
+				$item['nombre'] = $cliente->nombre;
+				$item['foto'] = $cliente->foto;
+			} elseif ($m->usuario === 'dj' && $dj) {
+				$item['nombre_dj'] = $dj->nombre;
+				$item['foto'] = $dj->foto;
+			} elseif ($m->usuario === 'administrador') {
+				$item['nombre'] = 'Coordinador';
+				$item['foto'] = 'logo.jpg';
+			}
 
-        $data[] = $item;
-    }
+			$data[] = $item;
+		}
 
-    return $data;
-}
+		return $data;
+	}
 
-public function GetTituloChat($id)
-{
-    $this->load->database();
+	public function GetTituloChat($id)
+	{
+		$this->load->database();
 
-    $cliente = $this->db->query("
+		$cliente = $this->db->query("
         SELECT nombre_novio, apellidos_novio, nombre_novia, apellidos_novia, dj
         FROM clientes
         WHERE id = $id
     ")->row();
 
-    $titulo = '';
+		$titulo = '';
 
-    if ($cliente) {
-        $titulo = $cliente->nombre_novio . ', ' . $cliente->nombre_novia;
+		if ($cliente) {
+			$titulo = $cliente->nombre_novio . ', ' . $cliente->nombre_novia;
 
-        if ($cliente->dj) {
-            $dj = $this->db->query("SELECT nombre FROM djs WHERE id = {$cliente->dj}")->row();
-            if ($dj) {
-                $titulo .= ' y Coordinador';
-            }
-        }
-    }
+			if ($cliente->dj) {
+				$dj = $this->db->query("SELECT nombre FROM djs WHERE id = {$cliente->dj}")->row();
+				if ($dj) {
+					$titulo .= ' y Coordinador';
+				}
+			}
+		}
 
-    return $titulo;
-}
+		return $titulo;
+	}
 
 
 
@@ -713,5 +713,65 @@ public function GetTituloChat($id)
 			}
 		}
 		return $data;
+	}
+
+
+	public function getNotificaciones($dj)
+	{
+		return $this->db->query("
+        SELECT nd.id, nd.id_cliente, nd.mensaje, nd.fecha, nd.leido
+        FROM notificaciones_dj nd
+		INNER JOIN clientes c ON c.id = nd.id_cliente
+		WHERE c.dj = ?
+        ORDER BY fecha DESC
+    ", [$dj])->result();
+	}
+
+	public function getNotificacionesPorEstado($leido = null, $dj)
+	{
+		$this->load->database();
+
+		if ($leido === null) {
+			// Todas las notificaciones
+			return $this->db->query("SELECT nd.id, nd.id_cliente, nd.mensaje, nd.fecha, nd.leido FROM notificaciones_dj nd INNER JOIN clientes c ON c.id = nd.id_cliente WHERE c.dj = ? ORDER BY fecha DESC", [$dj])->result();
+		} else {
+			// Filtrar por leído o no leído
+			return $this->db->query("SELECT nd.id, nd.id_cliente, nd.mensaje, nd.fecha, nd.leido FROM notificaciones_dj nd INNER JOIN clientes c ON c.id = nd.id_cliente WHERE c.dj = ? AND leido = ? ORDER BY fecha DESC", [$dj, $leido])->result();
+		}
+	}
+
+	public function marcarNotificacionLeida($id)
+	{
+		$this->load->database();
+		return $this->db->query("UPDATE notificaciones_dj SET leido = 1 WHERE id = ?", array($id));
+	}
+
+	public function contar_todas($dj)
+	{
+		$this->load->database();
+		$this->db->from('notificaciones_dj nd');
+		$this->db->join('clientes c', 'c.id = nd.id_cliente');
+		$this->db->where('c.dj', $dj);
+		return $this->db->count_all_results();
+	}
+
+	public function contar_leidas($dj)
+	{
+		$this->load->database();
+		$this->db->from('notificaciones_dj nd');
+		$this->db->join('clientes c', 'c.id = nd.id_cliente');
+		$this->db->where('c.dj', $dj);
+		$this->db->where('nd.leido', 1);
+		return $this->db->count_all_results();
+	}
+
+	public function contar_no_leidas($dj)
+	{
+		$this->load->database();
+		$this->db->from('notificaciones_dj nd');
+		$this->db->join('clientes c', 'c.id = nd.id_cliente');
+		$this->db->where('c.dj', $dj);
+		$this->db->where('nd.leido', 0);
+		return $this->db->count_all_results();
 	}
 }

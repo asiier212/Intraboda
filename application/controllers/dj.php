@@ -510,6 +510,102 @@ class Dj extends CI_Controller
 
 
 
+	public function notificaciones_ajax($tipo = 'no_leidas')
+	{
+		$this->load->database();
+		header('Content-Type: application/json');
+		$dj_id = $this->session->userdata('id');
+
+		switch ($tipo) {
+			case 'leidas':
+				$notificaciones = $this->dj_functions->getNotificacionesPorEstado(1, $dj_id);
+				break;
+			case 'todas':
+				$notificaciones = $this->dj_functions->getNotificacionesPorEstado(null, $dj_id);
+				break;
+			case 'no_leidas':
+			default:
+				$notificaciones = $this->dj_functions->getNotificacionesPorEstado(0, $dj_id);
+				break;
+		}
+
+		echo json_encode($notificaciones);
+	}
+
+	public function borrar_todas_notificaciones()
+	{
+
+		$this->load->database();
+		// Aquí deberías filtrar por usuario si aplica
+		$this->db->empty_table('notificaciones_dj'); // o usa delete() si necesitas condiciones
+		echo json_encode(['success' => true]);
+	}
+
+	public function contadores_notificaciones()
+	{
+		$this->load->model('dj_functions');
+		$dj_id = $this->session->userdata('id');
+
+		$data = [
+			'todas' => $this->dj_functions->contar_todas($dj_id),
+			'leidas' => $this->dj_functions->contar_leidas($dj_id),
+			'no_leidas' => $this->dj_functions->contar_no_leidas($dj_id)
+		];
+		echo json_encode($data);
+	}
+
+	public function notificaciones()
+	{
+		$this->load->database();
+		$this->load->model('dj_functions');
+		$dj_id = $this->session->userdata('id');
+
+		try {
+			$notificaciones = $this->dj_functions->getNotificaciones($dj);
+			$data['notificaciones'] = $notificaciones;
+			$data['data_header'] = false;
+			$data['data_footer'] = false;
+
+			$this->_loadViews($data['data_header'], $data, $data['data_footer'], "notifica_dj");
+		} catch (Exception $e) {
+			echo "Error al obtener notificaciones. Consulta el log.";
+		}
+	}
+
+
+	public function borrar_notificacion()
+	{
+		$this->load->database();
+
+
+		// Obtener el ID de la notificación desde el POST
+		$id_notificacion = $this->input->post('id_notificacion');
+
+		// Validar que el ID no esté vacío
+		if (empty($id_notificacion)) {
+			echo json_encode(['success' => false, 'message' => 'ID de notificación inválido']);
+			return;
+		}
+
+		// Intentar borrar la notificación
+		$this->db->where('id', $id_notificacion);
+		$this->db->delete('notificaciones_dj');
+
+		// Verificar si la eliminación fue exitosa
+		if ($this->db->affected_rows() > 0) {
+			echo json_encode(['success' => true]);
+		} else {
+			echo json_encode(['success' => false, 'message' => 'No se pudo eliminar la notificación']);
+		}
+	}
+
+	public function marcar_leida()
+	{
+		$id = $this->input->post('id');
+		$this->load->model('dj_functions'); // cambia 'TuModelo' por el nombre real
+		$success = $this->dj_functions->marcarNotificacionLeida($id);
+		echo json_encode(['success' => $success]);
+	}
 
 	function persons($acc = false)
 	{

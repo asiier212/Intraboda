@@ -660,6 +660,22 @@ class Cliente extends CI_Controller
 
 			//--------------
 
+			// NOTIFICACIONES PARA DJ
+			$clienteNombres = $this->db->query("
+				SELECT nombre_novio, nombre_novia 
+				FROM clientes 
+				WHERE id = ?
+			", [$id_cliente])->row();
+
+			$nombreCompleto = $clienteNombres->nombre_novio . " & " . $clienteNombres->nombre_novia;
+
+			$this->db->query("
+				INSERT INTO notificaciones_dj (id_cliente, mensaje, fecha, leido)
+				VALUES (?, ?, NOW(), 0)
+				", [$id_cliente, "Nuevo mensaje de $nombreCompleto: " . $mensaje]);
+
+			//--------------
+
 			// Recuperar emails de oficina y DJ
 			$cliente = $this->db->query("
 				SELECT dj, id_oficina 

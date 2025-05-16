@@ -964,7 +964,6 @@ class Admin_functions extends CI_Model
         SELECT id, id_cliente, mensaje, fecha, leido
         FROM notificaciones_admin
         ORDER BY fecha DESC
-        LIMIT 10
     ")->result();
 	}
 

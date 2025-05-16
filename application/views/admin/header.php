@@ -193,33 +193,6 @@
                 content: url('<?= base_url() ?>img/notificacion2.png');
             }
 
-            #contador-notif {
-                position: absolute;
-                top: 5px;
-                right: 5px;
-                background-color: red;
-                color: white;
-                font-size: 12px;
-                font-weight: bold;
-                padding: 2px 6px;
-                border-radius: 12px;
-                display: none;
-            }
-
-            /* Por defecto ocultamos menú para móvil */
-            .nav>li:not(.menu-toggle) {
-                display: inline-block;
-                /* menú normal */
-            }
-
-            .menu-toggle {
-                display: none;
-                cursor: pointer;
-                font-size: 28px;
-                padding: 0 10px;
-                user-select: none;
-            }
-
             /* Para móviles */
             @media screen and (max-width: 768px) {
 

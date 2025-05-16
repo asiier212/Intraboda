@@ -1031,6 +1031,24 @@ class Admin extends CI_Controller
             VALUES (?, 'administrador', ?, ?, NOW())
         ", [$id_cliente, $this->session->userdata('user_id'), $mensaje]);
 
+
+			// NOTIFICACIONES PARA DJ
+			$clienteNombres = $this->db->query("
+				SELECT nombre_novio, nombre_novia 
+				FROM clientes 
+				WHERE id = ?
+			", [$id_cliente])->row();
+
+			$nombreCompleto = $clienteNombres->nombre_novio . " & " . $clienteNombres->nombre_novia;
+
+			$this->db->query("
+				INSERT INTO notificaciones_dj (id_cliente, mensaje, fecha, leido)
+				VALUES (?, ?, NOW(), 0)
+				", [$id_cliente, "Nuevo mensaje de Coordinador para $nombreCompleto: " . $mensaje]);
+			//--------------
+
+
+
 			// Recuperar emails de los novios
 			$cliente = $this->db->query("SELECT email_novio, email_novia FROM clientes WHERE id = ?", [$id_cliente])->row();
 
