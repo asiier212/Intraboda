@@ -159,22 +159,43 @@ mb_internal_encoding('UTF-8');
 							}
 
 							// DJ completo
-							$dj_nombre = ''; // <-- Línea clave
-							echo "<td class='col-dj oculto' style='background-color:" . $color . "'>";
+							$dj_nombre = '';
+							$dj_bool = '';
+
+							// Buscamos DJ asignado
 							foreach ($djs as $dj) {
 								if ($dj['id'] == $ev['dj']) {
-									echo $dj['nombre'];
 									$dj_nombre = $dj['nombre'];
 								}
 							}
-							echo "</td>";
+
+							// Si no hay DJ asignado, mostramos preasignados
+							if (!$dj_nombre) {
+								$contador_pre = 0;
+								foreach ($djs_pre as $djp) {
+									if ($djp['id_cliente'] == $ev['id']) {
+										$dj_nombre .= $djp['nombre'] . "\n";
+										$contador_pre++;
+									}
+								}
+								$dj_bool = 'djs';
+
+								if ($contador_pre == 0) {
+									$dj_nombre = ''; // No hay DJs preasignados
+								}
+							}
+
+							echo "<td class='col-dj oculto' style='background-color:" . $color . "'>" . $dj_nombre . "</td>";
 
 							// DJ iniciales
 							echo "<td class='col-dj-iniciales' style='background-color:" . $color . "' title='" . $dj_nombre . "'>";
-							if ($dj_nombre != '') {
-								$partes = explode(' ', $dj_nombre);
+							if ($dj_nombre != '' && $dj_bool == '') {
+								$partes = explode(' ', trim($dj_nombre));
 								echo strtoupper(mb_substr($partes[0], 0, 1)) . "." . (isset($partes[1]) ? strtoupper(mb_substr($partes[1], 0, 1)) : '');
-							} else {
+							} else if ($dj_nombre != '' && $dj_bool == 'djs') {
+								// Mostrar número de DJs preasignados
+								echo $contador_pre . " DJs preasignados";
+							} else if ($dj_nombre == '') {
 								echo '-';
 							}
 							echo "</td>";

@@ -1453,6 +1453,29 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
+	function GetDjsPreAsignadosEventos()
+	{
+		$data = false;
+		$this->load->database();
+		$this->load->library('encrypt');
+		$query = $this->db->query("SELECT cdp.id, cdp.id_cliente, cdp.id_dj, d.nombre FROM clientes_djs_preasignados cdp INNER JOIN djs d ON cdp.id_dj = d.id");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+
+				/*$this->load->library('encrypt');
+				$query = $this->db->query("UPDATE djs SET clave = '" . $this->encrypt->encode($fila->clave) . "' WHERE id = '" . $fila->id . "'");*/
+
+				$data[$i]['id'] = $fila->id;
+				$data[$i]['id_cliente'] = $fila->id_cliente;
+				$data[$i]['id_dj'] = $fila->id_dj;
+				$data[$i]['nombre'] = $fila->nombre;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
 	function get_preasignados_por_cliente($id_cliente)
 	{
 		$query = $this->db->query("SELECT id_dj FROM clientes_djs_preasignados WHERE id_cliente = ?", array($id_cliente));

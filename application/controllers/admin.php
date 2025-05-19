@@ -848,6 +848,7 @@ class Admin extends CI_Controller
 		$data['tipos_clientes'] = $this->admin_functions->GetTiposClientes();
 		$data['servicios'] = $this->admin_functions->GetServicios();
 		$data['djs'] = $this->admin_functions->GetDJs();
+		$data['djs_pre'] = $this->admin_functions->GetDjsPreAsignadosEventos();
 		$data['eventos_view'] = $this->admin_functions->GetEventosView($fecha_desde, $fecha_hasta, $oficina);
 		$data['eventos_totales'] = $this->admin_functions->GetEventosTotalesView($fecha_desde, $fecha_hasta, $oficina);
 
