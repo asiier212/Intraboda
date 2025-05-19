@@ -4,8 +4,11 @@
             <button data-filtro="todas" class="btn-filtro active">Todos <span class="contador">0</span></button>
             <button data-filtro="no_leidas" class="btn-filtro">No leídos <span class="contador">0</span></button>
             <button data-filtro="leidas" class="btn-filtro">Leídos <span class="contador">0</span></button>
-
         </div>
+    </div>
+
+    <!-- botón fuera del wrapper flex -->
+    <div class="contenedor-bt" style="margin-top: 30px;">
         <button id="btn-borrar-todo" title="Borrar todas las notificaciones" aria-label="Borrar todas las notificaciones">
             <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2" viewBox="0 0 24 24">
                 <polyline points="3 6 5 6 21 6"></polyline>
@@ -18,7 +21,7 @@
         </button>
     </div>
 </div>
-<?php echo $clientess ?>
+
 <div id="notificaciones-lista">
     <ul id="lista-notificaciones"></ul>
 </div>
@@ -281,9 +284,13 @@
     }
 
 
+    .contenedor-bt {
+        display: flex;
+        justify-content: center;
+    }
+
     #btn-borrar-todo {
         background-color: rgb(238, 46, 32);
-        /* rojo Google material */
         color: #fff;
         border: none;
         padding: 10px 18px;
@@ -291,13 +298,11 @@
         font-weight: 600;
         font-size: 14px;
         cursor: pointer;
+        transition: 300ms;
         display: flex;
         align-items: center;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: 300ms;
+        justify-content: center;
+        gap: 6px;
     }
 
     #botones-filtro {
@@ -310,7 +315,7 @@
     #btn-borrar-todo:hover {
         background-color: rgb(216, 35, 25);
         box-shadow: 0 2px 4px rgba(179, 36, 29, 0.5);
-        transform: translateY(-50%) scale(1.03);
+        transform: translateY(0%) scale(1.03);
         transition: 300ms;
     }
 
