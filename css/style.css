@@ -747,6 +747,7 @@ legend {
     border-bottom-right-radius: 10px;
     width: 45%;
 }
+
 .delete-btn:hover {
     cursor: pointer;
 }
