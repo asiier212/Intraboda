@@ -774,4 +774,58 @@ class Dj_functions extends CI_Model
 		$this->db->where('nd.leido', 0);
 		return $this->db->count_all_results();
 	}
+
+	// PRUEBA 
+	function get_disponibilidad($dj_id)
+	{
+		$this->db->select('disponibilidad_dj.id, disponibilidad_dj.fecha, disponibilidad_dj.hora_inicio, disponibilidad_dj.hora_fin, djs.nombre');
+		$this->db->from('disponibilidad_dj');
+		$this->db->join('djs', 'disponibilidad_dj.dj_id = djs.id');
+		$this->db->where('disponibilidad_dj.dj_id', $dj_id);
+		return $this->db->get()->result_array();
+	}
+
+	function guardar($dj_id, $fecha, $hora_inicio, $hora_fin, $id = null)
+	{
+
+		// Verifica si hay solapamiento con otra franja del mismo DJ (excluyendo el propio ID si está editando)
+		$this->db->where('dj_id', $dj_id);
+		$this->db->where('fecha', $fecha);
+		$this->db->where('hora_inicio <', $hora_fin);
+		$this->db->where('hora_fin >', $hora_inicio);
+		if ($id) {
+			$this->db->where('id !=', $id);
+		}
+		$existe = $this->db->get('disponibilidad_dj')->row_array();
+
+		if ($existe) {
+			return json_encode(['status' => 'error', 'msg' => 'Franja horaria solapada']);
+		}
+
+		// Inserta o actualiza
+		if ($id) {
+			$this->db->where('id', $id);
+			$this->db->update('disponibilidad_dj', array(
+				'dj_id' => $dj_id,
+				'fecha' => $fecha,
+				'hora_inicio' => $hora_inicio,
+				'hora_fin' => $hora_fin
+			));
+		} else {
+			$this->db->insert('disponibilidad_dj', array(
+				'dj_id' => $dj_id,
+				'fecha' => $fecha,
+				'hora_inicio' => $hora_inicio,
+				'hora_fin' => $hora_fin
+			));
+		}
+
+		return json_encode(['status' => 'ok']);
+	}
+
+
+	function eliminar($id)
+	{
+		$this->db->delete('disponibilidad_dj', array('id' => $id));
+	}
 }

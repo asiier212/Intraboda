@@ -1,4 +1,4 @@
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    <!DOCTYPE html>
     <html xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
@@ -10,6 +10,10 @@
         </title>
         <link href="<?php echo base_url() ?>css/style.css" rel="stylesheet" type="text/css" />
         <script src="<?php echo base_url() ?>js/jquery/development-bundle/jquery-1.7.2.js"></script>
+        <!-- FullCalendar CSS y JS -->
+        <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.js"></script>
+
 
         <?php if (isset($scripts_src)) echo $scripts_src; ?>
         <script language="javascript" type="text/javascript">
@@ -65,6 +69,15 @@
         </script>
 
 
+        <?php
+        // Cargar modelo desde la vista
+        $CI = &get_instance();
+        $CI->load->model('dj_functions');
+        $dj_id = $CI->session->userdata('id');
+        $disponibilidades = $CI->dj_functions->get_disponibilidad($dj_id);
+        $mostrar_asterisco = empty($disponibilidades);
+        ?>
+
         <!-- Navbar móvil -->
         <nav class="mobile-navbar">
             <span class="navbar-brand"><a href="<?php base_url() ?> /index.php/dj"><img src="<?php echo base_url() . $this->config->item('logo_header') ?>" width="50" height="50" /></a></span>
@@ -86,6 +99,7 @@
             <div class="offcanvas-body">
                 <ul>
                     <li><a href="<?php echo base_url() ?>dj/clientes/view">Listar Clientes</a></li>
+                    <li><a href="<?php echo base_url() ?>dj/disponibilidad" <?= $mostrar_asterisco ? " style='color: red;' " : '' ?>>No Disponibilidad <?= $mostrar_asterisco ? ' *' : '' ?></a></li>
                     <li><a href="<?php echo base_url() ?>dj/servicios/view">Servicios</a></li>
                     <li><a href="<?php echo base_url() ?>dj/contratos_nominas">Contratos y Nóminas</a></li>
                 </ul>
@@ -101,6 +115,7 @@
         <nav class="desktop-navbar"> <span class="navbar-brand"><a href="<?php base_url() ?> /index.php/dj"><img src="<?php echo base_url() . $this->config->item('logo_header') ?>" width="50" height="50" /></a></span>
             <ul>
                 <li><a href="<?php echo base_url() ?>dj/clientes/view">Listar Clientes</a></li>
+                <li><a href="<?php echo base_url() ?>dj/disponibilidad">No Disponibilidad <?= $mostrar_asterisco ? ' *' : '' ?></a></li>
                 <li><a href="<?php echo base_url() ?>dj/servicios/view">Servicios</a></li>
                 <li><a href="<?php echo base_url() ?>dj/contratos_nominas">Contratos y Nóminas</a></li>
             </ul>

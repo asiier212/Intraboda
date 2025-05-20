@@ -782,4 +782,60 @@ class Dj extends CI_Controller
 			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
 		}
 	}
+
+
+	function Disponibilidad()
+	{
+		$this->load->database();
+
+		error_reporting(0); // para evitar que se impriman warnings que rompan el JSON
+
+		$this->load->model('dj_functions');
+
+		// ---- CARGA DE EVENTOS (AJAX GET) ----
+		if ($this->input->get('load') == '1') {
+			$dj_id = $this->session->userdata('id');
+			$datos = $this->dj_functions->get_disponibilidad($dj_id);
+
+			$eventos = array();
+			foreach ($datos as $row) {
+				$eventos[] = array(
+					'id' => $row['id'],
+					'start' => $row['fecha'] . 'T' . $row['hora_inicio'],
+					'end' => $row['fecha'] . 'T' . $row['hora_fin'],
+					'title' => $row['nombre'] . ' (' . $row['hora_inicio'] . ' - ' . $row['hora_fin'] . ')'
+				);
+			}
+
+			echo json_encode($eventos);
+			return;
+		}
+
+		// ---- GUARDAR O ACTUALIZAR DISPONIBILIDAD (AJAX POST) ----
+		if ($this->input->post('guardar') == '1') {
+			$dj_id = $this->session->userdata('id');
+			$fecha = $this->input->post('fecha');
+			$hora_inicio = $this->input->post('hora_inicio');
+			$hora_fin = $this->input->post('hora_fin');
+			$id = $this->input->post('id');
+
+			echo $this->dj_functions->guardar($dj_id, $fecha, $hora_inicio, $hora_fin, $id);
+			return; // <- ¡MUY IMPORTANTE!
+		}
+
+
+		// ---- ELIMINAR DISPONIBILIDAD (AJAX POST) ----
+		if ($this->input->post('eliminar') == '1') {
+			$id = intval($this->input->post('id'));
+			$this->dj_functions->eliminar($id);
+			return;
+		}
+
+		// ---- CARGA NORMAL DE VISTA ----
+		$data_header = false;
+		$data_footer = false;
+		$data['dj'] = $this->dj_functions->GetDJ($this->session->userdata('id'));
+		$view = "disponibilidad_view";
+		$this->_loadViews($data_header, $data, $data_footer, $view);
+	}
 }
