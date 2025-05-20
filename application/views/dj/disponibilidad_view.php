@@ -315,6 +315,10 @@
         background-color: #46543c;
         box-shadow: 0 5px 14px rgba(70, 84, 60, 0.7);
     }
+
+    .fc-event-time {
+        display: none;
+    }
 </style>
 
 <div id="calendario"></div>
