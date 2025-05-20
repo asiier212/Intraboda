@@ -67,7 +67,7 @@
 
         <!-- Navbar móvil -->
         <nav class="mobile-navbar">
-            <span class="navbar-brand"><img src="<?php echo base_url() . $this->config->item('logo_header') ?>" width="50" height="50" /></span>
+            <span class="navbar-brand"><a href="<?php base_url() ?> /index.php/cliente"><img src="<?php echo base_url() . $this->config->item('logo_header') ?>" width="50" height="50" /></a></span>
             <button class="navbar-toggler" id="toggleMenu">&#9776;</button>
         </nav>
 
@@ -102,7 +102,7 @@
         <div id="offcanvasOverlay"></div>
 
         <!-- Navbar desktop -->
-        <nav class="desktop-navbar"> <span class="navbar-brand"><img src="<?php echo base_url() . $this->config->item('logo_header') ?>" width="50" height="50" /></span>
+        <nav class="desktop-navbar"> <span class="navbar-brand"><a href="<?php base_url() ?> /index.php/cliente"><img src="<?php echo base_url() . $this->config->item('logo_header') ?>" width="50" height="50" /></a></span>
             <ul>
                 <li><a href="<?php echo base_url() ?>cliente/topSongs">Canciones más elegidas</a></li>
                 <li><a href="<?php echo base_url() ?>cliente/datos/view">Mis datos</a></li>

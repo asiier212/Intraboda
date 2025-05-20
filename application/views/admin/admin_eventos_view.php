@@ -188,14 +188,17 @@ mb_internal_encoding('UTF-8');
 							echo "<td class='col-dj oculto' style='background-color:" . $color . "'>" . $dj_nombre . "</td>";
 
 							// DJ iniciales
-							echo "<td class='col-dj-iniciales' style='background-color:" . $color . "' title='" . $dj_nombre . "'>";
+
 							if ($dj_nombre != '' && $dj_bool == '') {
+								echo "<td class='col-dj-iniciales' style='background-color:" . $color . "' title='" . $dj_nombre . "'>";
 								$partes = explode(' ', trim($dj_nombre));
 								echo strtoupper(mb_substr($partes[0], 0, 1)) . "." . (isset($partes[1]) ? strtoupper(mb_substr($partes[1], 0, 1)) : '');
 							} else if ($dj_nombre != '' && $dj_bool == 'djs') {
 								// Mostrar número de DJs preasignados
+								echo "<td class='col-dj-iniciales' style='background-color:rgba(234, 255, 0, 0.33);' title='" . $dj_nombre . "'>";
 								echo $contador_pre . " DJs preasignados";
 							} else if ($dj_nombre == '') {
+								echo "<td class='col-dj-iniciales' style='background-color:rgba(255, 0, 0, 0.28);' title='" . $dj_nombre . "'>";
 								echo '-';
 							}
 							echo "</td>";
