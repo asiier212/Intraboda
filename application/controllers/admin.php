@@ -852,6 +852,11 @@ class Admin extends CI_Controller
 		$data['eventos_view'] = $this->admin_functions->GetEventosView($fecha_desde, $fecha_hasta, $oficina);
 		$data['eventos_totales'] = $this->admin_functions->GetEventosTotalesView($fecha_desde, $fecha_hasta, $oficina);
 
+		foreach ($data['eventos_view'] as &$ev) {
+			$ev['djs_disponibles'] = $this->admin_functions->get_djs_disponibles($ev['fecha_boda'], $ev['hora_boda']);
+		}
+
+
 		$view = "admin_eventos_view";
 		$this->_loadViews($data_header, $data, $data_footer, $view);
 	}

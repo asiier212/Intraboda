@@ -2911,4 +2911,29 @@ class Admin_functions extends CI_Model
 			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
 		}
 	}
+
+	function get_djs_disponibles($fecha_boda, $hora_boda)
+	{
+		$this->load->database();
+
+		$fecha = date('Y-m-d', strtotime($fecha_boda));
+		$hora = date('H:i:s', strtotime($hora_boda));
+
+		// Subconsulta para filtrar DJs NO disponibles en esa franja
+		$this->db->select('dj_id');
+		$this->db->from('disponibilidad_dj');
+		$this->db->where('fecha', $fecha);
+		$this->db->where("'$hora' BETWEEN hora_inicio AND hora_fin", NULL, FALSE);
+		$subquery = $this->db->_compile_select();
+
+		// Consulta principal: DJs disponibles
+		$this->db->_reset_select();
+		$this->db->select('COUNT(*) as total');
+		$this->db->from('djs');
+		$this->db->where("id NOT IN ($subquery)", NULL, FALSE);
+
+		$query = $this->db->get();
+		$row = $query->row_array();
+		return isset($row['total']) ? $row['total'] : 0;
+	}
 }

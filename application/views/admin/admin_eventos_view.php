@@ -124,6 +124,12 @@ mb_internal_encoding('UTF-8');
 							</span>
 						</th>
 						<th style="vertical-align: middle;">
+							<span id="textoDJ" style="margin-right: 5px;">DJ-ND</span>
+							<span id="toggleDJ" class="columna-toggle" style="cursor:pointer; display:inline-block; vertical-align: middle;">
+								<img src="<?php echo base_url() ?>/img/ojoc.png" style="width:20px;" />
+							</span>
+						</th>
+						<th style="vertical-align: middle;">
 							<span id="textoNombre" style="margin-right: 5px;">Nombre</span>
 							<span id="toggleNombre" class="columna-toggle" style="cursor:pointer; display:inline-block; vertical-align: middle;">
 								<img src="<?php echo base_url() ?>/img/ojoc.png" style="width:20px; vertical-align: middle;" />
@@ -202,6 +208,14 @@ mb_internal_encoding('UTF-8');
 								echo '-';
 							}
 							echo "</td>";
+
+							//DJ-ND
+
+							echo "<td class='coldj-no-disponibles' style='background-color:#d7f7dc;' title='DJs disponibles'>";
+							echo $ev['djs_disponibles'];
+							echo "</td>";
+
+							// DJ-ND FINAL 
 
 							echo "<td class='col-nombre oculto' style='background-color:" . $color . "'>";
 							echo $ev['nombre_novio'] . " y " . $ev['nombre_novia'];
