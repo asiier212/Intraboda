@@ -252,7 +252,7 @@
     }
 
     #btnEliminar,
-    .eliminarDisp {
+    .denegar {
         background-color: rgb(255, 25, 25) !important;
         color: white !important;
         box-shadow: 0 3px 8px rgba(191, 62, 62, 0.25) !important;
@@ -260,8 +260,8 @@
 
     #btnEliminar:hover,
     #btnEliminar:focus,
-    .eliminarDisp:hover,
-    .eliminarDisp:focus {
+    .denegar:hover,
+    .denegar:focus {
         background-color: rgb(194, 47, 47) !important;
         box-shadow: 0 5px 14px rgba(140, 42, 42, 0.7) !important;
     }
@@ -366,7 +366,7 @@
             buttonText: {
                 today: 'Hoy'
             },
-            events: '<?= base_url() . "dj/disponibilidad?load=1" ?>',
+            events: '<?= base_url() . "admin/calendarioDisp?load=1" ?>',
 
             eventDidMount: function(info) {
                 var innerTextEl = info.el.querySelector('.fc-event-title');
@@ -385,12 +385,7 @@
                 var events = calendar.getEvents().filter(function(ev) {
                     return ev.startStr.substr(0, 10) === dateStr;
                 });
-
-                if (events.length === 0) {
-                    abrirFormularioNueva(dateStr);
-                } else {
-                    mostrarListaDisponibilidades(events, dateStr);
-                }
+                mostrarListaDisponibilidades(events, dateStr);
             },
 
             eventClick: function(info) {
@@ -425,125 +420,43 @@
 
                 html += `<li style="margin-bottom:10px; ${bgColor}">
                         De <strong>${start}</strong> a <strong>${end}</strong>
-                        <button class="editarDisp" data-id="${ev.id}">Editar</button>
-                        <button class="eliminarDisp" data-id="${ev.id}">Eliminar</button>
+                        <button class="aceptar" data-id="${ev.id}">✔</button>
+                        <button class="denegar" data-id="${ev.id}">✖</button>
                      </li>`;
             });
             html += '</ul>';
             html += `<div style="text-align:center;">
-                    <button id="btnNuevaDisp">Nueva  no disponibilidad</button>
                     <button id="btnCanc" onclick="hideModal()">Cerrar</button>
                  </div>`;
             $('#modalContenido').html(html);
             showModal();
 
-            $('.editarDisp').off().on('click', function() {
+            $('.aceptar').off().on('click', function() {
                 let id = $(this).data('id');
-                let ev = calendar.getEventById(id);
-                if (ev) abrirFormularioEdicion(ev);
-            });
-
-            $('.eliminarDisp').off().on('click', function() {
-                let id = $(this).data('id');
-                if (confirm("¿Estás seguro que quieres eliminar esta disponibilidad?")) {
-                    $.post('<?= base_url() . "dj/disponibilidad" ?>', {
-                        eliminar: 1,
-                        id: id
-                    }, function() {
+                if (confirm("¿Estás seguro que quieres aceptar esta disponibilidad?")) {
+                    $.post('<?= base_url() . "admin/calendarioDisp" ?>', {
+                        id: id,
+                        validacion: 2 // 2 = aceptado
+                    }, function(response) {
                         calendar.refetchEvents();
                         hideModal();
                     });
                 }
             });
 
-            $('#btnNuevaDisp').off().on('click', function() {
-                abrirFormularioNueva(fecha);
-            });
-        }
-
-        function abrirFormularioNueva(fecha) {
-            $('#modalContenido').html(`
-            <h4>Nueva No Disponibilidad</h4>
-            <form id="formDisponibilidad">
-                <input type="hidden" name="id" id="eventoId" value="">
-                <input type="hidden" name="fecha" id="fechaSeleccionada" value="${fecha}">
-                <label for="horaInicio">Hora inicio:</label>
-                <input type="time" name="hora_inicio" id="horaInicio" required>
-                <label for="horaFin">Hora fin:</label>
-                <input type="time" name="hora_fin" id="horaFin" required>
-                <div style="text-align: center; margin-top:10px;">
-                    <button type="submit">Guardar</button>
-                    <button type="button" onclick="hideModal()">Cancelar</button>
-                </div>
-            </form>
-        `);
-            showModal();
-            activarSubmitHandler();
-        }
-
-        function abrirFormularioEdicion(ev) {
-            let fecha = ev.startStr.substr(0, 10);
-            $('#modalContenido').html(`
-        <h4>Editar No Disponibilidad</h4>
-        <form id="formDisponibilidad">
-            <input type="hidden" name="id" id="eventoId" value="${ev.id}">
-            <input type="hidden" name="fecha" id="fechaSeleccionada" value="${fecha}">
-            <label for="horaInicio">Hora inicio:</label>
-            <input type="time" name="hora_inicio" id="horaInicio" value="${ev.startStr.substr(11,5)}" required>
-            <label for="horaFin">Hora fin:</label>
-            <input type="time" name="hora_fin" id="horaFin" value="${ev.endStr.substr(11,5)}" required>
-            <div style="text-align: center; margin-top:10px;">
-                <button type="submit">Guardar</button>
-                <button type="button" id="btnEliminar">Eliminar</button>
-                <button type="button" id="btnCancelar" onclick="hideModal()">Cancelar</button>
-            </div>
-        </form>
-    `);
-            showModal();
-            activarSubmitHandler();
-            $('#btnEliminar').on('click', function() {
-                if (confirm("¿Eliminar disponibilidad?")) {
-                    $.post('<?= base_url() . "dj/disponibilidad" ?>', {
-                        eliminar: 1,
-                        id: ev.id
-                    }, function() {
+            $('.denegar').off().on('click', function() {
+                let id = $(this).data('id');
+                if (confirm("¿Estás seguro que quieres denegar esta disponibilidad?")) {
+                    $.post('<?= base_url() . "admin/calendarioDisp" ?>', {
+                        id: id,
+                        validacion: 1 // 1 = denegado
+                    }, function(response) {
                         calendar.refetchEvents();
                         hideModal();
                     });
                 }
             });
-        }
 
-        function activarSubmitHandler() {
-            $('#formDisponibilidad').off().on('submit', function(e) {
-                e.preventDefault();
-                let hora_inicio = $('#horaInicio').val();
-                let hora_fin = $('#horaFin').val();
-                if (hora_inicio >= hora_fin) {
-                    alert("La hora de inicio debe ser menor que la de fin");
-                    return;
-                }
-
-                $.post('<?= base_url() . "dj/disponibilidad" ?>', {
-                    guardar: 1,
-                    id: $('#eventoId').val(),
-                    fecha: $('#fechaSeleccionada').val(),
-                    hora_inicio: hora_inicio,
-                    hora_fin: hora_fin
-                }, function(res) {
-                    try {
-                        let data = JSON.parse(res);
-                        if (data.status === 'error') {
-                            alert(data.msg);
-                            return;
-                        }
-                        calendar.refetchEvents();
-                        hideModal();
-                    } catch (err) {
-                        alert("Error del servidor");
-                    }
-                });
-            });
         }
 
         function showModal() {

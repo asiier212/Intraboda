@@ -803,7 +803,10 @@ class Dj extends CI_Controller
 					'id' => $row['id'],
 					'start' => $row['fecha'] . 'T' . $row['hora_inicio'],
 					'end' => $row['fecha'] . 'T' . $row['hora_fin'],
-					'title' => $row['nombre'] . ' (' . $row['hora_inicio'] . ' - ' . $row['hora_fin'] . ')'
+					'title' => $row['nombre'] . ' (' . $row['hora_inicio'] . ' - ' . $row['hora_fin'] . ')',
+					'extendedProps' => array(
+						'validacion' => $row['validacion']
+					)
 				);
 			}
 

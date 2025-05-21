@@ -10,6 +10,9 @@
         </title>
         <link href="<?php echo base_url() ?>css/style.css" rel="stylesheet" type="text/css" />
         <script src="<?php echo base_url() ?>js/jquery/development-bundle/jquery-1.7.2.js"></script>
+        <!-- FullCalendar CSS y JS -->
+        <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.js"></script>
         <?php if (isset($scripts_src)) echo $scripts_src; ?>
         <?php if (isset($scripts)) echo $scripts; ?>
         <script language="javascript">
@@ -94,6 +97,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo base_url() ?>admin/admin_eventos_view">Eventos</a></li>
                             <li><a href="<?php echo base_url() ?>admin/admin_horas_djs_view">Horas DJs</a></li>
+                            <li><a href="<?php echo base_url() ?>admin/calendarioDisp">No Disponibilidad DJs</a></li>
                         </ul>
                     </li>
                     <li><a href="<?php echo base_url() ?>admin/admin_contabilidad_clientes_view">Contabilidad Clientes</a></li>
@@ -161,6 +165,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo base_url() ?>admin/admin_eventos_view">Eventos</a></li>
                         <li><a href="<?php echo base_url() ?>admin/admin_horas_djs_view">Horas DJs</a></li>
+                        <li><a href="<?php echo base_url() ?>admin/calendarioDisp">No Disponibilidad DJs</a></li>
                     </ul>
                 </li>
                 <li><a href="<?php echo base_url() ?>admin/admin_contabilidad_clientes_view">Contabilidad Clientes</a></li>

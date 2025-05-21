@@ -2814,4 +2814,57 @@ class Admin extends CI_Controller
 			error_log("Algún tipo de error al enviar el correo " . var_export($e, 1), 3, "./r");
 		}
 	}
+
+	function calendarioDisp()
+	{
+
+		$this->load->database();
+
+		error_reporting(0); // para evitar que se impriman warnings que rompan el JSON
+
+		$this->load->model('admin_functions');
+
+		// ---- CARGA DE EVENTOS (AJAX GET) ----
+		if ($this->input->get('load') == '1') {
+			$datos = $this->admin_functions->get_disponibilidad();
+
+			$eventos = array();
+			foreach ($datos as $row) {
+				$eventos[] = array(
+					'id' => $row['id'],
+					'start' => $row['fecha'] . 'T' . $row['hora_inicio'],
+					'end' => $row['fecha'] . 'T' . $row['hora_fin'],
+					'title' => $row['nombre'] . ' (' . $row['hora_inicio'] . ' - ' . $row['hora_fin'] . ')',
+					'extendedProps' => array(
+						'validacion' => $row['validacion']
+					)
+				);
+			}
+
+			echo json_encode($eventos);
+			return;
+		}
+
+		if (isset($_POST['id']) && isset($_POST['validacion'])) {
+			$id = intval($_POST['id']);
+			$validacion = intval($_POST['validacion']);
+
+			// Actualiza la columna validacion en la tabla disponibilidad_dj
+			$sql = "UPDATE disponibilidad_dj SET validacion = $validacion WHERE id = $id";
+			$result = $this->db->query($sql);
+
+			if ($result) {
+				echo json_encode(['status' => 'success']);
+			} else {
+				echo json_encode(['status' => 'error']);
+			}
+			exit;
+		}
+
+		// ---- CARGA NORMAL DE VISTA ----
+		$data_header = false;
+		$data_footer = false;
+		$view = "disponibilidad_dj";
+		$this->_loadViews($data_header, $data, $data_footer, $view);
+	}
 }

@@ -699,6 +699,7 @@ class Dj_functions extends CI_Model
 		}
 		return $data;
 	}
+
 	function GetPagos($cliente_id)
 	{
 		$data = array();
@@ -777,7 +778,7 @@ class Dj_functions extends CI_Model
 
 	function get_disponibilidad($dj_id)
 	{
-		$this->db->select('disponibilidad_dj.id, disponibilidad_dj.fecha, disponibilidad_dj.hora_inicio, disponibilidad_dj.hora_fin, djs.nombre');
+		$this->db->select('disponibilidad_dj.id, disponibilidad_dj.fecha, disponibilidad_dj.hora_inicio, disponibilidad_dj.hora_fin, disponibilidad_dj.validacion, djs.nombre');
 		$this->db->from('disponibilidad_dj');
 		$this->db->join('djs', 'disponibilidad_dj.dj_id = djs.id');
 		$this->db->where('disponibilidad_dj.dj_id', $dj_id);
@@ -818,19 +819,21 @@ class Dj_functions extends CI_Model
 				'dj_id' => $dj_id,
 				'fecha' => $fecha,
 				'hora_inicio' => $hora_inicio,
-				'hora_fin' => $hora_fin
+				'hora_fin' => $hora_fin,
+				'validacion' => 1
 			));
 
-			$mensaje = "<strong>Petición de Ausencia editada de DJ $nombre_dj en $fecha de $hora_inicio a $hora_fin</strong><br></br><button onclick=\"window.location.href='" . base_url() . "admin/parametrizacion'\" style='padding: 8px 24px; background-color:rgb(63, 114, 255); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;'>Ver Calendario</button>";
+			$mensaje = "<strong>Petición de Ausencia editada de DJ $nombre_dj en $fecha de $hora_inicio a $hora_fin</strong><br></br><button onclick=\"window.location.href='" . base_url() . "admin/calendarioDisp'\" style='padding: 8px 24px; background-color:rgb(63, 114, 255); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;'>Ver Calendario</button><br></br>";
 		} else {
 			$this->db->insert('disponibilidad_dj', array(
 				'dj_id' => $dj_id,
 				'fecha' => $fecha,
 				'hora_inicio' => $hora_inicio,
-				'hora_fin' => $hora_fin
+				'hora_fin' => $hora_fin,
+				'validacion' => 1
 			));
 
-			$mensaje = "<strong>Nueva petición de Ausencia de DJ $nombre_dj en $fecha de $hora_inicio a $hora_fin </strong><br></br><button onclick=\"window.location.href='" . base_url() . "admin/parametrizacion'\" style='padding: 8px 24px; background-color:rgb(63, 114, 255); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;'>Ver Calendario</button>";
+			$mensaje = "<strong>Nueva petición de Ausencia de DJ $nombre_dj en $fecha de $hora_inicio a $hora_fin </strong><br></br><button onclick=\"window.location.href='" . base_url() . "admin/calendarioDisp'\" style='padding: 8px 24px; background-color:rgb(63, 114, 255); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;'>Ver Calendario</button><br></br>";
 		}
 
 		// NOTIFICACIONES PARA ADMIN

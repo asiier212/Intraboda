@@ -2936,4 +2936,12 @@ class Admin_functions extends CI_Model
 		$row = $query->row_array();
 		return isset($row['total']) ? $row['total'] : 0;
 	}
+
+	function get_disponibilidad()
+	{
+		$this->db->select('disponibilidad_dj.id, disponibilidad_dj.fecha, disponibilidad_dj.hora_inicio, disponibilidad_dj.hora_fin, disponibilidad_dj.validacion, djs.nombre');
+		$this->db->from('disponibilidad_dj');
+		$this->db->join('djs', 'disponibilidad_dj.dj_id = djs.id');
+		return $this->db->get()->result_array();
+	}
 }
