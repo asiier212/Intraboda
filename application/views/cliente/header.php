@@ -574,8 +574,8 @@
                 });
             </script>
 
-            <!-- SCRIPTS HEADER -->
-            <script>
+           <!-- SCRIPTS HEADER -->
+            <!-- <script>
                 window.addEventListener('scroll', function() {
                     var header = document.querySelector('.header');
                     var placeholder = document.getElementById('header-placeholder');
@@ -602,7 +602,7 @@
                         $('.nav').toggleClass('open');
                     });
                 });
-            </script>
+            </script> -->
 
             <script>
                 // Dropdowns
