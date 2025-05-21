@@ -322,13 +322,6 @@
         transition: 300ms;
     }
 
-    #btn-borrar-todo:active {
-        background-color: rgb(185, 35, 27);
-        box-shadow: none;
-        transform: translateY(-50%) scale(0.97);
-    }
-
-
 
     #notificaciones-lista {
         background-color: #f9f9f9;
