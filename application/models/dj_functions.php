@@ -802,7 +802,14 @@ class Dj_functions extends CI_Model
 		}
 
 		$mesaje = '';
-		$imagen = base_url() . "img/calendarioBtn.png";
+
+		$this->db->select('nombre');
+		$this->db->from('djs');
+		$this->db->where('id', $dj_id);
+		$query = $this->db->get();
+		$dj = $query->row_array(); // o ->row() si prefieres objeto
+
+		$nombre_dj = isset($dj['nombre']) ? $dj['nombre'] : '';
 
 		// Inserta o actualiza
 		if ($id) {
@@ -814,7 +821,7 @@ class Dj_functions extends CI_Model
 				'hora_fin' => $hora_fin
 			));
 
-			$mensaje = "<strong>Petición de Ausencia editada de DJ $nombre_dj en $fecha de $hora_inicio a $hora_fin</strong><br></br><button onclick=\"window.location.href='" . base_url() . "admin/parametrizacion'\" style='padding: 8px 24px; background-color:rgb(63, 114, 255); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;'>Ir a Calendario</button>";
+			$mensaje = "<strong>Petición de Ausencia editada de DJ $nombre_dj en $fecha de $hora_inicio a $hora_fin</strong><br></br><button onclick=\"window.location.href='" . base_url() . "admin/parametrizacion'\" style='padding: 8px 24px; background-color:rgb(63, 114, 255); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;'>Ver Calendario</button>";
 		} else {
 			$this->db->insert('disponibilidad_dj', array(
 				'dj_id' => $dj_id,
@@ -823,23 +830,15 @@ class Dj_functions extends CI_Model
 				'hora_fin' => $hora_fin
 			));
 
-			$mensaje = "<strong>Nueva petición de Ausencia de DJ $nombre_dj en $fecha de $hora_inicio a $hora_fin </strong>";
+			$mensaje = "<strong>Nueva petición de Ausencia de DJ $nombre_dj en $fecha de $hora_inicio a $hora_fin </strong><br></br><button onclick=\"window.location.href='" . base_url() . "admin/parametrizacion'\" style='padding: 8px 24px; background-color:rgb(63, 114, 255); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;'>Ver Calendario</button>";
 		}
 
 		// NOTIFICACIONES PARA ADMIN
 
 		if ($dj_id) {
 
-			$this->db->select('nombre');
-			$this->db->from('djs');
-			$this->db->where('id', $dj_id);
-			$query = $this->db->get();
-			$dj = $query->row_array(); // o ->row() si prefieres objeto
-
-			$nombre_dj = isset($dj['nombre']) ? $dj['nombre'] : '';
-
 			$data_notif = array(
-				'id_cliente' => $dj_id,
+				'id_cliente' => 1,
 				'mensaje' => $mensaje,
 				'fecha' => date('Y-m-d H:i:s'),
 				'leido' => 0
