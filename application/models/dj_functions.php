@@ -775,7 +775,6 @@ class Dj_functions extends CI_Model
 		return $this->db->count_all_results();
 	}
 
-	// PRUEBA 
 	function get_disponibilidad($dj_id)
 	{
 		$this->db->select('disponibilidad_dj.id, disponibilidad_dj.fecha, disponibilidad_dj.hora_inicio, disponibilidad_dj.hora_fin, djs.nombre');
@@ -802,6 +801,9 @@ class Dj_functions extends CI_Model
 			return json_encode(['status' => 'error', 'msg' => 'Franja horaria solapada']);
 		}
 
+		$mesaje = '';
+		$imagen = base_url() . "img/calendarioBtn.png";
+
 		// Inserta o actualiza
 		if ($id) {
 			$this->db->where('id', $id);
@@ -811,6 +813,8 @@ class Dj_functions extends CI_Model
 				'hora_inicio' => $hora_inicio,
 				'hora_fin' => $hora_fin
 			));
+
+			$mensaje = "<strong>Petición de Ausencia editada de DJ $nombre_dj en $fecha de $hora_inicio a $hora_fin</strong><br></br><button onclick=\"window.location.href='" . base_url() . "admin/parametrizacion'\" style='padding: 8px 24px; background-color:rgb(63, 114, 255); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;'>Ir a Calendario</button>";
 		} else {
 			$this->db->insert('disponibilidad_dj', array(
 				'dj_id' => $dj_id,
@@ -818,7 +822,32 @@ class Dj_functions extends CI_Model
 				'hora_inicio' => $hora_inicio,
 				'hora_fin' => $hora_fin
 			));
+
+			$mensaje = "<strong>Nueva petición de Ausencia de DJ $nombre_dj en $fecha de $hora_inicio a $hora_fin </strong>";
 		}
+
+		// NOTIFICACIONES PARA ADMIN
+
+		if ($dj_id) {
+
+			$this->db->select('nombre');
+			$this->db->from('djs');
+			$this->db->where('id', $dj_id);
+			$query = $this->db->get();
+			$dj = $query->row_array(); // o ->row() si prefieres objeto
+
+			$nombre_dj = isset($dj['nombre']) ? $dj['nombre'] : '';
+
+			$data_notif = array(
+				'id_cliente' => $dj_id,
+				'mensaje' => $mensaje,
+				'fecha' => date('Y-m-d H:i:s'),
+				'leido' => 0
+			);
+
+			$this->db->insert('notificaciones_admin', $data_notif);
+		}
+		//--------------
 
 		return json_encode(['status' => 'ok']);
 	}

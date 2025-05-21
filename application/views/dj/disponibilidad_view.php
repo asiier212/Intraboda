@@ -330,7 +330,6 @@
 
 
 
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendario');
