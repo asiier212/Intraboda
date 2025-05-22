@@ -335,7 +335,9 @@
     <span style="display:inline-block; width:12px; height:12px; background-color:#28a745; margin-right:5px;"></span>
     <span style="margin-right:15px;">Validado</span>
     <span style="display:inline-block; width:12px; height:12px; background-color:rgb(255, 221, 72); margin-right:5px;"></span>
-    <span>Pendiente</span>
+    <span style="margin-right:15px;">Pendiente</span>
+    <span style="display:inline-block; width:12px; height:12px; background-color:rgb(255, 78, 72); margin-right:5px;"></span>
+    <span>Denegada</span>
 </div>
 
 
@@ -376,6 +378,8 @@
                         innerTextEl.style.color = 'orange';
                     } else if (validacion == 2) {
                         innerTextEl.style.color = 'green';
+                    } else if (validacion == 3) {
+                        innerTextEl.style.color = 'red';
                     }
                 }
             },
@@ -419,15 +423,27 @@
                 let bgColor = '';
                 if (ev.extendedProps.validacion == '1') {
                     bgColor = 'background-color:rgb(255, 214, 79); color: white;';
-                } else if (ev.extendedProps.validacion == '2') {
-                    bgColor = 'background-color: #51a25f; color: white;';
-                }
 
-                html += `<li style="margin-bottom:10px; ${bgColor}">
-                        De <strong>${start}</strong> a <strong>${end}</strong>
+                    html += `<li style="margin-bottom:10px; ${bgColor}">
+                        De ${start} a ${end}
                         <button class="editarDisp" data-id="${ev.id}">Editar</button>
                         <button class="eliminarDisp" data-id="${ev.id}">Eliminar</button>
                      </li>`;
+                } else if (ev.extendedProps.validacion == '2') {
+                    bgColor = 'background-color: #51a25f; color: white;';
+
+                    html += `<li style="margin-bottom:10px; ${bgColor}">
+                        De ${start} a ${end}
+                     </li>`;
+                } else if (ev.extendedProps.validacion == '3') {
+                    bgColor = 'background-color:rgb(255, 113, 113); color: white;';
+
+                    html += `<li style="margin-bottom:10px; ${bgColor}">
+                        De ${start} a ${end}
+                        <button class="eliminarDisp" data-id="${ev.id}">Eliminar</button>
+                     </li>`;
+                }
+
             });
             html += '</ul>';
             html += `<div style="text-align:center;">
