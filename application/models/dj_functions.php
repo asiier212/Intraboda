@@ -782,6 +782,7 @@ class Dj_functions extends CI_Model
 		$this->db->from('disponibilidad_dj');
 		$this->db->join('djs', 'disponibilidad_dj.dj_id = djs.id');
 		$this->db->where('disponibilidad_dj.dj_id', $dj_id);
+		$this->db->where_in('disponibilidad_dj.validacion', array(1, 2));
 		return $this->db->get()->result_array();
 	}
 

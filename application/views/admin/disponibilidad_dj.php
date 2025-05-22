@@ -334,8 +334,10 @@
 <div id="leyenda-calendario" style="margin-bottom: 10px;">
     <span style="display:inline-block; width:12px; height:12px; background-color:#28a745; margin-right:5px;"></span>
     <span style="margin-right:15px;">Validado</span>
-    <span style="display:inline-block; width:12px; height:12px; background-color:#dc3545; margin-right:5px;"></span>
-    <span>No Validado</span>
+    <span style="display:inline-block; width:12px; height:12px; background-color:rgb(255, 210, 64); margin-right:5px;"></span>
+    <span style="margin-right:15px;">Pendiente</span>
+    <span style="display:inline-block; width:12px; height:12px; background-color:rgb(255, 64, 64); margin-right:5px;"></span>
+    <span>Denegado</span>
 </div>
 
 
@@ -373,9 +375,11 @@
                 if (innerTextEl) {
                     var validacion = info.event.extendedProps.validacion;
                     if (validacion == 1) {
-                        innerTextEl.style.color = 'red';
+                        innerTextEl.style.color = 'orange';
                     } else if (validacion == 2) {
                         innerTextEl.style.color = 'green';
+                    } else if (validacion == 3) {
+                        innerTextEl.style.color = 'red';
                     }
                 }
             },
@@ -412,10 +416,12 @@
                 let end = ev.endStr.substr(11, 5);
 
                 let bgColor = '';
-                if (ev.extendedProps.validacion == '1') {
+                if (ev.extendedProps.validacion == '3') {
                     bgColor = 'background-color: #ff6e4f; color: white;';
                 } else if (ev.extendedProps.validacion == '2') {
                     bgColor = 'background-color: #51a25f; color: white;';
+                } else if (ev.extendedProps.validacion == '1') {
+                    bgColor = 'background-color:rgb(255, 180, 67); color: white;';
                 }
 
                 html += `<li style="margin-bottom:10px; ${bgColor}">
@@ -449,7 +455,7 @@
                 if (confirm("¿Estás seguro que quieres denegar esta disponibilidad?")) {
                     $.post('<?= base_url() . "admin/calendarioDisp" ?>', {
                         id: id,
-                        validacion: 1 // 1 = denegado
+                        validacion: 3 // 3 = denegado
                     }, function(response) {
                         calendar.refetchEvents();
                         hideModal();

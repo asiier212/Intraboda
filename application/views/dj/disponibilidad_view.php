@@ -334,8 +334,8 @@
 <div id="leyenda-calendario" style="margin-bottom: 10px;">
     <span style="display:inline-block; width:12px; height:12px; background-color:#28a745; margin-right:5px;"></span>
     <span style="margin-right:15px;">Validado</span>
-    <span style="display:inline-block; width:12px; height:12px; background-color:#dc3545; margin-right:5px;"></span>
-    <span>No Validado</span>
+    <span style="display:inline-block; width:12px; height:12px; background-color:rgb(255, 221, 72); margin-right:5px;"></span>
+    <span>Pendiente</span>
 </div>
 
 
@@ -373,7 +373,7 @@
                 if (innerTextEl) {
                     var validacion = info.event.extendedProps.validacion;
                     if (validacion == 1) {
-                        innerTextEl.style.color = 'red';
+                        innerTextEl.style.color = 'orange';
                     } else if (validacion == 2) {
                         innerTextEl.style.color = 'green';
                     }
@@ -418,7 +418,7 @@
 
                 let bgColor = '';
                 if (ev.extendedProps.validacion == '1') {
-                    bgColor = 'background-color: #ff6e4f; color: white;';
+                    bgColor = 'background-color:rgb(255, 214, 79); color: white;';
                 } else if (ev.extendedProps.validacion == '2') {
                     bgColor = 'background-color: #51a25f; color: white;';
                 }
