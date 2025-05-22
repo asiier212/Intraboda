@@ -1758,7 +1758,7 @@ class Admin extends CI_Controller
 				$data['servicios'] = $this->admin_functions->GetServicios();
 				$data['personas']  = $this->admin_functions->GetPersonasContacto();
 				$data['dj'] = $this->admin_functions->GetDjAsignado($id);
-				$data['djs'] = $this->admin_functions->GetDjs($id);
+				$data['djs'] = $this->admin_functions->GetDjsDisponiblesPreasignar($id);
 				$data['djs_preasignados'] = $this->admin_functions->GetDjsPreAsignados($id);
 				$data['horas_dj'] = $this->admin_functions->GetHorasDJ($id);
 

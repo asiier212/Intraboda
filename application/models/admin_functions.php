@@ -1430,6 +1430,44 @@ class Admin_functions extends CI_Model
 		return $data;
 	}
 
+	function GetDjsDisponiblesPreasignar($id)
+	{
+		$data = false;
+		$this->load->database();
+		$this->load->library('encrypt');
+		$query = $this->db->query("
+			SELECT dj.id, dj.nombre, dj.telefono, dj.email, dj.clave, dj.foto
+			FROM djs dj
+			WHERE dj.id NOT IN (
+				SELECT ddj.dj_id
+				FROM disponibilidad_dj ddj
+				INNER JOIN clientes c ON c.id = $id
+				WHERE
+					ddj.fecha = DATE(c.fecha_boda)
+					AND TIME(c.fecha_boda) BETWEEN ddj.hora_inicio AND ddj.hora_fin
+					AND ddj.validacion = 2
+			)
+			");
+		if ($query->num_rows() > 0) {
+			$i = 0;
+			foreach ($query->result() as $fila) {
+
+				/*$this->load->library('encrypt');
+				$query = $this->db->query("UPDATE djs SET clave = '" . $this->encrypt->encode($fila->clave) . "' WHERE id = '" . $fila->id . "'");*/
+
+				$data[$i]['id'] = $fila->id;
+				$data[$i]['nombre'] = $fila->nombre;
+				$data[$i]['telefono'] = $fila->telefono;
+				$data[$i]['email'] = $fila->email;
+				$data[$i]['clave'] = $this->encrypt->decode($fila->clave);
+				//$data[$i]['clave'] = $fila->clave;
+				$data[$i]['foto'] = $fila->foto;
+				$i++;
+			}
+		}
+		return $data;
+	}
+
 	function GetDjsPreAsignados($id)
 	{
 		$data = false;
