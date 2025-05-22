@@ -97,7 +97,6 @@
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo base_url() ?>admin/admin_eventos_view">Eventos</a></li>
                             <li><a href="<?php echo base_url() ?>admin/admin_horas_djs_view">Horas DJs</a></li>
-                            <li><a href="<?php echo base_url() ?>admin/calendarioDisp">No Disponibilidad DJs</a></li>
                         </ul>
                     </li>
                     <li><a href="<?php echo base_url() ?>admin/admin_contabilidad_clientes_view">Contabilidad Clientes</a></li>
@@ -165,7 +164,6 @@
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo base_url() ?>admin/admin_eventos_view">Eventos</a></li>
                         <li><a href="<?php echo base_url() ?>admin/admin_horas_djs_view">Horas DJs</a></li>
-                        <li><a href="<?php echo base_url() ?>admin/calendarioDisp">No Disponibilidad DJs</a></li>
                     </ul>
                 </li>
                 <li><a href="<?php echo base_url() ?>admin/admin_contabilidad_clientes_view">Contabilidad Clientes</a></li>
