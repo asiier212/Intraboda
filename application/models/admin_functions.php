@@ -2962,18 +2962,46 @@ class Admin_functions extends CI_Model
 		$this->db->from('disponibilidad_dj');
 		$this->db->where('fecha', $fecha);
 		$this->db->where("'$hora' BETWEEN hora_inicio AND hora_fin", NULL, FALSE);
+		$this->db->where('validacion', 2);
+
 		$subquery = $this->db->_compile_select();
 
 		// Consulta principal: DJs disponibles
 		$this->db->_reset_select();
 		$this->db->select('COUNT(*) as total');
 		$this->db->from('djs');
-		$this->db->where("id NOT IN ($subquery)", NULL, FALSE);
+		$this->db->where("id IN ($subquery)", NULL, FALSE);
 
 		$query = $this->db->get();
 		$row = $query->row_array();
 		return isset($row['total']) ? $row['total'] : 0;
 	}
+
+	function get_nombres_djs_disponibles($fecha_boda, $hora_boda)
+	{
+		$this->load->database();
+
+		$fecha = date('Y-m-d', strtotime($fecha_boda));
+		$hora = date('H:i:s', strtotime($hora_boda));
+
+		// Subconsulta: DJs NO disponibles
+		$this->db->select('dj_id');
+		$this->db->from('disponibilidad_dj');
+		$this->db->where('fecha', $fecha);
+		$this->db->where("'$hora' BETWEEN hora_inicio AND hora_fin", NULL, FALSE);
+		$this->db->where('validacion', 2);
+		$subquery = $this->db->_compile_select();
+
+		// Consulta principal: DJs disponibles
+		$this->db->_reset_select();
+		$this->db->select('nombre');
+		$this->db->from('djs');
+		$this->db->where("id IN ($subquery)", NULL, FALSE);
+
+		$query = $this->db->get();
+		return $query->result_array(); // devuelve array de nombres
+	}
+
 
 	function get_disponibilidad()
 	{

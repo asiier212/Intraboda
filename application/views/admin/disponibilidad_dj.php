@@ -414,6 +414,7 @@
             events.forEach(function(ev) {
                 let start = ev.startStr.substr(11, 5);
                 let end = ev.endStr.substr(11, 5);
+                let nombre = ev.extendedProps.nombre;
 
                 let bgColor = '';
                 if (ev.extendedProps.validacion == '3') {
@@ -424,8 +425,8 @@
                     bgColor = 'background-color:rgb(255, 180, 67); color: white;';
                 }
 
-                html += `<li style="margin-bottom:10px; ${bgColor}">
-                        De <strong>${start}</strong> a <strong>${end}</strong>
+                html += `<li style="font-size:15px; margin-bottom:10px; ${bgColor}">
+                DJ ${nombre} de ${start} a ${end}
                         <button class="aceptar" data-id="${ev.id}">✔</button>
                         <button class="denegar" data-id="${ev.id}">✖</button>
                      </li>`;

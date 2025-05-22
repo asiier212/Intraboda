@@ -854,6 +854,7 @@ class Admin extends CI_Controller
 
 		foreach ($data['eventos_view'] as &$ev) {
 			$ev['djs_disponibles'] = $this->admin_functions->get_djs_disponibles($ev['fecha_boda'], $ev['hora_boda']);
+			$ev['djs_disponibles_nombres'] = $this->admin_functions->get_nombres_djs_disponibles($ev['fecha_boda'], $ev['hora_boda']);
 		}
 
 
@@ -2836,7 +2837,8 @@ class Admin extends CI_Controller
 					'end' => $row['fecha'] . 'T' . $row['hora_fin'],
 					'title' => $row['nombre'] . ' (' . $row['hora_inicio'] . ' - ' . $row['hora_fin'] . ')',
 					'extendedProps' => array(
-						'validacion' => $row['validacion']
+						'validacion' => $row['validacion'],
+						'nombre' => $row['nombre']
 					)
 				);
 			}

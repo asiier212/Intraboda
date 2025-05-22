@@ -124,8 +124,8 @@ mb_internal_encoding('UTF-8');
 							</span>
 						</th>
 						<th style="vertical-align: middle;">
-							<span id="textoDJ" style="margin-right: 5px;">DJ-ND</span>
-							<span id="toggleDJ" class="columna-toggle" style="cursor:pointer; display:inline-block; vertical-align: middle;">
+							<span id="textoDJND" style="margin-right: 5px;">DJ-ND</span>
+							<span id="toggleDJND" class="columna-toggle" style="cursor:pointer; display:inline-block; vertical-align: middle;">
 								<img src="<?php echo base_url() ?>/img/ojoc.png" style="width:20px;" />
 							</span>
 						</th>
@@ -211,10 +211,21 @@ mb_internal_encoding('UTF-8');
 
 							//DJ-ND
 
-							echo "<td class='coldj-no-disponibles' style='background-color:#d7f7dc;' title='DJs disponibles'>";
+							echo "<td class='col-djnd oculto' style='background-color:" . $color . "'>";
+							if (!empty($ev['djs_disponibles_nombres'])) {
+								$nombres = array();
+								foreach ($ev['djs_disponibles_nombres'] as $dj) {
+									$nombres[] = $dj['nombre'];
+								}
+								echo implode(', ', $nombres);
+							} else {
+								echo 'Sin DJs No Disponibles';
+							}
+							echo '</td>';
+
+							echo "<td class='col-djnd-iniciales' style='background-color:#d7f7dc;' title='DJs disponibles'>";
 							echo $ev['djs_disponibles'];
 							echo "</td>";
-
 							// DJ-ND FINAL 
 
 							echo "<td class='col-nombre oculto' style='background-color:" . $color . "'>";
@@ -275,6 +286,7 @@ mb_internal_encoding('UTF-8');
 	$(document).ready(function() {
 		let ocultoDJ = true;
 		let ocultoLugar = true;
+		let ocultoDJND = true;
 
 		$('#toggleDJ').click(function() {
 			$('.col-dj').toggleClass('oculto');
@@ -282,6 +294,14 @@ mb_internal_encoding('UTF-8');
 			ocultoDJ = !ocultoDJ;
 			$('#textoDJ').text(ocultoDJ ? 'DJ' : 'DJ');
 			$(this).find('img').attr('src', ocultoDJ ? '<?php echo base_url() ?>/img/ojo.png' : '<?php echo base_url() ?>/img/ojoc.png');
+		});
+
+		$('#toggleDJND').click(function() {
+			$('.col-djnd').toggleClass('oculto');
+			$('.col-djnd-iniciales').toggleClass('oculto');
+			ocultoDJND = !ocultoDJND;
+			$('#textoDJND').text(ocultoDJND ? 'DJ-ND' : 'DJ-ND');
+			$(this).find('img').attr('src', ocultoDJND ? '<?php echo base_url() ?>/img/ojo.png' : '<?php echo base_url() ?>/img/ojoc.png');
 		});
 
 		$('#toggleLugar').click(function() {
@@ -296,6 +316,7 @@ mb_internal_encoding('UTF-8');
 		$('#textoLugar').text('Lug.');
 		$('#toggleNombre img').attr('src', '<?php echo base_url() ?>/img/ojo.png');
 		$('#toggleDJ img').attr('src', '<?php echo base_url() ?>/img/ojo.png');
+		$('#toggleDJND img').attr('src', '<?php echo base_url() ?>/img/ojo.png');
 		$('#toggleLugar img').attr('src', '<?php echo base_url() ?>/img/ojo.png');
 	});
 </script>
