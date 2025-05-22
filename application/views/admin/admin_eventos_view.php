@@ -210,7 +210,6 @@ mb_internal_encoding('UTF-8');
 							echo "</td>";
 
 							//DJ-ND
-
 							echo "<td class='col-djnd oculto' style='background-color:" . $color . "'>";
 							if (!empty($ev['djs_disponibles_nombres'])) {
 								$nombres = array();
@@ -223,9 +222,22 @@ mb_internal_encoding('UTF-8');
 							}
 							echo '</td>';
 
-							echo "<td class='col-djnd-iniciales' style='background-color:#d7f7dc;' title='DJs disponibles'>";
+							// Tooltip con nombres en title
+							$titulo = 'Sin DJs No Disponibles';
+							if (!empty($ev['djs_disponibles_nombres'])) {
+								$nombres = array();
+								foreach ($ev['djs_disponibles_nombres'] as $dj) {
+									$nombres[] = $dj['nombre'];
+								}
+								$titulo = implode(', ', $nombres);
+							}
+
+							echo "<td class='col-djnd-iniciales' style='background-color:#d7f7dc;' title='" . htmlspecialchars($titulo, ENT_QUOTES) . "'>";
 							echo $ev['djs_disponibles'];
 							echo "</td>";
+
+
+
 							// DJ-ND FINAL 
 
 							echo "<td class='col-nombre oculto' style='background-color:" . $color . "'>";
