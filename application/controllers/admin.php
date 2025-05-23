@@ -2190,6 +2190,9 @@ class Admin extends CI_Controller
 				$acc = "viewdetails";
 			}
 			$data['djs']  = $this->admin_functions->GetDJs();
+
+			//AQUI
+
 		}
 		$view = "djs_" . $acc;
 		$this->_loadViews($data_header, $data, $data_footer, $view);

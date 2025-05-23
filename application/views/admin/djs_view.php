@@ -620,21 +620,21 @@
     var tabs = document.getElementsByClassName('tab-content');
     var buttons = document.getElementsByClassName('tab-button');
 
-    // Ocultar todos los tabs y quitar clase active de botones
     for (var i = 0; i < tabs.length; i++) {
       tabs[i].style.display = 'none';
       buttons[i].classList.remove('active');
     }
 
-    // Mostrar el tab seleccionado y poner active en el botón
     document.getElementById(tabId).style.display = 'block';
     document.getElementById('btn-' + tabId).classList.add('active');
-  }
 
-  // Al cargar, mostrar solo tab1
-  window.onload = function() {
-    showTab('tab1');
-  };
+    // 🔧 Si es el calendario, forzar resize para que se muestre bien
+    if (tabId === 'tab1' && typeof calendar !== 'undefined') {
+      setTimeout(function() {
+        calendar.updateSize();
+      }, 50);
+    }
+  }
 </script>
 
 
